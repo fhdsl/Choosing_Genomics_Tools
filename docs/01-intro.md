@@ -1,0 +1,58 @@
+
+
+
+# Introduction
+
+To add a warning box like the following use:
+
+`<div class = "warning">`
+
+Followed by the text you want inside/
+
+`</div>`
+
+The line above marks the end of the box.
+
+This will create the following:
+
+<div class = "warning">
+
+Followed by the text you want inside/
+
+</div>
+
+Here is a `<div class = "notice">` box:
+
+<div class = "notice">
+
+note text
+
+</div>
+
+Here is a `<div class = "github">` box:
+
+<div class = "github">
+
+github text
+
+</div>
+
+
+Here is a `<div class = "dictionary">` box:
+
+<div class = "dictionary">
+
+dictionary text
+
+</div>
+
+## Motivation
+
+
+## Target Audience  
+
+The course is intended for ...
+
+## Curriculum  
+
+The course covers...
