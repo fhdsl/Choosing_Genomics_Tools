@@ -3,14 +3,6 @@ chapter_name: "Chapter "
 repo: https://github.com/jhudsl/ottrpal_Template/
 rmd_files: ["index.Rmd",
             "01-intro.Rmd",
-            "02-defining-reproducibility.Rmd",
-            "03-project-organization.Rmd",
-            "04-open-source-with-github.Rmd",
-            "05-scientific-notebooks.Rmd",
-            "06-package-management.Rmd",
-            "07-durable-code.Rmd",
-            "08-readmes.Rmd",
-            "09-code-review.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
