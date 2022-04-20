@@ -43,7 +43,7 @@ pre code {
 /* ------------Links------------------ */
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #68ace5;
+  color: #e0471c;
 }
 
 
@@ -71,7 +71,7 @@ h1, h2, h3, h4 {
 .title {
   font-family: 'Lora';
   font-size: 4em !important;
-  color: #012d72;
+  color: #193a5c;
   margin-top: 0.275em !important;
   margin-bottom: 0.35em !important;
 }
@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 */
 
 .section.level1 > p:first-of-type:first-letter { /*drop cap for first p beneath level 1 headers only within class .section*/
-  color: #012d72;
+  color: #193a5c;
   float: left;
   font-family: 'Abril Fatface', serif;
   font-size: 7em;
@@ -138,7 +138,7 @@ h1, h2, h3, h4 {
 /*---color of links in TOC----*/
 
 .book .book-summary a {
-color: #012d72
+color: #193a5c
 }
 
 .summary{
@@ -152,19 +152,39 @@ color: #012d72
   padding-bottom: 8px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #012d72;
+  color: #193a5c;
 }
 
 .summary a:hover {
-  color: #68ace5 !important;
+  color: #e0471c !important;
 } 
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
-  color: #68ace5 !important;
+  color: #e0471c !important;
   border-left: solid 4px;
-  border-color: #68ace5;
+  border-color: #e0471c;
   padding-left: 11px !important;
 } 
+
+.trapezoid {
+  width: 130px;
+  text-align: center;
+  height: 15; 
+  position: relative;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #dbdbdb;
+  border-left: 50px solid transparent;
+  box-sizing: content-box;
+}
+.trapezoid span { 
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5%;
+  color: #fff;
+}
+
+
 
 
 li.appendix span, li.part span { /* for TOC part names */
@@ -190,6 +210,7 @@ li.appendix span, li.part span { /* for TOC part names */
 .book .book-summary ul.summary li.divider {
 	height: 0px;
 }
+
 
 
 /*--- LOGO ---*/
@@ -250,9 +271,8 @@ li.appendix span, li.part span { /* for TOC part names */
 /* Sidebar formating --------------------------------------------*/
 /* from r-pkgs.org*/
 
-
 div.notice{
-  border: 4px #68ace5;
+  border: 4px #193a5c;
   border-style: solid;
   padding: 1em;
   margin: 1em 0;
@@ -305,7 +325,7 @@ div.github{
 }
 
 div.dictionary{
-  border: 4px #68ace5;
+  border: 4px #193a5c;
   border-style: solid;
   padding: 1em;
   margin: 1em 0;
@@ -320,7 +340,6 @@ div.dictionary{
 div.dictionary{
   background-image: url("../assets/dictionary.png");
 }
-
 
 div.rstudio-tip, div.tip, div.gotcha, div.design, div.hat{
   border: 4px #aed6d963;
