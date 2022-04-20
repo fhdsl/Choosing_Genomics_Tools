@@ -18,7 +18,6 @@ A course to help learners find resources and tools to help them process and inte
 This course will teach learners to:  
 
 - Understand the overall workflow associated with processing their genomic data
-- Be aware of caveats based on their specific type of data
 - Find tutorials to help them process their genomic data
 - Choose tools for processing their genomic data
 - Choose tools for interpreting their genomic data
