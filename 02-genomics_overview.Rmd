@@ -3,13 +3,13 @@
 ottrpal::set_knitr_image_path()
 ```
 
+# A Very General Genomics Overview
+
 ## Learning Objectives
 
 ```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.gd422c5de97_0_16")
 ```
-
-## 
 
 
 ## Data file formats

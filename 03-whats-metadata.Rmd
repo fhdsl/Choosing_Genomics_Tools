@@ -3,13 +3,15 @@
 ottrpal::set_knitr_image_path()
 ```
 
+# What are Metadata? 
+
 ## Learning Objectives
 
 ```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12709027cba_1_70")
 ```
 
-## What’s metadata?
+## What are metadata?
 
 Metadata are critically important descriptive information about your data.
 
