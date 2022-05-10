@@ -100,7 +100,6 @@ jobs:
           branch_name='preview-${{ github.event.pull_request.number }}'
           git add --force check_reports/spell_check_results.tsv || echo "No changes to commit"
           git commit -m 'Add spell check file' || echo "No changes to commit"
-          git pull --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
           git push --force origin $branch_name || echo "No changes to commit"
 
       - name: Build components of the spell check comment
