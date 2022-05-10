@@ -5,9 +5,27 @@ ottrpal::set_knitr_image_path()
 
 ## Learning Objectives
 
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.gd422c5de97_0_16")
+```
 
+## 
 
 
 ## Data file formats
 
 <div id="04D1599E33D92E370515664A58E78BE1EEB_69816"><div id="04D1599E33D92E370515664A58E78BE1EEB_69816_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=04D1599E33D92E370515664A58E78BE1EEB" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/04D1599E33D92E370515664A58E78BE1EEB/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("04D1599E33D92E370515664A58E78BE1EEB",69816,1,"");</script><br/>
+
+Overview of where the sequences are from
+
+Table of most common genomic data formats
+Bam sam bai files
+Fasta and Fastq
+BED
+TSV, CSV, TXT
+VCF
+MAF
+GTF and GFF
+CHP or CHIP files
+CEL
+https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats

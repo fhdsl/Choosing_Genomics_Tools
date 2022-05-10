@@ -34,19 +34,35 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 Cancer datasets are plentiful, complicated, and hold untold amounts of information regarding cancer biology. Cancer researchers are working to apply their expertise to the analysis of these vast amounts of data but training opportunities to properly equip them in these efforts can be sparse. This includes training in reproducible data analysis methods.
 
 Often students and researchers need to utilize genomic data to reach the next steps of their research but may not have formal training in computational methods or the basics of the genomic data they are attempting to utilize.
-AVOCADO: Put some more here after this is fleshed out.
+
+
+Often researchers receive their genomic data processed from another lab or institution, and although they are excited to gain insights from it to inform the next steps of their research, they may not have a practical understanding of how the data they have received came to be or what needs to be done with it.
+
+```{r, fig.alt = "This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’
+", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1221ea485b7_0_0")
+```
+
+As an example, data file formats may not have been covered in their training, and the data they received seems unintelligible and not as straightforward as they hoped.
+
+```{r, fig.alt = "The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1221ea485b7_0_13")
+```
+
+This course attempts to give this researcher the basic bearings and resources regarding their data, in hopes that they will be equipped and informed about how to obtain the insights for their researcher they originally aimed to find.
 
 ## Curriculum  
 
-```{r, fig.alt = " ", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g11db7c97851_0_143")
+```{r, fig.alt = "Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data ", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.gd422c5de97_0_10")
 ```
 
 **Goal of this course:**  
-Equip learners with tutorials and resources so they can process and interpret their genomic data in a way that helps them meet their goals and handle the data properly
+Equip learners with tutorials and resources so they can understand and interpret their genomic data in a way that helps them meet their goals and handle the data properly.
+This includes helping learners formulate questions they will need to ask others about their data
 
 **What is not the goal**  
-Teach learners about choosing parameters or about the ins and outs of every genomic tool they might be interested in. This course is meant to connect people to other resources that will help them with the specifics of their genomic data.
+Teach learners about choosing parameters or about the ins and outs of every genomic tool they might be interested in. This course is meant to connect people to other resources that will help them with the specifics of their genomic data and help learners have more efficient and fruitful discussions about their data with bioinformatic experts.
 
 ## How to use the course
 
