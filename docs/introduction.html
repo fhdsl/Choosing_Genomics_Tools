@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
-<link rel="next" href="about-the-authors.html"/>
+<link rel="next" href="a-very-general-genomics-overview.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -82,6 +82,36 @@
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.3</b> Motivation</a></li>
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
 <li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#how-to-use-the-course"><i class="fa fa-check"></i><b>1.5</b> How to use the course</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html"><i class="fa fa-check"></i><b>2</b> A Very General Genomics Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>2.2</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.2.1</b> Sequencing file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>2.3</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.3.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.4</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.4.1</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-are-metadata.html"><a href="what-are-metadata.html"><i class="fa fa-check"></i><b>3</b> What are Metadata?</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-are-metadata.html"><a href="what-are-metadata.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#what-are-metadata-1"><i class="fa fa-check"></i><b>3.2</b> What are metadata?</a></li>
+<li class="chapter" data-level="3.3" data-path="what-are-metadata.html"><a href="what-are-metadata.html#how-to-create-metadata"><i class="fa fa-check"></i><b>3.3</b> How to create metadata?</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="what-are-metadata.html"><a href="what-are-metadata.html#the-goals-in-creating-your-metadata"><i class="fa fa-check"></i><b>3.3.1</b> The goals in creating your metadata:</a></li>
+<li class="chapter" data-level="3.3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#to-recap"><i class="fa fa-check"></i><b>3.3.2</b> To recap:</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -141,16 +171,21 @@
 <div id="motivation" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Motivation</h2>
 <p>Cancer datasets are plentiful, complicated, and hold untold amounts of information regarding cancer biology. Cancer researchers are working to apply their expertise to the analysis of these vast amounts of data but training opportunities to properly equip them in these efforts can be sparse. This includes training in reproducible data analysis methods.</p>
-<p>Often students and researchers need to utilize genomic data to reach the next steps of their research but may not have formal training in computational methods or the basics of the genomic data they are attempting to utilize.
-AVOCADO: Put some more here after this is fleshed out.</p>
+<p>Often students and researchers need to utilize genomic data to reach the next steps of their research but may not have formal training in computational methods or the basics of the genomic data they are attempting to utilize.</p>
+<p>Often researchers receive their genomic data processed from another lab or institution, and although they are excited to gain insights from it to inform the next steps of their research, they may not have a practical understanding of how the data they have received came to be or what needs to be done with it.</p>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png" title="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" alt="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" width="480" /></p>
+<p>As an example, data file formats may not have been covered in their training, and the data they received seems unintelligible and not as straightforward as they hoped.</p>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png" title="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" alt="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" width="480" /></p>
+<p>This course attempts to give this researcher the basic bearings and resources regarding their data, in hopes that they will be equipped and informed about how to obtain the insights for their researcher they originally aimed to find.</p>
 </div>
 <div id="curriculum" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Curriculum</h2>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" title=" " alt=" " width="480" /></p>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png" title="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " alt="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " width="480" /></p>
 <p><strong>Goal of this course:</strong><br />
-Equip learners with tutorials and resources so they can process and interpret their genomic data in a way that helps them meet their goals and handle the data properly</p>
+Equip learners with tutorials and resources so they can understand and interpret their genomic data in a way that helps them meet their goals and handle the data properly.
+This includes helping learners formulate questions they will need to ask others about their data</p>
 <p><strong>What is not the goal</strong><br />
-Teach learners about choosing parameters or about the ins and outs of every genomic tool they might be interested in. This course is meant to connect people to other resources that will help them with the specifics of their genomic data.</p>
+Teach learners about choosing parameters or about the ins and outs of every genomic tool they might be interested in. This course is meant to connect people to other resources that will help them with the specifics of their genomic data and help learners have more efficient and fruitful discussions about their data with bioinformatic experts.</p>
 </div>
 <div id="how-to-use-the-course" class="section level2" number="1.5">
 <h2><span class="header-section-number">1.5</span> How to use the course</h2>
@@ -172,7 +207,7 @@ Teach learners about choosing parameters or about the ins and outs of every geno
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="a-very-general-genomics-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
