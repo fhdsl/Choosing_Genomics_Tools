@@ -36,7 +36,7 @@ Tab separated values file is a text file is good for storing a data table.
 It has rows and columns where each value is separated by (you guessed it), _tabs_.
 Most commonly, if your genomics data has been provided to you in a TSV or CSV file, it has been processed and summarized! It will be your job to know _how_ it was processed and summarized
 
-Here the literal `⇥` represents tabs which often may show up invisible in your text editor's preference settings. 
+Here the literal `⇥` represents tabs which often may show up invisible in your text editor's preference settings.
 ```
 gene_id⇥sample_1⇥sample_2
 gene_a⇥12⇥15,
@@ -63,21 +63,60 @@ In the data type specific chapters, we will cover the sequencing data workflows 
 ### Sequencing file formats
 
 #### SAM - Sequence Alignment Map
-SAM Files have sequence information https://samtools.github.io/hts-specs/SAMv1.pdf
+SAM Files are text based files that have sequence information. It generally has not bee quantified or mapped. It is the reads in their raw form. [For more about SAM files](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
 #### BAM - Binary Alignment Map
+BAM files are like SAM files but are compressed (made to take up less space on your computer). This means if you double click on a BAM file to look at it, it will look jumbled and unintelligible. You will need to convert it to a SAM file if you want to see it yourself (but this isn't necessary necessarily).
 
-#### BAI - Binary Alignment Index
+#### SAI/BAI - Binary Alignment Index
 
-#### Fasta -
+#### FASTA - "fast A"
 
-#### Fastq
+Fasta files are sequence files that can be either nucleotide or amino acid sequences. They look something like this (the example below illustrating an amino acid sequence):
 
-#### VCF -
+```
+>SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+```
 
-#### MAF
+For [more about fasta files](https://en.wikipedia.org/wiki/FASTA_format).
 
-#### BCL
+#### FASTQ - "Fast q"
+
+A Fastq file is like a Fasta file except that it also contains information about the **Q**uality of the read. By quality, we mean, how sure was the sequencing machine that the nucleotide or amino acid called was indeed called correctly?
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+For [more about fastq files](https://en.wikipedia.org/wiki/FASTQ_format).
+
+Later in this course we will discuss the importance of examining the quality of your sequencing data and how to do that. If you received your data from a bioinformatics core it is possible that they've already done this quality analysis for you.
+
+_Sequencing data that is not of high enough quality should not be trusted!_ It may need to be re-run entirely or may need extra processing (trimming) in order to make it more trustworthy. We will discuss this more in later chapters.
+
+#### BCL - binary base call (BCL) sequence file format
+
+This type of sequence file is specific to Illumina data. In most cases, you will simply want to convert it to Fastq files for use with non-Illumina programs.
+
+[More about BCL to Fastq conversion](https://medium.com/@marija190396/bcl-to-fastq-conversion-e289852823d0).
+
+#### VCF - Variant Call Format
+
+VCF files are further processed form of data than the sequence files we discussed above. VCF files are specially for storing only where a particular sample's sequences differ or are _variant_ from the reference genome or each other.
+
+This will only be pertinent to you if you care about DNA variants. We will discuss this in the DNA seq chapter.
+
+For [more on VCF files](https://en.wikipedia.org/wiki/Variant_Call_Format).
+
+#### MAF - Mutation Annotation Format
+
+MAF files are aggregated versions of VCF files. So for a group of samples for which each has a VCF file, your entire group of samples' variants will be summarized in the form of a MAF file.
+
+For [more on MAF files](https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#:~:text=Mutation%20Annotation%20Format%20(MAF)%20is,(or%20open%2Daccess).).
 
 ## Very General Microarray Workflow
 
