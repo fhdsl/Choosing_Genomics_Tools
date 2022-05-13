@@ -3,6 +3,8 @@ chapter_name: "Chapter "
 repo: https://github.com/jhudsl/Choosing_Genomics_Tools
 rmd_files: ["index.Rmd",
             "01-intro.Rmd",
+            "02-genomics_overview.Rmd",
+            "03-whats-metadata.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
