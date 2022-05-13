@@ -36,10 +36,11 @@ Tab separated values file is a text file is good for storing a data table.
 It has rows and columns where each value is separated by (you guessed it), _tabs_.
 Most commonly, if your genomics data has been provided to you in a TSV or CSV file, it has been processed and summarized! It will be your job to know _how_ it was processed and summarized
 
+Here the literal `⇥` represents tabs which often may show up invisible in your text editor's preference settings. 
 ```
-gene_id &#9;sample_1 &#9;sample_2,
-gene_a &#9; 12 &#9; 15,
-gene_b &#9; 13 &#9; 14
+gene_id⇥sample_1⇥sample_2
+gene_a⇥12⇥15,
+gene_b⇥13⇥14
 ```
 
 #### CSV - Comma Separated Values
