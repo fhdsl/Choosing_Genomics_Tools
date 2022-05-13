@@ -3,7 +3,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# What are Metadata? 
+# What are Metadata?
 
 ## Learning Objectives
 
@@ -56,5 +56,12 @@ The goal of your metadata is to make it crystal clear and easily readable by bot
 10. _Make Backups_ - Metadata are critical, you never want to lose them because of spilled coffee on a computer. Keep the original backed up in a multiple places
 11. _Use Data Validation to Avoid Errors_ - set data types to have googlesheets or excel check that the data in the columns is the type of data it expects for a given variable.
 
+```{r, fig.alt = "Rules for creating metadata (from Broman & Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12709027cba_1_52")
+```
+
+```{r, fig.alt = "Rules for creating metadata continued  (from Broman & Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12709027cba_1_52")
+```
 
 If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!
