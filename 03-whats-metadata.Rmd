@@ -70,7 +70,7 @@ Toward these two goals, [this excellent article](https://www.tandfonline.com/doi
 
 
 <div class = "warning">
-Note that it is very dangerous to open gene data with Excel. According to Ziemann, Eren, El-Osta, 2016, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
+Note that it is very dangerous to open gene data with Excel. According to @Ziemann2016, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
 ```{r, fig.alt = "‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. ", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12709027cba_1_52")
 ```
