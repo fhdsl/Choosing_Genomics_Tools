@@ -165,6 +165,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure git
+        run: |
+          git config --local user.email "itcrtrainingnetwork@gmail.com"
+          git config --local user.name "jhudsl-robot"
+
+          git fetch --all
+          git checkout origin/${{ github.head_ref }}
+
       - name: Run styler
         run: Rscript -e "styler::style_file(list.files(pattern = 'Rmd$', recursive = TRUE, full.names = TRUE));warnings()"
 

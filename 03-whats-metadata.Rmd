@@ -69,6 +69,13 @@ Toward these two goals, [this excellent article](https://www.tandfonline.com/doi
 11. _Use Data Validation to Avoid Errors_ - set data types to have googlesheets or excel check that the data in the columns is the type of data it expects for a given variable.
 
 
+<div class = "warning">
+Note that it is very dangerous to open gene data with Excel. According to Ziemann, Eren, El-Osta, 2016, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
+```{r, fig.alt = "‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. ", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12709027cba_1_52")
+```
+</div>
+
 ### To recap:
 
 ```{r, fig.alt = "Rules for creating metadata (from Broman & Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle", echo = FALSE}
@@ -76,7 +83,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```
 
 ```{r, fig.alt = "Rules for creating metadata continued  (from Broman & Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12709027cba_1_52")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_1")
 ```
 
 If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!
