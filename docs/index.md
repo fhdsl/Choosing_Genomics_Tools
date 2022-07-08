@@ -1,6 +1,6 @@
 ---
 title: "Choosing Genomics Tools"
-date: "May, 2022"
+date: "July, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 biblio-style: apalike

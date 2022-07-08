@@ -57,7 +57,7 @@ In the data type specific chapters, we will cover the sequencing data workflows 
 ### Sequencing file formats
 
 #### SAM - Sequence Alignment Map
-SAM Files are text based files that have sequence information. It generally has not bee quantified or mapped. It is the reads in their raw form. [For more about SAM files](https://samtools.github.io/hts-specs/SAMv1.pdf).
+SAM Files are text based files that have sequence information. It generally has not been quantified or mapped. It is the reads in their raw form. [For more about SAM files](https://samtools.github.io/hts-specs/SAMv1.pdf).
 
 #### BAM - Binary Alignment Map
 BAM files are like SAM files but are compressed (made to take up less space on your computer). This means if you double click on a BAM file to look at it, it will look jumbled and unintelligible. You will need to convert it to a SAM file if you want to see it yourself (but this isn't necessary necessarily).
@@ -177,4 +177,4 @@ For [more about GTF and GFF files](https://uswest.ensembl.org/info/website/uploa
 
 ### Other files
 
-\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). OR it may be covered in the data type specific chapters.
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
