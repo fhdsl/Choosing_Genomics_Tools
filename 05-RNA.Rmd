@@ -1,0 +1,32 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# RNA Methods
+
+## Learning Objectives
+
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand the goals and data collection processes for gene expression assays. Compare and contrast the following methods: Bulk RNA-seq, Single cell RNA-seq, Gene expression microarrays", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_76")
+```
+
+## What are the goals of gene expression analysis?
+
+```{r, fig.alt = "", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142c259a793_0_0")
+```
+
+## Bulk RNA-seq
+
+- [Refine.bio's introduction to RNA-seq](https://alexslemonade.github.io/refinebio-examples/03-rnaseq/00-intro-to-rnaseq.html)
+- [StatQuest: A gentle introduction to RNA-seq](https://www.youtube.com/watch?v=tlf6wYJrwKY) [@Starmer2017-rnaseq].
+- [A general background on the wet lab methods of RNA-seq](https://bitesizebio.com/13542/what-everyone-should-know-about-rna-seq/) [@Hadfield2016].
+- [Modeling of RNA-seq fragment sequence bias reduces systematic errors in transcript abundance estimation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5143225/) [@Love2016].
+- [Mike Love blog post about sequencing biases]( https://mikelove.wordpress.com/2016/09/26/rna-seq-fragment-sequence-bias/) [@bias-blog]
+- [Biases in Illumina transcriptome sequencing caused by random hexamer priming](https://pdfs.semanticscholar.org/9d16/997f5de72d6c606fef3d673db70e5d1d8e1e.pdf?_ga=2.131436679.965169313.1600175795-124991789.1600175795) [@Hansen2010].
+- [Computation for RNA-seq and ChIP-seq studies](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4121056/) [@Pepke2009].
+
+## Single cell RNA-seq
+
+## Gene expression microarrays
