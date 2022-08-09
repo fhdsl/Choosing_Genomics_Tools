@@ -4,8 +4,9 @@ Amezquita
 Angerer
 Agilent
 Baran
-Barcode
+barcode
 barcodes
+Bruning
 BCL
 CEL
 CHP
@@ -20,7 +21,7 @@ GC
 GoogleSheets
 GTC
 Hemberg
-Hexamer
+hexamer
 IDAT
 Illumina
 SAI
@@ -80,3 +81,4 @@ UMIs
 Zhang
 Zheng
 Ziegenhain
+uality
