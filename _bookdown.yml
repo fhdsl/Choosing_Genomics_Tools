@@ -5,6 +5,8 @@ rmd_files: ["index.Rmd",
             "01-intro.Rmd",
             "02-genomics_overview.Rmd",
             "03-whats-metadata.Rmd",
+            "04-DNA.Rmd",
+            "05-RNA.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
