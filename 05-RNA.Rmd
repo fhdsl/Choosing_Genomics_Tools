@@ -33,8 +33,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ### Where gene expression array data comes from
 
-```{r, fig.alt = "Microarray data is generation using total RNA which is labeled with fluorescent dyes. These are then hybridized to the microarray chip. The higher the fluorescence, the more RNA that is being detected in the sample. This is assessed chip wide by an image taken of the chip.
-", echo = FALSE}
+```{r, fig.alt = "Microarray data is generation using total RNA which is labeled with fluorescent dyes. These are then hybridized to the microarray chip. The higher the fluorescence, the more RNA that is being detected in the sample. This is assessed chip wide by an image taken of the chip.", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142e3de7ce8_0_8")
 ```
 
