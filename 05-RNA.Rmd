@@ -91,7 +91,7 @@ The following material is quoted from [refine.bio](https://alexslemonade.github.
 > @bias-blog discusses these biases in this [blog post](https://mikelove.wordpress.com/2016/09/26/rna-seq-fragment-sequence-bias/) which includes this handy figure.
 
 ```{r, fig.alt = "RNA-seq data has various biases introduced to the data upon data generation. RNA targets are more likely to be picked up if they are long, if they are from the 3 prime end, have a particular GC content and have a particular read start sequence.", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g13438a9a5b2_0_161")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142e3de7ce8_0_19")
 ```
 
 ### More about RNA-seq
