@@ -1,0 +1,22 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# DNA Methylation Analysis Methods
+
+## Learning Objectives
+
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand the goals and data collection for DNA sequence collection and variant identification. Compare and contrast the following methods: DNA/SNP microarrays, Whole Genome Sequencing, Whole Exome Sequencing, and Targeted Sequencing", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_71")
+```
+
+## What are the goals of analyzing DNA methylation?
+
+```{r, fig.alt = "", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_71")
+```
+
+## Methylation vs Hydroxymethylation
+## Bisulfite/Oxidative bisulfite sequencing
+## Methylation microarrays
