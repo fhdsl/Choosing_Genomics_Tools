@@ -17,7 +17,42 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_71")
 ```
 
-## DNA/SNP microarrays
-## Whole Genome Sequencing
-## Whole Exome Sequencing
-## Targeted Sequencing
+# DNA/SNP microarrays
+
+## Where SNP array data comes from
+
+## Microarray data **strengths**:
+
+## Microarray data **limitations**:
+
+## More about SNP microarrays
+
+# Whole Genome Sequencing
+
+## Where whole genome sequencing data comes from
+
+## WGS data **strengths**:
+
+## WGS **limitations**:
+
+## More about WGS
+
+# Whole Exome Sequencing
+
+## Where whole exome sequencing data comes from
+
+## WXS data **strengths**:
+
+## WXS **limitations**:
+
+## More about WGS
+
+# Targeted Sequencing
+
+## Where targeted sequencing data comes from
+
+## Targeted sequencing data **strengths**:
+
+## Targeted sequencing data **limitations**:
+
+## More about targeted sequencing 
