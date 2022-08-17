@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 What are Metadata? | Choosing Genomics Tools</title>
+  <title>Chapter 10 Single-cell RNA-seq | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 What are Metadata? | Choosing Genomics Tools" />
+  <meta property="og:title" content="Chapter 10 Single-cell RNA-seq | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 What are Metadata? | Choosing Genomics Tools" />
+  <meta name="twitter:title" content="Chapter 10 Single-cell RNA-seq | Choosing Genomics Tools" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="a-very-general-genomics-overview.html"/>
-<link rel="next" href="microarray-data.html"/>
+<link rel="prev" href="bulk-rna-seq.html"/>
+<link rel="next" href="atac-seq.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -230,61 +230,35 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="what-are-metadata" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> What are Metadata?</h1>
-<div id="learning-objectives-1" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Learning Objectives</h2>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" title="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="100%" /></p>
+<div id="single-cell-rna-seq" class="section level1" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Single-cell RNA-seq</h1>
+<div id="where-single-cell-rna-seq-data-comes-from" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Where single-cell RNA-seq data comes from</h2>
 </div>
-<div id="what-are-metadata-1" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> What are metadata?</h2>
-<p>Metadata are critically important descriptive information about your data.</p>
-<p><strong>Without metadata, the data themselves are useless or at best vastly limited.</strong></p>
-<p>Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your data set.</p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" title="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" /></p>
-<p>Metadata includes but isn’t limited to, the following example categories:</p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" title="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="100%" /></p>
-<div class="warning">
-<p>At this time it’s important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It’s critical that you protect this information! For more details on this, we encourage you to see our <a href="https://jhudatascience.org/Data_Management_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
+<div id="single-cell-rna-seq-data-strengths" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Single-cell RNA-seq data <strong>strengths</strong></h2>
 </div>
+<div id="single-cell-rna-seq-data-limitations" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Single-cell RNA-seq data <strong>limitations</strong></h2>
 </div>
-<div id="how-to-create-metadata" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> How to create metadata?</h2>
-<p>Where do these metadata come from? The notes and experimental design from anyone who played a part in collecting or processing the data and its original samples. If this includes you (meaning you have collected data and need to create metadata) let’s discuss how metadata can be made in the most useful and reproducible manner.</p>
-<div id="the-goals-in-creating-your-metadata" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> The goals in creating your metadata:</h3>
-<div id="goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="section level4" number="3.3.1.1">
-<h4><span class="header-section-number">3.3.1.1</span> Goal A: Make it <em>crystal clear</em> and <em>easily readable</em> by both humans and computers!</h4>
-</div>
-<div id="goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="section level4" number="3.3.1.2">
-<h4><span class="header-section-number">3.3.1.2</span> Goal B: Avoid introducing errors into your metadata in the future!</h4>
-<p>Toward these two goals, <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">this excellent article</a> by Broman &amp; Woo discusses metadata design rules. We will very briefly cover the major points here but highly suggest you read the original article.</p>
-<ol style="list-style-type: decimal">
-<li><p><em>Be Consistent</em> - Whatever labels and systems you choose, use it universally. This not only means in your metadata spreadsheet but also anywhere you are discussing your metadata variables.</p></li>
-<li><p><em>Choose good names for things</em> - avoid spaces, special characters, or within the lab jargon.</p></li>
-<li><p><em>Write Dates as YYYY-MM-DD</em> - this is a global standard and less likely to be messed up by Microsoft Excel.</p></li>
-<li><p><em>No Empty Cells</em> - If a particular field is not applicable to a sample, you can put <code>NA</code> but empty cells can lead to formatting errors or just general confusion.</p></li>
-<li><p><em>Put Just One Thing in a Cell</em> - resist the urge to combine variables into one, you have no limit on the number of metadata variables you can make!</p></li>
-<li><p><em>Make it a Rectangle</em> - This is the easiest way to read data, for a computer and a human. Have your samples be the rows and variables be columns.</p></li>
-<li><p><em>Create a Data Dictionary</em> - Have somewhere that you describe what your metadata mean in detailed paragraphs.</p></li>
-<li><p><em>No Calculations in the Raw Data Files</em> - To avoid mishaps, you should always keep a clean, original, raw version of your metadata that you do not add extra calculations or notes to.</p></li>
-<li><p><em>Do Not Use Font Color or Highlighting as Data</em> - This only adds to confusion to others if they don’t understand your color coding scheme. Instead create a new variable for anything you might be tempted to color code.</p></li>
-<li><p><em>Make Backups</em> - Metadata are critical, you never want to lose them because of spilled coffee on a computer. Keep the original backed up in a multiple places. We recommend keeping writing your metadata in something like GoogleSheets because it is both free and also saved online so that it is safe from computer crashes.</p></li>
-<li><p><em>Use Data Validation to Avoid Errors</em> - set data types to have googlesheets or excel check that the data in the columns is the type of data it expects for a given variable.</p></li>
-</ol>
-<div class="warning">
-<p>Note that it is very dangerous to open gene data with Excel. According to <span class="citation">@Ziemann2016</span>, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
-<img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" title="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="100%" /></p>
-</div>
-</div>
-</div>
-<div id="to-recap" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> To recap:</h3>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" title="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="100%" /></p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" title="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="100%" /></p>
-<p>If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!</p>
+<div id="more-reading-about-single-cell-rna-seq-data" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> More reading about single-cell RNA-seq data</h2>
+<ul>
+<li>Hemberg Lab <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/index.html">scRNA-seq training course</a></li>
+<li><a href="https://asap.epfl.ch/">ASAP: Automated Single-cell Analysis Pipeline</a> is a web server that allows you to process scRNA-seq data. (<a href="https://doi.org/10.1093/bioinformatics/btx337">Gardeux <em>et al.</em> 2017.</a>)</li>
+<li>Smith. <a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/"><em>Unique Molecular Identifiers – the problem, the solution and the proof</em></a> provides an excellent background on UMIs.</li>
+<li><a href="https://doi.org/10.1093/bfgp/elx035">Baran-Gale <em>et al.</em> (2018)</a><br />
+</li>
+<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Lafzi <em>et al.</em> (2019)</a></li>
+<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Ziegenhain <em>et al.</em> (2018)</a></li>
+<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Zhang <em>et al.</em> (2018)</a></li>
+<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">AlJanahi <em>et al.</em> (2018)</a></li>
+<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Amezquita <em>et al.</em> (2019)</a></li>
+<li><a href="http://dx.doi.org/10.1016/j.coisb.2017.07.004">Angerer <em>et al.</em> (2017)</a></li>
+<li><a href="https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2">Bruning <em>et al.</em> (2021)</a></li>
+<li><a href="https://doi.org/10.15252/msb.20188746">Luecken &amp; Theis (2019)</a></li>
+</ul>
 
-</div>
 </div>
 </div>
 <hr>
@@ -300,8 +274,8 @@
           </div>
         </div>
       </div>
-<a href="a-very-general-genomics-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="microarray-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bulk-rna-seq.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="atac-seq.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
