@@ -8,13 +8,13 @@ ottrpal::set_knitr_image_path()
 ## Learning Objectives
 
 ```{r, fig.alt = "This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data
-", echo = FALSE}
+", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_71")
 ```
 
 ## What are the goals of analyzing DNA methylation?
 
-```{r, fig.alt = "", echo = FALSE}
+```{r, fig.alt = "",out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_10")
 ```
 
