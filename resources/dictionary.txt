@@ -6,6 +6,7 @@ Angerer
 ATAC
 Baran
 bisulfite
+Bruning
 BCL
 CEL
 CHP
@@ -23,6 +24,8 @@ hexamer
 hydroxymethylation
 IDAT
 Illumina
+Lafzi
+Luecken
 SAI
 THe
 methylation
