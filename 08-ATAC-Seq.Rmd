@@ -1,0 +1,30 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# ATAC-Seq
+
+## Learning Objectives
+
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand the basics of ATAC-Seq data collection and processing workflow. Identify the next steps for your particular ATAC-Seq data. Formulate questions to ask about your ATAC-Seq data", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_66")
+```
+
+## What are the goals of ATAC-Seq analysis?
+
+The goal of ATAC-seq is to....
+
+```{r, fig.alt = "What does accessibility to chromatin represent? In ATAC-seq we are able to sequence open chromatin and find out DNA sequences where chromatin is accessible for activity. ", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_23")
+```
+
+# ATAC-Seq
+
+## Where ATAC-Seq data comes from
+
+## ATAC-Seq data **strengths**:
+
+## ATAC-Seqdata **limitations**:
+
+## More about ATAC-Seq
