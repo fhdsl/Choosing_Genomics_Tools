@@ -29,12 +29,23 @@ files <- list.files(path = root_dir, pattern = 'md$', full.names = TRUE)
 
 test_url <- function(url) {
   message(paste0("Testing: ", url))
+  
   url_status <- try(httr::GET(url), silent = TRUE)
+
+  # Fails if host can't be resolved
   status <- ifelse(suppressMessages(grepl("Could not resolve host", url_status)), "failed", "success")
+  
+  if (status == "success") {
+    # Fails if 404'ed
+    status <- ifelse(try(httr::GET(url)$status_code, silent = TRUE) == 404, "failed", "success")
+  }
+
   return(status)
 }
 
 get_urls <- function(file) {
+  message(paste("Now testing URLs in file:", file))
+  
   # Read in a file and return the urls from it
   content <- readLines(file)
   content <- grep("http[s]?://", content, value = TRUE)
