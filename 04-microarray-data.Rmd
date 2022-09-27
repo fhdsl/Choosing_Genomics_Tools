@@ -90,3 +90,28 @@ The tools and methods by which you normalize and correct the microarray data wil
 ### Examples
 - [Refine.bio describes their processing methods](https://docs.refine.bio/en/latest/main_text.html#processing-information).
 - [Brainarray keeps up to date microarray annotation for all kinds of platforms](http://brainarray.mbni.med.umich.edu/Brainarray/Database/CustomCDF/genomic_curated_CDF.asp)
+
+### Microarray Platforms
+
+There are so many microarray chip designs out there designed to target different things. Three of the largest commercial manufacturers have ready to use microarrays you can purchase. You can also design microarrays to hit your own targets of interest.
+
+Here are full lists of platforms that have been published on Gene Expression Omnibus.
+
+- [Affymetrix platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=5&zsort=series&display=20)
+- [Agilent platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=63&display=20&zsort=series).
+- [Illumina platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=1242&zsort=series&display=20).
+
+
+### Microarray processing tutorials:
+
+For the most common microarray platforms, you can see these examples for how to process the data:
+
+#### General arrays
+- [Using Bioconductor for Microarray Analysis](https://www.bioconductor.org/packages/devel/workflows/vignettes/arrays/inst/doc/arrays.html).
+
+#### Gene Expression Arrays
+- [An end to end workflow for differential gene expression using Affymetrix microarrays](https://bioconductor.org/packages/devel/workflows/vignettes/maEndToEnd/inst/doc/MA-Workflow.html).
+
+#### DNA Methylation Arrays
+- [DNA Methylation array workflow](https://nbis-workshop-epigenomics.readthedocs.io/en/latest/content/tutorials/methylationArray/Array_Tutorial.html).
+-
