@@ -15,26 +15,28 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 Microarrays have been in use since before high throughput sequencing methods became more affordable and widespread, but they still can be a effective and affordable tool for genomic assays. Depending on your goals, microarray may be a suitable choice for your genomic study.
 
-## Pros:
-
-- Microarrays are much more affordable than high throughput sequencing which can allow you to run more samples and have more statistical power.
-- Microarrays take less time to process than most highthroughput sequencing methods. 
-- Microarrays are generally less computationally intensive to process and you can get your results more quickly.
-
-## Cons:
-
--
+## How do microarrays work?
 
 All microarrays work on hybridization to sets of oligonucleotides on a chip. However, the preparation of the samples, and the oligonucleotides' hybridization targets vary depending on the assay and goals.
-
-
-## How do microarrays work?
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_51")
 ```
 
+On a basic principle, oligonucleotide probes are designed for different targets sets designed for the same targets are put together. On the whole chip, these probes are arranged in a grid like design so that after a sample is hybridized to them, you can detect how much of the target is detected by taking an image and knowing what target each location is designed to.
 
+### Pros:
+
+- Microarrays are much more affordable than high throughput sequencing which can allow you to run more samples and have more statistical power [@Tarca2006; @refinebioexamples2019].
+- Microarrays take less time to process than most high throughput sequencing methods[@Tarca2006; @refinebioexamples2019].
+- Microarrays are generally less computationally intensive to process and you can get your results more quickly[@Tarca2006; @refinebioexamples2019].
+- Microarrays are generally as good as sequencing methods for detecting clinical endpoints [@Zhang2015].
+
+### Cons:
+
+- Microarray chips can only measure the targets they are designed for, and cannot be used for exploratory purposes [@Zhang2015].
+- Microarrays' probe designs can only be as up to date as the genome they were designed against at the time [@Mantione2014; @refinebioexamples].
+- Microarray does not escape oligonucleotide biases like GC content and sequence composition biases[@refinebioexamples2019].
 
 
 ## What types of arrays are there?
@@ -45,14 +47,46 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g13438a9a5b2_0_16")
 ```
 
+Single nucleotide polymorphism arrays are designed to measure DNA variants. They are designed to target DNA variants. When the sample is hybridized, the amount of fluorescence detected can be interpreted to indicate the presence of the variant and whether the variant is homogenius or heterogenous. The samples prepped for SNP arrays then need to be DNA samples.
+
+#### Examples:
+- [The 1000 genomes project](https://www.internationalgenome.org/) is a large collection of SNP data array from many populations around the world and is available for download.
+
 ### Gene expression arrays
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142e3de7ce8_0_8")
 ```
 
+Gene expression arrays are designed to measure gene expression. They are designed to target and measure relative transcript abundance level.
+
+#### Examples:
+- [refine.bio](https://www.refine.bio/) is the largest collection of publicly available, already normalized gene expression data (including gene expression microarrays).
+
 ### DNA methylation arrays
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g144bc8d6a68_0_1")
 ```
+
+DNA methylation can also be measured by microarray. To detect methylated cytosines (5mC), DNA samples are prepped using bisulfite conversion. This converts unmethylated cytosines into uracils and leaves methylated cytosines untouched. Probes are then designed to bind to either the uracil or the cytosine, representing the unmethylated and methylated cytosines respectively.
+
+A ratio of the fluorescence signal can be used to identify the relative abundance of the methylated and unmethylated versions of the sequence.  
+
+Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxidative bisulfite bisulfite sequencing [@Booth2013]. Note that bisulfite conversion alone will not distinguish between 5mC and 5hmC though these often may indicate different biological mechanics.
+
+## General processing of microarray data
+
+```{r, fig.alt = "", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15f36710259_0_0")
+```
+
+After scanning, microarray data starts as an image that needs to be quantified, normalized and further corrected and edited based on the most current genome and probe annotation.
+
+As noted above, microarrays do not escape the base sequence biases that accompany most all genomic assays. The normalization methods you use ideally will mitigate these sequence biases and also make sure to remove probes that may be outdated or bind to multiple places on the genome.
+
+The tools and methods by which you normalize and correct the microarray data will be dependent not only on the type of microarray assay you are performing, but most of all what kind of microarray chip design/platform you are using.
+
+### Examples
+- [Refine.bio describes their processing methods](https://docs.refine.bio/en/latest/main_text.html#processing-information).
+- [Brainarray keeps up to date microarray annotation for all kinds of platforms](http://brainarray.mbni.med.umich.edu/Brainarray/Database/CustomCDF/genomic_curated_CDF.asp)
