@@ -5,14 +5,28 @@ ottrpal::set_knitr_image_path()
 
 # Microarray Data
 
-Microarrays 
-
-
 ## Learning Objectives
 
 ```{r, fig.alt = "This chapter will demonstrate how to: Understand the very general basics of microarray data collection and processing workflow. Understand the limitations and strengths of microarray data in general.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g144bc8d6a68_0_12")
 ```
+
+## Summary of microarrays
+
+Microarrays have been in use since before high throughput sequencing methods became more affordable and widespread, but they still can be a effective and affordable tool for genomic assays. Depending on your goals, microarray may be a suitable choice for your genomic study.
+
+## Pros:
+
+- Microarrays are much more affordable than high throughput sequencing which can allow you to run more samples and have more statistical power.
+- Microarrays take less time to process than most highthroughput sequencing methods. 
+- Microarrays are generally less computationally intensive to process and you can get your results more quickly.
+
+## Cons:
+
+-
+
+All microarrays work on hybridization to sets of oligonucleotides on a chip. However, the preparation of the samples, and the oligonucleotides' hybridization targets vary depending on the assay and goals.
+
 
 ## How do microarrays work?
 
