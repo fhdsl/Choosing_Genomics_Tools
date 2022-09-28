@@ -11,11 +11,8 @@ The learning objectives for this course are to:
 2 Describe the steps for generating WGS data
 3 Understand the data analysis workflow for WGS
 
-```{r, fig.alt = "The learning objectives for this course are to: 
-1 Define the uses and applications of WGS
-2 Describe the steps for generating WGS data
-3 Understand the data analysis workflow for WGS", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_66](https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_51")
+```{r, fig.alt = "The learning objectives for this course are to: 1 Define the uses and applications of WGS 2 Describe the steps for generating WGS data 3 Understand the data analysis workflow for WGS", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_51")
 ```
 
 ## WGS Overview 
