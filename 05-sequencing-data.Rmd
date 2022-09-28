@@ -39,9 +39,15 @@ Sequences are not all sequenced or amplified at the same rate. In a perfect worl
 
 #### GC bias
 
+You may recall that with nucleotides: adenine binds with thymine and guanine binds with cytosine. But, the guanine-cytosine bond (GC) has 3 hydrogen bonds whereas the adenine-thymine bond (AT) has only 2 bonds. This means that the GC bond is stickier (to put it scientifically) and needs higher temperatures to unbind. The sequencing and PCR amplification process involves cycling through temperatures and binding and unbinding of sequences which means that if a sequence has a lot of G's and C's (high GC content) it will unbind at a different temperatures than a sequence of low GC content.
+
 #### Sequence complexity
 
+Nonrepeating sequences are harder to sequence and amplify than repeating sequences.
+
 #### Length bias
+
+Longer sequences -- whether they represent long sequence variants, long transcripts, or etc, are more likely to be identified than shorter ones! So if you are attempting to quantify the presence of a sequence, a longer sequence is much more likely to be counted more often.
 
 ### PCR Amplification
 
