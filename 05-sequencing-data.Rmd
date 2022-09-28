@@ -16,3 +16,41 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_45")
 ```
+
+Sequencing methods, whether they are targeting DNA, transcriptomes, or some other target of the genome, have some commonalities in the steps as well as what types of biases and data generation artifacts to look out for.
+
+All sequencing experiments start out with the extraction of the biological material of interest. This biological material will be processed in some way to isolate to the genomic target of interest (we will cover the various techniques for this in more detail in each respective data chapter since it is highly specific to the data type).
+
+This set of processing steps will lead up to library generation -- adding a way to catalog what molecules came from where. Sometimes for this library prep the sequences need to be fragmented before hand and an adapter bound to them.
+
+The resulting sample material is often a very small quantity, which means Polymerase Chain Reaction (PCR) needs to be used to amplify the material to a quantity large enough to be reliably sequenced. We will talk about how this very common method not only amplifies the sequences we want to read but amplifies sequence method biases that we would like to avoid.
+
+At the end of this process, base sequences are called for the samples (with varying degrees of confidence), creating huge amounts of data and what hopefully contains valuable research insights.  
+
+## Sequencing concepts
+
+### Inherent biases
+
+```{r, fig.alt = "Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_45")
+```
+
+Sequences are not all sequenced or amplified at the same rate. In a perfect world, we could take a simple snapshot of the genome we are interested in and know exactly what and how many sequences were in a sample. But in reality, sequencing methods and the resulting data always have some biases we have to be aware of and hopefully use methods that attempt to mitigate the biases.
+
+#### GC bias
+
+#### Sequence complexity
+
+#### Length bias
+
+### PCR Amplification
+
+### Depth of coverage
+
+### Quality checks
+
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
+### Alignment
+
+### Single End vs Paired End

@@ -62,6 +62,9 @@ Gene expression arrays are designed to measure gene expression. They are designe
 
 #### Examples:
 - [refine.bio](https://www.refine.bio/) is the largest collection of publicly available, already normalized gene expression data (including gene expression microarrays).
+- [Getting started in gene expression microarray analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000543) [@Slonim2009].
+- [Microarray and its applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467903/) [@Govindarajan2012].
+- [Analysis of microarray experiments of gene expression profiling](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/) [@Tarca2006].
 
 ### DNA methylation arrays
 
@@ -85,7 +88,7 @@ After scanning, microarray data starts as an image that needs to be quantified, 
 
 As noted above, microarrays do not escape the base sequence biases that accompany most all genomic assays. The normalization methods you use ideally will mitigate these sequence biases and also make sure to remove probes that may be outdated or bind to multiple places on the genome.
 
-The tools and methods by which you normalize and correct the microarray data will be dependent not only on the type of microarray assay you are performing, but most of all what kind of microarray chip design/platform you are using.
+The tools and methods by which you normalize and correct the microarray data will be dependent not only on the type of microarray assay you are performing (gene expression, SNP, methylation), but most of all what kind of microarray chip design/platform you are using.
 
 ### Examples
 - [Refine.bio describes their processing methods](https://docs.refine.bio/en/latest/main_text.html#processing-information).
@@ -101,7 +104,6 @@ Here are full lists of platforms that have been published on Gene Expression Omn
 - [Agilent platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=63&display=20&zsort=series).
 - [Illumina platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=1242&zsort=series&display=20).
 
-
 ### Microarray processing tutorials:
 
 For the most common microarray platforms, you can see these examples for how to process the data:
@@ -114,4 +116,3 @@ For the most common microarray platforms, you can see these examples for how to 
 
 #### DNA Methylation Arrays
 - [DNA Methylation array workflow](https://nbis-workshop-epigenomics.readthedocs.io/en/latest/content/tutorials/methylationArray/Array_Tutorial.html).
--

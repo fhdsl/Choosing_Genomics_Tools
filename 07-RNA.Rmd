@@ -27,24 +27,6 @@ There are three general methods we will discuss for evaluating gene expression. 
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g13438a9a5b2_0_80")
 ```
 
-# Gene expression microarrays
-
-## Where gene expression array data comes from
-
-```{r, fig.alt = "Microarray data is generation using total RNA which is labeled with fluorescent dyes. These are then hybridized to the microarray chip. The higher the fluorescence, the more RNA that is being detected in the sample. This is assessed chip wide by an image taken of the chip.", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142e3de7ce8_0_8")
-```
-
-## Microarray data **strengths**:
-
-## Microarray data **limitations**:
-
-## More about gene expression microarrays
-
-- [Getting started in gene expression microarray analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000543) [@Slonim2009].
-- [Microarray and its applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467903/) [@Govindarajan2012].
-- [Analysis of microarray experiments of gene expression profiling](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/) [@Tarca2006].
-
 # Bulk RNA-seq
 
 ## Where RNA-seq data comes from
