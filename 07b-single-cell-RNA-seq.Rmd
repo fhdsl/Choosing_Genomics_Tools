@@ -57,7 +57,10 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## Processing steps for single cell RNA-seq Data
 
-
+- [Alevin]
+- [10X Cell]
+- [Seurat]
+- [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 
 ## More reading about single-cell RNA-seq data
 
