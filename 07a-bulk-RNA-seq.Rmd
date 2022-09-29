@@ -24,6 +24,29 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142e3de7ce8_0_19")
 ```
 
+## RNA-seq data considerations
+
+### Ribo minus vs poly A selection
+
+### PCR amplification!
+
+### Transcriptome alignment
+
+### Abundance measures
+
+counts
+TPM
+FPKM
+RPKM
+
+### RNA-seq processing steps
+
+- [fastp]
+- [tximport]
+- [Salmon]
+- [EdgeR]
+- [DESeq2]
+
 ## More reading about RNA-seq data
 - [Refine.bio's introduction to RNA-seq](https://alexslemonade.github.io/refinebio-examples/03-rnaseq/00-intro-to-rnaseq.html)
 - [StatQuest: A gentle introduction to RNA-seq](https://www.youtube.com/watch?v=tlf6wYJrwKY) [@Starmer2017-rnaseq].
