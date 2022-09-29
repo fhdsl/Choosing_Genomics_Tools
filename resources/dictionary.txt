@@ -18,12 +18,14 @@ Ensembl
 Exome
 fasta
 fastq
+FASTQC
 Gardeux
 GC
 GoogleSheets
 GTC
 Hemberg
 heterogenous
+homogeneous
 hmC
 hexamer
 hydroxymethylation
@@ -36,6 +38,9 @@ SAI
 THe
 methylation
 methylated
+mC
+Nonrepeating
+nucleotides
 RNAs
 scRNA
 Seqdata
