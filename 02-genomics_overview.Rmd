@@ -7,7 +7,7 @@ ottrpal::set_knitr_image_path()
 
 ## Learning Objectives
 
-```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format", echo = FALSE}
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.gd422c5de97_0_16")
 ```
 
@@ -18,7 +18,7 @@ Here we will cover the most common file formats. If you have a file format you a
 
 In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly, this summarized data is what can be used to make inferences and create plots and results tables.
 
-```{r, fig.alt = "In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. ", echo = FALSE}
+```{r, fig.alt = "In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. ", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_20")
 ```
 
