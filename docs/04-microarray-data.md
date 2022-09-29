@@ -3,6 +3,8 @@
 
 # Microarray Data
 
+Microarrays 
+
 
 ## Learning Objectives
 
@@ -11,6 +13,9 @@
 ## How do microarrays work?
 
 ![](resources/images/04-microarray-data_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_51.png){width=100%}
+
+
+
 
 ## What types of arrays are there?
 

@@ -33,9 +33,7 @@ There are three general methods we will discuss for evaluating gene expression. 
 
 - [Getting started in gene expression microarray analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000543) [@Slonim2009].
 - [Microarray and its applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467903/) [@Govindarajan2012].
-- [An tutorial review of microarray data analysis](http://www.ub.edu/stat/docencia/bioinformatica/microarrays/ADM/slides/A_Tutorial_Review_of_Microarray_data_Analysis_17-06-08.pdf) [@Sanchez2008].
 - [Analysis of microarray experiments of gene expression profiling](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/) [@Tarca2006].
-- [Some nice summary slides about microarray data analysis from Emory](http://web1.sph.emory.edu/users/hwu30/teaching/bioc/GE1.pdf) [@intro-microarray-slides].
 
 # Bulk RNA-seq
 

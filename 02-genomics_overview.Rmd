@@ -7,7 +7,7 @@ ottrpal::set_knitr_image_path()
 
 ## Learning Objectives
 
-```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format", echo = FALSE}
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.gd422c5de97_0_16")
 ```
 
@@ -18,7 +18,7 @@ Here we will cover the most common file formats. If you have a file format you a
 
 In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly, this summarized data is what can be used to make inferences and create plots and results tables.
 
-```{r, fig.alt = "In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. ", echo = FALSE}
+```{r, fig.alt = "In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. ", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_20")
 ```
 
@@ -53,12 +53,6 @@ gene_id, sample_1, sample_2,
 gene_a, 12, 15,
 gene_b, 13, 14
 ```
-
-## Very General Sequencing Workflow
-
-In the data type specific chapters, we will cover the sequencing data workflows and file formats in more detail. But in the most general sense, sequencing workflows look like this:
-
-<div id="04D1599E33D92E370515664A58E78BE1EEB_69816"><div id="04D1599E33D92E370515664A58E78BE1EEB_69816_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=04D1599E33D92E370515664A58E78BE1EEB" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/04D1599E33D92E370515664A58E78BE1EEB/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("04D1599E33D92E370515664A58E78BE1EEB",69816,1,"");</script><br/>
 
 ### Sequencing file formats
 
@@ -115,12 +109,6 @@ For [more on VCF files](https://en.wikipedia.org/wiki/Variant_Call_Format).
 MAF files are aggregated versions of VCF files. So for a group of samples for which each has a VCF file, your entire group of samples' variants will be summarized in the form of a MAF file.
 
 For [more on MAF files](https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#:~:text=Mutation%20Annotation%20Format%20(MAF)%20is,(or%20open%2Daccess).).
-
-## Very General Microarray Workflow
-
-In the data type specific chapters, we will cover the microarray workflow and file formats in more detail. But in the most general sense, microarray workflows look like this, note that the exact file formats are specific to the chip brand and type you use (e.g. Illumina, Affymetrix, Agilent, etc.):
-
-<div id="CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8_81516"><div id="CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8_81516_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8",81516,1,"");</script><br/>
 
 ### Microarray file formats
 

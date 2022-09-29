@@ -1,2 +1,4 @@
 http://www.someurl.html
 https://jhudatascience.org/{Course_Name}}
+https://tldrlegal.com/license/creative-commons-attribution-(cc
+https://en.wikipedia.org/wiki/BED_(file_format
