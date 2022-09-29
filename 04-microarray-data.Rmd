@@ -104,6 +104,75 @@ Here are full lists of platforms that have been published on Gene Expression Omn
 - [Agilent platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=63&display=20&zsort=series).
 - [Illumina platforms](https://www.ncbi.nlm.nih.gov/geo/browse/?view=platforms&submitter=1242&zsort=series&display=20).
 
+## Very General Microarray Workflow
+
+In the data type specific chapters, we will cover the microarray workflow and file formats in more detail. But in the most general sense, microarray workflows look like this, note that the exact file formats are specific to the chip brand and type you use (e.g. Illumina, Affymetrix, Agilent, etc.):
+
+<div id="CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8_81516"><div id="CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8_81516_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8",81516,1,"");</script><br/>
+
+### Microarray file formats
+
+#### IDAT - intensity data file
+
+This is an Illumina microarray specific file that contains the chip image intensity information for each location on the microarray. It is a binary file, which means it will not be readable by double clicking and attempting to open the file directly.
+
+Currently, Illumina appears to suggest directly converting IDAT files into a GTC format. We advise looking into [this package to help you do that](https://github.com/freeseek/gtc2vcf).
+
+[For more on IDAT files](https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote_array_analysis_workflows.pdf).
+
+#### DAT - data file
+
+This is an Affymetrix' microarray specific file parallel to the IDAT file in that it contains the image intensity information for each location on the microarray. It's stored as pixels.
+
+[For more on DAT files](https://www.affymetrix.com/support/developer/powertools/changelog/gcos-agcc/dat.html).
+
+#### CEL
+This is an Affymetrix microarray specific file that is made from a DAT file but translated into numeric values. It is not normalized yet but can be normalized into a CHP file.
+
+[For more on CEL files](https://www.affymetrix.com/support/developer/powertools/changelog/gcos-agcc/cel.html)
+
+#### CHP
+
+CHP files contain the gene-level and normalized data from an Affymetrix array chip. CHP files are obtained by normalizing and processing CEL files.
+
+[For more about CHP files](https://www.affymetrix.com/support/developer/powertools/changelog/gcos-agcc/chp-xda.html).
+
+## General informatics files
+
+At various points in your genomics workflows, you may need to use other types of files to help you annotate your data. We'll also discuss some of these common files that you may encounter:
+
+#### BED - Browser Extensible Data
+
+A BED file is a text file that has coordinates to genomic regions. THe other columns that accompany the genomic coordinates are variable depending on the context. But every BED file contains the `chrom`, `chromStart` and `chromEnd` columns to start.
+
+A BED file might look like this:
+```
+chrom   chromStart  chromEnd other_optional_columns
+chr1    0      1000  good
+chr2    100    3000  bad
+```
+
+For [more on BED files](https://en.wikipedia.org/wiki/BED_(file_format)).
+
+#### GFF/GTF General Feature Format/Gene Transfer Format
+
+A GFF file is a tab delimited file that contains information about genomic features. These types of files are available from databases and what you can use to annotate your data.
+
+You may see there are GFF2, GFF3, and GTF files. These only refer to different versions and variations. They generally have the same information. In general, GFF2 is being phased out so using GFF3 is generally a better bet unless the program or package you are using specifies it needs an older GFF2 version.
+
+A GFF file may look like this (borrowed example from Ensembl):
+```
+1 transcribed_unprocessed_pseudogene  gene        11869 14409 . + . gene_id "ENSG00000223972"; gene_name "DDX11L1"; gene_source "havana"; gene_biotype "transcribed_unprocessed_pseudogene";
+```
+Note that it will be useful for annotating genes and what we know about them.
+
+For [more about GTF and GFF files](https://uswest.ensembl.org/info/website/upload/gff.html).
+
+
+### Other files
+
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
+
 ### Microarray processing tutorials:
 
 For the most common microarray platforms, you can see these examples for how to process the data:

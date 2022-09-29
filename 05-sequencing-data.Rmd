@@ -11,7 +11,7 @@ ottrpal::set_knitr_image_path()
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g144bc8d6a68_0_7")
 ```
 
-In this section, we are going to discuss generalities that apply to all sequencing data. This is meant to be a "primer" for you which data-type specific chapters will build off of to give you more specific and practical steps and advice in regards to your data type. 
+In this section, we are going to discuss generalities that apply to all sequencing data. This is meant to be a "primer" for you which data-type specific chapters will build off of to give you more specific and practical steps and advice in regards to your data type.
 
 ## How does sequencing work?
 
@@ -99,3 +99,69 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 Sequencing can be done single-end or paired-end. Paired end means the primers are going to bind to both sides of a sequence. This can help you avoid some 3' bias and give you more complete coverage of the area you are sequencing. But, as you may guess, pair-end read sequencing is more expensive than single end.
 
 You will want to determine whether your sequencing is paired end or single end. If it is paired end you will likely see file names that indicate this. You should have pairs of files that may or may not be labeled with `_1` and `_2` or `_F` and `_R`. We will discuss file nomenclature more specifically as it pertains to different data types in the upcoming chapters.
+
+## Very General Sequencing Workflow
+
+In the data type specific chapters, we will cover the sequencing data workflows and file formats in more detail. But in the most general sense, sequencing workflows look like this:
+
+<div id="04D1599E33D92E370515664A58E78BE1EEB_69816"><div id="04D1599E33D92E370515664A58E78BE1EEB_69816_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=04D1599E33D92E370515664A58E78BE1EEB" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/04D1599E33D92E370515664A58E78BE1EEB/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("04D1599E33D92E370515664A58E78BE1EEB",69816,1,"");</script><br/>
+
+### Sequencing file formats
+
+#### SAM - Sequence Alignment Map
+SAM Files are text based files that have sequence information. It generally has not been quantified or mapped. It is the reads in their raw form. [For more about SAM files](https://samtools.github.io/hts-specs/SAMv1.pdf).
+
+#### BAM - Binary Alignment Map
+BAM files are like SAM files but are compressed (made to take up less space on your computer). This means if you double click on a BAM file to look at it, it will look jumbled and unintelligible. You will need to convert it to a SAM file if you want to see it yourself (but this isn't necessary necessarily).
+
+#### FASTA - "fast A"
+
+Fasta files are sequence files that can be either nucleotide or amino acid sequences. They look something like this (the example below illustrating an amino acid sequence):
+
+```
+>SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+```
+
+For [more about fasta files](https://en.wikipedia.org/wiki/FASTA_format).
+
+#### FASTQ - "Fast q"
+
+A Fastq file is like a Fasta file except that it also contains information about the **Q**uality of the read. By quality, we mean, how sure was the sequencing machine that the nucleotide or amino acid called was indeed called correctly?
+
+```
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+
+For [more about fastq files](https://en.wikipedia.org/wiki/FASTQ_format).
+
+Later in this course we will discuss the importance of examining the quality of your sequencing data and how to do that. If you received your data from a bioinformatics core it is possible that they've already done this quality analysis for you.
+
+_Sequencing data that is not of high enough quality should not be trusted!_ It may need to be re-run entirely or may need extra processing (trimming) in order to make it more trustworthy. We will discuss this more in later chapters.
+
+#### BCL - binary base call (BCL) sequence file format
+
+This type of sequence file is specific to Illumina data. In most cases, you will simply want to convert it to Fastq files for use with non-Illumina programs.
+
+[More about BCL to Fastq conversion](https://medium.com/@marija190396/bcl-to-fastq-conversion-e289852823d0).
+
+#### VCF - Variant Call Format
+
+VCF files are further processed form of data than the sequence files we discussed above. VCF files are specially for storing only where a particular sample's sequences differ or are _variant_ from the reference genome or each other.
+
+This will only be pertinent to you if you care about DNA variants. We will discuss this in the DNA seq chapter.
+
+For [more on VCF files](https://en.wikipedia.org/wiki/Variant_Call_Format).
+
+#### MAF - Mutation Annotation Format
+
+MAF files are aggregated versions of VCF files. So for a group of samples for which each has a VCF file, your entire group of samples' variants will be summarized in the form of a MAF file.
+
+For [more on MAF files](https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#:~:text=Mutation%20Annotation%20Format%20(MAF)%20is,(or%20open%2Daccess).).
+
+### Other files
+
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
