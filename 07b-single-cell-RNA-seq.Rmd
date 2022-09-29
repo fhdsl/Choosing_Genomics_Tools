@@ -14,9 +14,48 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## Where single-cell RNA-seq data comes from
 
-## Single-cell RNA-seq data **strengths**  
+```{r, fig.alt = "As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_6")
+```
 
-## Single-cell RNA-seq data **limitations**  
+As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity.
+
+Single cell RNA-seq can give us cell level transciptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity. If your research questions require cell-level transcriptional information, single-cell RNA-seq will on interest to you.
+
+```{r, fig.alt = "Single cell RNA-seq can give us cell level transciptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_11")
+```
+
+## Single-cell RNA-seq data types
+
+There are broadly two categories of single-cell RNA-seq data methods we will discuss.
+
+- **Full length RNA-seq**: Individual cells are physically separated and then sequenced.
+- **Tag Based RNA-seq**: Individual cells are tagged with a barcode and their data is separated computationally.
+
+Depending on your goals for your single cell RNA-seq analysis, you may want to choose one method over the other.
+
+```{r, fig.alt = "Full length single cellRNA-seq Pros: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_25")
+```
+
+```{r, fig.alt = "Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_25")
+```
+
+(Material borrowed from [@AlexsLemonade2022]).
+
+### Unique Molecular identifiers
+
+Often Tag based single cell RNA-seq methods will include not only a cell barcode for cell identification but will also have a unique molecular identfier (UMI) for original molecule identification. The idea behind the UMIs is it is a way to have insight into the original snapshot of the cell and potentially combat PCR amplification biases.
+
+```{r, fig.alt = "Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_41")
+```
+
+## Processing steps for single cell RNA-seq Data
+
+
 
 ## More reading about single-cell RNA-seq data
 
