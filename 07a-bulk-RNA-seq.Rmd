@@ -76,6 +76,9 @@ _Examples of psuedo aligners_:
 
 These strategies are discussed at greater length [in this excellent manuscript by Conesa et al, 2016](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8).
 
+```{r, fig.alt = "TopHat Uses an expectation-maximization approach that estimates transcript abundances. Cufflinks is designed to take advantage of PE reads, and may use GTF information to identify expressed transcripts, or can infer transcripts de novo from the mapping data alone. RSEM, eXpress, Sailfish, Kallisto, and Salmon - Quantify expression from transcriptome mapping and allocate multi-mapping reads among transcript and output within-sample normalized values corrected for sequencing biases. NURD Provides an efficient way of estimating transcript expression from SE reads with a low memory and computing cost.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_72")
+```
 ### Abundance measures
 
 If your RNA-seq data has already been processed, it may have abundance measure reported with it already. But there are various types of abundance measures used -- what do they represent?
@@ -112,9 +115,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```
 ### RNA-seq post processing tools
 
-- [tximport]
-- [EdgeR]
-- [DESeq2]
+```{r, fig.alt = "For DESeq: Read count distribution assumes a negative binomial distribution. Raw counts are expected. Replicates are not dealt with.Normalization is done with respect to Library size. For edgeR: Read count distribution assumes Bayesian methods for negative binomial distribution Input is raw counts. Yes, can deal with replicates. Normalization is done with respect to Library size, TMM, RLE, Upperquartile. For baySeq: Read count distribution assumes bayesian methods for negative binomial distribution. Input is raw counts. Can deal with replicates. Library size, Quantile, TMM For NOISeq: Read count distribution is assumed to be Non-parametric. Input is raw or normalized counts Does not deal with replicates. Normalization is done with respect to Library size, RPKM, TMM, Upperquartile", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_80")
+```
 
 ## More reading about RNA-seq data
 
