@@ -39,6 +39,10 @@ These biases are nicely covered in [this blog by Mike Love](https://mikelove.wor
 
 _Main Takeaway_: When looking for tools, you will want to see if the algorithms or options available attempt to account for these biases in some way.
 
+```{r, fig.alt = "When looking for tools, you will want to see if the algorithms or options available attempt to account for these biases in some way.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_65")
+```
+
 ## RNA-seq data considerations
 
 ### Ribo minus vs poly A selection
@@ -54,7 +58,7 @@ Most of the RNA in the cell is not mRNA or noncoding RNAs of interest, but inste
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_47")
 ```
 
-### Transcriptome alignment
+### Transcriptome mapping
 
 How do you know which read belongs to which transcript? This is where alignment comes into play for RNA-seq There are two major approaches we will discuss with examples of tools that employ them.
 
@@ -68,21 +72,23 @@ _Examples of psuedo aligners_:
   - [Salmon](https://salmon.readthedocs.io/en/latest/salmon.html#using-salmon)
   - [Kallisto](https://pachterlab.github.io/kallisto/)
 
+- **Reference free assembly** - The first two methods we've discussed employ aligning to a reference genome or transcriptome. But alternatively, if you are much more interested in transcript identification or you are working with a model organism that doesn't have a well characterized reference genome/transcriptome, then de novo assembly is another approach to take. As you may suspect, this is the most computationally demanding approach and also requires deeper sequencing depth than alignment to a reference. But depending on your goals, this may be your preferred option.
+
+These strategies are discussed at greater length [in this excellent manuscript by Conesa et al, 2016](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8).
+
 ### Abundance measures
 
 If your RNA-seq data has already been processed, it may have abundance measure reported with it already. But there are various types of abundance measures used -- what do they represent?
 
 - **raw counts** - this is a raw number of how many times a transcript was counted in a sample.
 
-Note that using raw counts does not account for differences between samples' library sizes. In other words, how many reads were obtained from each sample? Because library sizes are not perfectly equal amongst samples and not necessarily biologically relevant, its important to account for this if you wish to compare different samples in your set.
+Two considerations to think of:  
+1. **Library sizes**: Raw counts does not account for differences between samples' library sizes. In other words, how many reads were obtained from each sample? Because library sizes are not perfectly equal amongst samples and not necessarily biologically relevant, its important to account for this if you wish to compare different samples in your set.
+2. **Gene length**: Raw counts also do not account for differences in gene length (remember how we discussed longer transcripts are more likely to be counted).
 
-Raw counts also do not account for differences in gene length (remember how we discussed longer transcripts are more likely to be counted).
+Because of these items, some sort of transformation needs to be done on the raw counts before you can interpret your data.
 
-Because of this, some sort of calculation needs to be done on the raw counts before you can interpret your data.
-
-These other abundance measures attempt to account for library sizes and gene length.
-
-[This blog and video by StatQuest](https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/) does an excellent job summarizing the differences between these quantifications and we will quote from them:
+These other abundance measures attempt to account for library sizes and gene length. [This blog and video by StatQuest](https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/) does an excellent job summarizing the differences between these quantifications and we will quote from them:
 
 - **Reads per kilobase million (RPKM)**
 > 1. Count up the total reads in a sample and divide that number by 1,000,000 – this is our “per million” scaling factor.
@@ -101,6 +107,9 @@ TPM has gained a popularity in recent years because it is more intuitive to unde
 
 > When you use TPM, the sum of all TPMs in each sample are the same. This makes it easier to compare the proportion of reads that mapped to a gene in each sample. In contrast, with RPKM and FPKM, the sum of the normalized reads in each sample may be different, and this makes it harder to compare samples directly.
 
+```{r, fig.alt = "When looking for analysis tools, pay attention to what abundance measures the tool expects to be given with respect to what transformations have already been done to your data (if any).", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_59")
+```
 ### RNA-seq post processing tools
 
 - [tximport]
