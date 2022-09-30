@@ -35,7 +35,7 @@ There are broadly two categories of single-cell RNA-seq data methods we will dis
 
 Depending on your goals for your single cell RNA-seq analysis, you may want to choose one method over the other.
 
-```{r, fig.alt = "Full length single cellRNA-seq Pros: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive.", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Full length single cell RNA-seq Pros: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_25")
 ```
 
@@ -52,20 +52,40 @@ Often Tag based single cell RNA-seq methods will include not only a cell barcode
 ```{r, fig.alt = "Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_41")
 ```
+## Pre-processing tools for single cell RNA-seq Data
+
+- [Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)
+- [CellRanger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
+- [scanpy](https://scanpy.readthedocs.io/en/stable/)
+
+### Quality control
+
+#### Checking UMIs
 
 - [AlevinQC](https://bioconductor.org/packages/release/bioc/html/alevinQC.html)
 
-## Processing steps for single cell RNA-seq Data
+#### Checking for Doublets
 
-- [Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)
-- [10X CellRanger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
+- [scDblFinder](https://bioconductor.org/packages/release/bioc/html/scDblFinder.html)
+- [DoubletDetection](https://doubletdetection.readthedocs.io/en/stable/)
+
+## Post-processing tools for single cell RNA-seq Data
 - [Seurat](https://satijalab.org/seurat/)
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 
 ## More resources for single-cell RNA-seq data
 
+- [See this handy database for an entire catalog of single cell RNA-seq tools](https://www.scrna-tools.org/)
+
+#### Useful tutorials
+- [Orchestrating Single Cell Analysis with Bioconductor](http://bioconductor.org/books/3.15/OSCA.intro/)
+- [Advanced Single Cell Analysis with Bioconductor](http://bioconductor.org/books/3.15/OSCA.advanced/)
+- [Alex's Lemonade scRNA-seq Training module](https://alexslemonade.github.io/training-modules/scRNA-seq/)
 - Hemberg Lab [scRNA-seq training course](https://scrnaseq-course.cog.sanger.ac.uk/website/index.html)
 - [ASAP: Automated Single-cell Analysis Pipeline](https://asap.epfl.ch/) is a web server that allows you to process scRNA-seq data. ([Gardeux _et al._ 2017.](https://doi.org/10.1093/bioinformatics/btx337 ))
+- [Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)](https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html)
+
+### Useful readings
 - Smith. [_Unique Molecular Identifiers – the problem, the solution and the proof_](https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/) provides an excellent background on UMIs.
 - [Baran-Gale _et al._ (2018)](https://doi.org/10.1093/bfgp/elx035)  
 - [Lafzi _et al._ (2019)](https://doi.org/10.1038/s41596-018-0073-y)
