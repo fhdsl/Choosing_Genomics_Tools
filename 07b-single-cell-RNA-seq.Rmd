@@ -47,7 +47,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ### Unique Molecular identifiers
 
-Often Tag based single cell RNA-seq methods will include not only a cell barcode for cell identification but will also have a unique molecular identfier (UMI) for original molecule identification. The idea behind the UMIs is it is a way to have insight into the original snapshot of the cell and potentially combat PCR amplification biases.
+Often Tag based single cell RNA-seq methods will include not only a cell barcode for cell identification but will also have a unique molecular identifier (UMI) for original molecule identification. The idea behind the UMIs is it is a way to have insight into the original snapshot of the cell and potentially combat PCR amplification biases.
 
 ```{r, fig.alt = "Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_41")

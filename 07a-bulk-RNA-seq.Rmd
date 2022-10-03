@@ -68,7 +68,7 @@ _Examples of traditional aligners_:
   - [HISAT2](http://daehwankimlab.github.io/hisat2/manual/)
 
 - [**Pseudo aligners**](https://tinyheero.github.io/2015/09/02/pseudoalignments-kallisto.html) - much faster and the trade off for accuracy is often negligible (but as always, this is likely dependent on the data you are using). The biggest drawback to pseudoaligners is that if you care about local alignment (e.g. perhaps where splice boundaries occur) instead of just transcript identification then a traditional alignment may be better for your purposes. These pseudo aligners often include a verification step where they compare a subset of the data to its performance to a traditional aligner (and for most purposes they usually perform well). Pseudo aligners can potentially save you hours/days/weeks of processing time as compared to traditional aligners so are worth looking into.
-_Examples of psuedo aligners_:   
+_Examples of pseudo aligners_:   
   - [Salmon](https://salmon.readthedocs.io/en/latest/salmon.html#using-salmon)
   - [Kallisto](https://pachterlab.github.io/kallisto/)
 
