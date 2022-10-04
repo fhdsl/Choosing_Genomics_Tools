@@ -19,30 +19,31 @@ pre code {
 
 /* next 3 rules are for setting large image at top of each page and pushing down the book content to appear beneath the image */
 
-
-
 .hero-image-container {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 200px;
-  background-color: #133454;
+  /*background-image: url("images/books.jpg");*/
+  /*background-color: #193a5c;*/
 }
 
 .hero-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 80%;
+  /*object-fit: cover;*/
 }
 
 .page-inner {
-  padding-top: 210px !important;
+  padding-top: 140px !important;
 }
+
+
 /* ------------Links------------------ */
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #1a9bc0;
+  color: #e0471c;
 }
 
 
@@ -70,7 +71,7 @@ h1, h2, h3, h4 {
 .title {
   font-family: 'Lora';
   font-size: 4em !important;
-  color: #023e4c;
+  color: #193a5c;
   margin-top: 0.275em !important;
   margin-bottom: 0.35em !important;
 }
@@ -98,7 +99,7 @@ h1, h2, h3, h4 {
 */
 
 .section.level1 > p:first-of-type:first-letter { /*drop cap for first p beneath level 1 headers only within class .section*/
-  color: #023e4c;
+  color: #193a5c;
   float: left;
   font-family: 'Abril Fatface', serif;
   font-size: 7em;
@@ -137,7 +138,7 @@ h1, h2, h3, h4 {
 /*---color of links in TOC----*/
 
 .book .book-summary a {
-color: #023e4c
+color: #193a5c
 }
 
 .summary{
@@ -151,17 +152,17 @@ color: #023e4c
   padding-bottom: 8px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #023e4c;
+  color: #193a5c;
 }
 
 .summary a:hover {
-  color: #1a9bc0 !important;
+  color: #e0471c !important;
 } 
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
-  color: #1a9bc0 !important;
+  color: #e0471c !important;
   border-left: solid 4px;
-  border-color: #12af66;
+  border-color: #e0471c;
   padding-left: 11px !important;
 } 
 
@@ -170,9 +171,9 @@ color: #023e4c
   text-align: center;
   height: 15; 
   position: relative;
-  border-right: 50px solid #023e4c;
-  border-bottom: 50px solid #e6e762;
-  border-left: 50px solid #023e4c;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #dbdbdb;
+  border-left: 50px solid transparent;
   box-sizing: content-box;
 }
 .trapezoid span { 
@@ -180,8 +181,11 @@ color: #023e4c
   top: 5px;
   bottom: 5px;
   left: 5%;
-  color: #e6e762;
+  color: #fff;
 }
+
+
+
 
 li.appendix span, li.part span { /* for TOC part names */
   margin-top: 1em;
@@ -206,6 +210,7 @@ li.appendix span, li.part span { /* for TOC part names */
 .book .book-summary ul.summary li.divider {
 	height: 0px;
 }
+
 
 
 /*--- LOGO ---*/
@@ -266,9 +271,8 @@ li.appendix span, li.part span { /* for TOC part names */
 /* Sidebar formating --------------------------------------------*/
 /* from r-pkgs.org*/
 
-
 div.notice{
-  border: 4px #023e4c;
+  border: 4px #193a5c;
   border-style: solid;
   padding: 1em;
   margin: 1em 0;
@@ -321,7 +325,7 @@ div.github{
 }
 
 div.dictionary{
-  border: 4px #023e4c;
+  border: 4px #193a5c;
   border-style: solid;
   padding: 1em;
   margin: 1em 0;
@@ -338,7 +342,7 @@ div.dictionary{
 }
 
 div.reflection{
-  border: 4px #000000;
+  border: 4px #193a5c;
   border-style: solid;
   padding: 1em;
   margin: 1em 0;
@@ -353,6 +357,7 @@ div.reflection{
 div.reflection{
   background-image: url("../assets/box_images/thinking_face.png");
 }
+
 
 div.rstudio-tip, div.tip, div.gotcha, div.design, div.hat{
   border: 4px #aed6d963;

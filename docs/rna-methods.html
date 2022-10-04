@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="dna-methods.html"/>
-<link rel="next" href="gene-expression-microarrays.html"/>
+<link rel="next" href="atac-seq.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -89,18 +89,12 @@
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
 <li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+<li class="chapter" data-level="2.1.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.1.3</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="2.1.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.1.4</b> Microarray file formats</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>2.2</b> Very General Sequencing Workflow</a>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.2</b> General informatics files</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.2.1</b> Sequencing file formats</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>2.3</b> Very General Microarray Workflow</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.3.1</b> Microarray file formats</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.4</b> General informatics files</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.4.1</b> Other files</a></li>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.2.1</b> Other files</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="what-are-metadata.html"><a href="what-are-metadata.html"><i class="fa fa-check"></i><b>3</b> What are Metadata?</a>
@@ -116,27 +110,57 @@
 <li class="chapter" data-level="4" data-path="microarray-data.html"><a href="microarray-data.html"><i class="fa fa-check"></i><b>4</b> Microarray Data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="microarray-data.html"><a href="microarray-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>4.2</b> How do microarrays work?</a></li>
-<li class="chapter" data-level="4.3" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>4.3</b> What types of arrays are there?</a>
+<li class="chapter" data-level="4.2" data-path="microarray-data.html"><a href="microarray-data.html#summary-of-microarrays"><i class="fa fa-check"></i><b>4.2</b> Summary of microarrays</a></li>
+<li class="chapter" data-level="4.3" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>4.3</b> How do microarrays work?</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>4.3.1</b> SNP arrays</a></li>
-<li class="chapter" data-level="4.3.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>4.3.2</b> Gene expression arrays</a></li>
-<li class="chapter" data-level="4.3.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>4.3.3</b> DNA methylation arrays</a></li>
+<li class="chapter" data-level="4.3.1" data-path="microarray-data.html"><a href="microarray-data.html#pros"><i class="fa fa-check"></i><b>4.3.1</b> Pros:</a></li>
+<li class="chapter" data-level="4.3.2" data-path="microarray-data.html"><a href="microarray-data.html#cons"><i class="fa fa-check"></i><b>4.3.2</b> Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>4.4</b> What types of arrays are there?</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>4.4.1</b> SNP arrays</a></li>
+<li class="chapter" data-level="4.4.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>4.4.2</b> Gene expression arrays</a></li>
+<li class="chapter" data-level="4.4.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>4.4.3</b> DNA methylation arrays</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="microarray-data.html"><a href="microarray-data.html#general-processing-of-microarray-data"><i class="fa fa-check"></i><b>4.5</b> General processing of microarray data</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="microarray-data.html"><a href="microarray-data.html#examples-2"><i class="fa fa-check"></i><b>4.5.1</b> Examples</a></li>
+<li class="chapter" data-level="4.5.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-platforms"><i class="fa fa-check"></i><b>4.5.2</b> Microarray Platforms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="microarray-data.html"><a href="microarray-data.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>4.6</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="microarray-data.html"><a href="microarray-data.html#microarray-file-formats-1"><i class="fa fa-check"></i><b>4.6.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="microarray-data.html"><a href="microarray-data.html#general-informatics-files-1"><i class="fa fa-check"></i><b>4.7</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="microarray-data.html"><a href="microarray-data.html#other-files-1"><i class="fa fa-check"></i><b>4.7.1</b> Other files</a></li>
+<li class="chapter" data-level="4.7.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-processing-tutorials"><i class="fa fa-check"></i><b>4.7.2</b> Microarray processing tutorials:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="sequencing-data.html"><a href="sequencing-data.html"><i class="fa fa-check"></i><b>5</b> Sequencing Data</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="sequencing-data.html"><a href="sequencing-data.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="sequencing-data.html"><a href="sequencing-data.html#how-does-sequencing-work"><i class="fa fa-check"></i><b>5.2</b> How does sequencing work?</a></li>
+<li class="chapter" data-level="5.3" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-concepts"><i class="fa fa-check"></i><b>5.3</b> Sequencing concepts</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sequencing-data.html"><a href="sequencing-data.html#inherent-biases"><i class="fa fa-check"></i><b>5.3.1</b> Inherent biases</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sequencing-data.html"><a href="sequencing-data.html#pcr-amplification"><i class="fa fa-check"></i><b>5.3.2</b> PCR Amplification</a></li>
+<li class="chapter" data-level="5.3.3" data-path="sequencing-data.html"><a href="sequencing-data.html#depth-of-coverage"><i class="fa fa-check"></i><b>5.3.3</b> Depth of coverage</a></li>
+<li class="chapter" data-level="5.3.4" data-path="sequencing-data.html"><a href="sequencing-data.html#quality-controls"><i class="fa fa-check"></i><b>5.3.4</b> Quality controls</a></li>
+<li class="chapter" data-level="5.3.5" data-path="sequencing-data.html"><a href="sequencing-data.html#alignment"><i class="fa fa-check"></i><b>5.3.5</b> Alignment</a></li>
+<li class="chapter" data-level="5.3.6" data-path="sequencing-data.html"><a href="sequencing-data.html#single-end-vs-paired-end"><i class="fa fa-check"></i><b>5.3.6</b> Single End vs Paired End</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="sequencing-data.html"><a href="sequencing-data.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>5.4</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-file-formats-1"><i class="fa fa-check"></i><b>5.4.1</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="5.4.2" data-path="sequencing-data.html"><a href="sequencing-data.html#other-files-2"><i class="fa fa-check"></i><b>5.4.2</b> Other files</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="dna-methods.html"><a href="dna-methods.html"><i class="fa fa-check"></i><b>6</b> DNA Methods</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="dna-methods.html"><a href="dna-methods.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="6.2" data-path="dna-methods.html"><a href="dna-methods.html#what-are-the-goals-of-analyzing-dna-sequences"><i class="fa fa-check"></i><b>6.2</b> What are the goals of analyzing DNA sequences?</a></li>
-<li class="chapter" data-level="6.3" data-path="dna-methods.html"><a href="dna-methods.html#dnasnp-microarrays"><i class="fa fa-check"></i><b>6.3</b> DNA/SNP microarrays</a></li>
-<li class="chapter" data-level="6.4" data-path="dna-methods.html"><a href="dna-methods.html#whole-genome-sequencing"><i class="fa fa-check"></i><b>6.4</b> Whole Genome Sequencing</a></li>
-<li class="chapter" data-level="6.5" data-path="dna-methods.html"><a href="dna-methods.html#whole-exome-sequencing"><i class="fa fa-check"></i><b>6.5</b> Whole Exome Sequencing</a></li>
-<li class="chapter" data-level="6.6" data-path="dna-methods.html"><a href="dna-methods.html#targeted-sequencing"><i class="fa fa-check"></i><b>6.6</b> Targeted Sequencing</a></li>
+<li class="chapter" data-level="6.3" data-path="dna-methods.html"><a href="dna-methods.html#comparison-of-dna-methods"><i class="fa fa-check"></i><b>6.3</b> Comparison of DNA methods</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="rna-methods.html"><a href="rna-methods.html"><i class="fa fa-check"></i><b>7</b> RNA Methods</a>
 <ul>
@@ -144,54 +168,34 @@
 <li class="chapter" data-level="7.2" data-path="rna-methods.html"><a href="rna-methods.html#what-are-the-goals-of-gene-expression-analysis"><i class="fa fa-check"></i><b>7.2</b> What are the goals of gene expression analysis?</a></li>
 <li class="chapter" data-level="7.3" data-path="rna-methods.html"><a href="rna-methods.html#comparison-of-rna-methods"><i class="fa fa-check"></i><b>7.3</b> Comparison of RNA methods</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html"><i class="fa fa-check"></i><b>8</b> Gene expression microarrays</a>
+<li class="chapter" data-level="8" data-path="atac-seq.html"><a href="atac-seq.html"><i class="fa fa-check"></i><b>8</b> ATAC-Seq</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#where-gene-expression-array-data-comes-from"><i class="fa fa-check"></i><b>8.1</b> Where gene expression array data comes from</a></li>
-<li class="chapter" data-level="8.2" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#microarray-data-strengths"><i class="fa fa-check"></i><b>8.2</b> Microarray data <strong>strengths</strong>:</a></li>
-<li class="chapter" data-level="8.3" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#microarray-data-limitations"><i class="fa fa-check"></i><b>8.3</b> Microarray data <strong>limitations</strong>:</a></li>
-<li class="chapter" data-level="8.4" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#more-about-gene-expression-microarrays"><i class="fa fa-check"></i><b>8.4</b> More about gene expression microarrays</a></li>
+<li class="chapter" data-level="8.1" data-path="atac-seq.html"><a href="atac-seq.html#learning-objectives-6"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="atac-seq.html"><a href="atac-seq.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>8.2</b> What are the goals of ATAC-Seq analysis?</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html"><i class="fa fa-check"></i><b>9</b> Bulk RNA-seq</a>
+<li class="chapter" data-level="9" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>9</b> ATAC-Seq</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>9.1</b> Where RNA-seq data comes from</a></li>
-<li class="chapter" data-level="9.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>9.2</b> RNA-seq data <strong>limitations</strong></a></li>
-<li class="chapter" data-level="9.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>9.3</b> More reading about RNA-seq data</a></li>
+<li class="chapter" data-level="9.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#where-atac-seq-data-comes-from"><i class="fa fa-check"></i><b>9.1</b> Where ATAC-Seq data comes from</a></li>
+<li class="chapter" data-level="9.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>9.2</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="9.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seqdata-limitations"><i class="fa fa-check"></i><b>9.3</b> ATAC-Seqdata <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="9.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-about-atac-seq"><i class="fa fa-check"></i><b>9.4</b> More about ATAC-Seq</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>10</b> Single-cell RNA-seq</a>
+<li class="chapter" data-level="10" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>10</b> ChIP-Seq</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>10.1</b> Where single-cell RNA-seq data comes from</a></li>
-<li class="chapter" data-level="10.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-strengths"><i class="fa fa-check"></i><b>10.2</b> Single-cell RNA-seq data <strong>strengths</strong></a></li>
-<li class="chapter" data-level="10.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-limitations"><i class="fa fa-check"></i><b>10.3</b> Single-cell RNA-seq data <strong>limitations</strong></a></li>
-<li class="chapter" data-level="10.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#more-reading-about-single-cell-rna-seq-data"><i class="fa fa-check"></i><b>10.4</b> More reading about single-cell RNA-seq data</a></li>
+<li class="chapter" data-level="10.1" data-path="chip-seq.html"><a href="chip-seq.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="chip-seq.html"><a href="chip-seq.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>10.2</b> What are the goals of ChIP-Seq analysis?</a></li>
+<li class="chapter" data-level="10.3" data-path="chip-seq.html"><a href="chip-seq.html#where-chip-seq-data-comes-from"><i class="fa fa-check"></i><b>10.3</b> Where ChIP-Seq data comes from</a></li>
+<li class="chapter" data-level="10.4" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>10.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="10.5" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>10.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="10.6" data-path="chip-seq.html"><a href="chip-seq.html#more-about-chip-seq"><i class="fa fa-check"></i><b>10.6</b> More about ChIP-Seq</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="atac-seq.html"><a href="atac-seq.html"><i class="fa fa-check"></i><b>11</b> ATAC-Seq</a>
+<li class="chapter" data-level="11" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html"><i class="fa fa-check"></i><b>11</b> DNA Methylation Sequencing Analysis Methods</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="atac-seq.html"><a href="atac-seq.html#learning-objectives-6"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="11.2" data-path="atac-seq.html"><a href="atac-seq.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>11.2</b> What are the goals of ATAC-Seq analysis?</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>12</b> ATAC-Seq</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#where-atac-seq-data-comes-from"><i class="fa fa-check"></i><b>12.1</b> Where ATAC-Seq data comes from</a></li>
-<li class="chapter" data-level="12.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>12.2</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
-<li class="chapter" data-level="12.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seqdata-limitations"><i class="fa fa-check"></i><b>12.3</b> ATAC-Seqdata <strong>limitations</strong>:</a></li>
-<li class="chapter" data-level="12.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-about-atac-seq"><i class="fa fa-check"></i><b>12.4</b> More about ATAC-Seq</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>13</b> ChIP-Seq</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="chip-seq.html"><a href="chip-seq.html#learning-objectives-7"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="13.2" data-path="chip-seq.html"><a href="chip-seq.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>13.2</b> What are the goals of ChIP-Seq analysis?</a></li>
-<li class="chapter" data-level="13.3" data-path="chip-seq.html"><a href="chip-seq.html#where-chip-seq-data-comes-from"><i class="fa fa-check"></i><b>13.3</b> Where ChIP-Seq data comes from</a></li>
-<li class="chapter" data-level="13.4" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>13.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
-<li class="chapter" data-level="13.5" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>13.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
-<li class="chapter" data-level="13.6" data-path="chip-seq.html"><a href="chip-seq.html#more-about-chip-seq"><i class="fa fa-check"></i><b>13.6</b> More about ChIP-Seq</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html"><i class="fa fa-check"></i><b>14</b> DNA Methylation Sequencing Analysis Methods</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#learning-objectives-8"><i class="fa fa-check"></i><b>14.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="14.2" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>14.2</b> What are the goals of analyzing DNA methylation?</a></li>
-<li class="chapter" data-level="14.3" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-vs-hydroxymethylation"><i class="fa fa-check"></i><b>14.3</b> Methylation vs Hydroxymethylation</a></li>
-<li class="chapter" data-level="14.4" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#bisulfiteoxidative-bisulfite-sequencing"><i class="fa fa-check"></i><b>14.4</b> Bisulfite/Oxidative bisulfite sequencing</a></li>
-<li class="chapter" data-level="14.5" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-microarrays"><i class="fa fa-check"></i><b>14.5</b> Methylation microarrays</a></li>
+<li class="chapter" data-level="11.1" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#learning-objectives-8"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>11.2</b> What are the goals of analyzing DNA methylation?</a></li>
+<li class="chapter" data-level="11.3" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-vs-hydroxymethylation"><i class="fa fa-check"></i><b>11.3</b> Methylation vs Hydroxymethylation</a></li>
+<li class="chapter" data-level="11.4" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#bisulfiteoxidative-bisulfite-sequencing"><i class="fa fa-check"></i><b>11.4</b> Bisulfite/Oxidative bisulfite sequencing</a></li>
+<li class="chapter" data-level="11.5" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-microarrays"><i class="fa fa-check"></i><b>11.5</b> Methylation microarrays</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -245,6 +249,8 @@
 <h2><span class="header-section-number">7.3</span> Comparison of RNA methods</h2>
 <p>There are three general methods we will discuss for evaluating gene expression. RNA sequencing (whether bulk or single-cell) allows you to catch more targets than gene expression microarrays but is much more costly and computationally intensive. Gene expression microarrays have a lower dynamic range than RNA-seq generally but are much more cost effective.</p>
 <p><img src="resources/images/07-RNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_80.png" title="Gene expression microarrays are low cost and low computationally intensive. Bulk RNA-seq is higher cost, requires more computational resources but covers more targets than gene expression arrays. Single cell RNA-seq is higher cost, requires more computational resources but as opposed to Bulk RNA-seq gives single cell resolution." alt="Gene expression microarrays are low cost and low computationally intensive. Bulk RNA-seq is higher cost, requires more computational resources but covers more targets than gene expression arrays. Single cell RNA-seq is higher cost, requires more computational resources but as opposed to Bulk RNA-seq gives single cell resolution." width="100%" /></p>
+<p>In these upcoming chapters we will discuss in more detail each of these methods, what the data represent, what you need to consider, and what resources you can consult for analyzing your data.</p>
+
 </div>
 </div>
 <hr>
@@ -261,7 +267,7 @@
         </div>
       </div>
 <a href="dna-methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="gene-expression-microarrays.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="atac-seq.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

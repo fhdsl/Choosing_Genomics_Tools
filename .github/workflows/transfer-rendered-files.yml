@@ -36,6 +36,8 @@ jobs:
   file-quizzes-pr:
     name: File _Quizzes Transfer PR
     runs-on: ubuntu-latest
+    container:
+      image: jhudsl/ottrpal:main
     needs: [yaml-check]
     if: ${{needs.yaml-check.outputs.toggle_coursera == 'yes' || needs.yaml-check.outputs.toggle_leanpub == 'yes'}}
 
@@ -46,7 +48,6 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           sudo apt-get install subversion
-          sudo Rscript -e "install.packages('optparse')"
 
           # What's the Quizzes repository's name?
           QUIZ_REPO=$(echo ${GITHUB_REPOSITORY} | sed "s/_Bookdown/ /g" | sed "s/_Template/ /g" | awk '{print $1"_Quizzes"}')
