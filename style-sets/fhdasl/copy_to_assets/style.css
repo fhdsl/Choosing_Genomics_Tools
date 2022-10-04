@@ -19,30 +19,31 @@ pre code {
 
 /* next 3 rules are for setting large image at top of each page and pushing down the book content to appear beneath the image */
 
-
-
 .hero-image-container {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 200px;
-  background-color: #133454;
+  /*background-image: url("images/books.jpg");*/
+  /*background-color: #193a5c;*/
 }
 
 .hero-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 80%;
+  /*object-fit: cover;*/
 }
 
 .page-inner {
-  padding-top: 210px !important;
+  padding-top: 140px !important;
 }
+
+
 /* ------------Links------------------ */
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #1a9bc0;
+  color: #89C348;
 }
 
 
@@ -57,11 +58,11 @@ h1, h2, h3, h4 {
 }
 
 
-.book .book-body .page-wrapper .page-inner section.normal h1, 
-.book .book-body .page-wrapper .page-inner section.normal h2, 
-.book .book-body .page-wrapper .page-inner section.normal h3, 
-.book .book-body .page-wrapper .page-inner section.normal h4, 
-.book .book-body .page-wrapper .page-inner section.normal h5, 
+.book .book-body .page-wrapper .page-inner section.normal h1,
+.book .book-body .page-wrapper .page-inner section.normal h2,
+.book .book-body .page-wrapper .page-inner section.normal h3,
+.book .book-body .page-wrapper .page-inner section.normal h4,
+.book .book-body .page-wrapper .page-inner section.normal h5,
 .book .book-body .page-wrapper .page-inner section.normal h6 {
     margin-top: 2.275em;
     margin-bottom: 1em;
@@ -70,7 +71,7 @@ h1, h2, h3, h4 {
 .title {
   font-family: 'Lora';
   font-size: 4em !important;
-  color: #023e4c;
+  color: #112345;
   margin-top: 0.275em !important;
   margin-bottom: 0.35em !important;
 }
@@ -79,7 +80,7 @@ h1, h2, h3, h4 {
   font-family: 'Lora';
   color: #0b8d96;
 }
-  
+
 
 /*----------DROP CAPS--------------*/
 
@@ -98,7 +99,7 @@ h1, h2, h3, h4 {
 */
 
 .section.level1 > p:first-of-type:first-letter { /*drop cap for first p beneath level 1 headers only within class .section*/
-  color: #023e4c;
+  color: #112345;
   float: left;
   font-family: 'Abril Fatface', serif;
   font-size: 7em;
@@ -137,7 +138,7 @@ h1, h2, h3, h4 {
 /*---color of links in TOC----*/
 
 .book .book-summary a {
-color: #023e4c
+color: #112345
 }
 
 .summary{
@@ -145,43 +146,26 @@ color: #023e4c
 }
 
 /* all TOC list items, basically */
-.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li a,
 .book .book-summary ul.summary li span {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #023e4c;
+  color: #112345;
 }
 
 .summary a:hover {
-  color: #1a9bc0 !important;
-} 
+  color: #89C348 !important;
+}
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
-  color: #1a9bc0 !important;
+  color: #89C348 !important;
   border-left: solid 4px;
-  border-color: #12af66;
+  border-color: #89C348;
   padding-left: 11px !important;
-} 
+}
 
-.trapezoid {
-  width: 130px;
-  text-align: center;
-  height: 15; 
-  position: relative;
-  border-right: 50px solid #023e4c;
-  border-bottom: 50px solid #e6e762;
-  border-left: 50px solid #023e4c;
-  box-sizing: content-box;
-}
-.trapezoid span { 
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  left: 5%;
-  color: #e6e762;
-}
 
 li.appendix span, li.part span { /* for TOC part names */
   margin-top: 1em;
@@ -222,7 +206,7 @@ li.appendix span, li.part span { /* for TOC part names */
 }
 
 .summary > li:first-child {
-  height: auto !important; 
+  height: auto !important;
 }
 
 /* --------------Two columns--------------- */
@@ -266,158 +250,53 @@ li.appendix span, li.part span { /* for TOC part names */
 /* Sidebar formating --------------------------------------------*/
 /* from r-pkgs.org*/
 
-
-div.notice{
-  border: 4px #023e4c;
+div.notice, div.warning, div.github, div.dictionary, div.reflection {
   border-style: solid;
   padding: 1em;
   margin: 1em 0;
   padding-left: 100px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
   min-height: 120px;
-  background-color: #e8ebee;
+  background-repeat: no-repeat;
 }
 
 div.notice{
+  border: 4px #89C348;
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
   background-image: url("../assets/box_images/note.png");
 }
 
 div.warning{
   border: 4px #e0471c;
-  border-style: solid;
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
   background-size: 70px;
-  background-repeat: no-repeat;
   background-position: 15px center;
-  min-height: 120px;
   background-color: #e8ebee;
-}
-
-div.warning{
   background-image: url("../assets/box_images/warning.png");
 }
 
-
-
 div.github{
   border: 4px #000000;
-  border-style: solid;
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
   background-size: 70px;
-  background-repeat: no-repeat;
   background-position: 15px center;
-  min-height: 120px;
   background-color: #e8ebee;
-}
-
-div.github{
   background-image: url("../assets/box_images/github.png");
 }
 
 div.dictionary{
-  border: 4px #023e4c;
-  border-style: solid;
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
+  border: 4px #89C348;
   background-size: 70px;
-  background-repeat: no-repeat;
   background-position: 15px center;
-  min-height: 120px;
   background-color: #e8ebee;
-}
-
-div.dictionary{
   background-image: url("../assets/box_images/dictionary.png");
 }
 
 div.reflection{
-  border: 4px #000000;
-  border-style: solid;
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
+  border: 4px #89C348;
   background-size: 90px;
-  background-repeat: no-repeat;
   background-position: 15px center;
-  min-height: 120px;
   background-color: #e8ebee;
-}
-
-div.reflection{
   background-image: url("../assets/box_images/thinking_face.png");
-}
-
-div.rstudio-tip, div.tip, div.gotcha, div.design, div.hat{
-  border: 4px #aed6d963;
-  border-style: dashed solid;
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  min-height: 120px;
-  color: #2ea8b3;
-  background-color: #fcfcfc;
-}
-
-
-div.rstudio-tip {
-  background-image: url("../images/divs/rstudio.png");
-}
-
-div.tip {
-  background-image: url("../images/divs/lightbulb.png");
-}
-
-div.gotcha {
-  background-image: url("../images/divs/gotcha_2.png");
-}
-
-div.design {
-  background-image: url("../images/divs/design.png");
-}
-
-div.hat {
-  background-image: url("../images/divs/hat.png");
-}
-
-/* for fancy bookdown cookbook */
-
-div.puzzle, div.fyi, div.demo, div.note {
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: 15px center;
-  min-height: 120px;
-  color: #1f5386;
-  background-color: #bed3ec;
-  border: solid 5px #dfedff;
-}
-
-div.puzzle {
-  background-image: url("../images/illos/Your-turn.png");
-}
-
-div.fyi {
-  background-image: url("../images/illos/fyi.png");
-}
-
-div.demo {
-  background-image: url("../images/illos/Live-code.png");
-}
-
-div.note {
-  background-image: url("../images/illos/lightbulb2.png");
 }
 
 
@@ -436,12 +315,12 @@ div.note {
   margin-bottom: 0;
 }
 
-iframe { 
-   -moz-transform-origin: top left; 
-   -webkit-transform-origin: top left; 
-   -o-transform-origin: top left; 
-   -ms-transform-origin: top left; 
-   transform-origin: top left; 
+iframe {
+   -moz-transform-origin: top left;
+   -webkit-transform-origin: top left;
+   -o-transform-origin: top left;
+   -ms-transform-origin: top left;
+   transform-origin: top left;
 }
 
 .iframe-container {
@@ -508,14 +387,14 @@ a.anchor {
 }
 
 
-.hasAnchor:hover a.anchor, 
+.hasAnchor:hover a.anchor,
 a.anchor:hover {
   /*visibility: visible;*/
   opacity: 0.6;
 }
 
 /* disable anchors for headers with "no-anchor" class */
-.no-anchor .hasAnchor:hover a.anchor, 
+.no-anchor .hasAnchor:hover a.anchor,
 .no-anchor a.anchor:hover {
   opacity: 0 !important;
 }
@@ -543,4 +422,49 @@ a.anchor:hover {
   font-family: "Lora", serif;
   font-size: .85em;
   color: #193a5c;
+}
+
+/* AnVIL style */
+/* Things above this comment should be identical to OTTR_Template style.css */
+/* Things below this comment are AnVIL customizations */
+
+.hero-image-container {
+  height: 100px;
+}
+
+.page-inner {
+  padding-top: 60px !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h1,
+.book .book-body .page-wrapper .page-inner section.normal h2,
+.book .book-body .page-wrapper .page-inner section.normal h3,
+.book .book-body .page-wrapper .page-inner section.normal h4,
+.book .book-body .page-wrapper .page-inner section.normal h5,
+.book .book-body .page-wrapper .page-inner section.normal h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* fix the image urls since our AnVIL style is in a different location */
+/* images paths are relative to the CSS file */
+
+div.notice{
+  background-image: url("../box_images/note.png");
+}
+
+div.warning{
+  background-image: url("../box_images/warning.png");
+}
+
+div.github{
+  background-image: url("../box_images/github.png");
+}
+
+div.dictionary{
+  background-image: url("../box_images/dictionary.png");
+}
+
+div.reflection{
+  background-image: url("../box_images/thinking_face.png");
 }
