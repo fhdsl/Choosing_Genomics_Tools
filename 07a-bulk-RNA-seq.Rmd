@@ -17,6 +17,14 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g142c259a793_0_5")
 ```
 
+## RNA-seq workflow
+
+In a very general sense, RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that check the quality of the sequencing done. You may also want to trim and filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, differential expression, or any number of other analyses.
+
+```{r, fig.alt = "In a very general sense, RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that check the quality of the sequencing done. You may also want to trim and filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, differential expression, or any number of other analyses. ", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g161687fdf93_0_23")
+```
+
 ## RNA-seq data **strengths**  
 
 - RNA-seq can give you an idea of the transcriptional activity of a sample.
@@ -119,7 +127,7 @@ TPM has gained a popularity in recent years because it is more intuitive to unde
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_59")
 ```
 
-### RNA-seq post processing tools
+### RNA-seq downstream analysis tools
 
 ```{r, fig.alt = "For DESeq: Read count distribution assumes a negative binomial distribution. Raw counts are expected. Replicates are not dealt with.Normalization is done with respect to Library size. For edgeR: Read count distribution assumes Bayesian methods for negative binomial distribution Input is raw counts. Yes, can deal with replicates. Normalization is done with respect to Library size, TMM, RLE, Upperquartile. For baySeq: Read count distribution assumes bayesian methods for negative binomial distribution. Input is raw counts. Can deal with replicates. Library size, Quantile, TMM For NOISeq: Read count distribution is assumed to be Non-parametric. Input is raw or normalized counts Does not deal with replicates. Normalization is done with respect to Library size, RPKM, TMM, Upperquartile", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_80")
