@@ -90,7 +90,7 @@ TODO: More about considerations for quality control
 
 TODO: More about considerations for downstream analysis and normalization
 
-- [Seurat](https://satijalab.org/seurat/)
+- [Seurat](https://satijalab.org/seurat/) 
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 - For normalization [scater](https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html)
 - [scanpy](https://scanpy.readthedocs.io/en/stable/)
@@ -99,12 +99,12 @@ TODO: More about considerations for downstream analysis and normalization
 
 These tutorials cover explicit steps, code, tool recommendations and other considerations for analyzing RNA-seq data.
 
-- [Orchestrating Single Cell Analysis with Bioconductor](http://bioconductor.org/books/3.15/OSCA.intro/)
-- [Advanced Single Cell Analysis with Bioconductor](http://bioconductor.org/books/3.15/OSCA.advanced/)
-- [Alex's Lemonade scRNA-seq Training module](https://alexslemonade.github.io/training-modules/scRNA-seq/)
-- [Sanger Single Cell Course](https://www.singlecellcourse.org/)
+- [Orchestrating Single Cell Analysis with Bioconductor](http://bioconductor.org/books/3.15/OSCA.intro/) - An excellent tutorial for processing single cell data using Bioconductor.
+- [Advanced Single Cell Analysis with Bioconductor](http://bioconductor.org/books/3.15/OSCA.advanced/) - a companion book to the intro version that contains code examples.
+- [Alex's Lemonade scRNA-seq Training module](https://alexslemonade.github.io/training-modules/scRNA-seq/) - A cancer based workshop module based in R, with exercise notebooks.
+- [Sanger Single Cell Course](https://www.singlecellcourse.org/) - a general tutorial based on using R.
 - [ASAP: Automated Single-cell Analysis Pipeline](https://asap.epfl.ch/) is a web server that allows you to process scRNA-seq data.
-- [Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)](https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html)
+- [Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)](https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html) - a tutorial based on using CellRanger.
 
 ## Useful readings
 - [@Smith2015](https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/)
