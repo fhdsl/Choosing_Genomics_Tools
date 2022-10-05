@@ -25,6 +25,8 @@ In a very general sense, RNA-seq workflows involves first quantification/alignme
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g161687fdf93_0_23")
 ```
 
+In this chapter we will highlight some of the more popular RNA-seq tools, that are generally suitable for most experiment data but there is no "one size fits all" for computational analysis of RNA-seq data [@Conesa2016]. You may find tools out there that better suit your needs than the ones we discuss here. 
+
 ## RNA-seq data **strengths**  
 
 - RNA-seq can give you an idea of the transcriptional activity of a sample.
@@ -75,6 +77,8 @@ How do you know which read belongs to which transcript? This is where alignment 
 _Examples of traditional aligners_:   
   - [STAR](https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf)
   - [HISAT2](http://daehwankimlab.github.io/hisat2/manual/)
+
+- This blog compares some of the traditional alignment tools
 
 - [**Pseudo aligners**](https://tinyheero.github.io/2015/09/02/pseudoalignments-kallisto.html) - much faster and the trade off for accuracy is often negligible (but as always, this is likely dependent on the data you are using). The biggest drawback to pseudoaligners is that if you care about local alignment (e.g. perhaps where splice boundaries occur) instead of just transcript identification then a traditional alignment may be better for your purposes. These pseudo aligners often include a verification step where they compare a subset of the data to its performance to a traditional aligner (and for most purposes they usually perform well). Pseudo aligners can potentially save you hours/days/weeks of processing time as compared to traditional aligners so are worth looking into.
 _Examples of pseudo aligners_:   
