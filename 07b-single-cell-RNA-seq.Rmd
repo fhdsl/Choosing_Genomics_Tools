@@ -88,7 +88,7 @@ TODO: More about considerations for quality control
 
 ## Normalization and downstream analyses
 
-TODO: More about considerations for downstream analysis and normalization 
+TODO: More about considerations for downstream analysis and normalization
 
 - [Seurat](https://satijalab.org/seurat/)
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
@@ -107,13 +107,13 @@ These tutorials cover explicit steps, code, tool recommendations and other consi
 - [Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)](https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html)
 
 ## Useful readings
-- Smith. [_Unique Molecular Identifiers – the problem, the solution and the proof_](https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/) provides an excellent background on UMIs.
-- [Baran-Gale _et al._ (2018)](https://doi.org/10.1093/bfgp/elx035)  
-- [Lafzi _et al._ (2019)](https://doi.org/10.1038/s41596-018-0073-y)
-- [Ziegenhain _et al._ (2018)](http://dx.doi.org/10.1016/j.molcel.2017.01.023)
-- [Zhang _et al._ (2018)](https://doi.org/10.1016/j.molcel.2018.10.020)
-- [AlJanahi _et al._ (2018)](https://doi.org/10.1016/j.omtm.2018.07.003)
-- [Amezquita _et al._ (2019)](https://www.nature.com/articles/s41592-019-0654-x)
-- [Angerer _et al._ (2017)](http://dx.doi.org/10.1016/j.coisb.2017.07.004)
-- [Bruning _et al._ (2021)](https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2)
-- [Luecken & Theis (2019)](https://doi.org/10.15252/msb.20188746)
+- [@Smith2015](https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/)
+- [@BaranGale2018](https://doi.org/10.1093/bfgp/elx035)  
+- [@Lafzi2019](https://doi.org/10.1038/s41596-018-0073-y)
+- [@Ziegenhain2018](http://dx.doi.org/10.1016/j.molcel.2017.01.023)
+- [@Zhang2018](https://doi.org/10.1016/j.molcel.2018.10.020)
+- [@AlJanahi2018](https://doi.org/10.1016/j.omtm.2018.07.003)
+- [@Amezquita2019](https://www.nature.com/articles/s41592-019-0654-x)
+- [@Angerer2017](http://dx.doi.org/10.1016/j.coisb.2017.07.004)
+- [@Bruning2021](https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2)
+- [@Luecken2019](https://doi.org/10.15252/msb.20188746)
