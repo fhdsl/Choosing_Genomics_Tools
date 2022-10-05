@@ -67,11 +67,15 @@ Each step of this very general representation of a workflow can be conducted by 
 
 ## Quantification/Alignment
 
+TODO: How to choose between different quantification tools
+
 - [Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)
 - [CellRanger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
 - [Kallisto bustools](https://www.kallistobus.tools/)
 
 ## Quality control
+
+TODO: More about considerations for quality control
 
 #### Checking UMIs
 
@@ -84,11 +88,12 @@ Each step of this very general representation of a workflow can be conducted by 
 
 ## Normalization and downstream analyses
 
+TODO: More about considerations for downstream analysis and normalization 
+
 - [Seurat](https://satijalab.org/seurat/)
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 - For normalization [scater](https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html)
 - [scanpy](https://scanpy.readthedocs.io/en/stable/)
-
 
 ## Useful tutorials
 
