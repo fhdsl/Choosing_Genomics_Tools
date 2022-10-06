@@ -12,10 +12,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## WGS Overview 
 
-```{r, fig.alt = "Whole genome sequencing overview 
-Process of determining entirety of DNA sequence of organism’s genome at single time. 
-Includes sequencing all chromosomal data and DNA from mitochondria. 
-Used to identify functional variants associated with disease", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_8")
 ```
 
@@ -27,9 +24,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## Comparing WGS to other modalities 
 
-```{r, fig.alt = "Comparing WGS to other sequencing modalities 
-The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. 
-Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is >500X.", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Comparing WGS to other sequencing modalities. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is >500X.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_18")
 ```
 
@@ -56,13 +51,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```{r, fig.alt = "Tools commonly used in WGS data analysis", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_43")
 ```
-[https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/]
+https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/
 
 
 ## Resources for WGS 
 
-NCI resources: [https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing]
-Informative tutorial: [https://bioinformaticsdotca.github.io/CAN_2021_module4_lab]
+NCI resources: https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing
+Informative tutorial: https://bioinformaticsdotca.github.io/CAN_2021_module4_lab
 
 
 
