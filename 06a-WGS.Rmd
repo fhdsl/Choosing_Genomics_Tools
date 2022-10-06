@@ -6,16 +6,12 @@ ottrpal::set_knitr_image_path()
 
 ## Learning Objectives
 
-The learning objectives for this course are to: 
-1 Define the uses and applications of WGS
-2 Describe the steps for generating WGS data
-3 Understand the data analysis workflow for WGS
-
 ```{r, fig.alt = "The learning objectives for this course are to: 1 Define the uses and applications of WGS 2 Describe the steps for generating WGS data 3 Understand the data analysis workflow for WGS", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_51")
 ```
 
 ## WGS Overview 
+
 ```{r, fig.alt = "Whole genome sequencing overview 
 Process of determining entirety of DNA sequence of organism’s genome at single time. 
 Includes sequencing all chromosomal data and DNA from mitochondria. 
@@ -25,40 +21,48 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## Benefits of WGS 
 
-```{r, fig.alt = "Benefits of WGS: 
-Most complete account of individual variation 
-Ability to study: 
-Structural rearrangements
-Copy number variations
-Insertion-Deletions
-SNPs
-Sequencing repeats 
-Coding, non-coding, and mitochondrial genome coverage 
-WGS compared to WES: 
-limited vs entire genome
-targeted view of protein-coding regions
-WGS allows for discovery - identify causative variants
-", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_8](https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_13")
+```{r, fig.alt = "Benefits of WGS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage; WGS compared to WES: limited vs entire genome, targeted view of protein-coding regions; WGS allows for discovery - identify causative variants", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_13")
 ```
+
 ## Comparing WGS to other modalities 
 
 ```{r, fig.alt = "Comparing WGS to other sequencing modalities 
 The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. 
-Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is >500X. ", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_8](https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_18")
+Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is >500X.", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_18")
 ```
+
 ## WGS Considerations 
+
+```{r, fig.alt = "WGS Considerations , Genome type/size, Coverage requirements, Tissue source: fresh tissue, FFPE, blood, Library preparation protocol: PCR vs PCR-free", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_28")
+```
 
 ## WGS Pipeline Overview 
 
+```{r, fig.alt = "WGS pipeline overview: Step 1: DNA extraction from sample, Step 2: library preparation, Step 3: Sequencing, Step 4: Analysis including data processing from Fastq, aligning reads to generate a BAM file, identifying variants to create a final VCF file", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_33")
+```
+
 ## WGS Data Pre-processing 
+
+```{r, fig.alt = "WGS data pre-processing pipeline overview: Raw data from sequencing is transformed into a Fastq file, reads are aligned and a Bam file is created, the data is sorted and marged, duplicates are identified, and the base quality score is recalibrated to create a final BAM file ", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_38")
+```
 
 ## Commonly Used Tools 
 
+```{r, fig.alt = "Tools commonly used in WGS data analysis", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_43")
+```
+[https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/]
+
+
 ## Resources for WGS 
 
-
+NCI resources: [https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing]
+Informative tutorial: [https://bioinformaticsdotca.github.io/CAN_2021_module4_lab]
 
 
 
