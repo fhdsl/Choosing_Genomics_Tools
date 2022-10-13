@@ -31,20 +31,20 @@ jobs:
              docker/Dockerfile
              docker/github_package_list.tsv
 
-      - name: Make branch if it doesn't exist
+      # Delete the branch if this has been run before
+      - name: Delete branch locally and remotely
+        run: git push origin --delete preview-${{ github.event.pull_request.number }} || echo "No branch to delete"
+
+      # Make the branch fresh
+      - name: Make the branch fresh
         run: |
           git config --local user.email "itcrtrainingnetwork@gmail.com"
           git config --local user.name "jhudsl-robot"
 
           branch_name='preview-${{ github.event.pull_request.number }}'
-          exists=$(git ls-remote https://${{ secrets.GH_PAT }}@github.com/$GITHUB_REPOSITORY $branch_name | wc -l | xargs)
-          if [[ $exists == 0 ]];then
-            echo branch doesnt exist
-            git checkout -b $branch_name || echo branch exists
-            git push --set-upstream origin $branch_name
-          else
-            echo branch does exist
-          fi
+          echo branch doesnt exist
+          git checkout -b $branch_name || echo branch exists
+          git push --set-upstream origin $branch_name
         shell: bash
 
     outputs:
@@ -95,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{needs.yaml-check.outputs.toggle_style_code == 'yes'}}
     container:
-      image: jhudsl/course_template:main
+      image: jhudsl/base_ottr:main
 
     steps:
       - name: Checkout files
@@ -274,4 +274,4 @@ jobs:
           load: true
           context: docker
           file: docker/Dockerfile
-          tags: jhudsl/course_template
+          tags: jhudsl/base_ottr
