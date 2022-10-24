@@ -9,30 +9,42 @@ ottrpal::set_knitr_image_path()
 ```{r, fig.alt = "The learning objectives for this course are to: 1 Define the uses and applications of WGS 2 Describe the steps for generating WGS data 3 Understand the data analysis workflow for WGS", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g12890ae15d7_0_51")
 ```
+The learning objectives for this course are to explain the use and application of WGS for genomics studies, outline the technical steps in generating WGS data, and detail the processing steps for analyzing and interpreting WGS data. 
 
 ## WGS Overview 
 
 ```{r, fig.alt = "Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_8")
 ```
+At its core, whole genome sequencing is a techinque to throughly analyze the entire DNA sequence of any organism's genome. This includes sequencing all genes both coding and non-coding and all mitochondrial DNA. WGS is beneficial for identifying new and previously established variants related to disease and the regulatory elements of the genome including promoters, enhancers, and silencers.  
 
-## Benefits of WGS 
 
-```{r, fig.alt = "Benefits of WGS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage; WGS compared to WES: limited vs entire genome, targeted view of protein-coding regions; WGS allows for discovery - identify causative variants", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_13")
+## Advantages and Disadvantages of WGS 
+
+```{r, fig.alt = "Advantages and Disadvantages of WGS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage, allows for discovery - identify causative variants; Disadvantages include higher cost and more resources for storing and analyzing data", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("[https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_13](https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_13)")
 ```
+Alternatives to WGS include whole exome sequencing or sequencing the genes expressed in the genome and targeted gene sequencing. The main advantages of WGS include the ability to comprehensively analyze all regions of a genome, which has been massively beneficial for studying rare and complex diseases, and the ability to study structural rearrangements, gene copy number alterations, insertions and deletions, single nucleotide polymorphisms (SNPs), and sequencing repeats. Some disadvantages include higher sequencing costs and the necessity for more robust storage and analysis solutions to manage the much larger data output generated from WGS. 
 
 ## Comparing WGS to other modalities 
 
 ```{r, fig.alt = "Comparing WGS to other sequencing modalities. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is >500X.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_18")
 ```
+Compared to WES and targeted gene sequencing, WGS is the most expensive but requires the lowest depth of coverage to achieve 99.9% sensitivity. In other words, WGS requires sequencing each region of the genome (3.2 billion bases) 30 times in order to confidently be able to pick up all possible meaningful variants. 
+
+Alternatively, WES is a more cost effective way to study the genome, focusing just on the genes that are actively expressed. In this case, each gene must be sequenced 100x for sufficient sensitivity to pick up all meaningful coding variants. 
+
+In targeted gene sequencing, a panel of 50-500 genes of interest are selected. This technique is very applicable for studying a set of specific genes of interest at great depth to identify all varieties of mutations within those specific genes. These genes must be sequenced at much greater depth (>500x) to confidently identify all meaningful variants. 
+
 
 ## WGS Considerations 
 
 ```{r, fig.alt = "WGS Considerations , Genome type/size, Coverage requirements, Tissue source: fresh tissue, FFPE, blood, Library preparation protocol: PCR vs PCR-free", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_28")
 ```
+Some important considerations for WGS include what genome you are studying and the size of this genome. Included in this considerations is whether this genome has been sequenced before and you will have a "reference" genome to compare your data against or whether you will have to make a reference genome yourself. In addition, the depth of coverage for sequencing is an important consideration. The typical recommendation for WGS coverage is 30x, but this is on the lower side and man researchers find it does not provide sufficient coverage compared to 50x. Other important considerations include the tissue source and whether genetic alterations were introduced during processing (as fixation for FFPE often does) that will need to be accounted for during data analysis. In addition, the library preparation method of DNA amplification via PCR is very important as PCR can often introduce duplicates that interfere with interpreting whether a mutant gene is truly frequent or just over amplified during sequencing preparation. 
+
 
 ## WGS Pipeline Overview 
 
