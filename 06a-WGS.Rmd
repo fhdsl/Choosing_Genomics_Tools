@@ -51,7 +51,7 @@ Some important considerations for WGS include what genome you are studying and t
 ```{r, fig.alt = "WGS pipeline overview: Step 1: DNA extraction from sample, Step 2: library preparation, Step 3: Sequencing, Step 4: Analysis including data processing from Fastq, aligning reads to generate a BAM file, identifying variants to create a final VCF file", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_33")
 ```
-This slide outlines the necessary steps to key steps in performing WGS. First, DNA is extracted from a specific sample type (tisue, blood samples, cells, FFPE blocks, etc.). Either traditional (involving phenol and chloroform) or commercial kits can be used for this first step. Next, the DNA sequencing libraries are prepared. This involves fragmenting the DNA, adding sequencing adapters, and DNA amplification if the input DNA is not of sufficient quantity. After sequencing, data is analyzed by coverting and aligning reads to generate a BAM file. Many analysis tools will use the BAM file to identify variants, which then generates a VCF file.
+This slide outlines the necessary steps to key steps in performing WGS. First, DNA is extracted from a specific sample type (tissue, blood samples, cells, FFPE blocks, etc.). Either traditional (involving phenol and chloroform) or commercial kits can be used for this first step. Next, the DNA sequencing libraries are prepared. This involves fragmenting the DNA, adding sequencing adapters, and DNA amplification if the input DNA is not of sufficient quantity. After sequencing, data is analyzed by converting and aligning reads to generate a BAM file. Many analysis tools will use the BAM file to identify variants, which then generates a VCF file.
 
 
 ## WGS Data Pre-processing
@@ -67,24 +67,25 @@ To expand on the last slide, raw sequencing reads are first transformed into a f
 ```{r, fig.alt = "Tools commonly used in WGS data analysis", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_43")
 ```
-The following link provides the data analysis pipeline written by researchers in the NCI division of the NIH and provides a helpful overview of the typical steps necessary for WGS analysis: https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/
+The following link provides the data analysis pipeline written by researchers in the NCI division of the NIH and provides a helpful overview of the typical steps necessary for [WGS analysis](https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/).
 
 Here are many of the tools and resources used by researchers for analyzing WGS data.
 First, these are common tools for data pre-processing:
--Bedtools https://bedtools.readthedocs.io/en/latest/ including the bamtofastq function, which is the first step in converting data off the sequencer to a useable format for downstream analysis
--Samtools http://www.htslib.org/ including tools for converting fastq to BAM files while mapping genes to the genome, duplicate read marking, and sorting reads
--Picard2 https://broadinstitute.github.io/picard/ including tools to covert fastq to SAM files, filter files, create indices, mark read duplicates, sort files, and merge files
--GATK https://gatk.broadinstitute.org/hc/en-us is a comprehensive set of tools from the Broad Institute for analyzing many types of sequencing data. For pre-processing, the printread function is very beneficial for writing the reads from a BAM or SAM file that pass specific criteria to a new file
+
+- [Bedtools](https://bedtools.readthedocs.io/en/latest/) including the bamtofastq function, which is the first step in converting data off the sequencer to a useable format for downstream analysis
+- [Samtools](http://www.htslib.org/) including tools for converting fastq to BAM files while mapping genes to the genome, duplicate read marking, and sorting reads
+- [Picard2](https://broadinstitute.github.io/picard/) including tools to covert fastq to SAM files, filter files, create indices, mark read duplicates, sort files, and merge files
+- [GATK](https://gatk.broadinstitute.org/hc/en-us) is a comprehensive set of tools from the Broad Institute for analyzing many types of sequencing data. For pre-processing, the print read function is very beneficial for writing the reads from a BAM or SAM file that pass specific criteria to a new file
 
 These are the common tools used for somatic and germline variant identification. Note many researchers will often use a combination of these tools to narrow down only variants that are identified using a combination of these analysis algorithms:
--Mutect2 https://gatk.broadinstitute.org/hc/en-us/articles/9570422171291-Mutect2 This is a benefcial variant calling tool with functions including using a "panel of normals" to better compare disease samples to normal and filtering functions for samples with orientation bias artifacts (FFPE samples) called F1R2
--Varscan 2 https://varscan.sourceforge.net/ This is a helpful tool that utilizes a heuristic/statistic approach to variant calling. It is generally used and has capabilities for calling multi-sample variants. It can also be used for identifying copy number alterations in tumor-normal pairs
--MuSE
--Svaba
--Strelka
--SomaticSniper
--Pindel
--Lancet
+- [Mutect2](https://gatk.broadinstitute.org/hc/en-us/articles/9570422171291-Mutect2) This is a beneficial variant calling tool with functions including using a "panel of normals" to better compare disease samples to normal and filtering functions for samples with orientation bias artifacts (FFPE samples) called F1R2
+- [Varscan 2](https://varscan.sourceforge.net/) This is a helpful tool that utilizes a heuristic/statistic approach to variant calling. It is generally used and has capabilities for calling multi-sample variants. It can also be used for identifying copy number alterations in tumor-normal pairs
+- MuSE
+- Svaba
+- Strelka
+- SomaticSniper
+- Pindel
+- Lancet
 
 
 ## Resources for WGS
