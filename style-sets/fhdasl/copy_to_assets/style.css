@@ -43,7 +43,7 @@ pre code {
 /* ------------Links------------------ */
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-  color: #89C348;
+  color: #00C1D5;
 }
 
 
@@ -71,14 +71,14 @@ h1, h2, h3, h4 {
 .title {
   font-family: 'Lora';
   font-size: 4em !important;
-  color: #112345;
+  color: #1B365D;
   margin-top: 0.275em !important;
   margin-bottom: 0.35em !important;
 }
 
 .subtitle {
   font-family: 'Lora';
-  color: #0b8d96;
+  color: #1B365D;
 }
 
 
@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 */
 
 .section.level1 > p:first-of-type:first-letter { /*drop cap for first p beneath level 1 headers only within class .section*/
-  color: #112345;
+  color: #1B365D;
   float: left;
   font-family: 'Abril Fatface', serif;
   font-size: 7em;
@@ -138,7 +138,7 @@ h1, h2, h3, h4 {
 /*---color of links in TOC----*/
 
 .book .book-summary a {
-color: #112345
+color: #1B365D
 }
 
 .summary{
@@ -152,17 +152,17 @@ color: #112345
   padding-bottom: 8px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #112345;
+  color: #1B365D;
 }
 
 .summary a:hover {
-  color: #89C348 !important;
+  color: #00C1D5 !important;
 }
 
 .book .book-summary ul.summary li.active>a { /*active TOC links*/
-  color: #89C348 !important;
+  color: #00C1D5 !important;
   border-left: solid 4px;
-  border-color: #89C348;
+  border-color: #00C1D5;
   padding-left: 11px !important;
 }
 
@@ -260,7 +260,7 @@ div.notice, div.warning, div.github, div.dictionary, div.reflection {
 }
 
 div.notice{
-  border: 4px #89C348;
+  border: 4px #00C1D5;
   background-size: 70px;
   background-position: 15px center;
   background-color: #e8ebee;
@@ -284,7 +284,7 @@ div.github{
 }
 
 div.dictionary{
-  border: 4px #89C348;
+  border: 4px #00C1D5;
   background-size: 70px;
   background-position: 15px center;
   background-color: #e8ebee;
@@ -292,13 +292,12 @@ div.dictionary{
 }
 
 div.reflection{
-  border: 4px #89C348;
+  border: 4px #00C1D5;
   background-size: 90px;
   background-position: 15px center;
   background-color: #e8ebee;
   background-image: url("../assets/box_images/thinking_face.png");
 }
-
 
 /* .book .book-body .page-wrapper .page-inner section.normal is needed
    to override the styles produced by gitbook, which are ridiculously
@@ -446,25 +445,3 @@ a.anchor:hover {
     margin-bottom: 1em;
 }
 
-/* fix the image urls since our AnVIL style is in a different location */
-/* images paths are relative to the CSS file */
-
-div.notice{
-  background-image: url("../box_images/note.png");
-}
-
-div.warning{
-  background-image: url("../box_images/warning.png");
-}
-
-div.github{
-  background-image: url("../box_images/github.png");
-}
-
-div.dictionary{
-  background-image: url("../box_images/dictionary.png");
-}
-
-div.reflection{
-  background-image: url("../box_images/thinking_face.png");
-}
