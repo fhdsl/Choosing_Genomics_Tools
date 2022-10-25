@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Single-cell RNA-seq | Choosing Genomics Tools</title>
+  <title>Chapter 9 Single-cell RNA-seq | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Single-cell RNA-seq | Choosing Genomics Tools" />
+  <meta property="og:title" content="Chapter 9 Single-cell RNA-seq | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Single-cell RNA-seq | Choosing Genomics Tools" />
+  <meta name="twitter:title" content="Chapter 9 Single-cell RNA-seq | Choosing Genomics Tools" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -54,6 +54,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="assets/style_ITN.css" type="text/css" />
 </head>
@@ -89,18 +111,12 @@
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
 <li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+<li class="chapter" data-level="2.1.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.1.3</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="2.1.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.1.4</b> Microarray file formats</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>2.2</b> Very General Sequencing Workflow</a>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.2</b> General informatics files</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.2.1</b> Sequencing file formats</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>2.3</b> Very General Microarray Workflow</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.3.1</b> Microarray file formats</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.4</b> General informatics files</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.4.1</b> Other files</a></li>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.2.1</b> Other files</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="what-are-metadata.html"><a href="what-are-metadata.html"><i class="fa fa-check"></i><b>3</b> What are Metadata?</a>
@@ -116,27 +132,57 @@
 <li class="chapter" data-level="4" data-path="microarray-data.html"><a href="microarray-data.html"><i class="fa fa-check"></i><b>4</b> Microarray Data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="microarray-data.html"><a href="microarray-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="4.2" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>4.2</b> How do microarrays work?</a></li>
-<li class="chapter" data-level="4.3" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>4.3</b> What types of arrays are there?</a>
+<li class="chapter" data-level="4.2" data-path="microarray-data.html"><a href="microarray-data.html#summary-of-microarrays"><i class="fa fa-check"></i><b>4.2</b> Summary of microarrays</a></li>
+<li class="chapter" data-level="4.3" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>4.3</b> How do microarrays work?</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>4.3.1</b> SNP arrays</a></li>
-<li class="chapter" data-level="4.3.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>4.3.2</b> Gene expression arrays</a></li>
-<li class="chapter" data-level="4.3.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>4.3.3</b> DNA methylation arrays</a></li>
+<li class="chapter" data-level="4.3.1" data-path="microarray-data.html"><a href="microarray-data.html#pros"><i class="fa fa-check"></i><b>4.3.1</b> Pros:</a></li>
+<li class="chapter" data-level="4.3.2" data-path="microarray-data.html"><a href="microarray-data.html#cons"><i class="fa fa-check"></i><b>4.3.2</b> Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>4.4</b> What types of arrays are there?</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>4.4.1</b> SNP arrays</a></li>
+<li class="chapter" data-level="4.4.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>4.4.2</b> Gene expression arrays</a></li>
+<li class="chapter" data-level="4.4.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>4.4.3</b> DNA methylation arrays</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="microarray-data.html"><a href="microarray-data.html#general-processing-of-microarray-data"><i class="fa fa-check"></i><b>4.5</b> General processing of microarray data</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="microarray-data.html"><a href="microarray-data.html#examples-2"><i class="fa fa-check"></i><b>4.5.1</b> Examples</a></li>
+<li class="chapter" data-level="4.5.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-platforms"><i class="fa fa-check"></i><b>4.5.2</b> Microarray Platforms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="microarray-data.html"><a href="microarray-data.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>4.6</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="microarray-data.html"><a href="microarray-data.html#microarray-file-formats-1"><i class="fa fa-check"></i><b>4.6.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="microarray-data.html"><a href="microarray-data.html#general-informatics-files-1"><i class="fa fa-check"></i><b>4.7</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="microarray-data.html"><a href="microarray-data.html#other-files-1"><i class="fa fa-check"></i><b>4.7.1</b> Other files</a></li>
+<li class="chapter" data-level="4.7.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-processing-tutorials"><i class="fa fa-check"></i><b>4.7.2</b> Microarray processing tutorials:</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="sequencing-data.html"><a href="sequencing-data.html"><i class="fa fa-check"></i><b>5</b> Sequencing Data</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="sequencing-data.html"><a href="sequencing-data.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="5.2" data-path="sequencing-data.html"><a href="sequencing-data.html#how-does-sequencing-work"><i class="fa fa-check"></i><b>5.2</b> How does sequencing work?</a></li>
+<li class="chapter" data-level="5.3" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-concepts"><i class="fa fa-check"></i><b>5.3</b> Sequencing concepts</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sequencing-data.html"><a href="sequencing-data.html#inherent-biases"><i class="fa fa-check"></i><b>5.3.1</b> Inherent biases</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sequencing-data.html"><a href="sequencing-data.html#pcr-amplification"><i class="fa fa-check"></i><b>5.3.2</b> PCR Amplification</a></li>
+<li class="chapter" data-level="5.3.3" data-path="sequencing-data.html"><a href="sequencing-data.html#depth-of-coverage"><i class="fa fa-check"></i><b>5.3.3</b> Depth of coverage</a></li>
+<li class="chapter" data-level="5.3.4" data-path="sequencing-data.html"><a href="sequencing-data.html#quality-controls"><i class="fa fa-check"></i><b>5.3.4</b> Quality controls</a></li>
+<li class="chapter" data-level="5.3.5" data-path="sequencing-data.html"><a href="sequencing-data.html#alignment"><i class="fa fa-check"></i><b>5.3.5</b> Alignment</a></li>
+<li class="chapter" data-level="5.3.6" data-path="sequencing-data.html"><a href="sequencing-data.html#single-end-vs-paired-end"><i class="fa fa-check"></i><b>5.3.6</b> Single End vs Paired End</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="sequencing-data.html"><a href="sequencing-data.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>5.4</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-file-formats-1"><i class="fa fa-check"></i><b>5.4.1</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="5.4.2" data-path="sequencing-data.html"><a href="sequencing-data.html#other-files-2"><i class="fa fa-check"></i><b>5.4.2</b> Other files</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="dna-methods.html"><a href="dna-methods.html"><i class="fa fa-check"></i><b>6</b> DNA Methods</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="dna-methods.html"><a href="dna-methods.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="6.2" data-path="dna-methods.html"><a href="dna-methods.html#what-are-the-goals-of-analyzing-dna-sequences"><i class="fa fa-check"></i><b>6.2</b> What are the goals of analyzing DNA sequences?</a></li>
-<li class="chapter" data-level="6.3" data-path="dna-methods.html"><a href="dna-methods.html#dnasnp-microarrays"><i class="fa fa-check"></i><b>6.3</b> DNA/SNP microarrays</a></li>
-<li class="chapter" data-level="6.4" data-path="dna-methods.html"><a href="dna-methods.html#whole-genome-sequencing"><i class="fa fa-check"></i><b>6.4</b> Whole Genome Sequencing</a></li>
-<li class="chapter" data-level="6.5" data-path="dna-methods.html"><a href="dna-methods.html#whole-exome-sequencing"><i class="fa fa-check"></i><b>6.5</b> Whole Exome Sequencing</a></li>
-<li class="chapter" data-level="6.6" data-path="dna-methods.html"><a href="dna-methods.html#targeted-sequencing"><i class="fa fa-check"></i><b>6.6</b> Targeted Sequencing</a></li>
+<li class="chapter" data-level="6.3" data-path="dna-methods.html"><a href="dna-methods.html#comparison-of-dna-methods"><i class="fa fa-check"></i><b>6.3</b> Comparison of DNA methods</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="rna-methods.html"><a href="rna-methods.html"><i class="fa fa-check"></i><b>7</b> RNA Methods</a>
 <ul>
@@ -144,54 +190,65 @@
 <li class="chapter" data-level="7.2" data-path="rna-methods.html"><a href="rna-methods.html#what-are-the-goals-of-gene-expression-analysis"><i class="fa fa-check"></i><b>7.2</b> What are the goals of gene expression analysis?</a></li>
 <li class="chapter" data-level="7.3" data-path="rna-methods.html"><a href="rna-methods.html#comparison-of-rna-methods"><i class="fa fa-check"></i><b>7.3</b> Comparison of RNA methods</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html"><i class="fa fa-check"></i><b>8</b> Gene expression microarrays</a>
+<li class="chapter" data-level="8" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html"><i class="fa fa-check"></i><b>8</b> Bulk RNA-seq</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#where-gene-expression-array-data-comes-from"><i class="fa fa-check"></i><b>8.1</b> Where gene expression array data comes from</a></li>
-<li class="chapter" data-level="8.2" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#microarray-data-strengths"><i class="fa fa-check"></i><b>8.2</b> Microarray data <strong>strengths</strong>:</a></li>
-<li class="chapter" data-level="8.3" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#microarray-data-limitations"><i class="fa fa-check"></i><b>8.3</b> Microarray data <strong>limitations</strong>:</a></li>
-<li class="chapter" data-level="8.4" data-path="gene-expression-microarrays.html"><a href="gene-expression-microarrays.html#more-about-gene-expression-microarrays"><i class="fa fa-check"></i><b>8.4</b> More about gene expression microarrays</a></li>
+<li class="chapter" data-level="8.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#learning-objectives-6"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>8.2</b> Where RNA-seq data comes from</a></li>
+<li class="chapter" data-level="8.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-workflow"><i class="fa fa-check"></i><b>8.3</b> RNA-seq workflow</a></li>
+<li class="chapter" data-level="8.4" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-strengths"><i class="fa fa-check"></i><b>8.4</b> RNA-seq data <strong>strengths</strong></a></li>
+<li class="chapter" data-level="8.5" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>8.5</b> RNA-seq data <strong>limitations</strong></a></li>
+<li class="chapter" data-level="8.6" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-considerations"><i class="fa fa-check"></i><b>8.6</b> RNA-seq data considerations</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#ribo-minus-vs-poly-a-selection"><i class="fa fa-check"></i><b>8.6.1</b> Ribo minus vs poly A selection</a></li>
+<li class="chapter" data-level="8.6.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#transcriptome-mapping"><i class="fa fa-check"></i><b>8.6.2</b> Transcriptome mapping</a></li>
+<li class="chapter" data-level="8.6.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#abundance-measures"><i class="fa fa-check"></i><b>8.6.3</b> Abundance measures</a></li>
+<li class="chapter" data-level="8.6.4" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-downstream-analysis-tools"><i class="fa fa-check"></i><b>8.6.4</b> RNA-seq downstream analysis tools</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html"><i class="fa fa-check"></i><b>9</b> Bulk RNA-seq</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>9.1</b> Where RNA-seq data comes from</a></li>
-<li class="chapter" data-level="9.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>9.2</b> RNA-seq data <strong>limitations</strong></a></li>
-<li class="chapter" data-level="9.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>9.3</b> More reading about RNA-seq data</a></li>
+<li class="chapter" data-level="8.7" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>8.7</b> More reading about RNA-seq data</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>10</b> Single-cell RNA-seq</a>
+<li class="chapter" data-level="9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>9</b> Single-cell RNA-seq</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>10.1</b> Where single-cell RNA-seq data comes from</a></li>
-<li class="chapter" data-level="10.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-strengths"><i class="fa fa-check"></i><b>10.2</b> Single-cell RNA-seq data <strong>strengths</strong></a></li>
-<li class="chapter" data-level="10.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-limitations"><i class="fa fa-check"></i><b>10.3</b> Single-cell RNA-seq data <strong>limitations</strong></a></li>
-<li class="chapter" data-level="10.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#more-reading-about-single-cell-rna-seq-data"><i class="fa fa-check"></i><b>10.4</b> More reading about single-cell RNA-seq data</a></li>
+<li class="chapter" data-level="9.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#learning-objectives-7"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>9.2</b> Where single-cell RNA-seq data comes from</a></li>
+<li class="chapter" data-level="9.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-types"><i class="fa fa-check"></i><b>9.3</b> Single-cell RNA-seq data types</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#unique-molecular-identifiers"><i class="fa fa-check"></i><b>9.3.1</b> Unique Molecular identifiers</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="atac-seq.html"><a href="atac-seq.html"><i class="fa fa-check"></i><b>11</b> ATAC-Seq</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="atac-seq.html"><a href="atac-seq.html#learning-objectives-6"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="11.2" data-path="atac-seq.html"><a href="atac-seq.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>11.2</b> What are the goals of ATAC-Seq analysis?</a></li>
+<li class="chapter" data-level="9.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-tools"><i class="fa fa-check"></i><b>9.4</b> Single cell RNA-seq tools</a></li>
+<li class="chapter" data-level="9.5" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quantificationalignment"><i class="fa fa-check"></i><b>9.5</b> Quantification/Alignment</a></li>
+<li class="chapter" data-level="9.6" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quality-control"><i class="fa fa-check"></i><b>9.6</b> Quality control</a></li>
+<li class="chapter" data-level="9.7" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#normalization-and-downstream-analyses"><i class="fa fa-check"></i><b>9.7</b> Normalization and downstream analyses</a></li>
+<li class="chapter" data-level="9.8" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-tutorials"><i class="fa fa-check"></i><b>9.8</b> Useful tutorials</a></li>
+<li class="chapter" data-level="9.9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-readings"><i class="fa fa-check"></i><b>9.9</b> Useful readings</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>12</b> ATAC-Seq</a>
+<li class="chapter" data-level="10" data-path="atac-seq.html"><a href="atac-seq.html"><i class="fa fa-check"></i><b>10</b> ATAC-Seq</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#where-atac-seq-data-comes-from"><i class="fa fa-check"></i><b>12.1</b> Where ATAC-Seq data comes from</a></li>
-<li class="chapter" data-level="12.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>12.2</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
-<li class="chapter" data-level="12.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seqdata-limitations"><i class="fa fa-check"></i><b>12.3</b> ATAC-Seqdata <strong>limitations</strong>:</a></li>
-<li class="chapter" data-level="12.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-about-atac-seq"><i class="fa fa-check"></i><b>12.4</b> More about ATAC-Seq</a></li>
+<li class="chapter" data-level="10.1" data-path="atac-seq.html"><a href="atac-seq.html#learning-objectives-8"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="atac-seq.html"><a href="atac-seq.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>10.2</b> What are the goals of ATAC-Seq analysis?</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>13</b> ChIP-Seq</a>
+<li class="chapter" data-level="11" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>11</b> ATAC-Seq</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="chip-seq.html"><a href="chip-seq.html#learning-objectives-7"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="13.2" data-path="chip-seq.html"><a href="chip-seq.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>13.2</b> What are the goals of ChIP-Seq analysis?</a></li>
-<li class="chapter" data-level="13.3" data-path="chip-seq.html"><a href="chip-seq.html#where-chip-seq-data-comes-from"><i class="fa fa-check"></i><b>13.3</b> Where ChIP-Seq data comes from</a></li>
-<li class="chapter" data-level="13.4" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>13.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
-<li class="chapter" data-level="13.5" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>13.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
-<li class="chapter" data-level="13.6" data-path="chip-seq.html"><a href="chip-seq.html#more-about-chip-seq"><i class="fa fa-check"></i><b>13.6</b> More about ChIP-Seq</a></li>
+<li class="chapter" data-level="11.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#where-atac-seq-data-comes-from"><i class="fa fa-check"></i><b>11.1</b> Where ATAC-Seq data comes from</a></li>
+<li class="chapter" data-level="11.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>11.2</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="11.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seqdata-limitations"><i class="fa fa-check"></i><b>11.3</b> ATAC-Seqdata <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="11.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-about-atac-seq"><i class="fa fa-check"></i><b>11.4</b> More about ATAC-Seq</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html"><i class="fa fa-check"></i><b>14</b> DNA Methylation Sequencing Analysis Methods</a>
+<li class="chapter" data-level="12" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>12</b> ChIP-Seq</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#learning-objectives-8"><i class="fa fa-check"></i><b>14.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="14.2" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>14.2</b> What are the goals of analyzing DNA methylation?</a></li>
-<li class="chapter" data-level="14.3" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-vs-hydroxymethylation"><i class="fa fa-check"></i><b>14.3</b> Methylation vs Hydroxymethylation</a></li>
-<li class="chapter" data-level="14.4" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#bisulfiteoxidative-bisulfite-sequencing"><i class="fa fa-check"></i><b>14.4</b> Bisulfite/Oxidative bisulfite sequencing</a></li>
-<li class="chapter" data-level="14.5" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-microarrays"><i class="fa fa-check"></i><b>14.5</b> Methylation microarrays</a></li>
+<li class="chapter" data-level="12.1" data-path="chip-seq.html"><a href="chip-seq.html#learning-objectives-9"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="chip-seq.html"><a href="chip-seq.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>12.2</b> What are the goals of ChIP-Seq analysis?</a></li>
+<li class="chapter" data-level="12.3" data-path="chip-seq.html"><a href="chip-seq.html#where-chip-seq-data-comes-from"><i class="fa fa-check"></i><b>12.3</b> Where ChIP-Seq data comes from</a></li>
+<li class="chapter" data-level="12.4" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>12.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="12.5" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>12.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="12.6" data-path="chip-seq.html"><a href="chip-seq.html#more-about-chip-seq"><i class="fa fa-check"></i><b>12.6</b> More about ChIP-Seq</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html"><i class="fa fa-check"></i><b>13</b> DNA Methylation Sequencing Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#learning-objectives-10"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>13.2</b> What are the goals of analyzing DNA methylation?</a></li>
+<li class="chapter" data-level="13.3" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-vs-hydroxymethylation"><i class="fa fa-check"></i><b>13.3</b> Methylation vs Hydroxymethylation</a></li>
+<li class="chapter" data-level="13.4" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#bisulfiteoxidative-bisulfite-sequencing"><i class="fa fa-check"></i><b>13.4</b> Bisulfite/Oxidative bisulfite sequencing</a></li>
+<li class="chapter" data-level="13.5" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-microarrays"><i class="fa fa-check"></i><b>13.5</b> Methylation microarrays</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -230,35 +287,127 @@
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="single-cell-rna-seq" class="section level1" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Single-cell RNA-seq</h1>
-<div id="where-single-cell-rna-seq-data-comes-from" class="section level2" number="10.1">
-<h2><span class="header-section-number">10.1</span> Where single-cell RNA-seq data comes from</h2>
+<div id="single-cell-rna-seq" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Single-cell RNA-seq</h1>
+<div id="learning-objectives-7" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Learning Objectives</h2>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png" title="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" alt="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" width="100%" /></p>
 </div>
-<div id="single-cell-rna-seq-data-strengths" class="section level2" number="10.2">
-<h2><span class="header-section-number">10.2</span> Single-cell RNA-seq data <strong>strengths</strong></h2>
+<div id="where-single-cell-rna-seq-data-comes-from" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Where single-cell RNA-seq data comes from</h2>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_6.png" title="As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity" alt="As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity" width="100%" /></p>
+<p>As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity.</p>
+<p>Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity. If your research questions require cell-level transcriptional information, single-cell RNA-seq will on interest to you.</p>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_11.png" title="Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity." alt="Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity." width="100%" /></p>
 </div>
-<div id="single-cell-rna-seq-data-limitations" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Single-cell RNA-seq data <strong>limitations</strong></h2>
-</div>
-<div id="more-reading-about-single-cell-rna-seq-data" class="section level2" number="10.4">
-<h2><span class="header-section-number">10.4</span> More reading about single-cell RNA-seq data</h2>
+<div id="single-cell-rna-seq-data-types" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Single-cell RNA-seq data types</h2>
+<p>There are broadly two categories of single-cell RNA-seq data methods we will discuss.</p>
 <ul>
-<li>Hemberg Lab <a href="https://scrnaseq-course.cog.sanger.ac.uk/website/index.html">scRNA-seq training course</a></li>
-<li><a href="https://asap.epfl.ch/">ASAP: Automated Single-cell Analysis Pipeline</a> is a web server that allows you to process scRNA-seq data. (<a href="https://doi.org/10.1093/bioinformatics/btx337">Gardeux <em>et al.</em> 2017.</a>)</li>
-<li>Smith. <a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/"><em>Unique Molecular Identifiers – the problem, the solution and the proof</em></a> provides an excellent background on UMIs.</li>
-<li><a href="https://doi.org/10.1093/bfgp/elx035">Baran-Gale <em>et al.</em> (2018)</a><br />
-</li>
-<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Lafzi <em>et al.</em> (2019)</a></li>
-<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Ziegenhain <em>et al.</em> (2018)</a></li>
-<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Zhang <em>et al.</em> (2018)</a></li>
-<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">AlJanahi <em>et al.</em> (2018)</a></li>
-<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Amezquita <em>et al.</em> (2019)</a></li>
-<li><a href="http://dx.doi.org/10.1016/j.coisb.2017.07.004">Angerer <em>et al.</em> (2017)</a></li>
-<li><a href="https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2">Bruning <em>et al.</em> (2021)</a></li>
-<li><a href="https://doi.org/10.15252/msb.20188746">Luecken &amp; Theis (2019)</a></li>
+<li><strong>Full length RNA-seq</strong>: Individual cells are physically separated and then sequenced.</li>
+<li><strong>Tag Based RNA-seq</strong>: Individual cells are tagged with a barcode and their data is separated computationally.</li>
+</ul>
+<p>Depending on your goals for your single cell RNA-seq analysis, you may want to choose one method over the other.</p>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png" title="Full length single cell RNA-seq Pros: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive." alt="Full length single cell RNA-seq Pros: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive." width="100%" /></p>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png" title="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" alt="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" width="100%" /></p>
+<p>(Material borrowed from <span class="citation">(<a href="#ref-AlexsLemonade2022" role="doc-biblioref"><span>“Alex’s Lemonade Training Modules”</span> 2022</a>)</span>).</p>
+<div id="unique-molecular-identifiers" class="section level3" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Unique Molecular identifiers</h3>
+<p>Often Tag based single cell RNA-seq methods will include not only a cell barcode for cell identification but will also have a unique molecular identifier (UMI) for original molecule identification. The idea behind the UMIs is it is a way to have insight into the original snapshot of the cell and potentially combat PCR amplification biases.</p>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_41.png" title="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" alt="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" width="100%" /></p>
+</div>
+</div>
+<div id="single-cell-rna-seq-tools" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Single cell RNA-seq tools</h2>
+<p>There are a lot of scRNA-seq tools for various steps along the way.</p>
+<p><img src="resources/images/07b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png" title="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." alt="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." width="100%" /></p>
+<p>In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.</p>
+<p>Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the <a href="https://www.scrna-tools.org/table">scRNA-tools website</a>.</p>
+</div>
+<div id="quantificationalignment" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> Quantification/Alignment</h2>
+<p>TODO: How to choose between different quantification tools</p>
+<ul>
+<li><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin</a></li>
+<li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">CellRanger</a></li>
+<li><a href="https://www.kallistobus.tools/">Kallisto bustools</a></li>
+</ul>
+</div>
+<div id="quality-control" class="section level2" number="9.6">
+<h2><span class="header-section-number">9.6</span> Quality control</h2>
+<p>TODO: More about considerations for quality control</p>
+<div id="checking-umis" class="section level4" number="9.6.0.1">
+<h4><span class="header-section-number">9.6.0.1</span> Checking UMIs</h4>
+<ul>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/alevinQC.html">AlevinQC</a></li>
+</ul>
+</div>
+<div id="checking-for-doublets" class="section level4" number="9.6.0.2">
+<h4><span class="header-section-number">9.6.0.2</span> Checking for doublets</h4>
+<ul>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/scDblFinder.html">scDblFinder</a></li>
+<li><a href="https://doubletdetection.readthedocs.io/en/stable/">DoubletDetection</a></li>
+</ul>
+</div>
+</div>
+<div id="normalization-and-downstream-analyses" class="section level2" number="9.7">
+<h2><span class="header-section-number">9.7</span> Normalization and downstream analyses</h2>
+<p>TODO: More about considerations for downstream analysis and normalization</p>
+<ul>
+<li><a href="https://satijalab.org/seurat/">Seurat</a></li>
+<li><a href="https://github.com/KrasnitzLab/SCGV">Single Cell Genome Viewer</a></li>
+<li>For normalization <a href="https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html">scater</a></li>
+<li><a href="https://scanpy.readthedocs.io/en/stable/">scanpy</a></li>
+</ul>
+</div>
+<div id="useful-tutorials" class="section level2" number="9.8">
+<h2><span class="header-section-number">9.8</span> Useful tutorials</h2>
+<p>These tutorials cover explicit steps, code, tool recommendations and other considerations for analyzing RNA-seq data.</p>
+<ul>
+<li><a href="http://bioconductor.org/books/3.15/OSCA.intro/">Orchestrating Single Cell Analysis with Bioconductor</a> - An excellent tutorial for processing single cell data using Bioconductor.</li>
+<li><a href="http://bioconductor.org/books/3.15/OSCA.advanced/">Advanced Single Cell Analysis with Bioconductor</a> - a companion book to the intro version that contains code examples.</li>
+<li><a href="https://alexslemonade.github.io/training-modules/scRNA-seq/">Alex’s Lemonade scRNA-seq Training module</a> - A cancer based workshop module based in R, with exercise notebooks.</li>
+<li><a href="https://www.singlecellcourse.org/">Sanger Single Cell Course</a> - a general tutorial based on using R.</li>
+<li><a href="https://asap.epfl.ch/">ASAP: Automated Single-cell Analysis Pipeline</a> is a web server that allows you to process scRNA-seq data.</li>
+<li><a href="https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html">Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)</a> - a tutorial based on using CellRanger.</li>
+</ul>
+</div>
+<div id="useful-readings" class="section level2" number="9.9">
+<h2><span class="header-section-number">9.9</span> Useful readings</h2>
+<ul>
+<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">An Introduction to the Analysis of Single-Cell RNA-Sequencing Data</a> <span class="citation">(<a href="#ref-AlJanahi2018" role="doc-biblioref"><strong>AlJanahi2018?</strong></a>)</span>.</li>
+<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Orchestrating single-cell analysis with Bioconductor</a> <span class="citation">(<a href="#ref-Amezquita2019" role="doc-biblioref"><strong>Amezquita2019?</strong></a>)</span>.</li>
+<li><a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/">UMIs the problem, the solution and the proof</a> <span class="citation">(<a href="#ref-Smith2015" role="doc-biblioref">Smith 2015</a>)</span>.</li>
+<li><a href="https://doi.org/10.1093/bfgp/elx035">Experimental design for single-cell RNA sequencing</a> <span class="citation">(<a href="#ref-BaranGale2018" role="doc-biblioref">Baran-Gale, Chandra, and Kirschner 2018</a>)</span>.</li>
+<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies</a> <span class="citation">(<a href="#ref-Lafzi2019" role="doc-biblioref"><strong>Lafzi2019?</strong></a>)</span>.</li>
+<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Comparative Analysis of Single-Cell RNA Sequencing Methods</a> <span class="citation">(<a href="#ref-Ziegenhain2018" role="doc-biblioref"><strong>Ziegenhain2018?</strong></a>)</span>.</li>
+<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems</a> <span class="citation">(<a href="#ref-Zhang2018" role="doc-biblioref"><strong>Zhang2018?</strong></a>)</span>.</li>
+<li><a href="http://dx.doi.org/10.1016/j.coisb.2017.07.004">Single cells make big data: New challenges and opportunities in transcriptomics</a> <span class="citation">(<a href="#ref-Angerer2017" role="doc-biblioref">Angerer et al. 2017</a>)</span>.</li>
+<li><a href="https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2">Comparative Analysis of common alignment tools for single cell RNA sequencing</a> <span class="citation">(<a href="#ref-Bruning2021" role="doc-biblioref">Brüning et al. 2021</a>)</span>.</li>
+<li><a href="https://doi.org/10.15252/msb.20188746">Current best practices in single-cell RNA-seq analysis: a tutorial</a> <span class="citation">(<a href="#ref-Luecken2019" role="doc-biblioref">Luecken and Theis 2019</a>)</span>.</li>
 </ul>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-AlexsLemonade2022" class="csl-entry">
+<span>“Alex’s Lemonade Training Modules.”</span> 2022. <a href="https://github.com/AlexsLemonade/training-modules">https://github.com/AlexsLemonade/training-modules</a>.
+</div>
+<div id="ref-Angerer2017" class="csl-entry">
+Angerer, Philipp, Lukas Simon, Sophie Tritschler, F. Alexander Wolf, David Fischer, and Fabian J. Theis. 2017. <span>“Single Cells Make Big Data: <span>New</span> Challenges and Opportunities in Transcriptomics.”</span> <em>Current Opinion in Systems Biology</em> 4 (August): 85–91. <a href="https://doi.org/10.1016/j.coisb.2017.07.004">https://doi.org/10.1016/j.coisb.2017.07.004</a>.
+</div>
+<div id="ref-BaranGale2018" class="csl-entry">
+Baran-Gale, Jeanette, Tamir Chandra, and Kristina Kirschner. 2018. <span>“Experimental Design for Single-Cell <span>RNA</span> Sequencing.”</span> <em>Briefings in Functional Genomics</em> 17 (4): 233–39. <a href="https://doi.org/10.1093/bfgp/elx035">https://doi.org/10.1093/bfgp/elx035</a>.
+</div>
+<div id="ref-Bruning2021" class="csl-entry">
+Brüning, Ralf Schulze, Lukas Tombor, Marcel H. Schulz, Stefanie Dimmeler, and David John. 2021. <span>“Comparative <span>Analysis</span> of Common Alignment Tools for Single Cell <span>RNA</span> Sequencing.”</span> bioRxiv. <a href="https://doi.org/10.1101/2021.02.15.430948">https://doi.org/10.1101/2021.02.15.430948</a>.
+</div>
+<div id="ref-Luecken2019" class="csl-entry">
+Luecken, Malte D, and Fabian J Theis. 2019. <span>“Current Best Practices in Single‐cell <span>RNA</span>‐seq Analysis: A Tutorial.”</span> <em>Molecular Systems Biology</em> 15 (6). <a href="https://doi.org/10.15252/msb.20188746">https://doi.org/10.15252/msb.20188746</a>.
+</div>
+<div id="ref-Smith2015" class="csl-entry">
+Smith, Tom. 2015. <span>“Unique Molecular Identifiers – the Problem, the Solution and the Proof.”</span> <em>CGAT</em>. <a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/">https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/</a>.
 </div>
 </div>
 <hr>
