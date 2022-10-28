@@ -80,12 +80,12 @@ First, these are common tools for data pre-processing:
 These are the common tools used for somatic and germline variant identification. Note many researchers will often use a combination of these tools to narrow down only variants that are identified using a combination of these analysis algorithms:
 - [Mutect2](https://gatk.broadinstitute.org/hc/en-us/articles/9570422171291-Mutect2) This is a beneficial variant calling tool with functions including using a "panel of normals" to better compare disease samples to normal and filtering functions for samples with orientation bias artifacts (FFPE samples) called F1R2
 - [Varscan 2](https://varscan.sourceforge.net/) This is a helpful tool that utilizes a heuristic/statistic approach to variant calling. It is generally used and has capabilities for calling multi-sample variants. It can also be used for identifying copy number alterations in tumor-normal pairs
-- MuSE
-- Svaba
-- Strelka
-- SomaticSniper
-- Pindel
-- Lancet
+- [MuSE](https://bioinformatics.mdanderson.org/public-software/muse/) This is a mutation calling tool that uses a Markov Substitution model for Evolution, which models the evolution of the allelic composition of the tumor and normal tissue at each reference base. 
+- [Svaba]()
+- [Strelka]()
+- [SomaticSniper]()
+- [Pindel]()
+- [Lancet]()
 
 
 ## Resources for WGS
