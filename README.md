@@ -5,7 +5,7 @@
 
 This course was created from [this GitHub template](https://github.com/jhudsl/OTTR_Template).
 
-You can see the rendered course material here: https://jhudatascience.org/Choosing_Genomics_Tools
+You can see the rendered course material here: http://hutchdatascience.org/Choosing_Genomics_Tools/
 
 If you would like to contribute to this course material, take a look at the [getting started GitHub wiki pages](https://github.com/jhudsl/OTTR_Template/wiki).
 
