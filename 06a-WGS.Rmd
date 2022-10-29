@@ -80,12 +80,31 @@ First, these are common tools for data pre-processing:
 These are the common tools used for somatic and germline variant identification. Note many researchers will often use a combination of these tools to narrow down only variants that are identified using a combination of these analysis algorithms:
 - [Mutect2](https://gatk.broadinstitute.org/hc/en-us/articles/9570422171291-Mutect2) This is a beneficial variant calling tool with functions including using a "panel of normals" to better compare disease samples to normal and filtering functions for samples with orientation bias artifacts (FFPE samples) called F1R2
 - [Varscan 2](https://varscan.sourceforge.net/) This is a helpful tool that utilizes a heuristic/statistic approach to variant calling. It is generally used and has capabilities for calling multi-sample variants. It can also be used for identifying copy number alterations in tumor-normal pairs
-- [MuSE](https://bioinformatics.mdanderson.org/public-software/muse/) This is a mutation calling tool that uses a Markov Substitution model for Evolution, which models the evolution of the allelic composition of the tumor and normal tissue at each reference base. 
-- [Svaba]()
-- [Strelka]()
-- [SomaticSniper]()
-- [Pindel]()
-- [Lancet]()
+- [MuSE](https://bioinformatics.mdanderson.org/public-software/muse/) This is a beneficial mutation calling tool when you have both tumor and normal datasets. It uses a Markov Substitution model for Evolution, which models the evolution of the allelic composition of the tumor and normal tissue at each reference base. 
+- [SvABA](https://github.com/walaj/svaba) This tool is especially useful for calling insertions and deletions (indels) because it utilizes a String Graph Assembler to assemble aberrantly aligned sequence reads that reflect indels or structural variants. Indels can be difficult to detect with standard alignment-based variant callers. 
+- [Strelka](https://github.com/Illumina/strelka) This is a small variant caller designed by illumina. It is used for identifying germline variants in cohorts of samples and somatic variants in tumor/normal sample pairs. 
+- [SomaticSniper](https://gmt.genome.wustl.edu/packages/somatic-sniper/) SomaticSniper can be used to identify SNPs in tumor/normal pairs. It calculates the probability that the tumor and normal genotypes are different and reports this probability as a somatic score. 
+- [Pindel](https://www.sanger.ac.uk/tool/pindel/) Pindel is a tool that uses a pattern growth approach to detect breakpoints of large deletions, medium size insertsion/inversion, tandem duplications. 
+
+Here are commonly used variant calling annotation tools: 
+- [Annovar](https://annovar.openbioinformatics.org/en/latest/) This is a helpful tool for annotating, filtering, and combining the output data from the above tools. It can be used for gene-based, region-based, or filter-based annotations. 
+- [GENCODE](https://www.gencodegenes.org/#) This tool can be used to identify and classify gene features in human and mouse genomes 
+- [dbSNP]()
+- [Ensembl]()
+
+These are some of the commonly used copy number variation analysis tools: 
+- [GATK]()
+- [AscatNGS]()
+- [TITAN CNA]()
+- [gGNV]()
+- [BIC-seq2]()
+
+Here are the tools frequently used to visualize the output data from the above tools: 
+- [IGV]()
+- [Maftools]()
+- [Prism]()
+
+
 
 
 ## Resources for WGS
