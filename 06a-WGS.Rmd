@@ -88,16 +88,16 @@ These are the common tools used for somatic and germline variant identification.
 
 Here are commonly used variant calling annotation tools: 
 - [Annovar](https://annovar.openbioinformatics.org/en/latest/) This is a helpful tool for annotating, filtering, and combining the output data from the above tools. It can be used for gene-based, region-based, or filter-based annotations. 
-- [GENCODE](https://www.gencodegenes.org/#) This tool can be used to identify and classify gene features in human and mouse genomes 
-- [dbSNP]()
-- [Ensembl]()
+- [GENCODE](https://www.gencodegenes.org/#) This tool can be used to identify and classify gene features in human and mouse genomes. 
+- [dbSNP](https://www.ncbi.nlm.nih.gov/snp/) This is a resource to look up specific human single nucleotide variations, microsatellites, and small-scale insertions and deletions. 
+- [Ensembl](https://uswest.ensembl.org/index.html) This resource is a genome browser for annotating genes from a wide variety of species. 
 
 These are some of the commonly used copy number variation analysis tools: 
-- [GATK]()
-- [AscatNGS]()
-- [TITAN CNA]()
-- [gGNV]()
-- [BIC-seq2]()
+- [GATK](https://gatk.broadinstitute.org/hc/en-us/articles/360035531092--How-to-part-I-Sensitively-detect-copy-ratio-alterations-and-allelic-segments) GATK has a variety of tools that ca nbe used to study changes in copy numbers of genes. This link provides a tutorial for how to use the tools. 
+- [AscatNGS](https://www.crick.ac.uk/research/labs/peter-van-loo/software) This tools (allele-specific copy number analysis of tumors) is specific for WGS copy number variation analysis. It can be used to dissect allele-specific copy numbers of tumors by estimating and adjusting for tumor ploidy and nonaberrant cell admixture.  
+- [TitanCNA](https://github.com/gavinha/TitanCNA) This tool, developed by Fred Hutch Principal Investigator Dr. Gavin Ha, is used to analyze copy number variation and loss of heterozygoisity at the subclonal level for both WGS and WES data in tumors compared to matched normals. This tool accounts for mixtures of cell populations and estimates the proportion of cells harboring each event. The Ha lab has developed a [snakemake pipeline](https://github.com/gavinha/TitanCNA/tree/master/scripts/snakemake) to more easily use this tool.   
+- [gGNV](https://gatk.broadinstitute.org/hc/en-us/articles/4404604788891-GermlineCNVCaller) This is a germline CNV calling tool that can be used on both WGS and WES data. This tool has booth COHORT and CASE modes. COHORT mode is used when providing a cohort of germline samples where CASE mode is used for individual samples. 
+- [BIC-seq2](http://compbio.med.harvard.edu/BIC-seq/) This tool i used to detect CNVs with or without control samples. The steps involved in this data processing tool include normalization and CNV detection. 
 
 Here are the tools frequently used to visualize the output data from the above tools: 
 - [IGV]()
