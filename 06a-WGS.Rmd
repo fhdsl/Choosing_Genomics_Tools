@@ -16,7 +16,7 @@ The learning objectives for this course are to explain the use and application o
 ```{r, fig.alt = "Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_8")
 ```
-At its core, whole genome sequencing is a techinque to throughly analyze the entire DNA sequence of any organism's genome. This includes sequencing all genes both coding and non-coding and all mitochondrial DNA. WGS is beneficial for identifying new and previously established variants related to disease and the regulatory elements of the genome including promoters, enhancers, and silencers.  
+At its core, whole genome sequencing is a technique to throughly analyze the entire DNA sequence of any organism's genome. This includes sequencing all genes both coding and non-coding and all mitochondrial DNA. WGS is beneficial for identifying new and previously established variants related to disease and the regulatory elements of the genome including promoters, enhancers, and silencers.  Investigating these regions can be massively beneficial for studying rare and complex diseases. 
 
 
 ## Advantages and Disadvantages of WGS
