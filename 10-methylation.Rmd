@@ -17,7 +17,16 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```{r, fig.alt = "",out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_10")
 ```
+## Methlyation data **strengths**  
 
-## Methylation vs Hydroxymethylation
-## Bisulfite/Oxidative bisulfite sequencing
-## Methylation microarrays
+
+## Methlyation data **limitations**  
+
+
+## Methlyation data workflow
+
+
+## Methylation data considerations
+
+
+## Methylation analysis tools
