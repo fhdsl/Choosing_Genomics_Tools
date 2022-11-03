@@ -36,7 +36,7 @@ Compared to WES and Targeted Gene Sequencing, WGS is the most expensive but requ
 
 Alternatively, WES is a more cost effective way to study the genome, focusing just on the genes that are actively expressed. In this case, each gene must be sequenced 100x for sufficient sensitivity to pick up all meaningful coding variants.
 
-In targeted gene sequencing, a panel of 50-500 genes of interest are selected. This technique is very applicable for studying a set of specific genes of interest at great depth to identify all varieties of mutations within those specific genes. These genes must be sequenced at much greater depth (>500x) to confidently identify all meaningful variants.
+In targeted gene sequencing, a panel of 50-500 regions of interest are selected. This technique is very applicable for studying a set of specific genes of interest at great depth to identify all varieties of mutations within those specific genes. These genes must be sequenced at much greater depth (>500x) to confidently identify all meaningful variants.
 
 
 ## WGS Considerations
