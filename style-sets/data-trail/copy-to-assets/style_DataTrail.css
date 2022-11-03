@@ -266,6 +266,94 @@ li.appendix span, li.part span { /* for TOC part names */
 /* Sidebar formating --------------------------------------------*/
 /* from r-pkgs.org*/
 
+
+div.notice{
+  border: 4px #023e4c;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  background-color: #e8ebee;
+}
+
+div.notice{
+  background-image: url("../assets/box_images/note.png");
+}
+
+div.warning{
+  border: 4px #e0471c;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  background-color: #e8ebee;
+}
+
+div.warning{
+  background-image: url("../assets/box_images/warning.png");
+}
+
+
+
+div.github{
+  border: 4px #000000;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  background-color: #e8ebee;
+}
+
+div.github{
+  background-image: url("../assets/box_images/github.png");
+}
+
+div.dictionary{
+  border: 4px #023e4c;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  background-color: #e8ebee;
+}
+
+div.dictionary{
+  background-image: url("../assets/box_images/dictionary.png");
+}
+
+div.reflection{
+  border: 4px #000000;
+  border-style: solid;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  background-color: #e8ebee;
+}
+
+div.reflection{
+  background-image: url("../assets/box_images/thinking_face.png");
+}
+
 div.rstudio-tip, div.tip, div.gotcha, div.design, div.hat{
   border: 4px #aed6d963;
   border-style: dashed solid;

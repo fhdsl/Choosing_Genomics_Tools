@@ -181,6 +181,7 @@ jobs:
           git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
           git add --force manuscript/*
           git add --force resources/*
+          git add --force docs/*
           git commit -m 'Render Leanpub' || echo "No changes to commit"
           git pull --allow-unrelated-histories --strategy-option=ours
           git push origin main || echo "No changes to push"
@@ -217,7 +218,9 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
-          git add --force .
+          git add --force manuscript/*
+          git add --force resources/*
+          git add --force docs/*
           git commit -m 'Render Coursera quizzes' || echo "No changes to commit"
           git pull --allow-unrelated-histories --strategy-option=ours
           git push origin main || echo "No changes to push"

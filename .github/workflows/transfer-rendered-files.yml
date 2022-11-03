@@ -36,6 +36,8 @@ jobs:
   file-quizzes-pr:
     name: File _Quizzes Transfer PR
     runs-on: ubuntu-latest
+    container:
+      image: jhudsl/ottrpal:main
     needs: [yaml-check]
     if: ${{needs.yaml-check.outputs.toggle_coursera == 'yes' || needs.yaml-check.outputs.toggle_leanpub == 'yes'}}
 
@@ -46,7 +48,6 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           sudo apt-get install subversion
-          sudo Rscript -e "install.packages('optparse')"
 
           # What's the Quizzes repository's name?
           QUIZ_REPO=$(echo ${GITHUB_REPOSITORY} | sed "s/_Bookdown/ /g" | sed "s/_Template/ /g" | awk '{print $1"_Quizzes"}')
@@ -78,6 +79,9 @@ jobs:
           # Copy over images folder
           svn export --force https://github.com/${GITHUB_REPOSITORY}.git/branches/${GITHUB_REF#refs/heads/}/resources/chapt_screen_images resources/chapt_screen_images
 
+          # Copy over _bookdown.yml 
+          svn export --force https://github.com/${GITHUB_REPOSITORY}.git/branches/${GITHUB_REF#refs/heads/}/_bookdown.yml _bookdown.yml
+          
       - name: Create PR with resources files
         if: ${{ steps.git_repo_check.outputs.git_results == 'TRUE' }}
         uses: peter-evans/create-pull-request@v3
@@ -95,6 +99,7 @@ jobs:
              It copies over the ottrpal-needed folder (for the `bookdown_to_embed_leanpub(render = FALSE)` function
              to run properly.
                - resources/chapt_screen_images/*
+               - _bookdown.yml
           labels: |
             automated
           reviewers: $GITHUB_ACTOR

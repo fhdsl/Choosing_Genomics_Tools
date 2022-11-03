@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-![](resources/images/02-genomics_overview_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_16.png)
+![](resources/images/02-genomics_overview_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_16.png){width=100%}
 
 In this chapter we are going to cover sequencing and microarray workflows at a very general high level overview to give you a first orientation. As we dive into specific data types and experiments, we will get into more specifics.
 Here we will cover the most common file formats. If you have a file format you are dealing with that you don't see listed here, it may be specific to your data type and we will discuss that more in that data type's respective chapter. We still suggest you go through this chapter to give you a basic understanding of commonalities of all genomic data types and workflows
@@ -14,7 +14,7 @@ Here we will cover the most common file formats. If you have a file format you a
 
 In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly, this summarized data is what can be used to make inferences and create plots and results tables.
 
-![](resources/images/02-genomics_overview_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_20.png)
+![](resources/images/02-genomics_overview_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_20.png){width=100%}
 
 ### Basic file formats
 
@@ -47,12 +47,6 @@ gene_id, sample_1, sample_2,
 gene_a, 12, 15,
 gene_b, 13, 14
 ```
-
-## Very General Sequencing Workflow
-
-In the data type specific chapters, we will cover the sequencing data workflows and file formats in more detail. But in the most general sense, sequencing workflows look like this:
-
-<div id="04D1599E33D92E370515664A58E78BE1EEB_69816"><div id="04D1599E33D92E370515664A58E78BE1EEB_69816_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=04D1599E33D92E370515664A58E78BE1EEB" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/04D1599E33D92E370515664A58E78BE1EEB/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("04D1599E33D92E370515664A58E78BE1EEB",69816,1,"");</script><br/>
 
 ### Sequencing file formats
 
@@ -109,12 +103,6 @@ For [more on VCF files](https://en.wikipedia.org/wiki/Variant_Call_Format).
 MAF files are aggregated versions of VCF files. So for a group of samples for which each has a VCF file, your entire group of samples' variants will be summarized in the form of a MAF file.
 
 For [more on MAF files](https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#:~:text=Mutation%20Annotation%20Format%20(MAF)%20is,(or%20open%2Daccess).).
-
-## Very General Microarray Workflow
-
-In the data type specific chapters, we will cover the microarray workflow and file formats in more detail. But in the most general sense, microarray workflows look like this, note that the exact file formats are specific to the chip brand and type you use (e.g. Illumina, Affymetrix, Agilent, etc.):
-
-<div id="CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8_81516"><div id="CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8_81516_robot"><a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8/preview2.png"></a></div></div><script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script><script type="text/javascript">SDJS_Widget("CB1322FC70C4A4B3A1BF2D8AC29A7E9FFF8",81516,1,"");</script><br/>
 
 ### Microarray file formats
 

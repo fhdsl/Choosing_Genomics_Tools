@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="a-very-general-genomics-overview.html"/>
-<link rel="next" href="about-the-authors.html"/>
+<link rel="next" href="microarray-data.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -54,6 +54,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="assets/style_ITN.css" type="text/css" />
 </head>
@@ -89,18 +111,12 @@
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
 <li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+<li class="chapter" data-level="2.1.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.1.3</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="2.1.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.1.4</b> Microarray file formats</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>2.2</b> Very General Sequencing Workflow</a>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.2</b> General informatics files</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.2.1</b> Sequencing file formats</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>2.3</b> Very General Microarray Workflow</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.3.1</b> Microarray file formats</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.4</b> General informatics files</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.4.1</b> Other files</a></li>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.2.1</b> Other files</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="what-are-metadata.html"><a href="what-are-metadata.html"><i class="fa fa-check"></i><b>3</b> What are Metadata?</a>
@@ -113,11 +129,132 @@
 <li class="chapter" data-level="3.3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#to-recap"><i class="fa fa-check"></i><b>3.3.2</b> To recap:</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="microarray-data.html"><a href="microarray-data.html"><i class="fa fa-check"></i><b>4</b> Microarray Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="microarray-data.html"><a href="microarray-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="microarray-data.html"><a href="microarray-data.html#summary-of-microarrays"><i class="fa fa-check"></i><b>4.2</b> Summary of microarrays</a></li>
+<li class="chapter" data-level="4.3" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>4.3</b> How do microarrays work?</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="microarray-data.html"><a href="microarray-data.html#pros"><i class="fa fa-check"></i><b>4.3.1</b> Pros:</a></li>
+<li class="chapter" data-level="4.3.2" data-path="microarray-data.html"><a href="microarray-data.html#cons"><i class="fa fa-check"></i><b>4.3.2</b> Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>4.4</b> What types of arrays are there?</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>4.4.1</b> SNP arrays</a></li>
+<li class="chapter" data-level="4.4.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>4.4.2</b> Gene expression arrays</a></li>
+<li class="chapter" data-level="4.4.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>4.4.3</b> DNA methylation arrays</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="microarray-data.html"><a href="microarray-data.html#general-processing-of-microarray-data"><i class="fa fa-check"></i><b>4.5</b> General processing of microarray data</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="microarray-data.html"><a href="microarray-data.html#examples-2"><i class="fa fa-check"></i><b>4.5.1</b> Examples</a></li>
+<li class="chapter" data-level="4.5.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-platforms"><i class="fa fa-check"></i><b>4.5.2</b> Microarray Platforms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="microarray-data.html"><a href="microarray-data.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>4.6</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="microarray-data.html"><a href="microarray-data.html#microarray-file-formats-1"><i class="fa fa-check"></i><b>4.6.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="microarray-data.html"><a href="microarray-data.html#general-informatics-files-1"><i class="fa fa-check"></i><b>4.7</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="microarray-data.html"><a href="microarray-data.html#other-files-1"><i class="fa fa-check"></i><b>4.7.1</b> Other files</a></li>
+<li class="chapter" data-level="4.7.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-processing-tutorials"><i class="fa fa-check"></i><b>4.7.2</b> Microarray processing tutorials:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sequencing-data.html"><a href="sequencing-data.html"><i class="fa fa-check"></i><b>5</b> Sequencing Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sequencing-data.html"><a href="sequencing-data.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="sequencing-data.html"><a href="sequencing-data.html#how-does-sequencing-work"><i class="fa fa-check"></i><b>5.2</b> How does sequencing work?</a></li>
+<li class="chapter" data-level="5.3" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-concepts"><i class="fa fa-check"></i><b>5.3</b> Sequencing concepts</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sequencing-data.html"><a href="sequencing-data.html#inherent-biases"><i class="fa fa-check"></i><b>5.3.1</b> Inherent biases</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sequencing-data.html"><a href="sequencing-data.html#pcr-amplification"><i class="fa fa-check"></i><b>5.3.2</b> PCR Amplification</a></li>
+<li class="chapter" data-level="5.3.3" data-path="sequencing-data.html"><a href="sequencing-data.html#depth-of-coverage"><i class="fa fa-check"></i><b>5.3.3</b> Depth of coverage</a></li>
+<li class="chapter" data-level="5.3.4" data-path="sequencing-data.html"><a href="sequencing-data.html#quality-controls"><i class="fa fa-check"></i><b>5.3.4</b> Quality controls</a></li>
+<li class="chapter" data-level="5.3.5" data-path="sequencing-data.html"><a href="sequencing-data.html#alignment"><i class="fa fa-check"></i><b>5.3.5</b> Alignment</a></li>
+<li class="chapter" data-level="5.3.6" data-path="sequencing-data.html"><a href="sequencing-data.html#single-end-vs-paired-end"><i class="fa fa-check"></i><b>5.3.6</b> Single End vs Paired End</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="sequencing-data.html"><a href="sequencing-data.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>5.4</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-file-formats-1"><i class="fa fa-check"></i><b>5.4.1</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="5.4.2" data-path="sequencing-data.html"><a href="sequencing-data.html#other-files-2"><i class="fa fa-check"></i><b>5.4.2</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="dna-methods.html"><a href="dna-methods.html"><i class="fa fa-check"></i><b>6</b> DNA Methods</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="dna-methods.html"><a href="dna-methods.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="dna-methods.html"><a href="dna-methods.html#what-are-the-goals-of-analyzing-dna-sequences"><i class="fa fa-check"></i><b>6.2</b> What are the goals of analyzing DNA sequences?</a></li>
+<li class="chapter" data-level="6.3" data-path="dna-methods.html"><a href="dna-methods.html#comparison-of-dna-methods"><i class="fa fa-check"></i><b>6.3</b> Comparison of DNA methods</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="rna-methods.html"><a href="rna-methods.html"><i class="fa fa-check"></i><b>7</b> RNA Methods</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="rna-methods.html"><a href="rna-methods.html#learning-objectives-5"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="rna-methods.html"><a href="rna-methods.html#what-are-the-goals-of-gene-expression-analysis"><i class="fa fa-check"></i><b>7.2</b> What are the goals of gene expression analysis?</a></li>
+<li class="chapter" data-level="7.3" data-path="rna-methods.html"><a href="rna-methods.html#comparison-of-rna-methods"><i class="fa fa-check"></i><b>7.3</b> Comparison of RNA methods</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html"><i class="fa fa-check"></i><b>8</b> Bulk RNA-seq</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#learning-objectives-6"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>8.2</b> Where RNA-seq data comes from</a></li>
+<li class="chapter" data-level="8.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-workflow"><i class="fa fa-check"></i><b>8.3</b> RNA-seq workflow</a></li>
+<li class="chapter" data-level="8.4" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-strengths"><i class="fa fa-check"></i><b>8.4</b> RNA-seq data <strong>strengths</strong></a></li>
+<li class="chapter" data-level="8.5" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>8.5</b> RNA-seq data <strong>limitations</strong></a></li>
+<li class="chapter" data-level="8.6" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-considerations"><i class="fa fa-check"></i><b>8.6</b> RNA-seq data considerations</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#ribo-minus-vs-poly-a-selection"><i class="fa fa-check"></i><b>8.6.1</b> Ribo minus vs poly A selection</a></li>
+<li class="chapter" data-level="8.6.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#transcriptome-mapping"><i class="fa fa-check"></i><b>8.6.2</b> Transcriptome mapping</a></li>
+<li class="chapter" data-level="8.6.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#abundance-measures"><i class="fa fa-check"></i><b>8.6.3</b> Abundance measures</a></li>
+<li class="chapter" data-level="8.6.4" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-downstream-analysis-tools"><i class="fa fa-check"></i><b>8.6.4</b> RNA-seq downstream analysis tools</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>8.7</b> More reading about RNA-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>9</b> Single-cell RNA-seq</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#learning-objectives-7"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>9.2</b> Where single-cell RNA-seq data comes from</a></li>
+<li class="chapter" data-level="9.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-types"><i class="fa fa-check"></i><b>9.3</b> Single-cell RNA-seq data types</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#unique-molecular-identifiers"><i class="fa fa-check"></i><b>9.3.1</b> Unique Molecular identifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-tools"><i class="fa fa-check"></i><b>9.4</b> Single cell RNA-seq tools</a></li>
+<li class="chapter" data-level="9.5" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quantificationalignment"><i class="fa fa-check"></i><b>9.5</b> Quantification/Alignment</a></li>
+<li class="chapter" data-level="9.6" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quality-control"><i class="fa fa-check"></i><b>9.6</b> Quality control</a></li>
+<li class="chapter" data-level="9.7" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#normalization-and-downstream-analyses"><i class="fa fa-check"></i><b>9.7</b> Normalization and downstream analyses</a></li>
+<li class="chapter" data-level="9.8" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-tutorials"><i class="fa fa-check"></i><b>9.8</b> Useful tutorials</a></li>
+<li class="chapter" data-level="9.9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-readings"><i class="fa fa-check"></i><b>9.9</b> Useful readings</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="atac-seq.html"><a href="atac-seq.html"><i class="fa fa-check"></i><b>10</b> ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="atac-seq.html"><a href="atac-seq.html#learning-objectives-8"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="atac-seq.html"><a href="atac-seq.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>10.2</b> What are the goals of ATAC-Seq analysis?</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>11</b> ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#where-atac-seq-data-comes-from"><i class="fa fa-check"></i><b>11.1</b> Where ATAC-Seq data comes from</a></li>
+<li class="chapter" data-level="11.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>11.2</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="11.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seqdata-limitations"><i class="fa fa-check"></i><b>11.3</b> ATAC-Seqdata <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="11.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-about-atac-seq"><i class="fa fa-check"></i><b>11.4</b> More about ATAC-Seq</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>12</b> ChIP-Seq</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="chip-seq.html"><a href="chip-seq.html#learning-objectives-9"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="chip-seq.html"><a href="chip-seq.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>12.2</b> What are the goals of ChIP-Seq analysis?</a></li>
+<li class="chapter" data-level="12.3" data-path="chip-seq.html"><a href="chip-seq.html#where-chip-seq-data-comes-from"><i class="fa fa-check"></i><b>12.3</b> Where ChIP-Seq data comes from</a></li>
+<li class="chapter" data-level="12.4" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>12.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="12.5" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>12.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="12.6" data-path="chip-seq.html"><a href="chip-seq.html#more-about-chip-seq"><i class="fa fa-check"></i><b>12.6</b> More about ChIP-Seq</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html"><i class="fa fa-check"></i><b>13</b> DNA Methylation Sequencing Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#learning-objectives-10"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>13.2</b> What are the goals of analyzing DNA methylation?</a></li>
+<li class="chapter" data-level="13.3" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-vs-hydroxymethylation"><i class="fa fa-check"></i><b>13.3</b> Methylation vs Hydroxymethylation</a></li>
+<li class="chapter" data-level="13.4" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#bisulfiteoxidative-bisulfite-sequencing"><i class="fa fa-check"></i><b>13.4</b> Bisulfite/Oxidative bisulfite sequencing</a></li>
+<li class="chapter" data-level="13.5" data-path="dna-methylation-sequencing-analysis-methods.html"><a href="dna-methylation-sequencing-analysis-methods.html#methylation-microarrays"><i class="fa fa-check"></i><b>13.5</b> Methylation microarrays</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
-<p style="text-align:center;"> <a href="http://jhudatascience.org/"> The Johns Hopkins Data Science Lab </a></p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
 <a href="http://jhudatascience.org/"><img src="https://jhudatascience.org/images/dasl.png" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
 <p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
 <p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/hc8Xt3Y2Znjb6M4Y7"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
@@ -154,18 +291,18 @@
 <h1><span class="header-section-number">Chapter 3</span> What are Metadata?</h1>
 <div id="learning-objectives-1" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Learning Objectives</h2>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" title="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="480" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" title="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="100%" /></p>
 </div>
 <div id="what-are-metadata-1" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> What are metadata?</h2>
 <p>Metadata are critically important descriptive information about your data.</p>
 <p><strong>Without metadata, the data themselves are useless or at best vastly limited.</strong></p>
 <p>Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your data set.</p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" title="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="480" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" title="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" /></p>
 <p>Metadata includes but isn’t limited to, the following example categories:</p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" title="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="480" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" title="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="100%" /></p>
 <div class="warning">
-<p>At this time it’s important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It’s critical that you protect this information! For more details on this, we encourage you to see our <a href="https://jhudatascience.org/Data_Management_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
+<p>At this time it’s important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It’s critical that you protect this information! For more details on this, we encourage you to see our <a href="https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
 </div>
 </div>
 <div id="how-to-create-metadata" class="section level2" number="3.3">
@@ -193,18 +330,24 @@
 <li><p><em>Use Data Validation to Avoid Errors</em> - set data types to have googlesheets or excel check that the data in the columns is the type of data it expects for a given variable.</p></li>
 </ol>
 <div class="warning">
-<p>Note that it is very dangerous to open gene data with Excel. According to <span class="citation">@Ziemann2016</span>, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
-<img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" title="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="480" /></p>
+<p>Note that it is very dangerous to open gene data with Excel. According to <span class="citation">Ziemann, Eren, and El-Osta (<a href="#ref-Ziemann2016" role="doc-biblioref">2016</a>)</span>, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
+<img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" title="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="100%" /></p>
 </div>
 </div>
 </div>
 <div id="to-recap" class="section level3" number="3.3.2">
 <h3><span class="header-section-number">3.3.2</span> To recap:</h3>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" title="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="480" /></p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" title="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="480" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" title="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="100%" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" title="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="100%" /></p>
 <p>If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!</p>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Ziemann2016" class="csl-entry">
+Ziemann, Mark, Yotam Eren, and Assam El-Osta. 2016. <span>“Gene Name Errors Are Widespread in the Scientific Literature.”</span> <em>Genome Biology</em> 17 (1). <a href="https://doi.org/10.1186/s13059-016-1044-7">https://doi.org/10.1186/s13059-016-1044-7</a>.
 </div>
 </div>
 <hr>
@@ -221,7 +364,7 @@
         </div>
       </div>
 <a href="a-very-general-genomics-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="microarray-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

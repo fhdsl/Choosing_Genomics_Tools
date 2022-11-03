@@ -1,9 +1,273 @@
+@website{AlexsLemonade2022,
+  url = {https://github.com/AlexsLemonade/training-modules},
+  title = {Alex's Lemonade Training Modules},
+  authors = {Josh Shapiro, Candace Savonen, Jaclyn Taroni, Chante Bethell},
+  year = {2022},
+}
+
+@article{Aljanahi2018,
+	title = {An {Introduction} to the {Analysis} of {Single}-{Cell} {RNA}-{Sequencing} {Data}},
+	volume = {10},
+	issn = {23290501},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S2329050118300664},
+	doi = {10.1016/j.omtm.2018.07.003},
+	language = {en},
+	urldate = {2022-10-05},
+	journal = {Molecular Therapy - Methods \& Clinical Development},
+	author = {AlJanahi, Aisha A. and Danielsen, Mark and Dunbar, Cynthia E.},
+	month = sep,
+	year = {2018},
+	pages = {189--196},
+}
+
+@article{Amezquita2020,
+	title = {Orchestrating single-cell analysis with {Bioconductor}},
+	volume = {17},
+	copyright = {2019 Springer Nature America, Inc.},
+	issn = {1548-7105},
+	url = {https://www.nature.com/articles/s41592-019-0654-x},
+	doi = {10.1038/s41592-019-0654-x},
+	abstract = {Recent technological advancements have enabled the profiling of a large number of genome-wide features in individual cells. However, single-cell data present unique challenges that require the development of specialized methods and software infrastructure to successfully derive biological insights. The Bioconductor project has rapidly grown to meet these demands, hosting community-developed open-source software distributed as R packages. Featuring state-of-the-art computational methods, standardized data infrastructure and interactive data visualization tools, we present an overview and online book (https://osca.bioconductor.org) of single-cell methods for prospective users.},
+	language = {en},
+	number = {2},
+	urldate = {2022-10-05},
+	journal = {Nature Methods},
+	author = {Amezquita, Robert A. and Lun, Aaron T. L. and Becht, Etienne and Carey, Vince J. and Carpp, Lindsay N. and Geistlinger, Ludwig and Marini, Federico and Rue-Albrecht, Kevin and Risso, Davide and Soneson, Charlotte and Waldron, Levi and Pagès, Hervé and Smith, Mike L. and Huber, Wolfgang and Morgan, Martin and Gottardo, Raphael and Hicks, Stephanie C.},
+	month = feb,
+	year = {2020},
+	keywords = {Genomic analysis, Software},
+	pages = {137--145},
+}
+
+@article{Angerer2017,
+	title = {Single cells make big data: {New} challenges and opportunities in transcriptomics},
+	volume = {4},
+	issn = {24523100},
+	shorttitle = {Single cells make big data},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S245231001730077X},
+	doi = {10.1016/j.coisb.2017.07.004},
+	language = {en},
+	urldate = {2022-10-05},
+	journal = {Current Opinion in Systems Biology},
+	author = {Angerer, Philipp and Simon, Lukas and Tritschler, Sophie and Wolf, F. Alexander and Fischer, David and Theis, Fabian J.},
+	month = aug,
+	year = {2017},
+	pages = {85--91},
+}
+
+@article{BaranGale2018,
+	title = {Experimental design for single-cell {RNA} sequencing},
+	volume = {17},
+	issn = {2041-2649, 2041-2657},
+	url = {https://academic.oup.com/bfg/article/17/4/233/4604806},
+	doi = {10.1093/bfgp/elx035},
+	language = {en},
+	number = {4},
+	urldate = {2022-10-05},
+	journal = {Briefings in Functional Genomics},
+	author = {Baran-Gale, Jeanette and Chandra, Tamir and Kirschner, Kristina},
+	month = jul,
+	year = {2018},
+	pages = {233--239},
+}
+
+@article{Booth2013,
+  doi = {10.1038/nprot.2013.115},
+  url = {https://doi.org/10.1038/nprot.2013.115},
+  year = {2013},
+  month = sep,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {8},
+  number = {10},
+  pages = {1841--1851},
+  author = {Michael J Booth and Tobias W B Ost and Dario Beraldi and Neil M Bell and Miguel R Branco and Wolf Reik and Shankar Balasubramanian},
+  title = {Oxidative bisulfite sequencing of 5-methylcytosine and 5-hydroxymethylcytosine},
+  journal = {Nature Protocols}
+}
+
+@misc{Bruning2021,
+	title = {Comparative {Analysis} of common alignment tools for single cell {RNA} sequencing},
+	copyright = {© 2021, Posted by Cold Spring Harbor Laboratory. The copyright holder for this pre-print is the author. All rights reserved. The material may not be redistributed, re-used or adapted without the author's permission.},
+	url = {https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2},
+	doi = {10.1101/2021.02.15.430948},
+	abstract = {With the rise of single cell RNA sequencing new bioinformatic tools became available to handle specific demands, such as quantifying unique molecular identifiers and correcting cell barcodes. Here, we analysed several datasets with the most common alignment tools for scRNA-seq data. We evaluated differences in the whitelisting, gene quantification, overall performance and potential variations in clustering or detection of differentially expressed genes.
+We compared the tools Cell Ranger 5, STARsolo, Kallisto and Alevin on three published datasets for human and mouse, sequenced with different versions of the 10X sequencing protocol.
+Striking differences have been observed in the overall runtime of the mappers. Besides that Kallisto and Alevin showed variances in the number of valid cells and detected genes per cell. Kallisto reported the highest number of cells, however, we observed an overrepresentation of cells with low gene content and unknown celtype. Conversely, Alevin rarely reported such low content cells.
+Further variations were detected in the set of expressed genes. While STARsolo, Cell Ranger 5 and Alevin released similar gene sets, Kallisto detected additional genes from the Vmn and Olfr gene family, which are likely mapping artifacts. We also observed differences in the mitochondrial content of the resulting cells when comparing a prefiltered annotation set to the full annotation set that includes pseudogenes and other biotypes.
+Overall, this study provides a detailed comparison of common scRNA-seq mappers and shows their specific properties on 10X Genomics data.
+Key messagesMapping and gene quantifications are the most resource and time intensive steps during the analysis of scRNA-Seq data.The usage of alternative alignment tools reduces the time for analysing scRNA-Seq data.Different mapping strategies influence key properties of scRNA-SEQ e.g. total cell counts or genes per cellA better understanding of advantages and disadvantages for each mapping algorithm might improve analysis results.},
+	language = {en},
+	urldate = {2022-10-05},
+	publisher = {bioRxiv},
+	author = {Brüning, Ralf Schulze and Tombor, Lukas and Schulz, Marcel H. and Dimmeler, Stefanie and John, David},
+	month = mar,
+	year = {2021},
+}
+
+@article{Conesa2016,
+  doi = {10.1186/s13059-016-0881-8},
+  url = {https://doi.org/10.1186/s13059-016-0881-8},
+  year = {2016},
+  month = jan,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {17},
+  number = {1},
+  author = {Ana Conesa and Pedro Madrigal and Sonia Tarazona and David Gomez-Cabrero and Alejandra Cervera and Andrew McPherson and Micha{\l} Wojciech Szcze{\'{s}}niak and Daniel J. Gaffney and Laura L. Elo and Xuegong Zhang and Ali Mortazavi},
+  title = {A survey of best practices for {RNA}-seq data analysis},
+  journal = {Genome Biology}
+}
+
+@article{Chen2018,
+  doi = {10.1146/annurev-biodatasci-080917-013452},
+  url = {https://doi.org/10.1146/annurev-biodatasci-080917-013452},
+  year = {2018},
+  month = jul,
+  publisher = {Annual Reviews},
+  volume = {1},
+  number = {1},
+  pages = {29--51},
+  author = {Xi Chen and Sarah A. Teichmann and Kerstin B. Meyer},
+  title = {From Tissues to Cell Types and Back: Single-Cell Gene Expression Analysis of Tissue Architecture},
+  journal = {Annual Review of Biomedical Data Science}
+}
+
+@article{Ding2020,
+  doi = {10.1038/s41587-020-0465-8},
+  url = {https://doi.org/10.1038/s41587-020-0465-8},
+  year = {2020},
+  month = apr,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {38},
+  number = {6},
+  pages = {737--746},
+  author = {Jiarui Ding and Xian Adiconis and Sean K. Simmons and Monika S. Kowalczyk and Cynthia C. Hession and Nemanja D. Marjanovic and Travis K. Hughes and Marc H. Wadsworth and Tyler Burks and Lan T. Nguyen and John Y. H. Kwon and Boaz Barak and William Ge and Amanda J. Kedaigle and Shaina Carroll and Shuqiang Li and Nir Hacohen and Orit Rozenblatt-Rosen and Alex K. Shalek and Alexandra-Chlo{\'{e}} Villani and Aviv Regev and Joshua Z. Levin},
+  title = {Systematic comparison of single-cell and single-nucleus {RNA}-sequencing methods},
+  journal = {Nature Biotechnology}
+}
+
+@article{Hicks2017,
+  doi = {10.1093/biostatistics/kxx053},
+  url = {https://doi.org/10.1093/biostatistics/kxx053},
+  year = {2017},
+  month = nov,
+  publisher = {Oxford University Press ({OUP})},
+  volume = {19},
+  number = {4},
+  pages = {562--578},
+  author = {Stephanie C Hicks and F William Townes and Mingxiang Teng and Rafael A Irizarry},
+  title = {Missing data and technical variability in single-cell {RNA}-sequencing experiments},
+  journal = {Biostatistics}
+}
+
+@article{Lafzi2018,
+	title = {Tutorial: guidelines for the experimental design of single-cell {RNA} sequencing studies},
+	volume = {13},
+	copyright = {2018 Springer Nature Limited},
+	issn = {1750-2799},
+	shorttitle = {Tutorial},
+	url = {https://www.nature.com/articles/s41596-018-0073-y},
+	doi = {10.1038/s41596-018-0073-y},
+	abstract = {Single-cell RNA sequencing is at the forefront of high-resolution phenotyping experiments for complex samples. Although this methodology requires specialized equipment and expertise, it is now widely applied in research. However, it is challenging to create broadly applicable experimental designs because each experiment requires the user to make informed decisions about sample preparation, RNA sequencing and data analysis. To facilitate this decision-making process, in this tutorial we summarize current methodological and analytical options, and discuss their suitability for a range of research scenarios. Specifically, we provide information about best practices for the separation of individual cells and provide an overview of current single-cell capture methods at different cellular resolutions and scales. Methods for the preparation of RNA sequencing libraries vary profoundly across applications, and we discuss features important for an informed selection process. An erroneous or biased analysis can lead to misinterpretations or obscure biologically important information. We provide a guide to the major data processing steps and options for meaningful data interpretation. These guidelines will serve as a reference to support users in building a single-cell experimental framework—from sample preparation to data interpretation—that is tailored to the underlying research context.},
+	language = {en},
+	number = {12},
+	urldate = {2022-10-05},
+	journal = {Nature Protocols},
+	author = {Lafzi, Atefeh and Moutinho, Catia and Picelli, Simone and Heyn, Holger},
+	month = dec,
+	year = {2018},
+	keywords = {Gene expression, RNA sequencing},
+	pages = {2742--2757},
+}
+
+@article{Luecken2019,
+	title = {Current best practices in single‐cell {RNA}‐seq analysis: a tutorial},
+	volume = {15},
+	issn = {1744-4292, 1744-4292},
+	shorttitle = {Current best practices in single‐cell {RNA}‐seq analysis},
+	url = {https://onlinelibrary.wiley.com/doi/10.15252/msb.20188746},
+	doi = {10.15252/msb.20188746},
+	language = {en},
+	number = {6},
+	urldate = {2022-10-05},
+	journal = {Molecular Systems Biology},
+	author = {Luecken, Malte D and Theis, Fabian J},
+	month = jun,
+	year = {2019},
+}
+
+@article{Mantione2014,
+  author  = {Mantione, K. J.  and Kream, R. M.  and Kuzelova, H.  and Ptacek, R.  and Raboch, J.  and Samuel, J. M.  and Stefano, G. B. },
+  title   = {Comparing bioinformatic gene expression profiling methods: microarray and {RNA-Seq}},
+  journal = {Medical Science Monitor Basic Research},
+  year    = {2014},
+  volume  = {20},
+  pages   = {138--142},
+  month   = {Aug},
+  doi     = {10.12659/MSMBR.892101},
+  url     = {https://pubmed.ncbi.nlm.nih.gov/25149683/}
+}
+
+@article{Rao2019,
+  doi = {10.3389/fgene.2018.00636},
+  url = {https://doi.org/10.3389/fgene.2018.00636},
+  year = {2019},
+  month = jan,
+  publisher = {Frontiers Media {SA}},
+  volume = {9},
+  author = {Mohan S. Rao and Terry R. Van Vleet and Rita Ciurlionis and Wayne R. Buck and Scott W. Mittelstadt and Eric A. G. Blomme and Michael J. Liguori},
+  title = {Comparison of {RNA}-Seq and Microarray Gene Expression Platforms for the Toxicogenomic Evaluation of Liver From Short-Term Rat Toxicity Studies},
+  journal = {Frontiers in Genetics}
+}
+
+@website{refinebioexamples2019,
+  year = {2019},
+  title = {Introduction to Microarray Data},
+  url = {https://alexslemonade.github.io/refinebio-examples/02-microarray/00-intro-to-microarray.html},
+  author = {CCDL for ALSF},
+}
+
 @Manual{rmarkdown2021,
   title = {rmarkdown: Dynamic Documents for R},
   author = {JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone},
   year = {2021},
   note = {R package version 2.10},
   url = {https://github.com/rstudio/rmarkdown},
+}
+
+@article{Svensson2017,
+  doi = {10.1038/nmeth.4220},
+  url = {https://doi.org/10.1038/nmeth.4220},
+  year = {2017},
+  month = mar,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {14},
+  number = {4},
+  pages = {381--387},
+  author = {Valentine Svensson and Kedar Nath Natarajan and Lam-Ha Ly and Ricardo J Miragaia and Charlotte Labalette and Iain C Macaulay and Ana Cvejic and Sarah A Teichmann},
+  title = {Power analysis of single-cell {RNA}-sequencing experiments},
+  journal = {Nature Methods}
+}
+
+@website{Smith2015,
+  url = {https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/},
+  author = {Tom Smith},
+  year = {2015},
+  month = {August},
+  title = {Unique Molecular Identifiers – the problem, the solution and the proof},
+  journal = {CGAT},
+}
+
+@article{Tarca2006,
+  author  = {Tarca, A. L.  and Romero, R.  and Draghici, S. },
+  title   = {Analysis of microarray experiments of gene expression profiling},
+  journal = {American Journal of Obstetrics and Gynecology},
+  year    = {2006},
+  volume  = {195},
+  number  = {2},
+  pages   = {373--388},
+  month   = {Aug},
+  doi     = {10.1016/j.ajog.2006.07.001},
+  url     = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/}
 }
 
 @Book{Xie2018,
@@ -26,6 +290,19 @@
   url = {https://bookdown.org/yihui/rmarkdown-cookbook},
 }
 
+@article{Zhang2015,
+  doi = {10.1186/s13059-015-0694-1},
+  url = {https://doi.org/10.1186/s13059-015-0694-1},
+  year = {2015},
+  month = jun,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {16},
+  number = {1},
+  author = {Wenqian Zhang and Ying Yu and Falk Hertwig and Jean Thierry-Mieg and Wenwei Zhang and Danielle Thierry-Mieg and Jian Wang and Cesare Furlanello and Viswanath Devanarayan and Jie Cheng and Youping Deng and Barbara Hero and Huixiao Hong and Meiwen Jia and Li Li and Simon M Lin and Yuri Nikolsky and Andr{\'{e}} Oberthuer and Tao Qing and Zhenqiang Su and Ruth Volland and Charles Wang and May D. Wang and Junmei Ai and Davide Albanese and Shahab Asgharzadeh and Smadar Avigad and Wenjun Bao and Marina Bessarabova and Murray H. Brilliant and Benedikt Brors and Marco Chierici and Tzu-Ming Chu and Jibin Zhang and Richard G. Grundy and Min Max He and Scott Hebbring and Howard L. Kaufman and Samir Lababidi and Lee J. Lancashire and Yan Li and Xin X. Lu and Heng Luo and Xiwen Ma and Baitang Ning and Rosa Noguera and Martin Peifer and John H. Phan and Frederik Roels and Carolina Rosswog and Susan Shao and Jie Shen and Jessica Theissen and Gian Paolo Tonini and Jo Vandesompele and Po-Yen Wu and Wenzhong Xiao and Joshua Xu and Weihong Xu and Jiekun Xuan and Yong Yang and Zhan Ye and Zirui Dong and Ke K. Zhang and Ye Yin and Chen Zhao and Yuanting Zheng and Russell D. Wolfinger and Tieliu Shi and Linda H. Malkas and Frank Berthold and Jun Wang and Weida Tong and Leming Shi and Zhiyu Peng and Matthias Fischer},
+  title = {Comparison of {RNA}-seq and microarray-based models for clinical endpoint prediction},
+  journal = {Genome Biology}
+}
+
 @article{Ziemann2016,
   doi = {10.1186/s13059-016-1044-7},
   url = {https://doi.org/10.1186/s13059-016-1044-7},
@@ -37,4 +314,36 @@
   author = {Mark Ziemann and Yotam Eren and Assam El-Osta},
   title = {Gene name errors are widespread in the scientific literature},
   journal = {Genome Biology}
+}
+
+@article{Ziegenhain2017,
+	title = {Comparative {Analysis} of {Single}-{Cell} {RNA} {Sequencing} {Methods}},
+	volume = {65},
+	issn = {10972765},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1097276517300497},
+	doi = {10.1016/j.molcel.2017.01.023},
+	language = {en},
+	number = {4},
+	urldate = {2022-10-05},
+	journal = {Molecular Cell},
+	author = {Ziegenhain, Christoph and Vieth, Beate and Parekh, Swati and Reinius, Björn and Guillaumet-Adkins, Amy and Smets, Martha and Leonhardt, Heinrich and Heyn, Holger and Hellmann, Ines and Enard, Wolfgang},
+	month = feb,
+	year = {2017},
+	pages = {631--643.e4},
+}
+
+@article{Zhang2019,
+	title = {Comparative {Analysis} of {Droplet}-{Based} {Ultra}-{High}-{Throughput} {Single}-{Cell} {RNA}-{Seq} {Systems}},
+	volume = {73},
+	issn = {10972765},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1097276518308803},
+	doi = {10.1016/j.molcel.2018.10.020},
+	language = {en},
+	number = {1},
+	urldate = {2022-10-05},
+	journal = {Molecular Cell},
+	author = {Zhang, Xiannian and Li, Tianqi and Liu, Feng and Chen, Yaqi and Yao, Jiacheng and Li, Zeyao and Huang, Yanyi and Wang, Jianbin},
+	month = jan,
+	year = {2019},
+	pages = {130--142.e5},
 }

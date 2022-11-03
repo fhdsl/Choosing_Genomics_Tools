@@ -1,0 +1,16 @@
+bookdown::gitbook:
+  css: assets/style.css
+  includes:
+    before_body: assets/big-image_fhdasl.html
+    after_body: assets/footer.html
+  highlight: tango
+  config:
+    toc:
+      collapse: section
+      before: |
+       <a href="https://hutchdatascience.org/" target="_blank"><img src="assets/FHDaSL_SQ-funfetti.png" style="width: 80%; padding-left: 15px; padding-top: 8px;"</a>
+      after: |
+       <p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+       <p style="text-align:center;"> <a href="http://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+       <a href="http://hutchdatascience.org/"><img src="https://hutchdatascience.org/images/FHDataScienceLab_Rec_funfetti.png" style=" width: 80%; padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+       <p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
