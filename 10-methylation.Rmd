@@ -17,16 +17,27 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```{r, fig.alt = "",out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g14492c87338_0_10")
 ```
-## Methlyation data **strengths**  
-
-
-## Methlyation data **limitations**  
-
-
-## Methlyation data workflow
-
 
 ## Methylation data considerations
 
+### Methylation data is binomially distributed
 
-## Methylation analysis tools
+### Measuring 5mC and/or 5hmC
+
+## Methlyation data workflow
+
+```{r, fig.alt = "In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. ",out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g17e24e1c00a_0_5")
+```
+
+Like other sequencing methods, you will first need to start by quality control checks. Next, you will also need to align your sequences to the genome. Then, using the base calls, you will need to make methylation calls -- which are methylated and which are not. This details of step depends on whether you are measuring 5mC and/or 5hmC methylation calls. Lastly, you will likely want to use your methylation calls as a whole to identify differentially methylated regions of interest. 
+
+## Methylation tools!
+
+### Quality control
+
+### Genome Alignment
+
+### Methylation calls
+
+### Find regions of interest!
