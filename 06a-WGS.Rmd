@@ -108,12 +108,12 @@ Here are the tools frequently used to visualize the output data from the above t
 ## Resources for WGS
 
 Online tutorials:
-[Galaxy tutorials](https://training.galaxyproject.org/training-material/topics/sequence-analysis/) 
-[NCI resources](https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing)
-[Bioinformaticsdotca tutorial](https://bioinformaticsdotca.github.io/CAN_2021_module4_lab)
+- [Galaxy tutorials](https://training.galaxyproject.org/training-material/topics/sequence-analysis/) 
+- [NCI resources](https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing)
+- [Bioinformaticsdotca tutorial](https://bioinformaticsdotca.github.io/CAN_2021_module4_lab)
 
 Papers comparing analysis tools: 
-[Comparative analysis of WGS pipelines to minimize false negative findings](https://www.nature.com/articles/s41598-019-39108-2)
-[Quality control and integration of genotypes from two calling pipelines for whole genome sequence data in the Alzheimer's disease sequencing project](https://pubmed.ncbi.nlm.nih.gov/29857119/) 
-[Comprehensive fundamental somatic variant calling and quality management strategies for human cancer genomes](https://pubmed.ncbi.nlm.nih.gov/32510555/) 
+- [Comparative analysis of WGS pipelines to minimize false negative findings](https://www.nature.com/articles/s41598-019-39108-2)
+- [Quality control and integration of genotypes from two calling pipelines for whole genome sequence data in the Alzheimer's disease sequencing project](https://pubmed.ncbi.nlm.nih.gov/29857119/) 
+- [Comprehensive fundamental somatic variant calling and quality management strategies for human cancer genomes](https://pubmed.ncbi.nlm.nih.gov/32510555/) 
 
