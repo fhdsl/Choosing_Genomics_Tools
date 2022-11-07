@@ -94,7 +94,7 @@ These tools are used to identify either somatic or germline mutations from a seq
 - [Pindel](https://www.sanger.ac.uk/tool/pindel/) Pindel is a tool that uses a pattern growth approach to detect breakpoints of large deletions, medium size insertion/inversion, tandem duplications. 
 - [Lancet](https://github.com/nygenome/lancet) This is a newer variant calling tool that uses colored de Bruijn graphs to jointly analyze tumor and normal pairs, offering strong indel detection. More information about the processes used in this variant calling tool can be found [here](https://www.nature.com/articles/s42003-018-0023-9)   
 
-Researchers may want to create a consensus file based on the mutation calls using multiple tools above. [OpenPBTA-analysis](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers) is a tool that can be used for this purpose. It takes MAF files generated from the above mutation callers and identifies the overlapping hits. 
+Researchers may want to create a consensus file based on the mutation calls using multiple tools above. [OpenPBTA-analysis](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers) shows an open source code example of how you might compare and contrast different SNV caller's results. 
 
 ## Tools for variant calling annotation  
 These are beneficial for providing functional meaning to the mutational hits identified above.  
