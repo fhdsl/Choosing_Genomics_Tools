@@ -167,7 +167,7 @@ For the most common microarray platforms, you can see these examples for how to 
 - [Using Bioconductor for Microarray Analysis](https://www.bioconductor.org/packages/devel/workflows/vignettes/arrays/inst/doc/arrays.html).
 
 #### Gene Expression Arrays
-- [An end to end workflow for differential gene expression using Affymetrix microarrays](https://bioconductor.org/packages/devel/workflows/vignettes/maEndToEnd/inst/doc/MA-Workflow.html).
+- [An end to end workflow for differential gene expression using Affymetrix microarrays](https://bioconductor.org/packages/release/workflows/vignettes/maEndToEnd/inst/doc/MA-Workflow.html).
 
 #### DNA Methylation Arrays
 - [DNA Methylation array workflow](https://nbis-workshop-epigenomics.readthedocs.io/en/latest/content/tutorials/methylationArray/Array_Tutorial.html).

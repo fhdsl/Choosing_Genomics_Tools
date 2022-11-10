@@ -27,7 +27,7 @@ At the end of this process, base sequences are called for the samples (with vary
 
 ### Inherent biases
 
-![](resources/images/05-sequencing-data_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_45.png){width=100%}
+![](resources/images/05-sequencing-data_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png){width=100%}
 
 Sequences are not all sequenced or amplified at the same rate. In a perfect world, we could take a simple snapshot of the genome we are interested in and know exactly what and how many sequences were in a sample. But in reality, sequencing methods and the resulting data always have some biases we have to be aware of and hopefully use methods that attempt to mitigate the biases.
 
