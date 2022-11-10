@@ -1,0 +1,10 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# Annotating Genomes
+
+## Learning Objectives
+
+## More resources
