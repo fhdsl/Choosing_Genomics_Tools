@@ -15,6 +15,8 @@ rmd_files: ["index.Rmd",
             "08-ATAC-Seq.Rmd",
             "09-ChIP-Seq.Rmd",
             "10-methylation.Rmd",
+            "11-general-data-analysis-tools.Rmd",
+            "12-annotating-genomes.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
