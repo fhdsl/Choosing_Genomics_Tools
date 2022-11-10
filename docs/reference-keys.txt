@@ -146,7 +146,7 @@ what-are-the-goals-of-analyzing-dna-methylation
 methylation-vs-hydroxymethylation
 bisulfiteoxidative-bisulfite-sequencing
 methylation-microarrays
-general-data-anlysis-tools
+general-data-analysis-tools
 learning-objectives-11
 command-line-vs-gui
 bash
@@ -154,3 +154,6 @@ r
 python
 data-visualization-tools
 more-resources
+annotating-genomes
+learning-objectives-12
+more-resources-1
