@@ -66,18 +66,26 @@ Like other sequencing methods, you will first need to start by quality control c
 ## Methylation tools!
 
 ### Quality control
+TODO: How should this be the same or different from general sequencing quality control checks?
 - [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
 ### Genome Alignment
-
+TODO: How should this be the same or different from general sequencing alignment?
 
 ### Methylation calls
+TODO: What other packages/tools should be mentioned here?
 
 - [MethylKit](https://bioconductor.org/packages/release/bioc/html/methylKit.html) - https://compgenomr.github.io/book/data-filtering-and-exploratory-analysis.html
+
 ### Find regions of interest!
 
 https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html
 
 ### Annotation of regions of interest
+TODO: How does this differ from annotating genomic regions in general? 
 
-### Data visualization
+## More resources
+
+- [DNA methylation analysis with Galaxy tutorial](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/methylation-seq/tutorial.html)
+- [The mint pipeline](https://github.com/sartorlab/mint/blob/master/README.md) for analyzing methylation and hydroxymethylation data.
+- [Book chapter about finding methylation regions of interest](https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html)
