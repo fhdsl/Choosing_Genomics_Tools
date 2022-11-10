@@ -1,4 +1,10 @@
+bustools
+duplets
+OxBS
+oxBS
+scater
 al
+MethylKit
 Alevin
 AlevinQC
 amongst
