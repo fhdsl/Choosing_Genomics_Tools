@@ -38,6 +38,11 @@ Alternatively, WES is a more cost effective way to study the genome, focusing ju
 
 In targeted gene sequencing, a panel of 50-500 regions of interest are selected. This technique is very applicable for studying a set of specific genes of interest at great depth to identify all varieties of mutations within those specific genes. These genes must be sequenced at much greater depth (>500x) to confidently identify all meaningful variants. [This page from Illumina](https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/coverage.html) also provides information regarding sequencing depth considerations for different modalities. 
 
+Additional references: 
+WGS: Bentley, D. R. et al. Accurate whole human genome sequencing using reversible terminator chemistry. Nature 456, 53–59 (2008).
+WES: Clark, M. J. et al. Performance comparison of exome DNA sequencing technologies. Nature Biotech. 29, 908–914 (2011).
+Targeted: Bewicke-Copley F et al. Applications and analysis of targeted genomic sequencing in cancer studies. Comput Struct Biotechnol J. 2019;17:1348-59.
+
 
 ## WGS Considerations
 
