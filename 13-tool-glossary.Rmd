@@ -44,7 +44,7 @@ Bioconductor uses the R statistical programming language, and is open source and
 
 ## Xena
 
-UCSC Xena (http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations.
+[UCSC Xena](http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations.
 
 Xena showcases seminal cancer genomics datasets from TCGA, the Pan-Cancer Atlas, GDC, PCAWG, ICGC, and more; a total of more than 1500 datasets across 50 cancer types. We support virtually any type of functional genomics data (sometimes known as level 3 or 4 data). This includes SNPs, INDELs, copy number variation, gene expression, ATAC-seq, DNA methylation, exon-, transcript-, miRNA-, lncRNA-expression and structural variants. We also support clinical data such as phenotype information, subtype classifications and biomarkers. All of our data is available for download via python or R APIs, or through our URL links.
 

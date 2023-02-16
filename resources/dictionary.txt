@@ -238,6 +238,8 @@ GDC
 genetrack
 GenomicRanges
 Hs
+downloader
+CDS
 Hs
 ICGC
 INDELs
@@ -254,3 +256,8 @@ TCGA
 UCSC
 UCSCGenomeBrowser
 Xena
+walkthrough
+README
+ncRNA
+ENA
+cDNA
