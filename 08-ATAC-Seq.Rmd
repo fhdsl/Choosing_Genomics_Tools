@@ -26,19 +26,25 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means. Transcription factor binding motif enrichment or transcription factor ChIP-seq peaks enriched accessible chromatin regions.
 
-Data quality metrics:
+###Data quality metrics:
 
-Number of mapped reads: as for all DNA-sequencing based genomics technologies, a sufficient number of mapped reads is required to obtain meaningful results from a sample. For experiments on human samples this number should be greater than 20 million mapped unique reads.
+#### Number of mapped reads
+As for all DNA-sequencing based genomics technologies, a sufficient number of mapped reads is required to obtain meaningful results from a sample. You can read more about [general sequencing technologies in our previous chapter here](http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html). For experiments on human samples this number should be greater than 20 million mapped unique reads.
 
-Fragment size distribution: ATAC-seq data is often generated using paired end sequencing technologies, which allow for characterization of ATAC-seq fragments. Histograms of these distributions using single base pair resolution bins reveal patterns of enrichment relative to the nucleosome scale of 147bp and the DNA-helix scale ~10.5bp.
+#### Fragment size distribution:
+ATAC-seq data is often generated using paired end sequencing technologies, which allow for characterization of ATAC-seq fragments. Histograms of these distributions using single base pair resolution bins reveal patterns of enrichment relative to the nucleosome scale of 147bp and the DNA-helix scale ~10.5bp.
 
-Number of peaks: although the number of accessible chromatin regions can vary from one cell type to another, there are several regions that appear to be constitutively accessible across a most cell types. At least 20,000 peaks can be identified in a high quality experiment.
+#### Number of peaks:
+Although the number of accessible chromatin regions can vary from one cell type to another, there are several regions that appear to be constitutively accessible across a most cell types. At least 20,000 peaks can be identified in a high quality experiment.
 
-FRiP score (fraction of reads in peaks): In high quality ATAC-seq data a large fraction of reads overlap with peaks, while in low quality data there is a high level of fragments that map to background regions.
+#### FRiP score (fraction of reads in peaks)
+In high quality ATAC-seq data a large fraction of reads overlap with peaks, while in low quality data there is a high level of fragments that map to background regions.
 
-Overlap with other chromatin accessibility data: Thousands of ATAC-seq samples have been produced in human and mouse. High quality ATAC-seq data will share a substantial proportion of peaks with many of these datasets.
+#### Overlap with other chromatin accessibility data
+Thousands of ATAC-seq samples have been produced in human and mouse. High quality ATAC-seq data will share a substantial proportion of peaks with many of these datasets.
 
-Overlap with promoters: The promoter regions of many genes are constitutively accessible. Examining peak overlap with regions close to known protein coding gene transcription start sites can be used as a check for data quality.
+#### Overlap with promoters
+The promoter regions of many genes are constitutively accessible. Examining peak overlap with regions close to known protein coding gene transcription start sites can be used as a check for data quality.
 
 ## ATAC-Seq data **strengths**:
 

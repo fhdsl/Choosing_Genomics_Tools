@@ -1,9 +1,14 @@
 amplicon
 amplicons
 Amplicon
-amplificationBewicke
+amplification
+Bewicke
 Biotechnol
+bp
+cis
+constitutively
 Comput
+Cistrome
 exome
 Struct
 aberrantly
@@ -21,6 +26,10 @@ CNV
 CNVs
 dbSNP
 duplications
+DNase
+endonuclease
+footprinting
+FRiP
 FFPE
 GATK
 GENCODE
@@ -38,6 +47,10 @@ MuSE
 Mutect
 nonaberrant
 normals
+nuclease
+nucelosomal
+nucleosomes
+reframing
 OpenPBTA
 Picard
 Pindel
