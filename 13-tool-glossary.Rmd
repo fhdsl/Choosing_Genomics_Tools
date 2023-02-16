@@ -53,7 +53,7 @@ The Trinity Cancer Transcriptome Analysis Toolkit (CTAT, https://github.com/NCIP
 Under development since 2014, the DeepPhe suite of software tools aims to extract deep phenotype information from the Electronic Medical Records from patients with cancer. DeepPhe combines:
 
 1) multiple natural language processing (NLP) techniques based on cTAKES,1  
-2) a structured cancer information model2 including concepts from the NCIT thesuarus3and the HemOnc ontology,4   
+2) a structured cancer information model including concepts from the NCIT and the HemOnc ontology 
 3) a graph data model supporting persistence of extracted details including links between patient data enabling semantically informed interpretation, aggregation, and disaggregation of key attributes,  
 4) visual analytics tools supporting patient- and cohort-level displays of extracted data5 including identification of patients matching key research criteria and the examination of individual patient records such as exploration of links  between summary items and supporting text mentions, and   
 5) multiple strategies for use, including containerized REST services and GUIs for installation and pipeline execution.  
