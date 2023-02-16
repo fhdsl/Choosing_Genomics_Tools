@@ -17,6 +17,7 @@ rmd_files: ["index.Rmd",
             "10-methylation.Rmd",
             "11-general-data-analysis-tools.Rmd",
             "12-annotating-genomes.Rmd",
+            "13-tool-glossary.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
