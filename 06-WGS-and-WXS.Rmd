@@ -24,6 +24,10 @@ Thus, whole genome sequencing is a technique to analyze the entire DNA sequence 
 
 Alternatively whole exome sequencing is used to sequence only coding regions of an organism's genome. Coding regions can be a useful area of the genome to focus sequencing methods on, since changes in a protein coding sequence of the genome generally have more information known about them. Often protein coding sequences can have potentially functional changes whose downstream effects could be estimated - like if a stop codon is introduced or a codon is changed to a different predictable amino acid. This can more easily lead to downstream investigations on the functional implications of the protein affected.   
 
+<div class = "warning">
+At this time it's important to note that if you work with human data or samples, your DNA sequencing datasets will likely contain personal identifiable information (PII) and protected health information (PHI). It's critical that you protect this information! For more details on this, we encourage you to see our [course about data management](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html).
+</div>
+
 ## Advantages and Disadvantages of WGS vs WXS
 
 ```{r, fig.alt = "Advantages and Disadvantages of WGS as opposed to WXS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage, allows for discovery - identify causative variants; Disadvantages include higher cost and more resources for storing and analyzing data", out.width = "100%", echo = FALSE}

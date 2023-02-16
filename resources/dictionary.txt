@@ -32,6 +32,7 @@ footprinting
 FRiP
 FFPE
 GATK
+GATK4
 GENCODE
 germline
 gGNV
