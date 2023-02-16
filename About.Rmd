@@ -11,7 +11,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)|[Carrie Wright] [Claire Mills] - Whole Genome Sequencing [Cliff Meyers] - ATAC-seq|
+|Content Contributor(s)|[Carrie Wright] [Claire Mills] - Whole Genome Sequencing [Cliff Meyer] - ATAC-seq|
 |Content Directors|[Jeff Leek]|
 |Content Consultants|[Carrie Wright]|
 |Acknowledgments||
@@ -43,8 +43,8 @@ devtools::session_info()
 
 [Candace Savonen]: https://www.cansavvy.com/
 [Carrie Wright]: https://carriewright11.github.io/
-[Claire Mills]:
-[Cliff Meyers]:
+[Claire Mills]: https://www.linkedin.com/in/claire-mills-dds-50883553
+[Cliff Meyer]: https://ds.dfci.harvard.edu/our-people/clifford-meyer-phd/
 [Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding
 [Jeff Leek]: https://jtleek.com/
 [John Muschelli]: https://johnmuschelli.com/
