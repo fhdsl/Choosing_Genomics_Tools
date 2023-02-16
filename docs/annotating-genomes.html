@@ -305,9 +305,24 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="15.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#learning-objectives-13"><i class="fa fa-check"></i><b>15.1</b> Learning Objectives</a></li>
 <li class="chapter" data-level="15.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-reference-genomes"><i class="fa fa-check"></i><b>15.2</b> What are reference genomes?</a></li>
-<li class="chapter" data-level="15.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#gui-based-tools"><i class="fa fa-check"></i><b>15.3</b> GUI based tools</a></li>
-<li class="chapter" data-level="15.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#command-line-based-tools"><i class="fa fa-check"></i><b>15.4</b> Command line based tools</a></li>
-<li class="chapter" data-level="15.5" data-path="annotating-genomes.html"><a href="annotating-genomes.html#more-resources-2"><i class="fa fa-check"></i><b>15.5</b> More resources</a></li>
+<li class="chapter" data-level="15.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-genome-versions"><i class="fa fa-check"></i><b>15.3</b> What are genome versions?</a></li>
+<li class="chapter" data-level="15.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-the-different-files"><i class="fa fa-check"></i><b>15.4</b> What are the different files?</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#how-to-download-annotation-files"><i class="fa fa-check"></i><b>15.4.1</b> How to download annotation files</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="annotating-genomes.html"><a href="annotating-genomes.html#considerations-for-annotating-genomic-data"><i class="fa fa-check"></i><b>15.5</b> Considerations for annotating genomic data</a>
+<ul>
+<li class="chapter" data-level="15.5.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#make-sure-you-have-the-right-file-to-start"><i class="fa fa-check"></i><b>15.5.1</b> Make sure you have the right file to start!</a></li>
+<li class="chapter" data-level="15.5.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-consistent-in-your-annotations"><i class="fa fa-check"></i><b>15.5.2</b> Be consistent in your annotations</a></li>
+<li class="chapter" data-level="15.5.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-clear-in-your-write-ups"><i class="fa fa-check"></i><b>15.5.3</b> Be clear in your write ups!</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="annotating-genomes.html"><a href="annotating-genomes.html#resources-you-will-need-for-annotation"><i class="fa fa-check"></i><b>15.6</b> Resources you will need for annotation!</a>
+<ul>
+<li class="chapter" data-level="15.6.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#annotation-databases"><i class="fa fa-check"></i><b>15.6.1</b> Annotation databases</a></li>
+<li class="chapter" data-level="15.6.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#gui-based-annotation-tools"><i class="fa fa-check"></i><b>15.6.2</b> GUI based annotation tools</a></li>
+<li class="chapter" data-level="15.6.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#command-line-based-tools"><i class="fa fa-check"></i><b>15.6.3</b> Command line based tools</a></li>
+<li class="chapter" data-level="15.6.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#more-resources-about-genome-annotation"><i class="fa fa-check"></i><b>15.6.4</b> More resources about genome annotation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -350,19 +365,110 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 15</span> Annotating Genomes</h1>
 <div id="learning-objectives-13" class="section level2" number="15.1">
 <h2><span class="header-section-number">15.1</span> Learning Objectives</h2>
+<p><img src="resources/images/12-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png" title="The learning objectives for this chapter are to: Understand the fundamentals of annotating genomic data. Be aware of how reference genomes and their versions affect annotation. Be able to find genomic annotation from the respective databases" alt="The learning objectives for this chapter are to: Understand the fundamentals of annotating genomic data. Be aware of how reference genomes and their versions affect annotation. Be able to find genomic annotation from the respective databases" width="100%" /></p>
+<p>In this chapter, we are going to discuss methods that affect every genomic method and may take up the majority of your time as a genomic data analyst: Annotation.</p>
+<p>We know that the sequencing or array data is not useful on its own – for our human minds to comprehend it and apply it to something we need a tangible piece of information to be attached to it. This is where annotation comes in. At best annotation helps you and others interpret genomic data. At its worst, its a time consuming activity that, done incorrectly, can lead to erroneous conclusions and labeling.</p>
+<p>Proper annotation requires an understanding of how the annotation data you are using was derived as well as the realization that all annotation data is constantly changing and the confidence for these data are never 100%. Some organism’s genomes are better annotated than others but nearly all are at least somewhat incomplete.</p>
 </div>
 <div id="what-are-reference-genomes" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> What are reference genomes?</h2>
+<p>Every individual organism has its own DNA sequence that is unique to it. So how can we compare organisms to each other? In some studies, sequencing data is obtained and the genome is built de novo (aka from scratch) but this takes a lot of time and computing power. So instead, most genomic studies use the imperfect method of comparing to a reference genome. Reference genomes are built from prior data and available online. They inherently have biases in them. For example, human genomes are generally not made from diverse populations but instead from mostly males of european descent. It is inherently bad for both ethical and scientific reasons to to have <a href="https://www.sciencenews.org/article/genetics-race-dna-databases-reference-genome-too-white">genome references that are too white</a>. For more on the problems with reference genomes, <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1774-4">read this</a>.</p>
+<p><img src="resources/images/12-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_45.png" title="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" alt="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" width="100%" /></p>
+<p>In summary, reference genomes are used for comparison and as a ‘source of truth’ of sorts, but its important to note that this method is biased and better alternatives need to be realized.</p>
 </div>
-<div id="gui-based-tools" class="section level2" number="15.3">
-<h2><span class="header-section-number">15.3</span> GUI based tools</h2>
+<div id="what-are-genome-versions" class="section level2" number="15.3">
+<h2><span class="header-section-number">15.3</span> What are genome versions?</h2>
+<p>If you are familiar with software development, or have used any app before, you’re familiar with software updates and releases. Similarly, the genome has updates and releases as continued cloning and assemblies of organisms teaches us more. In the image below we are showing an example of what a genome version may be noted as (note that different databases may have different terminology – here we are showing the Genome Reference Consortium). You may also notice on their website it shows the date the genome version was released and what was fixed.</p>
+<p><img src="resources/images/12-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png" title="Genome assemblies are changed and updated over time much like software packages. " alt="Genome assemblies are changed and updated over time much like software packages. " width="100%" /></p>
+<p>The details of how genome versions are fixed and released are not really of concern for your data analysis. This is merely to explain that genomes change and what is most important in your analysis is that:</p>
+<ol style="list-style-type: decimal">
+<li>You choose one genome version and consistently use it in all your analyses.</li>
+<li>Choose a genome version that the rest of your field has generally had a consensus on and is also using. Generally this means sticking with major releases of a genome instead of always going with the latest version. Most databases will try to point you to their major release, so just stick with that. We will point you where you can find genome annotation for a lot of the major organisms.</li>
+</ol>
 </div>
-<div id="command-line-based-tools" class="section level2" number="15.4">
-<h2><span class="header-section-number">15.4</span> Command line based tools</h2>
+<div id="what-are-the-different-files" class="section level2" number="15.4">
+<h2><span class="header-section-number">15.4</span> What are the different files?</h2>
+<p>Although we can’t walk you through every organism and database set up, we will walkthrough the files and structure of one example here.</p>
+<p><img src="resources/images/12-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png" title="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" alt="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" width="100%" /></p>
+<p>In the above screenshot, <a href="https://useast.ensembl.org/info/data/ftp/index.html">from Ensembl</a>, it shows different organisms in the rows, but also a variety of different files across the columns. In this example, DNA reference to the DNA sequence of the organism’s genome, but cDNA refers to complementary DNA – aka DNA that has been reversed transcribed from RNA. If you are working with RNA data you may want to use the cDNA file. Whereas CDS files are referring to only coding sequences and ncRNA files are showing only non coding sequences. Gene sets are also annotated and are in their own files. Most of these files are FASTA files. For a reminder on what these different file types are <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/a-very-general-genomics-overview.html#basic-file-formats">see the previous chapter</a>.</p>
+<p>Depending on the tool you are using, the data file and type you need will vary. Some tools have these data built in or are compatible with other packages that have annotation. If a tool automatically includes annotation within it, you will need to ensure that any additional tools you are using are also pulling from the same genome and version. Look into a tool’s documentation to find out what genome versions it is based on. If it doesn’t tell you at all, you don’t want to be using that tool. You cannot assume that cross genome analyses will translate.</p>
+<div id="how-to-download-annotation-files" class="section level3" number="15.4.1">
+<h3><span class="header-section-number">15.4.1</span> How to download annotation files</h3>
+<p>For another database example we’ll look at the human data on ENA’s servers. Note that if you see FTP that just means “Fast Transfer Protocol” and it just means its where you can get the files themselves. For more on computing lingo, you can take our <a href="https://www.itcrtraining.org/courses#h.civy2cnri95t">Computing in Cancer Informatics course</a>.</p>
+<p><a href="https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html">There’s many ways you can download these files and they are described here</a>. In summary:
+- If you don’t feel comfortable using command line, <a href="https://www.ebi.ac.uk/ena/browser/home">you can use the browser downloader for ENA here</a>
+- If you are using command line to write a script, then you can write use the <a href="https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html#using-wget"><code>wget</code> or <code>curl</code> instructions described here</a>. Be sure to read the README files to understand what it is you are downloading.</p>
+<p>Also note that if you are working from a high power computing cluster or other online server, these annotation files may already be available to you. You don’t want to take up more computing resources by downloading extra files, so check with an administrator or informatics expert who also uses the cluster or cloud to check if the annotation files already exist in your workspace.</p>
 </div>
-<div id="more-resources-2" class="section level2" number="15.5">
-<h2><span class="header-section-number">15.5</span> More resources</h2>
+</div>
+<div id="considerations-for-annotating-genomic-data" class="section level2" number="15.5">
+<h2><span class="header-section-number">15.5</span> Considerations for annotating genomic data</h2>
+<div id="make-sure-you-have-the-right-file-to-start" class="section level3" number="15.5.1">
+<h3><span class="header-section-number">15.5.1</span> Make sure you have the right file to start!</h3>
+<ol style="list-style-type: decimal">
+<li><p>Is the annotation from the right organism?
+You may think this is a dumb question, but its very critical that you make sure you have the genome annotation for the organism that matches your data. Indeed the author of this has made this mistake in the past, so double check that you are using the correct organism.</p></li>
+<li><p>Are all analyses utilizing coordinates from the same genome/transcriptome version?
+Genome versions are constantly being updated. Files from older genome versions cannot be used with newer ones (without some sort of liftover conversion). This also goes for transcriptome and genome data. All analysis need to be done using the same genomic versions so that is ensured that any chromosomal coordinates can translate between files. For example, it could be in one genome version a particular gene was said to be at chromosome base pairs 300 - 400, but in the next version its now been changed to 305 - 405. This can throw off an analysis if you are not careful. This type of annotation mapping becomes even more complicated when considering different splice variants or non-coding genes or regulatory regions that have even less confidence and annotation about them.</p></li>
+</ol>
+</div>
+<div id="be-consistent-in-your-annotations" class="section level3" number="15.5.2">
+<h3><span class="header-section-number">15.5.2</span> Be consistent in your annotations</h3>
+<ol style="list-style-type: decimal">
+<li><p>If at all possible avoid making cross species analyses - unless you are an evolutionary genomics expert and understand what you are doing. But for most applications cross species analyses are hopeful wishing at best, so stick to one organism.</p></li>
+<li><p>Avoid mixing genome/transcriptome versions. Yes there is liftover annotation data to help you identify what loci are parallel between releases, but its really much simpler to stick with the same version throughout your analyses’ annotations.</p></li>
+</ol>
+</div>
+<div id="be-clear-in-your-write-ups" class="section level3" number="15.5.3">
+<h3><span class="header-section-number">15.5.3</span> Be clear in your write ups!</h3>
+<p>Above all else, not matter what you end up doing, make sure that your steps, what files you use, and what tool versions you use are clear and reproducible! Be sure to clearly link to and state the database files you used and include your code and steps so others can track what you did and reproduce it. For more information on how to create reproducible analyses, you can take our reproducibility in cancer informatics courses: <a href="https://www.itcrtraining.org/courses#h.n5yoq68qj0rz">Introduction to Reproducibility</a> and <a href="https://www.itcrtraining.org/courses#h.i5zyiyjyttr4">Advanced Reproducibility in Cancer Informatics</a>.</p>
+</div>
+</div>
+<div id="resources-you-will-need-for-annotation" class="section level2" number="15.6">
+<h2><span class="header-section-number">15.6</span> Resources you will need for annotation!</h2>
+<div id="annotation-databases" class="section level3" number="15.6.1">
+<h3><span class="header-section-number">15.6.1</span> Annotation databases</h3>
+<ul>
+<li><a href="https://useast.ensembl.org/downloads.html">Ensembl</a></li>
+<li><a href="https://www.ebi.ac.uk/services">EMBL-EBI</a></li>
+<li><a href="https://genome.ucsc.edu/cgi-bin/hgGateway?hgsid=1571980135_Ym6A5aa3nDyOfZKtGishprdrhLDm">UCSCGenomeBrowser</a></li>
+<li><a href="https://ftp.ncbi.nlm.nih.gov/genomes/">NCBI Genomes download page</a></li>
+</ul>
+</div>
+<div id="gui-based-annotation-tools" class="section level3" number="15.6.2">
+<h3><span class="header-section-number">15.6.2</span> GUI based annotation tools</h3>
+<ul>
+<li><a href="https://genome.ucsc.edu/cgi-bin/hgGateway?hgsid=1571980135_Ym6A5aa3nDyOfZKtGishprdrhLDm">UCSCGenomeBrowser</a></li>
+<li><a href="https://software.broadinstitute.org/software/igv/">BROAD’s IGV</a></li>
+<li><a href="https://useast.ensembl.org/info/data/biomart/index.html">Ensembl’s biomart</a></li>
+</ul>
+</div>
+<div id="command-line-based-tools" class="section level3" number="15.6.3">
+<h3><span class="header-section-number">15.6.3</span> Command line based tools</h3>
+<div id="r-based-packages" class="section level4" number="15.6.3.1">
+<h4><span class="header-section-number">15.6.3.1</span> R-based packages:</h4>
+<ul>
+<li><p><a href="https://bioconductor.org/packages/release/bioc/html/annotatr.html">annotatr</a></p></li>
+<li><p><a href="https://bioconductor.org/packages/release/bioc/html/ensembldb.html">ensembldb</a></p></li>
+<li><p><a href="https://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html">GenomicRanges</a> - useful for manipulating and identifying sequences.</p></li>
+<li><p><a href="https://bioconductor.org/packages/3.16/data/annotation/html/GO.db.html">GO.db</a> - Gene ontology annotation</p></li>
+<li><p><a href="https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html">org.Hs.eg.db</a></p></li>
+<li><p><a href="https://www.bioconductor.org/packages/release/bioc/html/Rsamtools.html">RSamtools</a></p></li>
+<li><p><a href="https://bioconductor.org/packages/3.16/data/annotation/">A full list of Bioconductors annotation packages</a> - contains annotation for all kinds of species and versions of genomes and transcriptomes.</p></li>
+</ul>
+</div>
+<div id="python-based-packages" class="section level4" number="15.6.3.2">
+<h4><span class="header-section-number">15.6.3.2</span> Python-based packages:</h4>
+<ul>
+<li><a href="https://biopython.org/">BioPython</a></li>
+<li><a href="https://github.com/ialbert/chipexo">genetrack</a></li>
+</ul>
+</div>
+</div>
+<div id="more-resources-about-genome-annotation" class="section level3" number="15.6.4">
+<h3><span class="header-section-number">15.6.4</span> More resources about genome annotation</h3>
 
+</div>
 </div>
 </div>
 <hr>

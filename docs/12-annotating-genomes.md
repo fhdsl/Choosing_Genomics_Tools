@@ -5,10 +5,104 @@
 
 ## Learning Objectives
 
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png){width=100%}
+
+In this chapter, we are going to discuss methods that affect every genomic method and may take up the majority of your time as a genomic data analyst: Annotation.
+
+We know that the sequencing or array data is not useful on its own -- for our human minds to comprehend it and apply it to something we need a tangible piece of information to be attached to it. This is where annotation comes in. At best annotation helps you and others interpret genomic data. At its worst, its a time consuming activity that, done incorrectly, can lead to erroneous conclusions and labeling.
+
+Proper annotation requires an understanding of how the annotation data you are using was derived as well as the realization that all annotation data is constantly changing and the confidence for these data are never 100%. Some organism's genomes are better annotated than others but nearly all are at least somewhat incomplete.
+
 ## What are reference genomes?
 
-## GUI based tools
+Every individual organism has its own DNA sequence that is unique to it. So how can we compare organisms to each other? In some studies, sequencing data is obtained and the genome is built de novo (aka from scratch) but this takes a lot of time and computing power. So instead, most genomic studies use the imperfect method of comparing to a reference genome. Reference genomes are built from prior data and available online. They inherently have biases in them. For example, human genomes are generally not made from diverse populations but instead from mostly males of european descent. It is inherently bad for both ethical and scientific reasons to to have [genome references that are too white](https://www.sciencenews.org/article/genetics-race-dna-databases-reference-genome-too-white). For more on the problems with reference genomes, [read this](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1774-4).
 
-## Command line based tools
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_45.png){width=100%}
 
-## More resources
+In summary, reference genomes are used for comparison and as a 'source of truth' of sorts, but its important to note that this method is biased and better alternatives need to be realized.
+
+## What are genome versions?
+
+If you are familiar with software development, or have used any app before, you're familiar with software updates and releases. Similarly, the genome has updates and releases as continued cloning and assemblies of organisms teaches us more. In the image below we are showing an example of what a genome version may be noted as (note that different databases may have different terminology -- here we are showing the Genome Reference Consortium). You may also notice on their website it shows the date the genome version was released and what was fixed.
+
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png){width=100%}
+
+The details of how genome versions are fixed and released are not really of concern for your data analysis. This is merely to explain that genomes change and what is most important in your analysis is that:
+
+1. You choose one genome version and consistently use it in all your analyses.
+2. Choose a genome version that the rest of your field has generally had a consensus on and is also using. Generally this means sticking with major releases of a genome instead of always going with the latest version. Most databases will try to point you to their major release, so just stick with that. We will point you where you can find genome annotation for a lot of the major organisms.
+
+## What are the different files?
+
+Although we can't walk you through every organism and database set up, we will walkthrough the files and structure of one example here.
+
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png){width=100%}
+
+In the above screenshot, [from Ensembl](https://useast.ensembl.org/info/data/ftp/index.html), it shows different organisms in the rows, but also a variety of different files across the columns. In this example, DNA reference to the DNA sequence of the organism's genome, but cDNA refers to complementary DNA -- aka DNA that has been reversed transcribed from RNA. If you are working with RNA data you may want to use the cDNA file. Whereas CDS files are referring to only coding sequences and ncRNA files are showing only non coding sequences. Gene sets are also annotated and are in their own files. Most of these files are FASTA files. For a reminder on what these different file types are [see the previous chapter](http://hutchdatascience.org/Choosing_Genomics_Tools/a-very-general-genomics-overview.html#basic-file-formats).
+
+Depending on the tool you are using, the data file and type you need will vary. Some tools have these data built in or are compatible with other packages that have annotation. If a tool automatically includes annotation within it, you will need to ensure that any additional tools you are using are also pulling from the same genome and version. Look into a tool's documentation to find out what genome versions it is based on. If it doesn't tell you at all, you don't want to be using that tool. You cannot assume that cross genome analyses will translate.
+
+### How to download annotation files
+
+For another database example we'll look at the human data on ENA's servers. Note that if you see FTP that just means "Fast Transfer Protocol" and it just means its where you can get the files themselves. For more on computing lingo, you can take our [Computing in Cancer Informatics course](https://www.itcrtraining.org/courses#h.civy2cnri95t).
+
+[There's many ways you can download these files and they are described here](https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html). In summary:
+- If you don't feel comfortable using command line, [you can use the browser downloader for ENA here](https://www.ebi.ac.uk/ena/browser/home)
+- If you are using command line to write a script, then you can write use the [`wget` or `curl` instructions described here](https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html#using-wget). Be sure to read the README files to understand what it is you are downloading.
+
+Also note that if you are working from a high power computing cluster or other online server, these annotation files may already be available to you. You don't want to take up more computing resources by downloading extra files, so check with an administrator or informatics expert who also uses the cluster or cloud to check if the annotation files already exist in your workspace.
+
+## Considerations for annotating genomic data
+
+### Make sure you have the right file to start!
+
+1. Is the annotation from the right organism?
+You may think this is a dumb question, but its very critical that you make sure you have the genome annotation for the organism that matches your data. Indeed the author of this has made this mistake in the past, so double check that you are using the correct organism.
+
+2. Are all analyses utilizing coordinates from the same genome/transcriptome version?
+Genome versions are constantly being updated. Files from older genome versions cannot be used with newer ones (without some sort of liftover conversion). This also goes for transcriptome and genome data. All analysis need to be done using the same genomic versions so that is ensured that any chromosomal coordinates can translate between files. For example, it could be in one genome version a particular gene was said to be at chromosome base pairs 300 - 400, but in the next version its now been changed to 305 - 405. This can throw off an analysis if you are not careful. This type of annotation mapping becomes even more complicated when considering different splice variants or non-coding genes or regulatory regions that have even less confidence and annotation about them.
+
+### Be consistent in your annotations
+
+1. If at all possible avoid making cross species analyses - unless you are an evolutionary genomics expert and understand what you are doing. But for most applications cross species analyses are hopeful wishing at best, so stick to one organism.
+
+2. Avoid mixing genome/transcriptome versions. Yes there is liftover annotation data to help you identify what loci are parallel between releases, but its really much simpler to stick with the same version throughout your analyses' annotations.
+
+### Be clear in your write ups!
+
+Above all else, not matter what you end up doing, make sure that your steps, what files you use, and what tool versions you use are clear and reproducible! Be sure to clearly link to and state the database files you used and include your code and steps so others can track what you did and reproduce it. For more information on how to create reproducible analyses, you can take our reproducibility in cancer informatics courses: [Introduction to Reproducibility](https://www.itcrtraining.org/courses#h.n5yoq68qj0rz) and [Advanced Reproducibility in Cancer Informatics](https://www.itcrtraining.org/courses#h.i5zyiyjyttr4).
+
+## Resources you will need for annotation!
+
+### Annotation databases
+
+- [Ensembl](https://useast.ensembl.org/downloads.html)
+- [EMBL-EBI](https://www.ebi.ac.uk/services)
+- [UCSCGenomeBrowser](https://genome.ucsc.edu/cgi-bin/hgGateway?hgsid=1571980135_Ym6A5aa3nDyOfZKtGishprdrhLDm)
+- [NCBI Genomes download page](https://ftp.ncbi.nlm.nih.gov/genomes/)
+
+### GUI based annotation tools
+
+- [UCSCGenomeBrowser](https://genome.ucsc.edu/cgi-bin/hgGateway?hgsid=1571980135_Ym6A5aa3nDyOfZKtGishprdrhLDm)
+- [BROAD's IGV](https://software.broadinstitute.org/software/igv/)
+- [Ensembl's biomart](https://useast.ensembl.org/info/data/biomart/index.html)
+
+### Command line based tools
+
+#### R-based packages:
+
+- [annotatr](https://bioconductor.org/packages/release/bioc/html/annotatr.html)
+- [ensembldb](https://bioconductor.org/packages/release/bioc/html/ensembldb.html)
+- [GenomicRanges](https://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html) - useful for manipulating and identifying sequences.
+- [GO.db](https://bioconductor.org/packages/3.16/data/annotation/html/GO.db.html) - Gene ontology annotation
+- [org.Hs.eg.db](https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html)
+- [RSamtools](https://www.bioconductor.org/packages/release/bioc/html/Rsamtools.html)
+
+- [A full list of Bioconductors annotation packages](https://bioconductor.org/packages/3.16/data/annotation/) - contains annotation for all kinds of species and versions of genomes and transcriptomes.
+
+#### Python-based packages:
+
+- [BioPython](https://biopython.org/)
+- [genetrack](https://github.com/ialbert/chipexo)
+
+### More resources about genome annotation
