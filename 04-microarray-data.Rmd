@@ -166,7 +166,7 @@ A GFF file may look like this (borrowed example from Ensembl):
 ```
 Note that it will be useful for annotating genes and what we know about them.
 
-For [more about GTF and GFF files](https://uswest.ensembl.org/info/website/upload/gff.html).
+For [more about GTF and GFF files](https://useast.ensembl.org/info/website/upload/gff.html).
 
 
 ### Other files
@@ -181,7 +181,7 @@ For the most common microarray platforms, you can see these examples for how to 
 - [Using Bioconductor for Microarray Analysis](https://www.bioconductor.org/packages/devel/workflows/vignettes/arrays/inst/doc/arrays.html).
 
 #### Gene Expression Arrays
-- [An end to end workflow for differential gene expression using Affymetrix microarrays](https://bioconductor.org/packages/release/workflows/vignettes/maEndToEnd/inst/doc/MA-Workflow.html).
+- [An end to end workflow for differential gene expression using Affymetrix microarrays](https://f1000research.com/articles/5-1384).
 
 #### DNA Methylation Arrays
 - [DNA Methylation array workflow](https://nbis-workshop-epigenomics.readthedocs.io/en/latest/content/tutorials/methylationArray/Array_Tutorial.html).
