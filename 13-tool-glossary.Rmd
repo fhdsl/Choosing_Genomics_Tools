@@ -1,0 +1,58 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# Genomic Tool Glossary
+
+
+
+## Bioconductor
+
+```
+The mission of the Bioconductor project is to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assays. We are dedicated to building a diverse, collaborative, and welcoming community of developers and data scientists.
+
+Bioconductor uses the R statistical programming language, and is open source and open development. It has two releases each year, and an active user community. Bioconductor is also available as Docker images.
+```
+
+### Notable Bioconductor genomics tools:
+
+#### Annotation tools
+- [annotatr](https://bioconductor.org/packages/release/bioc/html/annotatr.html)
+- [ensembldb](https://bioconductor.org/packages/release/bioc/html/ensembldb.html)
+- [GenomicRanges](https://www.bioconductor.org/packages/release/bioc/html/GenomicRanges.html) - useful for manipulating and identifying sequences.
+- [GO.db](https://bioconductor.org/packages/3.16/data/annotation/html/GO.db.html) - Gene ontology annotation
+- [org.Hs.eg.db](https://bioconductor.org/packages/release/data/annotation/html/org.Hs.eg.db.html)
+- [RSamtools](https://www.bioconductor.org/packages/release/bioc/html/Rsamtools.html)
+
+- [A full list of Bioconductors annotation packages](https://bioconductor.org/packages/3.16/data/annotation/) - contains annotation for all kinds of species and versions of genomes and transcriptomes.
+
+#### Data visualization tools
+- [ComplexHeatmap](https://bioconductor.org/packages/release/bioc/html/ComplexHeatmap.html#:~:text=Complex%20heatmaps%20are%20efficient%20to,and%20supports%20various%20annotation%20graphics.)
+
+#### Downstream analysis tools
+
+#### DNA-seq tools
+
+#### Microarray tools
+- [limma](https://www.bioconductor.org/packages/release/bioc/html/limma.html)
+
+#### RNA-seq tools
+- [DESEq2](https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html)
+- [edgeR](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+
+
+## Xena
+
+UCSC Xena (http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations.
+
+Xena showcases seminal cancer genomics datasets from TCGA, the Pan-Cancer Atlas, GDC, PCAWG, ICGC, and more; a total of more than 1500 datasets across 50 cancer types. We support virtually any type of functional genomics data (sometimes known as level 3 or 4 data). This includes SNPs, INDELs, copy number variation, gene expression, ATAC-seq, DNA methylation, exon-, transcript-, miRNA-, lncRNA-expression and structural variants. We also support clinical data such as phenotype information, subtype classifications and biomarkers. All of our data is available for download via python or R APIs, or through our URL links.
+
+### Questions Xena can help you answer include:
+* Is overexpression of this gene associated with better survival?
+* What genes are differentially expressed between these two groups of samples?
+* What is the relationship between mutation, copy number, expression, etc for this gene?
+
+Our tool differentiates itself by its ability to visualize more uncommon data types, such as DNA methylation, its visual integration of multiple types of genomic data side-by-side, and its ability to easily privately visualize your own data.
+
+Get started with our tutorials: https://ucsc-xena.gitbook.io/project/tutorials. If you use us please cite us: https://www.nature.com/articles/s41587-020-0546-8
