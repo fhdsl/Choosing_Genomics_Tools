@@ -160,7 +160,7 @@ A GFF file may look like this (borrowed example from Ensembl):
 ```
 Note that it will be useful for annotating genes and what we know about them.
 
-For [more about GTF and GFF files](https://uswest.ensembl.org/info/website/upload/gff.html).
+For [more about GTF and GFF files](https://useast.ensembl.org/info/website/upload/gff.html).
 
 
 ### Other files
