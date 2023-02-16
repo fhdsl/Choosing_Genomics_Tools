@@ -52,13 +52,15 @@ In the above screenshot, [from Ensembl](https://useast.ensembl.org/info/data/ftp
 
 Depending on the tool you are using, the data file and type you need will vary. Some tools have these data built in or are compatible with other packages that have annotation. If a tool automatically includes annotation within it, you will need to ensure that any additional tools you are using are also pulling from the same genome and version. Look into a tool's documentation to find out what genome versions it is based on. If it doesn't tell you at all, you don't want to be using that tool. You cannot assume that cross genome analyses will translate.
 
-### How to download files
+### How to download annotation files
 
 For another database example we'll look at the human data on ENA's servers. Note that if you see FTP that just means "Fast Transfer Protocol" and it just means its where you can get the files themselves. For more on computing lingo, you can take our [Computing in Cancer Informatics course](https://www.itcrtraining.org/courses#h.civy2cnri95t).
 
 [There's many ways you can download these files and they are described here](https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html). In summary:
 - If you don't feel comfortable using command line, [you can use the browser downloader for ENA here](https://www.ebi.ac.uk/ena/browser/home)
 - If you are using command line to write a script, then you can write use the [`wget` or `curl` instructions described here](https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html#using-wget). Be sure to read the README files to understand what it is you are downloading.
+
+Also note that if you are working from a high power computing cluster or other online server, these annotation files may already be available to you. You don't want to take up more computing resources by downloading extra files, so check with an administrator or informatics expert who also uses the cluster or cloud to check if the annotation files already exist in your workspace. 
 
 ## Considerations for annotating genomic data
 
