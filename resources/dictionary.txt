@@ -1,4 +1,7 @@
-Bewicke
+amplicon
+amplicons
+Amplicon
+amplificationBewicke
 Biotechnol
 Comput
 exome
@@ -28,6 +31,7 @@ IGV
 indel
 indels
 Indels
+introns
 infographic
 Maftools
 MuSE
