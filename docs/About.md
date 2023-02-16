@@ -11,8 +11,9 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
+|Content Contributor(s)|[Carrie Wright] [Claire Mills] - Whole Genome Sequencing [Cliff Meyer] - ATAC-seq|
 |Content Directors|[Jeff Leek]|
-|Content Consultants||
+|Content Consultants|[Carrie Wright]|
 |Acknowledgments||
 |**Production**||
 |Content Publisher|[Ira Gooding]|
@@ -25,7 +26,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |Package Developers ([ottrpal])[Candace Savonen], [John Muschelli], [Carrie Wright]|
 |**Art and Design**||
 |Illustrator| [Candace Savonen]|
-|Figure Artist| [Candace Savonen]|
+|Figure Artist| [Candace Savonen] and [Claire Mills]|
 |Videographer|[Candace Savonen]|
 |Videography Editor| [Candace Savonen]|
 |**Funding**||
@@ -46,7 +47,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2022-11-21                  
+##  date     2023-02-16                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version    date       lib source                            
@@ -96,6 +97,8 @@ These credits are based on our [course contributors table guidelines](https://gi
 
 [Candace Savonen]: https://www.cansavvy.com/
 [Carrie Wright]: https://carriewright11.github.io/
+[Claire Mills]: https://www.linkedin.com/in/claire-mills-dds-50883553
+[Cliff Meyer]: https://ds.dfci.harvard.edu/our-people/clifford-meyer-phd/
 [Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding
 [Jeff Leek]: https://jtleek.com/
 [John Muschelli]: https://johnmuschelli.com/
