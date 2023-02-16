@@ -24,7 +24,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## ATAC-Seq general workflow overview
 
-A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means. Transcription factor binding motif enrichment or transcription factor ChIP-seq peaks enriched accessible chromatin regions.
+A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means. 
 
 ###Data quality metrics:
 
@@ -72,13 +72,17 @@ When using ATAC-seq data to answer biological questions it is important to under
 
 ## ATAC-seq analysis tools
 
-- [MACS]()
-- [CHIPS]()
-- [Cistrome DB]()
+- [A Galaxy based tutorial for ATAC-seq](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/tutorial.html) - Galaxy is a good recommendation for those new to informatics who would like a cloud-based GUI option to use for the analysis of their data.
+- [MACS - Model-based analysis for ChIP-Seq](https://macs3-project.github.io/MACS/) - A command line tool for the identification of transcription factor binding sites. Can be used with ChIP-seq or ATAC-seq.
+- [CHIPS](https://github.com/liulab-dfci/CHIPS) - A Snakemake pipeline for quality control and reproducible processing of chromatin profiling data. This tool will require some snakemake and coding knowledge. For more recommendations about coding see our later chapter about [general data analysis tools]().
+- [Cistrome DB](http://cistrome.org/db/#/) - a visual tool to allow you to browse your ATAC-seq data.
+ - [SELMA - Simplex Encoded Linear Model for Accessible Chromatin](https://github.com/zang-lab/SELMA) - SELMA is a python based tool for the assessment of biases in Chromatin based data.  
 
 ## More resources about ATAC-seq data
 
-- [ATAC-seq review](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
+- [ATAC-seq overview from Galaxy](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/slides.html#1) - these slides explain the overarching concepts of ATAC-seq.
+- [ATAC seq guidelines from Harvard](https://informatics.fas.harvard.edu/atac-seq-guidelines.html) - this workflow runs through step by step how to analysis ATAC-seq data and what different parameters mean.
+- [ATAC-seq review](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3) - this paper gives a great overview of ATAC-seq data and step by step what needs to be considered.
 - [Identifying and mitigating bias in chromatin](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4473780/)
 - [CHIP Snakemake pipeline for analyzing ChIP-seq and chromatin accessibility data](https://f1000research.com/articles/10-517)
 - [Paper on bias in DNase-seq footprinting analysis and fragment size effects, similar comments apply to ATAC-seq](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4018771/)
