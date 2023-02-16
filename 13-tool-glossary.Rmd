@@ -29,7 +29,9 @@ Bioconductor uses the R statistical programming language, and is open source and
 - [limma](https://www.bioconductor.org/packages/release/bioc/html/limma.html)
 - [DESEq2](https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html)
 - [edgeR](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
-
+- [curatedTCGAData](https://bioconductor.org/packages/curatedTCGAData/)
+- [cBioPortalData](https://bioconductor.org/packages/cBioPortalData/)
+- [SingleCellMultiModal](https://bioconductor.org/packages/SingleCellMultiModal/)
 ## Cancer Models
 
 Patient Derived Cancer Models Finder (www.cancermodels.org) is a cancer research platform that aggregates clinical, genomic and functional data from patient-derived xenografts, organoids and cell lines. The PDCM Finder standardises, harmonises and integrates the complex and diverse data associated with PDCMs for cancer community.
@@ -48,17 +50,17 @@ The Trinity Cancer Transcriptome Analysis Toolkit (CTAT, https://github.com/NCIP
 
 ## DeepPhe
 
-[DeepPhe: Natural Language Processing Tools for Cancer Research](https//deepphe.github.io)
+[DeepPhe: Natural Language Processing Tools for Cancer Research](https://deepphe.github.io/)
 
 Under development since 2014, the DeepPhe suite of software tools aims to extract deep phenotype information from the Electronic Medical Records from patients with cancer. DeepPhe combines:
 
 1) multiple natural language processing (NLP) techniques based on cTAKES,1  
-2) a structured cancer information model including concepts from the NCIT and the HemOnc ontology 
+2) a structured cancer information model including concepts from the NCIT and the HemOnc ontology
 3) a graph data model supporting persistence of extracted details including links between patient data enabling semantically informed interpretation, aggregation, and disaggregation of key attributes,  
 4) visual analytics tools supporting patient- and cohort-level displays of extracted data5 including identification of patients matching key research criteria and the examination of individual patient records such as exploration of links  between summary items and supporting text mentions, and   
 5) multiple strategies for use, including containerized REST services and GUIs for installation and pipeline execution.  
 
-DeepPhe tools are available for download and installation from the [DeepPhe website](https//deepphe.github.io) under an open-source license for non-commercial use.
+DeepPhe tools are available for download and installation from the [DeepPhe website](https://deepphe.github.io/) under an open-source license for non-commercial use.
 
 
 ## Genetic Cancer Risk Detector (GARDE)
@@ -88,11 +90,11 @@ For more information, please review the About NDEx page.
 To get started, visit the NDEx public server: there, you can review the NDEx FAQ, access documentation, contact us, and search or browse thousands of biological network models.
 
 ## MultiAssayExperiment
-MultiAssayExperiment (https://bioconductor.org/packages/MultiAssayExperiment/) is an R/Bioconductor package that harmonizes data management, manipulation, and subsetting of multiple experimental assays performed on an overlapping set of specimens. It supports on-disk and remote data storage, and provides reshaping tools for adaptability to arbitrary downstream analysis.
+[MultiAssayExperiment](https://bioconductor.org/packages/MultiAssayExperiment/) is an R/Bioconductor package that harmonizes data management, manipulation, and subsetting of multiple experimental assays performed on an overlapping set of specimens. It supports on-disk and remote data storage, and provides reshaping tools for adaptability to arbitrary downstream analysis.
 
 MultiAssayExperiment is distinct from alternative approaches in its focus on multi’omic data management and manipulation and in its integration with the Bioconductor ecosystem: it is used by more than 50 other Bioconductor packages, it provides a familiar Bioconductor user experience by extending concepts from SummarizedExperiment while supporting an open-ended mix of data classes for individual assays, and it allows subsetting by genomic ranges, row names, phenotypic data, and assays.
 
-You can get started with the MultiAssayExperiment Bioconductor package documentation, or start with prebuilt MultiAssayExperiments objects from curatedTCGAData (https://bioconductor.org/packages/curatedTCGAData/), cBioPortalData (https://bioconductor.org/packages/cBioPortalData/), or SingleCellMultiModal (https://bioconductor.org/packages/SingleCellMultiModal/).
+You can get started with the MultiAssayExperiment Bioconductor package documentation, or start with prebuilt MultiAssayExperiments objects from [curatedTCGAData](https://bioconductor.org/packages/curatedTCGAData/), [cBioPortalData](https://bioconductor.org/packages/cBioPortalData/), or [SingleCellMultiModal](https://bioconductor.org/packages/SingleCellMultiModal/).
 
 ## OpenCRAVAT
 
