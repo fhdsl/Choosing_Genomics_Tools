@@ -185,8 +185,12 @@ learning-objectives-12
 command-line-vs-gui
 bash
 r
+resources-for-learning-r
+r-and-tidyverse
+r-notebooks
+r-and-genomics
 python
-data-visualization-tools
+resources-for-learning-python
 more-resources-1
 annotating-genomes
 learning-objectives-13
