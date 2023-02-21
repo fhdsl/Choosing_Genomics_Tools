@@ -2,7 +2,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Whole Genome/Exome Sequencing Methods
+# Whole Genome/Exome Sequencing
 
 ## Learning Objectives
 
