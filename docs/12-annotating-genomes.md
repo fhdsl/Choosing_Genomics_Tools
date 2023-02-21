@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png){width=100%}
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_23.png){width=100%}
 
 In this chapter, we are going to discuss methods that affect every genomic method and may take up the majority of your time as a genomic data analyst: Annotation.
 
@@ -25,7 +25,7 @@ In summary, reference genomes are used for comparison and as a 'source of truth'
 
 If you are familiar with software development, or have used any app before, you're familiar with software updates and releases. Similarly, the genome has updates and releases as continued cloning and assemblies of organisms teaches us more. In the image below we are showing an example of what a genome version may be noted as (note that different databases may have different terminology -- here we are showing the Genome Reference Consortium). You may also notice on their website it shows the date the genome version was released and what was fixed.
 
-![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png){width=100%}
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_33.png){width=100%}
 
 The details of how genome versions are fixed and released are not really of concern for your data analysis. This is merely to explain that genomes change and what is most important in your analysis is that:
 
@@ -36,7 +36,7 @@ The details of how genome versions are fixed and released are not really of conc
 
 Although we can't walk you through every organism and database set up, we will walkthrough the files and structure of one example here.
 
-![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png){width=100%}
+![](resources/images/12-annotating-genomes_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_28.png){width=100%}
 
 In the above screenshot, [from Ensembl](https://useast.ensembl.org/info/data/ftp/index.html), it shows different organisms in the rows, but also a variety of different files across the columns. In this example, DNA reference to the DNA sequence of the organism's genome, but cDNA refers to complementary DNA -- aka DNA that has been reversed transcribed from RNA. If you are working with RNA data you may want to use the cDNA file. Whereas CDS files are referring to only coding sequences and ncRNA files are showing only non coding sequences. Gene sets are also annotated and are in their own files. Most of these files are FASTA files. For a reminder on what these different file types are [see the previous chapter](http://hutchdatascience.org/Choosing_Genomics_Tools/a-very-general-genomics-overview.html#basic-file-formats).
 
@@ -58,14 +58,12 @@ Also note that if you are working from a high power computing cluster or other o
 
 1. Is the annotation from the right organism?
 You may think this is a dumb question, but its very critical that you make sure you have the genome annotation for the organism that matches your data. Indeed the author of this has made this mistake in the past, so double check that you are using the correct organism.
-
 2. Are all analyses utilizing coordinates from the same genome/transcriptome version?
 Genome versions are constantly being updated. Files from older genome versions cannot be used with newer ones (without some sort of liftover conversion). This also goes for transcriptome and genome data. All analysis need to be done using the same genomic versions so that is ensured that any chromosomal coordinates can translate between files. For example, it could be in one genome version a particular gene was said to be at chromosome base pairs 300 - 400, but in the next version its now been changed to 305 - 405. This can throw off an analysis if you are not careful. This type of annotation mapping becomes even more complicated when considering different splice variants or non-coding genes or regulatory regions that have even less confidence and annotation about them.
 
 ### Be consistent in your annotations
 
 1. If at all possible avoid making cross species analyses - unless you are an evolutionary genomics expert and understand what you are doing. But for most applications cross species analyses are hopeful wishing at best, so stick to one organism.
-
 2. Avoid mixing genome/transcriptome versions. Yes there is liftover annotation data to help you identify what loci are parallel between releases, but its really much simpler to stick with the same version throughout your analyses' annotations.
 
 ### Be clear in your write ups!

@@ -30,6 +30,7 @@ Bioconductor uses the R statistical programming language, and is open source and
 - [curatedTCGAData](https://bioconductor.org/packages/curatedTCGAData/)
 - [cBioPortalData](https://bioconductor.org/packages/cBioPortalData/)
 - [SingleCellMultiModal](https://bioconductor.org/packages/SingleCellMultiModal/)
+
 ## Cancer Models
 
 Patient Derived Cancer Models Finder (www.cancermodels.org) is a cancer research platform that aggregates clinical, genomic and functional data from patient-derived xenografts, organoids and cell lines. The PDCM Finder standardises, harmonises and integrates the complex and diverse data associated with PDCMs for cancer community.
@@ -44,6 +45,7 @@ Get started at www.cancermodels.org to browse and query models by cancer type
 [CIViC](www.civicdb.org) is a knowledgebase and curation interface for the clinical interpretation of variants in cancer. Evidence is curated from published literature describing the diagnostic, prognostic, predictive, predisposing, oncogenic, or functional role of variants in specific cancer types. Evidence submitted by community curators is revised and moderated by expert editors. Individual evidence is synthesized into gene summaries, variant summaries and variant-disease assertions of specific clinical relevance. Anyone can make use of CIViC knowledge through the open web interface or API. Information on how to use or contribute to CIViC is available in our help docs (docs.civicdb.org). The main distinguishing feature of CIViC compared to similar resources it is total commitment to open data sharing. All data are available in the Public Domain (CC0). The code is available for any use under an MIT license.
 
 ## CTAT
+
 The Trinity Cancer Transcriptome Analysis Toolkit (CTAT, https://github.com/NCIP/Trinity_CTAT/wiki ) provides a diverse collection of tools to gain insights into the biology of cancer through the lens of the transcriptome. Using RNA-seq as input, CTAT modules enable detection of mutations, fusion transcripts, copy number aberrations, cancer-specific splicing aberrations, and oncogenic viruses including insertions into the human genome.  CTAT uses both read mapping and de novo assembly methods to analyze RNA-seq, leveraging tumor bulk and single cell transcriptomes. CTAT modules provide interactive visualizations as outputs, are easily installed for local execution or run via cloud computing (eg. Terra), have detailed user guides and tutorials, and are well-supported through user forums.
 
 ## DeepPhe
@@ -68,16 +70,19 @@ DeepPhe tools are available for download and installation from the [DeepPhe webs
 GARDE is a population clinical decision support (CDS) platform based on Fast Healthcare Interoperability Resources (FHIR) and CDS Hooks standards to support interoperability and logic sharing beyond single vendor solutions.
 
 ## Gene Set Enrichment Analysis (GSEA)
+
 [Gene Set Enrichment Analysis (GSEA)](https://www.gsea-msigdb.org/gsea/index.jsp) is a method to identify the coordinate activation or repression of groups of genes that share common biological functions, pathways, chromosomal locations, or regulation, thereby distinguishing even subtle differences between phenotypes or cellular states. Gene set-based enrichment analysis is now standard practice for interpreting global transcription profiling experiments and elucidating the biological mechanisms associated with disease and other biological phenotypes of interest. The method is more powerful than typical single-gene approaches to comparing phenotypes, as it can identify sets of genes (e.g., perturbation signatures or molecular pathways) that are coordinately up- or downregulated when each gene in the set may not be significantly differentially expressed. The GSEA software provides useful visualizations and reports for the exploration and interpretation of results. GSEA bundles direct access to the Molecular Signatures Database (MSigDB) – a comprehensive curated repository of annotated gene sets representing signatures derived from publications, pathway databases, and other sources of public data; MSigDB can also be used independently.
 
 The website for the GSEA-MSigDB resource can be found at gsea-msigdb.org. To get started with GSEA you can view the GSEA User Guide, and access the GSEA software through the downloads page or through the GSEA modules available on GenePattern. See the MSigDB section of the website  for more information about MSigDB and to interactively explore the gene sets and their annotations. User support for GSEA and MSigDB is available through our help forum.
 
 ## Integrative Genomics Viewer (IGV)
+
 The [Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv/) is a track-based browser for interactively exploring genomic data mapped to a reference genome. IGV supports all the standard genomic data types (aligned reads, variants, signal peaks, genome annotations, copy number variation, etc.) as well as sample information, such as clinical, phenotypic, or other attributes. IGV provides great flexibility in loading data, whether investigator generated or publicly available, directly from multiple disparate sources without the need for any pre-processing. Supported data sources include local file systems; web servers on the user’s intranet or the Internet; commercial cloud providers (Google, Amazon, Azure, Dropbox); web links to data in public repositories. Authentication to access private data on the web is supported with the industry standard OAuth protocol.
 
 IGV is available in multiple forms, including both end-user applications and versions for use by developers. The IGV website at https://igv.org provides access to all modalities of IGV. Download and install the IGV Desktop application from the downloads page. To learn about using the application see the tutorial videos on the IGV YouTube channel and the online User Guide. The IGV-Web app is available at https://igv.org/app. To learn about using the app, the Help link in the menu bar provides access to the documentation, and see also the tutorial videos on the YouTube channel. The igv.js JavaScript component is for web developers who wish to embed IGV in their web apps or portals. More information can be found in the Readme file and the Wiki in the igv.js GitHub repository. IGV user support is available through the igv-help online forum and the GitHub repositories.
 
 ## NDEx
+
 The [Network Data Exchange (NDEx)](https://www.ndexbio.org/#/) project provides an open-source framework where scientists and organizations can store, share and publish biological network knowledge. A distinctive feature of NDEx is that it serves as a home for models that are currently available only as figures, tables, or supplementary information, such as networks produced via systematic mining and integration of large-scale molecular data.
 
 NDEx includes features to support data distribution and access according to FAIR principles. Its full integration with Cytoscape, the popular desktop application for network analysis and visualization, provides the cloud back-end component for data I/O; so, if a network file format can be opened in Cytoscape, it can also be stored in (and retrieved from) NDEx.
@@ -88,6 +93,7 @@ For more information, please review the About NDEx page.
 To get started, visit the NDEx public server: there, you can review the NDEx FAQ, access documentation, contact us, and search or browse thousands of biological network models.
 
 ## MultiAssayExperiment
+
 [MultiAssayExperiment](https://bioconductor.org/packages/MultiAssayExperiment/) is an R/Bioconductor package that harmonizes data management, manipulation, and subsetting of multiple experimental assays performed on an overlapping set of specimens. It supports on-disk and remote data storage, and provides reshaping tools for adaptability to arbitrary downstream analysis.
 
 MultiAssayExperiment is distinct from alternative approaches in its focus on multi’omic data management and manipulation and in its integration with the Bioconductor ecosystem: it is used by more than 50 other Bioconductor packages, it provides a familiar Bioconductor user experience by extending concepts from SummarizedExperiment while supporting an open-ended mix of data classes for individual assays, and it allows subsetting by genomic ranges, row names, phenotypic data, and assays.
@@ -108,6 +114,7 @@ You can get started with the MultiAssayExperiment Bioconductor package documenta
 Xena showcases seminal cancer genomics datasets from TCGA, the Pan-Cancer Atlas, GDC, PCAWG, ICGC, and more; a total of more than 1500 datasets across 50 cancer types. We support virtually any type of functional genomics data (sometimes known as level 3 or 4 data). This includes SNPs, INDELs, copy number variation, gene expression, ATAC-seq, DNA methylation, exon-, transcript-, miRNA-, lncRNA-expression and structural variants. We also support clinical data such as phenotype information, subtype classifications and biomarkers. All of our data is available for download via python or R APIs, or through our URL links.
 
 ### Questions Xena can help you answer include:
+
 * Is overexpression of this gene associated with better survival?
 * What genes are differentially expressed between these two groups of samples?
 * What is the relationship between mutation, copy number, expression, etc for this gene?

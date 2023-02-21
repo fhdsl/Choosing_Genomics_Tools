@@ -1,7 +1,7 @@
 
 
 
-# DNA Methylation Sequencing Analysis Methods
+# DNA Methylation Sequencing 
 
 ## Learning Objectives
 
@@ -66,7 +66,7 @@ TODO: What other packages/tools should be mentioned here?
 https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html
 
 ### Annotation of regions of interest
-TODO: How does this differ from annotating genomic regions in general? 
+TODO: How does this differ from annotating genomic regions in general?
 
 ## More resources
 
