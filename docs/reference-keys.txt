@@ -98,7 +98,7 @@ what-regions-of-the-genome-pertain-to-your-research-question
 what-does-your-project-budget-allow-for
 what-is-your-detection-power-for-these-variants
 strengths-and-weaknesses-of-different-methods
-whole-genomeexome-sequencing-methods
+whole-genomeexome-sequencing
 learning-objectives-5
 wgs-and-wgs-overview
 advantages-and-disadvantages-of-wgs-vs-wxs
@@ -166,7 +166,7 @@ chip-seq-data-limitations
 chip-seq-data-considerations
 chip-seq-analysis-tools
 more-resources-about-chip-seq-data
-dna-methylation-sequencing-analysis-methods
+dna-methylation-sequencing
 learning-objectives-11
 what-are-the-goals-of-analyzing-dna-methylation
 methylation-data-considerations
@@ -208,6 +208,7 @@ more-resources-about-genome-annotation
 genomic-tool-glossary
 bioconductor
 notable-bioconductor-genomics-tools
+cancer-models
 civic
 ctat
 deepphe

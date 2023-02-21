@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 13 DNA Methylation Sequencing | Choosing Genomics Tools</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 13 DNA Methylation Sequencing | Choosing Genomics Tools" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 13 DNA Methylation Sequencing | Choosing Genomics Tools" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="chip-seq.html"/>
+<link rel="next" href="general-data-analysis-tools.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style_ITN.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.itcrtraining.org/"><img src="assets/ITN_logo.png" style="padding-left: 15px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#available-course-formats"><i class="fa fa-check"></i><b>0.1</b> Available course formats</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.1</b> Target Audience</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.2</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.3</b> Motivation</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#how-to-use-the-course"><i class="fa fa-check"></i><b>1.5</b> How to use the course</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html"><i class="fa fa-check"></i><b>2</b> A Very General Genomics Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+<li class="chapter" data-level="2.1.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.1.3</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="2.1.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.1.4</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.2</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.2.1</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-are-metadata.html"><a href="what-are-metadata.html"><i class="fa fa-check"></i><b>3</b> What are Metadata?</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-are-metadata.html"><a href="what-are-metadata.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#what-are-metadata-1"><i class="fa fa-check"></i><b>3.2</b> What are metadata?</a></li>
+<li class="chapter" data-level="3.3" data-path="what-are-metadata.html"><a href="what-are-metadata.html#how-to-create-metadata"><i class="fa fa-check"></i><b>3.3</b> How to create metadata?</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="what-are-metadata.html"><a href="what-are-metadata.html#the-goals-in-creating-your-metadata"><i class="fa fa-check"></i><b>3.3.1</b> The goals in creating your metadata:</a></li>
+<li class="chapter" data-level="3.3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#to-recap"><i class="fa fa-check"></i><b>3.3.2</b> To recap:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="microarray-data.html"><a href="microarray-data.html"><i class="fa fa-check"></i><b>4</b> Microarray Data</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="microarray-data.html"><a href="microarray-data.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="microarray-data.html"><a href="microarray-data.html#summary-of-microarrays"><i class="fa fa-check"></i><b>4.2</b> Summary of microarrays</a></li>
+<li class="chapter" data-level="4.3" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>4.3</b> How do microarrays work?</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="microarray-data.html"><a href="microarray-data.html#pros"><i class="fa fa-check"></i><b>4.3.1</b> Pros:</a></li>
+<li class="chapter" data-level="4.3.2" data-path="microarray-data.html"><a href="microarray-data.html#cons"><i class="fa fa-check"></i><b>4.3.2</b> Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>4.4</b> What types of arrays are there?</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>4.4.1</b> SNP arrays</a></li>
+<li class="chapter" data-level="4.4.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>4.4.2</b> Gene expression arrays</a></li>
+<li class="chapter" data-level="4.4.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>4.4.3</b> DNA methylation arrays</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="microarray-data.html"><a href="microarray-data.html#general-processing-of-microarray-data"><i class="fa fa-check"></i><b>4.5</b> General processing of microarray data</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="microarray-data.html"><a href="microarray-data.html#examples-2"><i class="fa fa-check"></i><b>4.5.1</b> Examples</a></li>
+<li class="chapter" data-level="4.5.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-platforms"><i class="fa fa-check"></i><b>4.5.2</b> Microarray Platforms</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="microarray-data.html"><a href="microarray-data.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>4.6</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="microarray-data.html"><a href="microarray-data.html#microarray-file-formats-1"><i class="fa fa-check"></i><b>4.6.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="microarray-data.html"><a href="microarray-data.html#general-informatics-files-1"><i class="fa fa-check"></i><b>4.7</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="microarray-data.html"><a href="microarray-data.html#other-files-1"><i class="fa fa-check"></i><b>4.7.1</b> Other files</a></li>
+<li class="chapter" data-level="4.7.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-processing-tutorials"><i class="fa fa-check"></i><b>4.7.2</b> Microarray processing tutorials:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sequencing-data.html"><a href="sequencing-data.html"><i class="fa fa-check"></i><b>5</b> Sequencing Data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="sequencing-data.html"><a href="sequencing-data.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="sequencing-data.html"><a href="sequencing-data.html#how-does-sequencing-work"><i class="fa fa-check"></i><b>5.2</b> How does sequencing work?</a></li>
+<li class="chapter" data-level="5.3" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-concepts"><i class="fa fa-check"></i><b>5.3</b> Sequencing concepts</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="sequencing-data.html"><a href="sequencing-data.html#inherent-biases"><i class="fa fa-check"></i><b>5.3.1</b> Inherent biases</a></li>
+<li class="chapter" data-level="5.3.2" data-path="sequencing-data.html"><a href="sequencing-data.html#pcr-amplification"><i class="fa fa-check"></i><b>5.3.2</b> PCR Amplification</a></li>
+<li class="chapter" data-level="5.3.3" data-path="sequencing-data.html"><a href="sequencing-data.html#depth-of-coverage"><i class="fa fa-check"></i><b>5.3.3</b> Depth of coverage</a></li>
+<li class="chapter" data-level="5.3.4" data-path="sequencing-data.html"><a href="sequencing-data.html#quality-controls"><i class="fa fa-check"></i><b>5.3.4</b> Quality controls</a></li>
+<li class="chapter" data-level="5.3.5" data-path="sequencing-data.html"><a href="sequencing-data.html#alignment"><i class="fa fa-check"></i><b>5.3.5</b> Alignment</a></li>
+<li class="chapter" data-level="5.3.6" data-path="sequencing-data.html"><a href="sequencing-data.html#single-end-vs-paired-end"><i class="fa fa-check"></i><b>5.3.6</b> Single End vs Paired End</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="sequencing-data.html"><a href="sequencing-data.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>5.4</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-file-formats-1"><i class="fa fa-check"></i><b>5.4.1</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="5.4.2" data-path="sequencing-data.html"><a href="sequencing-data.html#other-files-2"><i class="fa fa-check"></i><b>5.4.2</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="dna-methods.html"><a href="dna-methods.html"><i class="fa fa-check"></i><b>6</b> DNA Methods</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="dna-methods.html"><a href="dna-methods.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="dna-methods.html"><a href="dna-methods.html#what-are-the-goals-of-analyzing-dna-sequences"><i class="fa fa-check"></i><b>6.2</b> What are the goals of analyzing DNA sequences?</a></li>
+<li class="chapter" data-level="6.3" data-path="dna-methods.html"><a href="dna-methods.html#comparison-of-dna-methods"><i class="fa fa-check"></i><b>6.3</b> Comparison of DNA methods</a></li>
+<li class="chapter" data-level="6.4" data-path="dna-methods.html"><a href="dna-methods.html#how-to-choose-a-dna-sequencing-method"><i class="fa fa-check"></i><b>6.4</b> How to choose a DNA sequencing method</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="dna-methods.html"><a href="dna-methods.html#what-regions-of-the-genome-pertain-to-your-research-question"><i class="fa fa-check"></i><b>6.4.1</b> 1. What region(s) of the genome pertain to your research question?</a></li>
+<li class="chapter" data-level="6.4.2" data-path="dna-methods.html"><a href="dna-methods.html#what-does-your-project-budget-allow-for"><i class="fa fa-check"></i><b>6.4.2</b> 2. What does your project budget allow for?</a></li>
+<li class="chapter" data-level="6.4.3" data-path="dna-methods.html"><a href="dna-methods.html#what-is-your-detection-power-for-these-variants"><i class="fa fa-check"></i><b>6.4.3</b> 3. What is your detection power for these variants?</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="dna-methods.html"><a href="dna-methods.html#strengths-and-weaknesses-of-different-methods"><i class="fa fa-check"></i><b>6.5</b> Strengths and Weaknesses of different methods</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html"><i class="fa fa-check"></i><b>7</b> Whole Genome/Exome Sequencing</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#learning-objectives-5"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#wgs-and-wgs-overview"><i class="fa fa-check"></i><b>7.2</b> WGS and WGS Overview</a></li>
+<li class="chapter" data-level="7.3" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#advantages-and-disadvantages-of-wgs-vs-wxs"><i class="fa fa-check"></i><b>7.3</b> Advantages and Disadvantages of WGS vs WXS</a></li>
+<li class="chapter" data-level="7.4" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#wgswxs-considerations"><i class="fa fa-check"></i><b>7.4</b> WGS/WXS Considerations</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#target-enrichment-techniques"><i class="fa fa-check"></i><b>7.4.1</b> Target enrichment techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#dna-sequencing-pipeline-overview"><i class="fa fa-check"></i><b>7.5</b> DNA Sequencing Pipeline Overview</a></li>
+<li class="chapter" data-level="7.6" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#data-pre-processing"><i class="fa fa-check"></i><b>7.6</b> Data Pre-processing</a></li>
+<li class="chapter" data-level="7.7" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#commonly-used-tools"><i class="fa fa-check"></i><b>7.7</b> Commonly Used Tools</a></li>
+<li class="chapter" data-level="7.8" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#data-pre-processing-tools"><i class="fa fa-check"></i><b>7.8</b> Data pre-processing tools</a></li>
+<li class="chapter" data-level="7.9" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-somatic-and-germline-variant-identification"><i class="fa fa-check"></i><b>7.9</b> Tools for somatic and germline variant identification</a></li>
+<li class="chapter" data-level="7.10" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-variant-calling-annotation"><i class="fa fa-check"></i><b>7.10</b> Tools for variant calling annotation</a></li>
+<li class="chapter" data-level="7.11" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-copy-number-variation-analysis"><i class="fa fa-check"></i><b>7.11</b> Tools for copy number variation analysis</a></li>
+<li class="chapter" data-level="7.12" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-data-visualization"><i class="fa fa-check"></i><b>7.12</b> Tools for data visualization</a></li>
+<li class="chapter" data-level="7.13" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#resources-for-wgs"><i class="fa fa-check"></i><b>7.13</b> Resources for WGS</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="rna-methods.html"><a href="rna-methods.html"><i class="fa fa-check"></i><b>8</b> RNA Methods</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="rna-methods.html"><a href="rna-methods.html#learning-objectives-6"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="rna-methods.html"><a href="rna-methods.html#what-are-the-goals-of-gene-expression-analysis"><i class="fa fa-check"></i><b>8.2</b> What are the goals of gene expression analysis?</a></li>
+<li class="chapter" data-level="8.3" data-path="rna-methods.html"><a href="rna-methods.html#comparison-of-rna-methods"><i class="fa fa-check"></i><b>8.3</b> Comparison of RNA methods</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html"><i class="fa fa-check"></i><b>9</b> Bulk RNA-seq</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#learning-objectives-7"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>9.2</b> Where RNA-seq data comes from</a></li>
+<li class="chapter" data-level="9.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-workflow"><i class="fa fa-check"></i><b>9.3</b> RNA-seq workflow</a></li>
+<li class="chapter" data-level="9.4" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-strengths"><i class="fa fa-check"></i><b>9.4</b> RNA-seq data <strong>strengths</strong></a></li>
+<li class="chapter" data-level="9.5" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>9.5</b> RNA-seq data <strong>limitations</strong></a></li>
+<li class="chapter" data-level="9.6" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-data-considerations"><i class="fa fa-check"></i><b>9.6</b> RNA-seq data considerations</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#ribo-minus-vs-poly-a-selection"><i class="fa fa-check"></i><b>9.6.1</b> Ribo minus vs poly A selection</a></li>
+<li class="chapter" data-level="9.6.2" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#transcriptome-mapping"><i class="fa fa-check"></i><b>9.6.2</b> Transcriptome mapping</a></li>
+<li class="chapter" data-level="9.6.3" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#abundance-measures"><i class="fa fa-check"></i><b>9.6.3</b> Abundance measures</a></li>
+<li class="chapter" data-level="9.6.4" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#rna-seq-downstream-analysis-tools"><i class="fa fa-check"></i><b>9.6.4</b> RNA-seq downstream analysis tools</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="bulk-rna-seq.html"><a href="bulk-rna-seq.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>9.7</b> More reading about RNA-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>10</b> Single-cell RNA-seq</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#learning-objectives-8"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>10.2</b> Where single-cell RNA-seq data comes from</a></li>
+<li class="chapter" data-level="10.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-types"><i class="fa fa-check"></i><b>10.3</b> Single-cell RNA-seq data types</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#unique-molecular-identifiers"><i class="fa fa-check"></i><b>10.3.1</b> Unique Molecular identifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-tools"><i class="fa fa-check"></i><b>10.4</b> Single cell RNA-seq tools</a></li>
+<li class="chapter" data-level="10.5" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quantificationalignment"><i class="fa fa-check"></i><b>10.5</b> Quantification/Alignment</a></li>
+<li class="chapter" data-level="10.6" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quality-control"><i class="fa fa-check"></i><b>10.6</b> Quality control</a></li>
+<li class="chapter" data-level="10.7" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#normalization-and-downstream-analyses"><i class="fa fa-check"></i><b>10.7</b> Normalization and downstream analyses</a></li>
+<li class="chapter" data-level="10.8" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-tutorials"><i class="fa fa-check"></i><b>10.8</b> Useful tutorials</a></li>
+<li class="chapter" data-level="10.9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-readings"><i class="fa fa-check"></i><b>10.9</b> Useful readings</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="atac-seq.html"><a href="atac-seq.html"><i class="fa fa-check"></i><b>11</b> ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="atac-seq.html"><a href="atac-seq.html#learning-objectives-9"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="atac-seq.html"><a href="atac-seq.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>11.2</b> What are the goals of ATAC-Seq analysis?</a></li>
+<li class="chapter" data-level="11.3" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-general-workflow-overview"><i class="fa fa-check"></i><b>11.3</b> ATAC-Seq general workflow overview</a></li>
+<li class="chapter" data-level="11.4" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>11.4</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="11.5" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-data-limitations"><i class="fa fa-check"></i><b>11.5</b> ATAC-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="11.6" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-data-considerations"><i class="fa fa-check"></i><b>11.6</b> ATAC-Seq data considerations</a></li>
+<li class="chapter" data-level="11.7" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-analysis-tools"><i class="fa fa-check"></i><b>11.7</b> ATAC-seq analysis tools</a></li>
+<li class="chapter" data-level="11.8" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>11.8</b> More resources about ATAC-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>12</b> ChIP-Seq</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="chip-seq.html"><a href="chip-seq.html#learning-objectives-10"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="chip-seq.html"><a href="chip-seq.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>12.2</b> What are the goals of ChIP-Seq analysis?</a></li>
+<li class="chapter" data-level="12.3" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-general-workflow-overview"><i class="fa fa-check"></i><b>12.3</b> ChIP-Seq general workflow overview</a></li>
+<li class="chapter" data-level="12.4" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>12.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="12.5" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>12.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="12.6" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-data-considerations"><i class="fa fa-check"></i><b>12.6</b> ChIP-Seq data considerations</a></li>
+<li class="chapter" data-level="12.7" data-path="chip-seq.html"><a href="chip-seq.html#chip-seq-analysis-tools"><i class="fa fa-check"></i><b>12.7</b> ChiP-seq analysis tools</a></li>
+<li class="chapter" data-level="12.8" data-path="chip-seq.html"><a href="chip-seq.html#more-resources-about-chip-seq-data"><i class="fa fa-check"></i><b>12.8</b> More resources about ChiP-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html"><i class="fa fa-check"></i><b>13</b> DNA Methylation Sequencing</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#learning-objectives-11"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>13.2</b> What are the goals of analyzing DNA methylation?</a></li>
+<li class="chapter" data-level="13.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-data-considerations"><i class="fa fa-check"></i><b>13.3</b> Methylation data considerations</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#beta-values-binomially-distributed"><i class="fa fa-check"></i><b>13.3.1</b> Beta values binomially distributed</a></li>
+<li class="chapter" data-level="13.3.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#measuring-5mc-andor-5hmc"><i class="fa fa-check"></i><b>13.3.2</b> Measuring 5mC and/or 5hmC</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-data-workflow"><i class="fa fa-check"></i><b>13.4</b> Methylation data workflow</a></li>
+<li class="chapter" data-level="13.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-tools"><i class="fa fa-check"></i><b>13.5</b> Methylation tools!</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#quality-control-1"><i class="fa fa-check"></i><b>13.5.1</b> Quality control</a></li>
+<li class="chapter" data-level="13.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#genome-alignment"><i class="fa fa-check"></i><b>13.5.2</b> Genome Alignment</a></li>
+<li class="chapter" data-level="13.5.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-calls"><i class="fa fa-check"></i><b>13.5.3</b> Methylation calls</a></li>
+<li class="chapter" data-level="13.5.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#find-regions-of-interest"><i class="fa fa-check"></i><b>13.5.4</b> Find regions of interest!</a></li>
+<li class="chapter" data-level="13.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#annotation-of-regions-of-interest"><i class="fa fa-check"></i><b>13.5.5</b> Annotation of regions of interest</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#more-resources"><i class="fa fa-check"></i><b>13.6</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html"><i class="fa fa-check"></i><b>14</b> General Data Analysis Tools</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#learning-objectives-12"><i class="fa fa-check"></i><b>14.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="14.2" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#command-line-vs-gui"><i class="fa fa-check"></i><b>14.2</b> Command Line vs GUI</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#bash"><i class="fa fa-check"></i><b>14.2.1</b> Bash</a></li>
+<li class="chapter" data-level="14.2.2" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#r"><i class="fa fa-check"></i><b>14.2.2</b> R</a></li>
+<li class="chapter" data-level="14.2.3" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#python"><i class="fa fa-check"></i><b>14.2.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#data-visualization-tools"><i class="fa fa-check"></i><b>14.3</b> Data Visualization Tools</a></li>
+<li class="chapter" data-level="14.4" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#more-resources-1"><i class="fa fa-check"></i><b>14.4</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="annotating-genomes.html"><a href="annotating-genomes.html"><i class="fa fa-check"></i><b>15</b> Annotating Genomes</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#learning-objectives-13"><i class="fa fa-check"></i><b>15.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-reference-genomes"><i class="fa fa-check"></i><b>15.2</b> What are reference genomes?</a></li>
+<li class="chapter" data-level="15.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-genome-versions"><i class="fa fa-check"></i><b>15.3</b> What are genome versions?</a></li>
+<li class="chapter" data-level="15.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-the-different-files"><i class="fa fa-check"></i><b>15.4</b> What are the different files?</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#how-to-download-annotation-files"><i class="fa fa-check"></i><b>15.4.1</b> How to download annotation files</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="annotating-genomes.html"><a href="annotating-genomes.html#considerations-for-annotating-genomic-data"><i class="fa fa-check"></i><b>15.5</b> Considerations for annotating genomic data</a>
+<ul>
+<li class="chapter" data-level="15.5.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#make-sure-you-have-the-right-file-to-start"><i class="fa fa-check"></i><b>15.5.1</b> Make sure you have the right file to start!</a></li>
+<li class="chapter" data-level="15.5.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-consistent-in-your-annotations"><i class="fa fa-check"></i><b>15.5.2</b> Be consistent in your annotations</a></li>
+<li class="chapter" data-level="15.5.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-clear-in-your-write-ups"><i class="fa fa-check"></i><b>15.5.3</b> Be clear in your write ups!</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="annotating-genomes.html"><a href="annotating-genomes.html#resources-you-will-need-for-annotation"><i class="fa fa-check"></i><b>15.6</b> Resources you will need for annotation!</a>
+<ul>
+<li class="chapter" data-level="15.6.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#annotation-databases"><i class="fa fa-check"></i><b>15.6.1</b> Annotation databases</a></li>
+<li class="chapter" data-level="15.6.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#gui-based-annotation-tools"><i class="fa fa-check"></i><b>15.6.2</b> GUI based annotation tools</a></li>
+<li class="chapter" data-level="15.6.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#command-line-based-tools"><i class="fa fa-check"></i><b>15.6.3</b> Command line based tools</a></li>
+<li class="chapter" data-level="15.6.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#more-resources-about-genome-annotation"><i class="fa fa-check"></i><b>15.6.4</b> More resources about genome annotation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html"><i class="fa fa-check"></i><b>16</b> Genomic Tool Glossary</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#bioconductor"><i class="fa fa-check"></i><b>16.1</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#notable-bioconductor-genomics-tools"><i class="fa fa-check"></i><b>16.1.1</b> Notable Bioconductor genomics tools:</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#cancer-models"><i class="fa fa-check"></i><b>16.2</b> Cancer Models</a></li>
+<li class="chapter" data-level="16.3" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#civic"><i class="fa fa-check"></i><b>16.3</b> CIViC</a></li>
+<li class="chapter" data-level="16.4" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#ctat"><i class="fa fa-check"></i><b>16.4</b> CTAT</a></li>
+<li class="chapter" data-level="16.5" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#deepphe"><i class="fa fa-check"></i><b>16.5</b> DeepPhe</a></li>
+<li class="chapter" data-level="16.6" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#genetic-cancer-risk-detector-garde"><i class="fa fa-check"></i><b>16.6</b> Genetic Cancer Risk Detector (GARDE)</a></li>
+<li class="chapter" data-level="16.7" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#gene-set-enrichment-analysis-gsea"><i class="fa fa-check"></i><b>16.7</b> Gene Set Enrichment Analysis (GSEA)</a></li>
+<li class="chapter" data-level="16.8" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#integrative-genomics-viewer-igv"><i class="fa fa-check"></i><b>16.8</b> Integrative Genomics Viewer (IGV)</a></li>
+<li class="chapter" data-level="16.9" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#ndex"><i class="fa fa-check"></i><b>16.9</b> NDEx</a></li>
+<li class="chapter" data-level="16.10" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#multiassayexperiment"><i class="fa fa-check"></i><b>16.10</b> MultiAssayExperiment</a></li>
+<li class="chapter" data-level="16.11" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#opencravat"><i class="fa fa-check"></i><b>16.11</b> OpenCRAVAT</a></li>
+<li class="chapter" data-level="16.12" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#webmev"><i class="fa fa-check"></i><b>16.12</b> WebMeV</a></li>
+<li class="chapter" data-level="16.13" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#xena"><i class="fa fa-check"></i><b>16.13</b> Xena</a>
+<ul>
+<li class="chapter" data-level="16.13.1" data-path="genomic-tool-glossary.html"><a href="genomic-tool-glossary.html#questions-xena-can-help-you-answer-include"><i class="fa fa-check"></i><b>16.13.1</b> Questions Xena can help you answer include:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<a href="http://jhudatascience.org/"><img src="https://jhudatascience.org/images/dasl.png" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/hc8Xt3Y2Znjb6M4Y7"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Choosing Genomics Tools</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_ITN.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/itcr_main_image.png">
+</div>
+<div id="dna-methylation-sequencing" class="section level1" number="13">
+<h1><span class="header-section-number">Chapter 13</span> DNA Methylation Sequencing</h1>
+<div id="learning-objectives-11" class="section level2" number="13.1">
+<h2><span class="header-section-number">13.1</span> Learning Objectives</h2>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" title="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" alt="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" width="100%" /></p>
+</div>
+<div id="what-are-the-goals-of-analyzing-dna-methylation" class="section level2" number="13.2">
+<h2><span class="header-section-number">13.2</span> What are the goals of analyzing DNA methylation?</h2>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_10.png" width="100%" /></p>
+<p>To detect methylated cytosines (5mC), DNA samples are prepped using bisulfite (BS) conversion. This converts unmethylated cytosines into uracils and leaves methylated cytosines untouched. Probes are then designed to bind to either the uracil or the cytosine, representing the unmethylated and methylated cytosines respectively.</p>
+<p>For a given sample, you will obtain a fraction, known as the Beta value, that indicates the relative abundance of the methylated and unmethylated versions of the sequence. Beta values exist then on a scale of 0 to 1 where 0 indicates none of this particular base is methylated in the sample and 1 indicates all are methylated.</p>
+<p>Note that bisulfite conversion alone will not distinguish between 5mC and 5hmC though these often may indicate different biological mechanics.</p>
+<p>Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxidative bisulfite sequencing (OxBS) [<span class="citation">Booth et al. (<a href="#ref-Booth2013" role="doc-biblioref">2013</a>)</span>. oxidative bisulfite conversion measures both 5mC and 5hmC. If you want to identify 5hmC bases you either have to pair oxBS data with BS data OR you have to use Tet-assisted bisulfite (TAB) sequencing which will exclusively tag 5hmC bases <span class="citation">(<a href="#ref-Yu2012" role="doc-biblioref">Yu et al. 2012</a>)</span>.</p>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_35.png" width="100%" /></p>
+</div>
+<div id="methylation-data-considerations" class="section level2" number="13.3">
+<h2><span class="header-section-number">13.3</span> Methylation data considerations</h2>
+<div id="beta-values-binomially-distributed" class="section level3" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Beta values binomially distributed</h3>
+<p>Because beta values are a ratio, by their nature, they are not normally distributed data and should be treated appropriately. This means data models (like those used by the <code>limma</code> package) built for RNA-seq data should not be used on methylation data. More accurately, Beta values follow a binomial distribution.</p>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_0.png" width="100%" /></p>
+<p>This generally involves applying a generalized linear model.</p>
+</div>
+<div id="measuring-5mc-andor-5hmc" class="section level3" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> Measuring 5mC and/or 5hmC</h3>
+<p>If your data and questions are interested in both 5mC and 5hmC, you will have separate sequencing datasets for each sample for both the BS and OBS processed samples. 5mC is often a step toward 5hmC conversion and therefore the 5mC and 5hmC measurements are, by nature, not independent from each other. In theory, 5mC, 5hmC and unmethylated cytosines should add up to 1.</p>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_42.png" width="100%" /></p>
+<p>Because of this, its been proposed that the most appropriate way to model these data is to combine them together in a model <span class="citation">(<a href="#ref-Kochmanski2019" role="doc-biblioref">Kochmanski, Savonen, and Bernstein 2019</a>)</span>.</p>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_49.png" width="100%" /></p>
+</div>
+</div>
+<div id="methylation-data-workflow" class="section level2" number="13.4">
+<h2><span class="header-section-number">13.4</span> Methylation data workflow</h2>
+<p><img src="resources/images/10-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_5.png" title="In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. " alt="In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. " width="100%" /></p>
+<p>Like other sequencing methods, you will first need to start by quality control checks. Next, you will also need to align your sequences to the genome. Then, using the base calls, you will need to make methylation calls – which are methylated and which are not. This details of step depends on whether you are measuring 5mC and/or 5hmC methylation calls. Lastly, you will likely want to use your methylation calls as a whole to identify differentially methylated regions of interest.</p>
+</div>
+<div id="methylation-tools" class="section level2" number="13.5">
+<h2><span class="header-section-number">13.5</span> Methylation tools!</h2>
+<div id="quality-control-1" class="section level3" number="13.5.1">
+<h3><span class="header-section-number">13.5.1</span> Quality control</h3>
+<p>TODO: How should this be the same or different from general sequencing quality control checks?
+- <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FASTQC</a></p>
+</div>
+<div id="genome-alignment" class="section level3" number="13.5.2">
+<h3><span class="header-section-number">13.5.2</span> Genome Alignment</h3>
+<p>TODO: How should this be the same or different from general sequencing alignment?</p>
+</div>
+<div id="methylation-calls" class="section level3" number="13.5.3">
+<h3><span class="header-section-number">13.5.3</span> Methylation calls</h3>
+<p>TODO: What other packages/tools should be mentioned here?</p>
+<ul>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/methylKit.html">MethylKit</a> - <a href="https://compgenomr.github.io/book/data-filtering-and-exploratory-analysis.html" class="uri">https://compgenomr.github.io/book/data-filtering-and-exploratory-analysis.html</a></li>
+</ul>
+</div>
+<div id="find-regions-of-interest" class="section level3" number="13.5.4">
+<h3><span class="header-section-number">13.5.4</span> Find regions of interest!</h3>
+<p><a href="https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html" class="uri">https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html</a></p>
+</div>
+<div id="annotation-of-regions-of-interest" class="section level3" number="13.5.5">
+<h3><span class="header-section-number">13.5.5</span> Annotation of regions of interest</h3>
+<p>TODO: How does this differ from annotating genomic regions in general?</p>
+</div>
+</div>
+<div id="more-resources" class="section level2" number="13.6">
+<h2><span class="header-section-number">13.6</span> More resources</h2>
+<ul>
+<li><a href="https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/methylation-seq/tutorial.html">DNA methylation analysis with Galaxy tutorial</a></li>
+<li><a href="https://github.com/sartorlab/mint/blob/master/README.md">The mint pipeline</a> for analyzing methylation and hydroxymethylation data.</li>
+<li><a href="https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html">Book chapter about finding methylation regions of interest</a></li>
+</ul>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Booth2013" class="csl-entry">
+Booth, Michael J, Tobias W B Ost, Dario Beraldi, Neil M Bell, Miguel R Branco, Wolf Reik, and Shankar Balasubramanian. 2013. <span>“Oxidative Bisulfite Sequencing of 5-Methylcytosine and 5-Hydroxymethylcytosine.”</span> <em>Nature Protocols</em> 8 (10): 1841–51. <a href="https://doi.org/10.1038/nprot.2013.115">https://doi.org/10.1038/nprot.2013.115</a>.
+</div>
+<div id="ref-Kochmanski2019" class="csl-entry">
+Kochmanski, Joseph, Candace Savonen, and Alison I. Bernstein. 2019 10. <a href="https://doi.org/10.3389/fgene.2019.00801">https://doi.org/10.3389/fgene.2019.00801</a>.
+</div>
+<div id="ref-Yu2012" class="csl-entry">
+Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Peng Jin, Bing Ren, and Chuan He. 2012. <span>“Tet-Assisted Bisulfite Sequencing of 5-Hydroxymethylcytosine.”</span> <em>Nature Protocols</em> 7 (12): 2159–70. <a href="https://doi.org/10.1038/nprot.2012.137">https://doi.org/10.1038/nprot.2012.137</a>.
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chip-seq.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="general-data-analysis-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
