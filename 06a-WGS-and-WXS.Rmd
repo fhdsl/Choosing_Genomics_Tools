@@ -2,7 +2,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Whole Genome/Exome Sequencing Methods
+# Whole Genome/Exome Sequencing
 
 ## Learning Objectives
 
@@ -40,6 +40,7 @@ The main advantages of WGS include the ability to comprehensively analyze all re
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g138a6ce16b7_35_28")
 ```
 Some important considerations for WGS/WXS include:  
+
 - What genome you are studying and the size of this genome. Included in this considerations is whether this genome has been sequenced before and you will have a "reference" genome to compare your data against or whether you will have to make a reference genome yourself. [This bioinformatics resource](https://eriqande.github.io/eca-bioinf-handbook/alignment-of-sequence-data-to-a-reference-genome-and-associated-steps.html) provides a great overview of genome alignment.
 - The depth of coverage for sequencing is an important consideration. The typical recommendation for WGS coverage is 30x, but this is on the lower side and many researchers find it does not provide sufficient coverage compared to 50x. Illumina has an [infographic](https://www.illumina.com/content/dam/illumina-marketing/documents/techniques/wgs-wes-infographic-web.pdf) that explains this information
 - The tissue source and whether genetic alterations were introduced during processing are important. Fixation for formalin-fixed paraffin embedded (FFPE) can introduce mutations/genetic changes that will need to be accounted for during data analysis. [This page from Beckman](https://www.beckman.com/resources/technologies/next-generation-sequencing/challenges-with-ffpe-tissue-samples) addresses many of the questions researchers often have about utilizing FFPE samples for their sequencing studies.
@@ -48,6 +49,7 @@ Some important considerations for WGS/WXS include:
 ### Target enrichment techniques
 
 For WXS or other targeted sequencing specifically (so not relevant to WGS data), what methods were used to enrich for the targeted sequences? (Which is the entire exome in the case of general WXS) These methods are generally summarized into two major categories: Hybridization based and amplicon based enrichment.
+
     - [Hybridization based enrichment](https://www.paragongenomics.com/target-enrichment/). This includes a variety of widely used methods that we will broadly categorize in two groups: Array-based and In-solution:
       - [Array-based capture](https://en.wikipedia.org/wiki/Exome_sequencing#:~:text=Target%2Denrichment%20strategies-,Array%2Dbased%20capture,-In%2Dsolution%20capture) uses microarrays that have probes designed to bind to known coding sequences. Fragments that do not bind to these probes are washed away, leaving the sample with known coding sequences bound and ready for PCR amplification [@Hodges2007; @Turner2009].
       - [In-solution capture](https://en.wikipedia.org/wiki/Exome_sequencing#In-solution_capture) has become more popular in recent years because it [requires less sample DNA than array-base capture](https://sequencing.roche.com/global/en/article-listing/what-is-ngs-target-enrichment-and-why-is-it-important.html). To enrich for coding sequences, in-solution capture has a pool of custom probes that are designed to bind to the coding regions in the sample. Attached to these probes are beads which can be physically separated from DNA that is not bound to the probes (this should be the non-coding sequences) [@Mamanova2010].  
@@ -79,14 +81,18 @@ The following link provides the data analysis pipeline written by researchers in
 Here are many of the tools and resources used by researchers for analyzing WGS data.
 
 ## Data pre-processing tools
+
 In most cases, all of these tools will be used sequentially to prepare the data for downstream mutational and copy number variation (CNV) analysis.  
+
 - [Bedtools](https://bedtools.readthedocs.io/en/latest/) including the bamtofastq function, which is the first step in converting data off the sequencer to a usable format for downstream analysis
 - [Samtools](http://www.htslib.org/) including tools for converting fastq to BAM files while mapping genes to the genome, duplicate read marking, and sorting reads
 - [Picard2](https://broadinstitute.github.io/picard/) including tools to covert fastq to SAM files, filter files, create indices, mark read duplicates, sort files, and merge files
 - [GATK](https://gatk.broadinstitute.org/hc/en-us) is a comprehensive set of tools from the Broad Institute for analyzing many types of sequencing data. For pre-processing, the print read function is very beneficial for writing the reads from a BAM or SAM file that pass specific criteria to a new file
 
 ## Tools for somatic and germline variant identification  
+
 These tools are used to identify either somatic or germline mutations from a sequenced sample. Many researchers will often use a combination of these tools to narrow down only variants that are identified using a combination of these analysis algorithms. All of these mutation calling tools except SvABA can be used on both WGS and WXS data.
+
 - [Mutect2](https://gatk.broadinstitute.org/hc/en-us/articles/9570422171291-Mutect2) This is a beneficial variant calling tool with functions including using a "panel of normals" (samples provided by the user of many normal controls) to better compare disease samples to normal and filtering functions for samples with orientation bias artifacts (FFPE samples) called F1R2, which is explained in the link above.
 - [Varscan 2](https://varscan.sourceforge.net/) This is a helpful tool that utilizes a heuristic/statistic approach to variant calling. This means that it detects somatic CNAs (SCNAs) as deviations from the log-ratio of sequence coverage depth within a tumor–normal pair, and then quantify the deviations statistically. This approach is unique because it accounts for differences in read depth between the tumor and normal sample. Varscan 2 can also be used for identifying copy number alterations in tumor-normal pairs.
 - [MuSE](https://bioinformatics.mdanderson.org/public-software/muse/) This is a beneficial mutation calling tool when you have both tumor and normal datasets. [The Markov Substitution Model for Evolution](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1029-6) utilized in this tool models the evolution of the reference allele to the allelic composition of the tumor and normal tissue at each genomic locus.
@@ -100,13 +106,16 @@ Researchers may want to create a consensus file based on the mutation calls usin
 
 ## Tools for variant calling annotation  
 These are beneficial for providing functional meaning to the mutational hits identified above.  
+
 - [Annovar](https://annovar.openbioinformatics.org/en/latest/) This is a helpful tool for annotating, filtering, and combining the output data from the above tools. It can be used for gene-based, region-based, or filter-based annotations.
 - [GENCODE](https://www.gencodegenes.org/#) This tool can be used to identify and classify gene features in human and mouse genomes.
 - [dbSNP](https://www.ncbi.nlm.nih.gov/snp/) This is a resource to look up specific human single nucleotide variations, microsatellites, and small-scale insertions and deletions.
 - [Ensembl](https://uswest.ensembl.org/index.html) This resource is a genome browser for annotating genes from a wide variety of species.
 
 ## Tools for copy number variation analysis
+
 Similar to the mutation calling tools, many researchers will use several of these tools and investigate the overlapping hits seen with different copy number variant calling algorithms:  
+
 - [GATK](https://gatk.broadinstitute.org/hc/en-us/articles/360035531092--How-to-part-I-Sensitively-detect-copy-ratio-alterations-and-allelic-segments) GATK has a variety of tools that can be used to study changes in copy numbers of genes. This link provides a tutorial for how to use the tools.
 - [AscatNGS](https://www.crick.ac.uk/research/labs/peter-van-loo/software) These tools (allele-specific copy number analysis of tumors) are specific for WGS copy number variation analysis. They can be used to dissect allele-specific copy numbers of tumors by estimating and adjusting for tumor ploidy and nonaberrant cell admixture.  
 - [TitanCNA](https://github.com/gavinha/TitanCNA) This tool is used to analyze copy number variation and loss of heterozygosity at the subclonal level for both WGS and WXS data in tumors compared to matched normals. It accounts for mixtures of cell populations and estimates the proportion of cells harboring each event. The Ha lab has developed a [snakemake pipeline](https://github.com/gavinha/TitanCNA/tree/master/scripts/snakemake) to more easily use this tool. [Ha et al. published a paper describing this tool in detail here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4216928/)    
@@ -115,6 +124,7 @@ Similar to the mutation calling tools, many researchers will use several of thes
 
 ## Tools for data visualization
 These tools are often used in parallel to look at regions of the genome, develop plots, and create other relevant figures:  
+
 - [IGV](https://software.broadinstitute.org/software/igv/) IGV is an interactive tool used to easily visualize genomic data. It is available as a desktop application, web application, and JavaScript to embed in web pages. This application is very beneficial for visualizing both mutational and CNV data for WGS and WXS. IGV has many [tutorials on YouTube](https://www.youtube.com/channel/UCb5W5WqauDOwubZHb-IA_rA/featured) that are helpful for using the tool to its full potential.
 - [Maftools](https://www.bioconductor.org/packages/devel/bioc/vignettes/maftools/inst/doc/maftools.html) Maftools is an R package that can be used to create informative plots from your WGS data output. It has tools to import both VCF files and ANNOVAR output for data analysis.
 - [Prism](https://www.graphpad.com/scientific-software/prism/) Prism is a widely used tool in scientific research for organizing large datasets, generating plots, and creating readable figures. WGS or WXS data regarding mutations and CNV can be used as input for creating plots with this tool.
@@ -122,11 +132,13 @@ These tools are often used in parallel to look at regions of the genome, develop
 ## Resources for WGS
 
 Online tutorials:
+
 - [Galaxy tutorials](https://training.galaxyproject.org/training-material/topics/sequence-analysis/)
 - [NCI resources](https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing)
 - [Bioinformaticsdotca tutorial](https://bioinformaticsdotca.github.io/CAN_2021_module4_lab)
 
 Papers comparing analysis tools:
+
 - [@Hwang2019]
 - [@Naj2019]
 - [@He2020]
