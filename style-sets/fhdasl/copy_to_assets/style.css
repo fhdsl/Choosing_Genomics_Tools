@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Karla:400,400i,700,700i|Lora:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Arimo:400,400i,700,700i|Tinos:400,400i,700,700i&display=swap');
 
 p.caption {
   color: #777;
@@ -50,11 +50,11 @@ pre code {
 /*------------- Body and header text---------------- */
 
 .book.font-family-1 {
-  font-family: 'Karla', arial, sans-serif;
+  font-family: Arial, 'Arimo', sans-serif;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Lora', arial, sans-serif;
+  font-family: 'Times New Roman', 'Tinos', serif;
 }
 
 
@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
 }
 
 .title {
-  font-family: 'Lora';
+  font-family: 'Times New Roman', 'Tinos', serif;
   font-size: 4em !important;
   color: #1B365D;
   margin-top: 0.275em !important;
@@ -77,7 +77,7 @@ h1, h2, h3, h4 {
 }
 
 .subtitle {
-  font-family: 'Lora';
+  font-family: 'Times New Roman', 'Tinos', serif;
   color: #1B365D;
 }
 
@@ -142,7 +142,7 @@ color: #1B365D
 }
 
 .summary{
-  font-family: 'Karla', sans-serif;
+  font-family: Arial, 'Arimo', sans-serif;
 }
 
 /* all TOC list items, basically */
@@ -164,6 +164,24 @@ color: #1B365D
   border-left: solid 4px;
   border-color: #00C1D5;
   padding-left: 11px !important;
+}
+
+.trapezoid {
+  width: 132px;
+  text-align: center;
+  position: relative;
+    left: 10px;
+  border-right: 50px solid #ffb809;
+  border-bottom: 50px solid #dbdbdb;
+  border-left: 50px solid #b842ca;
+  box-sizing: content-box;
+}
+.trapezoid span {
+  position: absolute;
+  top: 8px;
+  bottom: 5px;
+  left: 5%;
+  color: #dbdbdb;
 }
 
 
@@ -246,12 +264,18 @@ li.appendix span, li.part span { /* for TOC part names */
   width: 50%;
 }
 
+.click_to_expand_block {
+    padding: 1em;
+    padding-top: .5em;
+    border: 1px grey;
+    background: #E8E8E8;
+    color: black;
+}
 
 /* Sidebar formating --------------------------------------------*/
 /* from r-pkgs.org*/
 
-div.notice, div.warning, div.github, div.dictionary, div.reflection {
-  border-style: solid;
+div.notice, div.warning, div.github, div.dictionary, div.reflection, div.question, div.ethics{
   padding: 1em;
   margin: 1em 0;
   padding-left: 100px;
@@ -259,45 +283,161 @@ div.notice, div.warning, div.github, div.dictionary, div.reflection {
   background-repeat: no-repeat;
 }
 
-div.notice{
+ div.motivations, div.question_box, div.data, div.money, div.plan, div.submit{
+  padding: 1em;
+  padding-left: 100px;
+  min-height: 55px;
+  background-repeat: no-repeat;
+}
+
+div.motivations{
+  background-size: 70px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/motivations.png");
+  display:flex;
+  align-items:center;
+}
+
+div.question_box{
+  background-size: 70px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/question_box.png");
+  display:flex;
+  align-items:center;
+}
+
+div.data{
+  background-size: 70px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/data.png");
+  display:flex;
+  align-items:center;
+}
+
+div.money{
+  background-size: 70px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/money.png");
+  display:flex;
+  align-items:center;
+}
+
+div.plan{
+  background-size: 70px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/plan.png");
+  display:flex;
+  align-items:center;
+}
+
+div.submit{
+  background-size: 70px;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/submit.png");
+  display:flex;
+  align-items:center;
+}
+
+div.question{
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-repeat: no-repeat;
+  background-image: url("../assets/box_images/question.png");
+  display:flex;
+  align-items:center;
   border: 4px #00C1D5;
+  border-style: solid;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.ethics{
+  background-size: 70px;
+  background-position: 15px center;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/justice.png");
+  border: 4px #b842ca;
+  border-style: solid;
+}
+
+
+div.notice{
   background-size: 70px;
   background-position: 15px center;
   background-color: #e8ebee;
   background-image: url("../assets/box_images/note.png");
+  border: 4px #00C1D5;
+  border-style: solid;
 }
 
 div.warning{
-  border: 4px #e0471c;
   background-size: 70px;
   background-position: 15px center;
   background-color: #e8ebee;
   background-image: url("../assets/box_images/warning.png");
+  border: 4px #e0471c;
+  border-style: solid;
 }
 
 div.github{
-  border: 4px #000000;
+
   background-size: 70px;
   background-position: 15px center;
   background-color: #e8ebee;
   background-image: url("../assets/box_images/github.png");
+  border: 4px #000000;
+  border-style: solid;
 }
 
+
 div.dictionary{
-  border: 4px #00C1D5;
   background-size: 70px;
   background-position: 15px center;
   background-color: #e8ebee;
   background-image: url("../assets/box_images/dictionary.png");
+  border: 4px black;
+  border-style: solid;
 }
 
+
+div.dictionary_long{
+  padding: 1em;
+  padding-top: 20px;
+  padding-left: 100px;
+  min-height: 180px;
+  background-size: 70px;
+  background-color: #e8ebee;
+  background-image: url("../assets/box_images/dictionary.png");
+  background-repeat: no-repeat;
+  background-position: top 70px left 20px;
+  border: 4px black;
+  border-style: solid;
+}
 div.reflection{
-  border: 4px #00C1D5;
   background-size: 90px;
   background-position: 15px center;
   background-color: #e8ebee;
   background-image: url("../assets/box_images/thinking_face.png");
+  border: 4px #00C1D5;
+  border-style: solid;
 }
+
+div.blackbox{
+  padding: 1em;
+  margin: 1em 0;
+  min-height: 120px;
+  border: 4px #000000;
+  border-style: solid;
+  outline: 5px solid #ffb808;
+}
+
 
 /* .book .book-body .page-wrapper .page-inner section.normal is needed
    to override the styles produced by gitbook, which are ridiculously
@@ -418,7 +558,7 @@ a.anchor:hover {
 /* Footer */
 
 .footer {
-  font-family: "Lora", serif;
+  font-family: 'Times New Roman', 'Tinos', serif;
   font-size: .85em;
   color: #193a5c;
 }
