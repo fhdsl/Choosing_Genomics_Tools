@@ -1,0 +1,50 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# Considerations for choosing tools
+
+## Learning Objectives
+
+```{r, fig.alt = "This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data ", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g21f6c5d3981_0_0")
+```
+
+In this course, we will introduce you to the fundamentals of various data types and give you advice about choosing tutorials and tools whenever possible. However, it is critical to note that there is no "one size fits all" when it comes to genomic data decisions. Instead, our goals are to equip you with the knowledge you need as well as the questions you need to ask yourself (or others) when making decisions about your genomics data.
+
+## Overview
+
+We will discuss the following considerations you should gather information and otherwise ponder when comparing one or more tools for your analysis:
+
+```{r, fig.alt = "Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? ", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g21f6c5d3981_0_0")
+```
+
+### Is this tool appropriate for your data type?
+
+
+### Is this tool appropriate for your scientific question?
+
+
+### Is this tool in an interface or programming language you feel comfortable with?
+
+
+### How much computing power do you have?
+
+
+### Are there benchmarking papers that compare this tool to other options?
+
+
+### Is the tool well documented and usable?
+
+
+
+## More resources
+
+- [A longer list of tools and resources can be found here](https://hutchdatascience.org/code_review/more_resources.html)
+
+- [DataTrail curriculum](https://datatrail-jhu.github.io/DataTrail/index.html)
+- [Introduction to Reproducibility](https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html)
+- [Advanced Reproducibility in Cancer Informatics](https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html)
+- [Computing in Cancer Informatics](https://jhudatascience.org/Computing_for_Cancer_Informatics/)
