@@ -5,6 +5,10 @@ ottrpal::set_knitr_image_path()
 
 # ATAC-Seq
 
+<div class = "warning">
+This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
 ## Learning Objectives
 
 ```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand the basics of ATAC-Seq data collection and processing workflow. Identify the next steps for your particular ATAC-Seq data. Formulate questions to ask about your ATAC-Seq data", out.width = "100%", echo = FALSE}
@@ -24,7 +28,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## ATAC-Seq general workflow overview
 
-A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means. 
+A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means.
 
 ###Data quality metrics:
 

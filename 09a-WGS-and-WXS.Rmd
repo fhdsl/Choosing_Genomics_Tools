@@ -4,6 +4,11 @@ ottrpal::set_knitr_image_path()
 
 # Whole Genome/Exome Sequencing
 
+<div class = "warning">
+This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
+
 ## Learning Objectives
 
 ```{r, fig.alt = "The learning objectives for this course are to: 1 Define the uses and applications of WGS/WXS 2 Describe the steps for generating WGS/WXS data 3 Understand the data analysis workflow for WGS/WXS", out.width = "100%", echo = FALSE}
