@@ -17,8 +17,8 @@ In this course, we will introduce you to the fundamentals of various data types 
 
 We will discuss the following considerations you should gather information and otherwise ponder when comparing one or more tools for your analysis:
 
-```{r, fig.alt = "Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? ", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g21f6c5d3981_0_0")
+```{r, fig.alt = "Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? ", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g21f6c5d3981_0_5")
 ```
 
 ### Is this tool appropriate for your data type?
@@ -47,17 +47,17 @@ Some tools require a lot more computing resources (or runtime) than others. For 
 
 ### Are there benchmarking papers that compare this tool to other options?
 
-Some tools and their algorithms have been more thoroughly examined and tested than others. And this doesn't always align to a tool's popularity. Seek out the literature and what studies have been done comparing this tool to others like it. Keep in mind the tool developer's own bias if the paper is coming directly from the group or individual who is the creator of the tool. Developers will be more likely to understand and know how to tweak parameters of their own tool properly, while not necessarily spending as much time testing and adjusting tools made by others. Thi concept has sometimes been called the ["Continental Breakfast Included"](https://www.biorxiv.org/content/10.1101/385534v4) concept.  
+Some tools and their algorithms have been more thoroughly examined and tested than others. And this doesn't always align to a tool's popularity. Seek out the literature and what studies have been done comparing this tool to others like it. Keep in mind the tool developer's own bias if the paper is coming directly from the group or individual who is the creator of the tool. Developers will be more likely to understand and know how to tweak parameters of their own tool properly, while not necessarily spending as much time testing and adjusting tools made by others. This concept has sometimes been called the ["Continental Breakfast Included"](https://www.biorxiv.org/content/10.1101/385534v4) concept.  
 
 ### Is the tool well documented and usable?
 
 Well documented and usable tools can be very powerful. Poorly documented tools which may lead to unknown parameters or other mishandling of the data if it has not been made clear by the tool developers and maintainers. Good understanding of what a tool is doing with the data you give it is perhaps more important than using fancy algorithms that are unclear. Not only does documentation and usability increase your ability to use a tool, but your analysis will be more reproducible if others can also understand the tools that you used.
 
-The existence of forums and user groups for particular tools, not only makes it a useful resource for you for analysis, troubleshooting and interpretation of your results, but it also indicates a particular drive for the tool to continue to be maintained and developed overtime. 
+The existence of forums and user groups for particular tools, not only makes it a useful resource for you for analysis, troubleshooting and interpretation of your results, but it also indicates a particular drive for the tool to continue to be maintained and developed overtime.
 
 ### Is the tool well maintained?
 
-If a tool is actively being maintained this will aid in the reproducibility of your results. Tools on GitHub (an opensource platform for software) or other repositories often indicate when latest updates to a tool were made. Ideally updates are being made regularly to the tool, but a lack of updates does not speak well for the future existance of the tool. A tool that is not well maintained or supported may deprecate and make it increasingly difficult if not possible to reproduce, re-run or further develop your analysis.
+If a tool is actively being maintained this will aid in the reproducibility of your results. Tools on GitHub (an open-source platform for software) or other repositories often indicate when latest updates to a tool were made. Ideally updates are being made regularly to the tool, but a lack of updates does not speak well for the future existence of the tool. A tool that is not well maintained or supported may deprecate and make it increasingly difficult if not possible to reproduce, re-run or further develop your analysis.
 
 ### Is the tool generally accepted by the field?
 
