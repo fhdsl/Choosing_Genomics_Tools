@@ -5,6 +5,10 @@ ottrpal::set_knitr_image_path()
 
 # Single-cell RNA-seq
 
+<div class = "warning">
+This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
 ## Learning Objectives
 
 ```{r, fig.alt = "This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data", out.width = "100%", echo = FALSE}

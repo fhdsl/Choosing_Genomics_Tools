@@ -5,6 +5,10 @@ ottrpal::set_knitr_image_path()
 
 # RNA Methods
 
+<div class = "warning">
+This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
 ## Learning Objectives
 
 ```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand the goals and data collection processes for gene expression assays. Compare and contrast the following methods: Bulk RNA-seq, Single cell RNA-seq, Gene expression microarrays", out.width = "100%", echo = FALSE}

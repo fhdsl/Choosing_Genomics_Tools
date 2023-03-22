@@ -1,3 +1,10 @@
+benchmarked
+benchmarking
+Biostar
+cheatsheets
+RStudio
+Tidyverse
+O'Reilly
 amplicon
 amplicons
 Amplicon
