@@ -28,3 +28,7 @@ The goal of ChIP-Seq is to....
 ## ChiP-seq analysis tools
 
 ## More resources about ChiP-seq data
+
+- [ARCHS4](https://maayanlab.cloud/archs4/) (All RNA-seq and ChIP-seq sample and signature search) is a resource that provides access to gene and transcript counts uniformly processed from all human and mouse RNA-seq experiments from GEO and SRA.
+- [UCSC Xena](http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with ChIP-seq data.
+- [Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv/) is a track-based browser for interactively exploring genomic data mapped to a reference genome.

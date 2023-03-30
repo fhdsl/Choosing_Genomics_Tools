@@ -170,6 +170,8 @@ ribo-minus-vs-poly-a-selection
 transcriptome-mapping
 abundance-measures
 rna-seq-downstream-analysis-tools
+visualization-gui-tools
+rna-seq-data-resources
 more-reading-about-rna-seq-data
 single-cell-rna-seq
 learning-objectives-11
@@ -182,6 +184,7 @@ quality-control
 checking-umis
 checking-for-doublets
 normalization-and-downstream-analyses
+visualization-gui-tools-1
 useful-tutorials
 useful-readings
 atac-seq
@@ -198,6 +201,7 @@ atac-seq-data-strengths
 atac-seq-data-limitations
 atac-seq-data-considerations
 atac-seq-analysis-tools
+online-visualization-tools
 more-resources-about-atac-seq-data
 chip-seq
 learning-objectives-13
@@ -223,6 +227,7 @@ find-regions-of-interest
 annotation-of-regions-of-interest
 more-resources-2
 genomic-tool-glossary
+archs4
 bioconductor
 notable-bioconductor-genomics-tools
 cancer-models
@@ -230,11 +235,14 @@ civic
 ctat
 deepphe
 genetic-cancer-risk-detector-garde
+genepattern
 gene-set-enrichment-analysis-gsea
 integrative-genomics-viewer-igv
 ndex
 multiassayexperiment
 opencravat
+pvactools
+tumordecon
 webmev
 xena
 questions-xena-can-help-you-answer-include
