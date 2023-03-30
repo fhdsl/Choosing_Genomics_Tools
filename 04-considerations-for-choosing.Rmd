@@ -43,7 +43,9 @@ If you are interested in learning to use command line, we have many resources an
 
 ### How much computing power do you have?
 
-Some tools require a lot more computing resources (or runtime) than others. For example, for RNA seq data alignment, traditional aligners that use the genome take an order of magnitude greater amount of time to run than quantifying transcripts with pseudo alignment based tools. However, depending on your
+Some tools require a lot more computing resources (or runtime) than others. Many institutions have cloud computing resources or high powered computing clusters for your use. [We'll recommend you to our Computing Course for more information about this](https://jhudatascience.org/Computing_for_Cancer_Informatics/computing-resources.html).
+
+But your computing budget access, and time allotment, may influence what tools you would like to use for a project. For example, for RNA seq data alignment, traditional aligners that use the genome take an order of magnitude greater amount of time to run than quantifying transcripts with pseudo alignment based tools. For many applications pseudoaligners are perfectly appropriate and efficient choices that can be run on a laptop. But if you prefer a traditional aligner because you are interested in something that is not detected by pseudosligners such as splice variants, then you may want to look into using some computing resources for this task. All these decisions need to be weighed in balance with each other. 
 
 ### Are there benchmarking papers that compare this tool to other options?
 

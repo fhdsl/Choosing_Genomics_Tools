@@ -109,6 +109,8 @@ These tools are used to identify either somatic or germline mutations from a seq
 
 Researchers may want to create a consensus file based on the mutation calls using multiple tools above. [OpenPBTA-analysis](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers) shows an open source code example of how you might compare and contrast different SNV caller's results.
 
+For researchers who prefer GUI based platforms: [Gene Pattern has a great set of variant based tutorials](https://www.genepattern.org/variant-and-copy-number-analysis#gsc.tab=0). GenePattern is an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data. 
+
 ## Tools for variant calling annotation  
 These are beneficial for providing functional meaning to the mutational hits identified above.  
 
@@ -116,6 +118,7 @@ These are beneficial for providing functional meaning to the mutational hits ide
 - [GENCODE](https://www.gencodegenes.org/#) This tool can be used to identify and classify gene features in human and mouse genomes.
 - [dbSNP](https://www.ncbi.nlm.nih.gov/snp/) This is a resource to look up specific human single nucleotide variations, microsatellites, and small-scale insertions and deletions.
 - [Ensembl](https://uswest.ensembl.org/index.html) This resource is a genome browser for annotating genes from a wide variety of species.
+- [pVACtools](http://www.pvactools.org) supports identification of altered peptides from different mechanisms, including point mutations, in-frame and frameshift insertions and deletions, and gene fusions.
 
 ## Tools for copy number variation analysis
 
@@ -130,6 +133,7 @@ Similar to the mutation calling tools, many researchers will use several of thes
 ## Tools for data visualization
 These tools are often used in parallel to look at regions of the genome, develop plots, and create other relevant figures:  
 
+- [OpenCRAVAT](https://run.opencravat.org) uses variation data in many popular variant file formats and its outputs are variant annotations and visualizations.
 - [IGV](https://software.broadinstitute.org/software/igv/) IGV is an interactive tool used to easily visualize genomic data. It is available as a desktop application, web application, and JavaScript to embed in web pages. This application is very beneficial for visualizing both mutational and CNV data for WGS and WXS. IGV has many [tutorials on YouTube](https://www.youtube.com/channel/UCb5W5WqauDOwubZHb-IA_rA/featured) that are helpful for using the tool to its full potential.
 - [Maftools](https://www.bioconductor.org/packages/devel/bioc/vignettes/maftools/inst/doc/maftools.html) Maftools is an R package that can be used to create informative plots from your WGS data output. It has tools to import both VCF files and ANNOVAR output for data analysis.
 - [Prism](https://www.graphpad.com/scientific-software/prism/) Prism is a widely used tool in scientific research for organizing large datasets, generating plots, and creating readable figures. WGS or WXS data regarding mutations and CNV can be used as input for creating plots with this tool.
