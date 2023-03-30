@@ -142,6 +142,24 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_80")
 ```
 
+- [ComplexHeatmap](https://bioconductor.org/packages/release/bioc/html/ComplexHeatmap.html#:~:text=Complex%20heatmaps%20are%20efficient%20to,and%20supports%20various%20annotation%20graphics.) is great for visualizations
+- [DESEq2](https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) and [edgeR](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html) are great for differential expression analyses.
+- [CTAT](https://github.com/NCIP/Trinity_CTAT/wiki) - Using RNA-seq as input, CTAT modules enable detection of mutations, fusion transcripts, copy number aberrations, cancer-specific splicing aberrations, and oncogenic viruses including insertions into the human genome.
+- [Gene Set Enrichment Analysis (GSEA)](https://www.gsea-msigdb.org/gsea/index.jsp) is a method to identify the coordinate activation or repression of groups of genes that share common biological functions, pathways, chromosomal locations, or regulation, thereby distinguishing even subtle differences between phenotypes or cellular states.
+- [Gene Pattern's RNA-seq tutorials](https://www.genepattern.org/rna-seq-analysis#gsc.tab=0) - an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data. 
+
+## Visualization GUI tools
+
+- [WebMeV](https://webmev.tm4.org) uniquely provides a user-friendly, intuitive, interactive interface to processed analytical data uses cloud-computing elasticity for computationally intensive analyses and is compatible with single cell or bulk RNA-seq input data.
+- [UCSC Xena](http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with single cell RNA-seq data.
+- [Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv/) is a track-based browser for interactively exploring genomic data mapped to a reference genome.
+- [Network Data Exchange (NDEx)](https://www.ndexbio.org/#/) is a project that provides an open-source framework where scientists and organizations can store, share and publish biological network knowledge.
+
+## RNA-seq data resources
+
+- [ARCHS4](https://maayanlab.cloud/archs4/) (All RNA-seq and ChIP-seq sample and signature search) is a resource that provides access to gene and transcript counts uniformly processed from all human and mouse RNA-seq experiments from GEO and SRA.
+- [Refine.bio](https://www.refine.bio/) - a repository of uniformly processed and normalized, ready-to-use transcriptome data from publicly available sources.
+
 ## More reading about RNA-seq data
 
 - [Refine.bio's introduction to RNA-seq](https://alexslemonade.github.io/refinebio-examples/03-rnaseq/00-intro-to-rnaseq.html)

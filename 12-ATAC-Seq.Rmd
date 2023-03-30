@@ -80,7 +80,12 @@ When using ATAC-seq data to answer biological questions it is important to under
 - [MACS - Model-based analysis for ChIP-Seq](https://macs3-project.github.io/MACS/) - A command line tool for the identification of transcription factor binding sites. Can be used with ChIP-seq or ATAC-seq.
 - [CHIPS](https://github.com/liulab-dfci/CHIPS) - A Snakemake pipeline for quality control and reproducible processing of chromatin profiling data. This tool will require some snakemake and coding knowledge. For more recommendations about coding see our later chapter about [general data analysis tools]().
 - [Cistrome DB](http://cistrome.org/db/#/) - a visual tool to allow you to browse your ATAC-seq data.
- - [SELMA - Simplex Encoded Linear Model for Accessible Chromatin](https://github.com/zang-lab/SELMA) - SELMA is a python based tool for the assessment of biases in Chromatin based data.  
+- [SELMA - Simplex Encoded Linear Model for Accessible Chromatin](https://github.com/zang-lab/SELMA) - SELMA is a python based tool for the assessment of biases in Chromatin based data.  
+
+## Online Visualization tools
+
+- [UCSC Xena](http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with ATAC-seq data.
+- [Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv/) is a track-based browser for interactively exploring genomic data mapped to a reference genome.
 
 ## More resources about ATAC-seq data
 

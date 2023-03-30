@@ -66,20 +66,15 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.
 
-
 Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the [scRNA-tools website](https://www.scrna-tools.org/table).
 
 ## Quantification/Alignment
-
-TODO: How to choose between different quantification tools
 
 - [Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)
 - [CellRanger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
 - [Kallisto bustools](https://www.kallistobus.tools/)
 
 ## Quality control
-
-TODO: More about considerations for quality control
 
 #### Checking UMIs
 
@@ -92,12 +87,18 @@ TODO: More about considerations for quality control
 
 ## Normalization and downstream analyses
 
-TODO: More about considerations for downstream analysis and normalization
-
+- [Gene Pattern's single cell RNA-seq tutorials](https://notebook.genepattern.org/single-cell/) - an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data. 
 - [Seurat](https://satijalab.org/seurat/)
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 - For normalization [scater](https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html)
 - [scanpy](https://scanpy.readthedocs.io/en/stable/)
+- [TumorDecon](https://people.math.umass.edu/~aronow/TumorDecon) can be used to generate customized signature matrices from single-cell RNA-sequence profiles. It is available on Github (https://github.com/ShahriyariLab/TumorDecon) and PyPI (https://pypi.org/project/TumorDecon/).
+
+## Visualization GUI tools
+
+- [WebMeV](https://webmev.tm4.org) uniquely provides a user-friendly, intuitive, interactive interface to processed analytical data uses cloud-computing elasticity for computationally intensive analyses and is compatible with single cell or bulk RNA-seq input data.
+- [UCSC Xena](http://xena.ucsc.edu/) is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with single cell RNA-seq data.
+- [Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv/) is a track-based browser for interactively exploring genomic data mapped to a reference genome.
 
 ## Useful tutorials
 
