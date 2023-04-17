@@ -100,7 +100,7 @@ This section has been written by AI and needs verification by experts. This is m
   - **Pros**: uses a deep learning approach to predict the likelihood of a genomic region being an ATAC-seq peak, can handle both paired-end and single-end sequencing data, has been shown to outperform other peak-calling tools in some cases.
   - **Cons**: may require more computational resources than other tools.
 
-## ATAC-seq analysis tools
+## Additional tutorials and tools
 
 - [A Galaxy based tutorial for ATAC-seq](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/tutorial.html) - Galaxy is a good recommendation for those new to informatics who would like a cloud-based GUI option to use for the analysis of their data.
 - [MACS - Model-based analysis for ChIP-Seq](https://macs3-project.github.io/MACS/) - A command line tool for the identification of transcription factor binding sites. Can be used with ChIP-seq or ATAC-seq.
