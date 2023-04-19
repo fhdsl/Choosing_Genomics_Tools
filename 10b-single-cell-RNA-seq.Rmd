@@ -43,7 +43,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ```
 
 ```{r, fig.alt = "Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_25")
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_30")
 ```
 
 (Material borrowed from [@AlexsLemonade2022]).
