@@ -32,7 +32,7 @@ Depending on your goals for your single cell RNA-seq analysis, you may want to c
 
 ![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png){width=100%}
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png){width=100%}
+![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_30.png){width=100%}
 
 (Material borrowed from [@AlexsLemonade2022]).
 
