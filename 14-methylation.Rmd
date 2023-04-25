@@ -67,14 +67,13 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 Like other sequencing methods, you will first need to start by quality control checks. Next, you will also need to align your sequences to the genome. Then, using the base calls, you will need to make methylation calls -- which are methylated and which are not. This details of step depends on whether you are measuring 5mC and/or 5hmC methylation calls. Lastly, you will likely want to use your methylation calls as a whole to identify differentially methylated regions of interest.
 
-## Methylation tools!
+## Methylation Tools Pros and Cons
 
-### Quality control
-TODO: How should this be the same or different from general sequencing quality control checks?
-- [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+<div class = "warning">
+This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+</div>
 
-### Genome Alignment
-TODO: How should this be the same or different from general sequencing alignment?
+### Quality control:
 
 - [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/): A popular tool for evaluating the quality of sequencing reads, generating various quality control plots and statistics. It is fast, easy to use and has a simple user interface [@andrews2010fastqc].
   - **Pros**: Fast and easy to use. Very commonly used. Provides various quality control metrics and plots. Can generate reports that can be easily shared with collaborators
@@ -84,7 +83,7 @@ TODO: How should this be the same or different from general sequencing alignment
   - **Pros**: Easy to use, with a simple command line interface. Automatically trims adapters and low-quality reads. Specifically designed for bisulfite sequencing data
   - **Cons**: Limited flexibility in terms of the trimming and filtering options. Does not provide quality control metrics or plots
 
-### Find regions of interest!
+### Analysis:
 
 - [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): A widely used tool for aligning bisulfite sequencing reads to a reference genome. It allows for paired-end and single-end reads, provides many options for handling sequencing errors and can output methylation calls in various formats [@liu2019bismark].
   - **Pros**: Performs alignment, quantification and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters

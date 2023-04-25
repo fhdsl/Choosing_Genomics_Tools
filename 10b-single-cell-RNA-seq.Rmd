@@ -38,7 +38,7 @@ There are broadly two categories of single-cell RNA-seq data methods we will dis
 
 Depending on your goals for your single cell RNA-seq analysis, you may want to choose one method over the other.
 
-```{r, fig.alt = "Full length single cell RNA-seq Pros: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive.", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Full length single cell RNA-seq **Pros**: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_25")
 ```
 
@@ -68,8 +68,20 @@ In a very general sense, single cell RNA-seq workflows involves first quantifica
 
 Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the [scRNA-tools website](https://www.scrna-tools.org/table).
 
-## Quantification/Alignment
+## Quantification and alignment tools
 
+<div class = "warning">
+This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+</div>
+
+- [STAR](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html):
+  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.
+  - **Cons**: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.
+
+- [HISAT2](http://daehwankimlab.github.io/hisat2/):
+  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.
+  - **Cons**: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.
+  
 <div class = "warning">
 This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
@@ -94,14 +106,20 @@ This following pros and cons sections have been written by AI and may need verif
   - **Pros**: Specifically designed for 10x Genomics scRNA-seq data, with optimized workflows for alignment and quantification. Provides read counts and gene-level expression values. Offers a streamlined pipeline with minimal input from the user.
   - **Cons**: Limited options for customizing parameters or analysis methods. May not be suitable for datasets from other scRNA-seq platforms.
 
-- [AlevinQC](https://bioconductor.org/packages/release/bioc/html/alevinQC.html)
 
-#### Checking for doublets
+## Downstream tools Pros and Cons
 
-- [scDblFinder](https://bioconductor.org/packages/release/bioc/html/scDblFinder.html)
-- [DoubletDetection](https://doubletdetection.readthedocs.io/en/stable/)
+- [Seurat](https://satijalab.org/seurat/):
+  - **Pros**: Has a wide range of functionalities for preprocessing, clustering, differential expression, and visualization. Can handle multiple modalities, including CITE-seq and ATAC-seq. Has a large and active user community, with extensive documentation and tutorials available.
+  - **Cons**: Can be computationally intensive, especially for large datasets. Requires some knowledge of R programming language.
 
-## Normalization and downstream analyses
+- [Scanpy](https://scanpy.readthedocs.io/en/stable/):
+  - **Pros**: Written in Python, a widely used programming language in bioinformatics. Has a user-friendly interface and extensive documentation. Offers a variety of preprocessing, clustering, and differential expression methods, as well as interactive visualizations.
+  - **Cons**: May not be as feature-rich as some other tools, such as Seurat. Does not yet support multiple modalities.
+
+- [Monocle](https://cole-trapnell-lab.github.io/monocle3/):
+  - **Pros**:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.
+  - **Cons**: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.
 
 - [Monocle](https://cole-trapnell-lab.github.io/monocle3/):
   - **Pros**:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.
@@ -129,7 +147,6 @@ It's important to note that no doublet detection method is perfect, and it's oft
 - [Gene Pattern's single cell RNA-seq tutorials](https://notebook.genepattern.org/single-cell/) - an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data.
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 - For normalization [scater](https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html)
-- [scanpy](https://scanpy.readthedocs.io/en/stable/)
 - [TumorDecon](https://people.math.umass.edu/~aronow/TumorDecon) can be used to generate customized signature matrices from single-cell RNA-sequence profiles. It is available on Github (https://github.com/ShahriyariLab/TumorDecon) and PyPI (https://pypi.org/project/TumorDecon/).
 
 ## Visualization GUI tools

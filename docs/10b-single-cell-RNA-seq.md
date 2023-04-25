@@ -52,30 +52,69 @@ In a very general sense, single cell RNA-seq workflows involves first quantifica
 
 Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the [scRNA-tools website](https://www.scrna-tools.org/table).
 
-## Quantification/Alignment
+## Quantification and alignment tools
 
-- [Alevin](https://salmon.readthedocs.io/en/latest/alevin.html)
-- [CellRanger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
+<div class = "warning">
+This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+</div>
+
+- [STAR](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html):
+  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.
+  - **Cons**: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.
+
+- [HISAT2](http://daehwankimlab.github.io/hisat2/):
+  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.
+  - **Cons**: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.
+
 - [Kallisto bustools](https://www.kallistobus.tools/)
+  - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.
+  - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
-## Quality control
+[Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html):
+  - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.
+  - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
-#### Checking UMIs
+- [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger):
+  - **Pros**: Specifically designed for 10x Genomics scRNA-seq data, with optimized workflows for alignment and quantification. Provides read counts and gene-level expression values. Offers a streamlined pipeline with minimal input from the user.
+  - **Cons**: Limited options for customizing parameters or analysis methods. May not be suitable for datasets from other scRNA-seq platforms.
+
+
+## Downstream tools Pros and Cons
+
+- [Seurat](https://satijalab.org/seurat/):
+  - **Pros**: Has a wide range of functionalities for preprocessing, clustering, differential expression, and visualization. Can handle multiple modalities, including CITE-seq and ATAC-seq. Has a large and active user community, with extensive documentation and tutorials available.
+  - **Cons**: Can be computationally intensive, especially for large datasets. Requires some knowledge of R programming language.
+
+- [Scanpy](https://scanpy.readthedocs.io/en/stable/):
+  - **Pros**: Written in Python, a widely used programming language in bioinformatics. Has a user-friendly interface and extensive documentation. Offers a variety of preprocessing, clustering, and differential expression methods, as well as interactive visualizations.
+  - **Cons**: May not be as feature-rich as some other tools, such as Seurat. Does not yet support multiple modalities.
+
+- [Monocle](https://cole-trapnell-lab.github.io/monocle3/):
+  - **Pros**:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.
+  - **Cons**: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.
+
+### Doublet Tool Pros and Cons
+
+- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder):
+  - **Pros**: Uses a machine learning approach to detect doublets based on transcriptome similarity. Can be used with a variety of scRNA-seq platforms. Offers a user-friendly interface and extensive documentation.
+  - **Cons**: Can be computationally intensive for large datasets. May require some knowledge of R programming language.
+
+- [Scrublet](https://github.com/swolock/scrublet):
+  - **Pros**: Uses a density-based approach to detect doublets based on barcode sharing. Fast and computationally efficient, making it suitable for large datasets. Offers a user-friendly interface and extensive documentation.
+  - **Cons**:May not be as accurate as other methods, especially for low-quality data. Limited to 10x Genomics data.
+
+- [DoubletDecon](https://github.com/EDePasquale/DoubletDecon):
+  - **Pros**: Uses a statistical approach to identify doublets based on the distribution of the number of unique molecular identifiers (UMIs) per cell. Can be used with different platforms and species. Offers a user-friendly interface and extensive documentation.
+  - **Cons**: May not be as accurate as other methods, especially for data with low sequencing depth or low cell numbers. Requires some knowledge of R programming language.
+
+It's important to note that no doublet detection method is perfect, and it's often a good idea to combine multiple methods to increase the accuracy of doublet identification. Additionally, manual inspection of the data is always recommended to confirm the presence or absence of doublets.
+
+## More scRNA-seq tools and tutorials  
 
 - [AlevinQC](https://bioconductor.org/packages/release/bioc/html/alevinQC.html)
-
-#### Checking for doublets
-
-- [scDblFinder](https://bioconductor.org/packages/release/bioc/html/scDblFinder.html)
-- [DoubletDetection](https://doubletdetection.readthedocs.io/en/stable/)
-
-## Normalization and downstream analyses
-
-- [Gene Pattern's single cell RNA-seq tutorials](https://notebook.genepattern.org/single-cell/) - an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data. 
-- [Seurat](https://satijalab.org/seurat/)
+- [Gene Pattern's single cell RNA-seq tutorials](https://notebook.genepattern.org/single-cell/) - an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data.
 - [Single Cell Genome Viewer](https://github.com/KrasnitzLab/SCGV)
 - For normalization [scater](https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html)
-- [scanpy](https://scanpy.readthedocs.io/en/stable/)
 - [TumorDecon](https://people.math.umass.edu/~aronow/TumorDecon) can be used to generate customized signature matrices from single-cell RNA-sequence profiles. It is available on Github (https://github.com/ShahriyariLab/TumorDecon) and PyPI (https://pypi.org/project/TumorDecon/).
 
 ## Visualization GUI tools
