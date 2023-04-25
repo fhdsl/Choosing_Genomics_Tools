@@ -5,7 +5,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# DNA Methods
+# DNA Methods Overview
 
 <div class = "warning">
 This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
