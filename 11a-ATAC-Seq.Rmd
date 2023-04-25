@@ -74,29 +74,29 @@ Read depth will impact ATAC-seq signal, but enzyme strength and conditions can a
 
 When using ATAC-seq data to answer biological questions it is important to understand what types of bias could impact the results. To ensure valid results the analysis needs to use appropriate statistical methods, ensure enough high quality ATAC-seq data is available, including controls, and possibly reframing the questions.
 
-## ATAC-seq tools pros and cons
+## ATAC-seq analysis tools
 
 <div class = "warning">
 This section has been written by AI and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
-- [MACS2](https://github.com/macs3-project/MACS):
+- [MACS2](https://github.com/macs3-project/MACS)[@zhang2008model]:
   - **Pros**: widely used, handles both paired-end and single-end sequencing data, allows for differential peak calling between different samples.
   - **Cons**: assumes that all peaks have the same shape, may not be as accurate as other peak-calling tools in some cases.
 
-- [HOMER](http://homer.ucsd.edu/homer/introduction/programs.html):
+- [HOMER](http://homer.ucsd.edu/homer/introduction/programs.html)[@heinz2010simple]:
   - **Pros**: includes tools for peak-calling, motif analysis, and annotation of nearby genes, user-friendly interface, handles both paired-end and single-end sequencing data.
   - **Cons**: may not be as accurate as other peak-calling tools in some cases.
 
-- [ATACseqQC](https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html):
+- [ATACseqQC](https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html)[@schep2017chromvar]:
   - **Pros:** provides several metrics and plots for evaluating data quality, identifies potential issues with data such as batch effects, sequencing depth, and library complexity.
   - **Cons**: does not perform peak-calling or downstream analysis.
 
-- [deeptools](https://deeptools.readthedocs.io/en/develop/):
+- [deeptools](https://deeptools.readthedocs.io/en/develop/)[@ramirez2016deeptools2]:
   - **Pros**: includes tools for normalization, visualization, and comparison of ATAC-seq data, generates heatmaps, profiles, and other plots for visualizing chromatin accessibility.
   - **Cons**: may require some programming skills to use effectively.
 
-- [DFilter](https://reggenlab.github.io/DFilter/tutorial.html):
+- [DFilter](https://reggenlab.github.io/DFilter/tutorial.html) [@ghavi2019highly]:
   - **Pros**: uses a deep learning approach to predict the likelihood of a genomic region being an ATAC-seq peak, can handle both paired-end and single-end sequencing data, has been shown to outperform other peak-calling tools in some cases.
   - **Cons**: may require more computational resources than other tools.
 

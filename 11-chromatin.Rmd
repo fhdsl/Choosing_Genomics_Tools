@@ -43,6 +43,12 @@ Therefore, understanding the mechanisms that regulate chromatin structure and fu
 - **Development**: Chromatin structure also plays an important role in the regulation of developmental processes, such as morphogenesis and organogenesis.
 - **Disease**: Dysregulation of chromatin structure and function is associated with a wide range of diseases, including cancer, neurodegenerative disorders, and developmental disorders.
 
+## Comparison of technologies
+
+```{r, fig.alt = "A table that compares all the technologies:", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g227d7dd1e08_0_5")
+```
+
 ### ATAC-seq:
 
 ATAC-seq (Assay for Transposase Accessible Chromatin using sequencing) is a technique that uses transposases to fragment DNA and insert sequencing adapters into accessible chromatin regions. The DNA fragments are then sequenced to identify regions of open chromatin. This technique is widely used to study the epigenetic regulation of gene expression.
@@ -102,8 +108,6 @@ ChIP-seq (Chromatin Immunoprecipitation sequencing) is a technique that uses ant
 - ChIP-seq requires a high amount of starting material and can be costly.
 - It can have a high level of background noise due to non-specific binding of antibodies.
 - It can be challenging to perform
-
-## Alternative approaches:
 
 ### CUT&RUN
 
