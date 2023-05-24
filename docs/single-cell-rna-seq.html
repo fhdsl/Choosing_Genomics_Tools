@@ -315,8 +315,9 @@ div.csl-indent {
 <li class="chapter" data-level="14.6" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-data-considerations"><i class="fa fa-check"></i><b>14.6</b> ATAC-Seq data considerations</a></li>
 <li class="chapter" data-level="14.7" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-tools-pros-and-cons"><i class="fa fa-check"></i><b>14.7</b> ATAC-seq tools pros and cons</a></li>
 <li class="chapter" data-level="14.8" data-path="atac-seq.html"><a href="atac-seq.html#additional-tutorials-and-tools"><i class="fa fa-check"></i><b>14.8</b> Additional tutorials and tools</a></li>
-<li class="chapter" data-level="14.9" data-path="atac-seq.html"><a href="atac-seq.html#online-visualization-tools"><i class="fa fa-check"></i><b>14.9</b> Online Visualization tools</a></li>
-<li class="chapter" data-level="14.10" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>14.10</b> More resources about ATAC-seq data</a></li>
+<li class="chapter" data-level="14.9" data-path="atac-seq.html"><a href="atac-seq.html#additional-tutorials-and-tools-1"><i class="fa fa-check"></i><b>14.9</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="14.10" data-path="atac-seq.html"><a href="atac-seq.html#online-visualization-tools"><i class="fa fa-check"></i><b>14.10</b> Online Visualization tools</a></li>
+<li class="chapter" data-level="14.11" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>14.11</b> More resources about ATAC-seq data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>15</b> ChIP-Seq</a>
 <ul>
@@ -342,10 +343,10 @@ div.csl-indent {
 <li class="chapter" data-level="16.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-tools-pros-and-cons"><i class="fa fa-check"></i><b>16.5</b> Methylation Tools Pros and Cons</a>
 <ul>
 <li class="chapter" data-level="16.5.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#quality-control"><i class="fa fa-check"></i><b>16.5.1</b> Quality control:</a></li>
-<li class="chapter" data-level="16.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#alignment-1"><i class="fa fa-check"></i><b>16.5.2</b> Alignment:</a></li>
+<li class="chapter" data-level="16.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>16.5.2</b> Analysis:</a></li>
 <li class="chapter" data-level="16.5.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-calling"><i class="fa fa-check"></i><b>16.5.3</b> Methylation calling:</a></li>
 <li class="chapter" data-level="16.5.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-quantification"><i class="fa fa-check"></i><b>16.5.4</b> Methylation quantification:</a></li>
-<li class="chapter" data-level="16.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>16.5.5</b> Analysis:</a></li>
+<li class="chapter" data-level="16.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis-1"><i class="fa fa-check"></i><b>16.5.5</b> Analysis:</a></li>
 </ul></li>
 <li class="chapter" data-level="16.6" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#more-resources-2"><i class="fa fa-check"></i><b>16.6</b> More resources</a></li>
 </ul></li>
@@ -468,17 +469,32 @@ div.csl-indent {
 <li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.</li>
 <li><strong>Cons</strong>: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.</li>
 </ul></li>
-<li><a href="https://www.kallistobus.tools/">Kallisto bustools</a>
+</ul>
+<div class="warning">
+<p>This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
+</div>
+<ul>
+<li><a href="https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html">STAR</a> <span class="citation">(<a href="#ref-dobin2013star" role="doc-biblioref">Dobin et al. 2013</a>)</span>:
+<ul>
+<li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.</li>
+<li><strong>Cons</strong>: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.</li>
+</ul></li>
+<li><a href="http://daehwankimlab.github.io/hisat2/">HISAT2</a> <span class="citation">(<a href="#ref-kim2015hisat" role="doc-biblioref">Kim, Langmead, and Salzberg 2015</a>)</span>:
+<ul>
+<li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.</li>
+<li><strong>Cons</strong>: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.</li>
+</ul></li>
+<li><a href="https://www.kallistobus.tools/">Kallisto bustools</a> <span class="citation">(<a href="#ref-bray2016near" role="doc-biblioref">Bray et al. 2016</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.</li>
 <li><strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</li>
 </ul></li>
 </ul>
-<p><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin/Salmon</a>:
+<p><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin/Salmon</a> <span class="citation">(<a href="#ref-patro2017salmon" role="doc-biblioref">Patro et al. 2017</a>)</span>:
 - <strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.
 - <strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</p>
 <ul>
-<li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cell Ranger</a>:
+<li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cell Ranger</a> <span class="citation">(<a href="#ref-zheng2017massively" role="doc-biblioref">Zheng et al. 2017</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Specifically designed for 10x Genomics scRNA-seq data, with optimized workflows for alignment and quantification. Provides read counts and gene-level expression values. Offers a streamlined pipeline with minimal input from the user.</li>
 <li><strong>Cons</strong>: Limited options for customizing parameters or analysis methods. May not be suitable for datasets from other scRNA-seq platforms.</li>
@@ -503,21 +519,26 @@ div.csl-indent {
 <li><strong>Pros</strong>:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.</li>
 <li><strong>Cons</strong>: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.</li>
 </ul></li>
+<li><a href="https://cole-trapnell-lab.github.io/monocle3/">Monocle</a>:
+<ul>
+<li><strong>Pros</strong>:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.</li>
+<li><strong>Cons</strong>: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.</li>
+</ul></li>
 </ul>
 <div id="doublet-tool-pros-and-cons" class="section level3" number="13.6.1">
 <h3><span class="header-section-number">13.6.1</span> Doublet Tool Pros and Cons</h3>
 <ul>
-<li><a href="https://github.com/chris-mcginnis-ucsf/DoubletFinder">DoubletFinder</a>:
+<li><a href="https://github.com/chris-mcginnis-ucsf/DoubletFinder">DoubletFinder</a><span class="citation">(<a href="#ref-mcginnis2020doubletfinder" role="doc-biblioref">McGinnis, Murrow, and Gartner 2020</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Uses a machine learning approach to detect doublets based on transcriptome similarity. Can be used with a variety of scRNA-seq platforms. Offers a user-friendly interface and extensive documentation.</li>
 <li><strong>Cons</strong>: Can be computationally intensive for large datasets. May require some knowledge of R programming language.</li>
 </ul></li>
-<li><a href="https://github.com/swolock/scrublet">Scrublet</a>:
+<li><a href="https://github.com/swolock/scrublet">Scrublet</a> <span class="citation">(<a href="#ref-wolock2019scrublet" role="doc-biblioref">Wolock, Krishnaswamy, and Huang 2019</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Uses a density-based approach to detect doublets based on barcode sharing. Fast and computationally efficient, making it suitable for large datasets. Offers a user-friendly interface and extensive documentation.</li>
 <li><strong>Cons</strong>:May not be as accurate as other methods, especially for low-quality data. Limited to 10x Genomics data.</li>
 </ul></li>
-<li><a href="https://github.com/EDePasquale/DoubletDecon">DoubletDecon</a>:
+<li><a href="https://github.com/EDePasquale/DoubletDecon">DoubletDecon</a> <span class="citation">(<a href="#ref-de2019doubletdecon" role="doc-biblioref">De Pasquale and Dudoit 2019</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Uses a statistical approach to identify doublets based on the distribution of the number of unique molecular identifiers (UMIs) per cell. Can be used with different platforms and species. Offers a user-friendly interface and extensive documentation.</li>
 <li><strong>Cons</strong>: May not be as accurate as other methods, especially for data with low sequencing depth or low cell numbers. Requires some knowledge of R programming language.</li>
@@ -584,14 +605,38 @@ Angerer, Philipp, Lukas Simon, Sophie Tritschler, F. Alexander Wolf, David Fisch
 <div id="ref-BaranGale2018" class="csl-entry">
 Baran-Gale, Jeanette, Tamir Chandra, and Kristina Kirschner. 2018. <span>“Experimental Design for Single-Cell <span>RNA</span> Sequencing.”</span> <em>Briefings in Functional Genomics</em> 17 (4): 233–39. <a href="https://doi.org/10.1093/bfgp/elx035">https://doi.org/10.1093/bfgp/elx035</a>.
 </div>
+<div id="ref-bray2016near" class="csl-entry">
+Bray, Nicolas L, Harold Pimentel, Páll Melsted, and Lior Pachter. 2016. <span>“Near-Optimal Probabilistic RNA-Seq Quantification.”</span> <em>Nature Biotechnology</em> 34 (5): 525–27. <a href="https://www.nature.com/articles/nbt.3519">https://www.nature.com/articles/nbt.3519</a>.
+</div>
 <div id="ref-Bruning2021" class="csl-entry">
 Brüning, Ralf Schulze, Lukas Tombor, Marcel H. Schulz, Stefanie Dimmeler, and David John. 2021. <span>“Comparative <span>Analysis</span> of Common Alignment Tools for Single Cell <span>RNA</span> Sequencing.”</span> bioRxiv. <a href="https://doi.org/10.1101/2021.02.15.430948">https://doi.org/10.1101/2021.02.15.430948</a>.
+</div>
+<div id="ref-de2019doubletdecon" class="csl-entry">
+De Pasquale, Elisa, and Sandrine Dudoit. 2019. <span>“DoubletDecon: Deconvoluting Doublets from Single-Cell RNA-Sequencing Data.”</span> <em>Cell Reports</em> 29 (6): 1718–1727. e8. <a href="https://www.sciencedirect.com/science/article/pii/S2211124719312860">https://www.sciencedirect.com/science/article/pii/S2211124719312860</a>.
+</div>
+<div id="ref-dobin2013star" class="csl-entry">
+Dobin, Alexander, Carrie A Davis, Felix Schlesinger, Jorg Drenkow, Chris Zaleski, Sonali Jha, Philippe Batut, Mark Chaisson, and Thomas R Gingeras. 2013. <span>“STAR: Ultrafast Universal RNA-Seq Aligner.”</span> <em>Bioinformatics</em> 29 (1): 15–21. <a href="https://academic.oup.com/bioinformatics/article/29/1/15/272537">https://academic.oup.com/bioinformatics/article/29/1/15/272537</a>.
+</div>
+<div id="ref-kim2015hisat" class="csl-entry">
+Kim, Daehwan, Ben Langmead, and Steven L Salzberg. 2015. <span>“HISAT: A Fast Spliced Aligner with Low Memory Requirements.”</span> <em>Nature Methods</em> 12 (4): 357–60. <a href="https://www.nature.com/articles/nmeth.3317">https://www.nature.com/articles/nmeth.3317</a>.
 </div>
 <div id="ref-Luecken2019" class="csl-entry">
 Luecken, Malte D, and Fabian J Theis. 2019. <span>“Current Best Practices in Single‐cell <span>RNA</span>‐seq Analysis: A Tutorial.”</span> <em>Molecular Systems Biology</em> 15 (6). <a href="https://doi.org/10.15252/msb.20188746">https://doi.org/10.15252/msb.20188746</a>.
 </div>
+<div id="ref-mcginnis2020doubletfinder" class="csl-entry">
+McGinnis, Christopher S, Lillian M Murrow, and Zev J Gartner. 2020. <span>“DoubletFinder: Doublet Detection in Single-Cell RNA Sequencing Data Using Artificial Nearest Neighbors.”</span> <em>Cell Systems</em> 8 (4): 329–337. e4. <a href="https://pubmed.ncbi.nlm.nih.gov/30954475/">https://pubmed.ncbi.nlm.nih.gov/30954475/</a>.
+</div>
+<div id="ref-patro2017salmon" class="csl-entry">
+Patro, Rob, Geet Duggal, Michael I Love, Rafael A Irizarry, and Carl Kingsford. 2017. <span>“Salmon Provides Fast and Bias-Aware Quantification of Transcript Expression.”</span> <em>Nature Methods</em> 14 (4): 417–19. <a href="https://pubmed.ncbi.nlm.nih.gov/28263959/">https://pubmed.ncbi.nlm.nih.gov/28263959/</a>.
+</div>
 <div id="ref-Smith2015" class="csl-entry">
 Smith, Tom. 2015. <span>“Unique Molecular Identifiers – the Problem, the Solution and the Proof.”</span> <em>CGAT</em>. <a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/">https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/</a>.
+</div>
+<div id="ref-wolock2019scrublet" class="csl-entry">
+Wolock, Samuel L, Smita Krishnaswamy, and B Jesse Huang. 2019. <span>“Scrublet: Computational Identification of Cell Doublets in Single-Cell Transcriptomic Data.”</span> <em>Cell Systems</em> 8 (4): 281–291. e9. <a href="https://pubmed.ncbi.nlm.nih.gov/30954476/">https://pubmed.ncbi.nlm.nih.gov/30954476/</a>.
+</div>
+<div id="ref-zheng2017massively" class="csl-entry">
+Zheng, Grace XY, Jessica M Terry, Phillip Belgrader, Paul Ryvkin, Zachary W Bent, Ryan Wilson, Solongo B Ziraldo, et al. 2017. <span>“Massively Parallel Digital Transcriptional Profiling of Single Cells.”</span> <em>Nature Communications</em> 8 (1): 1–12. <a href="https://www.nature.com/articles/ncomms14049">https://www.nature.com/articles/ncomms14049</a>.
 </div>
 </div>
 <hr>
