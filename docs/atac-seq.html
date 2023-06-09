@@ -315,8 +315,9 @@ div.csl-indent {
 <li class="chapter" data-level="14.6" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-data-considerations"><i class="fa fa-check"></i><b>14.6</b> ATAC-Seq data considerations</a></li>
 <li class="chapter" data-level="14.7" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-tools-pros-and-cons"><i class="fa fa-check"></i><b>14.7</b> ATAC-seq tools pros and cons</a></li>
 <li class="chapter" data-level="14.8" data-path="atac-seq.html"><a href="atac-seq.html#additional-tutorials-and-tools"><i class="fa fa-check"></i><b>14.8</b> Additional tutorials and tools</a></li>
-<li class="chapter" data-level="14.9" data-path="atac-seq.html"><a href="atac-seq.html#online-visualization-tools"><i class="fa fa-check"></i><b>14.9</b> Online Visualization tools</a></li>
-<li class="chapter" data-level="14.10" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>14.10</b> More resources about ATAC-seq data</a></li>
+<li class="chapter" data-level="14.9" data-path="atac-seq.html"><a href="atac-seq.html#additional-tutorials-and-tools-1"><i class="fa fa-check"></i><b>14.9</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="14.10" data-path="atac-seq.html"><a href="atac-seq.html#online-visualization-tools"><i class="fa fa-check"></i><b>14.10</b> Online Visualization tools</a></li>
+<li class="chapter" data-level="14.11" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>14.11</b> More resources about ATAC-seq data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>15</b> ChIP-Seq</a>
 <ul>
@@ -342,10 +343,10 @@ div.csl-indent {
 <li class="chapter" data-level="16.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-tools-pros-and-cons"><i class="fa fa-check"></i><b>16.5</b> Methylation Tools Pros and Cons</a>
 <ul>
 <li class="chapter" data-level="16.5.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#quality-control"><i class="fa fa-check"></i><b>16.5.1</b> Quality control:</a></li>
-<li class="chapter" data-level="16.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#alignment-1"><i class="fa fa-check"></i><b>16.5.2</b> Alignment:</a></li>
+<li class="chapter" data-level="16.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>16.5.2</b> Analysis:</a></li>
 <li class="chapter" data-level="16.5.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-calling"><i class="fa fa-check"></i><b>16.5.3</b> Methylation calling:</a></li>
 <li class="chapter" data-level="16.5.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-quantification"><i class="fa fa-check"></i><b>16.5.4</b> Methylation quantification:</a></li>
-<li class="chapter" data-level="16.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>16.5.5</b> Analysis:</a></li>
+<li class="chapter" data-level="16.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis-1"><i class="fa fa-check"></i><b>16.5.5</b> Analysis:</a></li>
 </ul></li>
 <li class="chapter" data-level="16.6" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#more-resources-2"><i class="fa fa-check"></i><b>16.6</b> More resources</a></li>
 </ul></li>
@@ -516,6 +517,39 @@ div.csl-indent {
 </div>
 <div id="additional-tutorials-and-tools" class="section level2" number="14.8">
 <h2><span class="header-section-number">14.8</span> Additional tutorials and tools</h2>
+<div class="warning">
+<p>This section has been written by AI and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
+</div>
+<ul>
+<li><a href="https://github.com/macs3-project/MACS">MACS2</a><span class="citation">(<a href="#ref-zhang2008model" role="doc-biblioref">Y. Zhang et al. 2008</a>)</span>:
+<ul>
+<li><strong>Pros</strong>: widely used, handles both paired-end and single-end sequencing data, allows for differential peak calling between different samples.</li>
+<li><strong>Cons</strong>: assumes that all peaks have the same shape, may not be as accurate as other peak-calling tools in some cases.</li>
+</ul></li>
+<li><a href="http://homer.ucsd.edu/homer/introduction/programs.html">HOMER</a><span class="citation">(<a href="#ref-heinz2010simple" role="doc-biblioref">Heinz et al. 2010</a>)</span>:
+<ul>
+<li><strong>Pros</strong>: includes tools for peak-calling, motif analysis, and annotation of nearby genes, user-friendly interface, handles both paired-end and single-end sequencing data.</li>
+<li><strong>Cons</strong>: may not be as accurate as other peak-calling tools in some cases.</li>
+</ul></li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html">ATACseqQC</a><span class="citation">(<a href="#ref-schep2017chromvar" role="doc-biblioref">Schep et al. 2017</a>)</span>:
+<ul>
+<li><strong>Pros:</strong> provides several metrics and plots for evaluating data quality, identifies potential issues with data such as batch effects, sequencing depth, and library complexity.</li>
+<li><strong>Cons</strong>: does not perform peak-calling or downstream analysis.</li>
+</ul></li>
+<li><a href="https://deeptools.readthedocs.io/en/develop/">deeptools</a><span class="citation">(<a href="#ref-ramirez2016deeptools2" role="doc-biblioref">Ramı́rez et al. 2016</a>)</span>:
+<ul>
+<li><strong>Pros</strong>: includes tools for normalization, visualization, and comparison of ATAC-seq data, generates heatmaps, profiles, and other plots for visualizing chromatin accessibility.</li>
+<li><strong>Cons</strong>: may require some programming skills to use effectively.</li>
+</ul></li>
+<li><a href="https://reggenlab.github.io/DFilter/tutorial.html">DFilter</a> <span class="citation">(<a href="#ref-ghavi2019highly" role="doc-biblioref">Ghavi-Helm et al. 2019</a>)</span>:
+<ul>
+<li><strong>Pros</strong>: uses a deep learning approach to predict the likelihood of a genomic region being an ATAC-seq peak, can handle both paired-end and single-end sequencing data, has been shown to outperform other peak-calling tools in some cases.</li>
+<li><strong>Cons</strong>: may require more computational resources than other tools.</li>
+</ul></li>
+</ul>
+</div>
+<div id="additional-tutorials-and-tools-1" class="section level2" number="14.9">
+<h2><span class="header-section-number">14.9</span> Additional tutorials and tools</h2>
 <ul>
 <li><a href="https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/tutorial.html">A Galaxy based tutorial for ATAC-seq</a> - Galaxy is a good recommendation for those new to informatics who would like a cloud-based GUI option to use for the analysis of their data.</li>
 <li><a href="https://macs3-project.github.io/MACS/">MACS - Model-based analysis for ChIP-Seq</a> - A command line tool for the identification of transcription factor binding sites. Can be used with ChIP-seq or ATAC-seq.</li>
@@ -524,15 +558,15 @@ div.csl-indent {
 <li><a href="https://github.com/zang-lab/SELMA">SELMA - Simplex Encoded Linear Model for Accessible Chromatin</a> - SELMA is a python based tool for the assessment of biases in Chromatin based data.</li>
 </ul>
 </div>
-<div id="online-visualization-tools" class="section level2" number="14.9">
-<h2><span class="header-section-number">14.9</span> Online Visualization tools</h2>
+<div id="online-visualization-tools" class="section level2" number="14.10">
+<h2><span class="header-section-number">14.10</span> Online Visualization tools</h2>
 <ul>
 <li><a href="http://xena.ucsc.edu/">UCSC Xena</a> is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with ATAC-seq data.</li>
 <li><a href="https://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a> is a track-based browser for interactively exploring genomic data mapped to a reference genome.</li>
 </ul>
 </div>
-<div id="more-resources-about-atac-seq-data" class="section level2" number="14.10">
-<h2><span class="header-section-number">14.10</span> More resources about ATAC-seq data</h2>
+<div id="more-resources-about-atac-seq-data" class="section level2" number="14.11">
+<h2><span class="header-section-number">14.11</span> More resources about ATAC-seq data</h2>
 <ul>
 <li><a href="https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/slides.html#1">ATAC-seq overview from Galaxy</a> - these slides explain the overarching concepts of ATAC-seq.</li>
 <li><a href="https://informatics.fas.harvard.edu/atac-seq-guidelines.html">ATAC seq guidelines from Harvard</a> - this workflow runs through step by step how to analysis ATAC-seq data and what different parameters mean.</li>
@@ -543,6 +577,24 @@ div.csl-indent {
 <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9492688/">SELMA Method for evaluating footprint bias in ATAC-seq</a></li>
 </ul>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-ghavi2019highly" class="csl-entry">
+Ghavi-Helm, Yad, Aleksander Jankowski, Sascha Meiers, Rebecca R Viales, Jan O Korbel, and Eileen EM Furlong. 2019. <span>“Highly Rearranged Chromosomes Reveal Uncoupling Between Genome Topology and Gene Expression.”</span> <em>Nature Genetics</em> 51 (8): 1272–82.
+</div>
+<div id="ref-heinz2010simple" class="csl-entry">
+Heinz, S, Christopher Benner, Nathanael Spann, Eric Bertolino, Yen Ching Lin, Petra Laslo, Jia Cheng, et al. 2010. <span>“Simple Combinations of Lineage-Determining Transcription Factors Prime Cis-Regulatory Elements Required for Macrophage and b Cell Identities.”</span> <em>Molecular Cell</em> 38 (4): 576–89. <a href="https://pubmed.ncbi.nlm.nih.gov/20513432/">https://pubmed.ncbi.nlm.nih.gov/20513432/</a>.
+</div>
+<div id="ref-ramirez2016deeptools2" class="csl-entry">
+Ramı́rez, Fidel, Devon P Ryan, Bjørn Grüning, Vivek Bhardwaj, Fabian Kilpert, Andreas S Richter, Steffen Heyne, et al. 2016. <span>“deepTools2: A Next Generation Web Server for Deep-Sequencing Data Analysis.”</span> <em>Nucleic Acids Research</em> 44 (W1): W160–65.
+</div>
+<div id="ref-schep2017chromvar" class="csl-entry">
+Schep, Alicia N, Bin Wu, Jason D Buenrostro, and William J Greenleaf. 2017. <span>“chromVAR: Inferring Transcription-Factor-Associated Accessibility from Single-Cell Epigenomic Data.”</span> <em>Nature Methods</em> 14 (10): 975–78. <a href="https://www.nature.com/articles/nmeth.4401">https://www.nature.com/articles/nmeth.4401</a>.
+</div>
+<div id="ref-zhang2008model" class="csl-entry">
+Zhang, Yong, Tao Liu, Clifford A Meyer, Jie Eeckhoute, David S Johnson, Bradley E Bernstein, Chad Nusbaum, et al. 2008. <span>“Model-Based Analysis of ChIP-Seq (MACS).”</span> <em>Genome Biology</em> 9 (9): R137. <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2008-9-9-r137">https://genomebiology.biomedcentral.com/articles/10.1186/gb-2008-9-9-r137</a>.
 </div>
 </div>
 <hr>

@@ -59,27 +59,27 @@ This following pros and cons sections have been written by AI and may need verif
 
 ### Quality control:
 
-- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/): A popular tool for evaluating the quality of sequencing reads, generating various quality control plots and statistics. It is fast, easy to use and has a simple user interface.
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/): A popular tool for evaluating the quality of sequencing reads, generating various quality control plots and statistics. It is fast, easy to use and has a simple user interface [@andrews2010fastqc].
   - **Pros**: Fast and easy to use. Very commonly used. Provides various quality control metrics and plots. Can generate reports that can be easily shared with collaborators
   - **Cons**: Does not perform any trimming or filtering of low-quality reads Not specifically designed for bisulfite sequencing data
 
-- [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/): A wrapper tool for Cutadapt and FastQC that provides a simple way to trim adapters and low-quality reads. It also has built-in support for bisulfite sequencing data.
+- [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/): A wrapper tool for Cutadapt and FastQC that provides a simple way to trim adapters and low-quality reads. It also has built-in support for bisulfite sequencing data [@krueger2015trim].
   - **Pros**: Easy to use, with a simple command line interface. Automatically trims adapters and low-quality reads. Specifically designed for bisulfite sequencing data
   - **Cons**: Limited flexibility in terms of the trimming and filtering options. Does not provide quality control metrics or plots
 
-### Alignment:
+### Analysis:
 
-- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): A widely used tool for aligning bisulfite sequencing reads to a reference genome. It allows for paired-end and single-end reads, provides many options for handling sequencing errors and can output methylation calls in various formats.
+- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): A widely used tool for aligning bisulfite sequencing reads to a reference genome. It allows for paired-end and single-end reads, provides many options for handling sequencing errors and can output methylation calls in various formats [@liu2019bismark].
   - **Pros**: Performs alignment, quantification and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters
   - **Cons**:Can be computationally intensive for large datasets. Requires a pre-built bisulfite-converted reference genome
 
-- [Bowtie2](https://github.com/BenLangmead/bowtie2): A fast and efficient aligner that can be used for bisulfite sequencing data, and can align reads to bisulfite-converted genomes or to an unconverted genome with a pre-built bisulfite index.
+- [Bowtie2](https://github.com/BenLangmead/bowtie2): A fast and efficient aligner that can be used for bisulfite sequencing data, and can align reads to bisulfite-converted genomes or to an unconverted genome with a pre-built bisulfite index [@langmead2012fast].
   - **Pros**: Very fast and efficient, making it suitable for large datasets. Can align reads to either a bisulfite-converted genome or to an unconverted genome with a pre-built bisulfite index. Provides options for handling sequencing errors and optimizing alignment parameters
   - **Cons**: Does not perform methylation calling or quantification
 
 ### Methylation calling:
 
-- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): As well as performing alignment, Bismark can also be used to call methylation from aligned reads. It reports the percentage of cytosines methylated at each site.
+- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): As well as performing alignment, Bismark can also be used to call methylation from aligned reads. It reports the percentage of cytosines methylated at each site [@liu2019bismark].
   - **Pros**: Performs both alignment and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters
   - **Cons**:Can be computationally intensive for large datasets. Requires a pre-built bisulfite-converted reference genome
 
@@ -89,19 +89,19 @@ This following pros and cons sections have been written by AI and may need verif
 
 ### Methylation quantification:
 
-- [MethylKit](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html): A popular tool for quantifying methylation levels from bisulfite sequencing data. It can handle various types of data and provides options for filtering out low-quality data and detecting differentially methylated regions.
+- [MethylKit](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html): A popular tool for quantifying methylation levels from bisulfite sequencing data. It can handle various types of data and provides options for filtering out low-quality data and detecting differentially methylated regions [@akalin2012methylome].
   - **Pros**: Provides various options for filtering out low-quality data and detecting differentially methylated regions. Can handle various types of data, including bisulfite sequencing and reduced representation bisulfite sequencing. Provides many visualization tools for analyzing methylation data
   - **Cons**: Can be computationally intensive for large datasets. Requires some knowledge of R programming language to use effectively
 
-- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): As well as methylation calling, Bismark can also quantify methylation levels at each cytosine site. It reports the number of methylated and unmethylated reads, as well as the percentage of methylation.
+- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): As well as methylation calling, Bismark can also quantify methylation levels at each cytosine site. It reports the number of methylated and unmethylated reads, as well as the percentage of methylation [@liu2019bismark].
 
 ### Analysis:
 
-- [DSS](http://www.bioconductor.org/packages/release/bioc/vignettes/DSS/inst/doc/DSS.html): A popular tool for identifying differentially methylated regions (DMRs) between groups of samples. It uses a statistical model to detect significant changes in methylation levels and reports DMRs with associated p-values.
+- [DSS](http://www.bioconductor.org/packages/release/bioc/vignettes/DSS/inst/doc/DSS.html): A popular tool for identifying differentially methylated regions (DMRs) between groups of samples. It uses a statistical model to detect significant changes in methylation levels and reports DMRs with associated p-values [@feng2014dss].
   - **Pros**: Uses a statistical model to identify differentially methylated regions between groups of samples. Provides various options for controlling false discovery rate and adjusting for multiple comparisons. Suitable for large datasets.
   - **Cons**: Requires some knowledge of statistical methods and programming language to use effectively. May not be suitable for smaller datasets or datasets with low coverage.
 
-- [MethylKit](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html): As well as methylation quantification, MethylKit can also be used for downstream analysis, such as clustering samples based on methylation patterns and performing functional annotation of differentially methylated regions.
+- [MethylKit](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html): As well as methylation quantification, MethylKit can also be used for downstream analysis, such as clustering samples based on methylation patterns and performing functional annotation of differentially methylated regions [@akalin2012methylome].
 
 ## More resources
 

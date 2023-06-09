@@ -81,16 +81,28 @@ This following pros and cons sections have been written by AI and may need verif
 - [HISAT2](http://daehwankimlab.github.io/hisat2/):
   - **Pros**: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.
   - **Cons**: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.
+  
+<div class = "warning">
+This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+</div>
 
-- [Kallisto bustools](https://www.kallistobus.tools/)
+- [STAR](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html) [@dobin2013star]:
+  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.
+  - **Cons**: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.
+
+- [HISAT2](http://daehwankimlab.github.io/hisat2/) [@kim2015hisat]:
+  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.
+  - **Cons**: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.
+
+- [Kallisto bustools](https://www.kallistobus.tools/) [@bray2016near]:
   - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.
   - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
-[Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html):
+[Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html) [@patro2017salmon]:
   - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.
   - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
-- [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger):
+- [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger) [@zheng2017massively]:
   - **Pros**: Specifically designed for 10x Genomics scRNA-seq data, with optimized workflows for alignment and quantification. Provides read counts and gene-level expression values. Offers a streamlined pipeline with minimal input from the user.
   - **Cons**: Limited options for customizing parameters or analysis methods. May not be suitable for datasets from other scRNA-seq platforms.
 
@@ -109,17 +121,21 @@ This following pros and cons sections have been written by AI and may need verif
   - **Pros**:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.
   - **Cons**: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.
 
+- [Monocle](https://cole-trapnell-lab.github.io/monocle3/):
+  - **Pros**:Focuses on trajectory analysis, allowing users to explore developmental trajectories and cell fate decisions. Has a user-friendly interface and extensive documentation. Can handle data from multiple platforms, including Smart-seq2 and Drop-seq.
+  - **Cons**: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.
+
 ### Doublet Tool Pros and Cons
 
-- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder):
+- [DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder)[@mcginnis2020doubletfinder]:
   - **Pros**: Uses a machine learning approach to detect doublets based on transcriptome similarity. Can be used with a variety of scRNA-seq platforms. Offers a user-friendly interface and extensive documentation.
   - **Cons**: Can be computationally intensive for large datasets. May require some knowledge of R programming language.
 
-- [Scrublet](https://github.com/swolock/scrublet):
+- [Scrublet](https://github.com/swolock/scrublet) [@wolock2019scrublet]:
   - **Pros**: Uses a density-based approach to detect doublets based on barcode sharing. Fast and computationally efficient, making it suitable for large datasets. Offers a user-friendly interface and extensive documentation.
   - **Cons**:May not be as accurate as other methods, especially for low-quality data. Limited to 10x Genomics data.
 
-- [DoubletDecon](https://github.com/EDePasquale/DoubletDecon):
+- [DoubletDecon](https://github.com/EDePasquale/DoubletDecon) [@de2019doubletdecon]:
   - **Pros**: Uses a statistical approach to identify doublets based on the distribution of the number of unique molecular identifiers (UMIs) per cell. Can be used with different platforms and species. Offers a user-friendly interface and extensive documentation.
   - **Cons**: May not be as accurate as other methods, especially for data with low sequencing depth or low cell numbers. Requires some knowledge of R programming language.
 

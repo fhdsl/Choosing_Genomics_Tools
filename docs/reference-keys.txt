@@ -201,6 +201,7 @@ atac-seq-data-limitations
 atac-seq-data-considerations
 atac-seq-tools-pros-and-cons
 additional-tutorials-and-tools
+additional-tutorials-and-tools-1
 online-visualization-tools
 more-resources-about-atac-seq-data
 chip-seq
@@ -221,10 +222,10 @@ measuring-5mc-andor-5hmc
 methylation-data-workflow
 methylation-tools-pros-and-cons
 quality-control
-alignment-1
+analysis
 methylation-calling
 methylation-quantification
-analysis
+analysis-1
 more-resources-2
 genomic-tool-glossary
 archs4

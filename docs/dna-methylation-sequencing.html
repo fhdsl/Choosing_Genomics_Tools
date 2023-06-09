@@ -315,8 +315,9 @@ div.csl-indent {
 <li class="chapter" data-level="14.6" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-data-considerations"><i class="fa fa-check"></i><b>14.6</b> ATAC-Seq data considerations</a></li>
 <li class="chapter" data-level="14.7" data-path="atac-seq.html"><a href="atac-seq.html#atac-seq-tools-pros-and-cons"><i class="fa fa-check"></i><b>14.7</b> ATAC-seq tools pros and cons</a></li>
 <li class="chapter" data-level="14.8" data-path="atac-seq.html"><a href="atac-seq.html#additional-tutorials-and-tools"><i class="fa fa-check"></i><b>14.8</b> Additional tutorials and tools</a></li>
-<li class="chapter" data-level="14.9" data-path="atac-seq.html"><a href="atac-seq.html#online-visualization-tools"><i class="fa fa-check"></i><b>14.9</b> Online Visualization tools</a></li>
-<li class="chapter" data-level="14.10" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>14.10</b> More resources about ATAC-seq data</a></li>
+<li class="chapter" data-level="14.9" data-path="atac-seq.html"><a href="atac-seq.html#additional-tutorials-and-tools-1"><i class="fa fa-check"></i><b>14.9</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="14.10" data-path="atac-seq.html"><a href="atac-seq.html#online-visualization-tools"><i class="fa fa-check"></i><b>14.10</b> Online Visualization tools</a></li>
+<li class="chapter" data-level="14.11" data-path="atac-seq.html"><a href="atac-seq.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>14.11</b> More resources about ATAC-seq data</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="chip-seq.html"><a href="chip-seq.html"><i class="fa fa-check"></i><b>15</b> ChIP-Seq</a>
 <ul>
@@ -342,10 +343,10 @@ div.csl-indent {
 <li class="chapter" data-level="16.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-tools-pros-and-cons"><i class="fa fa-check"></i><b>16.5</b> Methylation Tools Pros and Cons</a>
 <ul>
 <li class="chapter" data-level="16.5.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#quality-control"><i class="fa fa-check"></i><b>16.5.1</b> Quality control:</a></li>
-<li class="chapter" data-level="16.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#alignment-1"><i class="fa fa-check"></i><b>16.5.2</b> Alignment:</a></li>
+<li class="chapter" data-level="16.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>16.5.2</b> Analysis:</a></li>
 <li class="chapter" data-level="16.5.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-calling"><i class="fa fa-check"></i><b>16.5.3</b> Methylation calling:</a></li>
 <li class="chapter" data-level="16.5.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-quantification"><i class="fa fa-check"></i><b>16.5.4</b> Methylation quantification:</a></li>
-<li class="chapter" data-level="16.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>16.5.5</b> Analysis:</a></li>
+<li class="chapter" data-level="16.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis-1"><i class="fa fa-check"></i><b>16.5.5</b> Analysis:</a></li>
 </ul></li>
 <li class="chapter" data-level="16.6" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#more-resources-2"><i class="fa fa-check"></i><b>16.6</b> More resources</a></li>
 </ul></li>
@@ -459,27 +460,27 @@ div.csl-indent {
 <div id="quality-control" class="section level3" number="16.5.1">
 <h3><span class="header-section-number">16.5.1</span> Quality control:</h3>
 <ul>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>: A popular tool for evaluating the quality of sequencing reads, generating various quality control plots and statistics. It is fast, easy to use and has a simple user interface.
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>: A popular tool for evaluating the quality of sequencing reads, generating various quality control plots and statistics. It is fast, easy to use and has a simple user interface <span class="citation">(<a href="#ref-andrews2010fastqc" role="doc-biblioref">Andrews, n.d.</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Fast and easy to use. Very commonly used. Provides various quality control metrics and plots. Can generate reports that can be easily shared with collaborators</li>
 <li><strong>Cons</strong>: Does not perform any trimming or filtering of low-quality reads Not specifically designed for bisulfite sequencing data</li>
 </ul></li>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">Trim Galore!</a>: A wrapper tool for Cutadapt and FastQC that provides a simple way to trim adapters and low-quality reads. It also has built-in support for bisulfite sequencing data.
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">Trim Galore!</a>: A wrapper tool for Cutadapt and FastQC that provides a simple way to trim adapters and low-quality reads. It also has built-in support for bisulfite sequencing data <span class="citation">(<a href="#ref-krueger2015trim" role="doc-biblioref">Krueger and Andrews, n.d.</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Easy to use, with a simple command line interface. Automatically trims adapters and low-quality reads. Specifically designed for bisulfite sequencing data</li>
 <li><strong>Cons</strong>: Limited flexibility in terms of the trimming and filtering options. Does not provide quality control metrics or plots</li>
 </ul></li>
 </ul>
 </div>
-<div id="alignment-1" class="section level3" number="16.5.2">
-<h3><span class="header-section-number">16.5.2</span> Alignment:</h3>
+<div id="analysis" class="section level3" number="16.5.2">
+<h3><span class="header-section-number">16.5.2</span> Analysis:</h3>
 <ul>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/bismark/">Bismark</a>: A widely used tool for aligning bisulfite sequencing reads to a reference genome. It allows for paired-end and single-end reads, provides many options for handling sequencing errors and can output methylation calls in various formats.
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/bismark/">Bismark</a>: A widely used tool for aligning bisulfite sequencing reads to a reference genome. It allows for paired-end and single-end reads, provides many options for handling sequencing errors and can output methylation calls in various formats <span class="citation">(<a href="#ref-liu2019bismark" role="doc-biblioref">Liu et al. 2019</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Performs alignment, quantification and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters</li>
 <li><strong>Cons</strong>:Can be computationally intensive for large datasets. Requires a pre-built bisulfite-converted reference genome</li>
 </ul></li>
-<li><a href="https://github.com/BenLangmead/bowtie2">Bowtie2</a>: A fast and efficient aligner that can be used for bisulfite sequencing data, and can align reads to bisulfite-converted genomes or to an unconverted genome with a pre-built bisulfite index.
+<li><a href="https://github.com/BenLangmead/bowtie2">Bowtie2</a>: A fast and efficient aligner that can be used for bisulfite sequencing data, and can align reads to bisulfite-converted genomes or to an unconverted genome with a pre-built bisulfite index <span class="citation">(<a href="#ref-langmead2012fast" role="doc-biblioref">Langmead and Salzberg 2012</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Very fast and efficient, making it suitable for large datasets. Can align reads to either a bisulfite-converted genome or to an unconverted genome with a pre-built bisulfite index. Provides options for handling sequencing errors and optimizing alignment parameters</li>
 <li><strong>Cons</strong>: Does not perform methylation calling or quantification</li>
@@ -489,7 +490,7 @@ div.csl-indent {
 <div id="methylation-calling" class="section level3" number="16.5.3">
 <h3><span class="header-section-number">16.5.3</span> Methylation calling:</h3>
 <ul>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/bismark/">Bismark</a>: As well as performing alignment, Bismark can also be used to call methylation from aligned reads. It reports the percentage of cytosines methylated at each site.
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/bismark/">Bismark</a>: As well as performing alignment, Bismark can also be used to call methylation from aligned reads. It reports the percentage of cytosines methylated at each site <span class="citation">(<a href="#ref-liu2019bismark" role="doc-biblioref">Liu et al. 2019</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Performs both alignment and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters</li>
 <li><strong>Cons</strong>:Can be computationally intensive for large datasets. Requires a pre-built bisulfite-converted reference genome</li>
@@ -504,23 +505,23 @@ div.csl-indent {
 <div id="methylation-quantification" class="section level3" number="16.5.4">
 <h3><span class="header-section-number">16.5.4</span> Methylation quantification:</h3>
 <ul>
-<li><a href="https://www.bioconductor.org/packages/release/bioc/html/methylKit.html">MethylKit</a>: A popular tool for quantifying methylation levels from bisulfite sequencing data. It can handle various types of data and provides options for filtering out low-quality data and detecting differentially methylated regions.
+<li><a href="https://www.bioconductor.org/packages/release/bioc/html/methylKit.html">MethylKit</a>: A popular tool for quantifying methylation levels from bisulfite sequencing data. It can handle various types of data and provides options for filtering out low-quality data and detecting differentially methylated regions <span class="citation">(<a href="#ref-akalin2012methylome" role="doc-biblioref">Akalin et al. 2012</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Provides various options for filtering out low-quality data and detecting differentially methylated regions. Can handle various types of data, including bisulfite sequencing and reduced representation bisulfite sequencing. Provides many visualization tools for analyzing methylation data</li>
 <li><strong>Cons</strong>: Can be computationally intensive for large datasets. Requires some knowledge of R programming language to use effectively</li>
 </ul></li>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/bismark/">Bismark</a>: As well as methylation calling, Bismark can also quantify methylation levels at each cytosine site. It reports the number of methylated and unmethylated reads, as well as the percentage of methylation.</li>
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/bismark/">Bismark</a>: As well as methylation calling, Bismark can also quantify methylation levels at each cytosine site. It reports the number of methylated and unmethylated reads, as well as the percentage of methylation <span class="citation">(<a href="#ref-liu2019bismark" role="doc-biblioref">Liu et al. 2019</a>)</span>.</li>
 </ul>
 </div>
-<div id="analysis" class="section level3" number="16.5.5">
+<div id="analysis-1" class="section level3" number="16.5.5">
 <h3><span class="header-section-number">16.5.5</span> Analysis:</h3>
 <ul>
-<li><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/DSS/inst/doc/DSS.html">DSS</a>: A popular tool for identifying differentially methylated regions (DMRs) between groups of samples. It uses a statistical model to detect significant changes in methylation levels and reports DMRs with associated p-values.
+<li><a href="http://www.bioconductor.org/packages/release/bioc/vignettes/DSS/inst/doc/DSS.html">DSS</a>: A popular tool for identifying differentially methylated regions (DMRs) between groups of samples. It uses a statistical model to detect significant changes in methylation levels and reports DMRs with associated p-values <span class="citation">(<a href="#ref-feng2014dss" role="doc-biblioref">Feng and Conneely 2016</a>)</span>.
 <ul>
 <li><strong>Pros</strong>: Uses a statistical model to identify differentially methylated regions between groups of samples. Provides various options for controlling false discovery rate and adjusting for multiple comparisons. Suitable for large datasets.</li>
 <li><strong>Cons</strong>: Requires some knowledge of statistical methods and programming language to use effectively. May not be suitable for smaller datasets or datasets with low coverage.</li>
 </ul></li>
-<li><a href="https://www.bioconductor.org/packages/release/bioc/html/methylKit.html">MethylKit</a>: As well as methylation quantification, MethylKit can also be used for downstream analysis, such as clustering samples based on methylation patterns and performing functional annotation of differentially methylated regions.</li>
+<li><a href="https://www.bioconductor.org/packages/release/bioc/html/methylKit.html">MethylKit</a>: As well as methylation quantification, MethylKit can also be used for downstream analysis, such as clustering samples based on methylation patterns and performing functional annotation of differentially methylated regions <span class="citation">(<a href="#ref-akalin2012methylome" role="doc-biblioref">Akalin et al. 2012</a>)</span>.</li>
 </ul>
 </div>
 </div>
@@ -536,11 +537,29 @@ div.csl-indent {
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-akalin2012methylome" class="csl-entry">
+Akalin, Altuna, Matthias Kormaksson, Sheng Li, Francine E Garrett-Bakelman, Maria E Figueroa, Ari Melnick, and Christopher E Mason. 2012. <span>“methylKit: A Comprehensive r Package for the Analysis of Genome-Wide DNA Methylation Profiles.”</span> <em>Genome Biology</em> 13 (10): R87. <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-10-r87">https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-10-r87</a>.
+</div>
+<div id="ref-andrews2010fastqc" class="csl-entry">
+Andrews, Simon. n.d. <span>“FastQC: A Quality Control Tool for High Throughput Sequence Data.”</span> <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/</a>.
+</div>
 <div id="ref-Booth2013" class="csl-entry">
 Booth, Michael J, Tobias W B Ost, Dario Beraldi, Neil M Bell, Miguel R Branco, Wolf Reik, and Shankar Balasubramanian. 2013. <span>“Oxidative Bisulfite Sequencing of 5-Methylcytosine and 5-Hydroxymethylcytosine.”</span> <em>Nature Protocols</em> 8 (10): 1841–51. <a href="https://doi.org/10.1038/nprot.2013.115">https://doi.org/10.1038/nprot.2013.115</a>.
 </div>
+<div id="ref-feng2014dss" class="csl-entry">
+Feng, Hui, and Karen N Conneely. 2016. <span>“Differential Methylation Analysis for BS-Seq Data Under General Experimental Design.”</span> <em>Bioinformatics</em> 32 (2): 289–91. <a href="https://pubmed.ncbi.nlm.nih.gov/26819470/">https://pubmed.ncbi.nlm.nih.gov/26819470/</a>.
+</div>
 <div id="ref-Kochmanski2019" class="csl-entry">
 Kochmanski, Joseph, Candace Savonen, and Alison I. Bernstein. 2019 10. <a href="https://doi.org/10.3389/fgene.2019.00801">https://doi.org/10.3389/fgene.2019.00801</a>.
+</div>
+<div id="ref-krueger2015trim" class="csl-entry">
+Krueger, Felix, and Simon R Andrews. n.d. <span>“Trim Galore!: A Wrapper Tool Around Cutadapt and FastQC to Consistently Apply Quality and Adapter Trimming to FastQ Files.”</span> <a href="https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/">https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/</a>.
+</div>
+<div id="ref-langmead2012fast" class="csl-entry">
+Langmead, Ben, and Steven L Salzberg. 2012. <span>“Fast Gapped-Read Alignment with Bowtie 2.”</span> <em>Nature Methods</em> 9 (4): 357–59. <a href="https://www.nature.com/articles/nmeth.1923">https://www.nature.com/articles/nmeth.1923</a>.
+</div>
+<div id="ref-liu2019bismark" class="csl-entry">
+Liu, Yi, Kimberly D Siegmund, Peter W Laird, and Benjamin P Berman. 2019. <span>“Bismark: A Flexible Aligner and Methylation Caller for Bisulfite-Seq Applications.”</span> <em>Bioinformatics</em> 36 (22-23): 5280–82. <a href="https://academic.oup.com/bioinformatics/article/27/11/1571/216956">https://academic.oup.com/bioinformatics/article/27/11/1571/216956</a>.
 </div>
 <div id="ref-Yu2012" class="csl-entry">
 Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Peng Jin, Bing Ren, and Chuan He. 2012. <span>“Tet-Assisted Bisulfite Sequencing of 5-Hydroxymethylcytosine.”</span> <em>Nature Protocols</em> 7 (12): 2159–70. <a href="https://doi.org/10.1038/nprot.2012.137">https://doi.org/10.1038/nprot.2012.137</a>.
