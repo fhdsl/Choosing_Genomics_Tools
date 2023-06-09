@@ -1,6 +1,6 @@
 ---
 title: "Choosing Genomics Tools"
-date: "May, 2023"
+date: "June, 2023"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
