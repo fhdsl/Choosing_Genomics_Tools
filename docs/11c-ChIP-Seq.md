@@ -13,7 +13,6 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## What are the goals of ChIP-Seq analysis?
 
-The goal of ChIP-Seq is to....
 
 ![](resources/images/11c-ChIP-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_18.png){width=100%}
 
