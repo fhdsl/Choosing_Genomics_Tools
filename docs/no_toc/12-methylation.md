@@ -1,0 +1,110 @@
+
+
+
+# DNA Methylation Sequencing
+
+<div class = "warning">
+This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
+## Learning Objectives
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" title="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" alt="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" width="100%" />
+
+## What are the goals of analyzing DNA methylation?
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_10.png" width="100%" />
+
+To detect methylated cytosines (5mC), DNA samples are prepped using bisulfite (BS) conversion. This converts unmethylated cytosines into uracils and leaves methylated cytosines untouched. Probes are then designed to bind to either the uracil or the cytosine, representing the unmethylated and methylated cytosines respectively.
+
+For a given sample, you will obtain a fraction, known as the Beta value, that indicates the relative abundance of the methylated and unmethylated versions of the sequence. Beta values exist then on a scale of 0 to 1 where 0 indicates none of this particular base is methylated in the sample and 1 indicates all are methylated.
+
+Note that bisulfite conversion alone will not distinguish between 5mC and 5hmC though these often may indicate different biological mechanics.
+
+Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxidative bisulfite sequencing (OxBS) [@Booth2013. oxidative bisulfite conversion measures both 5mC and 5hmC. If you want to identify 5hmC bases you either have to pair oxBS data with BS data OR you have to use Tet-assisted bisulfite (TAB) sequencing which will exclusively tag 5hmC bases [@Yu2012].
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_35.png" width="100%" />
+
+## Methylation data considerations
+
+### Beta values binomially distributed
+
+Because beta values are a ratio, by their nature, they are not normally distributed data and should be treated appropriately. This means data models (like those used by the `limma` package) built for RNA-seq data should not be used on methylation data. More accurately, Beta values follow a binomial distribution.
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_0.png" width="100%" />
+
+This generally involves applying a generalized linear model.
+
+### Measuring 5mC and/or 5hmC
+
+If your data and questions are interested in both 5mC and 5hmC, you will have separate sequencing datasets for each sample for both the BS and OBS processed samples. 5mC is often a step toward 5hmC conversion and therefore the 5mC and 5hmC measurements are, by nature, not independent from each other. In theory, 5mC, 5hmC and unmethylated cytosines should add up to 1.
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_42.png" width="100%" />
+
+Because of this, its been proposed that the most appropriate way to model these data is to combine them together in a model [@Kochmanski2019].
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_49.png" width="100%" />
+
+## Methylation data workflow
+
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_5.png" title="In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. " alt="In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. " width="100%" />
+
+Like other sequencing methods, you will first need to start by quality control checks. Next, you will also need to align your sequences to the genome. Then, using the base calls, you will need to make methylation calls -- which are methylated and which are not. This details of step depends on whether you are measuring 5mC and/or 5hmC methylation calls. Lastly, you will likely want to use your methylation calls as a whole to identify differentially methylated regions of interest.
+
+## Methylation Tools Pros and Cons
+
+<div class = "warning">
+This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+</div>
+
+### Quality control:
+
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/): A popular tool for evaluating the quality of sequencing reads, generating various quality control plots and statistics. It is fast, easy to use and has a simple user interface [@andrews2010fastqc].
+  - **Pros**: Fast and easy to use. Very commonly used. Provides various quality control metrics and plots. Can generate reports that can be easily shared with collaborators
+  - **Cons**: Does not perform any trimming or filtering of low-quality reads Not specifically designed for bisulfite sequencing data
+
+- [Trim Galore!](https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/): A wrapper tool for Cutadapt and FastQC that provides a simple way to trim adapters and low-quality reads. It also has built-in support for bisulfite sequencing data [@krueger2015trim].
+  - **Pros**: Easy to use, with a simple command line interface. Automatically trims adapters and low-quality reads. Specifically designed for bisulfite sequencing data
+  - **Cons**: Limited flexibility in terms of the trimming and filtering options. Does not provide quality control metrics or plots
+
+### Analysis:
+
+- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): A widely used tool for aligning bisulfite sequencing reads to a reference genome. It allows for paired-end and single-end reads, provides many options for handling sequencing errors and can output methylation calls in various formats [@liu2019bismark].
+  - **Pros**: Performs alignment, quantification and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters
+  - **Cons**:Can be computationally intensive for large datasets. Requires a pre-built bisulfite-converted reference genome
+
+- [Bowtie2](https://github.com/BenLangmead/bowtie2): A fast and efficient aligner that can be used for bisulfite sequencing data, and can align reads to bisulfite-converted genomes or to an unconverted genome with a pre-built bisulfite index [@langmead2012fast].
+  - **Pros**: Very fast and efficient, making it suitable for large datasets. Can align reads to either a bisulfite-converted genome or to an unconverted genome with a pre-built bisulfite index. Provides options for handling sequencing errors and optimizing alignment parameters
+  - **Cons**: Does not perform methylation calling or quantification
+
+### Methylation calling:
+
+- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): As well as performing alignment, Bismark can also be used to call methylation from aligned reads. It reports the percentage of cytosines methylated at each site [@liu2019bismark].
+  - **Pros**: Performs both alignment and methylation calling in a single tool. Can output methylation calls in various formats. Provides many options for handling sequencing errors and optimizing methylation calling parameters
+  - **Cons**:Can be computationally intensive for large datasets. Requires a pre-built bisulfite-converted reference genome
+
+- [MethylDackel](https://github.com/dpryan79/MethylDackel): A fast and efficient tool for methylation calling from bisulfite sequencing data. It can output methylation calls in various formats, including a methylation bedGraph.
+  - **Pros**: Very fast and efficient, making it suitable for large datasets. Provides options for handling sequencing errors and optimizing methylation calling parameters. Can output methylation calls in various formats, including a methylation bedGraph
+  - **Cons**:Does not perform alignment or methylation quantification
+
+### Methylation quantification:
+
+- [MethylKit](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html): A popular tool for quantifying methylation levels from bisulfite sequencing data. It can handle various types of data and provides options for filtering out low-quality data and detecting differentially methylated regions [@akalin2012methylome].
+  - **Pros**: Provides various options for filtering out low-quality data and detecting differentially methylated regions. Can handle various types of data, including bisulfite sequencing and reduced representation bisulfite sequencing. Provides many visualization tools for analyzing methylation data
+  - **Cons**: Can be computationally intensive for large datasets. Requires some knowledge of R programming language to use effectively
+
+- [Bismark](https://www.bioinformatics.babraham.ac.uk/projects/bismark/): As well as methylation calling, Bismark can also quantify methylation levels at each cytosine site. It reports the number of methylated and unmethylated reads, as well as the percentage of methylation [@liu2019bismark].
+
+### Analysis:
+
+- [DSS](http://www.bioconductor.org/packages/release/bioc/vignettes/DSS/inst/doc/DSS.html): A popular tool for identifying differentially methylated regions (DMRs) between groups of samples. It uses a statistical model to detect significant changes in methylation levels and reports DMRs with associated p-values [@feng2014dss].
+  - **Pros**: Uses a statistical model to identify differentially methylated regions between groups of samples. Provides various options for controlling false discovery rate and adjusting for multiple comparisons. Suitable for large datasets.
+  - **Cons**: Requires some knowledge of statistical methods and programming language to use effectively. May not be suitable for smaller datasets or datasets with low coverage.
+
+- [MethylKit](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html): As well as methylation quantification, MethylKit can also be used for downstream analysis, such as clustering samples based on methylation patterns and performing functional annotation of differentially methylated regions [@akalin2012methylome].
+
+## More resources
+
+- [DNA methylation analysis with Galaxy tutorial](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/methylation-seq/tutorial.html)
+- [The mint pipeline](https://github.com/sartorlab/mint/blob/master/README.md) for analyzing methylation and hydroxymethylation data.
+- [Book chapter about finding methylation regions of interest](https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html)
