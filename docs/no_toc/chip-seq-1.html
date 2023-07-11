@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 18 ChIP-Seq | Choosing Genomics Tools</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 18 ChIP-Seq | Choosing Genomics Tools" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 18 ChIP-Seq | Choosing Genomics Tools" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="single-cell-atac-seq-1.html"/>
+<link rel="next" href="dna-methylation-sequencing.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+  <html>
+  
+  <head>
+  <title>Chapter 18 ChIP-Seq | Title</title>
+  </head>
+  
+  <body>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-QWJXTLJBQ7');
+  </script>
+      
+  </body>
+  </html>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style_ITN.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.itcrtraining.org/"><img src="assets/ITN_logo.png" style="padding-left: 15px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#available-course-formats"><i class="fa fa-check"></i><b>0.1</b> Available course formats</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.1</b> Target Audience</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.2</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.3</b> Motivation</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#how-to-use-the-course"><i class="fa fa-check"></i><b>1.5</b> How to use the course</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html"><i class="fa fa-check"></i><b>2</b> A Very General Genomics Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+<li class="chapter" data-level="2.1.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.1.3</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="2.1.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.1.4</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.2</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.2.1</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="what-are-metadata.html"><a href="what-are-metadata.html"><i class="fa fa-check"></i><b>3</b> What are Metadata?</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="what-are-metadata.html"><a href="what-are-metadata.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#what-are-metadata-1"><i class="fa fa-check"></i><b>3.2</b> What are metadata?</a></li>
+<li class="chapter" data-level="3.3" data-path="what-are-metadata.html"><a href="what-are-metadata.html#how-to-create-metadata"><i class="fa fa-check"></i><b>3.3</b> How to create metadata?</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="what-are-metadata.html"><a href="what-are-metadata.html#the-goals-in-creating-your-metadata"><i class="fa fa-check"></i><b>3.3.1</b> The goals in creating your metadata:</a></li>
+<li class="chapter" data-level="3.3.2" data-path="what-are-metadata.html"><a href="what-are-metadata.html#to-recap"><i class="fa fa-check"></i><b>3.3.2</b> To recap:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html"><i class="fa fa-check"></i><b>4</b> Considerations for choosing tools</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#overview"><i class="fa fa-check"></i><b>4.2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-this-tool-appropriate-for-your-data-type"><i class="fa fa-check"></i><b>4.2.1</b> Is this tool appropriate for your data type?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-this-tool-appropriate-for-your-scientific-question"><i class="fa fa-check"></i><b>4.2.2</b> Is this tool appropriate for your scientific question?</a></li>
+<li class="chapter" data-level="4.2.3" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-this-tool-in-an-interface-or-programming-language-you-feel-comfortable-with"><i class="fa fa-check"></i><b>4.2.3</b> Is this tool in an interface or programming language you feel comfortable with?</a></li>
+<li class="chapter" data-level="4.2.4" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#how-much-computing-power-do-you-have"><i class="fa fa-check"></i><b>4.2.4</b> How much computing power do you have?</a></li>
+<li class="chapter" data-level="4.2.5" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#are-there-benchmarking-papers-that-compare-this-tool-to-other-options"><i class="fa fa-check"></i><b>4.2.5</b> Are there benchmarking papers that compare this tool to other options?</a></li>
+<li class="chapter" data-level="4.2.6" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-the-tool-well-documented-and-usable"><i class="fa fa-check"></i><b>4.2.6</b> Is the tool well documented and usable?</a></li>
+<li class="chapter" data-level="4.2.7" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-the-tool-well-maintained"><i class="fa fa-check"></i><b>4.2.7</b> Is the tool well maintained?</a></li>
+<li class="chapter" data-level="4.2.8" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-the-tool-generally-accepted-by-the-field"><i class="fa fa-check"></i><b>4.2.8</b> Is the tool generally accepted by the field?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#coming-to-a-decision"><i class="fa fa-check"></i><b>4.3</b> Coming to a decision</a></li>
+<li class="chapter" data-level="4.4" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#more-resources"><i class="fa fa-check"></i><b>4.4</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html"><i class="fa fa-check"></i><b>5</b> General Data Analysis Tools</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#command-line-vs-gui"><i class="fa fa-check"></i><b>5.2</b> Command Line vs GUI</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#bash"><i class="fa fa-check"></i><b>5.2.1</b> Bash</a></li>
+<li class="chapter" data-level="5.2.2" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#r"><i class="fa fa-check"></i><b>5.2.2</b> R</a></li>
+<li class="chapter" data-level="5.2.3" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#python"><i class="fa fa-check"></i><b>5.2.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#more-resources-1"><i class="fa fa-check"></i><b>5.3</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sequencing-data.html"><a href="sequencing-data.html"><i class="fa fa-check"></i><b>6</b> Sequencing Data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sequencing-data.html"><a href="sequencing-data.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="sequencing-data.html"><a href="sequencing-data.html#how-does-sequencing-work"><i class="fa fa-check"></i><b>6.2</b> How does sequencing work?</a></li>
+<li class="chapter" data-level="6.3" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-concepts"><i class="fa fa-check"></i><b>6.3</b> Sequencing concepts</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="sequencing-data.html"><a href="sequencing-data.html#inherent-biases"><i class="fa fa-check"></i><b>6.3.1</b> Inherent biases</a></li>
+<li class="chapter" data-level="6.3.2" data-path="sequencing-data.html"><a href="sequencing-data.html#pcr-amplification"><i class="fa fa-check"></i><b>6.3.2</b> PCR Amplification</a></li>
+<li class="chapter" data-level="6.3.3" data-path="sequencing-data.html"><a href="sequencing-data.html#depth-of-coverage"><i class="fa fa-check"></i><b>6.3.3</b> Depth of coverage</a></li>
+<li class="chapter" data-level="6.3.4" data-path="sequencing-data.html"><a href="sequencing-data.html#quality-controls"><i class="fa fa-check"></i><b>6.3.4</b> Quality controls</a></li>
+<li class="chapter" data-level="6.3.5" data-path="sequencing-data.html"><a href="sequencing-data.html#alignment"><i class="fa fa-check"></i><b>6.3.5</b> Alignment</a></li>
+<li class="chapter" data-level="6.3.6" data-path="sequencing-data.html"><a href="sequencing-data.html#single-end-vs-paired-end"><i class="fa fa-check"></i><b>6.3.6</b> Single End vs Paired End</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="sequencing-data.html"><a href="sequencing-data.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>6.4</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-file-formats-1"><i class="fa fa-check"></i><b>6.4.1</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="6.4.2" data-path="sequencing-data.html"><a href="sequencing-data.html#other-files-1"><i class="fa fa-check"></i><b>6.4.2</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="microarray-data.html"><a href="microarray-data.html"><i class="fa fa-check"></i><b>7</b> Microarray Data</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="microarray-data.html"><a href="microarray-data.html#learning-objectives-5"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="microarray-data.html"><a href="microarray-data.html#summary-of-microarrays"><i class="fa fa-check"></i><b>7.2</b> Summary of microarrays</a></li>
+<li class="chapter" data-level="7.3" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>7.3</b> How do microarrays work?</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="microarray-data.html"><a href="microarray-data.html#pros"><i class="fa fa-check"></i><b>7.3.1</b> Pros:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="microarray-data.html"><a href="microarray-data.html#cons"><i class="fa fa-check"></i><b>7.3.2</b> Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>7.4</b> What types of arrays are there?</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>7.4.1</b> SNP arrays</a></li>
+<li class="chapter" data-level="7.4.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>7.4.2</b> Gene expression arrays</a></li>
+<li class="chapter" data-level="7.4.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>7.4.3</b> DNA methylation arrays</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="microarray-data.html"><a href="microarray-data.html#general-processing-of-microarray-data"><i class="fa fa-check"></i><b>7.5</b> General processing of microarray data</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="microarray-data.html"><a href="microarray-data.html#examples-2"><i class="fa fa-check"></i><b>7.5.1</b> Examples</a></li>
+<li class="chapter" data-level="7.5.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-platforms"><i class="fa fa-check"></i><b>7.5.2</b> Microarray Platforms</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="microarray-data.html"><a href="microarray-data.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>7.6</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="microarray-data.html"><a href="microarray-data.html#microarray-file-formats-1"><i class="fa fa-check"></i><b>7.6.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="microarray-data.html"><a href="microarray-data.html#general-informatics-files-1"><i class="fa fa-check"></i><b>7.7</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="microarray-data.html"><a href="microarray-data.html#other-files-2"><i class="fa fa-check"></i><b>7.7.1</b> Other files</a></li>
+<li class="chapter" data-level="7.7.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-processing-tutorials"><i class="fa fa-check"></i><b>7.7.2</b> Microarray processing tutorials:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="annotating-genomes.html"><a href="annotating-genomes.html"><i class="fa fa-check"></i><b>8</b> Annotating Genomes</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#learning-objectives-6"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-reference-genomes"><i class="fa fa-check"></i><b>8.2</b> What are reference genomes?</a></li>
+<li class="chapter" data-level="8.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-genome-versions"><i class="fa fa-check"></i><b>8.3</b> What are genome versions?</a></li>
+<li class="chapter" data-level="8.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-the-different-files"><i class="fa fa-check"></i><b>8.4</b> What are the different files?</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#how-to-download-annotation-files"><i class="fa fa-check"></i><b>8.4.1</b> How to download annotation files</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="annotating-genomes.html"><a href="annotating-genomes.html#considerations-for-annotating-genomic-data"><i class="fa fa-check"></i><b>8.5</b> Considerations for annotating genomic data</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#make-sure-you-have-the-right-file-to-start"><i class="fa fa-check"></i><b>8.5.1</b> Make sure you have the right file to start!</a></li>
+<li class="chapter" data-level="8.5.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-consistent-in-your-annotations"><i class="fa fa-check"></i><b>8.5.2</b> Be consistent in your annotations</a></li>
+<li class="chapter" data-level="8.5.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-clear-in-your-write-ups"><i class="fa fa-check"></i><b>8.5.3</b> Be clear in your write ups!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="annotating-genomes.html"><a href="annotating-genomes.html#resources-you-will-need-for-annotation"><i class="fa fa-check"></i><b>8.6</b> Resources you will need for annotation!</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#annotation-databases"><i class="fa fa-check"></i><b>8.6.1</b> Annotation databases</a></li>
+<li class="chapter" data-level="8.6.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#gui-based-annotation-tools"><i class="fa fa-check"></i><b>8.6.2</b> GUI based annotation tools</a></li>
+<li class="chapter" data-level="8.6.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#command-line-based-tools"><i class="fa fa-check"></i><b>8.6.3</b> Command line based tools</a></li>
+<li class="chapter" data-level="8.6.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#more-resources-about-genome-annotation"><i class="fa fa-check"></i><b>8.6.4</b> More resources about genome annotation</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Specific Data Types</b></span></li>
+<li class="chapter" data-level="9" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html"><i class="fa fa-check"></i><b>9</b> DNA Methods Overview</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#learning-objectives-7"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-are-the-goals-of-analyzing-dna-sequences"><i class="fa fa-check"></i><b>9.2</b> What are the goals of analyzing DNA sequences?</a></li>
+<li class="chapter" data-level="9.3" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#comparison-of-dna-methods"><i class="fa fa-check"></i><b>9.3</b> Comparison of DNA methods</a></li>
+<li class="chapter" data-level="9.4" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#how-to-choose-a-dna-sequencing-method"><i class="fa fa-check"></i><b>9.4</b> How to choose a DNA sequencing method</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-regions-of-the-genome-pertain-to-your-research-question"><i class="fa fa-check"></i><b>9.4.1</b> 1. What region(s) of the genome pertain to your research question?</a></li>
+<li class="chapter" data-level="9.4.2" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-does-your-project-budget-allow-for"><i class="fa fa-check"></i><b>9.4.2</b> 2. What does your project budget allow for?</a></li>
+<li class="chapter" data-level="9.4.3" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-is-your-detection-power-for-these-variants"><i class="fa fa-check"></i><b>9.4.3</b> 3. What is your detection power for these variants?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#strengths-and-weaknesses-of-different-methods"><i class="fa fa-check"></i><b>9.5</b> Strengths and Weaknesses of different methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html"><i class="fa fa-check"></i><b>10</b> Whole Genome/Exome Sequencing</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#learning-objectives-8"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#wgs-and-wgs-overview"><i class="fa fa-check"></i><b>10.2</b> WGS and WGS Overview</a></li>
+<li class="chapter" data-level="10.3" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#advantages-and-disadvantages-of-wgs-vs-wxs"><i class="fa fa-check"></i><b>10.3</b> Advantages and Disadvantages of WGS vs WXS</a></li>
+<li class="chapter" data-level="10.4" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#wgswxs-considerations"><i class="fa fa-check"></i><b>10.4</b> WGS/WXS Considerations</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#target-enrichment-techniques"><i class="fa fa-check"></i><b>10.4.1</b> Target enrichment techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#dna-sequencing-pipeline-overview"><i class="fa fa-check"></i><b>10.5</b> DNA Sequencing Pipeline Overview</a></li>
+<li class="chapter" data-level="10.6" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#data-pre-processing"><i class="fa fa-check"></i><b>10.6</b> Data Pre-processing</a></li>
+<li class="chapter" data-level="10.7" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#commonly-used-tools"><i class="fa fa-check"></i><b>10.7</b> Commonly Used Tools</a></li>
+<li class="chapter" data-level="10.8" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#data-pre-processing-tools"><i class="fa fa-check"></i><b>10.8</b> Data pre-processing tools</a></li>
+<li class="chapter" data-level="10.9" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-somatic-and-germline-variant-identification"><i class="fa fa-check"></i><b>10.9</b> Tools for somatic and germline variant identification</a></li>
+<li class="chapter" data-level="10.10" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-variant-calling-annotation"><i class="fa fa-check"></i><b>10.10</b> Tools for variant calling annotation</a></li>
+<li class="chapter" data-level="10.11" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-copy-number-variation-analysis"><i class="fa fa-check"></i><b>10.11</b> Tools for copy number variation analysis</a></li>
+<li class="chapter" data-level="10.12" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#tools-for-data-visualization"><i class="fa fa-check"></i><b>10.12</b> Tools for data visualization</a></li>
+<li class="chapter" data-level="10.13" data-path="whole-genomeexome-sequencing.html"><a href="whole-genomeexome-sequencing.html#resources-for-wgs"><i class="fa fa-check"></i><b>10.13</b> Resources for WGS</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html"><i class="fa fa-check"></i><b>11</b> RNA Methods Overview</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#learning-objectives-9"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#what-are-the-goals-of-gene-expression-analysis"><i class="fa fa-check"></i><b>11.2</b> What are the goals of gene expression analysis?</a></li>
+<li class="chapter" data-level="11.3" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#comparison-of-rna-methods"><i class="fa fa-check"></i><b>11.3</b> Comparison of RNA methods</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#single-cell-rna-seq-scrna-seq"><i class="fa fa-check"></i><b>11.3.1</b> Single-cell RNA-seq (scRNA-seq):</a></li>
+<li class="chapter" data-level="11.3.2" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#bulk-rna-seq"><i class="fa fa-check"></i><b>11.3.2</b> Bulk RNA-seq:</a></li>
+<li class="chapter" data-level="11.3.3" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#gene-expression-microarray"><i class="fa fa-check"></i><b>11.3.3</b> Gene Expression Microarray:</a></li>
+<li class="chapter" data-level="11.3.4" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#spatial-transcriptomics"><i class="fa fa-check"></i><b>11.3.4</b> Spatial Transcriptomics:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html"><i class="fa fa-check"></i><b>12</b> Bulk RNA-seq</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#learning-objectives-10"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>12.2</b> Where RNA-seq data comes from</a></li>
+<li class="chapter" data-level="12.3" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-workflow"><i class="fa fa-check"></i><b>12.3</b> RNA-seq workflow</a></li>
+<li class="chapter" data-level="12.4" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-strengths"><i class="fa fa-check"></i><b>12.4</b> RNA-seq data <strong>strengths</strong></a></li>
+<li class="chapter" data-level="12.5" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>12.5</b> RNA-seq data <strong>limitations</strong></a></li>
+<li class="chapter" data-level="12.6" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-considerations"><i class="fa fa-check"></i><b>12.6</b> RNA-seq data considerations</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#ribo-minus-vs-poly-a-selection"><i class="fa fa-check"></i><b>12.6.1</b> Ribo minus vs poly A selection</a></li>
+<li class="chapter" data-level="12.6.2" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#transcriptome-mapping"><i class="fa fa-check"></i><b>12.6.2</b> Transcriptome mapping</a></li>
+<li class="chapter" data-level="12.6.3" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#abundance-measures"><i class="fa fa-check"></i><b>12.6.3</b> Abundance measures</a></li>
+<li class="chapter" data-level="12.6.4" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-downstream-analysis-tools"><i class="fa fa-check"></i><b>12.6.4</b> RNA-seq downstream analysis tools</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#visualization-gui-tools"><i class="fa fa-check"></i><b>12.7</b> Visualization GUI tools</a></li>
+<li class="chapter" data-level="12.8" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-resources"><i class="fa fa-check"></i><b>12.8</b> RNA-seq data resources</a></li>
+<li class="chapter" data-level="12.9" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>12.9</b> More reading about RNA-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>13</b> Single-cell RNA-seq</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#learning-objectives-11"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>13.2</b> Where single-cell RNA-seq data comes from</a></li>
+<li class="chapter" data-level="13.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-types"><i class="fa fa-check"></i><b>13.3</b> Single-cell RNA-seq data types</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#unique-molecular-identifiers"><i class="fa fa-check"></i><b>13.3.1</b> Unique Molecular identifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-tools"><i class="fa fa-check"></i><b>13.4</b> Single cell RNA-seq tools</a></li>
+<li class="chapter" data-level="13.5" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quantification-and-alignment-tools"><i class="fa fa-check"></i><b>13.5</b> Quantification and alignment tools</a></li>
+<li class="chapter" data-level="13.6" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#downstream-tools-pros-and-cons"><i class="fa fa-check"></i><b>13.6</b> Downstream tools Pros and Cons</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#doublet-tool-pros-and-cons"><i class="fa fa-check"></i><b>13.6.1</b> Doublet Tool Pros and Cons</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#more-scrna-seq-tools-and-tutorials"><i class="fa fa-check"></i><b>13.7</b> More scRNA-seq tools and tutorials</a></li>
+<li class="chapter" data-level="13.8" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#visualization-gui-tools-1"><i class="fa fa-check"></i><b>13.8</b> Visualization GUI tools</a></li>
+<li class="chapter" data-level="13.9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-tutorials"><i class="fa fa-check"></i><b>13.9</b> Useful tutorials</a></li>
+<li class="chapter" data-level="13.10" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-readings"><i class="fa fa-check"></i><b>13.10</b> Useful readings</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html"><i class="fa fa-check"></i><b>14</b> Spatial transcriptomics</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#learning-objectives-12"><i class="fa fa-check"></i><b>14.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="14.2" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#what-are-the-goals-of-spatial-transcriptomic-analysis"><i class="fa fa-check"></i><b>14.2</b> What are the goals of spatial transcriptomic analysis?</a></li>
+<li class="chapter" data-level="14.3" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#spatial-transcriptomic-general-workflow-overview"><i class="fa fa-check"></i><b>14.3</b> Spatial transcriptomic general workflow overview</a></li>
+<li class="chapter" data-level="14.4" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#spatial-transcriptomic-data-strengths"><i class="fa fa-check"></i><b>14.4</b> Spatial transcriptomic data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="14.5" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#spatial-transcriptomic-data-weaknesses"><i class="fa fa-check"></i><b>14.5</b> Spatial transcriptomic data <strong>weaknesses</strong>:</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#tools-for-spatial-transcriptomics"><i class="fa fa-check"></i><b>14.5.1</b> Tools for spatial transcriptomics</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#more-tools-and-tutorials-regarding-spatial-transcriptomics"><i class="fa fa-check"></i><b>14.6</b> More tools and tutorials regarding spatial transcriptomics</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html"><i class="fa fa-check"></i><b>15</b> Chromatin Methods Overview</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#learning-objectives-13"><i class="fa fa-check"></i><b>15.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#why-are-people-interested-in-chromatin"><i class="fa fa-check"></i><b>15.2</b> Why are people interested in chromatin?</a></li>
+<li class="chapter" data-level="15.3" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#what-kinds-of-questions-can-chromatin-answer"><i class="fa fa-check"></i><b>15.3</b> What kinds of questions can chromatin answer?</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#chromatin-is-involved-in-a-variety-of-biological-processes"><i class="fa fa-check"></i><b>15.3.1</b> Chromatin is involved in a variety of biological processes:</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#comparison-of-technologies"><i class="fa fa-check"></i><b>15.4</b> Comparison of technologies</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#atac-seq"><i class="fa fa-check"></i><b>15.4.1</b> ATAC-seq:</a></li>
+<li class="chapter" data-level="15.4.2" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#single-cell-atac-seq"><i class="fa fa-check"></i><b>15.4.2</b> Single-cell ATAC-seq:</a></li>
+<li class="chapter" data-level="15.4.3" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#chip-seq"><i class="fa fa-check"></i><b>15.4.3</b> ChIP-seq:</a></li>
+<li class="chapter" data-level="15.4.4" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#cutrun"><i class="fa fa-check"></i><b>15.4.4</b> CUT&amp;RUN</a></li>
+<li class="chapter" data-level="15.4.5" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#cuttag"><i class="fa fa-check"></i><b>15.4.5</b> CUT&amp;Tag</a></li>
+<li class="chapter" data-level="15.4.6" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#gro-seq-global-run-on-sequencing"><i class="fa fa-check"></i><b>15.4.6</b> GRO-seq (Global Run-On sequencing)</a></li>
+<li class="chapter" data-level="15.4.7" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#how-gro-seq-works"><i class="fa fa-check"></i><b>15.4.7</b> How GRO-seq works:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>16</b> ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#learning-objectives-14"><i class="fa fa-check"></i><b>16.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="16.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>16.2</b> What are the goals of ATAC-Seq analysis?</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#what-questions-can-be-answered-with-atac-seq"><i class="fa fa-check"></i><b>16.2.1</b> What questions can be answered with ATAC-seq?</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-general-workflow-overview"><i class="fa fa-check"></i><b>16.3</b> ATAC-Seq general workflow overview</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#data-quality-metrics"><i class="fa fa-check"></i><b>16.3.1</b> Data quality metrics:</a></li>
+<li class="chapter" data-level="16.3.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#information-from-atac-seq-analysis"><i class="fa fa-check"></i><b>16.3.2</b> Information from ATAC-seq analysis:</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>16.4</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="16.5" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-limitations"><i class="fa fa-check"></i><b>16.5</b> ATAC-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="16.6" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-considerations"><i class="fa fa-check"></i><b>16.6</b> ATAC-Seq data considerations</a></li>
+<li class="chapter" data-level="16.7" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-analysis-tools"><i class="fa fa-check"></i><b>16.7</b> ATAC-seq analysis tools</a></li>
+<li class="chapter" data-level="16.8" data-path="atac-seq-1.html"><a href="atac-seq-1.html#additional-tutorials-and-tools"><i class="fa fa-check"></i><b>16.8</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="16.9" data-path="atac-seq-1.html"><a href="atac-seq-1.html#additional-tutorials-and-tools-1"><i class="fa fa-check"></i><b>16.9</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="16.10" data-path="atac-seq-1.html"><a href="atac-seq-1.html#online-visualization-tools"><i class="fa fa-check"></i><b>16.10</b> Online Visualization tools</a></li>
+<li class="chapter" data-level="16.11" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>16.11</b> More resources about ATAC-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html"><i class="fa fa-check"></i><b>17</b> Single cell ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#learning-objectives-15"><i class="fa fa-check"></i><b>17.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="17.2" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#what-are-the-goals-of-scatac-seq-analysis"><i class="fa fa-check"></i><b>17.2</b> What are the goals of scATAC-seq analysis?</a></li>
+<li class="chapter" data-level="17.3" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-general-workflow-overview"><i class="fa fa-check"></i><b>17.3</b> scATAC-seq general workflow overview</a></li>
+<li class="chapter" data-level="17.4" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#peak-calling-1"><i class="fa fa-check"></i><b>17.4</b> Peak calling</a></li>
+<li class="chapter" data-level="17.5" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#dimensionality-reduction"><i class="fa fa-check"></i><b>17.5</b> Dimensionality reduction</a></li>
+<li class="chapter" data-level="17.6" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#embedding-visualization"><i class="fa fa-check"></i><b>17.6</b> Embedding (visualization)</a></li>
+<li class="chapter" data-level="17.7" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#clustering"><i class="fa fa-check"></i><b>17.7</b> Clustering</a></li>
+<li class="chapter" data-level="17.8" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#cell-type-annotation"><i class="fa fa-check"></i><b>17.8</b> Cell type annotation</a></li>
+<li class="chapter" data-level="17.9" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-data-strengths"><i class="fa fa-check"></i><b>17.9</b> scATAC-seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="17.10" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-data-limitations"><i class="fa fa-check"></i><b>17.10</b> scATAC-seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="17.11" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-data-considerations"><i class="fa fa-check"></i><b>17.11</b> scATAC-seq data considerations</a></li>
+<li class="chapter" data-level="17.12" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-analysis-tools"><i class="fa fa-check"></i><b>17.12</b> scATAC-seq analysis tools</a></li>
+<li class="chapter" data-level="17.13" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#trajectory-analysis"><i class="fa fa-check"></i><b>17.13</b> Trajectory analysis</a></li>
+<li class="chapter" data-level="17.14" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#motif-detection-ex.-chromvar"><i class="fa fa-check"></i><b>17.14</b> Motif detection (ex. ChromVar)</a></li>
+<li class="chapter" data-level="17.15" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#regulatory-network-detection"><i class="fa fa-check"></i><b>17.15</b> Regulatory network detection</a></li>
+<li class="chapter" data-level="17.16" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#tools-for-data-type-conversion"><i class="fa fa-check"></i><b>17.16</b> Tools for data type conversion</a></li>
+<li class="chapter" data-level="17.17" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#more-resources-and-tutorials-about-scatac-seq-data"><i class="fa fa-check"></i><b>17.17</b> More resources and tutorials about scATAC-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="chip-seq-1.html"><a href="chip-seq-1.html"><i class="fa fa-check"></i><b>18</b> ChIP-Seq</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="chip-seq-1.html"><a href="chip-seq-1.html#learning-objectives-16"><i class="fa fa-check"></i><b>18.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="18.2" data-path="chip-seq-1.html"><a href="chip-seq-1.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>18.2</b> What are the goals of ChIP-Seq analysis?</a></li>
+<li class="chapter" data-level="18.3" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-general-workflow-overview"><i class="fa fa-check"></i><b>18.3</b> ChIP-Seq general workflow overview</a></li>
+<li class="chapter" data-level="18.4" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>18.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="18.5" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>18.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="18.6" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-data-considerations"><i class="fa fa-check"></i><b>18.6</b> ChIP-Seq data considerations</a></li>
+<li class="chapter" data-level="18.7" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-analysis-tools"><i class="fa fa-check"></i><b>18.7</b> ChiP-seq analysis tools</a>
+<ul>
+<li class="chapter" data-level="18.7.1" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-quality-checks"><i class="fa fa-check"></i><b>18.7.1</b> Tools for quality checks</a></li>
+<li class="chapter" data-level="18.7.2" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-peak-calling"><i class="fa fa-check"></i><b>18.7.2</b> Tools for Peak calling:</a></li>
+<li class="chapter" data-level="18.7.3" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-differential-analysis"><i class="fa fa-check"></i><b>18.7.3</b> Tools for Differential Analysis</a></li>
+<li class="chapter" data-level="18.7.4" data-path="chip-seq-1.html"><a href="chip-seq-1.html#motif-analysis-1"><i class="fa fa-check"></i><b>18.7.4</b> Motif Analysis</a></li>
+<li class="chapter" data-level="18.7.5" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-preprocessing"><i class="fa fa-check"></i><b>18.7.5</b> Tools for preprocessing</a></li>
+<li class="chapter" data-level="18.7.6" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-making-visualizations"><i class="fa fa-check"></i><b>18.7.6</b> Tools for making visualizations</a></li>
+<li class="chapter" data-level="18.7.7" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-making-heatmaps"><i class="fa fa-check"></i><b>18.7.7</b> Tools for making heatmaps</a></li>
+</ul></li>
+<li class="chapter" data-level="18.8" data-path="chip-seq-1.html"><a href="chip-seq-1.html#more-resources-about-chip-seq-data"><i class="fa fa-check"></i><b>18.8</b> More resources about ChiP-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html"><i class="fa fa-check"></i><b>19</b> DNA Methylation Sequencing</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#learning-objectives-17"><i class="fa fa-check"></i><b>19.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="19.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>19.2</b> What are the goals of analyzing DNA methylation?</a></li>
+<li class="chapter" data-level="19.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-data-considerations"><i class="fa fa-check"></i><b>19.3</b> Methylation data considerations</a>
+<ul>
+<li class="chapter" data-level="19.3.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#beta-values-binomially-distributed"><i class="fa fa-check"></i><b>19.3.1</b> Beta values binomially distributed</a></li>
+<li class="chapter" data-level="19.3.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#measuring-5mc-andor-5hmc"><i class="fa fa-check"></i><b>19.3.2</b> Measuring 5mC and/or 5hmC</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-data-workflow"><i class="fa fa-check"></i><b>19.4</b> Methylation data workflow</a></li>
+<li class="chapter" data-level="19.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-tools-pros-and-cons"><i class="fa fa-check"></i><b>19.5</b> Methylation Tools Pros and Cons</a>
+<ul>
+<li class="chapter" data-level="19.5.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#quality-control"><i class="fa fa-check"></i><b>19.5.1</b> Quality control:</a></li>
+<li class="chapter" data-level="19.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>19.5.2</b> Analysis:</a></li>
+<li class="chapter" data-level="19.5.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-calling"><i class="fa fa-check"></i><b>19.5.3</b> Methylation calling:</a></li>
+<li class="chapter" data-level="19.5.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-quantification"><i class="fa fa-check"></i><b>19.5.4</b> Methylation quantification:</a></li>
+<li class="chapter" data-level="19.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis-1"><i class="fa fa-check"></i><b>19.5.5</b> Analysis:</a></li>
+</ul></li>
+<li class="chapter" data-level="19.6" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#more-resources-2"><i class="fa fa-check"></i><b>19.6</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>20</b> ITCR -omic Tool Glossary</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#archs4"><i class="fa fa-check"></i><b>20.1</b> ARCHS4</a></li>
+<li class="chapter" data-level="20.2" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#bioconductor"><i class="fa fa-check"></i><b>20.2</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="20.2.1" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#notable-bioconductor-genomics-tools"><i class="fa fa-check"></i><b>20.2.1</b> Notable Bioconductor genomics tools:</a></li>
+</ul></li>
+<li class="chapter" data-level="20.3" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#cancer-models"><i class="fa fa-check"></i><b>20.3</b> Cancer Models</a></li>
+<li class="chapter" data-level="20.4" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#civic"><i class="fa fa-check"></i><b>20.4</b> CIViC</a></li>
+<li class="chapter" data-level="20.5" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#ctat"><i class="fa fa-check"></i><b>20.5</b> CTAT</a></li>
+<li class="chapter" data-level="20.6" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#deepphe"><i class="fa fa-check"></i><b>20.6</b> DeepPhe</a></li>
+<li class="chapter" data-level="20.7" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#genetic-cancer-risk-detector-garde"><i class="fa fa-check"></i><b>20.7</b> Genetic Cancer Risk Detector (GARDE)</a></li>
+<li class="chapter" data-level="20.8" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#genepattern"><i class="fa fa-check"></i><b>20.8</b> GenePattern</a></li>
+<li class="chapter" data-level="20.9" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#gene-set-enrichment-analysis-gsea"><i class="fa fa-check"></i><b>20.9</b> Gene Set Enrichment Analysis (GSEA)</a></li>
+<li class="chapter" data-level="20.10" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#integrative-genomics-viewer-igv"><i class="fa fa-check"></i><b>20.10</b> Integrative Genomics Viewer (IGV)</a></li>
+<li class="chapter" data-level="20.11" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#ndex"><i class="fa fa-check"></i><b>20.11</b> NDEx</a></li>
+<li class="chapter" data-level="20.12" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#multiassayexperiment"><i class="fa fa-check"></i><b>20.12</b> MultiAssayExperiment</a></li>
+<li class="chapter" data-level="20.13" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#opencravat"><i class="fa fa-check"></i><b>20.13</b> OpenCRAVAT</a></li>
+<li class="chapter" data-level="20.14" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#pvactools"><i class="fa fa-check"></i><b>20.14</b> pVACtools</a></li>
+<li class="chapter" data-level="20.15" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#tumordecon"><i class="fa fa-check"></i><b>20.15</b> TumorDecon</a></li>
+<li class="chapter" data-level="20.16" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#webmev"><i class="fa fa-check"></i><b>20.16</b> WebMeV</a></li>
+<li class="chapter" data-level="20.17" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#xena"><i class="fa fa-check"></i><b>20.17</b> Xena</a>
+<ul>
+<li class="chapter" data-level="20.17.1" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#questions-xena-can-help-you-answer-include"><i class="fa fa-check"></i><b>20.17.1</b> Questions Xena can help you answer include:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<a href="http://jhudatascience.org/"><img src="https://jhudatascience.org/images/dasl.png" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/hc8Xt3Y2Znjb6M4Y7"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Choosing Genomics Tools</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_ITN.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/itcr_main_image.png">
+</div>
+<div id="chip-seq-1" class="section level1" number="18">
+<h1><span class="header-section-number">Chapter 18</span> ChIP-Seq</h1>
+<div class="warning">
+<p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
+</div>
+<div id="learning-objectives-16" class="section level2" number="18.1">
+<h2><span class="header-section-number">18.1</span> Learning Objectives</h2>
+<p><img src="resources/images/11c-ChIP-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_61.png" title="Learning objectives This chapter will demonstrate how to: Understand the basics of ChIP-Seq data collection and processing workflow. Identify the next steps for your particular ChIP-Seq data. Formulate questions to ask about your ChIP-Seq data" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of ChIP-Seq data collection and processing workflow. Identify the next steps for your particular ChIP-Seq data. Formulate questions to ask about your ChIP-Seq data" width="100%" /></p>
+</div>
+<div id="what-are-the-goals-of-chip-seq-analysis" class="section level2" number="18.2">
+<h2><span class="header-section-number">18.2</span> What are the goals of ChIP-Seq analysis?</h2>
+<p><img src="resources/images/11c-ChIP-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_18.png" title="The goal of ChIP-seq is to identify, for a particular DNA binding protein, all of the DNA sequences that it binds to." alt="The goal of ChIP-seq is to identify, for a particular DNA binding protein, all of the DNA sequences that it binds to." width="100%" /></p>
+<p>ChIP-Seq (chromatin immunoprecipitation sequencing) and related approaches are used to identify genome-wide binding sites of specific proteins or protein complexes. Given the diversity of interactions at the DNA-protein interface, sequencing-based methods for targeted chromatin capture have evolved to meet precise research needs and improve the quality of the results. Specifically, ChIP-Seq builds on protein immunoprecipitation techniques (IP) by applying next generation sequencing to a pulldown product. IP followed by sequencing can be applied to any nucleic-acid binding protein for which an antibody is available, including a known or putative transcription factor (TF), chromatin remodeler or histone modifications, or other DNA- or chromatin-specific factors. ChiP-Seq approaches have been honed to increase signal-to-noise, reduce input material, and more specifically map protein-DNA interactions, for example by treating the IP product with a exonuclease that chews-back unprotected DNA end (e.g. ChIP-exo).</p>
+<p>The main goals of analysis for ChIP-Seq approaches are:</p>
+<ul>
+<li><strong>Identify the genomic regions where a specific protein or protein complex binds.</strong> This can be achieved by sequencing both the IP input and product, and then calculating the enrichment in the product sample over the input.</li>
+<li><strong>Annotate binding sites via comparison to other datasets and genome annotations.</strong> This may include transcription start sites (TSSs) or gene-regulatory regions. Oftentimes it is best to validate your data against previous profiling of similar epitopes.</li>
+<li><strong>Comparison of binding sites:</strong> Many ChIP-Seq experiments compare changes in protein-DNA interactions across different conditions. This type of analysis can leverage statistical tools for pairwise comparison and multiple hypothesis testing.</li>
+<li><strong>Identification of co-occurring motifs:</strong> Many chromatin proteins exhibit a sequence-specific binding pattern that is shaped by evolutionary forces. These sequence patterns, or motifs, are thought to capture contacts between specific base pairs and the DNA-binding domain of a protein and are often represented as a position weight matrix (PWM) for computational analysis. Statistical tools have been developed for de novo motif discovery within a given set of genomic intervals, like a ChIP-seq peaklist. The list of discovered motifs can be meaningfully interpreted by cross referencing with a motif database and recovery of known motifs represent another means of data validation.</li>
+<li><strong>Integration with other -omics data:</strong> Given the expansive repositories of publicly available sequencing data, creating a comprehensive narrative from a ChIP-Seq experiment usually involves comparison with other types of sequencing data. Just like how a ChIP-Seq peak list can be interpreted through existing genome annotations, other sequencing data can be interpreted through the binding sites identified from a given ChIP-Seq experiment. For example, a sequence variant might be enriched for or against in protein binding sites versus previously identified motifs. This would suggest that a mutation would alter DNA-protein interactions. Binding of a specific gene-regulatory element might also correlate with changes in gene expression.</li>
+</ul>
+</div>
+<div id="chip-seq-general-workflow-overview" class="section level2" number="18.3">
+<h2><span class="header-section-number">18.3</span> ChIP-Seq general workflow overview</h2>
+<p>&lt;TODO: add data formats in a graphical format&gt;</p>
+<p>A key contribution of large consortia, such as the ENCODE consortium, are standardized processing workflows to facilitate the integration of ChIP-seq data generated in different labs. While the exact data processing needs of any given experiment may vary, established pipelines provide a helpful starting point. In choosing a data processing workflow, it is essential to note the input data format. For example, the read length should be considered, as well as the sequencing paradigm (i.e. whether the data is single-end or paired-end).</p>
+<p>The most generic steps for processing ChIP-Seq data are:</p>
+<ul>
+<li><strong>Quality control:</strong> The first step in ChIP-Seq data processing is to perform quality control checks on the raw sequencing data to assess its quality and identify any potential issues, such as poor sequencing quality or adapter contamination which can be assessed via FASTQC.</li>
+<li><strong>Read alignment:</strong> The next step is to align the ChIP-Seq reads to a reference genome using a suitable alignment tool such as Bowtie or BWA. Notably, many publicly available ChIP-Seq datasets are single-ended and it is important to use the correct alignment parameters for a given sequencing approach. In the case of ChIP-seq approaches that include exonuclease treatment, such as ChIP-exo and ChIP-nexus, a paired-end sequencing approach is often taken and then insert size can be useful for validating alignment. For example, profiling of a histone modification should yield nucleosome-sized fragments, ranging up from 120 bp for mononucleosomes, whereas TFs should yield smaller, sub-nucleosomal fragments and polymerase is in between at 20-50bps (PMID: 30030442).</li>
+<li><strong>Peak calling:</strong> After the reads have been aligned to the genome, the next step is to identify the genomic regions where the protein or protein complex of interest is bound. This is done using peak-calling algorithms, such as MACS2, SICER, or HOMER, which can calculate enrichment as fold change over the input control with statistical testing.</li>
+<li><strong>Quality control of peaks:</strong> Once the peaks have been called, it is important to perform quality control checks to ensure that the peaks are of high quality and biologically relevant. This can be done by assessing the number of peaks, fraction of reads in peaks (FRiPs), enrichment of the peaks in specific genomic regions, comparing the peaks to known gene annotations, or performing motif analysis. Often, peaks will be merged across replicates to create a consensus peak set. Peaks should be assessed visually with tools like IGV or the UCSC genome browser to ensure they overlap regions of high coverage. The Cistrome Data Browser is another useful resource for comparing with published ChIP-seq, DNase-seq and ATAC-seq data.</li>
+<li><strong>Differential binding analysis:</strong> If the ChIP-Seq experiment involves comparing the binding of the protein or protein complex in different conditions or cell types, statistical testing can be performed to identify the regions of the genome where the protein or protein complex binds differentially. Tools developed for multiple comparison testing, like Limma, Deseq2, and EdgeR are useful for this type of comparative analysis.</li>
+<li><strong>Integrative analysis:</strong> Finally, integrative analysis with other -omics data can be performed to gain biological insights into the ChIP-Seq data. This can involve interpreting ChiP-Seq data through existing annotations by looking at signal enrichment in different genomic regions, like transcription start sites (TSSs), gene bodies, and previously-identified cis-regulatory elements (CREs). ChIP-Seq data can even be interpreted through other ChIP-seq data to see if features overlap with statistical testing for similarity using packages like BEDTools and Bedops.</li>
+</ul>
+</div>
+<div id="chip-seq-data-strengths" class="section level2" number="18.4">
+<h2><span class="header-section-number">18.4</span> ChIP-Seq data <strong>strengths</strong>:</h2>
+<p>ChIP-Seq (chromatin immunoprecipitation sequencing) is a powerful tool for understanding the genomic locations where a specific protein or protein complex binds.</p>
+<p>ChIP-Seq is particularly good at showing or illustrating:</p>
+<ul>
+<li><strong>Identification of regulatory elements:</strong> ChIP-Seq can be used to identify the genomic regions where a protein or protein complex binds to regulatory elements, such as promoters, enhancers, and silencers. For example, certain histone modifications characterize active promoters and enhancers, such as H3K4 methylation and H3K27 acetylation.</li>
+<li><strong>Characterization of protein-protein interactions:</strong> ChIP-Seq can be used to identify the genomic regions where multiple proteins bind. In this way, cobinding can be inferred to provide insight into the protein-protein interactions that are involved in regulating gene expression.</li>
+<li><strong>Identification of binding site motifs:</strong> ChIP-Seq can be used to identify the DNA motifs that are enriched in the binding sites of a protein or protein complex. This information can be used to identify other transcription factors or cofactors that are involved in the same regulatory network. Databases of known TF binding motifs include JASPAR, Cis-BP, <a href="https://hocomoco11.autosome.org/">Hocomoco</a>.</li>
+<li><strong>Differential binding analysis:</strong> ChIP-Seq can be used to compare the binding of a protein or protein complex in different conditions or cell types, which can provide insight into the mechanisms that regulate protein binding and the impact of different cellular states on the regulatory networks.</li>
+</ul>
+</div>
+<div id="chip-seq-data-limitations" class="section level2" number="18.5">
+<h2><span class="header-section-number">18.5</span> ChIP-Seq data <strong>limitations</strong>:</h2>
+<p>ChIP-Seq (chromatin immunoprecipitation sequencing) is a powerful technique, but there are several biases, caveats, and problems that can arise when analyzing ChIP-Seq data.</p>
+<p>Some of the most common biases, caveats, and problems are:</p>
+<ul>
+<li><strong>Accessibility bias:</strong> ChIP-Seq relies on fragmentation of chromatin prior to immunoprecipitation, which is observed to enrich for genomic regions that are highly accessible to TFs in general .</li>
+<li><strong>Antibody specificity and cross-reactivity:</strong> The specificity of the antibody used in ChIP-Seq is crucial for the accuracy of the results. Finding an antibody for specific epitopes can pose a challenge because antibodies can have cross-reactivity with other epitopes, which can result in false positives or misinterpretation of the data.</li>
+<li><strong>DNA fragmentation bias:</strong> The length and quality of the DNA fragments used in ChIP-Seq can impact the results. Shorter fragments are often located in regions with more highly accessible chromatin, especially nucleosome linker regions and promoters of active genes. Sequencing depth bias: The amount of sequencing depth can impact the results of ChIP-Seq analysis. Insufficient sequencing depth can result in false negatives or miss important binding sites.</li>
+<li><strong>Reproducibility and sample variation:</strong> ChIP-Seq experiments can be highly variable, and reproducibility between replicates can be an issue. Additionally, the composition and quality of the sample can also impact the results.
+Peak-calling algorithm choice: The choice of peak-calling algorithm can impact the results of ChIP-Seq analysis, as different algorithms have different strengths and weaknesses.</li>
+<li><strong>Interpretation of binding sites:</strong> Finally, the interpretation of binding sites identified by ChIP-Seq can be complex and requires additional validation to confirm their biological relevance and function. Notably, ChIP-Seq cannot distinguish direct protein-DNA interaction from indirect binding (e.g. where a protein may bind another protein that binds to DNA).</li>
+</ul>
+</div>
+<div id="chip-seq-data-considerations" class="section level2" number="18.6">
+<h2><span class="header-section-number">18.6</span> ChIP-Seq data considerations</h2>
+<p>As a general guideline, a minimum sequencing depth of 20 million reads is recommended for ChIP-seq experiments in Drosophila, whereas 40–50 million reads is a practical minimum for most marks in human tissue (PMID: 24598259). However, this depth may not be sufficient for some analyses, particularly for studies that require high resolution or low signal-to-noise ratio. In such cases, deeper sequencing may be necessary to achieve the desired level of sensitivity and specificity.</p>
+<p>In general, epitopes that cover large sequence space (e.g. repressive histone modification such as H3K27me3) require greater sequencing depth than epitopes confined to more narrow genomic regions (e.g. active histone modifications such as H3K4 methylation and H3K27ac). ChIP-seq for TFs may require even less sequencing depth; however, low antibody specificity may necessitate deeper sequencing due to low signal-to-noise.
+In practice, the depth of sequencing required for ChIP-seq experiments can vary widely depending on the specific experimental design and research question. It is important to perform a pilot study or use appropriate statistical methods to estimate the necessary sequencing depth for a given experiment. Choosing a specific antibody is essential, otherwise even deep sequencing may not recover signal over high background. Sequencing depth should also account for genome size (e.g. larger genome requires deeper sequencing).</p>
+</div>
+<div id="chip-seq-analysis-tools" class="section level2" number="18.7">
+<h2><span class="header-section-number">18.7</span> ChiP-seq analysis tools</h2>
+<div id="tools-for-quality-checks" class="section level3" number="18.7.1">
+<h3><span class="header-section-number">18.7.1</span> Tools for quality checks</h3>
+<ul>
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> is a widely used tool that is used to assess the quality of sequencing data. It analyzes the raw sequencing data and generates a report that provides an overview of various metrics such as base quality, sequence length distribution, and GC content.</li>
+<li><a href="https://broadinstitute.github.io/picard/">Picard tools</a> and <a href="http://www.htslib.org/">SAMtools</a>: Picard tools and SAMtools are two collections of command-line tools that are used to manipulate and analyze high-throughput sequencing data. They can be used to check the quality of the data, remove duplicates, and generate summary statistics.</li>
+<li><a href="https://pypi.org/project/MACS2/">MACS2 (Model-based Analysis of ChIP-Seq)</a> is a software tool that is specifically designed for the analysis of ChIP-Seq data. It is used to identify regions of the genome that are enriched for DNA-protein interactions.</li>
+<li><a href="https://www.encodeproject.org/pipelines/">ENCODE Uniform Processing Pipelines</a>: The ENCODE (Encyclopedia of DNA Elements) Uniform Processing Pipelines are a set of standardized protocols and tools that are used to process and analyze ChIP-Seq data. They ensure that the data generated by different labs are consistent and can be easily compared.</li>
+</ul>
+<p>These tools are just a few examples of the many quality control tools available for ChIP-Seq analysis. The choice of tool(s) to use will depend on the specific analysis being performed and the preferences of the user.</p>
+</div>
+<div id="tools-for-peak-calling" class="section level3" number="18.7.2">
+<h3><span class="header-section-number">18.7.2</span> Tools for Peak calling:</h3>
+<ul>
+<li><a href="https://pypi.org/project/MACS2/">MACS2 (Model-based Analysis of ChIP-Seq)</a> is a widely used tool for peak calling in ChIP-Seq data. It uses a Poisson distribution to model the local noise and identifies peaks based on the fold enrichment over the background noise.</li>
+<li><a href="https://zanglab.github.io/SICER2/">SICER</a>: Spatial Clustering for Identification of ChIP-Enriched Regions (SICER) is a peak caller that takes into account the spatial clustering of enriched regions in ChIP-Seq data. It uses a clustering algorithm to identify peaks based on the local density of enriched regions.</li>
+<li><a href="http://homer.ucsd.edu/homer/">HOMER (Hypergeometric Optimization of Motif EnRichment)</a> is a suite of tools that includes a peak caller for ChIP-Seq data. It uses a sliding window approach to identify peaks based on the local enrichment of reads.</li>
+<li><a href="https://github.com/gersteinlab/PeakSeq">PeakSeq</a> is a peak caller that uses a Bayesian approach to identify enriched regions in ChIP-Seq data. It models the relationship between the read counts and the signal-to-noise ratio and identifies peaks based on the posterior probability of enrichment.</li>
+</ul>
+</div>
+<div id="tools-for-differential-analysis" class="section level3" number="18.7.3">
+<h3><span class="header-section-number">18.7.3</span> Tools for Differential Analysis</h3>
+<ul>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html">DESeq2</a>: This is a widely used R package for differential analysis of sequencing count data, including ChIP-seq. It uses a negative binomial model to normalize and test for differential enrichment of ChIP-seq peaks.</li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a>: Another popular R package for differential expression analysis of RNA-seq data, edgeR can also be used for differential analysis of ChIP-seq data. It uses a generalized linear model to estimate differential enrichment and has been shown to be effective for ChIP-seq data with low read counts.
+Annotation</li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html">ChIPseeker</a>: This R package can be used for annotating ChIP-seq peaks with genomic features such as gene annotation, gene ontology, and pathway analysis. It can also generate plots and heatmaps for visualization.</li>
+<li><a href="http://homer.ucsd.edu/homer/">HOMER</a>: This suite of tools includes several programs for motif discovery, peak annotation, and visualization. The annotatePeaks.pl program can be used for assigning genomic regions to specific functional categories, including promoter, exon, intron, intergenic, and enhancer regions.</li>
+<li><a href="http://great.stanford.edu/public/html/">GREAT</a>: This web-based tool can be used for annotating genomic regions with functional annotations such as gene ontology terms and regulatory domains. It uses a statistical approach to associate genomic regions with biological functions.</li>
+<li><a href="http://go.cistrome.org/">Cistrome-GO</a>: A web-based tool for determining the gene ontologies of genes likely to be regulated by regions discovered through TF ChIP-seq.</li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/GenomicRanges.html">GenomicRanges</a>: This R package provides a framework for working with genomic ranges, including intersection, overlap, and annotation of genomic regions with functional categories. It can be used in conjunction with other R packages for ChIP-seq analysis, such as ChIPseeker and DiffBind.</li>
+<li><a href="http://chip-enrich.med.umich.edu/">ChIP-Enrich</a>: This web-based tool can be used for annotating ChIP-seq peaks with functional categories such as gene ontology, pathway analysis, and transcription factor binding sites. It uses a hypergeometric test to identify overrepresented functional categories.</li>
+<li><a href="http://dbtoolkit.cistrome.org/">Cistrome DB</a>: The website allows users to upload their enriched regions, returning TF ChIP-seq, DNase-seq or ATAC-seq samples with similar profiles.</li>
+</ul>
+</div>
+<div id="motif-analysis-1" class="section level3" number="18.7.4">
+<h3><span class="header-section-number">18.7.4</span> Motif Analysis</h3>
+<ul>
+<li><a href="https://meme-suite.org/meme/">MEME Suite</a>: The MEME Suite is a comprehensive suite of tools for motif analysis, including motif discovery and motif-based sequence analysis. It includes tools for discovering de novo motifs from ChIP-Seq data and for searching for known motifs in the regions bound by the protein of interest.</li>
+<li><a href="http://homer.ucsd.edu/homer/">HOMER</a> is a suite of tools for motif discovery and analysis. It includes tools for identifying de novo motifs from ChIP-Seq data, as well as for searching for known motifs in the regions bound by the protein of interest. HOMER also provides tools for performing gene ontology analysis and pathway analysis based on the identified motifs.</li>
+<li><a href="https://meme-suite.org/meme/tools/meme-chip">MEME-ChIP</a> is a specialized version of the MEME Suite that is specifically designed for motif analysis in ChIP-Seq data. It includes tools for discovering de novo motifs from ChIP-Seq data, as well as for searching for known motifs in the regions bound by the protein of interest.</li>
+<li><a href="https://meme-suite.org/meme/doc/centrimo.html">CentriMo</a>is a tool for identifying enriched motifs in ChIP-Seq data based on the position of the motif relative to the peak summit. It can be used to identify motifs that are enriched at the center of the peak, as well as those that are enriched near the edges of the peak.</li>
+</ul>
+</div>
+<div id="tools-for-preprocessing" class="section level3" number="18.7.5">
+<h3><span class="header-section-number">18.7.5</span> Tools for preprocessing</h3>
+<ul>
+<li><a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a> is a widely used tool for trimming and filtering Illumina sequencing data. It is often used to remove low-quality reads, adapter sequences, and other artifacts that can affect downstream analysis.</li>
+<li><a href="https://cutadapt.readthedocs.io/en/stable/">Cutadapt</a> is another popular tool for trimming adapter sequences from high-throughput sequencing data. It is particularly useful for removing adapters that contain degenerate nucleotides or that have been ligated with variable lengths.</li>
+<li><a href="https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml">Bowtie2</a> is a fast and memory-efficient tool for aligning sequencing reads to a reference genome. It is often used to map ChIP-Seq reads to the genome prior to peak calling.</li>
+<li><a href="http://www.htslib.org/">SAMtools</a> is a suite of tools for manipulating SAM/BAM files, which are commonly used to store alignment data from high-throughput sequencing experiments. It can be used for filtering and sorting reads, as well as for generating summary statistics.</li>
+<li><a href="http://www.htslib.org/">BEDTools</a> is a powerful suite of tools for working with genomic intervals, such as those generated by ChIP-Seq peak calling. It can be used for operations such as intersecting, merging, and subtracting intervals.</li>
+</ul>
+</div>
+<div id="tools-for-making-visualizations" class="section level3" number="18.7.6">
+<h3><span class="header-section-number">18.7.6</span> Tools for making visualizations</h3>
+<ul>
+<li><a href="https://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a> is a popular genome browser that is widely used for the visualization of genomic data, including ChIP-Seq data. It provides a user-friendly interface for exploring genomic data at different levels of resolution, from the whole-genome level down to individual nucleotides.</li>
+<li>The <a href="https://genome.ucsc.edu/">UCSC Genome Browser</a> is another widely used genome browser that can be used to visualize ChIP-Seq data. It provides an intuitive interface for navigating and visualizing genomic data, including the ability to zoom in and out and to overlay multiple data tracks.</li>
+<li><a href="http://www.sthda.com/english/wiki/gviz-visualize-genomic-data">Genome Visualization Tool (GViz)</a> is a package for the R statistical computing environment that provides functions for generating publication-quality visualizations of genomic data, including ChIP-Seq data. It offers a high degree of flexibility and customization, allowing users to create complex and informative plots that convey the relevant information in a clear and concise manner.</li>
+<li><a href="http://xena.ucsc.edu/">UCSC Xena</a> is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with ChIP-seq data.</li>
+<li><a href="http://gehlenborglab.org/research/projects/cistrome-explorer/">Cistrome-Explorer</a> A web-based visualization of compendia of ATAC-seq and histone modification ChIP-seq data for diverse samples, represented as a heatmap. Users can upload their ChIP-seq peak sets to assess the tissue specificity of their regions on the genome.</li>
+</ul>
+</div>
+<div id="tools-for-making-heatmaps" class="section level3" number="18.7.7">
+<h3><span class="header-section-number">18.7.7</span> Tools for making heatmaps</h3>
+<ul>
+<li><a href="https://github.com/fidelram/deepTools">Deeptools</a> is a widely used package for analyzing ChIP-seq data, and it includes a tool called “plotHeatmap” that can generate heatmaps from ChIP-seq data.</li>
+<li><a href="https://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a> is a popular tool for visualizing and exploring genomic data. It includes a heatmap function that can be used to generate heatmaps from ChIP-seq data.</li>
+<li><a href="https://bioconductor.org/packages/release/bioc/html/EnrichedHeatmap.html">EnrichedHeatmap</a>is an R package for making heatmaps that visualize the enrichment of genomic signals on specific target regions.</li>
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/seqmonk/">SeqMonk</a> is a software package designed for the visualization and analysis of large-scale genomic data. It includes a heatmap function that can generate heatmaps from ChIP-seq data.</li>
+<li><a href="https://github.com/shenlab-sinai/ngsplot">ngs.plot</a> is a tool that can generate different types of plots, including heatmaps, from NGS data. It includes a ChIP-seq specific mode that can be used to generate heatmaps from ChIP-seq data.</li>
+<li><a href="http://chase.cs.univie.ac.at/overview">ChAsE: ChAsE (ChIP-seq Analysis Engine)</a> is a web-based platform for ChIP-seq analysis that includes a heatmap function that can generate heatmaps from ChIP-seq data.</li>
+</ul>
+<p>These tools allow users to generate heatmaps of ChIP-seq data, which can be used to identify enriched regions of binding and to visualize patterns of binding across genomic regions.</p>
+<p>The Cistrome Project has a large collection of human and mouse ChIP-seq, DNase-seq and ATAC-seq data, as well as tools for analyzing user generate ChIP-seq data with publicly available samples. These tools include the Cistrome Data Browser toolkit function that can find publicly available datasets that are similar to a ChIP-Seq peak set, and Cistrome-GO for gene ontology analysis of TF ChIP-seq target genes.</p>
+</div>
+</div>
+<div id="more-resources-about-chip-seq-data" class="section level2" number="18.8">
+<h2><span class="header-section-number">18.8</span> More resources about ChiP-seq data</h2>
+<p>&lt;TODO: Put links to any resources and tutorials that are useful for ChIP-Seq data&gt;</p>
+<ul>
+<li><a href="https://liulab-dfci.github.io/bioinfo-combio/chip.html">Shirley Liu’s Computational biology course</a></li>
+<li><a href="https://galaxyproject.org/tutorials/chip/">Galaxy ChIP-seq tutorial</a></li>
+<li><a href="https://www.encodeproject.org/tutorials/chip-pipeline-howto/">ENCODE ChiP-seq tutorial</a></li>
+<li><a href="https://github.com/crazyhottommy/ChIP-seq-analysis">Crazyhottommy’s ChIp-seq tutorial</a></li>
+<li><a href="https://hbctraining.github.io/Intro-to-ChIPseq-flipped/CUT&amp;RUN/Intro_to_CUT&amp;RUN.html">Harvard CUT&amp;RUN tutorial</a></li>
+<li><a href="https://data.4dnucleome.org/resources/data-analysis/cut-and-run-pipeline">4DN CUT&amp;RUN tutorial</a></li>
+<li><a href="https://yezhengstat.github.io/CUTTag_tutorial/">Henikoff Lab CUT&amp;Tag tutorial</a></li>
+<li><a href="https://maayanlab.cloud/archs4/">ARCHS4</a> (All RNA-seq and ChIP-seq sample and signature search) is a resource that provides access to gene and transcript counts uniformly processed from all human and mouse RNA-seq experiments from GEO and SRA.</li>
+<li><a href="http://xena.ucsc.edu/">UCSC Xena</a> is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with ChIP-seq data.</li>
+<li><a href="https://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a> is a track-based browser for interactively exploring genomic data mapped to a reference genome.</li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="single-cell-atac-seq-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dna-methylation-sequencing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
