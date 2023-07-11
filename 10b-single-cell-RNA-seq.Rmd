@@ -6,7 +6,7 @@ ottrpal::set_knitr_image_path()
 # Single-cell RNA-seq
 
 <div class = "warning">
-This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
 </div>
 
 ## Learning Objectives
@@ -81,7 +81,7 @@ This following pros and cons sections have been written by AI and may need verif
 - [HISAT2](http://daehwankimlab.github.io/hisat2/):
   - **Pros**: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.
   - **Cons**: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.
-  
+
 <div class = "warning">
 This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>

@@ -50,20 +50,17 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 #### Sequencing considerations:
 
-```{r, fig.alt = "Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting
-", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_57")
 ```
 
-```{r, fig.alt = "Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting
-", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Single vs. paired end sequencing. Single. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting. Read length & read depth. 75bp or more read length (keep in mind nucleosomes are 147bp). ~50 million reads/sample usually recommended", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_63")
 ```
 
 #### Pre-alignment QC:
 
-```{r, fig.alt = "Post-sequencing. Signal to noise ratio (link resources at end)
-Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_50")
 ```
 
@@ -82,8 +79,7 @@ As for all DNA-sequencing based genomics technologies, a sufficient number of ma
 
 #### Post-alignment QC:
 
-```{r, fig.alt = "Post-sequencing. Signal to noise ratio (link resources at end)
-Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_50")
 ```
 
