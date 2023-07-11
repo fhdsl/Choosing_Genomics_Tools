@@ -11,9 +11,9 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)|[Carrie Wright] [Claire Mills] - Whole Genome Sequencing [Cliff Meyer] - ATAC-seq|
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq, [Carrie Wright], [Claire Mills] - Whole Genome Sequencing, [Jacob Greene] - ChIP-seq |
 |Content Directors|[Jeff Leek]|
-|Content Consultants|[Carrie Wright]|
+|Content Consultants|[Carrie Wright], [Cliff Meyer] - ATAC-seq, [Frederick Tan]|
 |Acknowledgments||
 |**Production**||
 |Content Publisher|[Ira Gooding]|
@@ -31,7 +31,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |Videography Editor| [Candace Savonen]|
 |**Funding**||
 |Funder|[National Cancer Institute (NCI)](https://www.cancer.gov/) UE5 CA254170|
-|Funding Staff| Emily Voeglein, Fallon Bachman|
+|Funding Staff| [Sandy Ormbrek], [Shasta Nicholson] |
 
 &nbsp;
 
@@ -47,7 +47,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2023-05-24                  
+##  date     2023-06-09                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version    date       lib source                            
@@ -96,12 +96,17 @@ These credits are based on our [course contributors table guidelines](https://gi
 <!-- Author information -->
 
 [Candace Savonen]: https://www.cansavvy.com/
+[Cailin Jordan]: https://www.linkedin.com/in/cailin-jordan-3297b7199/
 [Carrie Wright]: https://carriewright11.github.io/
 [Claire Mills]: https://www.linkedin.com/in/claire-mills-dds-50883553
 [Cliff Meyer]: https://ds.dfci.harvard.edu/our-people/clifford-meyer-phd/
 [Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding
+[Frederick Tan]: https://bse.carnegiescience.edu/dr-frederick-tan
+[Jacob Greene]: https://www.linkedin.com/in/jacob-greene-890aa318a/
 [Jeff Leek]: https://jtleek.com/
 [John Muschelli]: https://johnmuschelli.com/
+[Sandy Ormbrek]: https://hutchdatascience.org/ourteam/
+[Shasta Nicholson]: https://hutchdatascience.org/ourteam/
 
 <!-- Links -->
 
