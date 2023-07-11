@@ -3,7 +3,7 @@
 
 
 
-# DNA Methods
+# DNA Methods Overview
 
 <div class = "warning">
 This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
@@ -36,12 +36,15 @@ Targeted: [@BewickeCopley2019]
 Before starting any sequencing method, you likely have a research question or hypothesis in mind. In order to choose a DNA sequencing method, you will need to consider a few items in balance of each other:
 
 ### 1. What region(s) of the genome pertain to your research question?
+
 Is this unknown? Can it be narrowed down to non-coding or coding regions? Is there an even more specific subset of interest?
 
 ### 2. What does your project budget allow for?
+
 Some methods are much more costly than others. Cost is not only a factor for the reagents needed to sequence, but also the computing power needed to process and store the data and people's compensation for their work on the data. All of these costs increase as the amounts of data that are collected increase. For more information on computing decisions see our [Computing in Cancer Informatics course](https://www.itcrtraining.org/courses#h.civy2cnri95t).
 
 ### 3. What is your detection power for these variants?
+
 Detecting DNA variants is not simply a matter of yes or no, but a confidence level due to sequencing errors in data collection. Are the variants you are looking for very rare and/or small (single nucleotide or very few copy number differences)? If so you will need more samples and potentially more sequencing depth to detect these variants with confidence.
 
 ## Strengths and Weaknesses of different methods

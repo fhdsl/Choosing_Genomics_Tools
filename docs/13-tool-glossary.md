@@ -1,9 +1,32 @@
 
 
 
-# Genomic Tool Glossary
+# ITCR -omic Tool Glossary
 
 Here's all the tools that have been mentioned in this course or are otherwise recommended for your use. The list is in alphabetical order.
+
+* [ARCHS4](#archs4)
+* [Bioconductor](#bioconductor)
+  + [Notable Bioconductor genomics tools:](#notable-bioconductor-genomics-tools-)
+* [Cancer Models](#cancer-models)
+* [CIViC](#civic)
+* [CTAT](#ctat)
+* [DeepPhe](#deepphe)
+* [Genetic Cancer Risk Detector (GARDE)](#genetic-cancer-risk-detector--garde-)
+* [GenePattern](#genepattern)
+* [Gene Set Enrichment Analysis (GSEA)](#gene-set-enrichment-analysis--gsea-)
+* [Integrative Genomics Viewer (IGV)](#integrative-genomics-viewer--igv-)
+* [NDEx](#ndex)
+* [MultiAssayExperiment](#multiassayexperiment)
+* [OpenCRAVAT](#opencravat)
+* [pVACtools](#pvactools)
+* [TumorDecon](#tumordecon)
+* [WebMeV](#webmev)
+* [Xena](#xena)
+
+## ARCHS4
+
+All RNA-seq and ChIP-seq sample and signature search (ARCHS4) (https://maayanlab.cloud/archs4/) is a resource that provides access to gene and transcript counts uniformly processed from all human and mouse RNA-seq experiments from GEO and SRA. The ARCHS4 website provides the uniformly processed data for download and programmatic access in H5 format, and as a 3-dimensional interactive viewer and search engine. Users can search and browse the data by metadata enhanced annotations, and can submit their own gene sets for search. Subsets of selected samples can be downloaded as a tab delimited text file that is ready for loading into the R programming environment. To generate the ARCHS4 resource, the kallisto aligner is applied in an efficient parallelized cloud infrastructure. Human and mouse samples are aligned against the most recent Ensembl annotation (Ensembl 107).
 
 ## Bioconductor
 
@@ -46,7 +69,7 @@ Get started at www.cancermodels.org to browse and query models by cancer type
 
 ## CTAT
 
-The Trinity Cancer Transcriptome Analysis Toolkit (CTAT, https://github.com/NCIP/Trinity_CTAT/wiki ) provides a diverse collection of tools to gain insights into the biology of cancer through the lens of the transcriptome. Using RNA-seq as input, CTAT modules enable detection of mutations, fusion transcripts, copy number aberrations, cancer-specific splicing aberrations, and oncogenic viruses including insertions into the human genome.  CTAT uses both read mapping and de novo assembly methods to analyze RNA-seq, leveraging tumor bulk and single cell transcriptomes. CTAT modules provide interactive visualizations as outputs, are easily installed for local execution or run via cloud computing (eg. Terra), have detailed user guides and tutorials, and are well-supported through user forums.
+The Trinity Cancer Transcriptome Analysis Toolkit (CTAT, https://github.com/NCIP/Trinity_CTAT/wiki) provides a diverse collection of tools to gain insights into the biology of cancer through the lens of the transcriptome. Using RNA-seq as input, CTAT modules enable detection of mutations, fusion transcripts, copy number aberrations, cancer-specific splicing aberrations, and oncogenic viruses including insertions into the human genome.  CTAT uses both read mapping and de novo assembly methods to analyze RNA-seq, leveraging tumor bulk and single cell transcriptomes. CTAT modules provide interactive visualizations as outputs, are easily installed for local execution or run via cloud computing (eg. Terra), have detailed user guides and tutorials, and are well-supported through user forums.
 
 ## DeepPhe
 
@@ -68,6 +91,14 @@ DeepPhe tools are available for download and installation from the [DeepPhe webs
 [Genetic Cancer Risk Detector (GARDE)](https://reimagineehr.utah.edu/innovations/garde/) screens and identifies patients who meet National Comprehensive Cancer Network (NCCN) criteria for genetic evaluation of familial cancer risk based on their family history in the EHR using both structured data and natural language processing of free-text data. Patients identified by GARDE are imported into an EHR's population health management dashboard (e.g., Epic's Healthy Planet module) where genetic counseling staff review individual cases, select, and send bulk outreach messages to patients via chatbot and/or through the patient portal.
 
 GARDE is a population clinical decision support (CDS) platform based on Fast Healthcare Interoperability Resources (FHIR) and CDS Hooks standards to support interoperability and logic sharing beyond single vendor solutions.
+
+## GenePattern
+
+GenePattern, www.genepattern.org, is an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data. Analyses include general machine learning methods, the gene set enrichment analysis suite, ‘omics-specific tools for bulk and single-cell gene expression, proteomics, flow cytometry, variant annotation, sequence variation and others, as well as  cancer-specific analyses. Also included are data preprocessing and utility tools. A web-based interface provides easy, non-programmatic access to these tools and allows the creation of multi-step analysis pipelines that enable reproducible in silico research.
+
+The GenePattern Notebook interface, notebook.genepattern.org, extends the Jupyter Notebook system to allow users to combine GenePattern analyses with text, graphics, and code to create complete research narratives. It includes many additional features to make notebooks accessible to non-programmers. The online GenePattern Notebook Workspace allows investigators to create, run, and collaborate on notebooks using only a web browser. A library of GenePattern Notebooks implementing common scientific workflows is available for investigators to use as templates and adapt to their own requirements.
+
+To get started with GenePattern you can go through the GenePattern Quick Start Tutorial, view the GenePattern User Guide, or the videos on our YouTube channel. To learn more about GenePattern Notebook, view the GenePattern Notebook Quick Start, GenePattern Notebook documentation, run through the tutorial notebooks (click the Tutorial button), or view the videos on the GenePattern Notebooks YouTube channel.
 
 ## Gene Set Enrichment Analysis (GSEA)
 
@@ -104,7 +135,24 @@ You can get started with the MultiAssayExperiment Bioconductor package documenta
 
 [OpenCRAVAT](https://run.opencravat.org) uses variation data in many popular variant file formats and its outputs are variant annotations and visualizations.  To get started go to opencravat.org.  Download and run on your local machine, multi-user servers, at https://run.opencravat.org or in the cloud. We offer a broader selection of annotation tools than comparable software and results can be explored with an interactive GUI that provides customized filtering options, interactive tables and widgets.  Use it for a single sample or a large cohort, or pull single variant reports with a structured url (Example: https://run.opencravat.org/webapps/variantreport/index.html?chrom=chr11&pos=48123823&ref_base=A&alt_base=C )
 
+## pVACtools
+
+Identification of neoantigens is a critical step in predicting response to checkpoint blockade therapy and design of personalized cancer vaccines. We have built a computational framework called pVACtools that, when paired with a well-established genomics pipeline, produces an end-to-end solution for neoantigen characterization. pVACtools supports identification of altered peptides from different mechanisms, including point mutations, in-frame and frameshift insertions and deletions, and gene fusions. Prediction of peptide:MHC binding is accomplished by supporting an ensemble of MHC Class I and II binding algorithms within a framework designed to facilitate the incorporation of additional algorithms. Prioritization of predicted peptides occurs by integrating diverse data, including mutant allele expression, peptide binding affinities, and determination whether a mutation is clonal or subclonal. Interactive visualization via a Web interface allows clinical users to efficiently generate, review, and interpret results, selecting candidate peptides for individual patient vaccine designs. Additional modules support design choices needed for competing vaccine delivery approaches. One such module optimizes peptide ordering to minimize junctional epitopes in DNA vector vaccines. Downstream analysis commands for synthetic long peptide vaccines are available to assess candidates for factors that influence peptide synthesis. All of the aforementioned steps are executed via a modular workflow consisting of tools for neoantigen prediction from somatic alterations (pVACseq and pVACfuse), prioritization, and selection using a graphical Web-based interface (pVACview), and design of DNA vector–based vaccines (pVACvector) and synthetic long peptide vaccines. pVACtools is available at http://www.pvactools.org.
+
+## TumorDecon
+
+It is only software that includes these four digital cytometry methods in one platform, so that users can compare the results of these methods. It is the only software that includes a method for creating signature matrix from single cell gene expression data.
+
+TumorDecon software includes four deconvolution methods (DeconRNAseq [Gong2013], CIBERSORT [Newman2015], ssGSEA [Şenbabaoğlu2016], Singscore [Foroutan2018]) and several signature matrices of various cell types, including LM22. The input of this software is the gene expression profile of the tumor, and the output is the relative number of each cell type and several visualization plots. Users have an option to choose any of the implemented deconvolution methods and included signature matrices or import their own signature matrix to get the results. Additionally, TumorDecon can be used to generate customized signature matrices from single-cell RNA-sequence profiles.
+
+In addition to the 3 tutorials provided on GitHub (tutorial.py, sig_matrix_tutorial.py, & full_tutorial.py) there is a User Manual available at: https://people.math.umass.edu/~aronow/TumorDecon
+
+TumorDecon is available on Github (https://github.com/ShahriyariLab/TumorDecon) and PyPI (https://pypi.org/project/TumorDecon/).
+
+For more info please see: Rachel A. Aronow, Shaya Akbarinejad, Trang Le, Sumeyye Su, Leili Shahriyari, TumorDecon: A digital cytometry software, SoftwareX, Volume 18, 2022, 101072, https://doi.org/10.1016/j.softx.2022.101072.
+
 ## WebMeV
+
 [WebMeV](https://webmev.tm4.org) is an online tool that facilitates analysis of large-scale RNA-seq and other multi-omic datasets by providing intuitive access to advanced analytical methods and high-performance computing for a wide range of basic, clinical, and translational researchers. Although WebMeV provides support for “bulk” RNA-seq data, single-cell RNA-seq, and other types of -omic data and provides easy access to public data resources such as The Cancer Genome Atlas (TCGA) and the Genotype-Tissue Expression project (GTEx)—as well as user-provided data. WebMeV uniquely provides a user-friendly, intuitive, interactive interface to processed analytical data uses cloud-computing elasticity for computationally intensive analyses that are increasingly required for genomic data analysis. WebMeV’s design places an emphasis on user-driven data analysis by providing users the ability to visualize, interact with, and dissect genomic data at each step in the analysis with a “point-and-click” interactive data environment. Although the primary input is normalized “count matrices,” WebMeV does include tools for data normalization and quality control and uses Dropbox and Google Drive as means of easily uploading data. Analytical methods include statistical tests for comparing cohorts, for identifying gene seats, for doing functional enrichment analysis on gene sets (GSEA), and for inferring gene regulatory network models and comparing these networks between phenotypes to understand the drivers of disease. WebMeV also provides a platform to support reproducible research and makes code for the entire system and its component methods available as open-source software code.
 
 ## Xena
