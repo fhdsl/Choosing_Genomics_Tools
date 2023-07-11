@@ -147,7 +147,7 @@ Annotation
 
 These tools allow users to generate heatmaps of ChIP-seq data, which can be used to identify enriched regions of binding and to visualize patterns of binding across genomic regions.
 
-The Cistrome Project has a large collection of human and mouse ChIP-seq, DNase-seq and ATAC-seq data, as well as tools for analysing user generate ChIP-seq data with publicly available samples.  These tools include the  Cistrome Data Browser toolkit function that can find publicly available datasets that are similar to a ChIP-Seq peak set, and Cistrome-GO  for gene ontology analysis of TF ChIP-seq target genes.
+The Cistrome Project has a large collection of human and mouse ChIP-seq, DNase-seq and ATAC-seq data, as well as tools for analyzing user generate ChIP-seq data with publicly available samples.  These tools include the  Cistrome Data Browser toolkit function that can find publicly available datasets that are similar to a ChIP-Seq peak set, and Cistrome-GO  for gene ontology analysis of TF ChIP-seq target genes.
 
 ## More resources about ChiP-seq data
 

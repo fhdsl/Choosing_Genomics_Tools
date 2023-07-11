@@ -174,7 +174,7 @@ Homer or MEME suite tools.
 ## ATAC-Seq data **limitations**:
 
 - ATAC-seq does not precisely identify the  transcription factors or other chromatin associated factors that bind in or around chromatin accessible regions. This type of information needs to be inferred through analysis of transcription factor binding motif analysis or ChIP-seq data.
-- Whereas ATAC-seq indicates the presence of a putative cis-regulatatory element, H3K27ac ChIP-seq is able to separate accessible regions from those that are accessible and active.
+- Whereas ATAC-seq indicates the presence of a putative cis-regulatory element, H3K27ac ChIP-seq is able to separate accessible regions from those that are accessible and active.
 - Accessible regions are not necessarily cis-regulatory regions, although many of them are.
 - The genes that are regulated by cis-regulatory elements cannot be identified conclusively by ATAC-seq alone.
 - ATAC-seq data can be biased, and affected by batch effects like any other genomics data type. When comparing ATAC-seq data good experimental design principles like the inclusion of biological replicates and consideration of controls, are needed for a meaningful outcome.  .
