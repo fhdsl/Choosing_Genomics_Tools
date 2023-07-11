@@ -16,9 +16,9 @@ docker-test: no
 ##### Renderings run upon merge to main branch #####
 # Rendering each platform's content
 render-bookdown: yes
-render-leanpub: no
+render-leanpub: yes
 render-coursera: no
 
 # What docker image should be used for rendering?
 # The default is jhudsl/course_template:main
-rendering-docker-image: 'jhudsl/course_template:main'
+rendering-docker-image: 'jhudsl/base_ottr:main'
