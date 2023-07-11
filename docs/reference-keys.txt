@@ -282,7 +282,6 @@ more-resources-and-tutorials-about-scatac-seq-data
 chip-seq-1
 learning-objectives-16
 what-are-the-goals-of-chip-seq-analysis
-what-are-the-goals-of-chip-seq-analysis-1
 chip-seq-general-workflow-overview
 chip-seq-data-strengths
 chip-seq-data-limitations
