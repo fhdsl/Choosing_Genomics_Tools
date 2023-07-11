@@ -38,22 +38,13 @@ A basic ATAC-seq workflow involves mapping sequence reads to the genome, identif
 
 #### Sequencing considerations:
 
-```{r, fig.alt = "Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting
-", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_57")
-```
+![](resources/images/11a-ATAC-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_57.png){width=100%}
 
-```{r, fig.alt = "Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting
-", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_63")
-```
+![](resources/images/11a-ATAC-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_63.png){width=100%}
 
 #### Pre-alignment QC:
 
-```{r, fig.alt = "Post-sequencing. Signal to noise ratio (link resources at end)
-Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_50")
-```
+![](resources/images/11a-ATAC-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_50.png){width=100%}
 
 A tool like FastQC or similar should be used to check for GC content, read quality and length, and primer or adapter reads prior to alignment. Trimmomatic is a useful tool for removing primer and adapter sequences if they are present. ATAC-seq experiments should be sequenced with paired-end sequencing, and existing pipelines will expect paired-end. (2 files *_R1.fastq and *_R2.fastq)
 
@@ -70,10 +61,7 @@ As for all DNA-sequencing based genomics technologies, a sufficient number of ma
 
 #### Post-alignment QC:
 
-```{r, fig.alt = "Post-sequencing. Signal to noise ratio (link resources at end)
-Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g1567d947351_0_50")
-```
+![](resources/images/11a-ATAC-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_50.png){width=100%}
 
 Post alignment: check percent of matched, unmatched, unpaired and duplicated reads. Reads which are duplicated or unmatched should be filtered out.
 [Picard](https://broadinstitute.github.io/picard/) is a useful tool for this step.
