@@ -29,9 +29,9 @@ general-informatics-files
 bed---browser-extensible-data
 gffgtf-general-feature-formatgene-transfer-format
 other-files
-what-are-metadata
+guidelines-for-good-metadata
 learning-objectives-1
-what-are-metadata-1
+what-are-metadata
 how-to-create-metadata
 the-goals-in-creating-your-metadata
 goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers
