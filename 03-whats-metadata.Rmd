@@ -3,7 +3,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# What are Metadata?
+# Guidelines for Good Metadata
 
 ## Learning Objectives
 
