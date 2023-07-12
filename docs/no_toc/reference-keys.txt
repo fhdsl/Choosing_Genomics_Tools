@@ -140,7 +140,7 @@ what-regions-of-the-genome-pertain-to-your-research-question
 what-does-your-project-budget-allow-for
 what-is-your-detection-power-for-these-variants
 strengths-and-weaknesses-of-different-methods
-whole-genomeexome-sequencing
+whole-genome-or-exome-sequencing
 learning-objectives-8
 wgs-and-wgs-overview
 advantages-and-disadvantages-of-wgs-vs-wxs
