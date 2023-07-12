@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 General Data Analysis Tools | Choosing Genomics Tools</title>
+  <title>Chapter 10 Whole Genome or Exome Sequencing | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 General Data Analysis Tools | Choosing Genomics Tools" />
+  <meta property="og:title" content="Chapter 10 Whole Genome or Exome Sequencing | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 General Data Analysis Tools | Choosing Genomics Tools" />
+  <meta name="twitter:title" content="Chapter 10 Whole Genome or Exome Sequencing | Choosing Genomics Tools" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="considerations-for-choosing-tools.html"/>
-<link rel="next" href="sequencing-data.html"/>
+<link rel="prev" href="dna-methods-overview.html"/>
+<link rel="next" href="rna-methods-overview.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -54,7 +54,7 @@
   <html>
   
   <head>
-  <title>Chapter 5 General Data Analysis Tools | Title</title>
+  <title>Chapter 10 Whole Genome or Exome Sequencing | Title</title>
   </head>
   
   <body>
@@ -506,86 +506,153 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="general-data-analysis-tools" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> General Data Analysis Tools</h1>
-<div id="learning-objectives-3" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Learning Objectives</h2>
-<p><img src="resources/images/05-general-data-analysis-tools_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g20fbd76736e_0_0.png" title="This chapter will demonstrate how to: Understand the difference between command line and GUI based applications. Understand what R and Python languages are. Find many links to resources where you can learn R or Python" alt="This chapter will demonstrate how to: Understand the difference between command line and GUI based applications. Understand what R and Python languages are. Find many links to resources where you can learn R or Python" width="100%" /></p>
+<div id="whole-genome-or-exome-sequencing" class="section level1" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Whole Genome or Exome Sequencing</h1>
+<div class="warning">
+<p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="command-line-vs-gui" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Command Line vs GUI</h2>
-<p>When using computers there are two different ways you can tell a computer program what you want it to do. You can use a a Graphics User Interface (abbreviated as GUI) where you point and click buttons or you can use a Command Line Interface where you type in commands and write scripts that tell the program what you want it to do.</p>
-<p>Command Line Interfaces require a bit more time to learn and get used to, but they are generally easier to make more reproducible, because every step that you are using an analysis can be written in a script. Graphics User Interfaces can be more intuitive to use more quickly, but they can be difficult to repeat the analysis in the exact same way. If you know you will be doing the same analysis many times (either with different or the same samples), it is a good use of your time to make sure that you learn how to use Command Line tools. We will discuss some of the most commonly used Command line tools here.</p>
-<div id="bash" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Bash</h3>
-<p>Bash is a command language used by a lot of computers and programs. Many of the same items that you might do every day on your computer by clicking on various items on your desktop and menus, you can also perform using bash.</p>
-<p>On a Mac computer, you can use bash commands by finding your <code>Terminal</code> window. Go to your search bar and search for the <code>Terminal</code>. You may want to keep this application handy.</p>
-<p>In Windows, you can use bash commands by search for <code>Command Prompt</code> application. Go to your search bar and search for <code>Command Prompt</code>. You may want to keep this application handy.</p>
+<div id="learning-objectives-8" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Learning Objectives</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png" title="The learning objectives for this course are to: 1 Define the uses and applications of WGS/WXS 2 Describe the steps for generating WGS/WXS data 3 Understand the data analysis workflow for WGS/WXS" alt="The learning objectives for this course are to: 1 Define the uses and applications of WGS/WXS 2 Describe the steps for generating WGS/WXS data 3 Understand the data analysis workflow for WGS/WXS" width="100%" />
+The learning objectives for this course are to explain the use and application of Whole Genome Sequencing (WGS) and Whole Exome Sequencing (WES/WXS) for genomics studies, outline the technical steps in generating WGS/WXS data, and detail the processing steps for analyzing and interpreting WGS/WXS data.</p>
+<p><strong>To familiarize yourself with sequencing methods as a whole, we recommend you read our <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">chapter on sequencing first</a>.</strong></p>
 </div>
-<div id="r" class="section level3" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> R</h3>
-<p>R is a program commonly used for statistics and data analysis. It’s free and has lots of R packages built for genomics analysis purposes. Many of these packages have been highlighted in this course or otherwise listed in our <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/genomic-tool-glossary.html">tool glossary</a>.</p>
-<div id="resources-for-learning-r" class="section level4" number="5.2.2.1">
-<h4><span class="header-section-number">5.2.2.1</span> Resources for learning R</h4>
-<div id="r-and-tidyverse" class="section level5" number="5.2.2.1.1">
-<h5><span class="header-section-number">5.2.2.1.1</span> R and Tidyverse</h5>
+<div id="wgs-and-wgs-overview" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> WGS and WGS Overview</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_8.png" title="Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease" alt="Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease" width="100%" />
+The difference between WGS and WXS sequencing is whether or not the open reading frames and thus coding regions are targeted in sequencing. WGS attempts to sequence the whole genome, while for WXS only exons with open reading frames are targeted for sequencing. Both of these methods can be massively beneficial for studying rare and complex diseases.</p>
+<p>Thus, whole genome sequencing is a technique to thoroughly analyze the entire DNA sequence of an organism’s genome. This includes sequencing all genes both coding and non-coding and all mitochondrial DNA. WGS is beneficial for identifying new and previously established variants related to disease and the regulatory elements of the genome including promoters, enhancers, and silencers. Increasingly non-coding RNAs have also been identified to play a functional role in biological mechanisms and diseases. In order to learn more about the non-coding regions of the genome, WGS is necessary.</p>
+<p>Alternatively whole exome sequencing is used to sequence the coding regions of an organism’s genome. Although non-coding regions can sometimes reveal valuable insights, coding regions can be a useful area of the genome to focus sequencing methods on, since changes in a protein coding sequence of the genome generally have more information known about them. Often protein coding sequences can have more clearly functional changes - like if a stop codon is introduced or a codon is changed to a predictable amino acid. This can more easily lead to downstream investigations on the functional implications of the protein affected.</p>
+</div>
+<div id="advantages-and-disadvantages-of-wgs-vs-wxs" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Advantages and Disadvantages of WGS vs WXS</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_13.png" title="Advantages and Disadvantages of WGS as opposed to WXS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage, allows for discovery - identify causative variants; Disadvantages include higher cost and more resources for storing and analyzing data" alt="Advantages and Disadvantages of WGS as opposed to WXS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage, allows for discovery - identify causative variants; Disadvantages include higher cost and more resources for storing and analyzing data" width="100%" /></p>
+<p>We more thoroughly discuss how to choose DNA sequencing methods <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/dna-methods.html">here in the previous chapter</a>, but we will briefly cover this here. Alternatives to WGS include Whole Exome Sequencing (WES/WXS), which sequences the open reading frame areas of the genome or Targeted Gene Sequencing where probes have been designed to sequence only regions of interest.
+The main advantages of WGS include the ability to comprehensively analyze all regions of a genome, the ability to study structural rearrangements, gene copy number alterations, insertions and deletions, single nucleotide polymorphisms (SNPs), and sequencing repeats. Some disadvantages include higher sequencing costs and the necessity for more robust storage and analysis solutions to manage the much larger data output generated from WGS.</p>
+</div>
+<div id="wgswxs-considerations" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> WGS/WXS Considerations</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_28.png" title="WGS/WXS Considerations , Genome type/size, Coverage requirements, Tissue source: fresh tissue, FFPE, blood, Library preparation protocol: PCR vs PCR-free" alt="WGS/WXS Considerations , Genome type/size, Coverage requirements, Tissue source: fresh tissue, FFPE, blood, Library preparation protocol: PCR vs PCR-free" width="100%" />
+Some important considerations for WGS/WXS include:</p>
 <ul>
-<li><a href="https://swirlstats.com/">Swirl, an interactive tutorial</a><br />
-</li>
-<li><a href="https://r4ds.had.co.nz/">R for Data Science</a><br />
-</li>
-<li><a href="http://jhudatascience.org/tidyversecourse/">Tidyverse skills for Data Science</a> by Carrie Wright.</li>
-<li><a href="https://www.rstudio.com/resources/cheatsheets/">Handy R cheatsheets</a><br />
-</li>
-<li><a href="https://rc2e.com/">R Cookbook Second Edition</a></li>
-<li><a href="https://adv-r.hadley.nz/">Advanced R</a></li>
-<li><a href="https://www.r4epi.com/">R for Epidemiology</a> - has generally good R advice</li>
-<li><a href="https://www.spl.org/books-and-media/books-and-ebooks/safari-books-online">O’Reilly books</a> available through Seattle Public Library</li>
+<li>What genome you are studying and the size of this genome. Included in this considerations is whether this genome has been sequenced before and you will have a “reference” genome to compare your data against or whether you will have to make a reference genome yourself. <a href="https://eriqande.github.io/eca-bioinf-handbook/alignment-of-sequence-data-to-a-reference-genome-and-associated-steps.html">This bioinformatics resource</a> provides a great overview of genome alignment.</li>
+<li>The depth of coverage for sequencing is an important consideration. The typical recommendation for WGS coverage is 30x, but this is on the lower side and many researchers find it does not provide sufficient coverage compared to 50x. Illumina has an <a href="https://www.illumina.com/content/dam/illumina-marketing/documents/techniques/wgs-wes-infographic-web.pdf">infographic</a> that explains this information</li>
+<li>The tissue source and whether genetic alterations were introduced during processing are important. Fixation for formalin-fixed paraffin embedded (FFPE) can introduce mutations/genetic changes that will need to be accounted for during data analysis. <a href="https://www.beckman.com/resources/technologies/next-generation-sequencing/challenges-with-ffpe-tissue-samples">This page from Beckman</a> addresses many of the questions researchers often have about utilizing FFPE samples for their sequencing studies.</li>
+<li>The library preparation method of DNA amplification via PCR is very important as PCR can often introduce duplicates that interfere with interpreting whether a mutant gene is truly frequent or just over amplified during sequencing preparation. <a href="https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/dna-pcr-free-prep.html">Illumina</a> provides a comparison of using PCR and PCR-free library preparation methods on their website.</li>
+</ul>
+<div id="target-enrichment-techniques" class="section level3" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Target enrichment techniques</h3>
+<p>For WXS or other targeted sequencing specifically (so not relevant to WGS data), what methods were used to enrich for the targeted sequences? (Which is the entire exome in the case of general WXS) These methods are generally summarized into two major categories: Hybridization based and amplicon based enrichment.</p>
+<pre><code>- [Hybridization based enrichment](https://www.paragongenomics.com/target-enrichment/). This includes a variety of widely used methods that we will broadly categorize in two groups: Array-based and In-solution:
+  - [Array-based capture](https://en.wikipedia.org/wiki/Exome_sequencing#:~:text=Target%2Denrichment%20strategies-,Array%2Dbased%20capture,-In%2Dsolution%20capture) uses microarrays that have probes designed to bind to known coding sequences. Fragments that do not bind to these probes are washed away, leaving the sample with known coding sequences bound and ready for PCR amplification [@Hodges2007; @Turner2009].
+  - [In-solution capture](https://en.wikipedia.org/wiki/Exome_sequencing#In-solution_capture) has become more popular in recent years because it [requires less sample DNA than array-base capture](https://sequencing.roche.com/global/en/article-listing/what-is-ngs-target-enrichment-and-why-is-it-important.html). To enrich for coding sequences, in-solution capture has a pool of custom probes that are designed to bind to the coding regions in the sample. Attached to these probes are beads which can be physically separated from DNA that is not bound to the probes (this should be the non-coding sequences) [@Mamanova2010].  
+- [PCR/Amplicon based enrichment](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318977/) requires even less sample than the other two strategies and so is ideal for when the amount of sample is limited or the DNA has been otherwise processed harshly (e.g. with paraffin embedding). Because the other two enrichment methods are done after PCR amplification has been done to the whole genomic DNA sample, its thought that this method of selective PCR amplification for enrichment can result in more uniformly amplified DNA in the resulting sample. However this is less suitable the more gene targets you have (like if you truly need to sequence all of the exome) since amplicons need to be designed for each target. Overall it is much more affordable of a method. There are several variations of this method that are [discussed thoroughly by @Singh2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318977/).</code></pre>
+</div>
+</div>
+<div id="dna-sequencing-pipeline-overview" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> DNA Sequencing Pipeline Overview</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_33.png" title="Pipeline overview: Step 1: DNA extraction from sample, Step 2: library preparation, Step 3: Sequencing, Step 4: Analysis including data processing from Fastq, aligning reads to generate a BAM file, identifying variants to create a final VCF file" alt="Pipeline overview: Step 1: DNA extraction from sample, Step 2: library preparation, Step 3: Sequencing, Step 4: Analysis including data processing from Fastq, aligning reads to generate a BAM file, identifying variants to create a final VCF file" width="100%" />
+In order to create WGS/WXS data, DNA is first extracted from a specific sample type (tissue, blood samples, cells, FFPE blocks, etc.). Either traditional (involving phenol and chloroform) or commercial kits can be used for this first step. Next, the DNA sequencing libraries are prepared. This involves fragmenting the DNA, adding sequencing adapters, and DNA amplification if the input DNA is not of sufficient quantity. Recall that for WXS After sequencing, data is analyzed by converting and aligning reads to generate a BAM file. Many analysis tools will use the BAM file to identify variants, which then generates a VCF file. More information about sequencing and BAM and VCF file generation can be found <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">here</a> in the sequencing data chapter.</p>
+</div>
+<div id="data-pre-processing" class="section level2" number="10.6">
+<h2><span class="header-section-number">10.6</span> Data Pre-processing</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_38.png" title="Data pre-processing pipeline overview: Raw data from sequencing is transformed into a Fastq file, reads are aligned and a Bam file is created, the data is sorted and merged, duplicates are identified, and the base quality score is recalibrated to create a final BAM file " alt="Data pre-processing pipeline overview: Raw data from sequencing is transformed into a Fastq file, reads are aligned and a Bam file is created, the data is sorted and merged, duplicates are identified, and the base quality score is recalibrated to create a final BAM file " width="100%" />
+Raw sequencing reads are first transformed into a fastq file (more information about fastq files can be found <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">here</a> in the sequencing data chapter in the Quality Controls section. Then the sequencing reads are aligned to a reference genome to create a BAM file. This data is sorted and merged, and PCR duplicates are identified. The confidence that each read was sequenced correctly is reflected in the base quality score. This score must be recalibrated at this step before variants are called. A final BAM file is thus created. This can be used for future analysis steps include variant or mutation identification, which is outlined on the following slide.</p>
+</div>
+<div id="commonly-used-tools" class="section level2" number="10.7">
+<h2><span class="header-section-number">10.7</span> Commonly Used Tools</h2>
+<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_43.png" title="Tools commonly used in WGS data analysis" alt="Tools commonly used in WGS data analysis" width="100%" />
+The following link provides the data analysis pipeline written by researchers in the NCI division of the NIH and provides a helpful overview of the typical steps necessary for <a href="https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/">WGS analysis</a>.</p>
+<p>Here are many of the tools and resources used by researchers for analyzing WGS data.</p>
+</div>
+<div id="data-pre-processing-tools" class="section level2" number="10.8">
+<h2><span class="header-section-number">10.8</span> Data pre-processing tools</h2>
+<p>In most cases, all of these tools will be used sequentially to prepare the data for downstream mutational and copy number variation (CNV) analysis.</p>
+<ul>
+<li><a href="https://bedtools.readthedocs.io/en/latest/">Bedtools</a> including the bamtofastq function, which is the first step in converting data off the sequencer to a usable format for downstream analysis</li>
+<li><a href="http://www.htslib.org/">Samtools</a> including tools for converting fastq to BAM files while mapping genes to the genome, duplicate read marking, and sorting reads</li>
+<li><a href="https://broadinstitute.github.io/picard/">Picard2</a> including tools to covert fastq to SAM files, filter files, create indices, mark read duplicates, sort files, and merge files</li>
+<li><a href="https://gatk.broadinstitute.org/hc/en-us">GATK</a> is a comprehensive set of tools from the Broad Institute for analyzing many types of sequencing data. For pre-processing, the print read function is very beneficial for writing the reads from a BAM or SAM file that pass specific criteria to a new file</li>
 </ul>
 </div>
-<div id="r-notebooks" class="section level5" number="5.2.2.1.2">
-<h5><span class="header-section-number">5.2.2.1.2</span> R notebooks</h5>
+<div id="tools-for-somatic-and-germline-variant-identification" class="section level2" number="10.9">
+<h2><span class="header-section-number">10.9</span> Tools for somatic and germline variant identification</h2>
+<p>These tools are used to identify either somatic or germline mutations from a sequenced sample. Many researchers will often use a combination of these tools to narrow down only variants that are identified using a combination of these analysis algorithms. All of these mutation calling tools except SvABA can be used on both WGS and WXS data.</p>
 <ul>
-<li><a href="http://rmarkdown.rstudio.com">R Markdown</a><br />
+<li><a href="https://gatk.broadinstitute.org/hc/en-us/articles/9570422171291-Mutect2">Mutect2</a> This is a beneficial variant calling tool with functions including using a “panel of normals” (samples provided by the user of many normal controls) to better compare disease samples to normal and filtering functions for samples with orientation bias artifacts (FFPE samples) called F1R2, which is explained in the link above.</li>
+<li><a href="https://varscan.sourceforge.net/">Varscan 2</a> This is a helpful tool that utilizes a heuristic/statistic approach to variant calling. This means that it detects somatic CNAs (SCNAs) as deviations from the log-ratio of sequence coverage depth within a tumor–normal pair, and then quantify the deviations statistically. This approach is unique because it accounts for differences in read depth between the tumor and normal sample. Varscan 2 can also be used for identifying copy number alterations in tumor-normal pairs.</li>
+<li><a href="https://bioinformatics.mdanderson.org/public-software/muse/">MuSE</a> This is a beneficial mutation calling tool when you have both tumor and normal datasets. <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1029-6">The Markov Substitution Model for Evolution</a> utilized in this tool models the evolution of the reference allele to the allelic composition of the tumor and normal tissue at each genomic locus.</li>
+<li><a href="https://github.com/walaj/svaba">SvABA</a> This tool is especially useful for calling insertions and deletions (indels) because it assembles aberrantly aligned sequence reads that reflect indels or structural variants using a custom <a href="https://github.com/jts/sga">String Graph Assembler</a>. Indels can be difficult to detect with standard alignment-based variant callers.</li>
+<li><a href="https://github.com/Illumina/strelka">Strelka2</a> This is a small variant caller designed by Illumina. It is used for identifying germline variants in cohorts of samples and somatic variants in tumor/normal sample pairs.</li>
+<li><a href="https://gmt.genome.wustl.edu/packages/somatic-sniper/">SomaticSniper</a> SomaticSniper can be used to identify SNPs in tumor/normal pairs. It calculates the probability that the tumor and normal genotypes are different and reports this probability as a somatic score.</li>
+<li><a href="https://www.sanger.ac.uk/tool/pindel/">Pindel</a> Pindel is a tool that uses a pattern growth approach to detect breakpoints of large deletions, medium size insertion/inversion, tandem duplications.</li>
+<li><a href="https://github.com/nygenome/lancet">Lancet</a> This is a newer variant calling tool that uses colored de Bruijn graphs to jointly analyze tumor and normal pairs, offering strong indel detection. More information about the processes used in this variant calling tool can be found <a href="https://www.nature.com/articles/s42003-018-0023-9">here</a></li>
+</ul>
+<p>Researchers may want to create a consensus file based on the mutation calls using multiple tools above. <a href="https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers">OpenPBTA-analysis</a> shows an open source code example of how you might compare and contrast different SNV caller’s results.</p>
+<p>For researchers who prefer GUI based platforms: <a href="https://www.genepattern.org/variant-and-copy-number-analysis#gsc.tab=0">Gene Pattern has a great set of variant based tutorials</a>. GenePattern is an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data.</p>
+</div>
+<div id="tools-for-variant-calling-annotation" class="section level2" number="10.10">
+<h2><span class="header-section-number">10.10</span> Tools for variant calling annotation</h2>
+<p>These are beneficial for providing functional meaning to the mutational hits identified above.</p>
+<ul>
+<li><a href="https://annovar.openbioinformatics.org/en/latest/">Annovar</a> This is a helpful tool for annotating, filtering, and combining the output data from the above tools. It can be used for gene-based, region-based, or filter-based annotations.</li>
+<li><a href="https://www.gencodegenes.org/#">GENCODE</a> This tool can be used to identify and classify gene features in human and mouse genomes.</li>
+<li><a href="https://www.ncbi.nlm.nih.gov/snp/">dbSNP</a> This is a resource to look up specific human single nucleotide variations, microsatellites, and small-scale insertions and deletions.</li>
+<li><a href="https://uswest.ensembl.org/index.html">Ensembl</a> This resource is a genome browser for annotating genes from a wide variety of species.</li>
+<li><a href="http://www.pvactools.org">pVACtools</a> supports identification of altered peptides from different mechanisms, including point mutations, in-frame and frameshift insertions and deletions, and gene fusions.</li>
+</ul>
+</div>
+<div id="tools-for-copy-number-variation-analysis" class="section level2" number="10.11">
+<h2><span class="header-section-number">10.11</span> Tools for copy number variation analysis</h2>
+<p>Similar to the mutation calling tools, many researchers will use several of these tools and investigate the overlapping hits seen with different copy number variant calling algorithms:</p>
+<ul>
+<li><a href="https://gatk.broadinstitute.org/hc/en-us/articles/360035531092--How-to-part-I-Sensitively-detect-copy-ratio-alterations-and-allelic-segments">GATK</a> GATK has a variety of tools that can be used to study changes in copy numbers of genes. This link provides a tutorial for how to use the tools.</li>
+<li><a href="https://www.crick.ac.uk/research/labs/peter-van-loo/software">AscatNGS</a> These tools (allele-specific copy number analysis of tumors) are specific for WGS copy number variation analysis. They can be used to dissect allele-specific copy numbers of tumors by estimating and adjusting for tumor ploidy and nonaberrant cell admixture.<br />
 </li>
-<li><a href="https://ismayc.github.io/rbasics-book/">Tutorial on R, RStudio and R Markdown</a></li>
-<li><a href="https://www.rstudio.com/resources/cheatsheets/">Handy R cheatsheets</a><br />
+<li><a href="https://github.com/gavinha/TitanCNA">TitanCNA</a> This tool is used to analyze copy number variation and loss of heterozygosity at the subclonal level for both WGS and WXS data in tumors compared to matched normals. It accounts for mixtures of cell populations and estimates the proportion of cells harboring each event. The Ha lab has developed a <a href="https://github.com/gavinha/TitanCNA/tree/master/scripts/snakemake">snakemake pipeline</a> to more easily use this tool. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4216928/">Ha et al. published a paper describing this tool in detail here</a><br />
 </li>
-<li><a href="https://bookdown.org/yihui/rmarkdown/">R Notebooks tutorial</a></li>
+<li><a href="https://gatk.broadinstitute.org/hc/en-us/articles/4404604788891-GermlineCNVCaller">gGNV</a> This is a germline CNV calling tool that can be used on both WGS and WXS data. This tool has booth COHORT and CASE modes. COHORT mode is used when providing a cohort of germline samples where CASE mode is used for individual samples. More details about these modes are described in the link above.<br />
+</li>
+<li><a href="http://compbio.med.harvard.edu/BIC-seq/">BIC-seq2</a> This tool is used to detect CNVs with or without control samples. The steps involved in this data processing tool include normalization and CNV detection.</li>
 </ul>
 </div>
-<div id="r-and-genomics" class="section level5" number="5.2.2.1.3">
-<h5><span class="header-section-number">5.2.2.1.3</span> R and Genomics</h5>
+<div id="tools-for-data-visualization" class="section level2" number="10.12">
+<h2><span class="header-section-number">10.12</span> Tools for data visualization</h2>
+<p>These tools are often used in parallel to look at regions of the genome, develop plots, and create other relevant figures:</p>
 <ul>
-<li><a href="https://github.com/AlexsLemonade/training-modules/tree/master/intro-to-R-tidyverse">Intro to R and Tidyverse course and exercises</a> from the Childhood Cancer Data Lab.</li>
-<li><a href="https://alexslemonade.github.io/refinebio-examples/index.html">Refine.bio examples</a> from the Childhood Cancer Data Lab.</li>
-<li><a href="https://www.biostarhandbook.com">Biostar Handbook: A Beginner’s Guide to Bioinformatics</a></li>
+<li><a href="https://run.opencravat.org">OpenCRAVAT</a> uses variation data in many popular variant file formats and its outputs are variant annotations and visualizations.</li>
+<li><a href="https://software.broadinstitute.org/software/igv/">IGV</a> IGV is an interactive tool used to easily visualize genomic data. It is available as a desktop application, web application, and JavaScript to embed in web pages. This application is very beneficial for visualizing both mutational and CNV data for WGS and WXS. IGV has many <a href="https://www.youtube.com/channel/UCb5W5WqauDOwubZHb-IA_rA/featured">tutorials on YouTube</a> that are helpful for using the tool to its full potential.</li>
+<li><a href="https://www.bioconductor.org/packages/devel/bioc/vignettes/maftools/inst/doc/maftools.html">Maftools</a> Maftools is an R package that can be used to create informative plots from your WGS data output. It has tools to import both VCF files and ANNOVAR output for data analysis.</li>
+<li><a href="https://www.graphpad.com/scientific-software/prism/">Prism</a> Prism is a widely used tool in scientific research for organizing large datasets, generating plots, and creating readable figures. WGS or WXS data regarding mutations and CNV can be used as input for creating plots with this tool.</li>
 </ul>
 </div>
-</div>
-</div>
-<div id="python" class="section level3" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Python</h3>
-<p>Python is a program that also is used for data analysis among many other items. It can be a very powerful development tool. Some of the packages that have been highlighted in this course or otherwise are listed in our <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/genomic-tool-glossary.html">tool glossary</a>.</p>
-<div id="resources-for-learning-python" class="section level4" number="5.2.3.1">
-<h4><span class="header-section-number">5.2.3.1</span> Resources for learning python</h4>
+<div id="resources-for-wgs" class="section level2" number="10.13">
+<h2><span class="header-section-number">10.13</span> Resources for WGS</h2>
+<p>Online tutorials:</p>
 <ul>
-<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a></li>
-<li><a href="https://www.pythonforbiologists.org/">Python for Biologists</a></li>
+<li><a href="https://training.galaxyproject.org/training-material/topics/sequence-analysis/">Galaxy tutorials</a></li>
+<li><a href="https://gdc.cancer.gov/about-data/gdc-data-processing/genomic-data-processing">NCI resources</a></li>
+<li><a href="https://bioinformaticsdotca.github.io/CAN_2021_module4_lab">Bioinformaticsdotca tutorial</a></li>
 </ul>
-</div>
-</div>
-</div>
-<div id="more-resources-1" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> More resources</h2>
+<p>Papers comparing analysis tools:</p>
 <ul>
-<li><p><a href="https://hutchdatascience.org/code_review/more_resources.html">A longer list of tools and resources can be found here</a></p></li>
-<li><p><a href="https://datatrail-jhu.github.io/DataTrail/index.html">DataTrail curriculum</a></p></li>
-<li><p><a href="https://jhudatascience.org/Reproducibility_in_Cancer_Informatics/introduction.html">Introduction to Reproducibility</a></p></li>
-<li><p><a href="https://jhudatascience.org/Adv_Reproducibility_in_Cancer_Informatics/introduction.html">Advanced Reproducibility in Cancer Informatics</a></p></li>
-<li><p><a href="https://jhudatascience.org/Computing_for_Cancer_Informatics/">Computing in Cancer Informatics</a></p></li>
+<li><span class="citation">(<a href="#ref-Hwang2019" role="doc-biblioref">Hwang et al. 2019</a>)</span></li>
+<li><span class="citation">(<a href="#ref-Naj2019" role="doc-biblioref">Naj et al. 2019</a>)</span></li>
+<li><span class="citation">(<a href="#ref-He2020" role="doc-biblioref">He et al. 2020</a>)</span></li>
 </ul>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-He2020" class="csl-entry">
+He, Xiaoyu, Shanyu Chen, Ruilin Li, Xinyin Han, Zhipeng He, Danyang Yuan, Shuying Zhang, Xiaohong Duan, and Beifang Niu. 2020. <span>“Comprehensive Fundamental Somatic Variant Calling and Quality Management Strategies for Human Cancer Genomes.”</span> <em>Briefings in Bioinformatics</em> 22 (3). <a href="https://doi.org/10.1093/bib/bbaa083">https://doi.org/10.1093/bib/bbaa083</a>.
+</div>
+<div id="ref-Hwang2019" class="csl-entry">
+Hwang, Kyu-Baek, In-Hee Lee, Honglan Li, Dhong-Geon Won, Carles Hernandez-Ferrer, Jose Alberto Negron, and Sek Won Kong. 2019. <span>“Comparative Analysis of Whole-Genome Sequencing Pipelines to Minimize False Negative Findings.”</span> <em>Scientific Reports</em> 9 (1). <a href="https://doi.org/10.1038/s41598-019-39108-2">https://doi.org/10.1038/s41598-019-39108-2</a>.
+</div>
+<div id="ref-Naj2019" class="csl-entry">
+Naj, Adam C., Honghuang Lin, Badri N. Vardarajan, Simon White, Daniel Lancour, Yiyi Ma, Michael Schmidt, et al. 2019. <span>“Quality Control and Integration of Genotypes from Two Calling Pipelines for Whole Genome Sequence Data in the Alzheimer<span></span>s Disease Sequencing Project.”</span> <em>Genomics</em> 111 (4): 808–18. <a href="https://doi.org/10.1016/j.ygeno.2018.05.004">https://doi.org/10.1016/j.ygeno.2018.05.004</a>.
 </div>
 </div>
 <hr>
@@ -601,8 +668,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="considerations-for-choosing-tools.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sequencing-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dna-methods-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rna-methods-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
