@@ -1,7 +1,7 @@
 
 
 
-# What are Metadata?
+# Guidelines for Good Metadata
 
 ## Learning Objectives
 
