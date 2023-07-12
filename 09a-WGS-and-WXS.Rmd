@@ -2,7 +2,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Whole Genome/Exome Sequencing
+# Whole Genome or Exome Sequencing
 
 <div class = "warning">
 This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
@@ -109,7 +109,7 @@ These tools are used to identify either somatic or germline mutations from a seq
 
 Researchers may want to create a consensus file based on the mutation calls using multiple tools above. [OpenPBTA-analysis](https://github.com/AlexsLemonade/OpenPBTA-analysis/tree/master/analyses/snv-callers) shows an open source code example of how you might compare and contrast different SNV caller's results.
 
-For researchers who prefer GUI based platforms: [Gene Pattern has a great set of variant based tutorials](https://www.genepattern.org/variant-and-copy-number-analysis#gsc.tab=0). GenePattern is an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data. 
+For researchers who prefer GUI based platforms: [Gene Pattern has a great set of variant based tutorials](https://www.genepattern.org/variant-and-copy-number-analysis#gsc.tab=0). GenePattern is an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data.
 
 ## Tools for variant calling annotation  
 These are beneficial for providing functional meaning to the mutational hits identified above.  
