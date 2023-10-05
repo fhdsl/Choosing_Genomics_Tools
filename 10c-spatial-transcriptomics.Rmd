@@ -8,7 +8,7 @@ ottrpal::set_knitr_image_path()
 This chapter chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
 :::
 
-## Learning Objectives
+## Learning objectives
 
 ```{r, fig.alt = "This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15bed4cad37_396_1")
@@ -28,8 +28,6 @@ Spatial transcriptomics (ST) technologies have been developed as a solution to t
 
 There is a large diversity in approaches to spatially profile tissues. Some ST technologies allow profiling at coarse cellular resolution, where regions of interest (ROIs) are usually identified by a pathologist. These ROIs may include tens of cells up to few hundreds (e.g., GeoMx @bergholtz2021best). Smaller ROI sizes can be found in other technologies such as Visium, where ROIs of 55uM of diameter (or "spots") often contain no more than 10 cells (<https://www.10xgenomics.com/resources/analysis-guides/integrating-single-cell-and-visium-spatial-gene-expression-data>). For finer cellular resolution, technologies such as MERFISH, SMI, or Xenium, among others, can measure gene expression at individual cells [@yue2023guidebook]. In general, there is a trade-off between the cellular resolution and molecular resolution, as the number of quantified genes and RNA molecules is lower in single-cell level spatial technologies compared to those at the ROI or spot level. In single-cell ST, often a panel of hundreds of genes is quantified, while in "mini-bulk" (ROI/spot) ST, it is possible to genes at the whole transcriptome level.
 
-`FIGURE TRADEOFF CELLULAR AND MOLECULAR RESOLUTION`
-
 In addition to the differences in cellular and molecular, there are fundamental differences in the chemistry used to count the RNA transcripts in the tissue [@wang2021spatial; @yue2023guidebook]. Capture or hybridization of RNA followed by sequencing, or fluorescent imaging are two of the most common techniques used in ST methods. Because of large diversity in resolution and chemical procedures among ST technologies, data collection workflows are equally diverse. Finally, each study poses specific questions that cannot be addressed with traditional scRNA-seq pipelines, requiring customized workflows.
 
 Some of the commonalities in the workflows are presented here:
@@ -48,115 +46,128 @@ Some of the commonalities in the workflows are presented here:
 
 ## Spatial transcriptomic data **strengths**:
 
--   **Preservation of Spatial Information:** Spatial transcriptomics allows the investigation of gene expression patterns within the context of tissue or cellular spatial organization. By preserving the spatial information of RNA molecules, it provides insights into how gene expression varies across different regions within a tissue sample.
--   **Identification of Cell Types and Subpopulations:** Spatial transcriptomics enables the identification and characterization of different cell types and subpopulations within a tissue sample based on their unique gene expression profiles. This information helps in understanding cellular heterogeneity and cell-cell interactions within the tissue.
--   **Visualization of Gene Expression Patterns:** By generating spatially resolved gene expression data, spatial transcriptomics allows for the visualization of gene expression patterns across the tissue sample. This visualization can be in the form of heatmaps, spatial expression plots, or spatially resolved gene expression atlases, providing a comprehensive view of gene expression within the tissue.
--   **Integration with Anatomical and Imaging Data:** Spatial transcriptomics data can be integrated with anatomical or imaging data, such as histological images or imaging modalities like fluorescence microscopy. This integration enhances the interpretation of spatial transcriptomic data by correlating gene expression patterns with tissue morphology or specific cellular structures.
--   **Discovery of Novel Cell-Cell Interactions and Signaling Pathways:** By examining gene expression profiles in the spatial context, spatial transcriptomics can uncover novel cell-cell interactions and signaling pathways within a tissue. It allows the identification of genes that are specifically expressed in close proximity to each other, revealing potential regulatory relationships and functional interactions between cells.
--   **Exploration of Spatially Regulated Biological Processes:** Spatial transcriptomics enables the investigation of spatially regulated biological processes, such as tissue gradients or developmental processes occurring in specific regions. It provides insights into spatially restricted gene expression patterns associated with tissue patterning, morphogenesis, or cellular differentiation.
--   **Hypothesis Generation and Biomarker Discovery:** Spatial transcriptomic analysis can generate hypotheses and identify potential biomarkers related to specific tissue functions or disease states. By linking gene expression patterns to tissue organization and pathology, spatial transcriptomics facilitates the discovery of spatially restricted gene signatures and potential diagnostic or prognostic markers.
+-   **Preservation of the spatial context:** Spatial transcriptomics allows the investigation of gene expression patterns, cell types, and their interactions within the context of tissue spatial organization.
+-   **Integration with imaging data:** Spatial transcriptomics provides an additional data modality in the form of imaging data, such as histological images or fluorescence microscopy. This integration enhances the interpretation of spatial transcriptomic data by correlating gene expression patterns with tissue morphology and specific cellular structures.
+-   **Discovery of novel cell-cell interactions and signaling pathways:** By examining gene expression profiles in the spatial context, higher accuracy in the identification of novel cell-cell interactions and signaling pathways is obtained. Pairs of interacting genes can be identified by studying their level of co-localization (i.e., expressed in the same regions).
+-   **Exploration of spatially regulated biological processes:** Spatial transcriptomics enables the investigation of biological processes, such as spatial expression gradients or developmental processes occurring in specific regions. It provides insights into spatially restricted gene expression patterns associated with tissue patterning, morphogenesis, or cellular differentiation.
+-   **Hypothesis generation and biomarker discovery:** Spatial transcriptomic analysis can help in the generation of hypotheses and the identification of potential biomarkers related to specific tissue functions, regions, or disease states. By linking gene expression patterns to tissue organization and pathology, spatial transcriptomics facilitates the discovery of spatially restricted gene signatures and potential diagnostic or prognostic markers.
 
 ## Spatial transcriptomic data **weaknesses**:
 
--   **Limited Spatial Resolution:** Spatial transcriptomic techniques have a finite spatial resolution, which determines the level of detail at which gene expression patterns can be analyzed. The resolution is influenced by factors such as the size of capture spots or the resolution of imaging techniques. Obtaining fine-grained spatial information may be challenging, especially in complex tissues or samples with high cellular density.
--   **Technical Variability and Experimental Artifacts:** Spatial transcriptomic analysis involves multiple experimental steps, including tissue processing, capture techniques, and sequencing. Each step introduces technical variability and potential experimental artifacts, which can impact the accuracy and reproducibility of the results. Controlling and minimizing these sources of variation is crucial but can be challenging.
--   **Limited Coverage of Transcripts:** Spatial transcriptomic methods often have limited coverage of the entire transcriptome. The capture techniques used may bias the representation of certain RNA molecules or favor highly expressed transcripts, potentially leading to a biased view of gene expression. Additionally, spatial transcriptomic methods may have limitations in capturing non-polyadenylated RNAs or low-abundance transcripts.
--   **Complex Data Analysis:** Analyzing spatial transcriptomic data requires advanced computational methods and expertise. Data analysis involves multiple steps, including image processing, spatial registration, normalization, and interpretation. The complexity of the data and the need for specialized bioinformatics tools and pipelines can pose challenges, particularly for researchers without extensive computational skills.
--   **Validation and Integration Challenges:** Spatial transcriptomic analysis generates hypotheses and provides spatially resolved gene expression information. However, validating the functional significance of identified gene expression patterns or cellular interactions may require additional experiments or techniques. Integrating spatial transcriptomic data with other omics data or imaging modalities can also be complex and may require careful data integration strategies.
--   **Cost and Time Considerations:** Spatial transcriptomic analysis can be relatively expensive and time-consuming compared to traditional transcriptomic techniques. The specialized protocols, reagents, and instrumentation required can add to the cost of the analysis. Moreover, the data generation and analysis processes can be time-intensive, which may limit the scalability of studies involving large sample sizes.
--   **Limited Accessibility of Techniques:** Some spatial transcriptomic techniques may have limited availability, accessibility, or may require specialized equipment or expertise. This can restrict their widespread use and accessibility to researchers who do not have access to the necessary resources or infrastructure.
+-   **Trade-off between spatial resolution and molecular resolution:** Spatial transcriptomic techniques that provide whole transcriptome level information measure expression at the "mini-bulk" level (spots or ROIs), with each mini-bulk sample containing a collection of cells. Conversely, single-cell ST provide expression for a panel of genes (hundreds to a few thousands of genes). In addition, obtaining fine-grained spatial information may be challenging, especially in complex tissues or samples with high cellular density.
+-   **Technical variability and experimental artifacts:** Spatial transcriptomic analysis involves multiple experimental steps, including tissue processing, capture/hybridization, and sequencing/imaging. Each step introduces technical variability and potential experimental artifacts, which can impact the accuracy and reproducibility of the results. Controlling and minimizing these sources of variation is crucial but can be challenging.
+-   **Zero excess and limited coverage of transcripts:** Since most ST techniques use probes to capture of hybridize RNA transcripts, the resulting data may contain biases in the representation of certain RNA molecules. Additionally, spatial transcriptomic methods may have limitations in capturing certain RNA species or low-abundance transcripts, leading to a large portion of genes not being detected and contribution to zero-count excess.
+-   **Complex Data Analysis:** Analyzing spatial transcriptomic data requires advanced computational methods and expertise. The complexity of the data and the need for specialized bioinformatics tools and pipelines can pose challenges, particularly for researchers without extensive computational skills.
+-   **Validation and integration challenges:** Spatial transcriptomic analysis generates hypotheses and provides spatially resolved gene expression information. However, validating the functional significance of identified gene expression patterns or cellular interactions may require additional experimentation. Integrating spatial transcriptomic data with other omics data or imaging modalities can also be complex and may require careful data integration strategies.
+-   **Cost and time considerations:** Spatial transcriptomic analysis can be relatively expensive and time-consuming compared to traditional transcriptomic techniques. The specialized protocols, reagents, and instrumentation required can add to the cost of the analysis. Moreover, the data generation and analysis processes can be time-intensive, which may limit the scalability of studies involving large sample sizes.
 
 ## Tools for spatial transcriptomics
 
 ### Data processing:
 
-#### Space Ranger:
+#### [Space Ranger](https://www.10xgenomics.com/support/software/space-ranger/downloads)
 
--   **Pros:** spaceranger is a software package developed by 10x Genomics specifically for processing and analyzing spatial transcriptomic data generated by their platform. It provides a streamlined workflow for processing raw data, including image processing, spot calling, and counting transcripts. spaceranger offers integration with the Seurat R package, enabling downstream analysis using Seurat's extensive tools.
--   **Cons:** spaceranger is optimized for 10x Genomics data and may have limited compatibility with other spatial transcriptomic platforms. It may not offer the same level of flexibility as more general-purpose tools like Seurat or Scanpy.
+-   **Pros:** Space Ranger is a software package developed by 10x Genomics specifically for processing and analyzing spatial transcriptomics raw data generated by their platform (Visium). It provides a streamlined workflow for processing raw data, including image registration, assignement of read counts to spots, and counting transcripts. Outputs from Space Ranger are commonly the input of many other ST analytical software.
+-   **Cons:** Space Ranger has been designed to process only 10x Genomics data. The software does not provide methods to extract insights, which is accomplished by integration with other analytical suites. Requires knowledge of command line use.
 
-#### GeomxTools
+#### [GeomxTools](https://www.bioconductor.org/packages/release/bioc/html/GeomxTools.html)
 
--   **Pros:**
--   **Cons:**
+-   **Pros:** The GeomxTools R package has been designed to take outputs from the GeoMx Digital Spatial Profiler (DSP) platform. The package includes methods to use raw .dcc files and .pkc probe set files to generate count matrices per ROI. Support for normalization and transformation of counts are also included in GeomxTools.
+-   **Cons:** GeomxTools has been designed to process GeoMx DSP data outputs. Requires knowledge of R programming.
 
 ### Data exploration:
 
-#### Seurat:
+#### [Seurat](https://satijalab.org/seurat/)
 
--   **Pros:** Seurat is a widely used R package that offers a comprehensive suite of tools for spatial transcriptomic analysis. It provides a variety of functions for data preprocessing, dimensionality reduction, clustering, and visualization. Seurat has a large user community, extensive documentation, and tutorials, making it accessible to researchers.
--   **Cons:** Seurat can be memory-intensive, particularly when working with large datasets. It may require familiarity with R programming and bioinformatics concepts for effective use. Additionally, Seurat's performance can depend on the specific computational resources available.
+-   **Pros:** Seurat is a widely used R package in single-cell data, with expanded capabilities to analyze ST data from multiple platforms. Seurat features direct integration with outputs from Space Ranger, MERSCOPE, CosMx-SMI, among others. It provides a variety of functions for data pre-processing, dimensionality reduction, clustering, and visualization. Seurat has a large user community, extensive documentation, and tutorials, making it accessible to researchers.
+-   **Cons:** Seurat can be memory-intensive, particularly when working with large data sets. It requires familiarity with R programming and bioinformatics concepts for effective use. Overall, methods in Seurat are the same methods applied to non-spatial scRNA-seq data.
 
-#### Scanpy:
+#### [Squidpy](https://squidpy.readthedocs.io/en/stable/)
 
--   **Pros:** Scanpy is a Python-based library specifically designed for single-cell and spatial transcriptomic analysis. It offers a range of functionalities for data preprocessing, clustering, trajectory analysis, and visualization. Scanpy is known for its scalability, efficiency, and flexibility. It integrates well with other Python libraries and frameworks, making it suitable for integration with other analysis pipelines.
--   **Cons:** Similar to Seurat, Scanpy may require some familiarity with Python programming and bioinformatics concepts. Users without prior programming experience may need to invest time in learning Python.
+-   **Pros:** Scanpy is a Python-based library specifically designed for single-cell and ST analysis. It offers a range of functionalities for data pre-processing, clustering, trajectory analysis, and visualization. Scanpy is known for its scalability, efficiency, and flexibility. It integrates well with other Python libraries and frameworks, making it suitable for integration with other analysis pipelines. Some of the statistical methods in Squidpy implicitly make use of the spatial coordinates to detect patterns.
+-   **Cons:** Similar to Seurat, Scanpy requires some familiarity with Python programming and bioinformatics concepts. Users without prior programming experience may need to invest time in learning Python.
 
-#### Giotto:
+#### [Giotto](https://giottosuite.readthedocs.io/en/latest/index.html)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The analytical suite Giotto in a collection of methods to study spatial gene expression, agnostic to the platform used to generate the data. It allows users to perform data pre-processing, clustering, visualization, detection of spatially variable genes, and expression co-localization analysis. Computatiionally intensiuve analysis can be condcicted in the cloud via integration with Terra.bio or locally using a Docker container. Some of the statistical methods in Giotto implicitly make use of the spatial coordinates to detect patterns.
+-   **Cons:** Requires some familiarity with R, as well as bioinformatics and spatial statistics concepts. Installation requires setting up Python, as some modules use that language.
 
-#### spatialGE:
+#### [spatialGE](https://fridleylab.github.io/spatialGE/) and [spatialGE-web](https://spatialge.moffitt.org/)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The spatialGE analysis suite allows users to study STdata form multiple platfoms, including methods for pre-processing, clustering/domain detection, spatially variable genes, and functional analysis via detection of gene expression gradients and/or gene set enrichment spatial patterns. All the functionality of the R package has been implemented on a point-and-click web application requiring no coding experience and email notifications when analyses are completed. Statistcial methods in spatialGE implicitly take into account the spatial coordinates during calculations.
+-   **Cons:** Use of the spatialGE R package requires familiarity with the language. The spatialGE web application by-pass the need of R coding, however computationally-intensive methods can take time to complete.
 
-#### Loupe:
+#### [Loupe](https://support.10xgenomics.com/spatial-gene-expression/software/visualization/latest/what-is-loupe-browser)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The Loupe browser is a point-and-click tool for exploration of both non-spatial scRNA-seq and ST. Loupe takes Visium outputs and allows visualization of gene expression, clustering, and detection of diferentially expressed genes. The tool also allows for easy registration and comparative analysis of Visium imaging and expression data.
+-   **Cons:** Loupe allows basic exploration of the data. To perform functional-level analysis of ST data, the use of additional tools might be required.
 
-#### ST Pipeline:
+#### [ST Pipeline](https://pypi.org/project/stpipeline/)
 
--   **Pros:** ST Pipeline is an open-source bioinformatics pipeline developed by the Spatial Transcriptomics consortium. It provides a complete workflow for spatial transcriptomic data analysis, including preprocessing, normalization, spot detection, and visualization. ST Pipeline supports various spatial transcriptomic platforms, making it versatile.
--   **Cons:** ST Pipeline may require some command-line proficiency and familiarity with Linux environments. Users may need to invest time in setting up the pipeline and configuring parameters based on their specific datasets and platforms.
+-   **Pros:** ST Pipeline is a bioinformatics pipeline developed by the Spatial Transcriptomics consortium. It provides a complete workflow for ST data analysis, including pre-processing, normalization, spot detection, and visualization. ST Pipeline supports various spatial transcriptomic platforms, making it versatile.
+-   **Cons:** ST Pipeline requires familiarity with Python, command-line, and Linux environments. Users may need to invest time in setting up the pipeline and configuring parameters based on their specific datasets and platforms.
+
+#### [semla](https://ludvigla.github.io/semla/index.html)
+
+-   **Pros:** The semla R package is a bioinformatics pipeline enabling pre-processing, visualization, spatial statistics, and image integration of ST data. The package provides integration with Seurat.
+-   **Cons:** ST Pipeline requires familiarity with R.
 
 ### Clustering/tissue domain identification:
 
-#### SpaGCN:
+#### [SpaGCN](https://github.com/jianhuupenn/SpaGCN/tree/master)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The SpaGCN Python package performs prediction of tissue domains implicitly taking into account the spatial coordinates and optionally assisted by colors in the image data. The gene expression, coordinate, and image data are processed via graph convolutional networks (GCN) to find common patterns between the modalities. Based on predicted domains, SpaGCN can identify gene or collection of genes (meta genes) that are uniquely expressed in the domains. SpaGCN allows analysis of multiple ST technologies.
+-   **Cons:** SpaGCN requires familiarity with Python and basic data frame processing. Some understanding of GCNs and parameters involved in calculations is advisable.
 
 ### Spatially variable gene identification:
 
-#### SpatialDE:
+#### [SpatialDE](https://github.com/Teichlab/SpatialDE)
 
--   **Pros:** SpatialDE is a Python package designed for detecting spatially variable genes from spatial transcriptomic data. It offers statistical methods to identify genes that exhibit spatial heterogeneity in expression across the tissue. SpatialDE provides a straightforward implementation for identifying spatially variable genes and their spatial patterns.
--   **Cons:** SpatialDE focuses on the identification of spatially variable genes and may not provide a comprehensive set of tools for the entire spatial transcriptomic analysis pipeline. Additional tools may be required for preprocessing, visualization, and downstream analysis.
+-   **Pros:** SpatialDE is a Python package designed for detecting spatially variable genes from ST data using non-parametric statistics. SpatialDE intergrates the spatial coordinates and image data to identify genes or group of genes showing spatial expression aggregation. The package can analyze data from multiple ST platforms.
+-   **Cons:** SpatialDE requires familiarity with Python programming.
+
+#### [SPARK and SPARK-X](https://xzhoulab.github.io/SPARK/)
+
+-   **Pros:** The SPARK methods allows scalable detection of genes showing spatial patterns. The tests are performed via generalized linear models and spatial autocorrelation matrix estimation. The SPARK implementation allows scalabilty and computing efficiency.
+-   **Cons:** The SPARK methods require familiarity with Python programming. Some familiarity with spatial statistics is advisable.
+
+#### [SpaceMarkers](https://github.com/FertigLab/SpaceMarkers)
+
+-   **Pros:** The SpaceMarkers approach detects sets of genes with evidence of spatial co-expression. Kernel smoothing is used to model the weight of expression of a gene taking into account neighboring areas.
+-   **Cons:** Requires familiarity with R programming. The method has been tested in Visium data.
 
 ### Deconvolution/phenotyping:
 
-#### SPOTlight:
+#### [SPOTlight](https://www.bioconductor.org/packages/release/bioc/html/SPOTlight.html)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The SPOTlight algorithm takes advantage of robust non-negative matrix factorization (NMF) to define transcriptomic profiles from an annotated scRNA-seq reference. The transcriptomic profiles are transferred to the spatial transcriptomics data using non-negative least squares regression. Instead of providing a single category for "mini-bulk" data (e.g., Visium), SPOTlight features piecharts to describe the cell type composition within each mini-bulk sample (e.g., spot).
+-   **Cons:** Requires some familiarity with R programming. The method has been tested in Visium data. As with most deconvolution methods, accurate identification of cell types highly relies on a well-annotated scRNA reference.
 
-#### STdeconvolve:
+#### [STdeconvolve](https://jef.works/STdeconvolve/)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The STdeconvolve algorithm uses latent dirichlet allocation (LDA) to define transcriptomic profiles or topics on the ST data. The topics are assigned a biological identity (e.g., cell type, tissue domain) using gene set enrichment of marker-based phenotyping. The topics are presented as proportions in "mini-bulk" data (e.g., Visium), where pie charts describe the cell type/domain composition within each mini-bulk sample (e.g., spot). STdeconvolve is one of very few reference-free ST deconvolution methods.
+-   **Cons:** Requires some familiarity with R programming. The method has been mostly tested in Visium data. For MERFISH data, requires aggregation into spots.
 
-#### InSituType:
+#### [InSituType](<https://github.com/Nanostring-Biostats/InSituType>)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** InSituType is a cell phenotyping algorithm designed for CosMx-SMI data but applicable to other single-cell ST data. InSituType can transfer cell types from an annotated scRNA-seq data set, or run reference-free unsupervised clustering to detect cell populations. In addition, immunofluorescence data accompanying SMI data sets can be used to inform gene expression deconvolution. InSituType can phenotype large quantities of cells within reasonable time.
+-   **Cons:** InSituType assumes cell populations can be defined via cluster centroids. Thus, deconvolution can be affected when samples contain cells with intermediate phenotypes or if technical/background noise is prevalent. Requires familiarity with R programming.
 
-#### SpatialDecon:
+#### [SpatialDecon](<https://bioconductor.org/packages/release/bioc/vignettes/SpatialDecon/inst/doc/SpatialDecon_vignette_NSCLC.html>)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** The SpatialDecon algorithm implements log-normal regression to alleviate the effects of ST data skewness in the prediction of cell types. The method is analogous to estimation of cell types proportions in bulk RNAseq to "mini-bulk" ROIs or spots in GeoMx and Visium experiments respectively. Hence, the method assumes cell type heterogeneity within the ROIs or spots. In the case of GeoMx experiments, SpatialDecon takes advantage of nuclei counts to provide absolute cell type counts within each ROI. The package includes pre-built cell type signature matrices for several tissue types, but scRNA references can be used to create custom signatures.
+-   **Cons:** Requires familiarity with R programming.
 
 ### Cell communication:
 
-#### CellChat:
+#### [CellChat](<https://htmlpreview.github.io/?https://github.com/sqjin/CellChat/blob/master/tutorial/CellChat_analysis_of_spatial_imaging_data.html>)
 
--   **Pros:** .
--   **Cons:** .
+-   **Pros:** CellChat is an algorithm to infer cell communications via ligand-receptor interactions. CellChat was designed for non-spatial scRNA data, however, a recent implementation has been included to account for distances between cells in ST experiments. The package includes a comprehensive ligand-receptor data base which is queried after quantification of probability of interaction betwee two given cell types.
+-   **Cons:** Requires familiarity with R programming. The spatial implementation of CellChat has been tested on Visium data.
 
 ## More tools and tutorials regarding spatial transcriptomics
 
 -   [Analysis, visualization, and integration of spatial datasets with Seurat](https://satijalab.org/seurat/articles/spatial_vignette.html)
 -   [Sheffield Bioinformatics tutorial for spatial transcriptomics](https://github.com/sheffield-bioinformatics-core/spatial_transcriptomics_tutorial)
 -   [Theis Lab SCOG workshop materials for spatial transcriptomics](https://github.com/theislab/spatial_scog_workshop_2022)
+-   [Visualization, domain detection, and spatial heterogeneity with spatialGE](https://fridleylab.github.io/spatialGE/articles/basic_functions_vignette.html)
