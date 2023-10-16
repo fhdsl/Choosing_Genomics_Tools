@@ -1,6 +1,6 @@
 1-Introduction.md
 2-A-Very-General-Genomics-Overview.md
-3-What-are-Metadata?.md
+3-Guidelines-for-Good-Metadata.md
 4-Considerations-for-choosing-tools.md
 5-General-Data-Analysis-Tools.md
 6-Sequencing-Data.md
