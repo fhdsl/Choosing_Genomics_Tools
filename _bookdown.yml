@@ -21,7 +21,8 @@ rmd_files: ["index.Rmd",
             "11b-sc-ATAC-Seq.Rmd",
             "11c-ChIP-Seq.Rmd",
             "12-methylation.Rmd",
-            "13-tool-glossary.Rmd",
+            "13-microbiome.Rmd",
+            "14-tool-glossary.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes

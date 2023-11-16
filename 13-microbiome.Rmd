@@ -1,0 +1,24 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# Microbiome Sequencing
+
+<div class = "warning">
+This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
+## Learning Objectives
+
+```{r, fig.alt = "FIGURE CAPTION GO HERE", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("GOOGLESLIDE GOES HERE")
+```
+
+
+
+## More resources
+
+- [DNA methylation analysis with Galaxy tutorial](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/methylation-seq/tutorial.html)
+- [The mint pipeline](https://github.com/sartorlab/mint/blob/master/README.md) for analyzing methylation and hydroxymethylation data.
+- [Book chapter about finding methylation regions of interest](https://compgenomr.github.io/book/extracting-interesting-regions-differential-methylation-and-segmentation.html)
