@@ -18,7 +18,7 @@ ottrpal::include_slide("GOOGLESLIDE GOES HERE")
 
 ## Data Collection and Processing of Amplicon Analysis
 - QIIME 2 is a bioinformatics microbiome analysis platform. QIIME 2 has all the 
-tools discussed in the course in one ENV. 
+tools discussed in the course in one environment. 
     - There are currently 3 different interfaces: Python, CLI and Galaxy! 
     - add cool features of QIIME 2 
 
@@ -28,8 +28,11 @@ tools discussed in the course in one ENV.
 
 ### Quality Filtering
 - Dada2 
+    - https://benjjneb.github.io/dada2/
 - Deblur 
-- Cutadapt 
+    - https://github.com/biocore/deblur
+- Cutadapt
+    - https://cutadapt.readthedocs.io/en/stable/
 
 
 ## Downstream Analysis 
