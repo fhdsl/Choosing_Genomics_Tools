@@ -3,7 +3,7 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Microbiome Sequencing
+# Amplicon Microbiome Sequencing
 
 <div class = "warning">
 This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
@@ -14,6 +14,45 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 ```{r, fig.alt = "FIGURE CAPTION GO HERE", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("GOOGLESLIDE GOES HERE")
 ```
+## Goals of Amplicon analysis
+
+## Data Collection and Processing of Amplicon Analysis
+- QIIME 2 is a bioinformatics microbiome analysis platform. QIIME 2 has all the 
+tools discussed in the course in one ENV. 
+    - There are currently 3 different interfaces: Python, CLI and Galaxy! 
+    - add cool features of QIIME 2 
+
+## Upstream Analysis
+
+### Demultiplexing
+
+### Quality Filtering
+- Dada2 
+- Deblur 
+- Cutadapt 
+
+
+## Downstream Analysis 
+
+### Phylogenetic Tree Construction
+
+### Rarefaction
+- Even sampling 
+- Relative frequency (?)
+
+### Alpha Diversity
+
+### Beta Diversity
+
+### Taxonomic Annotation
+### Differential Abundance  
+### Speciality Tools
+#### Longitudinal Data 
+#### Fecal Microbiota Transplant 
+#### Predictive Models
+
+
+
 
 
 
