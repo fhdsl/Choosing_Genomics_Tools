@@ -5,6 +5,9 @@
 
 <img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png" title="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" alt="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" width="100%" />
 
+This is a *living* course meaning it is constantly changing and being updated. The goal for this course is to be a "wikipedia" of omic data.
+If you'd like to contribute, [you can file a pull request on GitHub](https://github.com/fhdsl/Choosing_Genomics_Tools) if you are comfortable with that sort of thing or email `csavonen@fredhutch.org` to ask how to get started.
+
 ## Target Audience  
 
 The course is intended for students in the biomedical sciences and researchers who have been given data and don't know what to do with it or would like an overview of the different genomic data types that are out there.
