@@ -1,0 +1,30 @@
+
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+# CUT & RUN
+
+<div class = "warning">
+This chapter is in a beta stage. If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+</div>
+
+## Learning Objectives
+
+```{r, fig.alt = "", out.width = "100%", echo = FALSE}
+ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2a3974d9533_0_5")
+```
+
+## What are the goals of CUT and RUN and CUT and Tag analyses?
+
+### How are CUT and RUN/Tag different from each other?
+
+## General workflow overview
+
+## CUT and RUN data **strengths**:
+
+## CUT and RUN data **strengths**:
+
+## More resources about CUT and RUN data
+
+<TODO: Put links to any resources and tutorials that are useful for CUT and RUN data>
