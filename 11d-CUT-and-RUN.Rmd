@@ -29,7 +29,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 - Publications:
 
-1. [An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites. eLife. 2017](https://elifesciences.org/articles/21856) 
+1. [An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites. eLife. 2017](https://elifesciences.org/articles/21856)
 
 2. [Targeted in situ genome-wide profiling with high efficiency for low cell numbers. Nature Protocols. 2018](https://www.nature.com/articles/nprot.2018.015)
 
@@ -43,7 +43,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 #### AutoCUT&RUN
 
-CUT&RUN has been automated using a Beckman Biomek FX liquid-handling robot so that a 96-well format can be used to profile chromatin for high-throughput samples, such as in a clinical setting. DNA end polishing and direct ligation of adaptors permit sample-to-Illumina library processing of 96 samples in two days. AutoCUT&RUN can be used for cell-type specific gene activity and enhancer profiling based on histone modifications and transcription factors, including in frozen tissue samples of tumor xenografts.
+CUT&RUN has been automated using a Beckman Biomek FX liquid-handling robot so that a 96-well format can be used to profile chromatin for high-throughput samples, such as in a clinical setting. DNA end polishing and direct ligation of adapters permit sample-to-Illumina library processing of 96 samples in two days. AutoCUT&RUN can be used for cell-type specific gene activity and enhancer profiling based on histone modifications and transcription factors, including in frozen tissue samples of tumor xenografts.
 
 - Publication:
 
@@ -55,7 +55,7 @@ CUT&RUN has been automated using a Beckman Biomek FX liquid-handling robot so th
 
 ### CUT&Tag
 
-**Cleavage Under Targets and Tagmentation**, **CUT&Tag** for short, is an enzyme tethering approach to profiling chromatin proteins, including histone marks and RNA Pol II. CUT&Tag generates sequence-ready libraries without the need for end polishing and adaptor ligation. It uses a proteinA-Tn5 fusion to tether Tn5 transposase near the site of an antibody to a chromatin protein of interest. A secondary antibody, such as guinea pig anti-rabbit antibody, is used to increase the efficiency of tethering the pA-Tn5 to the target primary antibody. The pA-Tn5 complex is pre-loaded with sequencing adaptors that insert into adjacent DNA upon activation with magnesium. CUT&Tag has a very low background and can be performed in a single tube in as little as a day, though primary antibodies are typically incubated overnight. It can also be used with the ICELL8 nano dispensation system to profile single cells.
+**Cleavage Under Targets and Tagmentation**, **CUT&Tag** for short, is an enzyme tethering approach to profiling chromatin proteins, including histone marks and RNA Pol II. CUT&Tag generates sequence-ready libraries without the need for end polishing and adaptor ligation. It uses a proteinA-Tn5 fusion to tether Tn5 transposase near the site of an antibody to a chromatin protein of interest. A secondary antibody, such as guinea pig anti-rabbit antibody, is used to increase the efficiency of tethering the pA-Tn5 to the target primary antibody. The pA-Tn5 complex is pre-loaded with sequencing adapters that insert into adjacent DNA upon activation with magnesium. CUT&Tag has a very low background and can be performed in a single tube in as little as a day, though primary antibodies are typically incubated overnight. It can also be used with the ICELL8 nano dispensation system to profile single cells.
 
 A streamlined CUT&Tag protocol was introduced by the [Henikoff Lab](https://research.fredhutch.org/henikoff/en.html) that suppresses DNA accessibility artifacts to ensure high-fidelity mapping of the antibody-targeted protein and improves the signal-to-noise ratio over current chromatin profiling methods. Streamlined CUT&Tag can be performed in a single PCR tube, from cells to amplified libraries, providing low-cost genome-wide chromatin maps. By simplifying library preparation, CUT&Tag-direct requires less than a day at the bench, from live cells to sequencing-ready barcoded libraries. As a result of low background levels, barcoded and pooled CUT&Tag libraries can be sequenced for as little as $25 per sample. This enables routine genome-wide profiling of chromatin proteins and modifications and requires no special skills or equipment.  
 
@@ -113,21 +113,21 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## Differences between CUT&RUN and CUT&Tag
 
-- CUT&RUN is more suitable than CUT&Tag for transcription factor (TF) profiling because the salt will compete with TF binding to DNA during the high salt incubation. TF depending on the motif affinity, only binds to a few DNA basepairs, and TF binding can be weak and compelled by salt. As demonstrated by [Kaya-Okur et al. 2019](https://www.nature.com/articles/s41467-019-09982-5), the CUT&Tag signal of CTCF, one of the strongest binding factors, can be observed but become relatively weak. Therefore, it can be challenging for the peak caller to detect the enrichment of CTCF profiled by CUT&Tag. Hence, it can also be hard to find the motif pattern practically. 
+- CUT&RUN is more suitable than CUT&Tag for transcription factor (TF) profiling because the salt will compete with TF binding to DNA during the high salt incubation. TF depending on the motif affinity, only binds to a few DNA basepairs, and TF binding can be weak and compelled by salt. As demonstrated by [Kaya-Okur et al. 2019](https://www.nature.com/articles/s41467-019-09982-5), the CUT&Tag signal of CTCF, one of the strongest binding factors, can be observed but become relatively weak. Therefore, it can be challenging for the peak caller to detect the enrichment of CTCF profiled by CUT&Tag. Hence, it can also be hard to find the motif pattern practically.
 
 - CUT&Tag is more suitable for histone modification and RNA polymerase profiling as DNA wraps around the histone and RNA polymerase structure inserts and grabs the DNA. The DNA binding from both histone modification marks and PolII is strong. CUT&Tag for histone modification also showed moderately higher signals compared to CUT&RUN throughout the list of sites in [Kaya-Okur et al. 2019](https://www.nature.com/articles/s41467-019-09982-5).
 
 - CUT&RUN must be followed by DNA end polishing and adapter ligation to prepare sequencing libraries, which increases the time, cost, and effort of the overall procedure. Moreover, the release of MNase-cleaved fragments into the supernatant with CUT&RUN is not well-suited for application to single-cell platforms.
 
-## Advantages of CUT&RUN and CUT&Tag over the Tradditional ChIP-seq Technology
+## Advantages of CUT&RUN and CUT&Tag over the Traditional ChIP-seq Technology
 
-- Lower Cell Number and Less Starting Material Requirement: CUT&RUN and CUT&Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&RUN and CUT&Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing. 
+- Lower Cell Number and Less Starting Material Requirement: CUT&RUN and CUT&Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&RUN and CUT&Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing.
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2a6a1c838b1_1_35")
 ```
 
-- Higher Resolution and Specificity: CUT&RUN and CUT&Tag provide higher resolution and greater specificity in identifying protein-DNA interactions. This results from the method's direct targeting and cleavage of DNA at the binding sites, reducing background noise. 
+- Higher Resolution and Specificity: CUT&RUN and CUT&Tag provide higher resolution and greater specificity in identifying protein-DNA interactions. This results from the method's direct targeting and cleavage of DNA at the binding sites, reducing background noise.
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2a6a1c838b1_1_42")
@@ -147,7 +147,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 - Dependency on Antibody Quality: Similar to ChIP-seq, CUT&RUN and CUT&Tag's success heavily relies on the quality and specificity of the antibodies used. High-quality, highly specific antibodies are essential for reliable results, and the lack of such antibodies can limit the application of this technique.
 
-- Likelihood of Over-digestion of DNA: Due to inappropriate timing of the Magnesium-dependent Tn5 reaction with CUT&RUN, DNA can be over-cut, a similar limitation exists for contemporary ChIP-Seq protocols where enzymatic or sonicated DNA shearing must be optimized. 
+- Likelihood of Over-digestion of DNA: Due to inappropriate timing of the Magnesium-dependent Tn5 reaction with CUT&RUN, DNA can be over-cut, a similar limitation exists for contemporary ChIP-Seq protocols where enzymatic or sonicated DNA shearing must be optimized.
 
 - GC Bias: For CUT&Tag, as with other techniques using Tn5, the library preparation has a strong GC bias and has poor sensitivity in low GC regions or genomes with high variance in GC content.
 
@@ -182,7 +182,7 @@ For instance, with Illumina's NextSeq 2000 machine and 50 base pairs paired-end 
 The alignment of the 50 base pairs paired-end reads out of Illumina's NextSeq 2000 machine by Bowtie2 version 2.4.4 to reference sequence with parameters:
 ```--very-sensitive-local --soft-clipped-unmapped-tlen --dovetail --no-mixed --no-discordant -q --phred33 -I 10 -X 1000```
 
-- [BWA](https://bio-bwa.sourceforge.net/bwa.shtml): BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. 
+- [BWA](https://bio-bwa.sourceforge.net/bwa.shtml): BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.
 
 ### Quality control
 
@@ -190,13 +190,13 @@ The quality of the aligned data can be evaluated from the following aspects:
 
  - **Sequencing depth**: Check the number of reads mapped to the genome to see if it matches the expected sequencing depth. CUT&RUN/CUT&Tag data typically has very low backgrounds, so as few as 1 million mapped fragments can give robust profiles for a histone modification in the human genome.
 
- - **Alignment rate**: Alignment frequencies are expected to be >80% for high-quality data. 
- 
+ - **Alignment rate**: Alignment frequencies are expected to be >80% for high-quality data.
+
  - **Duplication rate**: Duplication rate is the percentage of duplicated reads, and [Picard](https://broadinstitute.github.io/picard/) is widely used to detect duplicates. PCR duplicates are read with the same start and end coordinates and are not biological duplicates. PCR duplicates are created during the library amplification. Generally, the duplication rate is expected to be <20% for high-quality data. However, as long as the duplicates rate is lower than 80-90 %, meaning the sequencing is not completely saturated, duplicates should be kept for downstream analysis. Even for relatively high duplicated samples (e.g., 50% duplication rate), PCR duplicates tend to happen more at the signal part, and removing duplicates with favor towards the background noise. In other words, keeping the duplicates can help us locate the peak region. When the sequencing depth is not saturated, the duplicate rate is linearly correlated with the sequencing depth. Therefore, normalization that removes the sequencing depth variations across samples can take care of the duplicate rate simultaneously.
 
  - **Estimated library size**: Estimated library size is the estimated number of unique molecules in the library based on PE duplication calculated by [Picard](https://broadinstitute.github.io/picard/). The estimated library sizes are proportional to the abundance of the targeted epitope and the quality of the antibody used, while the estimated library sizes of IgG samples are expected to be very low. Suppose users follow the sequencing depth tradition for the ChIP-seq data and sequence 100+ million reads but end up with only 1-2 million estimated library size. In that case, it is expected to have an ultra-high duplication rate. In that case, the sequencing depth is too high, and the sequencing is saturated. Duplicates are expected to be removed for downstream analysis.  
 
- - **Fragment length distribution**: CUT&RUN and CUT&Tag targeting at a histone modification predominantly result in nucleosomal fragments (~180 bp) or multiples of that length. Therefore, the fragment length density distribution usually has several peaks whose modes are 180bp apart, matching the nucleosomal length. CUT&RUN/CUT&Tag targeting transcription factors predominantly produce nucleosome-sized fragments and variable amounts of shorter fragments from neighboring nucleosomes and the factor-bound site, respectively. 
+ - **Fragment length distribution**: CUT&RUN and CUT&Tag targeting at a histone modification predominantly result in nucleosomal fragments (~180 bp) or multiples of that length. Therefore, the fragment length density distribution usually has several peaks whose modes are 180bp apart, matching the nucleosomal length. CUT&RUN/CUT&Tag targeting transcription factors predominantly produce nucleosome-sized fragments and variable amounts of shorter fragments from neighboring nucleosomes and the factor-bound site, respectively.
  Moreover, tagmentation of DNA on the surface of nucleosomes also occurs, and plotting fragment length distribution with single-basepair resolution reveals a 10-bp sawtooth periodicity, which is typical of successful CUT&Tag experiments. Such 10 bp periodic cleavage preferences match the 10 bp/turn periodicity of B-form DNA, which suggests that the DNA on either side of these bound TFs is spatially oriented such that tethered MNase has preferential access to one face of the DNA double helix. The presence of this 10 bp periodicity is a good indicator that the experiment has specifically targeted nucleosomal DNA or proteins in close association with it. If this pattern is absent, it might suggest non-specific binding or other technical issues.
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
@@ -207,9 +207,9 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 #### Spike-in Scaling
 
-E. coli DNA is carried along with bacterially-produced pA-Tn5 protein and gets tagmented non-specifically during the reaction. The fraction of total reads that map to the E.coli genome depends on the yield of epitope-targeted CUT&Tag and roso depends on the number of cells used and the abundance of that epitope in chromatin. Since a constant amount of pATn5 is added to CUT&Tag reactions and brings along a fixed amount of E. coli DNA, E. coli reads can be used to normalize epitope abundance across experiments. 
+E. coli DNA is carried along with bacterially-produced pA-Tn5 protein and gets tagmented non-specifically during the reaction. The fraction of total reads that map to the E.coli genome depends on the yield of epitope-targeted CUT&Tag and roso depends on the number of cells used and the abundance of that epitope in chromatin. Since a constant amount of pATn5 is added to CUT&Tag reactions and brings along a fixed amount of E. coli DNA, E. coli reads can be used to normalize epitope abundance across experiments.
 
-The underlying assumption is that the ratio of fragments mapped to the primary genome to the E. coli genome (or other added DNA sequences if pA-Tn5 is purified and E.coli is not available anymore) is the same for a series of samples, each using the same number of cells. Because of this assumption, we do not normalize between experiments or batches of pATn5, which can have very different amounts of carry-over E. coli DNA. Using a constant C to avoid small fractions in normalized data, we define a scaling factor S as 
+The underlying assumption is that the ratio of fragments mapped to the primary genome to the E. coli genome (or other added DNA sequences if pA-Tn5 is purified and E.coli is not available anymore) is the same for a series of samples, each using the same number of cells. Because of this assumption, we do not normalize between experiments or batches of pATn5, which can have very different amounts of carry-over E. coli DNA. Using a constant C to avoid small fractions in normalized data, we define a scaling factor S as
 
 $S = \frac{C}{(Fragments Mapped To E.coli Genome)}$
 
@@ -288,4 +288,4 @@ Differential expression analysis of RNA-seq expression profiles with biological 
 
 - [Nextflow Analysis Pipeline for CUT&RUN and CUT&TAG Experiments](https://nf-co.re/cutandrun/3.2.1): nf-core/cutandrun is a best-practice bioinformatic analysis pipeline for CUT&RUN, CUT&Tag, and TIPseq experimental protocols that were developed to study protein-DNA interactions and epigenomic profiling.
 
-- [GoPeaks](https://github.com/maxsonBraunLab/gopeaks): [histone modification peak calling for CUT&Tag](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02707-w). GoPeaks is a peak caller designed for CUT&TAG/CUT&RUN sequencing data. GoPeaks, by default, works best with narrow peaks such as H3K4me3 and transcription factors. However, broad epigenetic marks like H3K27Ac/H3K4me1 require different step, slide, and minwidth parameters. 
+- [GoPeaks](https://github.com/maxsonBraunLab/gopeaks): [histone modification peak calling for CUT&Tag](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02707-w). GoPeaks is a peak caller designed for CUT&TAG/CUT&RUN sequencing data. GoPeaks, by default, works best with narrow peaks such as H3K4me3 and transcription factors. However, broad epigenetic marks like H3K27Ac/H3K4me1 require different step, slide, and minwidth parameters.
