@@ -11,24 +11,16 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq, [Carrie Wright], [Claire Mills] - Whole Genome Sequencing, [Jacob Greene] - ChIP-seq |
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Oscar Ospina] - Spatial transcriptomics|
 |Content Directors|[Jeff Leek]|
-|Content Consultants|[Carrie Wright], [Cliff Meyer] - ATAC-seq, [Frederick Tan]|
+|Content Consultants|[Carrie Wright]<br> [Cliff Meyer] - ATAC-seq <br> [Frederick Tan]<br>|
 |Acknowledgments||
-|**Production**||
-|Content Publisher|[Ira Gooding]|
-|Content Publishing Reviewers|[Ira Gooding]|
 |**Technical**||
 |Course Publishing Engineer|[Candace Savonen]|
 |Template Publishing Engineers|[Candace Savonen], [Carrie Wright]|
 |Publishing Maintenance Engineer|[Candace Savonen]|
 |Technical Publishing Stylists|[Carrie Wright], [Candace Savonen]|
 |Package Developers ([ottrpal])[Candace Savonen], [John Muschelli], [Carrie Wright]|
-|**Art and Design**||
-|Illustrator| [Candace Savonen]|
-|Figure Artist| [Candace Savonen] and [Claire Mills]|
-|Videographer|[Candace Savonen]|
-|Videography Editor| [Candace Savonen]|
 |**Funding**||
 |Funder|[National Cancer Institute (NCI)](https://www.cancer.gov/) UE5 CA254170|
 |Funding Staff| [Sandy Ormbrek], [Shasta Nicholson] |
@@ -47,7 +39,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2023-10-16                  
+##  date     2023-12-07                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date       lib source                            
@@ -103,6 +95,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 [Frederick Tan]: https://bse.carnegiescience.edu/dr-frederick-tan
 [Jacob Greene]: https://www.linkedin.com/in/jacob-greene-890aa318a/
 [Jeff Leek]: https://jtleek.com/
+[Oscar Ospina]: https://linkedin.com/in/oscareospina/
 [John Muschelli]: https://johnmuschelli.com/
 [Sandy Ormbrek]: https://hutchdatascience.org/ourteam/
 [Shasta Nicholson]: https://hutchdatascience.org/ourteam/
