@@ -23,27 +23,27 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## Advantages of CUT&RUN and CUT&Tag over the Traditional ChIP-seq Technology
 
-- Lower Cell Number and Less Starting Material Requirement: CUT&RUN and CUT&Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&RUN and CUT&Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing.
+- **Lower Cell Number and Less Starting Material Requirement**: CUT&RUN and CUT&Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&RUN and CUT&Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing.
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2a6a1c838b1_1_35")
 ```
 
-- Higher Resolution and Specificity: CUT&RUN and CUT&Tag provide higher resolution and greater specificity in identifying protein-DNA interactions. This results from the method's direct targeting and cleavage of DNA at the binding sites, reducing background noise.
+- **Higher Resolution and Specificity**: CUT&RUN and CUT&Tag provide higher resolution and greater specificity in identifying protein-DNA interactions. This results from the method's direct targeting and cleavage of DNA at the binding sites, reducing background noise.
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2a6a1c838b1_1_42")
 ```
 
-- Reduced Background Noise: CUT&RUN and CUT&Tag typically result in lower background noise due to the direct tagging of DNA at the site of the protein-DNA interaction, enhancing the clarity and quality of the results. The sensitivity of sequencing depends on the depth of the sequencing run (i.e., the number of mapped sequence tags), the size of the genome, and the distribution of the target factor. The sequencing depth is directly correlated with cost and negatively correlated with background. Therefore, low-background CUT&RUN and CUT&Tag will waste less sequencing resources on profiling the background and hence is inherently more cost-effective than high-background ChIP-seq.
+- **Reduced Background Noise**: CUT&RUN and CUT&Tag typically result in lower background noise due to the direct tagging of DNA at the site of the protein-DNA interaction, enhancing the clarity and quality of the results. The sensitivity of sequencing depends on the depth of the sequencing run (i.e., the number of mapped sequence tags), the size of the genome, and the distribution of the target factor. The sequencing depth is directly correlated with cost and negatively correlated with background. Therefore, low-background CUT&RUN and CUT&Tag will waste less sequencing resources on profiling the background and hence is inherently more cost-effective than high-background ChIP-seq.
 
 ```{r, fig.alt = "", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2a6a1c838b1_1_28")
 ```
 
-- Cost-Effectiveness: In addition to high efficiency in sequencing the target region, due to the lower requirement for reagents and enzymes, CUT&RUN and CUT&Tag can be more cost-effective, especially in high-throughput settings.
+- **Cost-Effectiveness**: In addition to high efficiency in sequencing the target region, due to the lower requirement for reagents and enzymes, CUT&RUN and CUT&Tag can be more cost-effective, especially in high-throughput settings.
 
-- More Efficient Protocol Workflow and Faster Turnaround Time: The protocol for CUT&RUN and CUT&Tag is more streamlined and less labor-intensive than ChIP-seq. It eliminates the need for sonication, DNA purification, and ligation steps, simplifying the procedure. The overall protocols of CUT&RUN and CUT&Tag are generally quicker and more straightforward than ChIP-seq (), leading to faster experiment turnaround times.
+- **More Efficient Protocol Workflow and Faster Turnaround Time**: The protocol for CUT&RUN and CUT&Tag is more streamlined and less labor-intensive than ChIP-seq. It eliminates the need for sonication, DNA purification, and ligation steps, simplifying the procedure. The overall protocols of CUT&RUN and CUT&Tag are generally quicker and more straightforward than ChIP-seq, leading to faster experiment turnaround times.
 
 
 ### CUT&RUN
