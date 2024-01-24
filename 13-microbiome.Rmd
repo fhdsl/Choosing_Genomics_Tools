@@ -34,7 +34,7 @@ I have my data back from the sequencer, what do I do now?
 TODO: Add EMP Protocol INFO
 
 
-TODO: (I dont know if I like this section)
+TODO: (I don't know if I like this section)
 
 
 There are a couple of things to know about your data so you can do the proper 
@@ -42,14 +42,14 @@ upstream data preparation.
 
 1.  Is your sequence multiplex?
 
-2. Does your sequence have the primers, adaptor and barcode removed? If not you will want to remove those in the Quality Filtering Step?  
+2. Does your sequence have the primers, adaptor and barcode removed? If not, you will want to remove those in the quality filtering step?  
 
 
 ### Demultiplexing
 Generally, there are two ways to get your data back from the sequencer. Multiplexed or demultiplexed. 
-If your sequences are multiplexed, you will recieve two or three files back. They will be a file for your barcodes, a file for your forward sequences, and if you have pair-end sequences, you will also have a file for your reverse sequences. 
+If your sequences are multiplexed, you will receive two or three files back. They will be a file for your barcodes, a file for your forward sequences, and if you have pair-end sequences, you will also have a file for your reverse sequences. 
 
-Demultiplexing is a process where you seperate the pooled sample files into a per sample basis, so instead of having a barcode, foward and reverse file, you have a forward and reverse file for each sample! 
+Demultiplexing is a process where you separate the pooled sample files into a per sample basis, so instead of having a barcode, forward and reverse file, you have a forward and reverse file for each sample! 
 
 Some Sequencers give you the data already demultiplexed and in that case you can skip this step! 
 
@@ -64,36 +64,36 @@ If your data has barcodes or primers in the sequence you will want to remove tho
 Cutadapt is a method that is really effective at identifying your adaptor sequence in highthrough-put sequencing data. You can read more about cutadapt and the underlying methods [here](https://cutadapt.readthedocs.io/en/stable/). You can also find a QIIME 2 implementation of cutadapt, q2-cutadapt, [here](https://docs.qiime2.org/2023.9/plugins/available/cutadapt/#cutadapt). Cutadapt will trim out these adapters but it is not a replacement for quality filtering. 
 
 #### Quality Filtering Steps 
-Quality filtering incompasses a couple of steps to make sure the data is usable/.
-1. checkssequence quality. 
+Quality filtering encompasses a couple of methods to make sure the data is usable/.
+1. checks sequence quality. 
 2. denoises sequencing noise.
-3. removes adapters, barcodes and primers (if Applicable).
-4. merges forward and reverse reads (if Applicable).
+3. removes adapters, barcodes and primers (if applicable).
+4. merges forward and reverse reads (if applicable).
 5. checks for chimeras
 
-Chimeras are when two seperate sequences get tangled up and get sequenced. The results in a sequence in your data that has no biological meaning.
+Chimeras are when two separate sequences get tangled up and get sequenced. This results in a sequence in your data that has no biological meaning.
 
 #### Defining Microbes 
-There are two main ways for defining how sequences relate to the microbes in the microbiome: Amplicon Sequence Variatnts(ASVs) and Operational Taxonomic Units(OTUs). ASVs define an occurance of a microbe as any occurance of a unique sequence. OTUs cluster based on simimlarity, usually ranging from 97-99% similarity. OTUs define an occurance of a microbe as a occurance of any sequence in the similarity cluster. 
+There are two main ways for defining how sequences relate to the microbes in the microbiome: Amplicon Sequence Variants(ASVs) and Operational Taxonomic Units(OTUs). ASVs define an occurance of a microbe as any occurance of a unique sequence. OTUs cluster based on similarity, usually ranging from 97-99% similarity. OTUs define an occurance of a microbe as a occurance of any sequence in the similarity cluster. 
 
-TODO: ask Greg should I include otu options in this? 
+TODO: ask Greg, should I include otu options in this? 
 #### The Methods
 
 ASV Quality Filtering Options: 
 
-[Dada2](https://benjjneb.github.io/dada2/) is a method for dereplicating, filtering and merging that has a wide range of functionality. Dada2 also has a QIIME 2 documentation located [here](https://docs.qiime2.org/2023.9/plugins/available/dada2/#dada2). Dada2 can be used for [Pyro](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-pyro/) and [Pacbio](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-ccs/) sequencing as well as illumina for [paired](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-paired/) and [single](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-single/) end reads. 
+[Dada2](https://benjjneb.github.io/dada2/) is a method for de-replicating, filtering and merging that has a wide range of functionality. Dada2 also has a QIIME 2 documentation located [here](https://docs.qiime2.org/2023.9/plugins/available/dada2/#dada2). Dada2 can be used for [Pyro](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-pyro/) and [Pacbio](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-ccs/) sequencing as well as illumina for [paired](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-paired/) and [single](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-single/) end reads. 
 
-Another Method for quality filtering is [Deblur](https://github.com/biocore/deblur). Additionally the documenation for the QIIME 2 implementation can be found [here](https://docs.qiime2.org/2023.9/plugins/available/deblur/denoise-16S/). Deblur can only bec used on 16s data becuase it uses a reference database that it aligns the data to in order to verify they are 16s data. Deblur is also only effective on data generated with Illumnina sequencing. 
+Another Method for quality filtering is [Deblur](https://github.com/biocore/deblur). Additionally the documentation for the QIIME 2 implementation can be found [here](https://docs.qiime2.org/2023.9/plugins/available/deblur/denoise-16S/). Deblur can only bec used on 16s data because it uses a reference database that it aligns the data to in order to verify they are 16s data. Deblur is also only effective on data generated with Illumnina sequencing. 
 
 
 ## Downstream Analysis  
 
 ### Phylogenetic Tree Construction
 
-Many diversity metrics used in microbial ecology uses phylogenetic relatedness to calcuate diversity so we need to build a phlyogenetic tree for those methods to reference. There are many ways to generate phylogenetic trees, however, because we only need these for diversity metrics and they are only using a very small amount of the genome, microbiome scientists tend to use quicker methods of phylogenetic contructions.
-There are two generally used methods. One inovlves creating a phylogenetic tree from scratch. This is typically done using [MAFFT](https://mafft.cbrc.jp/alignment/software/) to align sequences and calucate similarity. Other methods have a reference tree and insert the sequences into the reference tree, like using [SEPP](https://github.com/smirarab/sepp/tree/master). 
+Many diversity metrics used in microbial ecology use phylogenetic relatedness to calculate diversity so we need to build a phlyogenetic tree for those methods to reference. There are many ways to generate phylogenetic trees, however, because we only need these for diversity metrics and they are only using a very small amount of the genome, microbiome scientists tend to use quicker methods of phylogenetic construction.
+There are two generally used methods. One involves creating a phylogenetic tree from scratch. This is typically done using [MAFFT](https://mafft.cbrc.jp/alignment/software/) to align sequences and calculate similarity. Other methods have a reference tree and insert the sequences into the reference tree, like using [SEPP](https://github.com/smirarab/sepp/tree/master). 
 
-Addtional QIIME 2 implementations for Phylogenetic Tree Construction:
+Additional QIIME 2 implementations for Phylogenetic Tree Construction:
 
 - [fragement-insert sepp](https://docs.qiime2.org/2023.9/plugins/available/fragment-insertion/sepp/)
 
@@ -107,9 +107,9 @@ Addtional QIIME 2 implementations for Phylogenetic Tree Construction:
 ### Rarefaction
 
 An issue with microbiome data is that due to the nature of our sequencing technology, one sample might be 
-more deeply sequenced compared to another sample. When samples are sequenced, it is not possible to garenttee that all the samples will be sequencing that same amount. This amount that a sample is sequences is refered to as **sequencing depth**. Varying sequencing depth can cause significant issues when trying to run diveristy metrics or try to compare these samples. If you have samples with uneven sequencing depths, the diversity metrics that are calculated might indicate the sample that was sequencing deeper has more diversity simply because it was sequenced more. 
+more deeply sequenced compared to another sample. When samples are sequenced, it is not possible to guarantee that all the samples will be sequencing that same amount. This amount that a sample is sequences is referred to as **sequencing depth**. Varying sequencing depth can cause significant issues when trying to run diversity metrics or try to compare these samples. If you have samples with uneven sequencing depths, the diversity metrics that are calculated might indicate the sample that was sequencing deeper has more diversity simply because it was sequenced more. 
 
-    For example, if I went to the desert and counted all the unique species of plants a 100 mile radius and then I went to the rainforest and counted all the unique species in a 10 mile radius. I might find that they are more species in the desert simply because I investigated the desert more.
+    For example, if I went to the desert and counted all the unique species of plants in a 100 mile radius and then I went to the rainforest and counted all the unique species in a 10 mile radius. I might find that they are more species in the desert simply because I investigated the desert more.
 
     Now, I have realized the fault in my study so I go back to desert and I count all the unique species of plants a 10 mile radius and I also go to the rainforest and counted all the unique species in a 10 mile radius.  In this version of the study I would probably find that the rainforest is the more diversity environment. 
 
