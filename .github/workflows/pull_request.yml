@@ -14,9 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}
 
         # Use the yaml-env-action action.
       - name: Load environment from YAML
@@ -31,14 +32,16 @@ jobs:
       # Make the branch fresh
       - name: Make the branch fresh
         run: |
-          git config --local user.email "itcrtrainingnetwork@gmail.com"
-          git config --local user.name "jhudsl-robot"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.email "itcrtrainingnetwork@gmail.com"
+          git config --global user.name "jhudsl-robot"
 
           branch_name='preview-${{ github.event.pull_request.number }}'
           echo branch doesnt exist
           git checkout -b $branch_name || echo branch exists
           git push --set-upstream origin $branch_name
         shell: bash
+
 
     outputs:
       toggle_spell_check: "${{ env.SPELL_CHECK }}"
@@ -58,6 +61,7 @@ jobs:
       check_type: spelling
       error_min: 3
       gh_pat: secrets.GH_PAT
+      branch_name: ${GITHUB_HEAD_REF}
 
   url-check:
     name: Check URLs
@@ -68,6 +72,7 @@ jobs:
       check_type: urls
       error_min: 0
       gh_pat: secrets.GH_PAT
+      branch_name: ${GITHUB_HEAD_REF}
 
   quiz-check:
     name: Check quiz formatting
@@ -78,6 +83,7 @@ jobs:
       check_type: quiz_format
       error_min: 0
       gh_pat: secrets.GH_PAT
+      branch_name: ${GITHUB_HEAD_REF}
 
 ############################# Style the code ###################################
   style-code:
@@ -90,7 +96,7 @@ jobs:
 
     steps:
       - name: Checkout files
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -116,16 +122,16 @@ jobs:
 
     steps:
       - name: Checkout files
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       # Set up git checkout
       - name: Set up git checkout
         run: |
-          git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git config --local user.email "itcrtrainingnetwork@gmail.com"
-          git config --local user.name "jhudsl-robot"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.email "itcrtrainingnetwork@gmail.com"
+          git config --global user.name "jhudsl-robot"
 
           branch_name='preview-${{ github.event.pull_request.number }}'
           git fetch --all
