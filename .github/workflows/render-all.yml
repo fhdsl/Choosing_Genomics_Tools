@@ -10,6 +10,7 @@ on:
     paths:
       - '**.Rmd'
       - assets/*
+      - quizzes/*
 
 jobs:
 
@@ -18,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
         # Use the yaml-env-action action.
       - name: Load environment from YAML
@@ -29,6 +30,7 @@ jobs:
       toggle_bookdown: "${{ env.RENDER_BOOKDOWN }}"
       toggle_coursera: "${{ env.RENDER_COURSERA }}"
       toggle_leanpub: "${{ env.RENDER_LEANPUB }}"
+      make_book_txt: "${{ env.MAKE_BOOK_TXT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
       toggle_quiz_check: "${{ env.CHECK_QUIZZES }}"
 
@@ -42,16 +44,16 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
 
       - name: Login as jhudsl-robot
         run: |
-          git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git config --local user.email "itcrtrainingnetwork@gmail.com"
-          git config --local user.name "jhudsl-robot"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.email "itcrtrainingnetwork@gmail.com"
+          git config --global user.name "jhudsl-robot"
 
       # We want a fresh run of the renders each time
       - name: Delete old docs/*
@@ -78,10 +80,11 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
           git add --force docs/*
           git commit -m 'Render bookdown' || echo "No changes to commit"
           git pull --allow-unrelated-histories --strategy-option=ours
-          git push origin main || echo "No changes to push"
+          git push -u origin main  || echo "No changes to push"
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
@@ -93,16 +96,16 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
 
       - name: Login as jhudsl-robot
         run: |
-          git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git config --local user.email "itcrtrainingnetwork@gmail.com"
-          git config --local user.name "jhudsl-robot"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.email "itcrtrainingnetwork@gmail.com"
+          git config --global user.name "jhudsl-robot"
 
       # Rendered content for Leanpub and Coursera is very similar.
       # This job creates a shared scaffold for both.
@@ -116,10 +119,11 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
           git add --force docs/no_toc*
           git commit -m 'Render toc-less' || echo "No changes to commit"
           git pull --allow-unrelated-histories --strategy-option=ours
-          git push origin main || echo "No changes to push"
+          git push -u origin main  || echo "No changes to push"
 
   render-leanpub:
     name: Finish Leanpub prep
@@ -131,16 +135,16 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
 
       - name: Login as jhudsl-robot
         run: |
-          git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git config --local user.email "itcrtrainingnetwork@gmail.com"
-          git config --local user.name "jhudsl-robot"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.email "itcrtrainingnetwork@gmail.com"
+          git config --global user.name "jhudsl-robot"
 
       # Create screenshots
       - name: Run the screenshot creation
@@ -155,8 +159,17 @@ jobs:
             --output_dir resources/chapt_screen_images)
 
       # We want a fresh run of the renders each time
-      - name: Delete old manuscript/
-        run: rm -rf manuscript/
+      - name: Delete manuscript/
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          rm -rf manuscript/
+          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
+          git add .
+          git commit -m 'Delete manuscript folder' || echo "No changes to commit"
+          git pull --allow-unrelated-histories --strategy-option=ours
+          git push -u origin main || echo "No changes to push"
 
       - name: Run ottrpal::bookdown_to_embed_leanpub
         if: needs.yaml-check.outputs.toggle_quiz_check == 'no'
@@ -164,7 +177,7 @@ jobs:
           Rscript -e "ottrpal::bookdown_to_embed_leanpub(
             render = FALSE, \
             chapt_img_key = 'resources/chapt_screen_images/chapter_urls.tsv', \
-            make_book_txt = TRUE, \
+            make_book_txt = as.logical('${{needs.yaml-check.outputs.make_book_txt}}'), \
             quiz_dir = NULL)"
 
       - name: Run ottrpal::bookdown_to_embed_leanpub
@@ -173,7 +186,7 @@ jobs:
           Rscript -e "ottrpal::bookdown_to_embed_leanpub(
             render = FALSE, \
             chapt_img_key = 'resources/chapt_screen_images/chapter_urls.tsv', \
-            make_book_txt = TRUE)"
+            make_book_txt = as.logical('${{needs.yaml-check.outputs.make_book_txt}}'))"
 
       # Commit the rendered Leanpub files
       - name: Commit rendered Leanpub files
@@ -181,13 +194,12 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           mkdir -p manuscript
-          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
           git add --force manuscript/*
           git add --force resources/*
           git add --force docs/*
           git commit -m 'Render Leanpub' || echo "No changes to commit"
           git pull --allow-unrelated-histories --strategy-option=ours
-          git push origin main || echo "No changes to push"
+          git push --force --set-upstream origin main || echo "No changes to push"
 
   render-coursera:
     name: Finish Coursera prep
@@ -199,16 +211,16 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
 
       - name: Login as jhudsl-robot
         run: |
-          git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git config --local user.email "itcrtrainingnetwork@gmail.com"
-          git config --local user.name "jhudsl-robot"
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global user.email "itcrtrainingnetwork@gmail.com"
+          git config --global user.name "jhudsl-robot"
 
       # Run Coursera version
       - name: Convert Leanpub quizzes to Coursera
@@ -222,9 +234,10 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
           git add --force manuscript/*
           git add --force resources/*
           git add --force docs/*
           git commit -m 'Render Coursera quizzes' || echo "No changes to commit"
           git pull --allow-unrelated-histories --strategy-option=ours
-          git push origin main || echo "No changes to push"
+          git push -u origin main  || echo "No changes to push"

@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
         # Use the yaml-env-action action.
       - name: Load environment from YAML
@@ -65,7 +65,7 @@ jobs:
 
       - name: Checkout code from Leanpub repo
         if: ${{ steps.git_repo_check.outputs.git_results == 'TRUE' }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ steps.git_repo_check.outputs.leanpub_repo }}
           token: ${{ secrets.GH_PAT }}
