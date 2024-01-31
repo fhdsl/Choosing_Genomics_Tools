@@ -2,7 +2,6 @@
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
-MKE A splling rror.
 # A Very General Genomics Overview
 
 ## Learning Objectives
