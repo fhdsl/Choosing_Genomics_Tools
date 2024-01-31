@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Choosing Genomics Tools</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Choosing Genomics Tools" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Choosing Genomics Tools" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="chip-seq-1.html"/>
+<link rel="next" href="dna-methylation-sequencing.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+  <html>
+  
+  <head>
+  <title>Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Title</title>
+  </head>
+  
+  <body>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-QWJXTLJBQ7');
+  </script>
+      
+  </body>
+  </html>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="assets/style_ITN.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.itcrtraining.org/"><img src="assets/ITN_logo.png" style="padding-left: 15px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#available-course-formats"><i class="fa fa-check"></i><b>0.1</b> Available course formats</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#target-audience"><i class="fa fa-check"></i><b>1.1</b> Target Audience</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#topics-covered"><i class="fa fa-check"></i><b>1.2</b> Topics covered:</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.3</b> Motivation</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#curriculum"><i class="fa fa-check"></i><b>1.4</b> Curriculum</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#how-to-use-the-course"><i class="fa fa-check"></i><b>1.5</b> How to use the course</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html"><i class="fa fa-check"></i><b>2</b> A Very General Genomics Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#what-do-genomics-workflows-look-like"><i class="fa fa-check"></i><b>2.1.1</b> What do genomics workflows look like?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#basic-file-formats"><i class="fa fa-check"></i><b>2.1.2</b> Basic file formats</a></li>
+<li class="chapter" data-level="2.1.3" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#sequencing-file-formats"><i class="fa fa-check"></i><b>2.1.3</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="2.1.4" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#microarray-file-formats"><i class="fa fa-check"></i><b>2.1.4</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#general-informatics-files"><i class="fa fa-check"></i><b>2.2</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="a-very-general-genomics-overview.html"><a href="a-very-general-genomics-overview.html#other-files"><i class="fa fa-check"></i><b>2.2.1</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="guidelines-for-good-metadata.html"><a href="guidelines-for-good-metadata.html"><i class="fa fa-check"></i><b>3</b> Guidelines for Good Metadata</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="guidelines-for-good-metadata.html"><a href="guidelines-for-good-metadata.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="guidelines-for-good-metadata.html"><a href="guidelines-for-good-metadata.html#what-are-metadata"><i class="fa fa-check"></i><b>3.2</b> What are metadata?</a></li>
+<li class="chapter" data-level="3.3" data-path="guidelines-for-good-metadata.html"><a href="guidelines-for-good-metadata.html#how-to-create-metadata"><i class="fa fa-check"></i><b>3.3</b> How to create metadata?</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="guidelines-for-good-metadata.html"><a href="guidelines-for-good-metadata.html#the-goals-in-creating-your-metadata"><i class="fa fa-check"></i><b>3.3.1</b> The goals in creating your metadata:</a></li>
+<li class="chapter" data-level="3.3.2" data-path="guidelines-for-good-metadata.html"><a href="guidelines-for-good-metadata.html#to-recap"><i class="fa fa-check"></i><b>3.3.2</b> To recap:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html"><i class="fa fa-check"></i><b>4</b> Considerations for choosing tools</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#overview"><i class="fa fa-check"></i><b>4.2</b> Overview</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-this-tool-appropriate-for-your-data-type"><i class="fa fa-check"></i><b>4.2.1</b> Is this tool appropriate for your data type?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-this-tool-appropriate-for-your-scientific-question"><i class="fa fa-check"></i><b>4.2.2</b> Is this tool appropriate for your scientific question?</a></li>
+<li class="chapter" data-level="4.2.3" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-this-tool-in-an-interface-or-programming-language-you-feel-comfortable-with"><i class="fa fa-check"></i><b>4.2.3</b> Is this tool in an interface or programming language you feel comfortable with?</a></li>
+<li class="chapter" data-level="4.2.4" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#how-much-computing-power-do-you-have"><i class="fa fa-check"></i><b>4.2.4</b> How much computing power do you have?</a></li>
+<li class="chapter" data-level="4.2.5" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#are-there-benchmarking-papers-that-compare-this-tool-to-other-options"><i class="fa fa-check"></i><b>4.2.5</b> Are there benchmarking papers that compare this tool to other options?</a></li>
+<li class="chapter" data-level="4.2.6" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-the-tool-well-documented-and-usable"><i class="fa fa-check"></i><b>4.2.6</b> Is the tool well documented and usable?</a></li>
+<li class="chapter" data-level="4.2.7" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-the-tool-well-maintained"><i class="fa fa-check"></i><b>4.2.7</b> Is the tool well maintained?</a></li>
+<li class="chapter" data-level="4.2.8" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#is-the-tool-generally-accepted-by-the-field"><i class="fa fa-check"></i><b>4.2.8</b> Is the tool generally accepted by the field?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#coming-to-a-decision"><i class="fa fa-check"></i><b>4.3</b> Coming to a decision</a></li>
+<li class="chapter" data-level="4.4" data-path="considerations-for-choosing-tools.html"><a href="considerations-for-choosing-tools.html#more-resources"><i class="fa fa-check"></i><b>4.4</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html"><i class="fa fa-check"></i><b>5</b> General Data Analysis Tools</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#command-line-vs-gui"><i class="fa fa-check"></i><b>5.2</b> Command Line vs GUI</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#bash"><i class="fa fa-check"></i><b>5.2.1</b> Bash</a></li>
+<li class="chapter" data-level="5.2.2" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#r"><i class="fa fa-check"></i><b>5.2.2</b> R</a></li>
+<li class="chapter" data-level="5.2.3" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#python"><i class="fa fa-check"></i><b>5.2.3</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="general-data-analysis-tools.html"><a href="general-data-analysis-tools.html#more-resources-1"><i class="fa fa-check"></i><b>5.3</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sequencing-data.html"><a href="sequencing-data.html"><i class="fa fa-check"></i><b>6</b> Sequencing Data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sequencing-data.html"><a href="sequencing-data.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="sequencing-data.html"><a href="sequencing-data.html#how-does-sequencing-work"><i class="fa fa-check"></i><b>6.2</b> How does sequencing work?</a></li>
+<li class="chapter" data-level="6.3" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-concepts"><i class="fa fa-check"></i><b>6.3</b> Sequencing concepts</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="sequencing-data.html"><a href="sequencing-data.html#inherent-biases"><i class="fa fa-check"></i><b>6.3.1</b> Inherent biases</a></li>
+<li class="chapter" data-level="6.3.2" data-path="sequencing-data.html"><a href="sequencing-data.html#pcr-amplification"><i class="fa fa-check"></i><b>6.3.2</b> PCR Amplification</a></li>
+<li class="chapter" data-level="6.3.3" data-path="sequencing-data.html"><a href="sequencing-data.html#depth-of-coverage"><i class="fa fa-check"></i><b>6.3.3</b> Depth of coverage</a></li>
+<li class="chapter" data-level="6.3.4" data-path="sequencing-data.html"><a href="sequencing-data.html#quality-controls"><i class="fa fa-check"></i><b>6.3.4</b> Quality controls</a></li>
+<li class="chapter" data-level="6.3.5" data-path="sequencing-data.html"><a href="sequencing-data.html#alignment"><i class="fa fa-check"></i><b>6.3.5</b> Alignment</a></li>
+<li class="chapter" data-level="6.3.6" data-path="sequencing-data.html"><a href="sequencing-data.html#single-end-vs-paired-end"><i class="fa fa-check"></i><b>6.3.6</b> Single End vs Paired End</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="sequencing-data.html"><a href="sequencing-data.html#very-general-sequencing-workflow"><i class="fa fa-check"></i><b>6.4</b> Very General Sequencing Workflow</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="sequencing-data.html"><a href="sequencing-data.html#sequencing-file-formats-1"><i class="fa fa-check"></i><b>6.4.1</b> Sequencing file formats</a></li>
+<li class="chapter" data-level="6.4.2" data-path="sequencing-data.html"><a href="sequencing-data.html#other-files-1"><i class="fa fa-check"></i><b>6.4.2</b> Other files</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="microarray-data.html"><a href="microarray-data.html"><i class="fa fa-check"></i><b>7</b> Microarray Data</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="microarray-data.html"><a href="microarray-data.html#learning-objectives-5"><i class="fa fa-check"></i><b>7.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="microarray-data.html"><a href="microarray-data.html#summary-of-microarrays"><i class="fa fa-check"></i><b>7.2</b> Summary of microarrays</a></li>
+<li class="chapter" data-level="7.3" data-path="microarray-data.html"><a href="microarray-data.html#how-do-microarrays-work"><i class="fa fa-check"></i><b>7.3</b> How do microarrays work?</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="microarray-data.html"><a href="microarray-data.html#pros"><i class="fa fa-check"></i><b>7.3.1</b> Pros:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="microarray-data.html"><a href="microarray-data.html#cons"><i class="fa fa-check"></i><b>7.3.2</b> Cons:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="microarray-data.html"><a href="microarray-data.html#what-types-of-arrays-are-there"><i class="fa fa-check"></i><b>7.4</b> What types of arrays are there?</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="microarray-data.html"><a href="microarray-data.html#snp-arrays"><i class="fa fa-check"></i><b>7.4.1</b> SNP arrays</a></li>
+<li class="chapter" data-level="7.4.2" data-path="microarray-data.html"><a href="microarray-data.html#gene-expression-arrays"><i class="fa fa-check"></i><b>7.4.2</b> Gene expression arrays</a></li>
+<li class="chapter" data-level="7.4.3" data-path="microarray-data.html"><a href="microarray-data.html#dna-methylation-arrays"><i class="fa fa-check"></i><b>7.4.3</b> DNA methylation arrays</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="microarray-data.html"><a href="microarray-data.html#general-processing-of-microarray-data"><i class="fa fa-check"></i><b>7.5</b> General processing of microarray data</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="microarray-data.html"><a href="microarray-data.html#examples-2"><i class="fa fa-check"></i><b>7.5.1</b> Examples</a></li>
+<li class="chapter" data-level="7.5.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-platforms"><i class="fa fa-check"></i><b>7.5.2</b> Microarray Platforms</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="microarray-data.html"><a href="microarray-data.html#very-general-microarray-workflow"><i class="fa fa-check"></i><b>7.6</b> Very General Microarray Workflow</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="microarray-data.html"><a href="microarray-data.html#microarray-file-formats-1"><i class="fa fa-check"></i><b>7.6.1</b> Microarray file formats</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="microarray-data.html"><a href="microarray-data.html#general-informatics-files-1"><i class="fa fa-check"></i><b>7.7</b> General informatics files</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="microarray-data.html"><a href="microarray-data.html#other-files-2"><i class="fa fa-check"></i><b>7.7.1</b> Other files</a></li>
+<li class="chapter" data-level="7.7.2" data-path="microarray-data.html"><a href="microarray-data.html#microarray-processing-tutorials"><i class="fa fa-check"></i><b>7.7.2</b> Microarray processing tutorials:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="annotating-genomes.html"><a href="annotating-genomes.html"><i class="fa fa-check"></i><b>8</b> Annotating Genomes</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#learning-objectives-6"><i class="fa fa-check"></i><b>8.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-reference-genomes"><i class="fa fa-check"></i><b>8.2</b> What are reference genomes?</a></li>
+<li class="chapter" data-level="8.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-genome-versions"><i class="fa fa-check"></i><b>8.3</b> What are genome versions?</a></li>
+<li class="chapter" data-level="8.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#what-are-the-different-files"><i class="fa fa-check"></i><b>8.4</b> What are the different files?</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#how-to-download-annotation-files"><i class="fa fa-check"></i><b>8.4.1</b> How to download annotation files</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="annotating-genomes.html"><a href="annotating-genomes.html#considerations-for-annotating-genomic-data"><i class="fa fa-check"></i><b>8.5</b> Considerations for annotating genomic data</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#make-sure-you-have-the-right-file-to-start"><i class="fa fa-check"></i><b>8.5.1</b> Make sure you have the right file to start!</a></li>
+<li class="chapter" data-level="8.5.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-consistent-in-your-annotations"><i class="fa fa-check"></i><b>8.5.2</b> Be consistent in your annotations</a></li>
+<li class="chapter" data-level="8.5.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#be-clear-in-your-write-ups"><i class="fa fa-check"></i><b>8.5.3</b> Be clear in your write ups!</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="annotating-genomes.html"><a href="annotating-genomes.html#resources-you-will-need-for-annotation"><i class="fa fa-check"></i><b>8.6</b> Resources you will need for annotation!</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#annotation-databases"><i class="fa fa-check"></i><b>8.6.1</b> Annotation databases</a></li>
+<li class="chapter" data-level="8.6.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#gui-based-annotation-tools"><i class="fa fa-check"></i><b>8.6.2</b> GUI based annotation tools</a></li>
+<li class="chapter" data-level="8.6.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#command-line-based-tools"><i class="fa fa-check"></i><b>8.6.3</b> Command line based tools</a></li>
+<li class="chapter" data-level="8.6.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#more-resources-about-genome-annotation"><i class="fa fa-check"></i><b>8.6.4</b> More resources about genome annotation</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Specific Data Types</b></span></li>
+<li class="chapter" data-level="9" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html"><i class="fa fa-check"></i><b>9</b> DNA Methods Overview</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#learning-objectives-7"><i class="fa fa-check"></i><b>9.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-are-the-goals-of-analyzing-dna-sequences"><i class="fa fa-check"></i><b>9.2</b> What are the goals of analyzing DNA sequences?</a></li>
+<li class="chapter" data-level="9.3" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#comparison-of-dna-methods"><i class="fa fa-check"></i><b>9.3</b> Comparison of DNA methods</a></li>
+<li class="chapter" data-level="9.4" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#how-to-choose-a-dna-sequencing-method"><i class="fa fa-check"></i><b>9.4</b> How to choose a DNA sequencing method</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-regions-of-the-genome-pertain-to-your-research-question"><i class="fa fa-check"></i><b>9.4.1</b> 1. What region(s) of the genome pertain to your research question?</a></li>
+<li class="chapter" data-level="9.4.2" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-does-your-project-budget-allow-for"><i class="fa fa-check"></i><b>9.4.2</b> 2. What does your project budget allow for?</a></li>
+<li class="chapter" data-level="9.4.3" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#what-is-your-detection-power-for-these-variants"><i class="fa fa-check"></i><b>9.4.3</b> 3. What is your detection power for these variants?</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="dna-methods-overview.html"><a href="dna-methods-overview.html#strengths-and-weaknesses-of-different-methods"><i class="fa fa-check"></i><b>9.5</b> Strengths and Weaknesses of different methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html"><i class="fa fa-check"></i><b>10</b> Whole Genome or Exome Sequencing</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#learning-objectives-8"><i class="fa fa-check"></i><b>10.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#wgs-and-wgs-overview"><i class="fa fa-check"></i><b>10.2</b> WGS and WGS Overview</a></li>
+<li class="chapter" data-level="10.3" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#advantages-and-disadvantages-of-wgs-vs-wxs"><i class="fa fa-check"></i><b>10.3</b> Advantages and Disadvantages of WGS vs WXS</a></li>
+<li class="chapter" data-level="10.4" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#wgswxs-considerations"><i class="fa fa-check"></i><b>10.4</b> WGS/WXS Considerations</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#target-enrichment-techniques"><i class="fa fa-check"></i><b>10.4.1</b> Target enrichment techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#dna-sequencing-pipeline-overview"><i class="fa fa-check"></i><b>10.5</b> DNA Sequencing Pipeline Overview</a></li>
+<li class="chapter" data-level="10.6" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#data-pre-processing"><i class="fa fa-check"></i><b>10.6</b> Data Pre-processing</a></li>
+<li class="chapter" data-level="10.7" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#commonly-used-tools"><i class="fa fa-check"></i><b>10.7</b> Commonly Used Tools</a></li>
+<li class="chapter" data-level="10.8" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#data-pre-processing-tools"><i class="fa fa-check"></i><b>10.8</b> Data pre-processing tools</a></li>
+<li class="chapter" data-level="10.9" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#tools-for-somatic-and-germline-variant-identification"><i class="fa fa-check"></i><b>10.9</b> Tools for somatic and germline variant identification</a></li>
+<li class="chapter" data-level="10.10" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#tools-for-variant-calling-annotation"><i class="fa fa-check"></i><b>10.10</b> Tools for variant calling annotation</a></li>
+<li class="chapter" data-level="10.11" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#tools-for-copy-number-variation-analysis"><i class="fa fa-check"></i><b>10.11</b> Tools for copy number variation analysis</a></li>
+<li class="chapter" data-level="10.12" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#tools-for-data-visualization"><i class="fa fa-check"></i><b>10.12</b> Tools for data visualization</a></li>
+<li class="chapter" data-level="10.13" data-path="whole-genome-or-exome-sequencing.html"><a href="whole-genome-or-exome-sequencing.html#resources-for-wgs"><i class="fa fa-check"></i><b>10.13</b> Resources for WGS</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html"><i class="fa fa-check"></i><b>11</b> RNA Methods Overview</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#learning-objectives-9"><i class="fa fa-check"></i><b>11.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#what-are-the-goals-of-gene-expression-analysis"><i class="fa fa-check"></i><b>11.2</b> What are the goals of gene expression analysis?</a></li>
+<li class="chapter" data-level="11.3" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#comparison-of-rna-methods"><i class="fa fa-check"></i><b>11.3</b> Comparison of RNA methods</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#single-cell-rna-seq-scrna-seq"><i class="fa fa-check"></i><b>11.3.1</b> Single-cell RNA-seq (scRNA-seq):</a></li>
+<li class="chapter" data-level="11.3.2" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#bulk-rna-seq"><i class="fa fa-check"></i><b>11.3.2</b> Bulk RNA-seq:</a></li>
+<li class="chapter" data-level="11.3.3" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#gene-expression-microarray"><i class="fa fa-check"></i><b>11.3.3</b> Gene Expression Microarray:</a></li>
+<li class="chapter" data-level="11.3.4" data-path="rna-methods-overview.html"><a href="rna-methods-overview.html#spatial-transcriptomics"><i class="fa fa-check"></i><b>11.3.4</b> Spatial Transcriptomics:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html"><i class="fa fa-check"></i><b>12</b> Bulk RNA-seq</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#learning-objectives-10"><i class="fa fa-check"></i><b>12.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#where-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>12.2</b> Where RNA-seq data comes from</a></li>
+<li class="chapter" data-level="12.3" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-workflow"><i class="fa fa-check"></i><b>12.3</b> RNA-seq workflow</a></li>
+<li class="chapter" data-level="12.4" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-strengths"><i class="fa fa-check"></i><b>12.4</b> RNA-seq data <strong>strengths</strong></a></li>
+<li class="chapter" data-level="12.5" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-limitations"><i class="fa fa-check"></i><b>12.5</b> RNA-seq data <strong>limitations</strong></a></li>
+<li class="chapter" data-level="12.6" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-considerations"><i class="fa fa-check"></i><b>12.6</b> RNA-seq data considerations</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#ribo-minus-vs-poly-a-selection"><i class="fa fa-check"></i><b>12.6.1</b> Ribo minus vs poly A selection</a></li>
+<li class="chapter" data-level="12.6.2" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#transcriptome-mapping"><i class="fa fa-check"></i><b>12.6.2</b> Transcriptome mapping</a></li>
+<li class="chapter" data-level="12.6.3" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#abundance-measures"><i class="fa fa-check"></i><b>12.6.3</b> Abundance measures</a></li>
+<li class="chapter" data-level="12.6.4" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-downstream-analysis-tools"><i class="fa fa-check"></i><b>12.6.4</b> RNA-seq downstream analysis tools</a></li>
+</ul></li>
+<li class="chapter" data-level="12.7" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#visualization-gui-tools"><i class="fa fa-check"></i><b>12.7</b> Visualization GUI tools</a></li>
+<li class="chapter" data-level="12.8" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#rna-seq-data-resources"><i class="fa fa-check"></i><b>12.8</b> RNA-seq data resources</a></li>
+<li class="chapter" data-level="12.9" data-path="bulk-rna-seq-1.html"><a href="bulk-rna-seq-1.html#more-reading-about-rna-seq-data"><i class="fa fa-check"></i><b>12.9</b> More reading about RNA-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html"><i class="fa fa-check"></i><b>13</b> Single-cell RNA-seq</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#learning-objectives-11"><i class="fa fa-check"></i><b>13.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from"><i class="fa fa-check"></i><b>13.2</b> Where single-cell RNA-seq data comes from</a></li>
+<li class="chapter" data-level="13.3" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-data-types"><i class="fa fa-check"></i><b>13.3</b> Single-cell RNA-seq data types</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#unique-molecular-identifiers"><i class="fa fa-check"></i><b>13.3.1</b> Unique Molecular identifiers</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#single-cell-rna-seq-tools"><i class="fa fa-check"></i><b>13.4</b> Single cell RNA-seq tools</a></li>
+<li class="chapter" data-level="13.5" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#quantification-and-alignment-tools"><i class="fa fa-check"></i><b>13.5</b> Quantification and alignment tools</a></li>
+<li class="chapter" data-level="13.6" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#downstream-tools-pros-and-cons"><i class="fa fa-check"></i><b>13.6</b> Downstream tools Pros and Cons</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#doublet-tool-pros-and-cons"><i class="fa fa-check"></i><b>13.6.1</b> Doublet Tool Pros and Cons</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#more-scrna-seq-tools-and-tutorials"><i class="fa fa-check"></i><b>13.7</b> More scRNA-seq tools and tutorials</a></li>
+<li class="chapter" data-level="13.8" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#visualization-gui-tools-1"><i class="fa fa-check"></i><b>13.8</b> Visualization GUI tools</a></li>
+<li class="chapter" data-level="13.9" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-tutorials"><i class="fa fa-check"></i><b>13.9</b> Useful tutorials</a></li>
+<li class="chapter" data-level="13.10" data-path="single-cell-rna-seq.html"><a href="single-cell-rna-seq.html#useful-readings"><i class="fa fa-check"></i><b>13.10</b> Useful readings</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html"><i class="fa fa-check"></i><b>14</b> Spatial transcriptomics</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#learning-objectives-12"><i class="fa fa-check"></i><b>14.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="14.2" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#what-are-the-goals-of-spatial-transcriptomic-analysis"><i class="fa fa-check"></i><b>14.2</b> What are the goals of spatial transcriptomic analysis?</a></li>
+<li class="chapter" data-level="14.3" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#overview-of-a-spatial-transcriptomics-workflow"><i class="fa fa-check"></i><b>14.3</b> Overview of a spatial transcriptomics workflow</a></li>
+<li class="chapter" data-level="14.4" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#spatial-transcriptomic-data-strengths"><i class="fa fa-check"></i><b>14.4</b> Spatial transcriptomic data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="14.5" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#spatial-transcriptomic-data-weaknesses"><i class="fa fa-check"></i><b>14.5</b> Spatial transcriptomic data <strong>weaknesses</strong>:</a></li>
+<li class="chapter" data-level="14.6" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#tools-for-spatial-transcriptomics"><i class="fa fa-check"></i><b>14.6</b> Tools for spatial transcriptomics</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#data-processing"><i class="fa fa-check"></i><b>14.6.1</b> Data processing:</a></li>
+<li class="chapter" data-level="14.6.2" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#data-exploration"><i class="fa fa-check"></i><b>14.6.2</b> Data exploration:</a></li>
+<li class="chapter" data-level="14.6.3" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#clusteringtissue-domain-identification"><i class="fa fa-check"></i><b>14.6.3</b> Clustering/tissue domain identification:</a></li>
+<li class="chapter" data-level="14.6.4" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#spatially-variable-gene-identification"><i class="fa fa-check"></i><b>14.6.4</b> Spatially variable gene identification:</a></li>
+<li class="chapter" data-level="14.6.5" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#deconvolutionphenotyping"><i class="fa fa-check"></i><b>14.6.5</b> Deconvolution/phenotyping:</a></li>
+<li class="chapter" data-level="14.6.6" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#cell-communication"><i class="fa fa-check"></i><b>14.6.6</b> Cell communication:</a></li>
+</ul></li>
+<li class="chapter" data-level="14.7" data-path="spatial-transcriptomics-1.html"><a href="spatial-transcriptomics-1.html#more-tools-and-tutorials-regarding-spatial-transcriptomics"><i class="fa fa-check"></i><b>14.7</b> More tools and tutorials regarding spatial transcriptomics</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html"><i class="fa fa-check"></i><b>15</b> Chromatin Methods Overview</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#learning-objectives-13"><i class="fa fa-check"></i><b>15.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#why-are-people-interested-in-chromatin"><i class="fa fa-check"></i><b>15.2</b> Why are people interested in chromatin?</a></li>
+<li class="chapter" data-level="15.3" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#what-kinds-of-questions-can-chromatin-answer"><i class="fa fa-check"></i><b>15.3</b> What kinds of questions can chromatin answer?</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#chromatin-is-involved-in-a-variety-of-biological-processes"><i class="fa fa-check"></i><b>15.3.1</b> Chromatin is involved in a variety of biological processes:</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#comparison-of-technologies"><i class="fa fa-check"></i><b>15.4</b> Comparison of technologies</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#atac-seq"><i class="fa fa-check"></i><b>15.4.1</b> ATAC-seq:</a></li>
+<li class="chapter" data-level="15.4.2" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#single-cell-atac-seq"><i class="fa fa-check"></i><b>15.4.2</b> Single-cell ATAC-seq:</a></li>
+<li class="chapter" data-level="15.4.3" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#chip-seq"><i class="fa fa-check"></i><b>15.4.3</b> ChIP-seq:</a></li>
+<li class="chapter" data-level="15.4.4" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#cutrun"><i class="fa fa-check"></i><b>15.4.4</b> CUT&amp;RUN</a></li>
+<li class="chapter" data-level="15.4.5" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#cuttag"><i class="fa fa-check"></i><b>15.4.5</b> CUT&amp;Tag</a></li>
+<li class="chapter" data-level="15.4.6" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#gro-seq-global-run-on-sequencing"><i class="fa fa-check"></i><b>15.4.6</b> GRO-seq (Global Run-On sequencing)</a></li>
+<li class="chapter" data-level="15.4.7" data-path="chromatin-methods-overview.html"><a href="chromatin-methods-overview.html#how-gro-seq-works"><i class="fa fa-check"></i><b>15.4.7</b> How GRO-seq works:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="atac-seq-1.html"><a href="atac-seq-1.html"><i class="fa fa-check"></i><b>16</b> ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#learning-objectives-14"><i class="fa fa-check"></i><b>16.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="16.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#what-are-the-goals-of-atac-seq-analysis"><i class="fa fa-check"></i><b>16.2</b> What are the goals of ATAC-Seq analysis?</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#what-questions-can-be-answered-with-atac-seq"><i class="fa fa-check"></i><b>16.2.1</b> What questions can be answered with ATAC-seq?</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-general-workflow-overview"><i class="fa fa-check"></i><b>16.3</b> ATAC-Seq general workflow overview</a>
+<ul>
+<li class="chapter" data-level="16.3.1" data-path="atac-seq-1.html"><a href="atac-seq-1.html#data-quality-metrics"><i class="fa fa-check"></i><b>16.3.1</b> Data quality metrics:</a></li>
+<li class="chapter" data-level="16.3.2" data-path="atac-seq-1.html"><a href="atac-seq-1.html#information-from-atac-seq-analysis"><i class="fa fa-check"></i><b>16.3.2</b> Information from ATAC-seq analysis:</a></li>
+</ul></li>
+<li class="chapter" data-level="16.4" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-strengths"><i class="fa fa-check"></i><b>16.4</b> ATAC-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="16.5" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-limitations"><i class="fa fa-check"></i><b>16.5</b> ATAC-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="16.6" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-data-considerations"><i class="fa fa-check"></i><b>16.6</b> ATAC-Seq data considerations</a></li>
+<li class="chapter" data-level="16.7" data-path="atac-seq-1.html"><a href="atac-seq-1.html#atac-seq-analysis-tools"><i class="fa fa-check"></i><b>16.7</b> ATAC-seq analysis tools</a></li>
+<li class="chapter" data-level="16.8" data-path="atac-seq-1.html"><a href="atac-seq-1.html#additional-tutorials-and-tools"><i class="fa fa-check"></i><b>16.8</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="16.9" data-path="atac-seq-1.html"><a href="atac-seq-1.html#additional-tutorials-and-tools-1"><i class="fa fa-check"></i><b>16.9</b> Additional tutorials and tools</a></li>
+<li class="chapter" data-level="16.10" data-path="atac-seq-1.html"><a href="atac-seq-1.html#online-visualization-tools"><i class="fa fa-check"></i><b>16.10</b> Online Visualization tools</a></li>
+<li class="chapter" data-level="16.11" data-path="atac-seq-1.html"><a href="atac-seq-1.html#more-resources-about-atac-seq-data"><i class="fa fa-check"></i><b>16.11</b> More resources about ATAC-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html"><i class="fa fa-check"></i><b>17</b> Single cell ATAC-Seq</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#learning-objectives-15"><i class="fa fa-check"></i><b>17.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="17.2" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#what-are-the-goals-of-scatac-seq-analysis"><i class="fa fa-check"></i><b>17.2</b> What are the goals of scATAC-seq analysis?</a></li>
+<li class="chapter" data-level="17.3" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-general-workflow-overview"><i class="fa fa-check"></i><b>17.3</b> scATAC-seq general workflow overview</a></li>
+<li class="chapter" data-level="17.4" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#peak-calling-1"><i class="fa fa-check"></i><b>17.4</b> Peak calling</a></li>
+<li class="chapter" data-level="17.5" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#dimensionality-reduction"><i class="fa fa-check"></i><b>17.5</b> Dimensionality reduction</a></li>
+<li class="chapter" data-level="17.6" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#embedding-visualization"><i class="fa fa-check"></i><b>17.6</b> Embedding (visualization)</a></li>
+<li class="chapter" data-level="17.7" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#clustering"><i class="fa fa-check"></i><b>17.7</b> Clustering</a></li>
+<li class="chapter" data-level="17.8" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#cell-type-annotation"><i class="fa fa-check"></i><b>17.8</b> Cell type annotation</a></li>
+<li class="chapter" data-level="17.9" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-data-strengths"><i class="fa fa-check"></i><b>17.9</b> scATAC-seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="17.10" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-data-limitations"><i class="fa fa-check"></i><b>17.10</b> scATAC-seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="17.11" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-data-considerations"><i class="fa fa-check"></i><b>17.11</b> scATAC-seq data considerations</a></li>
+<li class="chapter" data-level="17.12" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#scatac-seq-analysis-tools"><i class="fa fa-check"></i><b>17.12</b> scATAC-seq analysis tools</a></li>
+<li class="chapter" data-level="17.13" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#trajectory-analysis"><i class="fa fa-check"></i><b>17.13</b> Trajectory analysis</a></li>
+<li class="chapter" data-level="17.14" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#motif-detection-ex.-chromvar"><i class="fa fa-check"></i><b>17.14</b> Motif detection (ex. ChromVar)</a></li>
+<li class="chapter" data-level="17.15" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#regulatory-network-detection"><i class="fa fa-check"></i><b>17.15</b> Regulatory network detection</a></li>
+<li class="chapter" data-level="17.16" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#tools-for-data-type-conversion"><i class="fa fa-check"></i><b>17.16</b> Tools for data type conversion</a></li>
+<li class="chapter" data-level="17.17" data-path="single-cell-atac-seq-1.html"><a href="single-cell-atac-seq-1.html#more-resources-and-tutorials-about-scatac-seq-data"><i class="fa fa-check"></i><b>17.17</b> More resources and tutorials about scATAC-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="chip-seq-1.html"><a href="chip-seq-1.html"><i class="fa fa-check"></i><b>18</b> ChIP-Seq</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="chip-seq-1.html"><a href="chip-seq-1.html#learning-objectives-16"><i class="fa fa-check"></i><b>18.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="18.2" data-path="chip-seq-1.html"><a href="chip-seq-1.html#what-are-the-goals-of-chip-seq-analysis"><i class="fa fa-check"></i><b>18.2</b> What are the goals of ChIP-Seq analysis?</a></li>
+<li class="chapter" data-level="18.3" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-general-workflow-overview"><i class="fa fa-check"></i><b>18.3</b> ChIP-Seq general workflow overview</a></li>
+<li class="chapter" data-level="18.4" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-data-strengths"><i class="fa fa-check"></i><b>18.4</b> ChIP-Seq data <strong>strengths</strong>:</a></li>
+<li class="chapter" data-level="18.5" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-data-limitations"><i class="fa fa-check"></i><b>18.5</b> ChIP-Seq data <strong>limitations</strong>:</a></li>
+<li class="chapter" data-level="18.6" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-data-considerations"><i class="fa fa-check"></i><b>18.6</b> ChIP-Seq data considerations</a></li>
+<li class="chapter" data-level="18.7" data-path="chip-seq-1.html"><a href="chip-seq-1.html#chip-seq-analysis-tools"><i class="fa fa-check"></i><b>18.7</b> ChiP-seq analysis tools</a>
+<ul>
+<li class="chapter" data-level="18.7.1" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-quality-checks"><i class="fa fa-check"></i><b>18.7.1</b> Tools for quality checks</a></li>
+<li class="chapter" data-level="18.7.2" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-peak-calling"><i class="fa fa-check"></i><b>18.7.2</b> Tools for Peak calling:</a></li>
+<li class="chapter" data-level="18.7.3" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-differential-analysis"><i class="fa fa-check"></i><b>18.7.3</b> Tools for Differential Analysis</a></li>
+<li class="chapter" data-level="18.7.4" data-path="chip-seq-1.html"><a href="chip-seq-1.html#motif-analysis-1"><i class="fa fa-check"></i><b>18.7.4</b> Motif Analysis</a></li>
+<li class="chapter" data-level="18.7.5" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-preprocessing"><i class="fa fa-check"></i><b>18.7.5</b> Tools for preprocessing</a></li>
+<li class="chapter" data-level="18.7.6" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-making-visualizations"><i class="fa fa-check"></i><b>18.7.6</b> Tools for making visualizations</a></li>
+<li class="chapter" data-level="18.7.7" data-path="chip-seq-1.html"><a href="chip-seq-1.html#tools-for-making-heatmaps"><i class="fa fa-check"></i><b>18.7.7</b> Tools for making heatmaps</a></li>
+</ul></li>
+<li class="chapter" data-level="18.8" data-path="chip-seq-1.html"><a href="chip-seq-1.html#more-resources-about-chip-seq-data"><i class="fa fa-check"></i><b>18.8</b> More resources about ChiP-seq data</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html"><i class="fa fa-check"></i><b>19</b> CUT&amp;RUN and CUT&amp;Tag</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#learning-objectives-17"><i class="fa fa-check"></i><b>19.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="19.2" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#technologies"><i class="fa fa-check"></i><b>19.2</b> Technologies</a></li>
+<li class="chapter" data-level="19.3" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#advantages-of-cutrun-and-cuttag-over-the-traditional-chip-seq-technology"><i class="fa fa-check"></i><b>19.3</b> Advantages of CUT&amp;RUN and CUT&amp;Tag over the Traditional ChIP-seq Technology</a>
+<ul>
+<li class="chapter" data-level="19.3.1" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#cutrun-1"><i class="fa fa-check"></i><b>19.3.1</b> CUT&amp;RUN</a></li>
+<li class="chapter" data-level="19.3.2" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#cuttag-1"><i class="fa fa-check"></i><b>19.3.2</b> CUT&amp;Tag</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#differences-between-cutrun-and-cuttag"><i class="fa fa-check"></i><b>19.4</b> Differences between CUT&amp;RUN and CUT&amp;Tag</a></li>
+<li class="chapter" data-level="19.5" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#limitation-of-cutrun-and-cuttag"><i class="fa fa-check"></i><b>19.5</b> Limitation of CUT&amp;RUN and CUT&amp;Tag</a></li>
+<li class="chapter" data-level="19.6" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#general-data-analysis-workflow"><i class="fa fa-check"></i><b>19.6</b> General Data Analysis Workflow</a>
+<ul>
+<li class="chapter" data-level="19.6.1" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#adapter-trimming"><i class="fa fa-check"></i><b>19.6.1</b> Adapter Trimming</a></li>
+<li class="chapter" data-level="19.6.2" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#alignment-1"><i class="fa fa-check"></i><b>19.6.2</b> Alignment</a></li>
+<li class="chapter" data-level="19.6.3" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#quality-control"><i class="fa fa-check"></i><b>19.6.3</b> Quality control</a></li>
+<li class="chapter" data-level="19.6.4" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#normalization"><i class="fa fa-check"></i><b>19.6.4</b> Normalization</a></li>
+<li class="chapter" data-level="19.6.5" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#peak-calling-2"><i class="fa fa-check"></i><b>19.6.5</b> Peak Calling</a></li>
+<li class="chapter" data-level="19.6.6" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#visualization-1"><i class="fa fa-check"></i><b>19.6.6</b> Visualization</a></li>
+<li class="chapter" data-level="19.6.7" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#differential-analysis"><i class="fa fa-check"></i><b>19.6.7</b> Differential Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="19.7" data-path="cutrun-and-cuttag.html"><a href="cutrun-and-cuttag.html#more-resources-about-cutrun-and-cuttag-data-analysis"><i class="fa fa-check"></i><b>19.7</b> More resources about CUT&amp;RUN and CUT&amp;Tag data analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html"><i class="fa fa-check"></i><b>20</b> DNA Methylation Sequencing</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#learning-objectives-18"><i class="fa fa-check"></i><b>20.1</b> Learning Objectives</a></li>
+<li class="chapter" data-level="20.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#what-are-the-goals-of-analyzing-dna-methylation"><i class="fa fa-check"></i><b>20.2</b> What are the goals of analyzing DNA methylation?</a></li>
+<li class="chapter" data-level="20.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-data-considerations"><i class="fa fa-check"></i><b>20.3</b> Methylation data considerations</a>
+<ul>
+<li class="chapter" data-level="20.3.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#beta-values-binomially-distributed"><i class="fa fa-check"></i><b>20.3.1</b> Beta values binomially distributed</a></li>
+<li class="chapter" data-level="20.3.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#measuring-5mc-andor-5hmc"><i class="fa fa-check"></i><b>20.3.2</b> Measuring 5mC and/or 5hmC</a></li>
+</ul></li>
+<li class="chapter" data-level="20.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-data-workflow"><i class="fa fa-check"></i><b>20.4</b> Methylation data workflow</a></li>
+<li class="chapter" data-level="20.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-tools-pros-and-cons"><i class="fa fa-check"></i><b>20.5</b> Methylation Tools Pros and Cons</a>
+<ul>
+<li class="chapter" data-level="20.5.1" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#quality-control-1"><i class="fa fa-check"></i><b>20.5.1</b> Quality control:</a></li>
+<li class="chapter" data-level="20.5.2" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis"><i class="fa fa-check"></i><b>20.5.2</b> Analysis:</a></li>
+<li class="chapter" data-level="20.5.3" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-calling"><i class="fa fa-check"></i><b>20.5.3</b> Methylation calling:</a></li>
+<li class="chapter" data-level="20.5.4" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#methylation-quantification"><i class="fa fa-check"></i><b>20.5.4</b> Methylation quantification:</a></li>
+<li class="chapter" data-level="20.5.5" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#analysis-1"><i class="fa fa-check"></i><b>20.5.5</b> Analysis:</a></li>
+</ul></li>
+<li class="chapter" data-level="20.6" data-path="dna-methylation-sequencing.html"><a href="dna-methylation-sequencing.html#more-resources-2"><i class="fa fa-check"></i><b>20.6</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>21</b> ITCR -omic Tool Glossary</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#archs4"><i class="fa fa-check"></i><b>21.1</b> ARCHS4</a></li>
+<li class="chapter" data-level="21.2" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#bioconductor"><i class="fa fa-check"></i><b>21.2</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="21.2.1" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#notable-bioconductor-genomics-tools"><i class="fa fa-check"></i><b>21.2.1</b> Notable Bioconductor genomics tools:</a></li>
+</ul></li>
+<li class="chapter" data-level="21.3" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#cancer-models"><i class="fa fa-check"></i><b>21.3</b> Cancer Models</a></li>
+<li class="chapter" data-level="21.4" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#civic"><i class="fa fa-check"></i><b>21.4</b> CIViC</a></li>
+<li class="chapter" data-level="21.5" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#ctat"><i class="fa fa-check"></i><b>21.5</b> CTAT</a></li>
+<li class="chapter" data-level="21.6" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#deepphe"><i class="fa fa-check"></i><b>21.6</b> DeepPhe</a></li>
+<li class="chapter" data-level="21.7" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#genetic-cancer-risk-detector-garde"><i class="fa fa-check"></i><b>21.7</b> Genetic Cancer Risk Detector (GARDE)</a></li>
+<li class="chapter" data-level="21.8" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#genepattern"><i class="fa fa-check"></i><b>21.8</b> GenePattern</a></li>
+<li class="chapter" data-level="21.9" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#gene-set-enrichment-analysis-gsea"><i class="fa fa-check"></i><b>21.9</b> Gene Set Enrichment Analysis (GSEA)</a></li>
+<li class="chapter" data-level="21.10" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#integrative-genomics-viewer-igv"><i class="fa fa-check"></i><b>21.10</b> Integrative Genomics Viewer (IGV)</a></li>
+<li class="chapter" data-level="21.11" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#ndex"><i class="fa fa-check"></i><b>21.11</b> NDEx</a></li>
+<li class="chapter" data-level="21.12" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#multiassayexperiment"><i class="fa fa-check"></i><b>21.12</b> MultiAssayExperiment</a></li>
+<li class="chapter" data-level="21.13" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#opencravat"><i class="fa fa-check"></i><b>21.13</b> OpenCRAVAT</a></li>
+<li class="chapter" data-level="21.14" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#pvactools"><i class="fa fa-check"></i><b>21.14</b> pVACtools</a></li>
+<li class="chapter" data-level="21.15" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#tumordecon"><i class="fa fa-check"></i><b>21.15</b> TumorDecon</a></li>
+<li class="chapter" data-level="21.16" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#webmev"><i class="fa fa-check"></i><b>21.16</b> WebMeV</a></li>
+<li class="chapter" data-level="21.17" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#xena"><i class="fa fa-check"></i><b>21.17</b> Xena</a>
+<ul>
+<li class="chapter" data-level="21.17.1" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html#questions-xena-can-help-you-answer-include"><i class="fa fa-check"></i><b>21.17.1</b> Questions Xena can help you answer include:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://hutchdatascience.org/"> The Fred Hutch Data Science Lab </a></p>
+<a href="https://hutchdatascience.org/"><img src="assets/big-dasl-stacked.png" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/hc8Xt3Y2Znjb6M4Y7"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Choosing Genomics Tools</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_ITN.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/itcr_main_image.png">
+</div>
+<div id="cutrun-and-cuttag" class="section level1" number="19">
+<h1><span class="header-section-number">Chapter 19</span> CUT&amp;RUN and CUT&amp;Tag</h1>
+<div class="warning">
+<p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
+</div>
+<div id="learning-objectives-17" class="section level2" number="19.1">
+<h2><span class="header-section-number">19.1</span> Learning Objectives</h2>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a3974d9533_0_10.png" width="100%" /></p>
+</div>
+<div id="technologies" class="section level2" number="19.2">
+<h2><span class="header-section-number">19.2</span> Technologies</h2>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2aeb8138211_0_0.png" width="100%" /></p>
+</div>
+<div id="advantages-of-cutrun-and-cuttag-over-the-traditional-chip-seq-technology" class="section level2" number="19.3">
+<h2><span class="header-section-number">19.3</span> Advantages of CUT&amp;RUN and CUT&amp;Tag over the Traditional ChIP-seq Technology</h2>
+<ul>
+<li><strong>Lower Cell Number and Less Starting Material Requirement</strong>: CUT&amp;RUN and CUT&amp;Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&amp;RUN and CUT&amp;Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing.</li>
+</ul>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_35.png" width="100%" /></p>
+<ul>
+<li><strong>Higher Resolution and Specificity</strong>: CUT&amp;RUN and CUT&amp;Tag provide higher resolution and greater specificity in identifying protein-DNA interactions. This results from the method’s direct targeting and cleavage of DNA at the binding sites, reducing background noise.</li>
+</ul>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_42.png" width="100%" /></p>
+<ul>
+<li><strong>Reduced Background Noise</strong>: CUT&amp;RUN and CUT&amp;Tag typically result in lower background noise due to the direct tagging of DNA at the site of the protein-DNA interaction, enhancing the clarity and quality of the results. The sensitivity of sequencing depends on the depth of the sequencing run (i.e., the number of mapped sequence tags), the size of the genome, and the distribution of the target factor. The sequencing depth is directly correlated with cost and negatively correlated with background. Therefore, low-background CUT&amp;RUN and CUT&amp;Tag will waste less sequencing resources on profiling the background and hence is inherently more cost-effective than high-background ChIP-seq.</li>
+</ul>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_28.png" width="100%" /></p>
+<ul>
+<li><p><strong>Cost-Effectiveness</strong>: In addition to high efficiency in sequencing the target region, due to the lower requirement for reagents and enzymes, CUT&amp;RUN and CUT&amp;Tag can be more cost-effective, especially in high-throughput settings.</p></li>
+<li><p><strong>More Efficient Protocol Workflow and Faster Turnaround Time</strong>: The protocol for CUT&amp;RUN and CUT&amp;Tag is more streamlined and less labor-intensive than ChIP-seq. It eliminates the need for sonication, DNA purification, and ligation steps, simplifying the procedure. The overall protocols of CUT&amp;RUN and CUT&amp;Tag are generally quicker and more straightforward than ChIP-seq, leading to faster experiment turnaround times.</p></li>
+</ul>
+<div id="cutrun-1" class="section level3" number="19.3.1">
+<h3><span class="header-section-number">19.3.1</span> CUT&amp;RUN</h3>
+<p><strong>Cleavage Under Targets and Release Using Nuclease</strong>, <strong>CUT&amp;RUN</strong> for short, is an antibody-targeted chromatin profiling method to measure the histone modification enrichment or transcription factor binding. This is a more advanced technology for epigenomic landscape profiling compared to the tradditional ChIP-seq technology and known for its easy implementation and low cost. The procedure is carried out in situ where micrococcal nuclease tethered to protein A binds to an antibody of choice and cuts immediately adjacent DNA, releasing DNA-bound to the antibody target. Therefore, CUT&amp;RUN produces precise transcription factor or histone modification profiles while avoiding crosslinking and solubilization issues. Extremely low backgrounds make profiling possible with typically one-tenth of the sequencing depth required for ChIP-seq and permit profiling using low cell numbers (i.e., a few hundred cells) without losing quality.</p>
+<!-- [Henikoff lab](https://research.fredhutch.org/henikoff/en.html) constructed a 6xHis and HA-tagged protein A-protein G-MNase fusion (pAG-MNase) that allows direct binding of mouse antibodies that bind poorly to protein A, eliminating the need for a secondary antibody. The His tag allows the purification of pAG-MNase with a commercial kit, while the HA tag can be used for pulling out pAG-MNase chromatin complexes for CUT&RUN.ChIP. Henikoff lab developed low salt and high calcium conditions that prevent diffusion of released complexes into the supernatant, allowing for longer digestion times and increased yields without increased cleavage at non-specific accessible sites. E. coli DNA carried over from pA-MNase or pAG-MNase preparation is sufficient for internal calibration of samples without adding heterologous spike-in DNA. -->
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_0.png" width="100%" /></p>
+<ul>
+<li>Publications:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://elifesciences.org/articles/21856">An efficient targeted nuclease strategy for high-resolution mapping of DNA binding sites. eLife. 2017</a></li>
+<li><a href="https://www.nature.com/articles/nprot.2018.015">Targeted in situ genome-wide profiling with high efficiency for low cell numbers. Nature Protocols. 2018</a></li>
+<li><a href="https://elifesciences.org/articles/46314">Improved CUT&amp;RUN chromatin profiling tools. eLife. 2019</a></li>
+</ol>
+<ul>
+<li>Protocols:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.protocols.io/view/cut-amp-run-targeted-in-situ-genome-wide-profiling-14egnr4ql5dy/v3">CUT&amp;RUN: Targeted in situ genome-wide profiling with high efficiency for low cell numbers (Version 3)</a></li>
+<li><a href="https://www.protocols.io/view/cut-run-with-drosophila-tissues-14egnx28pl5d/v1">CUT&amp;RUN with Drosophila tissues (Version 1)</a></li>
+</ol>
+<div id="autocutrun" class="section level4" number="19.3.1.1">
+<h4><span class="header-section-number">19.3.1.1</span> AutoCUT&amp;RUN</h4>
+<p>CUT&amp;RUN has been automated using a Beckman Biomek FX liquid-handling robot so that a 96-well format can be used to profile chromatin for high-throughput samples, such as in a clinical setting. DNA end polishing and direct ligation of adapters permit sample-to-Illumina library processing of 96 samples in two days. AutoCUT&amp;RUN can be used for cell-type specific gene activity and enhancer profiling based on histone modifications and transcription factors, including in frozen tissue samples of tumor xenografts.</p>
+<ul>
+<li>Publication:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://epigeneticsandchromatin.biomedcentral.com/articles/10.1186/s13072-018-0243-8">Automated in situ chromatin profiling efficiently resolves cell types and gene regulatory programs. Epigentics &amp; Chromatin. 2018</a></li>
+</ol>
+<ul>
+<li>Protocol:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.protocols.io/view/autocut-run-genome-wide-profiling-of-chromatin-pro-6qpvre6zblmk/v1">AutoCUT&amp;RUN: genome-wide profiling of chromatin proteins in a 96 well format on a Biomek (Version 1)</a></li>
+</ol>
+</div>
+</div>
+<div id="cuttag-1" class="section level3" number="19.3.2">
+<h3><span class="header-section-number">19.3.2</span> CUT&amp;Tag</h3>
+<p><strong>Cleavage Under Targets and Tagmentation</strong>, <strong>CUT&amp;Tag</strong> for short, is an enzyme tethering approach to profiling chromatin proteins, including histone marks and RNA Pol II. CUT&amp;Tag generates sequence-ready libraries without the need for end polishing and adaptor ligation. It uses a proteinA-Tn5 fusion to tether Tn5 transposase near the site of an antibody to a chromatin protein of interest. A secondary antibody, such as guinea pig anti-rabbit antibody, is used to increase the efficiency of tethering the pA-Tn5 to the target primary antibody. The pA-Tn5 complex is pre-loaded with sequencing adapters that insert into adjacent DNA upon activation with magnesium. CUT&amp;Tag has a very low background and can be performed in a single tube in as little as a day, though primary antibodies are typically incubated overnight. It can also be used with the ICELL8 nano dispensation system to profile single cells.</p>
+<p>A streamlined CUT&amp;Tag protocol was introduced by the <a href="https://research.fredhutch.org/henikoff/en.html">Henikoff Lab</a> that suppresses DNA accessibility artifacts to ensure high-fidelity mapping of the antibody-targeted protein and improves the signal-to-noise ratio over current chromatin profiling methods. Streamlined CUT&amp;Tag can be performed in a single PCR tube, from cells to amplified libraries, providing low-cost genome-wide chromatin maps. By simplifying library preparation, CUT&amp;Tag-direct requires less than a day at the bench, from live cells to sequencing-ready barcoded libraries. As a result of low background levels, barcoded and pooled CUT&amp;Tag libraries can be sequenced for as little as $25 per sample. This enables routine genome-wide profiling of chromatin proteins and modifications and requires no special skills or equipment.</p>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_7.png" width="100%" /></p>
+<ul>
+<li>Publication:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.nature.com/articles/s41467-019-09982-5">CUT&amp;Tag for efficient epigenomic profiling of small samples and single cells. Nature Communications. 2019</a></li>
+<li><a href="https://www.nature.com/articles/s41596-020-0373-x">Efficient low-cost chromatin profiling with CUT&amp;Tag. Nature Protocols. 2020</a></li>
+<li><a href="https://www.nature.com/articles/s41596-023-00905-9">Scalable single-cell profiling of chromatin modifications with sciCUT&amp;Tag. Nature Protocols. 2023</a></li>
+</ol>
+<ul>
+<li>Protocol:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.protocols.io/view/bench-top-cut-amp-tag-kqdg34qdpl25/v3">Bench top CUT&amp;Tag (Version 3)</a></li>
+<li><a href="https://www.protocols.io/view/3xflag-patn5-protein-purification-and-meds-loading-j8nlke4e5l5r/v1">3XFlag-pATn5 Protein Purification and MEDS-loading (5x scale, 2L volume, Version 1)</a></li>
+<li><a href="https://www.protocols.io/view/cut-tag-with-drosophila-tissues-3byl4kkprvo5/v1">CUT&amp;Tag with Drosophila tissues (Version 1)</a></li>
+</ol>
+<div id="autocuttag" class="section level4" number="19.3.2.1">
+<h4><span class="header-section-number">19.3.2.1</span> AutoCUT&amp;Tag</h4>
+<p>CUT&amp;Tag has been automated using a Beckman Coulter Biomek FX liquid handling robot so that a 96-well format can be used to profile chromatin for high-throughput samples, such as in a clinical setting. AutoCUT&amp;Tag can be used to profile the gene targets of fusions of the KMT2A lysine methyltransferase to other chromatin proteins, which characterize lymphoid, myeloid, and mixed lineage leukemias, uncovering heterogeneities that may underlie lineage plasticity.</p>
+<ul>
+<li>Publication:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.nature.com/articles/s41588-021-00941-9">Automated CUT&amp;Tag profiling of chromatin heterogeneity in mixed-lineage leukemia. Nature Genetics. 2021</a></li>
+<li><a href="https://en.bio-protocol.org/en/bpdetail?id=4043&amp;type=0">Simplified Epigenome Profiling Using Antibody-tethered Tagmentation</a></li>
+<li><a href="https://www.nature.com/articles/s41467-023-41666-z">Epigenomic analysis of formalin-fixed paraffin-embedded samples by CUT&amp;Tag</a></li>
+</ol>
+<ul>
+<li>Protocol:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.protocols.io/view/autocut-amp-tag-streamlined-genome-wide-profiling-14egn819qg5d/v1">AutoCUT&amp;Tag: streamlined genome-wide profiling of chromatin proteins on a liquid handling robot (Version 1)</a></li>
+</ol>
+</div>
+<div id="cutac" class="section level4" number="19.3.2.2">
+<h4><span class="header-section-number">19.3.2.2</span> CUTAC</h4>
+<p>Cleavage Under Targeted Accessible Chromatin, CUTAC, for short, is a simple modification of the Tn5 transposase-mediated antibody-directed CUT&amp;Tag method that provides high-quality accessibility mapping in parallel with mapping of specific components of the chromatin landscape. Findings imply that regulatory sites detected by hyperaccessibility mapping are coupled to the initiation of RNA Polymerase II transcription via H3K4 methylation. CUTAC requires few resources and is sufficiently simple that it can be performed from nuclei to purified sequencing-ready libraries in single PCR tubes on a home workbench.</p>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_14.png" width="100%" /></p>
+<ul>
+<li>Publication:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://elifesciences.org/articles/63274">Efficient chromatin accessibility mapping in situ by nucleosome-tethered tagmentation. eLife. 2020</a></li>
+</ol>
+<ul>
+<li>Protocol:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.protocols.io/view/cut-amp-tag-direct-for-whole-cells-with-cutac-x54v9mkmzg3e/v4">CUT&amp;Tag-direct for whole cells with CUTAC (Version 4)</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="differences-between-cutrun-and-cuttag" class="section level2" number="19.4">
+<h2><span class="header-section-number">19.4</span> Differences between CUT&amp;RUN and CUT&amp;Tag</h2>
+<ul>
+<li><p>CUT&amp;RUN is more suitable than CUT&amp;Tag for transcription factor (TF) profiling because the salt will compete with TF binding to DNA during the high salt incubation. TF depending on the motif affinity, only binds to a few DNA basepairs, and TF binding can be weak and compelled by salt. As demonstrated by <a href="https://www.nature.com/articles/s41467-019-09982-5">Kaya-Okur et al. 2019</a>, the CUT&amp;Tag signal of CTCF, one of the strongest binding factors, can be observed but become relatively weak. Therefore, it can be challenging for the peak caller to detect the enrichment of CTCF profiled by CUT&amp;Tag. Hence, it can also be hard to find the motif pattern practically.</p></li>
+<li><p>CUT&amp;Tag is more suitable for histone modification and RNA polymerase profiling as DNA wraps around the histone and RNA polymerase structure inserts and grabs the DNA. The DNA binding from both histone modification marks and PolII is strong. CUT&amp;Tag for histone modification also showed moderately higher signals compared to CUT&amp;RUN throughout the list of sites in <a href="https://www.nature.com/articles/s41467-019-09982-5">Kaya-Okur et al. 2019</a>.</p></li>
+<li><p>CUT&amp;RUN must be followed by DNA end polishing and adapter ligation to prepare sequencing libraries, which increases the time, cost, and effort of the overall procedure. Moreover, the release of MNase-cleaved fragments into the supernatant with CUT&amp;RUN is not well-suited for application to single-cell platforms.</p></li>
+</ul>
+</div>
+<div id="limitation-of-cutrun-and-cuttag" class="section level2" number="19.5">
+<h2><span class="header-section-number">19.5</span> Limitation of CUT&amp;RUN and CUT&amp;Tag</h2>
+<ul>
+<li><p>Dependency on Antibody Quality: Similar to ChIP-seq, CUT&amp;RUN and CUT&amp;Tag’s success heavily relies on the quality and specificity of the antibodies used. High-quality, highly specific antibodies are essential for reliable results, and the lack of such antibodies can limit the application of this technique.</p></li>
+<li><p>Likelihood of Over-digestion of DNA: Due to inappropriate timing of the Magnesium-dependent Tn5 reaction with CUT&amp;RUN, DNA can be over-cut, a similar limitation exists for contemporary ChIP-Seq protocols where enzymatic or sonicated DNA shearing must be optimized.</p></li>
+<li><p>GC Bias: For CUT&amp;Tag, as with other techniques using Tn5, the library preparation has a strong GC bias and has poor sensitivity in low GC regions or genomes with high variance in GC content.</p></li>
+<li><p>Not Suitable for All Epitopes: CUT&amp;RUN and CUT&amp;Tag may not work efficiently for all protein-DNA interactions, especially if the epitope recognized by the antibody is obscured or altered in the chromatin context. However, companies are testing thoroughly therefore this issue is decreasing with time.</p></li>
+<li><p>Challenges in Detecting Low Abundance TFs: While CUT&amp;RUN and CUT&amp;Tag are more sensitive than ChIP-seq, they can still face challenges in detecting TFs present in very low abundance in the cell.</p></li>
+</ul>
+</div>
+<div id="general-data-analysis-workflow" class="section level2" number="19.6">
+<h2><span class="header-section-number">19.6</span> General Data Analysis Workflow</h2>
+<p>CUT&amp;RUN and CUT&amp;Tag data analysis share a very similar strategy. Data analysis generally involves raw sequencing data alignment, quality control, normalization, peak calling, visualization, differential analysis, and other specific analyses for target scientific discoveries. A detailed data processing and analysis tutorial with reproducible codes and demo data can be found at <a href="https://www.protocols.io/view/cut-amp-tag-data-processing-and-analysis-tutorial-e6nvw93x7gmk/v1">CUT&amp;Tag Data Processing and Analysis Tutorial</a>,</p>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_22.png" width="100%" /></p>
+<div id="adapter-trimming" class="section level3" number="19.6.1">
+<h3><span class="header-section-number">19.6.1</span> Adapter Trimming</h3>
+<p>If the read length is long, adapter trimming may be needed for more accurate alignment results. However, for CUT&amp;RUN and CUT&amp;Tag, if the read length is short (i.e., 25bp per end), the aligner can use a “soft-match” style algorithm to handle the remaining adapter at the end of the read. Therefore, the adapter trimming is not necessary in that scenario.</p>
+<ul>
+<li><a href="https://cutadapt.readthedocs.io/en/stable/">Cutadapt</a>: Cutadapt finds and removes adapter sequences, primers, poly-A tails, and other types of unwanted sequences from your high-throughput sequencing reads. It can remove a wide range of adapter sequences and is not limited to Illumina-specific adapters. Users can specify multiple adapter sequences. Cutadapt supports quality trimming, though with less granularity than Trimmomatic. It can be used for both paired-end and single-end reads and allows for filtering based on length after trimming.</li>
+</ul>
+<p>For instance, with Illumina’s NextSeq 2000 machine and 50 base pairs paired-end reads, the adapters clipped by cutadapt 4.1 with parameters:
+<code>-j 8 --nextseq-trim 20 -m 20 -a  AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -Z</code></p>
+<ul>
+<li><a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a>: A flexible trimmer for Illumina Sequence Data. It trims low-quality bases from the start and end of the reads and scans the read with a sliding window to trim based on average quality. Trimmomatic can also remove Illumina-specific adapters with an option to specify custom adapter sequences. It is known for its high precision and flexibility. It can handle paired-end and single-end data.</li>
+</ul>
+</div>
+<div id="alignment-1" class="section level3" number="19.6.2">
+<h3><span class="header-section-number">19.6.2</span> Alignment</h3>
+<ul>
+<li><a href="https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml">Bowtie2</a>: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. It is particularly good at aligning reads of about 50 up to 100 characters to relatively large (e.g., mammalian) genomes. When aligning paired-end reads to the reference genome, filter and keep read pairs whose fragment lengths are between 10bp and 1000bp. Detailed recommended parameters can be found in the [tutorial].</li>
+</ul>
+<p>The alignment of the 50 base pairs paired-end reads out of Illumina’s NextSeq 2000 machine by Bowtie2 version 2.4.4 to reference sequence with parameters:
+<code>--very-sensitive-local --soft-clipped-unmapped-tlen --dovetail --no-mixed --no-discordant -q --phred33 -I 10 -X 1000</code></p>
+<ul>
+<li><a href="https://bio-bwa.sourceforge.net/bwa.shtml">BWA</a>: BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.</li>
+</ul>
+</div>
+<div id="quality-control" class="section level3" number="19.6.3">
+<h3><span class="header-section-number">19.6.3</span> Quality control</h3>
+<p>The quality of the aligned data can be evaluated from the following aspects:</p>
+<ul>
+<li><p><strong>Sequencing depth</strong>: Check the number of reads mapped to the genome to see if it matches the expected sequencing depth. CUT&amp;RUN/CUT&amp;Tag data typically has very low backgrounds, so as few as 1 million mapped fragments can give robust profiles for a histone modification in the human genome.</p></li>
+<li><p><strong>Alignment rate</strong>: Alignment frequencies are expected to be &gt;80% for high-quality data.</p></li>
+<li><p><strong>Duplication rate</strong>: Duplication rate is the percentage of duplicated reads, and <a href="https://broadinstitute.github.io/picard/">Picard</a> is widely used to detect duplicates. PCR duplicates are read with the same start and end coordinates and are not biological duplicates. PCR duplicates are created during the library amplification. Generally, the duplication rate is expected to be &lt;20% for high-quality data. However, as long as the duplicates rate is lower than 80-90 %, meaning the sequencing is not completely saturated, duplicates should be kept for downstream analysis. Even for relatively high duplicated samples (e.g., 50% duplication rate), PCR duplicates tend to happen more at the signal part, and removing duplicates with favor towards the background noise. In other words, keeping the duplicates can help us locate the peak region. When the sequencing depth is not saturated, the duplicate rate is linearly correlated with the sequencing depth. Therefore, normalization that removes the sequencing depth variations across samples can take care of the duplicate rate simultaneously.</p></li>
+<li><p><strong>Estimated library size</strong>: Estimated library size is the estimated number of unique molecules in the library based on PE duplication calculated by <a href="https://broadinstitute.github.io/picard/">Picard</a>. The estimated library sizes are proportional to the abundance of the targeted epitope and the quality of the antibody used, while the estimated library sizes of IgG samples are expected to be very low. Suppose users follow the sequencing depth tradition for the ChIP-seq data and sequence 100+ million reads but end up with only 1-2 million estimated library size. In that case, it is expected to have an ultra-high duplication rate. In that case, the sequencing depth is too high, and the sequencing is saturated. Duplicates are expected to be removed for downstream analysis.</p></li>
+<li><p><strong>Fragment length distribution</strong>: CUT&amp;RUN and CUT&amp;Tag targeting at a histone modification predominantly result in nucleosomal fragments (~180 bp) or multiples of that length. Therefore, the fragment length density distribution usually has several peaks whose modes are 180bp apart, matching the nucleosomal length. CUT&amp;RUN/CUT&amp;Tag targeting transcription factors predominantly produce nucleosome-sized fragments and variable amounts of shorter fragments from neighboring nucleosomes and the factor-bound site, respectively.
+Moreover, tagmentation of DNA on the surface of nucleosomes also occurs, and plotting fragment length distribution with single-basepair resolution reveals a 10-bp sawtooth periodicity, which is typical of successful CUT&amp;Tag experiments. Such 10 bp periodic cleavage preferences match the 10 bp/turn periodicity of B-form DNA, which suggests that the DNA on either side of these bound TFs is spatially oriented such that tethered MNase has preferential access to one face of the DNA double helix. The presence of this 10 bp periodicity is a good indicator that the experiment has specifically targeted nucleosomal DNA or proteins in close association with it. If this pattern is absent, it might suggest non-specific binding or other technical issues.</p></li>
+</ul>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_0.png" width="100%" /></p>
+</div>
+<div id="normalization" class="section level3" number="19.6.4">
+<h3><span class="header-section-number">19.6.4</span> Normalization</h3>
+<div id="spike-in-scaling" class="section level4" number="19.6.4.1">
+<h4><span class="header-section-number">19.6.4.1</span> Spike-in Scaling</h4>
+<p>E. coli DNA is carried along with bacterially-produced pA-Tn5 protein and gets tagmented non-specifically during the reaction. The fraction of total reads that map to the E.coli genome depends on the yield of epitope-targeted CUT&amp;Tag and roso depends on the number of cells used and the abundance of that epitope in chromatin. Since a constant amount of pATn5 is added to CUT&amp;Tag reactions and brings along a fixed amount of E. coli DNA, E. coli reads can be used to normalize epitope abundance across experiments.</p>
+<p>The underlying assumption is that the ratio of fragments mapped to the primary genome to the E. coli genome (or other added DNA sequences if pA-Tn5 is purified and E.coli is not available anymore) is the same for a series of samples, each using the same number of cells. Because of this assumption, we do not normalize between experiments or batches of pATn5, which can have very different amounts of carry-over E. coli DNA. Using a constant C to avoid small fractions in normalized data, we define a scaling factor S as</p>
+<p><span class="math inline">\(S = \frac{C}{(Fragments Mapped To E.coli Genome)}\)</span></p>
+<p><span class="math inline">\(Normalized coverage = (Primary Genome Coverage) * S\)</span></p>
+<p>The scaling can be done using <a href="https://bedtools.readthedocs.io/en/latest/">bedtools</a>, genomecov function and parameter “-scale”.</p>
+</div>
+<div id="sequencing-depth-and-coverage-normalization" class="section level4" number="19.6.4.2">
+<h4><span class="header-section-number">19.6.4.2</span> Sequencing depth and coverage normalization</h4>
+<p>Without a spike-in, normalization to eliminate the sequencing depth and coverage variations can be done by the following formula:</p>
+<p>Normalized Count = <span class="math inline">\(\frac{Raw Count}{Sum of Fragments Coverage} * Genome_Size\)</span></p>
+<p>Sum of Fragments Coverage = sum of all fragment lengths. Namely, Sum_of_Fragments_Coverage includes both the sequencing depth and coverage information. Note that only fragments that are within 1bp~1000bp are considered.</p>
+</div>
+</div>
+<div id="peak-calling-2" class="section level3" number="19.6.5">
+<h3><span class="header-section-number">19.6.5</span> Peak Calling</h3>
+<div id="seacr" class="section level4" number="19.6.5.1">
+<h4><span class="header-section-number">19.6.5.1</span> <a href="https://github.com/FredHutch/SEACR">SEACR</a></h4>
+<p>The <a href="https://epigeneticsandchromatin.biomedcentral.com/articles/10.1186/s13072-019-0287-4">Sparse Enrichment Analysis for CUT&amp;RUN</a>, SEACR for short, is a R package designed to call peaks and enriched regions from chromatin profiling data with very low backgrounds (i.e., regions with no read coverage) that are typical for CUT&amp;Tag chromatin profiling experiments. SEACR requires bedGraph files from paired-end sequencing as input and defines peaks as contiguous blocks of basepair coverage that do not overlap with blocks of background signal delineated in the IgG control dataset. If IgG control is available, use the IgG sample as the “control sample” and choose the “norm stringent” setting. If IgG is unavailable, users can use the “top *% peaks” by only providing the target marker sample.</p>
+<p>Web server:</p>
+<p><a href="https://seacr.fredhutch.org/">Peak calling by Sparse Enrichment Analysis for CUT&amp;RUN (SEACR) Web Interface</a></p>
+</div>
+<div id="macs2" class="section level4" number="19.6.5.2">
+<h4><span class="header-section-number">19.6.5.2</span> <a href="https://pypi.org/project/MACS2/">MACS2</a></h4>
+<p>The <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2008-9-9-r137">Model-based Analysis of ChIP-Seq</a> version 2, MACS2 for short, is widely used for identifying transcription factor binding sites and histone modification regions in ChIP-Seq data. MACS2 has been widely adapted to analyze the CUT&amp;RUN/CUT&amp;Tag data. Installation details can be found at <a href="https://github.com/taoliu/MACS/wiki" class="uri">https://github.com/taoliu/MACS/wiki</a>.</p>
+</div>
+<div id="seacr-vs-macs2" class="section level4" number="19.6.5.3">
+<h4><span class="header-section-number">19.6.5.3</span> SEACR vs MACS2</h4>
+<ul>
+<li><p>SEACR is better suited for datasets with broad signal enrichment, such as H3K27me3, where peaks are broader and can continuously cover a large genomic region. MACS2 excels in datasets with sharp peaks, such as H3K4me3, where peaks are concentrated and isolated from the background and adjacent peaks.</p></li>
+<li><p>SEACR uses a straightforward thresholding approach, which can be more intuitive but may miss some nuances in the data. MACS2 uses a more complex statistical model to identify peaks, offering potentially greater accuracy but at the cost of computational complexity.</p></li>
+<li><p>SEACR offers more flexibility in handling different types of CUT&amp;RUN/CUT&amp;Tag data, especially in the absence of control samples or the control samples are of low quality. MACS2 generally requires high-quality control samples for best performance and is less flexible in this regard.</p></li>
+</ul>
+</div>
+<div id="fragment-proportion-in-peaks-regions-frips" class="section level4" number="19.6.5.4">
+<h4><span class="header-section-number">19.6.5.4</span> FRagment proportion in Peaks regions (FRiPs)</h4>
+<p>Fragment proportion in Peak Regions, FRiPs for short, is also a critical signal-to-noise measurement. Although sequencing depths for CUT&amp;Tag are typically only 1-5 million reads, the low background of the method usually results in high FRiP scores. In other words, it measures the percentage of sequencing resources accurately allocated to the target epitope regions. Note that the number of peaks and FRiPs typically increase with the sequencing depth and mappable fragment number, therefore comparisons should be done by downsampling samples to the same number of fragment. For example, the comparison across technologies in <a href="https://elifesciences.org/articles/63274">Efficient chromatin accessibility mapping in situ by nucleosome-tethered tagmentation</a> Figure 5A:</p>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a7dbc78b0e_0_0.png" width="100%" /></p>
+</div>
+</div>
+<div id="visualization-1" class="section level3" number="19.6.6">
+<h3><span class="header-section-number">19.6.6</span> Visualization</h3>
+<ul>
+<li><p><a href="https://igv.org/doc/desktop/">Integrative Genomic Viewer</a>: IGV visualizes the chromatin landscape in regions using a genome browser. It provides a web app version and a local desktop version that is easy to use.</p></li>
+<li><p><a href="https://genome.ucsc.edu/">UCSC Genome Browser</a>: UCSC Genome Browser provides the most comprehensive supplementary genome information.</p></li>
+<li><p><a href="https://deeptools.readthedocs.io/en/develop/">deepTools</a>: deepTools is a suite of Python tools particularly developed for efficiently analyzing high-throughput sequencing data. It is particularly helpful to check chromatin features at a list of annotated sites. For example, we can use it to check the histone modification enrichment/absence signals around transcription starting sites or the peak center. We can use the “computeMatrix” and “plotHeatmap” functions from deepTools to generate the following heatmap.</p></li>
+</ul>
+<p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_6.png" width="100%" /></p>
+</div>
+<div id="differential-analysis" class="section level3" number="19.6.7">
+<h3><span class="header-section-number">19.6.7</span> Differential Analysis</h3>
+<ul>
+<li><p><a href="https://greenleaflab.github.io/chromVAR/reference/getCounts.html">chromVAR - getCounts</a>. The “getCounts” function in the chromVAR R package can convert an aligned bam file into a region by sample matrix, where the region can be genomic binning or peaks. The differential detection analysis can be performed on the region by sample matrix.</p></li>
+<li><p><a href="https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html">DESeq2</a>: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8">Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</a>
+DESeq2 estimates variance-mean dependence in count data from high-throughput sequencing assays and tests for differential expression based on a model using the negative binomial distribution. DESeq2 can also be utilized to detect the differentially enriched region using the region by sample matrix from the CUT&amp;RUN/CUT&amp;Tag data.</p></li>
+<li><p><a href="https://kasperdanielhansen.github.io/genbioconductor/html/limma.html">Limma</a>: <a href="https://greenleaflab.github.io/chromVAR/reference/getCounts.html">limma powers differential expression analyses for RNA-sequencing and microarray studies</a>
+Limma is an R package for analyzing gene expression microarray data, especially using linear models for analyzing designed experiments and assessing differential expression. Limma provides the ability to analyze comparisons between many RNA targets simultaneously in arbitrary, complicated designed experiments. Empirical Bayesian methods are used to provide stable results even when the number of arrays is small. Limma can be extended to study differential fragment enrichment analysis within peak regions. Notably, limma can deal with both the fixed effect model and random effect model.</p></li>
+<li><p><a href="https://bioconductor.org/packages/release/bioc/vignettes/edgeR/inst/doc/intro.html">edgeR</a>: <a href="https://academic.oup.com/nar/article/40/10/4288/2411520">Differential Expression Analysis of Multifactor RNA-Seq Experiments With Respect to Biological Variation</a>
+Differential expression analysis of RNA-seq expression profiles with biological replication. Implements a range of statistical methodologies based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models, and quasi-likelihood tests. As well as RNA-seq, it is applied to the differential signal analysis of other types of genomic data that produce read counts, including CUT&amp;RUN/CUT&amp;Tag, ChIP-seq, ATAC-seq, Bisulfite-seq, SAGE, and CAGE. edgeR can deal with multifactor problems.</p></li>
+</ul>
+</div>
+</div>
+<div id="more-resources-about-cutrun-and-cuttag-data-analysis" class="section level2" number="19.7">
+<h2><span class="header-section-number">19.7</span> More resources about CUT&amp;RUN and CUT&amp;Tag data analysis</h2>
+<ul>
+<li><p><a href="https://bitbucket.org/qzhudfci/cutruntools/src/master/">CUT&amp;RUNTools</a>: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1802-4">a flexible pipeline for CUT&amp;RUN processing and footprint analysis</a>. CUT&amp;RUNTools is a flexible and general pipeline for facilitating the identification of chromatin-associated protein binding and genomic footprinting analysis from antibody-targeted CUT&amp;RUN primary cleavage data. CUT&amp;RUNTools extracts endonuclease cut site information from sequences of short-read fragments and produces single-locus binding estimates, aggregate motif footprints, and informative visualizations to support the high-resolution mapping capability of CUT&amp;RUN.</p></li>
+<li><p><a href="https://github.com/fl-yu/CUT-RUNTools-2.0">CUT&amp;RUNTools 2.0</a>: <a href="https://academic.oup.com/bioinformatics/article/38/1/252/6318389?login=true">a pipeline for single-cell and bulk-level CUT&amp;RUN and CUT&amp;Tag data analysis</a>. CUT&amp;RUNTools 2.0 is a major update of CUT&amp;RUNTools, including a set of new features specially designed for CUT&amp;RUN and CUT&amp;Tag experiments. Both the bulk and single-cell data can be processed, analyzed, and interpreted using CUT&amp;RUNTools 2.0.</p></li>
+<li><p><a href="https://nf-co.re/cutandrun/3.2.1">Nextflow Analysis Pipeline for CUT&amp;RUN and CUT&amp;TAG Experiments</a>: nf-core/cutandrun is a best-practice bioinformatic analysis pipeline for CUT&amp;RUN, CUT&amp;Tag, and TIPseq experimental protocols that were developed to study protein-DNA interactions and epigenomic profiling.</p></li>
+<li><p><a href="https://github.com/maxsonBraunLab/gopeaks">GoPeaks</a>: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02707-w">histone modification peak calling for CUT&amp;Tag</a>. GoPeaks is a peak caller designed for CUT&amp;TAG/CUT&amp;RUN sequencing data. GoPeaks, by default, works best with narrow peaks such as H3K4me3 and transcription factors. However, broad epigenetic marks like H3K27Ac/H3K4me1 require different step, slide, and minwidth parameters.</p></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chip-seq-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dna-methylation-sequencing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
