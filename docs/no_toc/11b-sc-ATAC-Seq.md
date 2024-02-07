@@ -9,10 +9,7 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 
 ## Learning Objectives
 
-```{r, fig.alt = "Learning objectives This chapter will demonstrate how to:
-Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data", out.width = "100%", echo = FALSE}
-ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g227d7dd1e08_0_41")
-```
+<img src="resources/images/11b-sc-ATAC-Seq_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_41.png" title="Learning objectives This chapter will demonstrate how to: Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data" width="100%" />
 
 ## What are the goals of scATAC-seq analysis?
 
