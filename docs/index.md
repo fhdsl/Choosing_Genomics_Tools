@@ -1,6 +1,6 @@
 ---
 title: "Choosing Genomics Tools"
-date: "January, 2024"
+date: "February, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
