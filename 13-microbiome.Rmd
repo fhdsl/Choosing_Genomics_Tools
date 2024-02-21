@@ -90,7 +90,7 @@ Another Method for quality filtering is [Deblur](https://github.com/biocore/debl
 
 ### Phylogenetic Tree Construction
 
-Many diversity metrics used in microbial ecology use phylogenetic relatedness to calculate diversity so we need to build a phlyogenetic tree for those methods to reference. There are many ways to generate phylogenetic trees, however, because we only need these for diversity metrics and they are only using a very small amount of the genome, microbiome scientists tend to use quicker methods of phylogenetic construction.
+Many diversity metrics used in microbial ecology use phylogenetic relatedness to calculate diversity so we need to build a phylogenetic tree for those methods to reference. There are many ways to generate phylogenetic trees, however, because we only need these for diversity metrics and they are only using a very small amount of the genome, microbiome scientists tend to use quicker methods of phylogenetic construction.
 There are two generally used methods. One involves creating a phylogenetic tree from scratch. This is typically done using [MAFFT](https://mafft.cbrc.jp/alignment/software/) to align sequences and calculate similarity. Other methods have a reference tree and insert the sequences into the reference tree, like using [SEPP](https://github.com/smirarab/sepp/tree/master). 
 
 Additional QIIME 2 implementations for Phylogenetic Tree Construction:
