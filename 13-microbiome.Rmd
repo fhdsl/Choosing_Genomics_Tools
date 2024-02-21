@@ -21,7 +21,7 @@ TODO: Why do we care about microbiome
 ## Data Collection and Processing of Amplicon Analysis
 - QIIME 2 is a bioinformatics microbiome analysis platform. QIIME 2 has all the 
 tools discussed in the course in one environment. 
-    - There are currently 3 different interfaces: Python, CLI and Galaxy! 
+    - There are currently 3 different interfaces: Python, Command Line Interface and Galaxy! 
     - add cool features of QIIME 2 
 
 ```{r, fig.alt = "Amplicon data collection and processing", out.width = "100%", echo = FALSE}
@@ -31,7 +31,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 ## Upstream Analysis
 I have my data back from the sequencer, what do I do now?
 
-TODO: Add EMP Protocol INFO
+TODO: Add Earth Microbiome Protocol (EMP) INFO
 
 
 TODO: (I don't know if I like this section)
@@ -42,7 +42,7 @@ upstream data preparation.
 
 1.  Is your sequence multiplex?
 
-2. Does your sequence have the primers, adaptor and barcode removed? If not, you will want to remove those in the quality filtering step?  
+2. Does your sequence have the primers, adapter and barcode removed? If not, you will want to remove those in the quality filtering step?  
 
 
 ### Demultiplexing
@@ -61,7 +61,7 @@ Sequencing data is not perfect but there are some awesome methods that help us q
 #### Removing Adapters
 If your data has barcodes or primers in the sequence you will want to remove those. Barcodes and Primers are synthetic DNA that were attached to help with selecting your region of interest, identifying samples and attaching to the sequencer, but not that the data is passed the sequencing part that genetic information is not useful,
 
-Cutadapt is a method that is really effective at identifying your adaptor sequence in highthrough-put sequencing data. You can read more about cutadapt and the underlying methods [here](https://cutadapt.readthedocs.io/en/stable/). You can also find a QIIME 2 implementation of cutadapt, q2-cutadapt, [here](https://docs.qiime2.org/2023.9/plugins/available/cutadapt/#cutadapt). Cutadapt will trim out these adapters but it is not a replacement for quality filtering. 
+Cutadapt is a method that is really effective at identifying your adapter sequence in high-throughput sequencing data. You can read more about cutadapt and the underlying methods [here](https://cutadapt.readthedocs.io/en/stable/). You can also find a QIIME 2 implementation of cutadapt, q2-cutadapt, [here](https://docs.qiime2.org/2023.9/plugins/available/cutadapt/#cutadapt). Cutadapt will trim out these adapters but it is not a replacement for quality filtering. 
 
 #### Quality Filtering Steps 
 Quality filtering encompasses a couple of methods to make sure the data is usable/.
@@ -74,16 +74,16 @@ Quality filtering encompasses a couple of methods to make sure the data is usabl
 Chimeras are when two separate sequences get tangled up and get sequenced. This results in a sequence in your data that has no biological meaning.
 
 #### Defining Microbes 
-There are two main ways for defining how sequences relate to the microbes in the microbiome: Amplicon Sequence Variants(ASVs) and Operational Taxonomic Units(OTUs). ASVs define an occurance of a microbe as any occurance of a unique sequence. OTUs cluster based on similarity, usually ranging from 97-99% similarity. OTUs define an occurance of a microbe as a occurance of any sequence in the similarity cluster. 
+There are two main ways for defining how sequences relate to the microbes in the microbiome: Amplicon Sequence Variants(ASVs) and Operational Taxonomic Units(OTUs). ASVs define an occurrence of a microbe as any occurrence of a unique sequence. OTUs cluster based on similarity, usually ranging from 97-99% similarity. OTUs define an occurrence of a microbe as a occurrence of any sequence in the similarity cluster. 
 
-TODO: ask Greg, should I include otu options in this? 
+TODO: ask Greg, should I include OTU options in this? 
 #### The Methods
 
 ASV Quality Filtering Options: 
 
-[Dada2](https://benjjneb.github.io/dada2/) is a method for de-replicating, filtering and merging that has a wide range of functionality. Dada2 also has a QIIME 2 documentation located [here](https://docs.qiime2.org/2023.9/plugins/available/dada2/#dada2). Dada2 can be used for [Pyro](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-pyro/) and [Pacbio](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-ccs/) sequencing as well as illumina for [paired](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-paired/) and [single](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-single/) end reads. 
+[Dada2](https://benjjneb.github.io/dada2/) is a method for de-replicating, filtering and merging that has a wide range of functionality. Dada2 also has a QIIME 2 documentation located [here](https://docs.qiime2.org/2023.9/plugins/available/dada2/#dada2). Dada2 can be used for [Pyro](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-pyro/) and [Pacbio](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-ccs/) sequencing as well as Illumina for [paired](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-paired/) and [single](https://docs.qiime2.org/2023.9/plugins/available/dada2/denoise-single/) end reads. 
 
-Another Method for quality filtering is [Deblur](https://github.com/biocore/deblur). Additionally the documentation for the QIIME 2 implementation can be found [here](https://docs.qiime2.org/2023.9/plugins/available/deblur/denoise-16S/). Deblur can only bec used on 16s data because it uses a reference database that it aligns the data to in order to verify they are 16s data. Deblur is also only effective on data generated with Illumnina sequencing. 
+Another Method for quality filtering is [Deblur](https://github.com/biocore/deblur). Additionally the documentation for the QIIME 2 implementation can be found [here](https://docs.qiime2.org/2023.9/plugins/available/deblur/denoise-16S/). Deblur can only be used on 16s data because it uses a reference database that it aligns the data to in order to verify they are 16s data. Deblur is also only effective on data generated with Illumina sequencing. 
 
 
 ## Downstream Analysis  
@@ -95,7 +95,7 @@ There are two generally used methods. One involves creating a phylogenetic tree 
 
 Additional QIIME 2 implementations for Phylogenetic Tree Construction:
 
-- [fragement-insert sepp](https://docs.qiime2.org/2023.9/plugins/available/fragment-insertion/sepp/)
+- [fragment-insert sepp](https://docs.qiime2.org/2023.9/plugins/available/fragment-insertion/sepp/)
 
 - [align-to-tree-mafft-fasttree](https://docs.qiime2.org/2023.9/plugins/available/phylogeny/align-to-tree-mafft-fasttree/)
 
@@ -121,7 +121,7 @@ They are two techniques that are used to apply even sampling depths.
 
 - **Rarefying**: a technique to remove uneven sequencing depth by subsampling without 
      replacement so that all samples have the same sampling
-     depth. In QIIME2, Rarefying is currently done as part of the [core-metrics](https://docs.qiime2.org/2023.9/plugins/available/diversity/core-metrics/) and [core-metrics-phylogentic](https://docs.qiime2.org/2023.9/plugins/available/diversity/core-metrics-phylogenetic/) pipelines, but can also be run[independently](https://docs.qiime2.org/2023.9/plugins/available/feature-table/rarefy/) of core-metrics. [alpha-rarefaction](https://docs.qiime2.org/2023.9/plugins/available/diversity/alpha-rarefaction/) and [beta-rarefaction](https://docs.qiime2.org/2023.9/plugins/available/diversity/beta-rarefaction/) can be used to confirm a reasonable sampling depth. 
+     depth. In QIIME2, Rarefying is currently done as part of the [core-metrics](https://docs.qiime2.org/2023.9/plugins/available/diversity/core-metrics/) and [core-metrics-phylogenetic](https://docs.qiime2.org/2023.9/plugins/available/diversity/core-metrics-phylogenetic/) pipelines, but can also be run[independently](https://docs.qiime2.org/2023.9/plugins/available/feature-table/rarefy/) of core-metrics. [alpha-rarefaction](https://docs.qiime2.org/2023.9/plugins/available/diversity/alpha-rarefaction/) and [beta-rarefaction](https://docs.qiime2.org/2023.9/plugins/available/diversity/beta-rarefaction/) can be used to confirm a reasonable sampling depth. 
 
 - **Rarefaction**: an iterative technique to minimize effects of controlling for uneven 
      sampling depth where a feature table is rarefied multiple times (typically 100 or 1000), and diversity 
@@ -136,7 +136,7 @@ See [Schloss (2024)](https://doi.org/10.1128/msphere.00355-23) for additional in
 
 ### Taxonomic Annotation
 ### Differential Abundance  
-### Speciality Tools
+### Specialty Tools
 #### Longitudinal Data 
 #### Fecal Microbiota Transplant 
 #### Predictive Models
