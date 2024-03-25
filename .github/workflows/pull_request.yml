@@ -33,13 +33,13 @@ jobs:
       - name: Make the branch fresh
         run: |
           git config --global --add safe.directory $GITHUB_WORKSPACE
-          git config --global user.email "itcrtrainingnetwork@gmail.com"
-          git config --global user.name "jhudsl-robot"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
           branch_name='preview-${{ github.event.pull_request.number }}'
           echo branch doesnt exist
           git checkout -b $branch_name || echo branch exists
-          git push --set-upstream origin $branch_name
+          git push --set-upstream origin $branch_name || echo echo branch exists remotely
         shell: bash
 
 
@@ -130,8 +130,8 @@ jobs:
       - name: Set up git checkout
         run: |
           git config --global --add safe.directory $GITHUB_WORKSPACE
-          git config --global user.email "itcrtrainingnetwork@gmail.com"
-          git config --global user.name "jhudsl-robot"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
           branch_name='preview-${{ github.event.pull_request.number }}'
           git fetch --all
@@ -159,6 +159,9 @@ jobs:
           echo Bookdown status ${{steps.bookdown.outcome}}
           echo Toc-less status ${{steps.tocless.outcome}}
           exit 1
+
+      - name: Website preview for download
+        run: zip website-preview.zip docs/* -r
 
       # Commit the rendered bookdown files
       - name: Commit rendered bookdown files to preview branch
@@ -188,6 +191,8 @@ jobs:
           bookdown_link=$(echo "https://htmlpreview.github.io/?https://raw.githubusercontent.com/$GITHUB_REPOSITORY/preview-${{ github.event.pull_request.number }}/docs/index.html")
           tocless_link=$(echo "https://htmlpreview.github.io/?https://raw.githubusercontent.com/$GITHUB_REPOSITORY/preview-${{ github.event.pull_request.number }}/docs/no_toc/index.html")
           docx_link=$(echo "https://github.com/$GITHUB_REPOSITORY/raw/preview-${{ github.event.pull_request.number }}/docs/$course_name.docx")
+          zip_link=$(echo "https://github.com/$GITHUB_REPOSITORY/raw/preview-${{ github.event.pull_request.number }}/website-preview.zip")
+          echo "zip_link=$zip_link" >> $GITHUB_OUTPUT
           echo "bookdown_link=$bookdown_link" >> $GITHUB_OUTPUT
           echo "tocless_link=$tocless_link" >> $GITHUB_OUTPUT
           echo "docx_link=$docx_link" >> $GITHUB_OUTPUT
@@ -203,11 +208,13 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             Re-rendered previews from the latest commit:
-            - See [preview of Bookdown here](${{ steps.build-components.outputs.bookdown_link }})
-            - See [preview of Coursera/Leanpub version here](${{ steps.build-components.outputs.tocless_link }})
-            - Download the [preview of .docx file](${{ steps.build-components.outputs.docx_link }})
+            - :eyes: Quick [preview of course website here](${{ steps.build-components.outputs.bookdown_link }}) \*
+            - :microscope: Comprehensive [download of the course website here](${{ steps.build-components.outputs.zip_link }})
+            - Download the [.docx file](${{ steps.build-components.outputs.docx_link }})
 
-            _Updated at ${{ steps.build-components.outputs.time }} with changes from ${{ steps.build-components.outputs.commit_id }}_
+            \* note not all html features will be properly displayed in the "quick preview" but it will give you a rough idea.
+
+            _Updated at ${{ steps.build-components.outputs.time }} with changes from the latest commit ${{ steps.build-components.outputs.commit_id }}_
           edit-mode: replace
 
       - name: Comment if no changes
