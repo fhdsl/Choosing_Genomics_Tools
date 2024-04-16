@@ -8,11 +8,14 @@ Anupriya
 Arumugam
 Asker
 Asnicar
+Andrés
 Baeza
 Bisanz
 Bittinger
 Bokulich
+Bubonic
 Bolyen
+Brejnrod
 BRD
 Brislawn
 Buur
@@ -23,6 +26,7 @@ bedtools
 Biomek
 Caporaso
 Caporaso's
+Caraballo
 CKS
 Clarisse
 coli
@@ -93,6 +97,7 @@ Jiarong
 Jin
 Jorden
 Joslynn
+Kang
 Kaehler
 Keefe
 Keim
@@ -105,6 +110,7 @@ Kyo
 Lai
 Langille
 Lasse
+Ley
 Lingjing
 Loftfield
 Liu
@@ -801,3 +807,5 @@ QIIME
 raxml
 sepp
 SEPP
+Xu
+Xin
