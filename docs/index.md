@@ -1,6 +1,6 @@
 ---
-title: "Choosing Genomics Tools"
-date: "February, 2024"
+title: "Researcher's Guide to Omics"
+date: "April, 2024"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
