@@ -1,5 +1,5 @@
 ---
-title: "Choosing Genomics Tools"
+title: "Researcher's Guide to Omics"
 date: "`r format(Sys.time(), '%B, %Y')`"
 site: bookdown::bookdown_site
 documentclass: book
