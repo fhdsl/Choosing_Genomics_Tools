@@ -1,0 +1,5 @@
+urls	urls_status	file
+https://sequencing.roche.com/global/en/article-listing/what-is-ngs-target-enrichment-and-why-is-it-important.html	failed	/github/workspace/09a-WGS-and-WXS.Rmd
+https://informatics.fas.harvard.edu/atac-seq-guidelines.html	failed	/github/workspace/11a-ATAC-Seq.Rmd
+http://chase.cs.univie.ac.at/overview	failed	/github/workspace/11c-ChIP-Seq.Rmd
+https://github.com/NCIP/Trinity_CTAT/wiki)	failed	/github/workspace/13-tool-glossary.Rmd
