@@ -26,8 +26,8 @@ Microbes are everywhere. We have found these tiny organisms in the deepest regio
 
 ```{r, fig.alt = "Learning Objectives", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g26ebab787e9_0_0")
-This figure is adapted from [@Tignat-Perrier2022] under Creative Commons license. 
 ```
+This figure is adapted from [@Tignat-Perrier2022] under Creative Commons license. 
 
 Microbes almost never live alone in the real world (i.e., outside of a laboratory). Rather they exist in communities of different species who are interacting with each other and their environment. Some of these communities will have many different types of organisms, and some will have only a few. Because of the large number of species and individuals involved, no two communities will ever be exactly alike, and quantifying differences between microbial communities is an important area of research at the moment. The types of interactions between organisms are also highly varied. These can include mutualistic relationships, where both organisms benefit from the interaction; parasitic relationships, where one organism exclusively benefits to the detriment of the other; and the full gradient in between.
 
