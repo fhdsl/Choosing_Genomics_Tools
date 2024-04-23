@@ -41,7 +41,7 @@ Microbiome science is everywhere. There are tens of articles published daily in 
 
 The technologies that are enabling work in microbiome science are the same that are driving the data revolution in biology. Primarily this work is driven by high-throughput DNA sequencing, which is applied for profiling microbial community composition:
 
-+  marker gene profiling(such as 16S or ITS sequencing)
++ marker gene profiling (such as 16S or ITS sequencing)
 + functional potential (such as shotgun metagenomic sequencing)
 + functional activity (such as metatranscriptome sequencing)
 
