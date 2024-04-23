@@ -46,6 +46,7 @@ The technologies that are enabling work in microbiome science are the same that 
 + functional activity (such as metatranscriptome sequencing)
 
 Other “omics” technologies are now playing an increasing role in microbiome research, such as:
+
 + mass-spectrometry-based metabolomics, which provides profiles of small molecule metabolites in an environment.
 + metaproteomics which provides more detailed descriptions of functional activities of microbes (and their hosts, if applicable).
 
