@@ -12,6 +12,8 @@ spell-check: yes
 style-code: yes
 # Test build the docker image if any docker-relevant files have been changed
 docker-test: no
+# Do we want book.txt to be made automatically?
+make-book-txt: yes
 
 ##### Renderings run upon merge to main branch #####
 # Rendering each platform's content
