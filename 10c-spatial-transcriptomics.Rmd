@@ -5,7 +5,7 @@ ottrpal::set_knitr_image_path()
 # Spatial transcriptomics
 
 ::: warning
-This chapter chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+This chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
 :::
 
 ## Learning objectives
