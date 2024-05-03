@@ -86,7 +86,7 @@ This following pros and cons sections have been written by AI and may need verif
   - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.
   - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
-[Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html) [@patro2017salmon]:
+- [Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html) [@patro2017salmon]:
   - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.
   - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
