@@ -9,7 +9,7 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 
 ## Learning Objectives
 
-<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" title="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" alt="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" width="100%" />
+<img src="resources/images/12-methylation_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_91.png" title="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" alt="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" width="100%" />
 
 ## What are the goals of analyzing DNA methylation?
 
