@@ -3,12 +3,12 @@
 # Spatial transcriptomics
 
 ::: warning
-This chapter chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
+This chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
 :::
 
 ## Learning objectives
 
-<img src="resources/images/10c-spatial-transcriptomics_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png" title="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" alt="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" width="100%" />
+<img src="resources/images/10c-spatial-transcriptomics_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g258b14267ad_278_14.png" title="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" alt="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" width="100%" />
 
 ## What are the goals of spatial transcriptomic analysis?
 
