@@ -546,12 +546,29 @@ div.csl-indent {
 </div>
 <div id="what-are-the-goals-of-analyzing-dna-sequences" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> What are the goals of analyzing DNA sequences?</h2>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" width="100%" /></p>
+<p>There are several larger goals behind DNA sequencing experiments ranging from assembling whole genomes, to identifying variation or performing a functional genomic analysis or comparative genomic study. Each of these has implications when studying disease.</p>
+<ul>
+<li><p>Assembling whole genomes:</p>
+<p>Because an organism’s genome determines how an organism develops and functions <span class="citation">(<a href="#ref-NHGRIGlossary2024" role="doc-biblioref">NHGRI 2024</a>)</span>, an important task in the genomics field is assembling the genome of an organism from sequencing reads. This assembly process attempts to reconstruct how the sequencing reads overlap or fit together <span class="citation">(<a href="#ref-Schatz2010" role="doc-biblioref">Schatz, Delcher, and Salzberg 2010</a>; <a href="#ref-Li_Durbin_2024" role="doc-biblioref">Li and Durbin 2024</a>)</span>. Recent examples of genome assembly in the genomics field include a complete 3.055 billion-base pair sequence of the human reference genome which was published by the Telomere-to-Telomere (T2T) Consortium <span class="citation">(<a href="#ref-Nurk2022" role="doc-biblioref">2022</a>)</span>, the T2T-CHM13 version (followed not long after by the complete sequence of the human Y chromosome <span class="citation">(<a href="#ref-Rhie2023" role="doc-biblioref">2023</a>)</span>). A goal of the field is to better capture human genetic diversity by creating a reference pangenome, assembled from multiple donors within the population <span class="citation">(<a href="#ref-Taylor_2024" role="doc-biblioref">2024</a>)</span>. Genome assemblies are an important part of genomics beyond human genomics research; there are reference gnomes available for most model organisms as well as many plants, animals, and pathogens, with more and more being published at a high frequency <span class="citation">(<a href="#ref-Miller2023" role="doc-biblioref">Miller, Zimin, and Gordus 2023</a>; <a href="#ref-Alonge2022" role="doc-biblioref">Alonge et al. 2022</a>; <a href="#ref-Gershman2023" role="doc-biblioref">Gershman et al. 2023</a>; <a href="#ref-Sistrom2016" role="doc-biblioref">Sistrom et al. 2016</a>)</span>. These reference genomes each act as an extensive compilation of the observed DNA sequence of genes, regulatory elements, etc. and the related coordinate systems for these elements, such that, for the corresponding organism, sequencing reads from other experiments can be mapped or aligned to the reference in order to localize where that read was in the genome. In the case of cancer informatics, a recent approach utilized personalized genome assembly to more accurately detect tumor somatic mutations. This is likely to be an area of future research for application in precision medicine <span class="citation">(<a href="#ref-Xiao2022" role="doc-biblioref">Xiao et al. 2022</a>; <a href="#ref-Ermini_Driguez_2024" role="doc-biblioref">Ermini and Driguez 2024</a>)</span>.</p></li>
+<li><p>Identifying variation:</p>
+<p>Variant caller software is used within the field of genomics to identify places where reads from a DNA sequencing experiment differ from a comparative reference genome sequence <span class="citation">(<a href="#ref-NHGRIfactsheet2022" role="doc-biblioref">NHGRI 2022</a>)</span>. Variants may be as small as single nucleotide differences (single-nucleotide polymorphisms or SNPs) or much larger (50 base pairs or more) structural variation (SVs) such as duplications, deletions, insertions, inversions, translocations <span class="citation">(<a href="#ref-Wong2011" role="doc-biblioref">Wong, Hudson, and McPherson 2011</a>)</span>. (Shorter insertions or deletions are termed indels.) The SVs involving gains or losses in genomic DNA can lead to copy number variations (CNVs). Mutation and structural variants are very common in cancer as well as larger-scale catastrophic genomic rearrangements <span class="citation">(<a href="#ref-Zhang2022" role="doc-biblioref">C.-Z. Zhang and Pellman 2022</a>)</span>. Overall, variants may be rare in a population or fairly common <span class="citation">(<a href="#ref-Audano2019" role="doc-biblioref">Audano et al. 2019</a>)</span>. Further, variants may be somatic or germline variants: germline variants are hereditary and will be passed down from parent to offspring; in the offspring, the variant will be present in every cell, while somatic variants are generally not hereditary and present only in some cells rather than every cell <span class="citation">(<a href="#ref-NHSFrost2022" role="doc-biblioref">Frost 2022</a>)</span>. Because variation, specifically genetic diversity is a necessary part of a healthy species <span class="citation">(<a href="#ref-GeneticDiversity" role="doc-biblioref"><span>“What Is Genetic Diversity and Why Does It Matter?”</span> n.d.</a>)</span> and because variation, specifically mutations/variants may cause disease, identifying variation is a common goal in a DNA sequencing workflow. An example of research focusing on studying genetic diversity in humans is the 1000 Genomes Project which recently expanded its resource of sequenced genomes and in doing so discovered even more variation present in the population <span class="citation">(<a href="#ref-Byrska-Bishop2022" role="doc-biblioref">Byrska-Bishop et al. 2022</a>)</span>.</p></li>
+<li><p>Functional genomic analysis:</p>
+<p>Genomes contain more than just genes (the coding sequences that will be transcribed and translated into a protein); they also contain functional elements such as promoters, enhancers, or silencers that modulate the expression of genes <span class="citation">(<a href="#ref-Kellis2014" role="doc-biblioref">Kellis et al. 2014</a>)</span>. Further, differential gene expression is the phenomenon by which cells with the same DNA sequence show different patterns of gene expression. Functional genomic analyses aim to better understand differential gene expression and the impact of genetic variation found in functional elements. For example, many human genetic variants associated with common traits and diseases are localized in or near known functional elements <span class="citation">(<a href="#ref-Hindorff2009" role="doc-biblioref">Hindorff et al. 2009</a>)</span>. These variants may impact gene expression due to either changes in transcription factor binding at that site, or resulting epigenetic changes, which are defined as chemical modifications of chromatin or nucleotides beyond the DNA sequence. Such epigenetic modifications, which include histone marks and DNA methylation, can alter DNA compaction and influence a functional element’s accessibility for transcriptional machinery (e.g., if the element isn’t accessible, transcription may not occur; while previously the element was accessible and the gene could be transcribed). In later sections, methods that study epigenetic modifications like chromatin accessibility, DNA methylation, or binding of specific proteins will be discussed. All of these methods support functional genomic analyses and are important for better understanding differential gene expression and the impact of genetic variants located in functional elements may have on disease occurrence. A somewhat recent and high profile example of a functional genomic analysis centers again on work from the T2T Consortium. Not only did they publish a new, complete reference genome, but they also studied the epigenetic landscape in the newly resolved regions of the genome and pointed to potential newly discovered functional elements in a region previously thought to be transcriptionally inactive <span class="citation">(<a href="#ref-Gershman2022" role="doc-biblioref">Gershman et al. 2022</a>)</span>.</p></li>
+<li><p>Comparative genomics:</p>
+<p>A common saying in the genomics field is that structure determines function and conserved structure may be constrained such that there is an important function which needs to be conserved <span class="citation">(<a href="#ref-Alföldi_Lindblad-Toh_2013" role="doc-biblioref">Alföldi and Lindblad-Toh 2013</a>)</span>. Further, similarities in structure may be due to shared ancestry through the processes of evolution; therefore, some comparative genomics studies aim to infer homology or an evolutionary relationship from structural similarity <span class="citation">(<a href="#ref-Pearson2013" role="doc-biblioref">Pearson 2013</a>)</span>. More pertinent to the topics discussed previously, comparative genomics studies are also useful for identifying functional elements <span class="citation">(<a href="#ref-Taylor2006" role="doc-biblioref">J. Taylor et al. 2006</a>)</span> and variants associated with disease (e.g., by comparing the genomes of those with the disease and those without it and identifying differences) <span class="citation">(<a href="#ref-Alföldi_Lindblad-Toh_2013" role="doc-biblioref">Alföldi and Lindblad-Toh 2013</a>; <a href="#ref-Eichler_2019" role="doc-biblioref">Eichler 2019</a>)</span>.</p></li>
+</ul>
 </div>
 <div id="comparison-of-dna-methods" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Comparison of DNA methods</h2>
 <p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png" title="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." alt="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." width="100%" />
-Compared to WXS and Targeted Gene Sequencing, WGS is the most expensive but requires the lowest depth of coverage to achieve 95% sensitivity. In other words, WGS requires sequencing each region of the genome (3.2 billion bases) 30 times in order to confidently be able to pick up all possible meaningful variants. <span class="citation">(<a href="#ref-Sims2014" role="doc-biblioref">Sims et al. 2014</a>)</span> goes into more depth on how these depths are calculated.</p>
+There are four DNA sequencing methods discussed in this chapter. The above graph compares WGS, WXS, and Targeted gene sequencing. The last section compares all 4.</p>
+<ol style="list-style-type: decimal">
+<li>Whole genome sequencing (WGS)</li>
+<li>Whole exome sequencing (WXS)</li>
+<li>Targeted gene sequencing</li>
+<li>DNA/SNP microarrays</li>
+</ol>
+<p>Compared to WXS and Targeted Gene Sequencing, WGS is the most expensive but requires the lowest depth of coverage to achieve 95% sensitivity. In other words, WGS requires sequencing each region of the genome (3.2 billion bases) 30 times in order to confidently be able to pick up all possible meaningful variants. <span class="citation">(<a href="#ref-Sims2014" role="doc-biblioref">Sims et al. 2014</a>)</span> goes into more depth on how these depths are calculated.</p>
 <p>Alternatively, WXS is a more cost effective way to study the genome, focusing places in the genome that have open reading frames – aka generally genes that are able to be expressed. This focuses on enriching for exons and not introns so splicing variants may be missed. In this case, each gene must be sequenced 80-100x for sufficient sensitivity to pick up meaningful variants.</p>
 <p>In targeted gene sequencing, a panel of 50-500 regions of interest are selected. This technique is very applicable for studying a set of specific genes of interest at great depth to identify all varieties of mutations within those specific genes. These genes must be sequenced at much greater depth (&gt;500x) to confidently identify all meaningful variants. <a href="https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/coverage.html">This page from Illumina</a> also provides information regarding sequencing depth considerations for different modalities.</p>
 <p>Additional references:
@@ -588,17 +605,95 @@ Targeted: <span class="citation">(<a href="#ref-BewickeCopley2019" role="doc-bib
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Alföldi_Lindblad-Toh_2013" class="csl-entry">
+Alföldi, Jessica, and Kerstin Lindblad-Toh. 2013. <span>“Comparative Genomics as a Tool to Understand Evolution and Disease.”</span> <em>Genome Research</em> 23 (7): 1063–68. <a href="https://doi.org/10.1101/gr.157503.113">https://doi.org/10.1101/gr.157503.113</a>.
+</div>
+<div id="ref-Alonge2022" class="csl-entry">
+Alonge, Michael, Ludivine Lebeigle, Melanie Kirsche, Katie Jenike, Shujun Ou, Sergey Aganezov, Xingang Wang, Zachary B. Lippman, Michael C. Schatz, and Sebastian Soyk. 2022. <span>“Automated Assembly Scaffolding Using RagTag Elevates a New Tomato System for High-Throughput Genome Editing.”</span> <em>Genome Biology</em> 23 (1): 258. <a href="https://doi.org/10.1186/s13059-022-02823-7">https://doi.org/10.1186/s13059-022-02823-7</a>.
+</div>
+<div id="ref-Audano2019" class="csl-entry">
+Audano, Peter A., Arvis Sulovari, Tina A. Graves-Lindsay, Stuart Cantsilieris, Melanie Sorensen, AnneMarie E. Welch, Max L. Dougherty, et al. 2019. <span>“Characterizing the Major Structural Variant Alleles of the Human Genome.”</span> <em>Cell</em> 176 (3): 663–675.e19. <a href="https://doi.org/10.1016/j.cell.2018.12.019">https://doi.org/10.1016/j.cell.2018.12.019</a>.
+</div>
 <div id="ref-Bentley2008" class="csl-entry">
 Bentley, David R., Shankar Balasubramanian, Harold P. Swerdlow, Geoffrey P. Smith, John Milton, Clive G. Brown, Kevin P. Hall, et al. 2008. <span>“Accurate Whole Human Genome Sequencing Using Reversible Terminator Chemistry.”</span> <em>Nature</em> 456 (7218): 53–59. <a href="https://doi.org/10.1038/nature07517">https://doi.org/10.1038/nature07517</a>.
 </div>
 <div id="ref-BewickeCopley2019" class="csl-entry">
 Bewicke-Copley, Findlay, Emil Arjun Kumar, Giuseppe Palladino, Koorosh Korfi, and Jun Wang. 2019. <span>“Applications and Analysis of Targeted Genomic Sequencing in Cancer Studies.”</span> <em>Computational and Structural Biotechnology Journal</em> 17: 1348–59. <a href="https://doi.org/10.1016/j.csbj.2019.10.004">https://doi.org/10.1016/j.csbj.2019.10.004</a>.
 </div>
+<div id="ref-Byrska-Bishop2022" class="csl-entry">
+Byrska-Bishop, Marta, Uday S. Evani, Xuefang Zhao, Anna O. Basile, Haley J. Abel, Allison A. Regier, André Corvelo, et al. 2022. <span>“High-Coverage Whole-Genome Sequencing of the Expanded 1000 Genomes Project Cohort Including 602 Trios.”</span> <em>Cell</em> 185 (18): 3426–3440.e19. <a href="https://doi.org/10.1016/j.cell.2022.08.004">https://doi.org/10.1016/j.cell.2022.08.004</a>.
+</div>
 <div id="ref-Clark2011" class="csl-entry">
 Clark, Michael J, Rui Chen, Hugo Y K Lam, Konrad J Karczewski, Rong Chen, Ghia Euskirchen, Atul J Butte, and Michael Snyder. 2011. <span>“Performance Comparison of Exome <span>DNA</span> Sequencing Technologies.”</span> <em>Nature Biotechnology</em> 29 (10): 908–14. <a href="https://doi.org/10.1038/nbt.1975">https://doi.org/10.1038/nbt.1975</a>.
 </div>
+<div id="ref-Eichler_2019" class="csl-entry">
+Eichler, Evan E. 2019. <span>“Genetic Variation, Comparative Genomics, and the Diagnosis of Disease.”</span> <em>The New England Journal of Medicine</em> 381 (1): 64–74. <a href="https://doi.org/10.1056/NEJMra1809315">https://doi.org/10.1056/NEJMra1809315</a>.
+</div>
+<div id="ref-Ermini_Driguez_2024" class="csl-entry">
+Ermini, Luca, and Patrick Driguez. 2024. <span>“The Application of Long-Read Sequencing to Cancer.”</span> <em>Cancers</em> 16 (77): 1275. <a href="https://doi.org/10.3390/cancers16071275">https://doi.org/10.3390/cancers16071275</a>.
+</div>
+<div id="ref-NHSFrost2022" class="csl-entry">
+Frost, Dr Amy. 2022. <span>“Constitutional (Germline) Vs Somatic (Tumour) Variants.”</span> NHS. <a href="https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/constitutional-germline-vs-somatic-tumour-variants/">https://www.genomicseducation.hee.nhs.uk/genotes/knowledge-hub/constitutional-germline-vs-somatic-tumour-variants/</a>.
+</div>
+<div id="ref-Gershman2023" class="csl-entry">
+Gershman, Ariel, Quinn Hauck, Morag Dick, Jerrica M. Jamison, Michael Tassia, Xabier Agirrezabala, Saad Muhammad, et al. 2023. <span>“Genomic Insights into Metabolic Flux in Hummingbirds.”</span> <em>Genome Research</em> 33 (5): 703–14. <a href="https://doi.org/10.1101/gr.276779.122">https://doi.org/10.1101/gr.276779.122</a>.
+</div>
+<div id="ref-Gershman2022" class="csl-entry">
+Gershman, Ariel, Michael E. G. Sauria, Xavi Guitart, Mitchell R. Vollger, Paul W. Hook, Savannah J. Hoyt, Miten Jain, et al. 2022. <span>“Epigenetic Patterns in a Complete Human Genome.”</span> <em>Science</em> 376 (6588): eabj5089. <a href="https://doi.org/10.1126/science.abj5089">https://doi.org/10.1126/science.abj5089</a>.
+</div>
+<div id="ref-Hindorff2009" class="csl-entry">
+Hindorff, Lucia A., Praveen Sethupathy, Heather A. Junkins, Erin M. Ramos, Jayashri P. Mehta, Francis S. Collins, and Teri A. Manolio. 2009. <span>“Potential Etiologic and Functional Implications of Genome-Wide Association Loci for Human Diseases and Traits.”</span> <em>Proceedings of the National Academy of Sciences</em> 106 (23): 9362–67. <a href="https://doi.org/10.1073/pnas.0903103106">https://doi.org/10.1073/pnas.0903103106</a>.
+</div>
+<div id="ref-Kellis2014" class="csl-entry">
+Kellis, Manolis, Barbara Wold, Michael P. Snyder, Bradley E. Bernstein, Anshul Kundaje, Georgi K. Marinov, Lucas D. Ward, et al. 2014. <span>“Defining Functional DNA Elements in the Human Genome.”</span> <em>Proceedings of the National Academy of Sciences</em> 111 (17): 6131–38. <a href="https://doi.org/10.1073/pnas.1318948111">https://doi.org/10.1073/pnas.1318948111</a>.
+</div>
+<div id="ref-Li_Durbin_2024" class="csl-entry">
+Li, Heng, and Richard Durbin. 2024. <span>“Genome Assembly in the Telomere-to-Telomere Era.”</span> <em>Nature Reviews Genetics</em>, April, 1–13. <a href="https://doi.org/10.1038/s41576-024-00718-w">https://doi.org/10.1038/s41576-024-00718-w</a>.
+</div>
+<div id="ref-Miller2023" class="csl-entry">
+Miller, Jeremiah, Aleksey V Zimin, and Andrew Gordus. 2023. <span>“Chromosome-Level Genome and the Identification of Sex Chromosomes in Uloborus Diversus.”</span> <em>GigaScience</em> 12 (January): giad002. <a href="https://doi.org/10.1093/gigascience/giad002">https://doi.org/10.1093/gigascience/giad002</a>.
+</div>
+<div id="ref-NHGRIfactsheet2022" class="csl-entry">
+NHGRI. 2022. <span>“Genomic Data Science.”</span> <a href="https://www.genome.gov/about-genomics/fact-sheets/Genomic-Data-Science">https://www.genome.gov/about-genomics/fact-sheets/Genomic-Data-Science</a>.
+</div>
+<div id="ref-NHGRIGlossary2024" class="csl-entry">
+———. 2024. <span>“Genome.”</span> <a href="https://www.genome.gov/genetics-glossary/Genome">https://www.genome.gov/genetics-glossary/Genome</a>.
+</div>
+<div id="ref-Nurk2022" class="csl-entry">
+Nurk, Sergey, Sergey Koren, Arang Rhie, Mikko Rautiainen, Andrey V. Bzikadze, Alla Mikheenko, Mitchell R. Vollger, et al. 2022. <span>“The Complete Sequence of a Human Genome.”</span> <em>Science</em> 376 (6588): 44–53. <a href="https://doi.org/10.1126/science.abj6987">https://doi.org/10.1126/science.abj6987</a>.
+</div>
+<div id="ref-Pearson2013" class="csl-entry">
+Pearson, William R. 2013. <span>“An Introduction to Sequence Similarity (<span>‘Homology’</span>) Searching.”</span> <em>Current Protocols in Bioinformatics</em> 42 (1). <a href="https://doi.org/10.1002/0471250953.bi0301s42">https://doi.org/10.1002/0471250953.bi0301s42</a>.
+</div>
+<div id="ref-Rhie2023" class="csl-entry">
+Rhie, Arang, Sergey Nurk, Monika Cechova, Savannah J. Hoyt, Dylan J. Taylor, Nicolas Altemose, Paul W. Hook, et al. 2023. <span>“The Complete Sequence of a Human y Chromosome.”</span> <em>Nature</em> 621 (7978): 344–54. <a href="https://doi.org/10.1038/s41586-023-06457-y">https://doi.org/10.1038/s41586-023-06457-y</a>.
+</div>
+<div id="ref-Schatz2010" class="csl-entry">
+Schatz, Michael C., Arthur L. Delcher, and Steven L. Salzberg. 2010. <span>“Assembly of Large Genomes Using Second-Generation Sequencing.”</span> <em>Genome Research</em> 20 (9): 1165–73. <a href="https://doi.org/10.1101/gr.101360.109">https://doi.org/10.1101/gr.101360.109</a>.
+</div>
 <div id="ref-Sims2014" class="csl-entry">
 Sims, David, Ian Sudbery, Nicholas E. Ilott, Andreas Heger, and Chris P. Ponting. 2014. <span>“Sequencing Depth and Coverage: Key Considerations in Genomic Analyses.”</span> <em>Nature Reviews Genetics</em> 15 (2): 121–32. <a href="https://doi.org/10.1038/nrg3642">https://doi.org/10.1038/nrg3642</a>.
+</div>
+<div id="ref-Sistrom2016" class="csl-entry">
+Sistrom, Mark, Benjamin Evans, Joshua Benoit, Oliver Balmer, Serap Aksoy, and Adalgisa Caccone. 2016. <span>“De Novo Genome Assembly Shows Genome Wide Similarity Between Trypanosoma Brucei Brucei and Trypanosoma Brucei Rhodesiense.”</span> <em>PLOS ONE</em> 11 (2): e0147660. <a href="https://doi.org/10.1371/journal.pone.0147660">https://doi.org/10.1371/journal.pone.0147660</a>.
+</div>
+<div id="ref-Taylor_2024" class="csl-entry">
+Taylor, Dylan J., Jordan M. Eizenga, Qiuhui Li, Arun Das, Katharine M. Jenike, Eimear E. Kenny, Karen H. Miga, et al. 2024. <span>“Beyond the Human Genome Project: The Age of Complete Human Genome Sequences and Pangenome References.”</span> <em>Annual Review of Genomics and Human Genetics</em>, April. <a href="https://doi.org/10.1146/annurev-genom-021623-081639">https://doi.org/10.1146/annurev-genom-021623-081639</a>.
+</div>
+<div id="ref-Taylor2006" class="csl-entry">
+Taylor, James, Svitlana Tyekucheva, David C. King, Ross C. Hardison, Webb Miller, and Francesca Chiaromonte. 2006. <span>“ESPERR: Learning Strong and Weak Signals in Genomic Sequence Alignments to Identify Functional Elements.”</span> <em>Genome Research</em> 16 (12): 1596–1604. <a href="https://doi.org/10.1101/gr.4537706">https://doi.org/10.1101/gr.4537706</a>.
+</div>
+<div id="ref-GeneticDiversity" class="csl-entry">
+<span>“What Is Genetic Diversity and Why Does It Matter?”</span> n.d. <em>Frontiers for Young Minds</em>. <a href="https://kids.frontiersin.org/articles/10.3389/frym.2021.656168">https://kids.frontiersin.org/articles/10.3389/frym.2021.656168</a>.
+</div>
+<div id="ref-Wong2011" class="csl-entry">
+Wong, Kit Man, Thomas J. Hudson, and John D. McPherson. 2011. <span>“Unraveling the Genetics of Cancer: Genome Sequencing and Beyond.”</span> <em>Annual Review of Genomics and Human Genetics</em> 12 (1): 407–30. <a href="https://doi.org/10.1146/annurev-genom-082509-141532">https://doi.org/10.1146/annurev-genom-082509-141532</a>.
+</div>
+<div id="ref-Xiao2022" class="csl-entry">
+Xiao, Chunlin, Zhong Chen, Wanqiu Chen, Cory Padilla, Michael Colgan, Wenjun Wu, Li-Tai Fang, et al. 2022. <span>“Personalized Genome Assembly for Accurate Cancer Somatic Mutation Discovery Using Tumor-Normal Paired Reference Samples.”</span> <em>Genome Biology</em> 23 (1): 237. <a href="https://doi.org/10.1186/s13059-022-02803-x">https://doi.org/10.1186/s13059-022-02803-x</a>.
+</div>
+<div id="ref-Zhang2022" class="csl-entry">
+Zhang, Cheng-Zhong, and David Pellman. 2022. <span>“Cancer Genomic Rearrangements and Copy Number Alterations from Errors in Cell Division.”</span> <em>Annual Review of Cancer Biology</em> 6 (1): 245–68. <a href="https://doi.org/10.1146/annurev-cancerbio-070620-094029">https://doi.org/10.1146/annurev-cancerbio-070620-094029</a>.
 </div>
 </div>
 <hr>

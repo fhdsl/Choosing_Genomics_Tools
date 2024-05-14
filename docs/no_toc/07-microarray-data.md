@@ -33,7 +33,7 @@ On a basic principle, oligonucleotide probes are designed for different targets 
 ### Cons:
 
 - Microarray chips can only measure the targets they are designed for, and cannot be used for exploratory purposes [@Zhang2015].
-- Microarrays' probe designs can only be as up to date as the genome they were designed against at the time [@Mantione2014; @refinebioexamples].
+- Microarrays' probe designs can only be as up to date as the genome they were designed against at the time [@Mantione2014; @refinebioexamples2019].
 - Microarray does not escape oligonucleotide biases like GC content and sequence composition biases[@refinebioexamples2019].
 
 
@@ -56,8 +56,8 @@ Gene expression arrays are designed to measure gene expression. They are designe
 
 #### Examples:
 - [refine.bio](https://www.refine.bio/) is the largest collection of publicly available, already normalized gene expression data (including gene expression microarrays).
-- [Getting started in gene expression microarray analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000543) [@Slonim2009].
-- [Microarray and its applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467903/) [@Govindarajan2012].
+- [Getting started in gene expression microarray analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000543) [@Slonim_Yanai_2009].
+- [Microarray and its applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467903/) [-@Govindarajan2012].
 - [Analysis of microarray experiments of gene expression profiling](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/) [@Tarca2006].
 
 ### DNA methylation arrays
