@@ -11,7 +11,7 @@ In its existing form, this chapter has been written with AI and still needs furt
 
 ## Learning Objectives
 
-![](resources/images/11-chromatin_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png){width=100%}
+![](resources/images/11-chromatin_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png){width=100%}
 
 ## Why are people interested in chromatin?
 
