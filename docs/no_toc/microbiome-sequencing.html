@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Spatial transcriptomics | Choosing Genomics Tools</title>
+  <title>Chapter 21 Microbiome Sequencing | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Spatial transcriptomics | Choosing Genomics Tools" />
+  <meta property="og:title" content="Chapter 21 Microbiome Sequencing | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Spatial transcriptomics | Choosing Genomics Tools" />
+  <meta name="twitter:title" content="Chapter 21 Microbiome Sequencing | Choosing Genomics Tools" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="single-cell-rna-seq.html"/>
-<link rel="next" href="chromatin-methods-overview.html"/>
+<link rel="prev" href="dna-methylation-sequencing.html"/>
+<link rel="next" href="itcr--omic-tool-glossary.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -54,7 +54,7 @@
   <html>
   
   <head>
-  <title>Chapter 14 Spatial transcriptomics | Title</title>
+  <title>Chapter 21 Microbiome Sequencing | Title</title>
   </head>
   
   <body>
@@ -541,293 +541,63 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="spatial-transcriptomics-1" class="section level1" number="14">
-<h1><span class="header-section-number">Chapter 14</span> Spatial transcriptomics</h1>
+<div id="microbiome-sequencing" class="section level1" number="21">
+<h1><span class="header-section-number">Chapter 21</span> Microbiome Sequencing</h1>
 <div class="warning">
-<p>This chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
+<p>This chapter is incomplete! If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-12" class="section level2" number="14.1">
-<h2><span class="header-section-number">14.1</span> Learning objectives</h2>
-<p><img src="resources/images/10c-spatial-transcriptomics_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g258b14267ad_278_14.png" title="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" alt="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" width="100%" /></p>
+<div id="learning-objectives-19" class="section level2" number="21.1">
+<h2><span class="header-section-number">21.1</span> Learning Objectives</h2>
+<p><img src="resources/images/13-microbiome_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_0_0.png" title="Learning Objectives" alt="Learning Objectives" width="100%" />
+## A Brief Introduction to Microbiomes</p>
+<p>Microbes are everywhere. We have found these tiny organisms in the deepest regions of the ocean and in the upper atmosphere. We have found them in:
++ water that has been solid ice for millennia in the Antarctic
++ boiling water in the geysers of Yellowstone National Park.
++ the driest natural environments on Earth, including the Atacama Desert in Chile, where desiccation resistant microbes hide in the soil sometimes waiting ten years for the drop of rain that will jump start their metabolism long enough for them to reproduce before they return to dormancy.
++ perpetually damp environments, like the intestinal tract of the human body where they are constantly the subject of inspection by our diligent immune cells, and where they impact our health in positive and negative ways that we are only beginning to understand.
++ our nuclear reactors, prompting questions about whether we could harness them as tiny machines to help us remediate environmental disasters of the past, present, and future.</p>
+<p>If we looked hard enough, I think we’d find them on the surface of the moon and Mars, though they are probably microbes who stowed away on our spacecraft and are now patiently waiting for a drop of water that may or may not ever show up. If we ever colonize those worlds, microbes will be an indispensable ally in creating an environment that could sustain us.</p>
+<p><img src="resources/images/13-microbiome_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g26ebab787e9_0_0.png" title="Learning Objectives" alt="Learning Objectives" width="100%" />
+This figure is adapted from <span class="citation">(<a href="#ref-Tignat-Perrier2022" role="doc-biblioref">Tignat-Perrier et al. 2022</a>)</span> under Creative Commons license.</p>
+<p>Microbes almost never live alone in the real world (i.e., outside of a laboratory). Rather they exist in communities of different species who are interacting with each other and their environment. Some of these communities will have many different types of organisms, and some will have only a few. Because of the large number of species and individuals involved, no two communities will ever be exactly alike, and quantifying differences between microbial communities is an important area of research at the moment. The types of interactions between organisms are also highly varied. These can include mutualistic relationships, where both organisms benefit from the interaction; parasitic relationships, where one organism exclusively benefits to the detriment of the other; and the full gradient in between.</p>
+<p>Microbiome science is everywhere. There are tens of articles published daily in the scientific literature, and many popular science articles and books present these findings to the world of non-scientists. Understanding the promises and limitations of the methods of microbiome science can help avoid misconceptions about microbiome research, and it’s important for practitioners of microbiome science to understand and convey the promise and limitations of our field. Misconceptions abound, frequently arising from the same sources as high-quality popular science microbiome reporting.</p>
+<pre><code>For example, on 5 Feb 2015 an article appeared in the New York Times noting (almost offhand) that Yersinia pestis, the organism responsible for Bubonic plague, had been found in multiple locations throughout the New York City subway system as part of its normal built environment microbiome. This was rapidly followed up on 6 Feb 2015 with an article noting that there was probably not Bubonic plague on the subway system after all, but rather that the approaches used by the research team are limited in their taxonomic resolution, and that likely a harmless close relative of Y. pestis was observed: “What the researchers probably found, [a spokesman for the university where the study originated] said, was bacteria from an unknown species or from organisms that happened to share some gene sequences with the plague bacterium…”.</code></pre>
+<p>As microbiome services and products are increasingly marketed directly to the public, consumers of microbiome research findings, products, and services need to know how to critically evaluate these offerings and their associated claims. As practitioners in the field, we can help by ensuring that the methods we apply are appropriate and reliable, and that we make our work accessible.</p>
 </div>
-<div id="what-are-the-goals-of-spatial-transcriptomic-analysis" class="section level2" number="14.2">
-<h2><span class="header-section-number">14.2</span> What are the goals of spatial transcriptomic analysis?</h2>
-<p>Spatial transcriptomics (ST) technologies have been developed as a solution to the lack of spatial context in single cell transcriptomics (scRNA-seq) data <span class="citation">(<a href="#ref-rao2021exploring" role="doc-biblioref">Rao et al. 2021</a>; <a href="#ref-ospina2023primer" role="doc-biblioref">Ospina, Soupir, and Fridley 2023</a>)</span>. There is a diversity of ST methods, however all have in common two features: Multiple measurements of gene expression and the locations within the tissue where those gene expression measurements were taken. Data analysis of ST data requires integration of those two components, and it’s primary goal is to characterize gene expression patterns within the tissue or cellular context. The ability to quantify gene expression at different locations within the tissue is of tremendous value to understand the functional variation of different tissue regions, domains, or niches. It also places cell-cell communication in the context of cell neighborhoods, which ultimately facilitates a deeper understanding of cell and tissue biology, but also enables practical applications such as discovery of novel drug targets for complex diseases such as cancer <span class="citation">(<a href="#ref-dries2021advances" role="doc-biblioref">Dries et al. 2021</a>; <a href="#ref-williams2022introduction" role="doc-biblioref">Williams et al. 2022</a>)</span>. Following, are some of the specific goals that a study using ST could achieve:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Describe tissue-specific cellular neighborhoods of cell types and cell type sub-populations:</strong> Although scRNA-seq continues to be a powerful method to assign biological identities to a mixture of cells, integrated analysis of ST combined with scRNA-seq adds crucial information to cell phenotypes by describing the neighborhoods where cells occur <span class="citation">(<a href="#ref-longo2021integrating" role="doc-biblioref">Longo et al. 2021</a>)</span>. Many methods to phenotype ST data are available, with most of them relying on the availability of a curated (scRNA-seq) cell type reference. Once cell identities have been determined, clustering or spatial statistics can be applied to describe the composition of tissue niches or domains. The explosion of ST data has resulted on novel and comprehensive tissue- or disease-specific atlases, not only describing the cell types within organs, but also the functional cell-cell relationships that result from spatial organization (e.g., <span class="citation">Guilliams et al. (<a href="#ref-guilliams2022spatial" role="doc-biblioref">2022</a>)</span>; <span class="citation">Wu et al. (<a href="#ref-wu2021single" role="doc-biblioref">2021</a>)</span>).</li>
-<li><strong>Uncover spatially regulated biological processes:</strong> With ST data, there comes the ability to detect genes or gene pathways that are expressed in specific areas within tissues (i.e., spatially-restricted expression). Detecting genes with spatially-restricted expression is key to achieve further understanding of specific biological processes, such as tissue gradients, cell differentiation, or signaling pathways. For example, cancer researchers are now able to study signaling pathways restricted to the tumor-stroma interface <span class="citation">(<a href="#ref-hunter2021spatially" role="doc-biblioref">Hunter et al. 2021</a>)</span>, which could lead to the discovery of mechanisms representing cancer vulnerabilities resulting from interactions between the tumor and stroma cells.</li>
-<li><strong>Investigate cell-cell interactions:</strong> From basic to applied tissue biology research, the study of cell-cell interactions is of high interest, especially the interactions that occur via ligand-receptor pairs. The construction of comprehensive databases of ligand-receptor interactions has been possible due the large amounts of single-cell data sets produced by researchers. A major contribution of ST to the study of tissue biology is the addition of the spatial context to previously identified ligand-receptor interactions. Because single-cell RNA-seq requires physical separation of cells, current ligand-receptor databases represent hypotheses which ST can help to address by using models of spatial co-localization, enabling in-situ examination of cell-cell interactions and communication <span class="citation">(<a href="#ref-raredon2023comprehensive" role="doc-biblioref">Raredon et al. 2023</a>; <a href="#ref-wang2023promising" role="doc-biblioref">X. Wang, Almet, and Nie 2023</a>)</span>.</li>
-<li><strong>Integrate imaging data:</strong> Spatial transcriptomics data has enabled direct integration of gene expression measurements with digital images of the same (or adjacent) tissue. Improved molecular description and/or exploration of tissue niches or domains is now possible. One approach consists on differential expression of histopathology annotations done by an expert on tissue images (e.g., <span class="citation">Ravi et al. (<a href="#ref-ravi2022spatially" role="doc-biblioref">2022</a>)</span>). The opposite approach is possible, which uses unsupervised clustering of ST data assisted by color/intensity information derived from images. Machine learning for integration of ST and imaging data is an active area of development (e.g., <span class="citation">Hu et al. (<a href="#ref-hu2021spagcn" role="doc-biblioref">2021</a>)</span>; <span class="citation">Xu et al. (<a href="#ref-xu2022deepst" role="doc-biblioref">2022</a>)</span>; <span class="citation">Tan et al. (<a href="#ref-tan2020spacell" role="doc-biblioref">2020</a>)</span>). Furthermore, ST data findings can be qualitatively validated by assessing the approximate location of regions such as immune-infiltrated areas or damaged tissue, often resulting from inspection of fluorescence microscopy.</li>
-<li><strong>Identify biomarkers and drug targets:</strong> The use of ST allows the exploration of tissue niche-specific expression patterns and gene pathway analysis. This exploration can lead to generation of hypotheses about potential biomarkers for specific tissue functions or disease states. Furthermore, the molecular interactions predicted using scRNA-seq (e.g., ligand-receptor), can now be put in context of the larger tissue architecture using ST data. The spatial context of these interactions will likely boost the identification of novel drug targets, as well as improved understanding of current therapies <span class="citation">(<a href="#ref-lyubetskaya2022assessment" role="doc-biblioref">Lyubetskaya et al. 2022</a>; <a href="#ref-zhang2022clinical" role="doc-biblioref">L. Zhang et al. 2022</a>)</span>.</li>
-</ol>
-</div>
-<div id="overview-of-a-spatial-transcriptomics-workflow" class="section level2" number="14.3">
-<h2><span class="header-section-number">14.3</span> Overview of a spatial transcriptomics workflow</h2>
-<p>There is a large diversity in approaches to spatially profile tissues. Some ST technologies allow profiling at coarse cellular resolution, where regions of interest (ROIs) are usually identified by a pathologist. These ROIs may include tens of cells up to few hundreds (e.g., GeoMx <span class="citation">Bergholtz et al. (<a href="#ref-bergholtz2021best" role="doc-biblioref">2021</a>)</span>). Smaller ROI sizes can be found in other technologies such as Visium, where ROIs of 55uM of diameter (or “spots”) often contain no more than 10 cells (<a href="https://www.10xgenomics.com/resources/analysis-guides/integrating-single-cell-and-visium-spatial-gene-expression-data" class="uri">https://www.10xgenomics.com/resources/analysis-guides/integrating-single-cell-and-visium-spatial-gene-expression-data</a>). For finer cellular resolution, technologies such as MERFISH, SMI, or Xenium, among others, can measure gene expression at individual cells <span class="citation">(<a href="#ref-yue2023guidebook" role="doc-biblioref">Yue et al. 2023</a>)</span>. In general, there is a trade-off between the cellular resolution and molecular resolution, as the number of quantified genes and RNA molecules is lower in single-cell level spatial technologies compared to those at the ROI or spot level. In single-cell ST, often a panel of hundreds of genes is quantified, while in “mini-bulk” (ROI/spot) ST, it is possible to genes at the whole transcriptome level.</p>
-<p><img src="resources/images/10c-spatial-transcriptomics_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_461_0.png" title="A trade-off exists between the cellular resolution and molecular resolution in spatial transcriptomics." alt="A trade-off exists between the cellular resolution and molecular resolution in spatial transcriptomics." width="100%" /></p>
-<p>In addition to the differences in cellular and molecular, there are fundamental differences in the chemistry used to count the RNA transcripts in the tissue <span class="citation">(<a href="#ref-wang2021spatial" role="doc-biblioref">N. Wang et al. 2021</a>; <a href="#ref-yue2023guidebook" role="doc-biblioref">Yue et al. 2023</a>)</span>. Capture or hybridization of RNA followed by sequencing, or fluorescent imaging are two of the most common techniques used in ST methods. Because of large diversity in resolution and chemical procedures among ST technologies, data collection workflows are equally diverse. Finally, each study poses specific questions that cannot be addressed with traditional scRNA-seq pipelines, requiring customized workflows.</p>
-<p>Some of the commonalities in the workflows are presented here:</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Sample preparation:</strong> The preparation of a tissue sample will depend largely on the specific ST technology to be used. In general, this involves obtaining the tissue of interest in the form of a thin slice from a fresh frozen biopsy or a paraffin embedded tissue block. Tissue slices are generally about five to 10 micron of thickness. Given the instability of RNA molecules, the samples originating the tissue slices should be properly preserved and stabilized to maintain the integrity of RNA molecules. Many ST technologies are compatible with tissue microarrays (TMAs).</p></li>
-<li><p><strong>Capture or hybridization of RNA molecules:</strong> In this step, the tissue sample is typically placed on a solid substrate, such as regular positively charged glass slides or vendor-designed slides. The latter category include spatially barcoded slides. (e.g., Visium <span class="citation">(<a href="#ref-staahl2016visualization" role="doc-biblioref">Ståhl et al. 2016</a>)</span> ), where RNA capture probes are contained in microscopic spots arranged in arrays or grids. The use of positively charged slides are used in technologies using <em>in-situ</em> sequencing or imaging-based methods, however, capture-based methods like GeoMx also employ this type of slide. Each method entails specific considerations. An example of these considerations include optimization of tissue permeabilization in Visium slides to release the RNA molecules. In the case of imaging-based methods, RNA molecules are hybridized with fluorescent probes that uniquely identify each RNA species [e.g., SMI <span class="citation">(<a href="#ref-he2022high" role="doc-biblioref">S. He et al. 2022</a>)</span>, MERFISH <span class="citation">(<a href="#ref-zhang2021spatially" role="doc-biblioref">M. Zhang et al. 2021</a>)</span> ].</p></li>
-<li><p><strong>RNA quantification:</strong> The method used to count the number of captured or hybridized RNA molecules greatly varies from technology to technology. Capture methods often involve release of the RNA molecules from the tissue or slide, followed by library preparation, amplification, next generation sequencing, and read mapping to a reference genome. In this case, libraries are spatially multiplexed, whereby barcodes indicate the spatial location originating the captured RNA molecules. In imaging-based methods, segmentation is required to delineate the cell borders. Then, coded fluorescent probes are counted within each segmented cells.</p></li>
-<li><p><strong>Data quality control and pre-processing:</strong> As with any omics technology, filtering and pre-processing is of paramount importance for downstream analysis. Spatial transcriptomics data typically contain an excess of zeroes and high gene dropout <span class="citation">(<a href="#ref-zhao2022modeling" role="doc-biblioref">Zhao et al. 2022</a>)</span>. Removing genes expressed in very few spots or cells is often done. Similarly, it is advisable to remove spots with very few counts, however, care needs to exercised to not remove biological variation due to cellularity (i.e., areas with fewer cells tend to have less counts). Mitochondrial or ribosomal genes if available in the data, can be used to assess the level of tissue necrosis and filter accordingly <span class="citation">(<a href="#ref-ospina2023primer" role="doc-biblioref">Ospina, Soupir, and Fridley 2023</a>)</span>. In imaging-based methods, the area of cells can be used to detect “doublets” generated during image segmentation. Once filtering has been performed, gene count normalization and transformation is typically a part of pre-processing. Commonly used methods in scRNA-seq such as library-size normalization and log-transformation, are also commonplace in spatial transcriptomics studies. Methods that attempt technical effect correction such as SCTransform <span class="citation">(<a href="#ref-hafemeister2019normalization" role="doc-biblioref">Hafemeister and Satija 2019</a>)</span> can be also used.</p></li>
-<li><p><strong>Visualization:</strong> Similar to scRNA-seq data, dimension reduction methods such as the Uniform Manifold Approximation and Projection (UMAP) are key to visualize the heterogeneity of the data set. Nonetheless, given the additional modality provided by the spatial coordinates, spatial gene expression heatmaps can be generated, which can be compared against the imaging data (e.g., H&amp;, IHC, mIF) to gain further insights into overall tissue architecture.</p></li>
-<li><p><strong>Clustering and cell/tissue domain phenotyping:</strong> There is a plethora of clustering approaches, ranging from employed in scRNA-seq analysis (e.g., Louvain) to novel neural network classification. Some methods take advantage of the spatial location information and/or tissue image to inform clustering. Compared to clustering, cell/domain phenotyping is an area of even more active development, within the majority of methods relying on the use of a comprehensive single-cell, tissue specific atlas from which cell types (i.e., “labels”) are obtained. Canonical marker-based phenotyping is still widely used, and in many cases unavoidable to identify specific cell populations. general, it is advisable to use the expert validation of a tissue biologist or pathologist to ascertain if clustering and phenotyping are capturing the tissue architecture adequately.</p></li>
-</ol>
-</div>
-<div id="spatial-transcriptomic-data-strengths" class="section level2" number="14.4">
-<h2><span class="header-section-number">14.4</span> Spatial transcriptomic data <strong>strengths</strong>:</h2>
+<div id="goals-of-amplicon-analysis" class="section level2" number="21.2">
+<h2><span class="header-section-number">21.2</span> Goals of Amplicon analysis</h2>
+<p>The technologies that are enabling work in microbiome science are the same that are driving the data revolution in biology. Primarily this work is driven by high-throughput DNA sequencing, which is applied for profiling microbial community composition:</p>
 <ul>
-<li><strong>Preservation of the spatial context:</strong> Spatial transcriptomics allows the investigation of gene expression patterns, cell types, and their interactions within the context of tissue spatial organization.</li>
-<li><strong>Integration with imaging data:</strong> Spatial transcriptomics provides an additional data modality in the form of imaging data, such as histological images or fluorescence microscopy. This integration enhances the interpretation of spatial transcriptomic data by correlating gene expression patterns with tissue morphology and specific cellular structures.</li>
-<li><strong>Discovery of novel cell-cell interactions and signaling pathways:</strong> By examining gene expression profiles in the spatial context, higher accuracy in the identification of novel cell-cell interactions and signaling pathways is obtained. Pairs of interacting genes can be identified by studying their level of co-localization (i.e., expressed in the same regions).</li>
-<li><strong>Exploration of spatially regulated biological processes:</strong> Spatial transcriptomics enables the investigation of biological processes, such as spatial expression gradients or developmental processes occurring in specific regions. It provides insights into spatially restricted gene expression patterns associated with tissue patterning, morphogenesis, or cellular differentiation.</li>
-<li><strong>Hypothesis generation and biomarker discovery:</strong> Spatial transcriptomic analysis can help in the generation of hypotheses and the identification of potential biomarkers related to specific tissue functions, regions, or disease states. By linking gene expression patterns to tissue organization and pathology, spatial transcriptomics facilitates the discovery of spatially restricted gene signatures and potential diagnostic or prognostic markers.</li>
+<li>marker gene profiling (such as 16S or ITS sequencing)</li>
+<li>functional potential (such as shotgun metagenomic sequencing)</li>
+<li>functional activity (such as metatranscriptome sequencing)</li>
 </ul>
-</div>
-<div id="spatial-transcriptomic-data-weaknesses" class="section level2" number="14.5">
-<h2><span class="header-section-number">14.5</span> Spatial transcriptomic data <strong>weaknesses</strong>:</h2>
+<p>Other “omics” technologies are now playing an increasing role in microbiome research, such as:</p>
 <ul>
-<li><strong>Trade-off between spatial resolution and molecular resolution:</strong> Spatial transcriptomic techniques that provide whole transcriptome level information measure expression at the “mini-bulk” level (spots or ROIs), with each mini-bulk sample containing a collection of cells. Conversely, single-cell ST provide expression for a panel of genes (hundreds to a few thousands of genes). In addition, obtaining fine-grained spatial information may be challenging, especially in complex tissues or samples with high cellular density.</li>
-<li><strong>Technical variability and experimental artifacts:</strong> Spatial transcriptomic analysis involves multiple experimental steps, including tissue processing, capture/hybridization, and sequencing/imaging. Each step introduces technical variability and potential experimental artifacts, which can impact the accuracy and reproducibility of the results. Controlling and minimizing these sources of variation is crucial but can be challenging.</li>
-<li><strong>Zero excess and limited coverage of transcripts:</strong> Since most ST techniques use probes to capture of hybridize RNA transcripts, the resulting data may contain biases in the representation of certain RNA molecules. Additionally, spatial transcriptomic methods may have limitations in capturing certain RNA species or low-abundance transcripts, leading to a large portion of genes not being detected and contribution to zero-count excess.</li>
-<li><strong>Complex Data Analysis:</strong> Analyzing spatial transcriptomic data requires advanced computational methods and expertise. The complexity of the data and the need for specialized bioinformatics tools and pipelines can pose challenges, particularly for researchers without extensive computational skills.</li>
-<li><strong>Validation and integration challenges:</strong> Spatial transcriptomic analysis generates hypotheses and provides spatially resolved gene expression information. However, validating the functional significance of identified gene expression patterns or cellular interactions may require additional experimentation. Integrating spatial transcriptomic data with other omics data or imaging modalities can also be complex and may require careful data integration strategies.</li>
-<li><strong>Cost and time considerations:</strong> Spatial transcriptomic analysis can be relatively expensive and time-consuming compared to traditional transcriptomic techniques. The specialized protocols, reagents, and instrumentation required can add to the cost of the analysis. Moreover, the data generation and analysis processes can be time-intensive, which may limit the scalability of studies involving large sample sizes.</li>
+<li>mass-spectrometry-based metabolomics, which provides profiles of small molecule metabolites in an environment.</li>
+<li>metaproteomics which provides more detailed descriptions of functional activities of microbes (and their hosts, if applicable).</li>
 </ul>
+<p>As a result, bioinformatics software tools are essential to microbiome research. For many microbiome researchers, bioinformatics is an intimidating and challenging aspect of their projects.</p>
 </div>
-<div id="tools-for-spatial-transcriptomics" class="section level2" number="14.6">
-<h2><span class="header-section-number">14.6</span> Tools for spatial transcriptomics</h2>
-<div id="data-processing" class="section level3" number="14.6.1">
-<h3><span class="header-section-number">14.6.1</span> Data processing:</h3>
-<div id="space-ranger" class="section level4" number="14.6.1.1">
-<h4><span class="header-section-number">14.6.1.1</span> <a href="https://www.10xgenomics.com/support/software/space-ranger/downloads">Space Ranger</a></h4>
-<ul>
-<li><strong>Pros:</strong> Space Ranger is a software package developed by 10x Genomics specifically for processing and analyzing spatial transcriptomics raw data generated by their platform (Visium). It provides a streamlined workflow for processing raw data, including image registration, assignment of read counts to spots, and counting transcripts. Outputs from Space Ranger are commonly the input of many other ST analytical software.</li>
-<li><strong>Cons:</strong> Space Ranger has been designed to process only 10x Genomics data. The software does not provide methods to extract insights, which is accomplished by integration with other analytical suites. Requires knowledge of command line use.</li>
-</ul>
-</div>
-<div id="geomxtools" class="section level4" number="14.6.1.2">
-<h4><span class="header-section-number">14.6.1.2</span> <a href="https://www.bioconductor.org/packages/release/bioc/html/GeomxTools.html">GeomxTools</a></h4>
-<ul>
-<li><strong>Pros:</strong> The GeomxTools R package has been designed to take outputs from the GeoMx Digital Spatial Profiler (DSP) platform. The package includes methods to use raw .dcc files and .pkc probe set files to generate count matrices per ROI. Support for normalization and transformation of counts are also included in GeomxTools.</li>
-<li><strong>Cons:</strong> GeomxTools has been designed to process GeoMx DSP data outputs. Requires knowledge of R programming.</li>
-</ul>
-</div>
-</div>
-<div id="data-exploration" class="section level3" number="14.6.2">
-<h3><span class="header-section-number">14.6.2</span> Data exploration:</h3>
-<div id="seurat" class="section level4" number="14.6.2.1">
-<h4><span class="header-section-number">14.6.2.1</span> <a href="https://satijalab.org/seurat/">Seurat</a></h4>
-<ul>
-<li><strong>Pros:</strong> Seurat is a widely used R package in single-cell data, with expanded capabilities to analyze ST data from multiple platforms. Seurat features direct integration with outputs from Space Ranger, MERSCOPE, CosMx-SMI, among others. It provides a variety of functions for data pre-processing, dimensionality reduction, clustering, and visualization. Seurat has a large user community, extensive documentation, and tutorials, making it accessible to researchers.</li>
-<li><strong>Cons:</strong> Seurat can be memory-intensive, particularly when working with large data sets. It requires familiarity with R programming and bioinformatics concepts for effective use. Overall, methods in Seurat are the same methods applied to non-spatial scRNA-seq data.</li>
-</ul>
-</div>
-<div id="squidpy" class="section level4" number="14.6.2.2">
-<h4><span class="header-section-number">14.6.2.2</span> <a href="https://squidpy.readthedocs.io/en/stable/">Squidpy</a></h4>
-<ul>
-<li><strong>Pros:</strong> Scanpy is a Python-based library specifically designed for single-cell and ST analysis. It offers a range of functionalities for data pre-processing, clustering, trajectory analysis, and visualization. Scanpy is known for its scalability, efficiency, and flexibility. It integrates well with other Python libraries and frameworks, making it suitable for integration with other analysis pipelines. Some of the statistical methods in Squidpy implicitly make use of the spatial coordinates to detect patterns.</li>
-<li><strong>Cons:</strong> Similar to Seurat, Scanpy requires some familiarity with Python programming and bioinformatics concepts. Users without prior programming experience may need to invest time in learning Python.</li>
-</ul>
-</div>
-<div id="giotto" class="section level4" number="14.6.2.3">
-<h4><span class="header-section-number">14.6.2.3</span> <a href="https://giottosuite.readthedocs.io/en/latest/index.html">Giotto</a></h4>
-<ul>
-<li><strong>Pros:</strong> The analytical suite Giotto in a collection of methods to study spatial gene expression, agnostic to the platform used to generate the data. It allows users to perform data pre-processing, clustering, visualization, detection of spatially variable genes, and expression co-localization analysis. Computationally intensive analysis can be conducted in the cloud via integration with Terra.bio or locally using a Docker container. Some of the statistical methods in Giotto implicitly make use of the spatial coordinates to detect patterns.</li>
-<li><strong>Cons:</strong> Requires some familiarity with R, as well as bioinformatics and spatial statistics concepts. Installation requires setting up Python, as some modules use that language.</li>
-</ul>
-</div>
-<div id="spatialge-and-spatialge-web" class="section level4" number="14.6.2.4">
-<h4><span class="header-section-number">14.6.2.4</span> <a href="https://fridleylab.github.io/spatialGE/">spatialGE</a> and <a href="https://spatialge.moffitt.org/">spatialGE-web</a></h4>
-<ul>
-<li><strong>Pros:</strong> The spatialGE analysis suite allows users to study STdata form multiple platforms, including methods for pre-processing, clustering/domain detection, spatially variable genes, and functional analysis via detection of gene expression gradients and/or gene set enrichment spatial patterns. All the functionality of the R package has been implemented on a point-and-click web application requiring no coding experience and email notifications when analyses are completed. Statistcial methods in spatialGE implicitly take into account the spatial coordinates during calculations.</li>
-<li><strong>Cons:</strong> Use of the spatialGE R package requires familiarity with the language. The spatialGE web application by-pass the need of R coding, however computationally-intensive methods can take time to complete.</li>
-</ul>
-</div>
-<div id="loupe" class="section level4" number="14.6.2.5">
-<h4><span class="header-section-number">14.6.2.5</span> <a href="https://support.10xgenomics.com/spatial-gene-expression/software/visualization/latest/what-is-loupe-browser">Loupe</a></h4>
-<ul>
-<li><strong>Pros:</strong> The Loupe browser is a point-and-click tool for exploration of both non-spatial scRNA-seq and ST. Loupe takes Visium outputs and allows visualization of gene expression, clustering, and detection of differentially expressed genes. The tool also allows for easy registration and comparative analysis of Visium imaging and expression data.</li>
-<li><strong>Cons:</strong> Loupe allows basic exploration of the data. To perform functional-level analysis of ST data, the use of additional tools might be required.</li>
-</ul>
-</div>
-<div id="st-pipeline" class="section level4" number="14.6.2.6">
-<h4><span class="header-section-number">14.6.2.6</span> <a href="https://pypi.org/project/stpipeline/">ST Pipeline</a></h4>
-<ul>
-<li><strong>Pros:</strong> ST Pipeline is a bioinformatics pipeline developed by the Spatial Transcriptomics consortium. It provides a complete workflow for ST data analysis, including pre-processing, normalization, spot detection, and visualization. ST Pipeline supports various spatial transcriptomic platforms, making it versatile.</li>
-<li><strong>Cons:</strong> ST Pipeline requires familiarity with Python, command-line, and Linux environments. Users may need to invest time in setting up the pipeline and configuring parameters based on their specific datasets and platforms.</li>
-</ul>
-</div>
-<div id="semla" class="section level4" number="14.6.2.7">
-<h4><span class="header-section-number">14.6.2.7</span> <a href="https://ludvigla.github.io/semla/index.html">semla</a></h4>
-<ul>
-<li><strong>Pros:</strong> The semla R package is a bioinformatics pipeline enabling pre-processing, visualization, spatial statistics, and image integration of ST data. The package provides integration with Seurat.</li>
-<li><strong>Cons:</strong> ST Pipeline requires familiarity with R.</li>
-</ul>
-</div>
-</div>
-<div id="clusteringtissue-domain-identification" class="section level3" number="14.6.3">
-<h3><span class="header-section-number">14.6.3</span> Clustering/tissue domain identification:</h3>
-<div id="spagcn" class="section level4" number="14.6.3.1">
-<h4><span class="header-section-number">14.6.3.1</span> <a href="https://github.com/jianhuupenn/SpaGCN/tree/master">SpaGCN</a></h4>
-<ul>
-<li><strong>Pros:</strong> The SpaGCN Python package performs prediction of tissue domains implicitly taking into account the spatial coordinates and optionally assisted by colors in the image data. The gene expression, coordinate, and image data are processed via graph convolutional networks (GCN) to find common patterns between the modalities. Based on predicted domains, SpaGCN can identify gene or collection of genes (meta genes) that are uniquely expressed in the domains. SpaGCN allows analysis of multiple ST technologies.</li>
-<li><strong>Cons:</strong> SpaGCN requires familiarity with Python and basic data frame processing. Some understanding of GCNs and parameters involved in calculations is advisable.</li>
-</ul>
-</div>
-</div>
-<div id="spatially-variable-gene-identification" class="section level3" number="14.6.4">
-<h3><span class="header-section-number">14.6.4</span> Spatially variable gene identification:</h3>
-<div id="spatialde" class="section level4" number="14.6.4.1">
-<h4><span class="header-section-number">14.6.4.1</span> <a href="https://github.com/Teichlab/SpatialDE">SpatialDE</a></h4>
-<ul>
-<li><strong>Pros:</strong> SpatialDE is a Python package designed for detecting spatially variable genes from ST data using non-parametric statistics. SpatialDE intergrates the spatial coordinates and image data to identify genes or group of genes showing spatial expression aggregation. The package can analyze data from multiple ST platforms.</li>
-<li><strong>Cons:</strong> SpatialDE requires familiarity with Python programming.</li>
-</ul>
-</div>
-<div id="spark-and-spark-x" class="section level4" number="14.6.4.2">
-<h4><span class="header-section-number">14.6.4.2</span> <a href="https://xzhoulab.github.io/SPARK/">SPARK and SPARK-X</a></h4>
-<ul>
-<li><strong>Pros:</strong> The SPARK methods allows scalable detection of genes showing spatial patterns. The tests are performed via generalized linear models and spatial autocorrelation matrix estimation. The SPARK implementation allows scalabilty and computing efficiency.</li>
-<li><strong>Cons:</strong> The SPARK methods require familiarity with Python programming. Some familiarity with spatial statistics is advisable.</li>
-</ul>
-</div>
-<div id="spacemarkers" class="section level4" number="14.6.4.3">
-<h4><span class="header-section-number">14.6.4.3</span> <a href="https://github.com/FertigLab/SpaceMarkers">SpaceMarkers</a></h4>
-<ul>
-<li><strong>Pros:</strong> The SpaceMarkers approach detects sets of genes with evidence of spatial co-expression. Kernel smoothing is used to model the weight of expression of a gene taking into account neighboring areas.</li>
-<li><strong>Cons:</strong> Requires familiarity with R programming. The method has been tested in Visium data.</li>
-</ul>
-</div>
-</div>
-<div id="deconvolutionphenotyping" class="section level3" number="14.6.5">
-<h3><span class="header-section-number">14.6.5</span> Deconvolution/phenotyping:</h3>
-<div id="spotlight" class="section level4" number="14.6.5.1">
-<h4><span class="header-section-number">14.6.5.1</span> <a href="https://www.bioconductor.org/packages/release/bioc/html/SPOTlight.html">SPOTlight</a></h4>
-<ul>
-<li><strong>Pros:</strong> The SPOTlight algorithm takes advantage of robust non-negative matrix factorization (NMF) to define transcriptomic profiles from an annotated scRNA-seq reference. The transcriptomic profiles are transferred to the spatial transcriptomics data using non-negative least squares regression. Instead of providing a single category for “mini-bulk” data (e.g., Visium), SPOTlight features piecharts to describe the cell type composition within each mini-bulk sample (e.g., spot).</li>
-<li><strong>Cons:</strong> Requires some familiarity with R programming. The method has been tested in Visium data. As with most deconvolution methods, accurate identification of cell types highly relies on a well-annotated scRNA reference.</li>
-</ul>
-</div>
-<div id="stdeconvolve" class="section level4" number="14.6.5.2">
-<h4><span class="header-section-number">14.6.5.2</span> <a href="https://jef.works/STdeconvolve/">STdeconvolve</a></h4>
-<ul>
-<li><strong>Pros:</strong> The STdeconvolve algorithm uses latent dirichlet allocation (LDA) to define transcriptomic profiles or topics on the ST data. The topics are assigned a biological identity (e.g., cell type, tissue domain) using gene set enrichment of marker-based phenotyping. The topics are presented as proportions in “mini-bulk” data (e.g., Visium), where pie charts describe the cell type/domain composition within each mini-bulk sample (e.g., spot). STdeconvolve is one of very few reference-free ST deconvolution methods.</li>
-<li><strong>Cons:</strong> Requires some familiarity with R programming. The method has been mostly tested in Visium data. For MERFISH data, requires aggregation into spots.</li>
-</ul>
-</div>
-<div id="insitutype" class="section level4" number="14.6.5.3">
-<h4><span class="header-section-number">14.6.5.3</span> <a href="https://github.com/Nanostring-Biostats/InSituType">InSituType</a></h4>
-<ul>
-<li><strong>Pros:</strong> InSituType is a cell phenotyping algorithm designed for CosMx-SMI data but applicable to other single-cell ST data. InSituType can transfer cell types from an annotated scRNA-seq data set, or run reference-free unsupervised clustering to detect cell populations. In addition, immunofluorescence data accompanying SMI data sets can be used to inform gene expression deconvolution. InSituType can phenotype large quantities of cells within reasonable time.</li>
-<li><strong>Cons:</strong> InSituType assumes cell populations can be defined via cluster centroids. Thus, deconvolution can be affected when samples contain cells with intermediate phenotypes or if technical/background noise is prevalent. Requires familiarity with R programming.</li>
-</ul>
-</div>
-<div id="spatialdecon" class="section level4" number="14.6.5.4">
-<h4><span class="header-section-number">14.6.5.4</span> <a href="https://bioconductor.org/packages/release/bioc/vignettes/SpatialDecon/inst/doc/SpatialDecon_vignette_NSCLC.html">SpatialDecon</a></h4>
-<ul>
-<li><strong>Pros:</strong> The SpatialDecon algorithm implements log-normal regression to alleviate the effects of ST data skewness in the prediction of cell types. The method is analogous to estimation of cell types proportions in bulk RNAseq to “mini-bulk” ROIs or spots in GeoMx and Visium experiments respectively. Hence, the method assumes cell type heterogeneity within the ROIs or spots. In the case of GeoMx experiments, SpatialDecon takes advantage of nuclei counts to provide absolute cell type counts within each ROI. The package includes pre-built cell type signature matrices for several tissue types, but scRNA references can be used to create custom signatures.</li>
-<li><strong>Cons:</strong> Requires familiarity with R programming.</li>
-</ul>
-</div>
-</div>
-<div id="cell-communication" class="section level3" number="14.6.6">
-<h3><span class="header-section-number">14.6.6</span> Cell communication:</h3>
-<div id="cellchat" class="section level4" number="14.6.6.1">
-<h4><span class="header-section-number">14.6.6.1</span> <a href="https://htmlpreview.github.io/?https://github.com/sqjin/CellChat/blob/master/tutorial/CellChat_analysis_of_spatial_imaging_data.html">CellChat</a></h4>
-<ul>
-<li><strong>Pros:</strong> CellChat is an algorithm to infer cell communications via ligand-receptor interactions. CellChat was designed for non-spatial scRNA data, however, a recent implementation has been included to account for distances between cells in ST experiments. The package includes a comprehensive ligand-receptor data base which is queried after quantification of probability of interaction between two given cell types.</li>
-<li><strong>Cons:</strong> Requires familiarity with R programming. The spatial implementation of CellChat has been tested on Visium data.</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="more-tools-and-tutorials-regarding-spatial-transcriptomics" class="section level2" number="14.7">
-<h2><span class="header-section-number">14.7</span> More tools and tutorials regarding spatial transcriptomics</h2>
-<ul>
-<li><a href="https://satijalab.org/seurat/articles/spatial_vignette.html">Analysis, visualization, and integration of spatial datasets with Seurat</a></li>
-<li><a href="https://github.com/sheffield-bioinformatics-core/spatial_transcriptomics_tutorial">Sheffield Bioinformatics tutorial for spatial transcriptomics</a></li>
-<li><a href="https://github.com/theislab/spatial_scog_workshop_2022">Theis Lab SCOG workshop materials for spatial transcriptomics</a></li>
-<li><a href="https://fridleylab.github.io/spatialGE/articles/basic_functions_vignette.html">Visualization, domain detection, and spatial heterogeneity with spatialGE</a></li>
-</ul>
+<div id="microbiome-analysis-with-qiime-2" class="section level2" number="21.3">
+<h2><span class="header-section-number">21.3</span> Microbiome Analysis with QIIME 2</h2>
+<p>QIIME 2 is an all in one bioinformatics microbiome analysis platform. This platform allows for users to go from sequenced microbiome data to publication ready visualizations. The original QIIME, now referred to as QIIME 1, was published in 2010 <span class="citation">(<a href="#ref-Caporaso2010" role="doc-biblioref">Caporaso et al. 2010</a>)</span> and has been cited tens of thousands of times in the primary literature. QIIME 2, which was published in July of 2019 <span class="citation">(<a href="#ref-Bolyen2019" role="doc-biblioref">Bolyen et al. 2019</a>)</span>, succeeded QIIME 1 on 1 January 2018. QIIME 2 is better than QIIME 1 in all ways, and QIIME 1 is no longer actively supported. If you have previously used QIIME 1, you should invest time in learning and switching to QIIME 2. If you’re new to QIIME, start with QIIME 2. (When I refer to QIIME in this book, without specifying whether I’m referring to QIIME 1 or QIIME 2, I’m referring to the platform generally.)</p>
+<p>QIIME 2 has large and growing user and developer communities, and these communities make QIIME 2 possible. The epicenter of the community is the QIIME 2 Forum. The forum is primarily known as a place where users can get technical support with QIIME 2 for no charge. Developers of QIIME 2 moderate the forum, and typically respond to technical support questions within a couple of business days. The forum is also a great place to discuss general topics in microbiome bioinformatics, or microbiome research methods generally. There are many active discussions on these topics on the forum. Keeping up with the discussions on the forum is a great way to learn about current topics in microbiome research methods. There’s also a free job board on the forum - you can use the forum to find jobs, or post your own job ads there to find employees who are well-versed in QIIME 2 and other bioinformatics tools. If you’re not already a member of the QIIME 2 Forum, you should consider joining. It’s a great way for you to get help, and as you develop your QIIME 2 skills helping others on the forum is a great way to reenforce your learning and to get involved in the community.</p>
+<p><a href="https://gregcaporaso.github.io/q2book/front-matter/preface.html">Here</a> is a high-level introduction to microbiome analysis using QIIME 2. This introduction will go over common methods, metrics and approaches used for microbiome science.
+So grab a cup of your favorite hot beverage and let’s get started! ☕</p>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-bergholtz2021best" class="csl-entry">
-Bergholtz, Helga, Jodi M Carter, Alessandra Cesano, Maggie Chon U Cheang, Sarah E Church, Prajan Divakar, Christopher A Fuhrman, et al. 2021. <span>“Best Practices for Spatial Profiling for Breast Cancer Research with the GeoMx<span></span> Digital Spatial Profiler.”</span> <em>Cancers</em> 13 (17): 4456.
+<div id="ref-Bolyen2019" class="csl-entry">
+Bolyen, Evan, Jai Ram Rideout, Matthew R Dillon, Nicholas A Bokulich, Christian C Abnet, Gabriel A Al-Ghalith, Harriet Alexander, et al. 2019. <span>“Reproducible, Interactive, Scalable and Extensible Microbiome Data Science Using <span>QIIME</span> 2.”</span> <em>Nat. Biotechnol.</em> 37 (8): 852–57.
 </div>
-<div id="ref-dries2021advances" class="csl-entry">
-Dries, Ruben, Jiaji Chen, Natalie Del Rossi, Mohammed Muzamil Khan, Adriana Sistig, and Guo-Cheng Yuan. 2021. <span>“Advances in Spatial Transcriptomic Data Analysis.”</span> <em>Genome Research</em> 31 (10): 1706–18.
+<div id="ref-Caporaso2010" class="csl-entry">
+Caporaso, J Gregory, Justin Kuczynski, Jesse Stombaugh, Kyle Bittinger, Frederic D Bushman, Elizabeth K Costello, Noah Fierer, et al. 2010. <span>“<span>QIIME</span> Allows Analysis of High-Throughput Community Sequencing Data.”</span> <em>Nat. Methods</em> 7 (5): 335–36.
 </div>
-<div id="ref-guilliams2022spatial" class="csl-entry">
-Guilliams, Martin, Johnny Bonnardel, Birthe Haest, Bart Vanderborght, Camille Wagner, Anneleen Remmerie, Anna Bujko, et al. 2022. <span>“Spatial Proteogenomics Reveals Distinct and Evolutionarily Conserved Hepatic Macrophage Niches.”</span> <em>Cell</em> 185 (2): 379–96.
-</div>
-<div id="ref-hafemeister2019normalization" class="csl-entry">
-Hafemeister, Christoph, and Rahul Satija. 2019. <span>“Normalization and Variance Stabilization of Single-Cell RNA-Seq Data Using Regularized Negative Binomial Regression.”</span> <em>Genome Biology</em> 20 (1): 296.
-</div>
-<div id="ref-he2022high" class="csl-entry">
-He, Shanshan, Ruchir Bhatt, Carl Brown, Emily A Brown, Derek L Buhr, Kan Chantranuvatana, Patrick Danaher, et al. 2022. <span>“High-Plex Imaging of RNA and Proteins at Subcellular Resolution in Fixed Tissue by Spatial Molecular Imaging.”</span> <em>Nature Biotechnology</em> 40 (12): 1794–1806.
-</div>
-<div id="ref-hu2021spagcn" class="csl-entry">
-Hu, Jian, Xiangjie Li, Kyle Coleman, Amelia Schroeder, Nan Ma, David J Irwin, Edward B Lee, Russell T Shinohara, and Mingyao Li. 2021. <span>“SpaGCN: Integrating Gene Expression, Spatial Location and Histology to Identify Spatial Domains and Spatially Variable Genes by Graph Convolutional Network.”</span> <em>Nature Methods</em> 18 (11): 1342–51.
-</div>
-<div id="ref-hunter2021spatially" class="csl-entry">
-Hunter, Miranda V, Reuben Moncada, Joshua M Weiss, Itai Yanai, and Richard M White. 2021. <span>“Spatially Resolved Transcriptomics Reveals the Architecture of the Tumor-Microenvironment Interface.”</span> <em>Nature Communications</em> 12 (1): 6278.
-</div>
-<div id="ref-longo2021integrating" class="csl-entry">
-Longo, Sophia K, Margaret G Guo, Andrew L Ji, and Paul A Khavari. 2021. <span>“Integrating Single-Cell and Spatial Transcriptomics to Elucidate Intercellular Tissue Dynamics.”</span> <em>Nature Reviews Genetics</em> 22 (10): 627–44.
-</div>
-<div id="ref-lyubetskaya2022assessment" class="csl-entry">
-Lyubetskaya, Anna, Brian Rabe, Andrew Fisher, Anne Lewin, Isaac Neuhaus, Constance Brett, Todd Brett, et al. 2022. <span>“Assessment of Spatial Transcriptomics for Oncology Discovery.”</span> <em>Cell Reports Methods</em> 2 (11).
-</div>
-<div id="ref-ospina2023primer" class="csl-entry">
-Ospina, Oscar, Alex Soupir, and Brooke L Fridley. 2023. <span>“A Primer on Preprocessing, Visualization, Clustering, and Phenotyping of Barcode-Based Spatial Transcriptomics Data.”</span> In <em>Statistical Genomics</em>, 115–40. Springer.
-</div>
-<div id="ref-rao2021exploring" class="csl-entry">
-Rao, Anjali, Dalia Barkley, Gustavo S França, and Itai Yanai. 2021. <span>“Exploring Tissue Architecture Using Spatial Transcriptomics.”</span> <em>Nature</em> 596 (7871): 211–20.
-</div>
-<div id="ref-raredon2023comprehensive" class="csl-entry">
-Raredon, Micha Sam Brickman, Junchen Yang, Neeharika Kothapalli, Wesley Lewis, Naftali Kaminski, Laura E Niklason, and Yuval Kluger. 2023. <span>“Comprehensive Visualization of Cell–Cell Interactions in Single-Cell and Spatial Transcriptomics with NICHES.”</span> <em>Bioinformatics</em> 39 (1): btac775.
-</div>
-<div id="ref-ravi2022spatially" class="csl-entry">
-Ravi, Vidhya M, Paulina Will, Jan Kueckelhaus, Na Sun, Kevin Joseph, Henrike Salié, Lea Vollmer, et al. 2022. <span>“Spatially Resolved Multi-Omics Deciphers Bidirectional Tumor-Host Interdependence in Glioblastoma.”</span> <em>Cancer Cell</em> 40 (6): 639–55.
-</div>
-<div id="ref-staahl2016visualization" class="csl-entry">
-Ståhl, Patrik L, Fredrik Salmén, Sanja Vickovic, Anna Lundmark, José Fernández Navarro, Jens Magnusson, Stefania Giacomello, et al. 2016. <span>“Visualization and Analysis of Gene Expression in Tissue Sections by Spatial Transcriptomics.”</span> <em>Science</em> 353 (6294): 78–82.
-</div>
-<div id="ref-tan2020spacell" class="csl-entry">
-Tan, Xiao, Andrew Su, Minh Tran, and Quan Nguyen. 2020. <span>“SpaCell: Integrating Tissue Morphology and Spatial Gene Expression to Predict Disease Cells.”</span> <em>Bioinformatics</em> 36 (7): 2293–94.
-</div>
-<div id="ref-wang2021spatial" class="csl-entry">
-Wang, Nan, Xia Li, Rongshui Wang, and Zhiyong Ding. 2021. <span>“Spatial Transcriptomics and Proteomics Technologies for Deconvoluting the Tumor Microenvironment.”</span> <em>Biotechnology Journal</em> 16 (9): 2100041.
-</div>
-<div id="ref-wang2023promising" class="csl-entry">
-Wang, Xinyi, Axel A Almet, and Qing Nie. 2023. <span>“The Promising Application of Cell-Cell Interaction Analysis in Cancer from Single-Cell and Spatial Transcriptomics.”</span>
-</div>
-<div id="ref-williams2022introduction" class="csl-entry">
-Williams, Cameron G, Hyun Jae Lee, Takahiro Asatsuma, Roser Vento-Tormo, and Ashraful Haque. 2022. <span>“An Introduction to Spatial Transcriptomics for Biomedical Research.”</span> <em>Genome Medicine</em> 14 (1): 1–18.
-</div>
-<div id="ref-wu2021single" class="csl-entry">
-Wu, Sunny Z, Ghamdan Al-Eryani, Daniel Lee Roden, Simon Junankar, Kate Harvey, Alma Andersson, Aatish Thennavan, et al. 2021. <span>“A Single-Cell and Spatially Resolved Atlas of Human Breast Cancers.”</span> <em>Nature Genetics</em> 53 (9): 1334–47.
-</div>
-<div id="ref-xu2022deepst" class="csl-entry">
-Xu, Chang, Xiyun Jin, Songren Wei, Pingping Wang, Meng Luo, Zhaochun Xu, Wenyi Yang, et al. 2022. <span>“DeepST: Identifying Spatial Domains in Spatial Transcriptomics by Deep Learning.”</span> <em>Nucleic Acids Research</em> 50 (22): e131–31.
-</div>
-<div id="ref-yue2023guidebook" class="csl-entry">
-Yue, Liangchen, Feng Liu, Jiongsong Hu, Pin Yang, Yuxiang Wang, Junguo Dong, Wenjie Shu, Xingxu Huang, and Shengqi Wang. 2023. <span>“A Guidebook of Spatial Transcriptomic Technologies, Data Resources and Analysis Approaches.”</span> <em>Computational and Structural Biotechnology Journal</em>.
-</div>
-<div id="ref-zhang2022clinical" class="csl-entry">
-Zhang, Linlin, Dongsheng Chen, Dongli Song, Xiaoxia Liu, Yanan Zhang, Xun Xu, and Xiangdong Wang. 2022. <span>“Clinical and Translational Values of Spatial Transcriptomics.”</span> <em>Signal Transduction and Targeted Therapy</em> 7 (1): 111.
-</div>
-<div id="ref-zhang2021spatially" class="csl-entry">
-Zhang, Meng, Stephen W Eichhorn, Brian Zingg, Zizhen Yao, Kaelan Cotter, Hongkui Zeng, Hongwei Dong, and Xiaowei Zhuang. 2021. <span>“Spatially Resolved Cell Atlas of the Mouse Primary Motor Cortex by MERFISH.”</span> <em>Nature</em> 598 (7879): 137–43.
-</div>
-<div id="ref-zhao2022modeling" class="csl-entry">
-Zhao, Peiyao, Jiaqiang Zhu, Ying Ma, and Xiang Zhou. 2022. <span>“Modeling Zero Inflation Is Not Necessary for Spatial Transcriptomics.”</span> <em>Genome Biology</em> 23 (1): 118.
+<div id="ref-Tignat-Perrier2022" class="csl-entry">
+Tignat-Perrier, Romie, Nathalie Técher, Timothy M Vogel, Catherine Larose, and Aurélien Dommergue. 2022. <span>“Microorganisms Floating Through the Air.”</span> <em>Front. Young Minds</em> 10 (March).
 </div>
 </div>
 <hr>
@@ -843,8 +613,8 @@ Zhao, Peiyao, Jiaqiang Zhu, Ying Ma, and Xiang Zhou. 2022. <span>“Modeling Zer
           </div>
         </div>
       </div>
-<a href="single-cell-rna-seq.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chromatin-methods-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="dna-methylation-sequencing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="itcr--omic-tool-glossary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
