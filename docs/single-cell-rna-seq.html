@@ -572,26 +572,11 @@ div.csl-indent {
 <h2><span class="header-section-number">13.4</span> Single cell RNA-seq tools</h2>
 <p>There are a lot of scRNA-seq tools for various steps along the way.</p>
 <p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png" title="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." alt="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." width="100%" /></p>
-<p>In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.</p>
+<p>In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting doublets (also known as duplets), and using this information to filter out data that is not trustworthy. <a href="https://bioconductor.org/books/3.15/OSCA.advanced/doublet-detection.html">Doublets are transcriptome data generated from two cells</a>, and an undesired technical artifact when single cell RNA-seq workflows want data representing a single cell at a time. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.</p>
 <p>Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the <a href="https://www.scrna-tools.org/table">scRNA-tools website</a>.</p>
 </div>
 <div id="quantification-and-alignment-tools" class="section level2" number="13.5">
 <h2><span class="header-section-number">13.5</span> Quantification and alignment tools</h2>
-<div class="warning">
-<p>This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
-</div>
-<ul>
-<li><a href="https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html">STAR</a>:
-<ul>
-<li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.</li>
-<li><strong>Cons</strong>: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.</li>
-</ul></li>
-<li><a href="http://daehwankimlab.github.io/hisat2/">HISAT2</a>:
-<ul>
-<li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.</li>
-<li><strong>Cons</strong>: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.</li>
-</ul></li>
-</ul>
 <div class="warning">
 <p>This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
 </div>
@@ -611,11 +596,11 @@ div.csl-indent {
 <li><strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.</li>
 <li><strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</li>
 </ul></li>
-</ul>
-<p><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin/Salmon</a> <span class="citation">(<a href="#ref-patro2017salmon" role="doc-biblioref">Patro et al. 2017</a>)</span>:
-- <strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.
-- <strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</p>
+<li><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin/Salmon</a> <span class="citation">(<a href="#ref-patro2017salmon" role="doc-biblioref">Patro et al. 2017</a>)</span>:
 <ul>
+<li><strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.</li>
+<li><strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</li>
+</ul></li>
 <li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cell Ranger</a> <span class="citation">(<a href="#ref-zheng2017massively" role="doc-biblioref">Zheng et al. 2017</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Specifically designed for 10x Genomics scRNA-seq data, with optimized workflows for alignment and quantification. Provides read counts and gene-level expression values. Offers a streamlined pipeline with minimal input from the user.</li>
@@ -702,13 +687,13 @@ div.csl-indent {
 <div id="useful-readings" class="section level2" number="13.10">
 <h2><span class="header-section-number">13.10</span> Useful readings</h2>
 <ul>
-<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">An Introduction to the Analysis of Single-Cell RNA-Sequencing Data</a> <span class="citation">(<a href="#ref-AlJanahi2018" role="doc-biblioref"><strong>AlJanahi2018?</strong></a>)</span>.</li>
-<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Orchestrating single-cell analysis with Bioconductor</a> <span class="citation">(<a href="#ref-Amezquita2019" role="doc-biblioref"><strong>Amezquita2019?</strong></a>)</span>.</li>
+<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">An Introduction to the Analysis of Single-Cell RNA-Sequencing Data</a> <span class="citation">(<a href="#ref-Aljanahi2018" role="doc-biblioref">AlJanahi, Danielsen, and Dunbar 2018</a>)</span>.</li>
+<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Orchestrating single-cell analysis with Bioconductor</a> <span class="citation">(<a href="#ref-Amezquita2020" role="doc-biblioref">Amezquita et al. 2020</a>)</span>.</li>
 <li><a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/">UMIs the problem, the solution and the proof</a> <span class="citation">(<a href="#ref-Smith2015" role="doc-biblioref">Smith 2015</a>)</span>.</li>
 <li><a href="https://doi.org/10.1093/bfgp/elx035">Experimental design for single-cell RNA sequencing</a> <span class="citation">(<a href="#ref-BaranGale2018" role="doc-biblioref">Baran-Gale, Chandra, and Kirschner 2018</a>)</span>.</li>
-<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies</a> <span class="citation">(<a href="#ref-Lafzi2019" role="doc-biblioref"><strong>Lafzi2019?</strong></a>)</span>.</li>
-<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Comparative Analysis of Single-Cell RNA Sequencing Methods</a> <span class="citation">(<a href="#ref-Ziegenhain2018" role="doc-biblioref"><strong>Ziegenhain2018?</strong></a>)</span>.</li>
-<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems</a> <span class="citation">(<a href="#ref-Zhang2018" role="doc-biblioref"><strong>Zhang2018?</strong></a>)</span>.</li>
+<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies</a> <span class="citation">(<a href="#ref-Lafzi2018" role="doc-biblioref">Lafzi et al. 2018</a>)</span>.</li>
+<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Comparative Analysis of Single-Cell RNA Sequencing Methods</a> <span class="citation">(<a href="#ref-Ziegenhain2017" role="doc-biblioref">Ziegenhain et al. 2017</a>)</span>.</li>
+<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems</a> <span class="citation">(<a href="#ref-Zhang2019" role="doc-biblioref">X. Zhang et al. 2019</a>)</span>.</li>
 <li><a href="http://dx.doi.org/10.1016/j.coisb.2017.07.004">Single cells make big data: New challenges and opportunities in transcriptomics</a> <span class="citation">(<a href="#ref-Angerer2017" role="doc-biblioref">Angerer et al. 2017</a>)</span>.</li>
 <li><a href="https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2">Comparative Analysis of common alignment tools for single cell RNA sequencing</a> <span class="citation">(<a href="#ref-Bruning2021" role="doc-biblioref">Brüning et al. 2021</a>)</span>.</li>
 <li><a href="https://doi.org/10.15252/msb.20188746">Current best practices in single-cell RNA-seq analysis: a tutorial</a> <span class="citation">(<a href="#ref-Luecken2019" role="doc-biblioref">Luecken and Theis 2019</a>)</span>.</li>
@@ -720,6 +705,12 @@ div.csl-indent {
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-AlexsLemonade2022" class="csl-entry">
 <span>“Alex’s Lemonade Training Modules.”</span> 2022. <a href="https://github.com/AlexsLemonade/training-modules">https://github.com/AlexsLemonade/training-modules</a>.
+</div>
+<div id="ref-Aljanahi2018" class="csl-entry">
+AlJanahi, Aisha A., Mark Danielsen, and Cynthia E. Dunbar. 2018. <span>“An <span>Introduction</span> to the <span>Analysis</span> of <span>Single</span>-<span>Cell</span> <span>RNA</span>-<span>Sequencing</span> <span>Data</span>.”</span> <em>Molecular Therapy - Methods &amp; Clinical Development</em> 10 (September): 189–96. <a href="https://doi.org/10.1016/j.omtm.2018.07.003">https://doi.org/10.1016/j.omtm.2018.07.003</a>.
+</div>
+<div id="ref-Amezquita2020" class="csl-entry">
+Amezquita, Robert A., Aaron T. L. Lun, Etienne Becht, Vince J. Carey, Lindsay N. Carpp, Ludwig Geistlinger, Federico Marini, et al. 2020. <span>“Orchestrating Single-Cell Analysis with <span>Bioconductor</span>.”</span> <em>Nature Methods</em> 17 (2): 137–45. <a href="https://doi.org/10.1038/s41592-019-0654-x">https://doi.org/10.1038/s41592-019-0654-x</a>.
 </div>
 <div id="ref-Angerer2017" class="csl-entry">
 Angerer, Philipp, Lukas Simon, Sophie Tritschler, F. Alexander Wolf, David Fischer, and Fabian J. Theis. 2017. <span>“Single Cells Make Big Data: <span>New</span> Challenges and Opportunities in Transcriptomics.”</span> <em>Current Opinion in Systems Biology</em> 4 (August): 85–91. <a href="https://doi.org/10.1016/j.coisb.2017.07.004">https://doi.org/10.1016/j.coisb.2017.07.004</a>.
@@ -742,6 +733,9 @@ Dobin, Alexander, Carrie A Davis, Felix Schlesinger, Jorg Drenkow, Chris Zaleski
 <div id="ref-kim2015hisat" class="csl-entry">
 Kim, Daehwan, Ben Langmead, and Steven L Salzberg. 2015. <span>“HISAT: A Fast Spliced Aligner with Low Memory Requirements.”</span> <em>Nature Methods</em> 12 (4): 357–60. <a href="https://www.nature.com/articles/nmeth.3317">https://www.nature.com/articles/nmeth.3317</a>.
 </div>
+<div id="ref-Lafzi2018" class="csl-entry">
+Lafzi, Atefeh, Catia Moutinho, Simone Picelli, and Holger Heyn. 2018. <span>“Tutorial: Guidelines for the Experimental Design of Single-Cell <span>RNA</span> Sequencing Studies.”</span> <em>Nature Protocols</em> 13 (12): 2742–57. <a href="https://doi.org/10.1038/s41596-018-0073-y">https://doi.org/10.1038/s41596-018-0073-y</a>.
+</div>
 <div id="ref-Luecken2019" class="csl-entry">
 Luecken, Malte D, and Fabian J Theis. 2019. <span>“Current Best Practices in Single‐cell <span>RNA</span>‐seq Analysis: A Tutorial.”</span> <em>Molecular Systems Biology</em> 15 (6). <a href="https://doi.org/10.15252/msb.20188746">https://doi.org/10.15252/msb.20188746</a>.
 </div>
@@ -757,8 +751,14 @@ Smith, Tom. 2015. <span>“Unique Molecular Identifiers – the Problem, the Sol
 <div id="ref-wolock2019scrublet" class="csl-entry">
 Wolock, Samuel L, Smita Krishnaswamy, and B Jesse Huang. 2019. <span>“Scrublet: Computational Identification of Cell Doublets in Single-Cell Transcriptomic Data.”</span> <em>Cell Systems</em> 8 (4): 281–291. e9. <a href="https://pubmed.ncbi.nlm.nih.gov/30954476/">https://pubmed.ncbi.nlm.nih.gov/30954476/</a>.
 </div>
+<div id="ref-Zhang2019" class="csl-entry">
+Zhang, Xiannian, Tianqi Li, Feng Liu, Yaqi Chen, Jiacheng Yao, Zeyao Li, Yanyi Huang, and Jianbin Wang. 2019. <span>“Comparative <span>Analysis</span> of <span>Droplet</span>-<span>Based</span> <span>Ultra</span>-<span>High</span>-<span>Throughput</span> <span>Single</span>-<span>Cell</span> <span>RNA</span>-<span>Seq</span> <span>Systems</span>.”</span> <em>Molecular Cell</em> 73 (1): 130–142.e5. <a href="https://doi.org/10.1016/j.molcel.2018.10.020">https://doi.org/10.1016/j.molcel.2018.10.020</a>.
+</div>
 <div id="ref-zheng2017massively" class="csl-entry">
 Zheng, Grace XY, Jessica M Terry, Phillip Belgrader, Paul Ryvkin, Zachary W Bent, Ryan Wilson, Solongo B Ziraldo, et al. 2017. <span>“Massively Parallel Digital Transcriptional Profiling of Single Cells.”</span> <em>Nature Communications</em> 8 (1): 1–12. <a href="https://www.nature.com/articles/ncomms14049">https://www.nature.com/articles/ncomms14049</a>.
+</div>
+<div id="ref-Ziegenhain2017" class="csl-entry">
+Ziegenhain, Christoph, Beate Vieth, Swati Parekh, Björn Reinius, Amy Guillaumet-Adkins, Martha Smets, Heinrich Leonhardt, Holger Heyn, Ines Hellmann, and Wolfgang Enard. 2017. <span>“Comparative <span>Analysis</span> of <span>Single</span>-<span>Cell</span> <span>RNA</span> <span>Sequencing</span> <span>Methods</span>.”</span> <em>Molecular Cell</em> 65 (4): 631–643.e4. <a href="https://doi.org/10.1016/j.molcel.2017.01.023">https://doi.org/10.1016/j.molcel.2017.01.023</a>.
 </div>
 </div>
 <hr>

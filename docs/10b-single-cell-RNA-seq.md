@@ -48,23 +48,11 @@ There are a lot of scRNA-seq tools for various steps along the way.
 
 ![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png){width=100%}
 
-In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.
+In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting doublets (also known as duplets), and using this information to filter out data that is not trustworthy. [Doublets are transcriptome data generated from two cells](https://bioconductor.org/books/3.15/OSCA.advanced/doublet-detection.html), and an undesired technical artifact when single cell RNA-seq workflows want data representing a single cell at a time. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.
 
 Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the [scRNA-tools website](https://www.scrna-tools.org/table).
 
 ## Quantification and alignment tools
-
-<div class = "warning">
-This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
-</div>
-
-- [STAR](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html):
-  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.
-  - **Cons**: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.
-
-- [HISAT2](http://daehwankimlab.github.io/hisat2/):
-  - **Pros**: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.
-  - **Cons**: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.
 
 <div class = "warning">
 This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
@@ -82,7 +70,7 @@ This following pros and cons sections have been written by AI and may need verif
   - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.
   - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
-[Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html) [@patro2017salmon]:
+- [Alevin/Salmon](https://salmon.readthedocs.io/en/latest/alevin.html) [@patro2017salmon]:
   - **Pros**: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.
   - **Cons**: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.
 
@@ -151,13 +139,13 @@ These tutorials cover explicit steps, code, tool recommendations and other consi
 - [Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)](https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html) - a tutorial based on using CellRanger.
 
 ## Useful readings
-- [An Introduction to the Analysis of Single-Cell RNA-Sequencing Data](https://doi.org/10.1016/j.omtm.2018.07.003) [@AlJanahi2018].
-- [Orchestrating single-cell analysis with Bioconductor](https://www.nature.com/articles/s41592-019-0654-x) [@Amezquita2019].
+- [An Introduction to the Analysis of Single-Cell RNA-Sequencing Data](https://doi.org/10.1016/j.omtm.2018.07.003) [@Aljanahi2018].
+- [Orchestrating single-cell analysis with Bioconductor](https://www.nature.com/articles/s41592-019-0654-x) [@Amezquita2020].
 - [UMIs the problem, the solution and the proof](https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/) [@Smith2015].
 - [Experimental design for single-cell RNA sequencing](https://doi.org/10.1093/bfgp/elx035) [@BaranGale2018].
-- [Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies](https://doi.org/10.1038/s41596-018-0073-y) [@Lafzi2019].
-- [Comparative Analysis of Single-Cell RNA Sequencing Methods](http://dx.doi.org/10.1016/j.molcel.2017.01.023) [@Ziegenhain2018].
-- [Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems](https://doi.org/10.1016/j.molcel.2018.10.020) [@Zhang2018].
+- [Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies](https://doi.org/10.1038/s41596-018-0073-y) [@Lafzi2018].
+- [Comparative Analysis of Single-Cell RNA Sequencing Methods](http://dx.doi.org/10.1016/j.molcel.2017.01.023) [@Ziegenhain2017].
+- [Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems](https://doi.org/10.1016/j.molcel.2018.10.020) [@Zhang2019].
 - [Single cells make big data: New challenges and opportunities in transcriptomics](http://dx.doi.org/10.1016/j.coisb.2017.07.004) [@Angerer2017].
 - [Comparative Analysis of common alignment tools for single cell RNA sequencing](https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2) [@Bruning2021].
 - [Current best practices in single-cell RNA-seq analysis: a tutorial](https://doi.org/10.15252/msb.20188746) [@Luecken2019].

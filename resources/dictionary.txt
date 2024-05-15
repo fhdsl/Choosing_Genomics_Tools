@@ -1,3 +1,4 @@
+adaptor
 AutoCUT
 ASV
 ASVs
@@ -196,6 +197,7 @@ Swafford
 sonicated
 supernatant
 Talima
+SVs
 tagmentation
 tagmented
 Tomasz
@@ -240,10 +242,12 @@ MERFISH
 MERSCOPE
 mIF
 NMF
+pangenome
 permeabilization
 phenotyping
 piecharts
 pkc
+pseudogene
 RNAseq
 ROI
 ROIs
@@ -262,6 +266,9 @@ Statistcial
 STdata
 STdeconvolve
 stroma
+Telomere
+transcriptionally
+translocations
 TMAs
 visium
 Xenium

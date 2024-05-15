@@ -11,7 +11,7 @@ In its existing form, this chapter has been written with AI and still needs furt
 
 ## Learning Objectives
 
-<img src="resources/images/11-chromatin_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png" title="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" alt="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" width="100%" />
+<img src="resources/images/11-chromatin_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png" title="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." alt="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." width="100%" />
 
 ## Why are people interested in chromatin?
 
