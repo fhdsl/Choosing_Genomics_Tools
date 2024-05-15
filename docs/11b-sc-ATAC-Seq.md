@@ -56,7 +56,6 @@ Trajectory analysis, which is used to infer and visualize the developmental or d
 Trajectory inference algorithms, such as:
 
 - [Monocle](https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/) @Qiu2017
-- [Slingshot](https://bioconductor.org/packages/devel/bioc/vignettes/slingshot/inst/doc/vignette.html) @Street2018
 - [Palantir](https://github.com/dpeerlab/Palantir) @Setty2019
 - [PAGA](https://github.com/theislab/paga) @Wolf2019
 
