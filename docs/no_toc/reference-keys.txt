@@ -354,6 +354,10 @@ methylation-calling
 methylation-quantification
 analysis-1
 more-resources-2
+microbiome-sequencing
+learning-objectives-19
+goals-of-amplicon-analysis
+microbiome-analysis-with-qiime-2
 itcr--omic-tool-glossary
 archs4
 bioconductor
