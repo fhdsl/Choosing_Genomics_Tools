@@ -15,6 +15,8 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g2668d07d0b9_0_0")
 ```
 ## A Brief Introduction to Microbiomes
+
+
 Microbes are everywhere. We have found these tiny organisms in the deepest regions of the ocean and in the upper atmosphere. We have found them in:
 + water that has been solid ice for millennia in the Antarctic 
 + boiling water in the geysers of Yellowstone National Park. 
@@ -60,4 +62,3 @@ QIIME 2 has large and growing user and developer communities, and these communit
 [Here](https://gregcaporaso.github.io/q2book/front-matter/preface.html) is a high-level introduction to microbiome analysis using QIIME 2. This introduction will go over common methods, metrics and approaches used for microbiome science.
 So grab a cup of your favorite hot beverage and let’s get started! ☕
 
-## More resources
