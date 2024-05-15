@@ -1,6 +1,5 @@
 
 
-
 # A Very General Genomics Overview
 
 ## Learning Objectives

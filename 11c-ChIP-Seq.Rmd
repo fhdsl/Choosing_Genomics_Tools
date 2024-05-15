@@ -139,7 +139,7 @@ Annotation
 - [EnrichedHeatmap](https://bioconductor.org/packages/release/bioc/html/EnrichedHeatmap.html)is an R package for making heatmaps that visualize the enrichment of genomic signals on specific target regions.
 - [SeqMonk](https://www.bioinformatics.babraham.ac.uk/projects/seqmonk/) is a software package designed for the visualization and analysis of large-scale genomic data. It includes a heatmap function that can generate heatmaps from ChIP-seq data.
 - [ngs.plot](https://github.com/shenlab-sinai/ngsplot) is a tool that can generate different types of plots, including heatmaps, from NGS data. It includes a ChIP-seq specific mode that can be used to generate heatmaps from ChIP-seq data.
-- [ChAsE: ChAsE (ChIP-seq Analysis Engine)](http://chase.cs.univie.ac.at/overview) is a web-based platform for ChIP-seq analysis that includes a heatmap function that can generate heatmaps from ChIP-seq data.
+- [ChAsE: ChAsE (ChIP-seq Analysis Engine)](https://github.com/hyounesy/ChAsE/) is a web-based platform for ChIP-seq analysis that includes a heatmap function that can generate heatmaps from ChIP-seq data.
 
 These tools allow users to generate heatmaps of ChIP-seq data, which can be used to identify enriched regions of binding and to visualize patterns of binding across genomic regions.
 

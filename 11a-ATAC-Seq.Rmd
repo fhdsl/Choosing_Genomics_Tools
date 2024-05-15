@@ -255,7 +255,7 @@ This section has been written by AI and needs verification by experts. This is m
 ## More resources about ATAC-seq data
 
 - [ATAC-seq overview from Galaxy](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/slides.html#1) - these slides explain the overarching concepts of ATAC-seq.
-- [ATAC seq guidelines from Harvard](https://informatics.fas.harvard.edu/atac-seq-guidelines.html) - this workflow runs through step by step how to analysis ATAC-seq data and what different parameters mean.
+- [ATAC seq guidelines from ENCODE](https://www.encodeproject.org/atac-seq/) - this step by step overview covers ATAC-seq workflow and considerations.
 - [ATAC-seq review](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3) - this paper gives a great overview of ATAC-seq data and step by step what needs to be considered.
 - [Identifying and mitigating bias in chromatin](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4473780/)
 - [CHIP Snakemake pipeline for analyzing ChIP-seq and chromatin accessibility data](https://f1000research.com/articles/10-517)

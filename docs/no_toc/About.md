@@ -11,7 +11,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Oscar Ospina] - Spatial transcriptomics|
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag|
 |Content Directors|[Jeff Leek]|
 |Content Consultants|[Carrie Wright]<br> [Cliff Meyer] - ATAC-seq <br> [Frederick Tan]<br>|
 |Acknowledgments||
@@ -39,7 +39,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2024-01-24                  
+##  date     2024-02-07                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date       lib source                            
@@ -113,7 +113,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 [John Muschelli]: https://johnmuschelli.com/
 [Sandy Ormbrek]: https://hutchdatascience.org/ourteam/
 [Shasta Nicholson]: https://hutchdatascience.org/ourteam/
-
+[Ye Zheng]: https://yezhengstat.github.io/
 <!-- Links -->
 
 [ottrpal]: https://github.com/jhudsl/ottrpal

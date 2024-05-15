@@ -11,8 +11,7 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 
 ## Learning Objectives
 
-```{r, fig.alt = "Learning objectives This chapter will demonstrate how to:
-Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data", out.width = "100%", echo = FALSE}
+```{r, fig.alt = "Learning objectives This chapter will demonstrate how to: Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g227d7dd1e08_0_41")
 ```
 
@@ -61,7 +60,6 @@ Trajectory analysis, which is used to infer and visualize the developmental or d
 Trajectory inference algorithms, such as:
 
 - [Monocle](https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/) @Qiu2017
-- [Slingshot](https://bioconductor.org/packages/devel/bioc/vignettes/slingshot/inst/doc/vignette.html) @Street2018
 - [Palantir](https://github.com/dpeerlab/Palantir) @Setty2019
 - [PAGA](https://github.com/theislab/paga) @Wolf2019
 
