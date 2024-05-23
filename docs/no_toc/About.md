@@ -11,16 +11,17 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag|
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag|
 |Content Directors|[Jeff Leek]|
 |Content Consultants|[Carrie Wright]<br> [Cliff Meyer] - ATAC-seq <br> [Frederick Tan]<br>|
+|Content Editors/Reviewers|[Kate Isaac]|
 |Acknowledgments||
 |**Technical**||
 |Course Publishing Engineer|[Candace Savonen]|
 |Template Publishing Engineers|[Candace Savonen], [Carrie Wright]|
 |Publishing Maintenance Engineer|[Candace Savonen]|
 |Technical Publishing Stylists|[Carrie Wright], [Candace Savonen]|
-|Package Developers ([ottrpal])[Candace Savonen], [John Muschelli], [Carrie Wright]|
+|Package Developers ([ottrpal])|[Candace Savonen], [John Muschelli], [Carrie Wright]|
 |**Funding**||
 |Funder|[National Cancer Institute (NCI)](https://www.cancer.gov/) UE5 CA254170|
 |Funding Staff| [Sandy Ormbrek], [Shasta Nicholson] |
@@ -39,7 +40,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
 ##  tz       Etc/UTC                     
-##  date     2024-05-15                  
+##  date     2024-05-23                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date       lib source                            
@@ -113,6 +114,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 [Frederick Tan]: https://bse.carnegiescience.edu/dr-frederick-tan
 [Jacob Greene]: https://www.linkedin.com/in/jacob-greene-890aa318a/
 [Jeff Leek]: https://jtleek.com/
+[Kate Isaac]: https://kweav.github.io/
 [Oscar Ospina]: https://linkedin.com/in/oscareospina/
 [John Muschelli]: https://johnmuschelli.com/
 [Sandy Ormbrek]: https://hutchdatascience.org/ourteam/
