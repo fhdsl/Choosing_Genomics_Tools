@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 
 <link rel="next" href="introduction.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -543,18 +536,18 @@ div.csl-indent {
 </div>
 <div id="header">
 <h1 class="title">Choosing Genomics Tools</h1>
-<p class="date"><em>May, 2024</em></p>
+<p class="date"><em>June, 2024</em></p>
 </div>
-<div id="about-this-course" class="section level1 unnumbered">
-<h1>About this Course</h1>
+<div id="about-this-course" class="section level1 unnumbered hasAnchor">
+<h1>About this Course<a href="index.html#about-this-course" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This course is part of a series of courses for the <a href="https://itcr.cancer.gov/">Informatics Technology for Cancer Research (ITCR)</a> called the Informatics Technology for Cancer Research Education Resource. This material was created by the ITCR Training Network (ITN) which is a collaborative effort of researchers around the United States to support cancer informatics and data science training through resources, technology, and events. This initiative is funded by the following grant: <a href="https://www.cancer.gov/">National Cancer Institute (NCI)</a> UE5 CA254170. Our courses feature tools developed by ITCR Investigators and make it easier for principal investigators, scientists, and analysts to integrate cancer informatics into their workflows. Please see our website at <a href="www.itcrtraining.org">www.itcrtraining.org</a> for more information.</p>
-<div id="available-course-formats" class="section level2" number="0.1">
-<h2><span class="header-section-number">0.1</span> Available course formats</h2>
+<div id="available-course-formats" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> Available course formats<a href="index.html#available-course-formats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This course is available in multiple formats which allows you to take it in the way that best suites your needs. You can take it for certificate which can be for free or fee.</p>
 <ul>
-<li>The material for this course can be viewed without login requirement on this <a href="https://hutchdatascience.org/Choosing_Genomics_Tools/">Bookdown website</a>. This format might be most appropriate for you if you rely on screen-reader technology.</li>
-<li>This course can be taken for <a href="">free certification through Leanpub</a>.</li>
-<li>This course can be taken on <a href="https://www.coursera.org/learn/">Coursera for certification here</a> (but it is not available for free on Coursera).</li>
+<li>The material for this course can be viewed without login requirement on this <a href="https://hutchdatascience.org/Choosing_Genomics_Tools/">Bookdown website</a>. This format might be most appropriate for you if you rely on screen-reader technology.
+<!-- - This course can be taken for [free certification through Leanpub](). --></li>
+<li>This course can be taken on <a href="https://www.coursera.org/specializations/researchers-guide-to-omic-data/">Coursera for certification here</a> (but it is not available for free on Coursera).</li>
 <li>Our courses are open source, you can find the <a href="https://github.com/jhudsl/Choosing_Genomics_Tools">source material for this course on GitHub</a>.</li>
 </ul>
 
@@ -634,7 +627,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

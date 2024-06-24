@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Guidelines for Good Metadata | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Guidelines for Good Metadata | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="a-very-general-genomics-overview.html"/>
 <link rel="next" href="considerations-for-choosing-tools.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 3 Guidelines for Good Metadata | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -541,31 +534,31 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="guidelines-for-good-metadata" class="section level1" number="3">
-<h1><span class="header-section-number">Chapter 3</span> Guidelines for Good Metadata</h1>
-<div id="learning-objectives-1" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Learning Objectives</h2>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" title="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="100%" /></p>
+<div id="guidelines-for-good-metadata" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Guidelines for Good Metadata<a href="guidelines-for-good-metadata.html#guidelines-for-good-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-objectives-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Learning Objectives<a href="guidelines-for-good-metadata.html#learning-objectives-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="100%" /></p>
 </div>
-<div id="what-are-metadata" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> What are metadata?</h2>
+<div id="what-are-metadata" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> What are metadata?<a href="guidelines-for-good-metadata.html#what-are-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Metadata are critically important descriptive information about your data.</p>
 <p><strong>Without metadata, the data themselves are useless or at best vastly limited.</strong></p>
 <p>Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your data set.</p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" title="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" /></p>
 <p>Metadata includes but isn’t limited to, the following example categories:</p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" title="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="100%" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="100%" /></p>
 <div class="warning">
 <p>At this time it’s important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It’s critical that you protect this information! For more details on this, we encourage you to see our <a href="https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html">course about data management</a>.</p>
 </div>
 </div>
-<div id="how-to-create-metadata" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> How to create metadata?</h2>
+<div id="how-to-create-metadata" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> How to create metadata?<a href="guidelines-for-good-metadata.html#how-to-create-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Where do these metadata come from? The notes and experimental design from anyone who played a part in collecting or processing the data and its original samples. If this includes you (meaning you have collected data and need to create metadata) let’s discuss how metadata can be made in the most useful and reproducible manner.</p>
-<div id="the-goals-in-creating-your-metadata" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> The goals in creating your metadata:</h3>
-<div id="goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="section level4" number="3.3.1.1">
-<h4><span class="header-section-number">3.3.1.1</span> Goal A: Make it <em>crystal clear</em> and <em>easily readable</em> by both humans and computers!</h4>
+<div id="the-goals-in-creating-your-metadata" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> The goals in creating your metadata:<a href="guidelines-for-good-metadata.html#the-goals-in-creating-your-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="section level4 hasAnchor" number="3.3.1.1">
+<h4><span class="header-section-number">3.3.1.1</span> Goal A: Make it <em>crystal clear</em> and <em>easily readable</em> by both humans and computers!<a href="guidelines-for-good-metadata.html#goal-a-make-it-crystal-clear-and-easily-readable-by-both-humans-and-computers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Some examples of how to make your data crystal clear:
 - Look out for typos and spelling errors!
 - Don’t use acronyms unless you need to and then if you do need to make sure to explain what the acronym means.
@@ -578,8 +571,8 @@ div.csl-indent {
 &gt; - Every cell is a single value.</li>
 </ul>
 </div>
-<div id="goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="section level4" number="3.3.1.2">
-<h4><span class="header-section-number">3.3.1.2</span> Goal B: Avoid introducing errors into your metadata in the future!</h4>
+<div id="goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="section level4 hasAnchor" number="3.3.1.2">
+<h4><span class="header-section-number">3.3.1.2</span> Goal B: Avoid introducing errors into your metadata in the future!<a href="guidelines-for-good-metadata.html#goal-b-avoid-introducing-errors-into-your-metadata-in-the-future" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Toward these two goals, <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">this excellent article</a> by Broman &amp; Woo discusses metadata design rules. We will very briefly cover the major points here but highly suggest you read the original article.</p>
 <ol style="list-style-type: decimal">
 <li><p><em>Be Consistent</em> - Whatever labels and systems you choose, use it universally. This not only means in your metadata spreadsheet but also anywhere you are discussing your metadata variables.</p></li>
@@ -595,21 +588,21 @@ div.csl-indent {
 <li><p><em>Use Data Validation to Avoid Errors</em> - set data types to have googlesheets or excel check that the data in the columns is the type of data it expects for a given variable.</p></li>
 </ol>
 <div class="warning">
-<p>Note that it is very dangerous to open gene data with Excel. According to <span class="citation">Ziemann, Eren, and El-Osta (<a href="#ref-Ziemann2016" role="doc-biblioref">2016</a>)</span>, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
-<img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" title="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="100%" /></p>
+<p>Note that it is very dangerous to open gene data with Excel. According to <span class="citation">Ziemann, Eren, and El-Osta (<a href="#ref-Ziemann2016">2016</a>)</span>, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
+<img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="100%" /></p>
 </div>
 </div>
 </div>
-<div id="to-recap" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> To recap:</h3>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" title="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="100%" /></p>
-<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" title="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="100%" /></p>
+<div id="to-recap" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> To recap:<a href="guidelines-for-good-metadata.html#to-recap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="100%" /></p>
+<p><img src="resources/images/03-whats-metadata_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="100%" /></p>
 <p>If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!</p>
 
 </div>
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Ziemann2016" class="csl-entry">
 Ziemann, Mark, Yotam Eren, and Assam El-Osta. 2016. <span>“Gene Name Errors Are Widespread in the Scientific Literature.”</span> <em>Genome Biology</em> 17 (1). <a href="https://doi.org/10.1186/s13059-016-1044-7">https://doi.org/10.1186/s13059-016-1044-7</a>.
@@ -689,7 +682,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

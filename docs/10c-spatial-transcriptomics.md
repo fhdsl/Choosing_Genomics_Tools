@@ -2,10 +2,6 @@
 
 # Spatial transcriptomics
 
-::: warning
-This chapter has currently been written by ChatGPT and has not been verified by experts. We need help writing and reviewing it! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
-:::
-
 ## Learning objectives
 
 ![](resources/images/10c-spatial-transcriptomics_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g258b14267ad_278_14.png){width=100%}

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Considerations for choosing tools | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Considerations for choosing tools | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="guidelines-for-good-metadata.html"/>
 <link rel="next" href="general-data-analysis-tools.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 4 Considerations for choosing tools | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -541,62 +534,62 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="considerations-for-choosing-tools" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Considerations for choosing tools</h1>
-<div id="learning-objectives-2" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Learning Objectives</h2>
-<p><img src="resources/images/04-considerations-for-choosing_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_0.png" title="This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data " alt="This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data " width="100%" /></p>
+<div id="considerations-for-choosing-tools" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Considerations for choosing tools<a href="considerations-for-choosing-tools.html#considerations-for-choosing-tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-objectives-2" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Learning Objectives<a href="considerations-for-choosing-tools.html#learning-objectives-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/04-considerations-for-choosing_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_0.png" alt="This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data " width="100%" /></p>
 </div>
-<div id="overview" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Overview</h2>
+<div id="overview" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Overview<a href="considerations-for-choosing-tools.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this course, we will introduce you to the fundamentals of various data types and give you advice about choosing tutorials and tools whenever possible. However, it is critical to note that there is no “one size fits all” when it comes to genomic data decisions. Instead, our goals are to equip you with the knowledge you need as well as the questions you need to ask yourself (or others) when making decisions about your genomics data.</p>
 <p>We will discuss the following considerations you should gather information and otherwise ponder when comparing one or more tools for your analysis:</p>
-<p><img src="resources/images/04-considerations-for-choosing_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_5.png" title="Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? " alt="Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? " width="100%" /></p>
-<div id="is-this-tool-appropriate-for-your-data-type" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Is this tool appropriate for your data type?</h3>
+<p><img src="resources/images/04-considerations-for-choosing_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_5.png" alt="Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? " width="100%" /></p>
+<div id="is-this-tool-appropriate-for-your-data-type" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Is this tool appropriate for your data type?<a href="considerations-for-choosing-tools.html#is-this-tool-appropriate-for-your-data-type" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Certain tools are built for certain kinds of data. In each data-type-specific chapter we will attempt to point you tools that are appropriate for the given data type. However, note that some tools also might require tweaks in parameters for non-standard data collection methods. If you were not sure of the data collection methods used for your data type, be sure to follow the data type specific advice in the chapter to find out the information about your data that you need to know to make an informed decision.</p>
 </div>
-<div id="is-this-tool-appropriate-for-your-scientific-question" class="section level3" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Is this tool appropriate for your scientific question?</h3>
+<div id="is-this-tool-appropriate-for-your-scientific-question" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Is this tool appropriate for your scientific question?<a href="considerations-for-choosing-tools.html#is-this-tool-appropriate-for-your-scientific-question" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Some tools may be appropriate for the general data type, but might mask information you will need to answer your particular scientific question or hypothesis. For example, for RNA-seq if you are interested in splice variants, you may not be able to use certain alignment tools that do not differentiate between splice variants.</p>
 <p>Be sure to make your goals and scientific questions clear when asking for advice or guidance. Some tools may be applicable to certain scientific questions, but other accommodations or preprocessing may need to be done</p>
 </div>
-<div id="is-this-tool-in-an-interface-or-programming-language-you-feel-comfortable-with" class="section level3" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> Is this tool in an interface or programming language you feel comfortable with?</h3>
+<div id="is-this-tool-in-an-interface-or-programming-language-you-feel-comfortable-with" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Is this tool in an interface or programming language you feel comfortable with?<a href="considerations-for-choosing-tools.html#is-this-tool-in-an-interface-or-programming-language-you-feel-comfortable-with" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Genomics and informatics tools can be classified into two groups based on how you interact with them. These groups are 1) command line or 2) graphics user interface (GUI). GUIs are tools that you can use by clicking and pointing with your mouse whereas command line tools require input through writing out commands.</p>
 <p>Command line tools often lend to greater reproducibility of an analysis since a script can have all the steps needed to re-run analysis. This makes it so you could re-run and reproduce your results with one command instead of lots of clicking various buttons in particular order as you would need to do with a GUI based tool.</p>
 <p>Your level of comfort or willingness/time available to learn a programming language like R or Python will influence what tool options you have. If you are unfamiliar and uncomfortable writing in R, Python, or Bash scripting, this will influence what tools you have available to you or whether you will need to enlist more outside help.</p>
 <p>If you are interested in learning to use command line, we have many resources and recommendations for you to use for learning in this next chapter. However, if you do not have the bandwidth or motivation to learn how to code, you will want to gravitate toward tools that have GUIs.</p>
 </div>
-<div id="how-much-computing-power-do-you-have" class="section level3" number="4.2.4">
-<h3><span class="header-section-number">4.2.4</span> How much computing power do you have?</h3>
+<div id="how-much-computing-power-do-you-have" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> How much computing power do you have?<a href="considerations-for-choosing-tools.html#how-much-computing-power-do-you-have" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Some tools require a lot more computing resources (or runtime) than others. Many institutions have cloud computing resources or high powered computing clusters for your use. <a href="https://jhudatascience.org/Computing_for_Cancer_Informatics/computing-resources.html">We’ll recommend you to our Computing Course for more information about this</a>.</p>
 <p>But your computing budget access, and time allotment, may influence what tools you would like to use for a project. For example, for RNA seq data alignment, traditional aligners that use the genome take an order of magnitude greater amount of time to run than quantifying transcripts with pseudo alignment based tools. For many applications pseudoaligners are perfectly appropriate and efficient choices that can be run on a laptop. But if you prefer a traditional aligner because you are interested in something that is not detected by pseudosligners such as splice variants, then you may want to look into using some computing resources for this task. All these decisions need to be weighed in balance with each other.</p>
 </div>
-<div id="are-there-benchmarking-papers-that-compare-this-tool-to-other-options" class="section level3" number="4.2.5">
-<h3><span class="header-section-number">4.2.5</span> Are there benchmarking papers that compare this tool to other options?</h3>
+<div id="are-there-benchmarking-papers-that-compare-this-tool-to-other-options" class="section level3 hasAnchor" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> Are there benchmarking papers that compare this tool to other options?<a href="considerations-for-choosing-tools.html#are-there-benchmarking-papers-that-compare-this-tool-to-other-options" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Some tools and their algorithms have been more thoroughly examined and tested than others. And this doesn’t always align to a tool’s popularity. Seek out the literature and what studies have been done comparing this tool to others like it. Keep in mind the tool developer’s own bias if the paper is coming directly from the group or individual who is the creator of the tool. Developers will be more likely to understand and know how to tweak parameters of their own tool properly, while not necessarily spending as much time testing and adjusting tools made by others. This concept has sometimes been called the <a href="https://www.biorxiv.org/content/10.1101/385534v4">“Continental Breakfast Included”</a> concept.</p>
 </div>
-<div id="is-the-tool-well-documented-and-usable" class="section level3" number="4.2.6">
-<h3><span class="header-section-number">4.2.6</span> Is the tool well documented and usable?</h3>
+<div id="is-the-tool-well-documented-and-usable" class="section level3 hasAnchor" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> Is the tool well documented and usable?<a href="considerations-for-choosing-tools.html#is-the-tool-well-documented-and-usable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Well documented and usable tools can be very powerful. Poorly documented tools which may lead to unknown parameters or other mishandling of the data if it has not been made clear by the tool developers and maintainers. Good understanding of what a tool is doing with the data you give it is perhaps more important than using fancy algorithms that are unclear. Not only does documentation and usability increase your ability to use a tool, but your analysis will be more reproducible if others can also understand the tools that you used.</p>
 <p>The existence of forums and user groups for particular tools, not only makes it a useful resource for you for analysis, troubleshooting and interpretation of your results, but it also indicates a particular drive for the tool to continue to be maintained and developed overtime.</p>
 </div>
-<div id="is-the-tool-well-maintained" class="section level3" number="4.2.7">
-<h3><span class="header-section-number">4.2.7</span> Is the tool well maintained?</h3>
+<div id="is-the-tool-well-maintained" class="section level3 hasAnchor" number="4.2.7">
+<h3><span class="header-section-number">4.2.7</span> Is the tool well maintained?<a href="considerations-for-choosing-tools.html#is-the-tool-well-maintained" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If a tool is actively being maintained this will aid in the reproducibility of your results. Tools on GitHub (an open-source platform for software) or other repositories often indicate when latest updates to a tool were made. Ideally updates are being made regularly to the tool, but a lack of updates does not speak well for the future existence of the tool. A tool that is not well maintained or supported may deprecate and make it increasingly difficult if not possible to reproduce, re-run or further develop your analysis.</p>
 </div>
-<div id="is-the-tool-generally-accepted-by-the-field" class="section level3" number="4.2.8">
-<h3><span class="header-section-number">4.2.8</span> Is the tool generally accepted by the field?</h3>
+<div id="is-the-tool-generally-accepted-by-the-field" class="section level3 hasAnchor" number="4.2.8">
+<h3><span class="header-section-number">4.2.8</span> Is the tool generally accepted by the field?<a href="considerations-for-choosing-tools.html#is-the-tool-generally-accepted-by-the-field" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>While tool popularity should not be the only consideration when choosing a tool, it is an aspect that can influence communication or acceptance of your results. All things being equal, it can be better to choose a tool that is more accepted by the community as tried and true, and well benchmarked as opposed to the bleeding edge technology that may have not been truly scrutinized yet. In an analysis it is perhaps more valuable to know and weigh the known limitations of an older tool than to use a newer tool whose limitations may not have been identified yet (but it certainly will have its own limitations identified in time).</p>
 </div>
 </div>
-<div id="coming-to-a-decision" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Coming to a decision</h2>
+<div id="coming-to-a-decision" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Coming to a decision<a href="considerations-for-choosing-tools.html#coming-to-a-decision" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It’s important to note that the questions we will discuss here need to be considered in balance of one another. Rarely should you make a decision about a tool without considering all of these items congruently. For example, some tools may have better benchmarking but if it is more computationally costly and you do not have access to the necessary computing resources to run the tool, then you may need to consider other options.</p>
 </div>
-<div id="more-resources" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> More resources</h2>
+<div id="more-resources" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> More resources<a href="considerations-for-choosing-tools.html#more-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p><a href="https://hutchdatascience.org/code_review/more_resources.html">A longer list of tools and resources can be found here</a></p></li>
 <li><p><a href="https://datatrail-jhu.github.io/DataTrail/index.html">DataTrail curriculum</a></p></li>
@@ -681,7 +674,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

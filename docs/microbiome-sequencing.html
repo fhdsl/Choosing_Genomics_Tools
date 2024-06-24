@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 21 Microbiome Sequencing | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39.1 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 21 Microbiome Sequencing | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="dna-methylation-sequencing.html"/>
 <link rel="next" href="itcr--omic-tool-glossary.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 21 Microbiome Sequencing | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -541,14 +534,14 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="microbiome-sequencing" class="section level1" number="21">
-<h1><span class="header-section-number">Chapter 21</span> Microbiome Sequencing</h1>
+<div id="microbiome-sequencing" class="section level1 hasAnchor" number="21">
+<h1><span class="header-section-number">Chapter 21</span> Microbiome Sequencing<a href="microbiome-sequencing.html#microbiome-sequencing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is incomplete! If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-19" class="section level2" number="21.1">
-<h2><span class="header-section-number">21.1</span> Learning Objectives</h2>
-<p><img src="resources/images/13-microbiome_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_0_0.png" title="Learning Objectives" alt="Learning Objectives" width="100%" />
+<div id="learning-objectives-19" class="section level2 hasAnchor" number="21.1">
+<h2><span class="header-section-number">21.1</span> Learning Objectives<a href="microbiome-sequencing.html#learning-objectives-19" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/13-microbiome_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_0_0.png" alt="Learning Objectives" width="100%" />
 ## A Brief Introduction to Microbiomes</p>
 <p>Microbes are everywhere. We have found these tiny organisms in the deepest regions of the ocean and in the upper atmosphere. We have found them in:
 + water that has been solid ice for millennia in the Antarctic
@@ -557,15 +550,15 @@ div.csl-indent {
 + perpetually damp environments, like the intestinal tract of the human body where they are constantly the subject of inspection by our diligent immune cells, and where they impact our health in positive and negative ways that we are only beginning to understand.
 + our nuclear reactors, prompting questions about whether we could harness them as tiny machines to help us remediate environmental disasters of the past, present, and future.</p>
 <p>If we looked hard enough, I think we’d find them on the surface of the moon and Mars, though they are probably microbes who stowed away on our spacecraft and are now patiently waiting for a drop of water that may or may not ever show up. If we ever colonize those worlds, microbes will be an indispensable ally in creating an environment that could sustain us.</p>
-<p><img src="resources/images/13-microbiome_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g26ebab787e9_0_0.png" title="Learning Objectives" alt="Learning Objectives" width="100%" />
-This figure is adapted from <span class="citation">(<a href="#ref-Tignat-Perrier2022" role="doc-biblioref">Tignat-Perrier et al. 2022</a>)</span> under Creative Commons license.</p>
+<p><img src="resources/images/13-microbiome_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g26ebab787e9_0_0.png" alt="Learning Objectives" width="100%" />
+This figure is adapted from <span class="citation">(<a href="#ref-Tignat-Perrier2022">Tignat-Perrier et al. 2022</a>)</span> under Creative Commons license.</p>
 <p>Microbes almost never live alone in the real world (i.e., outside of a laboratory). Rather they exist in communities of different species who are interacting with each other and their environment. Some of these communities will have many different types of organisms, and some will have only a few. Because of the large number of species and individuals involved, no two communities will ever be exactly alike, and quantifying differences between microbial communities is an important area of research at the moment. The types of interactions between organisms are also highly varied. These can include mutualistic relationships, where both organisms benefit from the interaction; parasitic relationships, where one organism exclusively benefits to the detriment of the other; and the full gradient in between.</p>
 <p>Microbiome science is everywhere. There are tens of articles published daily in the scientific literature, and many popular science articles and books present these findings to the world of non-scientists. Understanding the promises and limitations of the methods of microbiome science can help avoid misconceptions about microbiome research, and it’s important for practitioners of microbiome science to understand and convey the promise and limitations of our field. Misconceptions abound, frequently arising from the same sources as high-quality popular science microbiome reporting.</p>
 <pre><code>For example, on 5 Feb 2015 an article appeared in the New York Times noting (almost offhand) that Yersinia pestis, the organism responsible for Bubonic plague, had been found in multiple locations throughout the New York City subway system as part of its normal built environment microbiome. This was rapidly followed up on 6 Feb 2015 with an article noting that there was probably not Bubonic plague on the subway system after all, but rather that the approaches used by the research team are limited in their taxonomic resolution, and that likely a harmless close relative of Y. pestis was observed: “What the researchers probably found, [a spokesman for the university where the study originated] said, was bacteria from an unknown species or from organisms that happened to share some gene sequences with the plague bacterium…”.</code></pre>
 <p>As microbiome services and products are increasingly marketed directly to the public, consumers of microbiome research findings, products, and services need to know how to critically evaluate these offerings and their associated claims. As practitioners in the field, we can help by ensuring that the methods we apply are appropriate and reliable, and that we make our work accessible.</p>
 </div>
-<div id="goals-of-amplicon-analysis" class="section level2" number="21.2">
-<h2><span class="header-section-number">21.2</span> Goals of Amplicon analysis</h2>
+<div id="goals-of-amplicon-analysis" class="section level2 hasAnchor" number="21.2">
+<h2><span class="header-section-number">21.2</span> Goals of Amplicon analysis<a href="microbiome-sequencing.html#goals-of-amplicon-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The technologies that are enabling work in microbiome science are the same that are driving the data revolution in biology. Primarily this work is driven by high-throughput DNA sequencing, which is applied for profiling microbial community composition:</p>
 <ul>
 <li>marker gene profiling (such as 16S or ITS sequencing)</li>
@@ -579,16 +572,16 @@ This figure is adapted from <span class="citation">(<a href="#ref-Tignat-Perrier
 </ul>
 <p>As a result, bioinformatics software tools are essential to microbiome research. For many microbiome researchers, bioinformatics is an intimidating and challenging aspect of their projects.</p>
 </div>
-<div id="microbiome-analysis-with-qiime-2" class="section level2" number="21.3">
-<h2><span class="header-section-number">21.3</span> Microbiome Analysis with QIIME 2</h2>
-<p>QIIME 2 is an all in one bioinformatics microbiome analysis platform. This platform allows for users to go from sequenced microbiome data to publication ready visualizations. The original QIIME, now referred to as QIIME 1, was published in 2010 <span class="citation">(<a href="#ref-Caporaso2010" role="doc-biblioref">Caporaso et al. 2010</a>)</span> and has been cited tens of thousands of times in the primary literature. QIIME 2, which was published in July of 2019 <span class="citation">(<a href="#ref-Bolyen2019" role="doc-biblioref">Bolyen et al. 2019</a>)</span>, succeeded QIIME 1 on 1 January 2018. QIIME 2 is better than QIIME 1 in all ways, and QIIME 1 is no longer actively supported. If you have previously used QIIME 1, you should invest time in learning and switching to QIIME 2. If you’re new to QIIME, start with QIIME 2. (When I refer to QIIME in this book, without specifying whether I’m referring to QIIME 1 or QIIME 2, I’m referring to the platform generally.)</p>
+<div id="microbiome-analysis-with-qiime-2" class="section level2 hasAnchor" number="21.3">
+<h2><span class="header-section-number">21.3</span> Microbiome Analysis with QIIME 2<a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>QIIME 2 is an all in one bioinformatics microbiome analysis platform. This platform allows for users to go from sequenced microbiome data to publication ready visualizations. The original QIIME, now referred to as QIIME 1, was published in 2010 <span class="citation">(<a href="#ref-Caporaso2010">Caporaso et al. 2010</a>)</span> and has been cited tens of thousands of times in the primary literature. QIIME 2, which was published in July of 2019 <span class="citation">(<a href="#ref-Bolyen2019">Bolyen et al. 2019</a>)</span>, succeeded QIIME 1 on 1 January 2018. QIIME 2 is better than QIIME 1 in all ways, and QIIME 1 is no longer actively supported. If you have previously used QIIME 1, you should invest time in learning and switching to QIIME 2. If you’re new to QIIME, start with QIIME 2. (When I refer to QIIME in this book, without specifying whether I’m referring to QIIME 1 or QIIME 2, I’m referring to the platform generally.)</p>
 <p>QIIME 2 has large and growing user and developer communities, and these communities make QIIME 2 possible. The epicenter of the community is the QIIME 2 Forum. The forum is primarily known as a place where users can get technical support with QIIME 2 for no charge. Developers of QIIME 2 moderate the forum, and typically respond to technical support questions within a couple of business days. The forum is also a great place to discuss general topics in microbiome bioinformatics, or microbiome research methods generally. There are many active discussions on these topics on the forum. Keeping up with the discussions on the forum is a great way to learn about current topics in microbiome research methods. There’s also a free job board on the forum - you can use the forum to find jobs, or post your own job ads there to find employees who are well-versed in QIIME 2 and other bioinformatics tools. If you’re not already a member of the QIIME 2 Forum, you should consider joining. It’s a great way for you to get help, and as you develop your QIIME 2 skills helping others on the forum is a great way to reenforce your learning and to get involved in the community.</p>
 <p><a href="https://gregcaporaso.github.io/q2book/front-matter/preface.html">Here</a> is a high-level introduction to microbiome analysis using QIIME 2. This introduction will go over common methods, metrics and approaches used for microbiome science.
 So grab a cup of your favorite hot beverage and let’s get started! ☕</p>
 
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Bolyen2019" class="csl-entry">
 Bolyen, Evan, Jai Ram Rideout, Matthew R Dillon, Nicholas A Bokulich, Christian C Abnet, Gabriel A Al-Ghalith, Harriet Alexander, et al. 2019. <span>“Reproducible, Interactive, Scalable and Extensible Microbiome Data Science Using <span>QIIME</span> 2.”</span> <em>Nat. Biotechnol.</em> 37 (8): 852–57.
@@ -674,7 +667,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
