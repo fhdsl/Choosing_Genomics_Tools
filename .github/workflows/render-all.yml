@@ -88,7 +88,7 @@ jobs:
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
-    needs: [yaml-check]
+    needs: [yaml-check, render-bookdown]
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
@@ -122,7 +122,7 @@ jobs:
           git fetch origin
           git add --force docs/no_toc*
           git commit -m 'Render toc-less' || echo "No changes to commit"
-          git pull --allow-unrelated-histories --strategy-option=ours
+          git pull --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
           git push -u origin main  || echo "No changes to push"
 
   render-leanpub:
@@ -169,11 +169,11 @@ jobs:
           git fetch origin
           git add .
           git commit -m 'Delete manuscript folder' || echo "No changes to commit"
-          git pull --allow-unrelated-histories --strategy-option=ours
+          git pull --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
           git push -u origin main || echo "No changes to push"
 
       - name: Run ottrpal::bookdown_to_embed_leanpub
-        if: needs.yaml-check.outputs.toggle_quiz_check == 'no'
+        if: ${{ needs.yaml-check.outputs.toggle_quiz_check == 'no'}}
         run: |
           Rscript -e "ottrpal::bookdown_to_embed_leanpub(
             render = FALSE, \
@@ -182,7 +182,7 @@ jobs:
             quiz_dir = NULL)"
 
       - name: Run ottrpal::bookdown_to_embed_leanpub
-        if: needs.yaml-check.outputs.toggle_quiz_check == 'yes'
+        if: ${{ needs.yaml-check.outputs.toggle_quiz_check == 'yes'}}
         run: |
           Rscript -e "ottrpal::bookdown_to_embed_leanpub(
             render = FALSE, \
@@ -244,5 +244,5 @@ jobs:
           git add --force resources/*
           git add --force docs/*
           git commit -m 'Render Coursera quizzes' || echo "No changes to commit"
-          git pull --allow-unrelated-histories --strategy-option=ours
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
           git push -u origin main  || echo "No changes to push"

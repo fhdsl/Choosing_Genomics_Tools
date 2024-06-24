@@ -172,7 +172,7 @@ jobs:
           echo "changes=$changes" >> $GITHUB_OUTPUT
           git add . --force
           git commit -m 'Render preview' || echo "No changes to commit"
-          git pull --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
+          git pull --rebase --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
           git push --force || echo "No changes to commit"
         shell: bash
 
