@@ -1,5 +1,5 @@
-
-# Candace Savonen Apr 2021
+# Candace Savonen 2021
+# Updated May 2024
 
 name: Render all output courses
 
@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main, staging ]
     paths:
-      - '**.Rmd'
+      - '**md$'
       - assets/*
       - quizzes/*
 
@@ -27,20 +27,19 @@ jobs:
         with:
             files: config_automation.yml # Pass a space-separated list of configuration files. Rightmost files take precedence.
     outputs:
-      toggle_bookdown: "${{ env.RENDER_BOOKDOWN }}"
+      toggle_website: "${{ env.RENDER_WEBSITE }}"
       toggle_coursera: "${{ env.RENDER_COURSERA }}"
       toggle_leanpub: "${{ env.RENDER_LEANPUB }}"
       make_book_txt: "${{ env.MAKE_BOOK_TXT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
       toggle_quiz_check: "${{ env.CHECK_QUIZZES }}"
 
-  render-bookdown:
-    name: Render bookdown
+  render-course:
+    name: Render course preview
     needs: yaml-check
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
-    if: ${{needs.yaml-check.outputs.toggle_bookdown == 'yes'}}
 
     steps:
       - name: checkout
@@ -57,38 +56,56 @@ jobs:
 
       # We want a fresh run of the renders each time
       - name: Delete old docs/*
-        run: rm -rf docs/*
-
-      # Run bookdown rendering
-      - name: Run bookdown render
-        id: bookdown
-        run: |
-          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all');
-          file.copy(from = 'assets', to = 'docs/assets', overwrite = TRUE)"
-
-      # This checks on the steps before it and makes sure that they completed.
-      # If the renders didn't complete we don't want to commit the file changes
-      - name: Check on render step
-        if: steps.bookdown.outcome != 'success'
-        run: |
-          echo Bookdown status ${{steps.bookdown.outcome}}
-          exit 1
-
-      # Commit the rendered bookdown files
-      - name: Commit rendered bookdown files
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
           git fetch origin
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
+
+      # Run Rmd rendering
+      - name: Run bookdown render
+        id: bookdown
+        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
+        run: |
+          rm -rf docs/*
+          Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all');
+          file.copy(from = 'assets', to = 'docs/assets', overwrite = TRUE)"
+
+      - name: Render quarto version
+        id: quarto
+        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
+        run: Rscript -e "quarto::quarto_render('.')"
+
+      # This checks on the steps before it and makes sure that they completed.
+      # If the renders didn't complete we don't want to commit the file changes
+      - name: Check on Rmd render steps
+        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
+        run: |
+          echo Bookdown status ${{steps.bookdown.outcome}}
+          if [${{steps.bookdown.outcome}} != 'success']; then
+            exit 1
+          fi
+
+      - name: Check on quarto render steps
+        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
+        run: |
+          echo Quarto status ${{steps.quarto.outcome}}
+          if [${{steps.quarto.outcome}} != 'success']; then
+            exit 1
+          fi
+
+      # Commit the rendered course files
+      - name: Commit rendered course files
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
           git add --force docs/*
-          git commit -m 'Render bookdown' || echo "No changes to commit"
-          git pull --allow-unrelated-histories --strategy-option=ours
+          git commit -m 'Render course' || echo "No changes to commit"
+          git status docs/*
           git push -u origin main  || echo "No changes to push"
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
-    needs: [yaml-check, render-bookdown]
+    needs: [yaml-check, render-course]
     runs-on: ubuntu-latest
     container:
       image: ${{needs.yaml-check.outputs.rendering_docker_image}}
@@ -106,23 +123,32 @@ jobs:
           git config --global --add safe.directory $GITHUB_WORKSPACE
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
 
       # Rendered content for Leanpub and Coursera is very similar.
       # This job creates a shared scaffold for both.
-      - name: Run TOC-less version of render
-        id: tocless
+      - name: Run TOC-less version of render -- Rmd version
+        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
+        id: tocless_rmd
         run: Rscript -e "ottrpal::render_without_toc()"
+
+      - name: Run TOC-less version of render -- quarto version
+        id: tocless_quarto
+        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
+        run: |
+          Rscript -e "quarto::quarto_render('.', metadata = list(sidebar = F, toc = F),
+          quarto_args = c('--output-dir', 'docs/no_toc/'))"
 
       # Commit the TOC-less version files
       - name: Commit tocless bookdown files
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
-          git fetch origin
           git add --force docs/no_toc*
           git commit -m 'Render toc-less' || echo "No changes to commit"
-          git pull --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
+          git status docs/no_toc*
           git push -u origin main  || echo "No changes to push"
 
   render-leanpub:
@@ -130,7 +156,7 @@ jobs:
     needs: [yaml-check, render-tocless]
     runs-on: ubuntu-latest
     container:
-      image: jhudsl/ottrpal:main
+      image: jhudsl/ottrpal
     if: ${{needs.yaml-check.outputs.toggle_leanpub == 'yes'}}
 
     steps:
@@ -145,6 +171,10 @@ jobs:
           git config --global --add safe.directory $GITHUB_WORKSPACE
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
+          ls docs/no_toc
 
       # Create screenshots
       - name: Run the screenshot creation
@@ -165,20 +195,19 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           rm -rf manuscript/
-          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
-          git fetch origin
           git add .
           git commit -m 'Delete manuscript folder' || echo "No changes to commit"
-          git pull --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
           git push -u origin main || echo "No changes to push"
 
       - name: Run ottrpal::bookdown_to_embed_leanpub
         if: ${{ needs.yaml-check.outputs.toggle_quiz_check == 'no'}}
         run: |
+          echo needs.yaml-check.outputs.toggle_make_book_txt == 'yes'
+          echo needs.yaml-check.outputs.toggle_make_book_txt
           Rscript -e "ottrpal::bookdown_to_embed_leanpub(
             render = FALSE, \
             chapt_img_key = 'resources/chapt_screen_images/chapter_urls.tsv', \
-            make_book_txt = as.logical('${{needs.yaml-check.outputs.make_book_txt}}'), \
+            make_book_txt = as.logical('${{needs.yaml-check.outputs.make_book_txt == 'yes'}}'), \
             quiz_dir = NULL)"
 
       - name: Run ottrpal::bookdown_to_embed_leanpub
@@ -187,7 +216,7 @@ jobs:
           Rscript -e "ottrpal::bookdown_to_embed_leanpub(
             render = FALSE, \
             chapt_img_key = 'resources/chapt_screen_images/chapter_urls.tsv', \
-            make_book_txt = as.logical('${{needs.yaml-check.outputs.make_book_txt}}'))"
+            make_book_txt = as.logical('${{needs.yaml-check.outputs.make_book_txt == 'yes'}}'))"
 
       # Commit the rendered Leanpub files
       - name: Commit rendered Leanpub files
@@ -199,7 +228,8 @@ jobs:
           git add --force resources/*
           git add --force docs/*
           git commit -m 'Render Leanpub' || echo "No changes to commit"
-          git pull --allow-unrelated-histories --strategy-option=ours
+          git status docs/*
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours --autostash
           git push --force --set-upstream origin main || echo "No changes to push"
 
   render-coursera:
@@ -222,6 +252,9 @@ jobs:
           git config --global --add safe.directory $GITHUB_WORKSPACE
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
+          git fetch origin
+          git pull --rebase --allow-unrelated-histories --strategy-option=ours
 
       # Run Coursera version
       - name: Convert Leanpub quizzes to Coursera
@@ -229,14 +262,12 @@ jobs:
         id: coursera
         run: Rscript -e "ottrpal::convert_coursera_quizzes()"
 
-      # Commit the rendered bookdown files
+      # Commit the rendered files
       # Only commit coursera quizzes if the directory is present
       - name: Commit rendered Coursera files
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git remote set-url origin https://${GH_PAT}@github.com/${GITHUB_REPOSITORY}
-          git fetch origin
           if [ -d 'coursera_quizzes' ]; then
             git add --force coursera_quizzes/*
           fi
@@ -244,5 +275,5 @@ jobs:
           git add --force resources/*
           git add --force docs/*
           git commit -m 'Render Coursera quizzes' || echo "No changes to commit"
-          git pull --rebase --allow-unrelated-histories --strategy-option=ours
+          git status
           git push -u origin main  || echo "No changes to push"
