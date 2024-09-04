@@ -1,5 +1,5 @@
 # Candace Savonen 2021
-# Updated Jan 2023
+# Updated May 2024
 
 name: Pull Request
 
@@ -39,11 +39,12 @@ jobs:
           branch_name='preview-${{ github.event.pull_request.number }}'
           echo branch doesnt exist
           git checkout -b $branch_name || echo branch exists
-          git push --set-upstream origin $branch_name || echo echo branch exists remotely
+          git push --set-upstream origin $branch_name || echo branch exists remotely
         shell: bash
 
 
     outputs:
+      toggle_website: "${{ env.RENDER_WEBSITE }}"
       toggle_spell_check: "${{ env.SPELL_CHECK }}"
       toggle_style_code: "${{ env.STYLE_CODE }}"
       toggle_url_check: "${{ env.URL_CHECKER }}"
@@ -101,13 +102,13 @@ jobs:
           fetch-depth: 0
 
       - name: Run styler
-        run: Rscript -e "styler::style_file(list.files(pattern = 'Rmd$', recursive = TRUE, full.names = TRUE));warnings()"
+        run: Rscript -e "styler::style_file(list.files(pattern = '(R|q)md$', recursive = FALSE, full.names = TRUE));warnings()"
 
       - name: Commit styled files
         run: |
           git config --system --add safe.directory "$GITHUB_WORKSPACE"
-          git add \*.Rmd
-          git commit -m 'Style Rmds' || echo "No changes to commit"
+          git add \*md
+          git commit -m 'Style *mds' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
 
 ############################# Render Preview ###################################
@@ -142,23 +143,32 @@ jobs:
       # Run bookdown rendering
       - name: Run bookdown render
         id: bookdown
+        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
         run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
 
-      # Run TOC-less version
-      # Rendered content for Leanpub and Coursera is very similar.
-      # This job creates a shared scaffold for both.
-      - name: Run TOC-less version of render
-        id: tocless
-        run: Rscript -e "ottrpal::render_without_toc()"
+      # Run quarto rendering
+      - name: Render quarto version
+        id: quarto
+        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
+        run: Rscript -e "quarto::quarto_render('.')"
 
       # This checks on the steps before it and makes sure that they completed.
       # If the renders didn't complete we don't want to commit the file changes
-      - name: Check on render steps
-        if: steps.bookdown.outcome != 'success' || steps.tocless.outcome != 'success'
+      - name: Check on Rmd render steps
+        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
         run: |
           echo Bookdown status ${{steps.bookdown.outcome}}
-          echo Toc-less status ${{steps.tocless.outcome}}
-          exit 1
+          if [${{steps.bookdown.outcome}} != 'success']; then
+            exit 1
+          fi
+
+      - name: Check on quarto render steps
+        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
+        run: |
+          echo Quarto status ${{steps.quarto.outcome}}
+          if [${{steps.quarto.outcome}} != 'success']; then
+            exit 1
+          fi
 
       - name: Website preview for download
         run: zip website-preview.zip docs/* -r
@@ -189,12 +199,10 @@ jobs:
         run: |
           course_name=$(head -n 1 _bookdown.yml | cut -d'"' -f 2| tr " " "-")
           bookdown_link=$(echo "https://htmlpreview.github.io/?https://raw.githubusercontent.com/$GITHUB_REPOSITORY/preview-${{ github.event.pull_request.number }}/docs/index.html")
-          tocless_link=$(echo "https://htmlpreview.github.io/?https://raw.githubusercontent.com/$GITHUB_REPOSITORY/preview-${{ github.event.pull_request.number }}/docs/no_toc/index.html")
           docx_link=$(echo "https://github.com/$GITHUB_REPOSITORY/raw/preview-${{ github.event.pull_request.number }}/docs/$course_name.docx")
           zip_link=$(echo "https://github.com/$GITHUB_REPOSITORY/raw/preview-${{ github.event.pull_request.number }}/website-preview.zip")
           echo "zip_link=$zip_link" >> $GITHUB_OUTPUT
           echo "bookdown_link=$bookdown_link" >> $GITHUB_OUTPUT
-          echo "tocless_link=$tocless_link" >> $GITHUB_OUTPUT
           echo "docx_link=$docx_link" >> $GITHUB_OUTPUT
           echo "time=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
           echo "commit_id=$GITHUB_SHA" >> $GITHUB_OUTPUT
