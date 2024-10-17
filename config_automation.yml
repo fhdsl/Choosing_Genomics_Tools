@@ -21,9 +21,9 @@ render-website: rmd
 render-leanpub: yes
 render-coursera: no
 
-## Automate the creation of Book.txt file? TRUE/FALSE?
+## Automate the creation of Book.txt file? yes/no
 ## This is only relevant if render-leanpub is yes, otherwise it will be ignored
-make-book-txt: TRUE
+make-book-txt: yes
 
 # What docker image should be used for rendering?
 # The default is jhudsl/base_ottr:main
