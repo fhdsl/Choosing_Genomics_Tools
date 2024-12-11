@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="chip-seq-1.html"/>
 <link rel="next" href="dna-methylation-sequencing.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 19 CUT&amp;RUN and CUT&amp;Tag | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,21 +535,21 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="cutrun-and-cuttag" class="section level1" number="19">
-<h1><span class="header-section-number">Chapter 19</span> CUT&amp;RUN and CUT&amp;Tag</h1>
+<div id="cutrun-and-cuttag" class="section level1 hasAnchor" number="19">
+<h1><span class="header-section-number">Chapter 19</span> CUT&amp;RUN and CUT&amp;Tag<a href="cutrun-and-cuttag.html#cutrun-and-cuttag" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-17" class="section level2" number="19.1">
-<h2><span class="header-section-number">19.1</span> Learning Objectives</h2>
+<div id="learning-objectives-17" class="section level2 hasAnchor" number="19.1">
+<h2><span class="header-section-number">19.1</span> Learning Objectives<a href="cutrun-and-cuttag.html#learning-objectives-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a3974d9533_0_10.png" width="100%" /></p>
 </div>
-<div id="technologies" class="section level2" number="19.2">
-<h2><span class="header-section-number">19.2</span> Technologies</h2>
+<div id="technologies" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Technologies<a href="cutrun-and-cuttag.html#technologies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2aeb8138211_0_0.png" width="100%" /></p>
 </div>
-<div id="advantages-of-cutrun-and-cuttag-over-the-traditional-chip-seq-technology" class="section level2" number="19.3">
-<h2><span class="header-section-number">19.3</span> Advantages of CUT&amp;RUN and CUT&amp;Tag over the Traditional ChIP-seq Technology</h2>
+<div id="advantages-of-cutrun-and-cuttag-over-the-traditional-chip-seq-technology" class="section level2 hasAnchor" number="19.3">
+<h2><span class="header-section-number">19.3</span> Advantages of CUT&amp;RUN and CUT&amp;Tag over the Traditional ChIP-seq Technology<a href="cutrun-and-cuttag.html#advantages-of-cutrun-and-cuttag-over-the-traditional-chip-seq-technology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><strong>Lower Cell Number and Less Starting Material Requirement</strong>: CUT&amp;RUN and CUT&amp;Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&amp;RUN and CUT&amp;Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing.</li>
 </ul>
@@ -572,8 +566,8 @@ div.csl-indent {
 <li><p><strong>Cost-Effectiveness</strong>: In addition to high efficiency in sequencing the target region, due to the lower requirement for reagents and enzymes, CUT&amp;RUN and CUT&amp;Tag can be more cost-effective, especially in high-throughput settings.</p></li>
 <li><p><strong>More Efficient Protocol Workflow and Faster Turnaround Time</strong>: The protocol for CUT&amp;RUN and CUT&amp;Tag is more streamlined and less labor-intensive than ChIP-seq. It eliminates the need for sonication, DNA purification, and ligation steps, simplifying the procedure. The overall protocols of CUT&amp;RUN and CUT&amp;Tag are generally quicker and more straightforward than ChIP-seq, leading to faster experiment turnaround times.</p></li>
 </ul>
-<div id="cutrun-1" class="section level3" number="19.3.1">
-<h3><span class="header-section-number">19.3.1</span> CUT&amp;RUN</h3>
+<div id="cutrun-1" class="section level3 hasAnchor" number="19.3.1">
+<h3><span class="header-section-number">19.3.1</span> CUT&amp;RUN<a href="cutrun-and-cuttag.html#cutrun-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Cleavage Under Targets and Release Using Nuclease</strong>, <strong>CUT&amp;RUN</strong> for short, is an antibody-targeted chromatin profiling method to measure the histone modification enrichment or transcription factor binding. This is a more advanced technology for epigenomic landscape profiling compared to the traditional ChIP-seq technology and known for its easy implementation and low cost. The procedure is carried out in situ where micrococcal nuclease tethered to protein A binds to an antibody of choice and cuts immediately adjacent DNA, releasing DNA-bound to the antibody target. Therefore, CUT&amp;RUN produces precise transcription factor or histone modification profiles while avoiding crosslinking and solubilization issues. Extremely low backgrounds make profiling possible with typically one-tenth of the sequencing depth required for ChIP-seq and permit profiling using low cell numbers (i.e., a few hundred cells) without losing quality.</p>
 <!-- [Henikoff lab](https://research.fredhutch.org/henikoff/en.html) constructed a 6xHis and HA-tagged protein A-protein G-MNase fusion (pAG-MNase) that allows direct binding of mouse antibodies that bind poorly to protein A, eliminating the need for a secondary antibody. The His tag allows the purification of pAG-MNase with a commercial kit, while the HA tag can be used for pulling out pAG-MNase chromatin complexes for CUT&RUN.ChIP. Henikoff lab developed low salt and high calcium conditions that prevent diffusion of released complexes into the supernatant, allowing for longer digestion times and increased yields without increased cleavage at non-specific accessible sites. E. coli DNA carried over from pA-MNase or pAG-MNase preparation is sufficient for internal calibration of samples without adding heterologous spike-in DNA. -->
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_0.png" width="100%" /></p>
@@ -592,8 +586,8 @@ div.csl-indent {
 <li><a href="https://www.protocols.io/view/cut-amp-run-targeted-in-situ-genome-wide-profiling-14egnr4ql5dy/v3">CUT&amp;RUN: Targeted in situ genome-wide profiling with high efficiency for low cell numbers (Version 3)</a></li>
 <li><a href="https://www.protocols.io/view/cut-run-with-drosophila-tissues-14egnx28pl5d/v1">CUT&amp;RUN with Drosophila tissues (Version 1)</a></li>
 </ol>
-<div id="autocutrun" class="section level4" number="19.3.1.1">
-<h4><span class="header-section-number">19.3.1.1</span> AutoCUT&amp;RUN</h4>
+<div id="autocutrun" class="section level4 hasAnchor" number="19.3.1.1">
+<h4><span class="header-section-number">19.3.1.1</span> AutoCUT&amp;RUN<a href="cutrun-and-cuttag.html#autocutrun" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>CUT&amp;RUN has been automated using a Beckman Biomek FX liquid-handling robot so that a 96-well format can be used to profile chromatin for high-throughput samples, such as in a clinical setting. DNA end polishing and direct ligation of adapters permit sample-to-Illumina library processing of 96 samples in two days. AutoCUT&amp;RUN can be used for cell-type specific gene activity and enhancer profiling based on histone modifications and transcription factors, including in frozen tissue samples of tumor xenografts.</p>
 <ul>
 <li>Publication:</li>
@@ -609,8 +603,8 @@ div.csl-indent {
 </ol>
 </div>
 </div>
-<div id="cuttag-1" class="section level3" number="19.3.2">
-<h3><span class="header-section-number">19.3.2</span> CUT&amp;Tag</h3>
+<div id="cuttag-1" class="section level3 hasAnchor" number="19.3.2">
+<h3><span class="header-section-number">19.3.2</span> CUT&amp;Tag<a href="cutrun-and-cuttag.html#cuttag-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Cleavage Under Targets and Tagmentation</strong>, <strong>CUT&amp;Tag</strong> for short, is an enzyme tethering approach to profiling chromatin proteins, including histone marks and RNA Pol II. CUT&amp;Tag generates sequence-ready libraries without the need for end polishing and adapter ligation. It uses a proteinA-Tn5 fusion to tether Tn5 transposase near the site of an antibody to a chromatin protein of interest. A secondary antibody, such as guinea pig anti-rabbit antibody, is used to increase the efficiency of tethering the pA-Tn5 to the target primary antibody. The pA-Tn5 complex is pre-loaded with sequencing adapters that insert into adjacent DNA upon activation with magnesium. CUT&amp;Tag has a very low background and can be performed in a single tube in as little as a day, though primary antibodies are typically incubated overnight. It can also be used with the ICELL8 nano dispensation system to profile single cells.</p>
 <p>A streamlined CUT&amp;Tag protocol was introduced by the <a href="https://research.fredhutch.org/henikoff/en.html">Henikoff Lab</a> that suppresses DNA accessibility artifacts to ensure high-fidelity mapping of the antibody-targeted protein and improves the signal-to-noise ratio over current chromatin profiling methods. Streamlined CUT&amp;Tag can be performed in a single PCR tube, from cells to amplified libraries, providing low-cost genome-wide chromatin maps. By simplifying library preparation, CUT&amp;Tag-direct requires less than a day at the bench, from live cells to sequencing-ready barcoded libraries. As a result of low background levels, barcoded and pooled CUT&amp;Tag libraries can be sequenced for as little as $25 per sample. This enables routine genome-wide profiling of chromatin proteins and modifications and requires no special skills or equipment.</p>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_7.png" width="100%" /></p>
@@ -630,8 +624,8 @@ div.csl-indent {
 <li><a href="https://www.protocols.io/view/3xflag-patn5-protein-purification-and-meds-loading-j8nlke4e5l5r/v1">3XFlag-pATn5 Protein Purification and MEDS-loading (5x scale, 2L volume, Version 1)</a></li>
 <li><a href="https://www.protocols.io/view/cut-tag-with-drosophila-tissues-3byl4kkprvo5/v1">CUT&amp;Tag with Drosophila tissues (Version 1)</a></li>
 </ol>
-<div id="autocuttag" class="section level4" number="19.3.2.1">
-<h4><span class="header-section-number">19.3.2.1</span> AutoCUT&amp;Tag</h4>
+<div id="autocuttag" class="section level4 hasAnchor" number="19.3.2.1">
+<h4><span class="header-section-number">19.3.2.1</span> AutoCUT&amp;Tag<a href="cutrun-and-cuttag.html#autocuttag" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>CUT&amp;Tag has been automated using a Beckman Coulter Biomek FX liquid handling robot so that a 96-well format can be used to profile chromatin for high-throughput samples, such as in a clinical setting. AutoCUT&amp;Tag can be used to profile the gene targets of fusions of the KMT2A lysine methyltransferase to other chromatin proteins, which characterize lymphoid, myeloid, and mixed lineage leukemias, uncovering heterogeneities that may underlie lineage plasticity.</p>
 <ul>
 <li>Publication:</li>
@@ -648,8 +642,8 @@ div.csl-indent {
 <li><a href="https://www.protocols.io/view/autocut-amp-tag-streamlined-genome-wide-profiling-14egn819qg5d/v1">AutoCUT&amp;Tag: streamlined genome-wide profiling of chromatin proteins on a liquid handling robot (Version 1)</a></li>
 </ol>
 </div>
-<div id="cutac" class="section level4" number="19.3.2.2">
-<h4><span class="header-section-number">19.3.2.2</span> CUTAC</h4>
+<div id="cutac" class="section level4 hasAnchor" number="19.3.2.2">
+<h4><span class="header-section-number">19.3.2.2</span> CUTAC<a href="cutrun-and-cuttag.html#cutac" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Cleavage Under Targeted Accessible Chromatin, CUTAC, for short, is a simple modification of the Tn5 transposase-mediated antibody-directed CUT&amp;Tag method that provides high-quality accessibility mapping in parallel with mapping of specific components of the chromatin landscape. Findings imply that regulatory sites detected by hyperaccessibility mapping are coupled to the initiation of RNA Polymerase II transcription via H3K4 methylation. CUTAC requires few resources and is sufficiently simple that it can be performed from nuclei to purified sequencing-ready libraries in single PCR tubes on a home workbench.</p>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_14.png" width="100%" /></p>
 <ul>
@@ -667,16 +661,16 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<div id="differences-between-cutrun-and-cuttag" class="section level2" number="19.4">
-<h2><span class="header-section-number">19.4</span> Differences between CUT&amp;RUN and CUT&amp;Tag</h2>
+<div id="differences-between-cutrun-and-cuttag" class="section level2 hasAnchor" number="19.4">
+<h2><span class="header-section-number">19.4</span> Differences between CUT&amp;RUN and CUT&amp;Tag<a href="cutrun-and-cuttag.html#differences-between-cutrun-and-cuttag" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>CUT&amp;RUN is more suitable than CUT&amp;Tag for transcription factor (TF) profiling because the salt will compete with TF binding to DNA during the high salt incubation. TF depending on the motif affinity, only binds to a few DNA basepairs, and TF binding can be weak and compelled by salt. As demonstrated by <a href="https://www.nature.com/articles/s41467-019-09982-5">Kaya-Okur et al. 2019</a>, the CUT&amp;Tag signal of CTCF, one of the strongest binding factors, can be observed but become relatively weak. Therefore, it can be challenging for the peak caller to detect the enrichment of CTCF profiled by CUT&amp;Tag. Hence, it can also be hard to find the motif pattern practically.</p></li>
 <li><p>CUT&amp;Tag is more suitable for histone modification and RNA polymerase profiling as DNA wraps around the histone and RNA polymerase structure inserts and grabs the DNA. The DNA binding from both histone modification marks and PolII is strong. CUT&amp;Tag for histone modification also showed moderately higher signals compared to CUT&amp;RUN throughout the list of sites in <a href="https://www.nature.com/articles/s41467-019-09982-5">Kaya-Okur et al. 2019</a>.</p></li>
 <li><p>CUT&amp;RUN must be followed by DNA end polishing and adapter ligation to prepare sequencing libraries, which increases the time, cost, and effort of the overall procedure. Moreover, the release of MNase-cleaved fragments into the supernatant with CUT&amp;RUN is not well-suited for application to single-cell platforms.</p></li>
 </ul>
 </div>
-<div id="limitation-of-cutrun-and-cuttag" class="section level2" number="19.5">
-<h2><span class="header-section-number">19.5</span> Limitation of CUT&amp;RUN and CUT&amp;Tag</h2>
+<div id="limitation-of-cutrun-and-cuttag" class="section level2 hasAnchor" number="19.5">
+<h2><span class="header-section-number">19.5</span> Limitation of CUT&amp;RUN and CUT&amp;Tag<a href="cutrun-and-cuttag.html#limitation-of-cutrun-and-cuttag" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>Dependency on Antibody Quality: Similar to ChIP-seq, CUT&amp;RUN and CUT&amp;Tag’s success heavily relies on the quality and specificity of the antibodies used. High-quality, highly specific antibodies are essential for reliable results, and the lack of such antibodies can limit the application of this technique.</p></li>
 <li><p>Likelihood of Over-digestion of DNA: Due to inappropriate timing of the Magnesium-dependent Tn5 reaction with CUT&amp;RUN, DNA can be over-cut, a similar limitation exists for contemporary ChIP-Seq protocols where enzymatic or sonicated DNA shearing must be optimized.</p></li>
@@ -685,12 +679,12 @@ div.csl-indent {
 <li><p>Challenges in Detecting Low Abundance TFs: While CUT&amp;RUN and CUT&amp;Tag are more sensitive than ChIP-seq, they can still face challenges in detecting TFs present in very low abundance in the cell.</p></li>
 </ul>
 </div>
-<div id="general-data-analysis-workflow" class="section level2" number="19.6">
-<h2><span class="header-section-number">19.6</span> General Data Analysis Workflow</h2>
+<div id="general-data-analysis-workflow" class="section level2 hasAnchor" number="19.6">
+<h2><span class="header-section-number">19.6</span> General Data Analysis Workflow<a href="cutrun-and-cuttag.html#general-data-analysis-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>CUT&amp;RUN and CUT&amp;Tag data analysis share a very similar strategy. Data analysis generally involves raw sequencing data alignment, quality control, normalization, peak calling, visualization, differential analysis, and other specific analyses for target scientific discoveries. A detailed data processing and analysis tutorial with reproducible codes and demo data can be found at <a href="https://www.protocols.io/view/cut-amp-tag-data-processing-and-analysis-tutorial-e6nvw93x7gmk/v1">CUT&amp;Tag Data Processing and Analysis Tutorial</a>,</p>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_22.png" width="100%" /></p>
-<div id="adapter-trimming" class="section level3" number="19.6.1">
-<h3><span class="header-section-number">19.6.1</span> Adapter Trimming</h3>
+<div id="adapter-trimming" class="section level3 hasAnchor" number="19.6.1">
+<h3><span class="header-section-number">19.6.1</span> Adapter Trimming<a href="cutrun-and-cuttag.html#adapter-trimming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If the read length is long, adapter trimming may be needed for more accurate alignment results. However, for CUT&amp;RUN and CUT&amp;Tag, if the read length is short (i.e., 25bp per end), the aligner can use a “soft-match” style algorithm to handle the remaining adapter at the end of the read. Therefore, the adapter trimming is not necessary in that scenario.</p>
 <ul>
 <li><a href="https://cutadapt.readthedocs.io/en/stable/">Cutadapt</a>: Cutadapt finds and removes adapter sequences, primers, poly-A tails, and other types of unwanted sequences from your high-throughput sequencing reads. It can remove a wide range of adapter sequences and is not limited to Illumina-specific adapters. Users can specify multiple adapter sequences. Cutadapt supports quality trimming, though with less granularity than Trimmomatic. It can be used for both paired-end and single-end reads and allows for filtering based on length after trimming.</li>
@@ -701,8 +695,8 @@ div.csl-indent {
 <li><a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a>: A flexible trimmer for Illumina Sequence Data. It trims low-quality bases from the start and end of the reads and scans the read with a sliding window to trim based on average quality. Trimmomatic can also remove Illumina-specific adapters with an option to specify custom adapter sequences. It is known for its high precision and flexibility. It can handle paired-end and single-end data.</li>
 </ul>
 </div>
-<div id="alignment-1" class="section level3" number="19.6.2">
-<h3><span class="header-section-number">19.6.2</span> Alignment</h3>
+<div id="alignment-1" class="section level3 hasAnchor" number="19.6.2">
+<h3><span class="header-section-number">19.6.2</span> Alignment<a href="cutrun-and-cuttag.html#alignment-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><a href="https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml">Bowtie2</a>: Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. It is particularly good at aligning reads of about 50 up to 100 characters to relatively large (e.g., mammalian) genomes. When aligning paired-end reads to the reference genome, filter and keep read pairs whose fragment lengths are between 10bp and 1000bp. Detailed recommended parameters can be found in the [tutorial].</li>
 </ul>
@@ -712,8 +706,8 @@ div.csl-indent {
 <li><a href="https://bio-bwa.sourceforge.net/bwa.shtml">BWA</a>: BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome.</li>
 </ul>
 </div>
-<div id="quality-control" class="section level3" number="19.6.3">
-<h3><span class="header-section-number">19.6.3</span> Quality control</h3>
+<div id="quality-control" class="section level3 hasAnchor" number="19.6.3">
+<h3><span class="header-section-number">19.6.3</span> Quality control<a href="cutrun-and-cuttag.html#quality-control" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The quality of the aligned data can be evaluated from the following aspects:</p>
 <ul>
 <li><p><strong>Sequencing depth</strong>: Check the number of reads mapped to the genome to see if it matches the expected sequencing depth. CUT&amp;RUN/CUT&amp;Tag data typically has very low backgrounds, so as few as 1 million mapped fragments can give robust profiles for a histone modification in the human genome.</p></li>
@@ -725,51 +719,51 @@ Moreover, tagmentation of DNA on the surface of nucleosomes also occurs, and plo
 </ul>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_0.png" width="100%" /></p>
 </div>
-<div id="normalization" class="section level3" number="19.6.4">
-<h3><span class="header-section-number">19.6.4</span> Normalization</h3>
-<div id="spike-in-scaling" class="section level4" number="19.6.4.1">
-<h4><span class="header-section-number">19.6.4.1</span> Spike-in Scaling</h4>
+<div id="normalization" class="section level3 hasAnchor" number="19.6.4">
+<h3><span class="header-section-number">19.6.4</span> Normalization<a href="cutrun-and-cuttag.html#normalization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="spike-in-scaling" class="section level4 hasAnchor" number="19.6.4.1">
+<h4><span class="header-section-number">19.6.4.1</span> Spike-in Scaling<a href="cutrun-and-cuttag.html#spike-in-scaling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>E. coli DNA is carried along with bacterially-produced pA-Tn5 protein and gets tagmented non-specifically during the reaction. The fraction of total reads that map to the E.coli genome depends on the yield of epitope-targeted CUT&amp;Tag and roso depends on the number of cells used and the abundance of that epitope in chromatin. Since a constant amount of pATn5 is added to CUT&amp;Tag reactions and brings along a fixed amount of E. coli DNA, E. coli reads can be used to normalize epitope abundance across experiments.</p>
 <p>The underlying assumption is that the ratio of fragments mapped to the primary genome to the E. coli genome (or other added DNA sequences if pA-Tn5 is purified and E.coli is not available anymore) is the same for a series of samples, each using the same number of cells. Because of this assumption, we do not normalize between experiments or batches of pATn5, which can have very different amounts of carry-over E. coli DNA. Using a constant C to avoid small fractions in normalized data, we define a scaling factor S as</p>
 <p><span class="math inline">\(S = \frac{C}{(Fragments Mapped To E.coli Genome)}\)</span></p>
 <p><span class="math inline">\(Normalized coverage = (Primary Genome Coverage) * S\)</span></p>
 <p>The scaling can be done using <a href="https://bedtools.readthedocs.io/en/latest/">bedtools</a>, genomecov function and parameter “-scale”.</p>
 </div>
-<div id="sequencing-depth-and-coverage-normalization" class="section level4" number="19.6.4.2">
-<h4><span class="header-section-number">19.6.4.2</span> Sequencing depth and coverage normalization</h4>
+<div id="sequencing-depth-and-coverage-normalization" class="section level4 hasAnchor" number="19.6.4.2">
+<h4><span class="header-section-number">19.6.4.2</span> Sequencing depth and coverage normalization<a href="cutrun-and-cuttag.html#sequencing-depth-and-coverage-normalization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Without a spike-in, normalization to eliminate the sequencing depth and coverage variations can be done by the following formula:</p>
 <p>Normalized Count = <span class="math inline">\(\frac{Raw Count}{Sum of Fragments Coverage} * Genome_Size\)</span></p>
 <p>Sum of Fragments Coverage = sum of all fragment lengths. Namely, Sum_of_Fragments_Coverage includes both the sequencing depth and coverage information. Note that only fragments that are within 1bp~1000bp are considered.</p>
 </div>
 </div>
-<div id="peak-calling-2" class="section level3" number="19.6.5">
-<h3><span class="header-section-number">19.6.5</span> Peak Calling</h3>
-<div id="seacr" class="section level4" number="19.6.5.1">
-<h4><span class="header-section-number">19.6.5.1</span> <a href="https://github.com/FredHutch/SEACR">SEACR</a></h4>
+<div id="peak-calling-2" class="section level3 hasAnchor" number="19.6.5">
+<h3><span class="header-section-number">19.6.5</span> Peak Calling<a href="cutrun-and-cuttag.html#peak-calling-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="seacr" class="section level4 hasAnchor" number="19.6.5.1">
+<h4><span class="header-section-number">19.6.5.1</span> <a href="https://github.com/FredHutch/SEACR">SEACR</a><a href="cutrun-and-cuttag.html#seacr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The <a href="https://epigeneticsandchromatin.biomedcentral.com/articles/10.1186/s13072-019-0287-4">Sparse Enrichment Analysis for CUT&amp;RUN</a>, SEACR for short, is a R package designed to call peaks and enriched regions from chromatin profiling data with very low backgrounds (i.e., regions with no read coverage) that are typical for CUT&amp;Tag chromatin profiling experiments. SEACR requires bedGraph files from paired-end sequencing as input and defines peaks as contiguous blocks of basepair coverage that do not overlap with blocks of background signal delineated in the IgG control dataset. If IgG control is available, use the IgG sample as the “control sample” and choose the “norm stringent” setting. If IgG is unavailable, users can use the “top *% peaks” by only providing the target marker sample.</p>
 <p>Web server:</p>
 <p><a href="https://seacr.fredhutch.org/">Peak calling by Sparse Enrichment Analysis for CUT&amp;RUN (SEACR) Web Interface</a></p>
 </div>
-<div id="macs2" class="section level4" number="19.6.5.2">
-<h4><span class="header-section-number">19.6.5.2</span> <a href="https://pypi.org/project/MACS2/">MACS2</a></h4>
+<div id="macs2" class="section level4 hasAnchor" number="19.6.5.2">
+<h4><span class="header-section-number">19.6.5.2</span> <a href="https://pypi.org/project/MACS2/">MACS2</a><a href="cutrun-and-cuttag.html#macs2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The <a href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2008-9-9-r137">Model-based Analysis of ChIP-Seq</a> version 2, MACS2 for short, is widely used for identifying transcription factor binding sites and histone modification regions in ChIP-Seq data. MACS2 has been widely adapted to analyze the CUT&amp;RUN/CUT&amp;Tag data. Installation details can be found at <a href="https://github.com/taoliu/MACS/wiki" class="uri">https://github.com/taoliu/MACS/wiki</a>.</p>
 </div>
-<div id="seacr-vs-macs2" class="section level4" number="19.6.5.3">
-<h4><span class="header-section-number">19.6.5.3</span> SEACR vs MACS2</h4>
+<div id="seacr-vs-macs2" class="section level4 hasAnchor" number="19.6.5.3">
+<h4><span class="header-section-number">19.6.5.3</span> SEACR vs MACS2<a href="cutrun-and-cuttag.html#seacr-vs-macs2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><p>SEACR is better suited for datasets with broad signal enrichment, such as H3K27me3, where peaks are broader and can continuously cover a large genomic region. MACS2 excels in datasets with sharp peaks, such as H3K4me3, where peaks are concentrated and isolated from the background and adjacent peaks.</p></li>
 <li><p>SEACR uses a straightforward thresholding approach, which can be more intuitive but may miss some nuances in the data. MACS2 uses a more complex statistical model to identify peaks, offering potentially greater accuracy but at the cost of computational complexity.</p></li>
 <li><p>SEACR offers more flexibility in handling different types of CUT&amp;RUN/CUT&amp;Tag data, especially in the absence of control samples or the control samples are of low quality. MACS2 generally requires high-quality control samples for best performance and is less flexible in this regard.</p></li>
 </ul>
 </div>
-<div id="fragment-proportion-in-peaks-regions-frips" class="section level4" number="19.6.5.4">
-<h4><span class="header-section-number">19.6.5.4</span> FRagment proportion in Peaks regions (FRiPs)</h4>
+<div id="fragment-proportion-in-peaks-regions-frips" class="section level4 hasAnchor" number="19.6.5.4">
+<h4><span class="header-section-number">19.6.5.4</span> FRagment proportion in Peaks regions (FRiPs)<a href="cutrun-and-cuttag.html#fragment-proportion-in-peaks-regions-frips" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Fragment proportion in Peak Regions, FRiPs for short, is also a critical signal-to-noise measurement. Although sequencing depths for CUT&amp;Tag are typically only 1-5 million reads, the low background of the method usually results in high FRiP scores. In other words, it measures the percentage of sequencing resources accurately allocated to the target epitope regions. Note that the number of peaks and FRiPs typically increase with the sequencing depth and mappable fragment number, therefore comparisons should be done by downsampling samples to the same number of fragment. For example, the comparison across technologies in <a href="https://elifesciences.org/articles/63274">Efficient chromatin accessibility mapping in situ by nucleosome-tethered tagmentation</a> Figure 5A:</p>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a7dbc78b0e_0_0.png" width="100%" /></p>
 </div>
 </div>
-<div id="visualization-1" class="section level3" number="19.6.6">
-<h3><span class="header-section-number">19.6.6</span> Visualization</h3>
+<div id="visualization-1" class="section level3 hasAnchor" number="19.6.6">
+<h3><span class="header-section-number">19.6.6</span> Visualization<a href="cutrun-and-cuttag.html#visualization-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><a href="https://igv.org/doc/desktop/">Integrative Genomic Viewer</a>: IGV visualizes the chromatin landscape in regions using a genome browser. It provides a web app version and a local desktop version that is easy to use.</p></li>
 <li><p><a href="https://genome.ucsc.edu/">UCSC Genome Browser</a>: UCSC Genome Browser provides the most comprehensive supplementary genome information.</p></li>
@@ -777,8 +771,8 @@ Moreover, tagmentation of DNA on the surface of nucleosomes also occurs, and plo
 </ul>
 <p><img src="resources/images/11d-CUT-and-RUN_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_6.png" width="100%" /></p>
 </div>
-<div id="differential-analysis" class="section level3" number="19.6.7">
-<h3><span class="header-section-number">19.6.7</span> Differential Analysis</h3>
+<div id="differential-analysis" class="section level3 hasAnchor" number="19.6.7">
+<h3><span class="header-section-number">19.6.7</span> Differential Analysis<a href="cutrun-and-cuttag.html#differential-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><a href="https://greenleaflab.github.io/chromVAR/reference/getCounts.html">chromVAR - getCounts</a>. The “getCounts” function in the chromVAR R package can convert an aligned bam file into a region by sample matrix, where the region can be genomic binning or peaks. The differential detection analysis can be performed on the region by sample matrix.</p></li>
 <li><p><a href="https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html">DESeq2</a>: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8">Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</a>
@@ -790,8 +784,8 @@ Differential expression analysis of RNA-seq expression profiles with biological 
 </ul>
 </div>
 </div>
-<div id="more-resources-about-cutrun-and-cuttag-data-analysis" class="section level2" number="19.7">
-<h2><span class="header-section-number">19.7</span> More resources about CUT&amp;RUN and CUT&amp;Tag data analysis</h2>
+<div id="more-resources-about-cutrun-and-cuttag-data-analysis" class="section level2 hasAnchor" number="19.7">
+<h2><span class="header-section-number">19.7</span> More resources about CUT&amp;RUN and CUT&amp;Tag data analysis<a href="cutrun-and-cuttag.html#more-resources-about-cutrun-and-cuttag-data-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p><a href="https://bitbucket.org/qzhudfci/cutruntools/src/master/">CUT&amp;RUNTools</a>: <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1802-4">a flexible pipeline for CUT&amp;RUN processing and footprint analysis</a>. CUT&amp;RUNTools is a flexible and general pipeline for facilitating the identification of chromatin-associated protein binding and genomic footprinting analysis from antibody-targeted CUT&amp;RUN primary cleavage data. CUT&amp;RUNTools extracts endonuclease cut site information from sequences of short-read fragments and produces single-locus binding estimates, aggregate motif footprints, and informative visualizations to support the high-resolution mapping capability of CUT&amp;RUN.</p></li>
 <li><p><a href="https://github.com/fl-yu/CUT-RUNTools-2.0">CUT&amp;RUNTools 2.0</a>: <a href="https://academic.oup.com/bioinformatics/article/38/1/252/6318389?login=true">a pipeline for single-cell and bulk-level CUT&amp;RUN and CUT&amp;Tag data analysis</a>. CUT&amp;RUNTools 2.0 is a major update of CUT&amp;RUNTools, including a set of new features specially designed for CUT&amp;RUN and CUT&amp;Tag experiments. Both the bulk and single-cell data can be processed, analyzed, and interpreted using CUT&amp;RUNTools 2.0.</p></li>
@@ -802,10 +796,17 @@ Differential expression analysis of RNA-seq expression profiles with biological 
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -875,7 +876,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

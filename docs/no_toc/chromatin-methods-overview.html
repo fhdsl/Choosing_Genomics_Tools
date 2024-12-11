@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 15 Chromatin Methods Overview | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 15 Chromatin Methods Overview | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="spatial-transcriptomics-1.html"/>
 <link rel="next" href="atac-seq-1.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 15 Chromatin Methods Overview | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,24 +535,24 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="chromatin-methods-overview" class="section level1" number="15">
-<h1><span class="header-section-number">Chapter 15</span> Chromatin Methods Overview</h1>
+<div id="chromatin-methods-overview" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">Chapter 15</span> Chromatin Methods Overview<a href="chromatin-methods-overview.html#chromatin-methods-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is incomplete! If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 <p>In its existing form, this chapter has been written with AI and still needs further verification by experts.</p>
 </div>
-<div id="learning-objectives-13" class="section level2" number="15.1">
-<h2><span class="header-section-number">15.1</span> Learning Objectives</h2>
-<p><img src="resources/images/11-chromatin_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png" title="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." alt="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." width="100%" /></p>
+<div id="learning-objectives-13" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> Learning Objectives<a href="chromatin-methods-overview.html#learning-objectives-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/11-chromatin_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png" alt="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." width="100%" /></p>
 </div>
-<div id="why-are-people-interested-in-chromatin" class="section level2" number="15.2">
-<h2><span class="header-section-number">15.2</span> Why are people interested in chromatin?</h2>
+<div id="why-are-people-interested-in-chromatin" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Why are people interested in chromatin?<a href="chromatin-methods-overview.html#why-are-people-interested-in-chromatin" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Chromatin plays a crucial role in regulating gene expression, which is essential for a wide range of biological processes. It is the complex of DNA and proteins that make up the structure of chromosomes in the nucleus of a cell. The DNA in chromatin is packaged around histone proteins in a way that can either promote or inhibit access to the DNA by other proteins that control gene expression. Specifically, chromatin structure can affect the ability of transcription factors and RNA polymerase to bind to and transcribe genes.</p>
 <p>Changes in chromatin structure can lead to changes in gene expression, which can have profound effects on cell function and development. For example, chromatin remodeling is a key step in cell differentiation, during which cells become specialized and take on specific functions. Dysregulation of chromatin structure can also lead to the development of diseases, such as cancer, in which aberrant gene expression contributes to uncontrolled cell growth and proliferation.</p>
 <p>Therefore, understanding the mechanisms that regulate chromatin structure and function is crucial for advancing our understanding of cellular processes, disease development, and potential therapies. This is why chromatin research has become a major area of focus in molecular biology and genomics research.</p>
 </div>
-<div id="what-kinds-of-questions-can-chromatin-answer" class="section level2" number="15.3">
-<h2><span class="header-section-number">15.3</span> What kinds of questions can chromatin answer?</h2>
+<div id="what-kinds-of-questions-can-chromatin-answer" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> What kinds of questions can chromatin answer?<a href="chromatin-methods-overview.html#what-kinds-of-questions-can-chromatin-answer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>How are genes turned on and off in response to developmental cues or environmental stimuli?</li>
 <li>What are the mechanisms by which chromatin structure is altered during cell differentiation and development?</li>
@@ -567,8 +561,8 @@ div.csl-indent {
 <li>How is chromatin structure altered in diseases such as cancer, and how can this knowledge be used to develop new therapies?</li>
 <li>How can we manipulate chromatin structure to selectively activate or repress specific genes, and what are the potential applications of such approaches?</li>
 </ul>
-<div id="chromatin-is-involved-in-a-variety-of-biological-processes" class="section level3" number="15.3.1">
-<h3><span class="header-section-number">15.3.1</span> Chromatin is involved in a variety of biological processes:</h3>
+<div id="chromatin-is-involved-in-a-variety-of-biological-processes" class="section level3 hasAnchor" number="15.3.1">
+<h3><span class="header-section-number">15.3.1</span> Chromatin is involved in a variety of biological processes:<a href="chromatin-methods-overview.html#chromatin-is-involved-in-a-variety-of-biological-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Gene expression</strong>: Chromatin structure and organization play a crucial role in regulating gene expression. The packaging of DNA around histone proteins can either promote or inhibit access to the DNA by other proteins that control gene expression.</li>
 <li><strong>DNA replication and repair</strong>: Chromatin structure can also affect DNA replication and repair. For example, histone modifications and chromatin remodeling can facilitate access to DNA replication and repair machinery.</li>
@@ -579,30 +573,30 @@ div.csl-indent {
 </ul>
 </div>
 </div>
-<div id="comparison-of-technologies" class="section level2" number="15.4">
-<h2><span class="header-section-number">15.4</span> Comparison of technologies</h2>
-<p><img src="resources/images/11-chromatin_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_5.png" title="A table that compares all the technologies:" alt="A table that compares all the technologies:" width="100%" /></p>
-<div id="atac-seq" class="section level3" number="15.4.1">
-<h3><span class="header-section-number">15.4.1</span> ATAC-seq:</h3>
+<div id="comparison-of-technologies" class="section level2 hasAnchor" number="15.4">
+<h2><span class="header-section-number">15.4</span> Comparison of technologies<a href="chromatin-methods-overview.html#comparison-of-technologies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/11-chromatin_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_5.png" alt="A table that compares all the technologies:" width="100%" /></p>
+<div id="atac-seq" class="section level3 hasAnchor" number="15.4.1">
+<h3><span class="header-section-number">15.4.1</span> ATAC-seq:<a href="chromatin-methods-overview.html#atac-seq" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>ATAC-seq (Assay for Transposase Accessible Chromatin using sequencing) is a technique that uses transposases to fragment DNA and insert sequencing adapters into accessible chromatin regions. The DNA fragments are then sequenced to identify regions of open chromatin. This technique is widely used to study the epigenetic regulation of gene expression.</p>
-<div id="when-to-use-atac-seq" class="section level4" number="15.4.1.1">
-<h4><span class="header-section-number">15.4.1.1</span> When to use ATAC-seq:</h4>
+<div id="when-to-use-atac-seq" class="section level4 hasAnchor" number="15.4.1.1">
+<h4><span class="header-section-number">15.4.1.1</span> When to use ATAC-seq:<a href="chromatin-methods-overview.html#when-to-use-atac-seq" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>When you want to study the epigenetic regulation of gene expression.</li>
 <li>When you want to identify open chromatin regions associated with regulatory elements such as enhancers and promoters.</li>
 <li>When you want to study various cell types and tissues, including difficult-to-access cell types.</li>
 </ul>
 </div>
-<div id="advantages" class="section level4" number="15.4.1.2">
-<h4><span class="header-section-number">15.4.1.2</span> Advantages:</h4>
+<div id="advantages" class="section level4 hasAnchor" number="15.4.1.2">
+<h4><span class="header-section-number">15.4.1.2</span> Advantages:<a href="chromatin-methods-overview.html#advantages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>ATAC-seq is a simple and cost-effective technique that requires a low amount of starting material.</li>
 <li>It allows the identification of open chromatin regions, which are usually associated with regulatory elements such as enhancers and promoters.</li>
 <li>ATAC-seq can be used to study various cell types and tissues, including difficult-to-access cell types.</li>
 </ul>
 </div>
-<div id="disadvantages" class="section level4" number="15.4.1.3">
-<h4><span class="header-section-number">15.4.1.3</span> Disadvantages:</h4>
+<div id="disadvantages" class="section level4 hasAnchor" number="15.4.1.3">
+<h4><span class="header-section-number">15.4.1.3</span> Disadvantages:<a href="chromatin-methods-overview.html#disadvantages" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>ATAC-seq can have high background noise due to non-specific cleavage of chromatin.</li>
 <li>It may miss lowly accessible regions due to a bias towards highly accessible regions.</li>
@@ -610,27 +604,27 @@ div.csl-indent {
 </ul>
 </div>
 </div>
-<div id="single-cell-atac-seq" class="section level3" number="15.4.2">
-<h3><span class="header-section-number">15.4.2</span> Single-cell ATAC-seq:</h3>
+<div id="single-cell-atac-seq" class="section level3 hasAnchor" number="15.4.2">
+<h3><span class="header-section-number">15.4.2</span> Single-cell ATAC-seq:<a href="chromatin-methods-overview.html#single-cell-atac-seq" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Single-cell ATAC-seq is a technique that combines single-cell sequencing and ATAC-seq to identify open chromatin regions in individual cells. This technique allows the study of epigenetic heterogeneity between cells and the identification of cell-specific regulatory elements.</p>
-<div id="when-to-use-single-cell-atac-seq" class="section level4" number="15.4.2.1">
-<h4><span class="header-section-number">15.4.2.1</span> When to use single-cell ATAC-seq:</h4>
+<div id="when-to-use-single-cell-atac-seq" class="section level4 hasAnchor" number="15.4.2.1">
+<h4><span class="header-section-number">15.4.2.1</span> When to use single-cell ATAC-seq:<a href="chromatin-methods-overview.html#when-to-use-single-cell-atac-seq" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>When you want to study the epigenetic heterogeneity between cells and identify cell-specific regulatory elements.</li>
 <li>When you want to identify rare cell types or rare cell states that may be missed by bulk techniques.</li>
 <li>When you want to study the epigenetic dynamics of cells in response to environmental changes.</li>
 </ul>
 </div>
-<div id="advantages-1" class="section level4" number="15.4.2.2">
-<h4><span class="header-section-number">15.4.2.2</span> Advantages:</h4>
+<div id="advantages-1" class="section level4 hasAnchor" number="15.4.2.2">
+<h4><span class="header-section-number">15.4.2.2</span> Advantages:<a href="chromatin-methods-overview.html#advantages-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Single-cell ATAC-seq allows the identification of open chromatin regions in individual cells, which provides cell-specific epigenetic information.</li>
 <li>It can identify rare cell types and rare cell states that may be missed by bulk techniques.</li>
 <li>It can be used to study the epigenetic dynamics of cells in response to environmental changes.</li>
 </ul>
 </div>
-<div id="disadvantages-1" class="section level4" number="15.4.2.3">
-<h4><span class="header-section-number">15.4.2.3</span> Disadvantages:</h4>
+<div id="disadvantages-1" class="section level4 hasAnchor" number="15.4.2.3">
+<h4><span class="header-section-number">15.4.2.3</span> Disadvantages:<a href="chromatin-methods-overview.html#disadvantages-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Single-cell ATAC-seq can have a higher level of technical noise due to the low amount of starting material.</li>
 <li>It can be challenging to obtain high-quality single-cell suspensions from tissues.</li>
@@ -638,19 +632,19 @@ div.csl-indent {
 </ul>
 </div>
 </div>
-<div id="chip-seq" class="section level3" number="15.4.3">
-<h3><span class="header-section-number">15.4.3</span> ChIP-seq:</h3>
+<div id="chip-seq" class="section level3 hasAnchor" number="15.4.3">
+<h3><span class="header-section-number">15.4.3</span> ChIP-seq:<a href="chromatin-methods-overview.html#chip-seq" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>ChIP-seq (Chromatin Immunoprecipitation sequencing) is a technique that uses antibodies to isolate specific DNA-protein complexes, such as transcription factors or histone modifications. The DNA fragments associated with the protein complexes are then sequenced to identify the genomic regions that are bound by the protein.</p>
-<div id="advantages-2" class="section level4" number="15.4.3.1">
-<h4><span class="header-section-number">15.4.3.1</span> Advantages:</h4>
+<div id="advantages-2" class="section level4 hasAnchor" number="15.4.3.1">
+<h4><span class="header-section-number">15.4.3.1</span> Advantages:<a href="chromatin-methods-overview.html#advantages-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>ChIP-seq allows the identification of specific protein-DNA interactions, which provides information on the regulation of gene expression.</li>
 <li>It can be used to study the epigenetic changes associated with specific cellular processes, such as differentiation or development.</li>
 <li>ChIP-seq can identify the binding sites of transcription factors, which can be used to identify regulatory elements such as enhancers and promoters.</li>
 </ul>
 </div>
-<div id="disadvantages-2" class="section level4" number="15.4.3.2">
-<h4><span class="header-section-number">15.4.3.2</span> Disadvantages:</h4>
+<div id="disadvantages-2" class="section level4 hasAnchor" number="15.4.3.2">
+<h4><span class="header-section-number">15.4.3.2</span> Disadvantages:<a href="chromatin-methods-overview.html#disadvantages-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>ChIP-seq requires a high amount of starting material and can be costly.</li>
 <li>It can have a high level of background noise due to non-specific binding of antibodies.</li>
@@ -658,11 +652,11 @@ div.csl-indent {
 </ul>
 </div>
 </div>
-<div id="cutrun" class="section level3" number="15.4.4">
-<h3><span class="header-section-number">15.4.4</span> CUT&amp;RUN</h3>
-<p>CUT&amp;RUN (Cleavage Under Targets &amp; Release Using Nuclease) is a relatively new genomic method that involves the targeted cleavage of DNA by a specific antibody or protein of interest, followed by the release and sequencing of the DNA fragments. The CUT&amp;RUN method was developed as a more streamlined alternative to the ChIP-seq (Chromatin Immunoprecipitation sequencing) method, which involves a more complex series of steps <span class="citation">Skene and Henikoff (<a href="#ref-skene2018targeted" role="doc-biblioref">2018</a>)</span>.</p>
-<div id="how-cutrun-works" class="section level4" number="15.4.4.1">
-<h4><span class="header-section-number">15.4.4.1</span> How CUT&amp;RUN works:</h4>
+<div id="cutrun" class="section level3 hasAnchor" number="15.4.4">
+<h3><span class="header-section-number">15.4.4</span> CUT&amp;RUN<a href="chromatin-methods-overview.html#cutrun" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>CUT&amp;RUN (Cleavage Under Targets &amp; Release Using Nuclease) is a relatively new genomic method that involves the targeted cleavage of DNA by a specific antibody or protein of interest, followed by the release and sequencing of the DNA fragments. The CUT&amp;RUN method was developed as a more streamlined alternative to the ChIP-seq (Chromatin Immunoprecipitation sequencing) method, which involves a more complex series of steps <span class="citation">Skene and Henikoff (<a href="#ref-skene2018targeted">2018</a>)</span>.</p>
+<div id="how-cutrun-works" class="section level4 hasAnchor" number="15.4.4.1">
+<h4><span class="header-section-number">15.4.4.1</span> How CUT&amp;RUN works:<a href="chromatin-methods-overview.html#how-cutrun-works" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Cells are permeabilized and incubated with a specific antibody or protein of interest. This antibody or protein is fused to a protein called Protein A-Micrococcal Nuclease (pA-MNase).
 After incubation, the pA-MNase is activated and cleaves the DNA in the vicinity of the bound antibody or protein of interest.
 The released DNA fragments are then purified and sequenced to identify the genomic regions that were bound by the antibody or protein of interest.</p>
@@ -674,11 +668,11 @@ The released DNA fragments are then purified and sequenced to identify the genom
 </ul>
 </div>
 </div>
-<div id="cuttag" class="section level3" number="15.4.5">
-<h3><span class="header-section-number">15.4.5</span> CUT&amp;Tag</h3>
-<p>CUT&amp;Tag (Cleavage Under Targets and Tagmentation) is similar to CUT&amp;RUN. It was developed as an improvement over CUT&amp;RUN, with the goal of reducing the amount of background noise and improving the efficiency of the method <span class="citation">(<a href="#ref-kaya2019cut" role="doc-biblioref">Kaya-Okur et al. 2019</a>)</span>.</p>
-<div id="how-cuttag-works" class="section level4" number="15.4.5.1">
-<h4><span class="header-section-number">15.4.5.1</span> How CUT&amp;Tag works:</h4>
+<div id="cuttag" class="section level3 hasAnchor" number="15.4.5">
+<h3><span class="header-section-number">15.4.5</span> CUT&amp;Tag<a href="chromatin-methods-overview.html#cuttag" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>CUT&amp;Tag (Cleavage Under Targets and Tagmentation) is similar to CUT&amp;RUN. It was developed as an improvement over CUT&amp;RUN, with the goal of reducing the amount of background noise and improving the efficiency of the method <span class="citation">(<a href="#ref-kaya2019cut">Kaya-Okur et al. 2019</a>)</span>.</p>
+<div id="how-cuttag-works" class="section level4 hasAnchor" number="15.4.5.1">
+<h4><span class="header-section-number">15.4.5.1</span> How CUT&amp;Tag works:<a href="chromatin-methods-overview.html#how-cuttag-works" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Cells are permeabilized and incubated with a specific antibody or protein of interest, which is fused to a protein called Protein A-Tn5 transposase.</li>
 <li>The Protein A-Tn5 transposase inserts sequencing adapters into the genomic DNA in the vicinity of the bound antibody or protein of interest.</li>
@@ -686,8 +680,8 @@ The released DNA fragments are then purified and sequenced to identify the genom
 </ol>
 <p>Like CUT&amp;RUN, CUT&amp;Tag allows for the specific cleavage of DNA in the vicinity of a target protein or antibody, but the addition of sequencing adapters in CUT&amp;Tag occurs directly in the nucleus, prior to DNA release. This results in less background noise and more efficient DNA recovery.</p>
 </div>
-<div id="advantages-3" class="section level4" number="15.4.5.2">
-<h4><span class="header-section-number">15.4.5.2</span> Advantages:</h4>
+<div id="advantages-3" class="section level4 hasAnchor" number="15.4.5.2">
+<h4><span class="header-section-number">15.4.5.2</span> Advantages:<a href="chromatin-methods-overview.html#advantages-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>CUT&amp;Tag has a lower level of background noise and higher sensitivity due to the addition of sequencing adapters in situ.</li>
 <li>CUT&amp;Tag requires less input material than CUT&amp;RUN, which makes it a more efficient method.</li>
@@ -696,19 +690,19 @@ The released DNA fragments are then purified and sequenced to identify the genom
 <p>Overall, both CUT&amp;RUN and CUT&amp;Tag are powerful genomic methods that allow for the efficient study of protein-DNA interactions and epigenetics. The choice between the two methods may depend on the specific research question and the availability of specific reagents or equipment.</p>
 </div>
 </div>
-<div id="gro-seq-global-run-on-sequencing" class="section level3" number="15.4.6">
-<h3><span class="header-section-number">15.4.6</span> GRO-seq (Global Run-On sequencing)</h3>
-<p>Allows for the genome-wide analysis of transcriptional activity by measuring the nascent RNA transcripts that are actively being synthesized by RNA polymerase. GRO-seq is a high-throughput sequencing-based technique that provides a snapshot of the transcriptional landscape of a cell <span class="citation">Park and Won (<a href="#ref-park2018gene" role="doc-biblioref">2018</a>)</span>.</p>
+<div id="gro-seq-global-run-on-sequencing" class="section level3 hasAnchor" number="15.4.6">
+<h3><span class="header-section-number">15.4.6</span> GRO-seq (Global Run-On sequencing)<a href="chromatin-methods-overview.html#gro-seq-global-run-on-sequencing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Allows for the genome-wide analysis of transcriptional activity by measuring the nascent RNA transcripts that are actively being synthesized by RNA polymerase. GRO-seq is a high-throughput sequencing-based technique that provides a snapshot of the transcriptional landscape of a cell <span class="citation">Park and Won (<a href="#ref-park2018gene">2018</a>)</span>.</p>
 </div>
-<div id="how-gro-seq-works" class="section level3" number="15.4.7">
-<h3><span class="header-section-number">15.4.7</span> How GRO-seq works:</h3>
+<div id="how-gro-seq-works" class="section level3 hasAnchor" number="15.4.7">
+<h3><span class="header-section-number">15.4.7</span> How GRO-seq works:<a href="chromatin-methods-overview.html#how-gro-seq-works" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Nuclei are isolated from cells and incubated with a biotinylated nucleotide triphosphate, which is incorporated into nascent RNA transcripts by RNA polymerase.</li>
 <li>The labeled RNA is then selectively captured using streptavidin beads, and the RNA is reverse-transcribed into cDNA.</li>
 <li>The cDNA is then sequenced to identify the regions of the genome that are actively transcribed.</li>
 </ol>
-<div id="advantages-4" class="section level4" number="15.4.7.1">
-<h4><span class="header-section-number">15.4.7.1</span> Advantages:</h4>
+<div id="advantages-4" class="section level4 hasAnchor" number="15.4.7.1">
+<h4><span class="header-section-number">15.4.7.1</span> Advantages:<a href="chromatin-methods-overview.html#advantages-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Its ability to distinguish between the sense and antisense strands of transcribed RNA</li>
 <li>Its ability to quantify the level of transcriptional activity in individual genes</li>
@@ -720,7 +714,7 @@ The released DNA fragments are then purified and sequenced to identify the genom
 </div>
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-kaya2019cut" class="csl-entry">
 Kaya-Okur, Hicran S, Suzanna J Wu, Catherine A Codomo, Emily S Pledger, Timothy D Bryson, and Jorja G Henikoff. 2019. <span>“CUT&amp;tag for Efficient Epigenomic Profiling of Small Samples and Single Cells.”</span> <em>Nature Communications</em> 10 (1): 1930.
@@ -733,10 +727,17 @@ Park, Daeun, and Kyoung-Jae Won. 2018. <span>“Gene Expression Profiling by GRO
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -806,7 +807,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

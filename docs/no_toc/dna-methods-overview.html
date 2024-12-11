@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 DNA Methods Overview | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 DNA Methods Overview | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="annotating-genomes.html"/>
 <link rel="next" href="whole-genome-or-exome-sequencing.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 9 DNA Methods Overview | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,32 +535,32 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="dna-methods-overview" class="section level1" number="9">
-<h1><span class="header-section-number">Chapter 9</span> DNA Methods Overview</h1>
+<div id="dna-methods-overview" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> DNA Methods Overview<a href="dna-methods-overview.html#dna-methods-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-7" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Learning Objectives</h2>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" title="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection for DNA sequence collection and variant identification. Compare and contrast the following methods: DNA/SNP microarrays, Whole Genome Sequencing, Whole Exome Sequencing, and Targeted Sequencing" alt="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection for DNA sequence collection and variant identification. Compare and contrast the following methods: DNA/SNP microarrays, Whole Genome Sequencing, Whole Exome Sequencing, and Targeted Sequencing" width="100%" /></p>
+<div id="learning-objectives-7" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Learning Objectives<a href="dna-methods-overview.html#learning-objectives-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" alt="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection for DNA sequence collection and variant identification. Compare and contrast the following methods: DNA/SNP microarrays, Whole Genome Sequencing, Whole Exome Sequencing, and Targeted Sequencing" width="100%" /></p>
 </div>
-<div id="what-are-the-goals-of-analyzing-dna-sequences" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> What are the goals of analyzing DNA sequences?</h2>
+<div id="what-are-the-goals-of-analyzing-dna-sequences" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> What are the goals of analyzing DNA sequences?<a href="dna-methods-overview.html#what-are-the-goals-of-analyzing-dna-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are several larger goals behind DNA sequencing experiments ranging from assembling whole genomes, to identifying variation or performing a functional genomic analysis or comparative genomic study. Each of these has implications when studying disease.</p>
 <ul>
 <li><p>Assembling whole genomes:</p>
-<p>Because an organism’s genome determines how an organism develops and functions <span class="citation">(<a href="#ref-NHGRIGlossary2024" role="doc-biblioref">NHGRI 2024</a>)</span>, an important task in the genomics field is assembling the genome of an organism from sequencing reads. This assembly process attempts to reconstruct how the sequencing reads overlap or fit together <span class="citation">(<a href="#ref-Schatz2010" role="doc-biblioref">Schatz, Delcher, and Salzberg 2010</a>; <a href="#ref-Li_Durbin_2024" role="doc-biblioref">Li and Durbin 2024</a>)</span>. Recent examples of genome assembly in the genomics field include a complete 3.055 billion-base pair sequence of the human reference genome which was published by the Telomere-to-Telomere (T2T) Consortium <span class="citation">(<a href="#ref-Nurk2022" role="doc-biblioref">2022</a>)</span>, the T2T-CHM13 version (followed not long after by the complete sequence of the human Y chromosome <span class="citation">(<a href="#ref-Rhie2023" role="doc-biblioref">2023</a>)</span>). A goal of the field is to better capture human genetic diversity by creating a reference pangenome, assembled from multiple donors within the population <span class="citation">(<a href="#ref-Taylor_2024" role="doc-biblioref">2024</a>)</span>. Genome assemblies are an important part of genomics beyond human genomics research; there are reference gnomes available for most model organisms as well as many plants, animals, and pathogens, with more and more being published at a high frequency <span class="citation">(<a href="#ref-Miller2023" role="doc-biblioref">Miller, Zimin, and Gordus 2023</a>; <a href="#ref-Alonge2022" role="doc-biblioref">Alonge et al. 2022</a>; <a href="#ref-Gershman2023" role="doc-biblioref">Gershman et al. 2023</a>; <a href="#ref-Sistrom2016" role="doc-biblioref">Sistrom et al. 2016</a>)</span>. These reference genomes each act as an extensive compilation of the observed DNA sequence of genes, regulatory elements, etc. and the related coordinate systems for these elements, such that, for the corresponding organism, sequencing reads from other experiments can be mapped or aligned to the reference in order to localize where that read was in the genome. In the case of cancer informatics, a recent approach utilized personalized genome assembly to more accurately detect tumor somatic mutations. This is likely to be an area of future research for application in precision medicine <span class="citation">(<a href="#ref-Xiao2022" role="doc-biblioref">Xiao et al. 2022</a>; <a href="#ref-Ermini_Driguez_2024" role="doc-biblioref">Ermini and Driguez 2024</a>)</span>.</p></li>
+<p>Because an organism’s genome determines how an organism develops and functions <span class="citation">(<a href="#ref-NHGRIGlossary2024">NHGRI 2024</a>)</span>, an important task in the genomics field is assembling the genome of an organism from sequencing reads. This assembly process attempts to reconstruct how the sequencing reads overlap or fit together <span class="citation">(<a href="#ref-Schatz2010">Schatz, Delcher, and Salzberg 2010</a>; <a href="#ref-Li_Durbin_2024">Li and Durbin 2024</a>)</span>. Recent examples of genome assembly in the genomics field include a complete 3.055 billion-base pair sequence of the human reference genome which was published by the Telomere-to-Telomere (T2T) Consortium <span class="citation">(<a href="#ref-Nurk2022">2022</a>)</span>, the T2T-CHM13 version (followed not long after by the complete sequence of the human Y chromosome <span class="citation">(<a href="#ref-Rhie2023">2023</a>)</span>). A goal of the field is to better capture human genetic diversity by creating a reference pangenome, assembled from multiple donors within the population <span class="citation">(<a href="#ref-Taylor_2024">2024</a>)</span>. Genome assemblies are an important part of genomics beyond human genomics research; there are reference gnomes available for most model organisms as well as many plants, animals, and pathogens, with more and more being published at a high frequency <span class="citation">(<a href="#ref-Miller2023">Miller, Zimin, and Gordus 2023</a>; <a href="#ref-Alonge2022">Alonge et al. 2022</a>; <a href="#ref-Gershman2023">Gershman et al. 2023</a>; <a href="#ref-Sistrom2016">Sistrom et al. 2016</a>)</span>. These reference genomes each act as an extensive compilation of the observed DNA sequence of genes, regulatory elements, etc. and the related coordinate systems for these elements, such that, for the corresponding organism, sequencing reads from other experiments can be mapped or aligned to the reference in order to localize where that read was in the genome. In the case of cancer informatics, a recent approach utilized personalized genome assembly to more accurately detect tumor somatic mutations. This is likely to be an area of future research for application in precision medicine <span class="citation">(<a href="#ref-Xiao2022">Xiao et al. 2022</a>; <a href="#ref-Ermini_Driguez_2024">Ermini and Driguez 2024</a>)</span>.</p></li>
 <li><p>Identifying variation:</p>
-<p>Variant caller software is used within the field of genomics to identify places where reads from a DNA sequencing experiment differ from a comparative reference genome sequence <span class="citation">(<a href="#ref-NHGRIfactsheet2022" role="doc-biblioref">NHGRI 2022</a>)</span>. Variants may be as small as single nucleotide differences (single-nucleotide polymorphisms or SNPs) or much larger (50 base pairs or more) structural variation (SVs) such as duplications, deletions, insertions, inversions, translocations <span class="citation">(<a href="#ref-Wong2011" role="doc-biblioref">Wong, Hudson, and McPherson 2011</a>)</span>. (Shorter insertions or deletions are termed indels.) The SVs involving gains or losses in genomic DNA can lead to copy number variations (CNVs). Mutation and structural variants are very common in cancer as well as larger-scale catastrophic genomic rearrangements <span class="citation">(<a href="#ref-Zhang2022" role="doc-biblioref">C.-Z. Zhang and Pellman 2022</a>)</span>. Overall, variants may be rare in a population or fairly common <span class="citation">(<a href="#ref-Audano2019" role="doc-biblioref">Audano et al. 2019</a>)</span>. Further, variants may be somatic or germline variants: germline variants are hereditary and will be passed down from parent to offspring; in the offspring, the variant will be present in every cell, while somatic variants are generally not hereditary and present only in some cells rather than every cell <span class="citation">(<a href="#ref-NHSFrost2022" role="doc-biblioref">Frost 2022</a>)</span>. Because variation, specifically genetic diversity is a necessary part of a healthy species <span class="citation">(<a href="#ref-GeneticDiversity" role="doc-biblioref"><span>“What Is Genetic Diversity and Why Does It Matter?”</span> n.d.</a>)</span> and because variation, specifically mutations/variants may cause disease, identifying variation is a common goal in a DNA sequencing workflow. An example of research focusing on studying genetic diversity in humans is the 1000 Genomes Project which recently expanded its resource of sequenced genomes and in doing so discovered even more variation present in the population <span class="citation">(<a href="#ref-Byrska-Bishop2022" role="doc-biblioref">Byrska-Bishop et al. 2022</a>)</span>.</p></li>
+<p>Variant caller software is used within the field of genomics to identify places where reads from a DNA sequencing experiment differ from a comparative reference genome sequence <span class="citation">(<a href="#ref-NHGRIfactsheet2022">NHGRI 2022</a>)</span>. Variants may be as small as single nucleotide differences (single-nucleotide polymorphisms or SNPs) or much larger (50 base pairs or more) structural variation (SVs) such as duplications, deletions, insertions, inversions, translocations <span class="citation">(<a href="#ref-Wong2011">Wong, Hudson, and McPherson 2011</a>)</span>. (Shorter insertions or deletions are termed indels.) The SVs involving gains or losses in genomic DNA can lead to copy number variations (CNVs). Mutation and structural variants are very common in cancer as well as larger-scale catastrophic genomic rearrangements <span class="citation">(<a href="#ref-Zhang2022">C.-Z. Zhang and Pellman 2022</a>)</span>. Overall, variants may be rare in a population or fairly common <span class="citation">(<a href="#ref-Audano2019">Audano et al. 2019</a>)</span>. Further, variants may be somatic or germline variants: germline variants are hereditary and will be passed down from parent to offspring; in the offspring, the variant will be present in every cell, while somatic variants are generally not hereditary and present only in some cells rather than every cell <span class="citation">(<a href="#ref-NHSFrost2022">Frost 2022</a>)</span>. Because variation, specifically genetic diversity is a necessary part of a healthy species <span class="citation">(<a href="#ref-GeneticDiversity"><span>“What Is Genetic Diversity and Why Does It Matter?”</span> n.d.</a>)</span> and because variation, specifically mutations/variants may cause disease, identifying variation is a common goal in a DNA sequencing workflow. An example of research focusing on studying genetic diversity in humans is the 1000 Genomes Project which recently expanded its resource of sequenced genomes and in doing so discovered even more variation present in the population <span class="citation">(<a href="#ref-Byrska-Bishop2022">Byrska-Bishop et al. 2022</a>)</span>.</p></li>
 <li><p>Functional genomic analysis:</p>
-<p>Genomes contain more than just genes (the coding sequences that will be transcribed and translated into a protein); they also contain functional elements such as promoters, enhancers, or silencers that modulate the expression of genes <span class="citation">(<a href="#ref-Kellis2014" role="doc-biblioref">Kellis et al. 2014</a>)</span>. Further, differential gene expression is the phenomenon by which cells with the same DNA sequence show different patterns of gene expression. Functional genomic analyses aim to better understand differential gene expression and the impact of genetic variation found in functional elements. For example, many human genetic variants associated with common traits and diseases are localized in or near known functional elements <span class="citation">(<a href="#ref-Hindorff2009" role="doc-biblioref">Hindorff et al. 2009</a>)</span>. These variants may impact gene expression due to either changes in transcription factor binding at that site, or resulting epigenetic changes, which are defined as chemical modifications of chromatin or nucleotides beyond the DNA sequence. Such epigenetic modifications, which include histone marks and DNA methylation, can alter DNA compaction and influence a functional element’s accessibility for transcriptional machinery (e.g., if the element isn’t accessible, transcription may not occur; while previously the element was accessible and the gene could be transcribed). In later sections, methods that study epigenetic modifications like chromatin accessibility, DNA methylation, or binding of specific proteins will be discussed. All of these methods support functional genomic analyses and are important for better understanding differential gene expression and the impact of genetic variants located in functional elements may have on disease occurrence. A somewhat recent and high profile example of a functional genomic analysis centers again on work from the T2T Consortium. Not only did they publish a new, complete reference genome, but they also studied the epigenetic landscape in the newly resolved regions of the genome and pointed to potential newly discovered functional elements in a region previously thought to be transcriptionally inactive <span class="citation">(<a href="#ref-Gershman2022" role="doc-biblioref">Gershman et al. 2022</a>)</span>.</p></li>
+<p>Genomes contain more than just genes (the coding sequences that will be transcribed and translated into a protein); they also contain functional elements such as promoters, enhancers, or silencers that modulate the expression of genes <span class="citation">(<a href="#ref-Kellis2014">Kellis et al. 2014</a>)</span>. Further, differential gene expression is the phenomenon by which cells with the same DNA sequence show different patterns of gene expression. Functional genomic analyses aim to better understand differential gene expression and the impact of genetic variation found in functional elements. For example, many human genetic variants associated with common traits and diseases are localized in or near known functional elements <span class="citation">(<a href="#ref-Hindorff2009">Hindorff et al. 2009</a>)</span>. These variants may impact gene expression due to either changes in transcription factor binding at that site, or resulting epigenetic changes, which are defined as chemical modifications of chromatin or nucleotides beyond the DNA sequence. Such epigenetic modifications, which include histone marks and DNA methylation, can alter DNA compaction and influence a functional element’s accessibility for transcriptional machinery (e.g., if the element isn’t accessible, transcription may not occur; while previously the element was accessible and the gene could be transcribed). In later sections, methods that study epigenetic modifications like chromatin accessibility, DNA methylation, or binding of specific proteins will be discussed. All of these methods support functional genomic analyses and are important for better understanding differential gene expression and the impact of genetic variants located in functional elements may have on disease occurrence. A somewhat recent and high profile example of a functional genomic analysis centers again on work from the T2T Consortium. Not only did they publish a new, complete reference genome, but they also studied the epigenetic landscape in the newly resolved regions of the genome and pointed to potential newly discovered functional elements in a region previously thought to be transcriptionally inactive <span class="citation">(<a href="#ref-Gershman2022">Gershman et al. 2022</a>)</span>.</p></li>
 <li><p>Comparative genomics:</p>
-<p>A common saying in the genomics field is that structure determines function and conserved structure may be constrained such that there is an important function which needs to be conserved <span class="citation">(<a href="#ref-Alföldi_Lindblad-Toh_2013" role="doc-biblioref">Alföldi and Lindblad-Toh 2013</a>)</span>. Further, similarities in structure may be due to shared ancestry through the processes of evolution; therefore, some comparative genomics studies aim to infer homology or an evolutionary relationship from structural similarity <span class="citation">(<a href="#ref-Pearson2013" role="doc-biblioref">Pearson 2013</a>)</span>. More pertinent to the topics discussed previously, comparative genomics studies are also useful for identifying functional elements <span class="citation">(<a href="#ref-Taylor2006" role="doc-biblioref">J. Taylor et al. 2006</a>)</span> and variants associated with disease (e.g., by comparing the genomes of those with the disease and those without it and identifying differences) <span class="citation">(<a href="#ref-Alföldi_Lindblad-Toh_2013" role="doc-biblioref">Alföldi and Lindblad-Toh 2013</a>; <a href="#ref-Eichler_2019" role="doc-biblioref">Eichler 2019</a>)</span>.</p></li>
+<p>A common saying in the genomics field is that structure determines function and conserved structure may be constrained such that there is an important function which needs to be conserved <span class="citation">(<a href="#ref-Alföldi_Lindblad-Toh_2013">Alföldi and Lindblad-Toh 2013</a>)</span>. Further, similarities in structure may be due to shared ancestry through the processes of evolution; therefore, some comparative genomics studies aim to infer homology or an evolutionary relationship from structural similarity <span class="citation">(<a href="#ref-Pearson2013">Pearson 2013</a>)</span>. More pertinent to the topics discussed previously, comparative genomics studies are also useful for identifying functional elements <span class="citation">(<a href="#ref-Taylor2006">J. Taylor et al. 2006</a>)</span> and variants associated with disease (e.g., by comparing the genomes of those with the disease and those without it and identifying differences) <span class="citation">(<a href="#ref-Alföldi_Lindblad-Toh_2013">Alföldi and Lindblad-Toh 2013</a>; <a href="#ref-Eichler_2019">Eichler 2019</a>)</span>.</p></li>
 </ul>
 </div>
-<div id="comparison-of-dna-methods" class="section level2" number="9.3">
-<h2><span class="header-section-number">9.3</span> Comparison of DNA methods</h2>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png" title="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." alt="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." width="100%" />
+<div id="comparison-of-dna-methods" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Comparison of DNA methods<a href="dna-methods-overview.html#comparison-of-dna-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png" alt="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." width="100%" />
 There are four DNA sequencing methods discussed in this chapter. The above graph compares WGS, WXS, and Targeted gene sequencing. The last section compares all 4.</p>
 <ol style="list-style-type: decimal">
 <li>Whole genome sequencing (WGS)</li>
@@ -574,42 +568,42 @@ There are four DNA sequencing methods discussed in this chapter. The above graph
 <li>Targeted gene sequencing</li>
 <li>DNA/SNP microarrays</li>
 </ol>
-<p>Compared to WXS and Targeted Gene Sequencing, WGS is the most expensive but requires the lowest depth of coverage to achieve 95% sensitivity. In other words, WGS requires sequencing each region of the genome (3.2 billion bases) 30 times in order to confidently be able to pick up all possible meaningful variants. <span class="citation">(<a href="#ref-Sims2014" role="doc-biblioref">Sims et al. 2014</a>)</span> goes into more depth on how these depths are calculated.</p>
+<p>Compared to WXS and Targeted Gene Sequencing, WGS is the most expensive but requires the lowest depth of coverage to achieve 95% sensitivity. In other words, WGS requires sequencing each region of the genome (3.2 billion bases) 30 times in order to confidently be able to pick up all possible meaningful variants. <span class="citation">(<a href="#ref-Sims2014">Sims et al. 2014</a>)</span> goes into more depth on how these depths are calculated.</p>
 <p>Alternatively, WXS is a more cost effective way to study the genome, focusing places in the genome that have open reading frames – aka generally genes that are able to be expressed. This focuses on enriching for exons and not introns so splicing variants may be missed. In this case, each gene must be sequenced 80-100x for sufficient sensitivity to pick up meaningful variants.</p>
 <p>In targeted gene sequencing, a panel of 50-500 regions of interest are selected. This technique is very applicable for studying a set of specific genes of interest at great depth to identify all varieties of mutations within those specific genes. These genes must be sequenced at much greater depth (&gt;500x) to confidently identify all meaningful variants. <a href="https://www.illumina.com/science/technology/next-generation-sequencing/plan-experiments/coverage.html">This page from Illumina</a> also provides information regarding sequencing depth considerations for different modalities.</p>
 <p>Additional references:
-WGS: <span class="citation">(<a href="#ref-Bentley2008" role="doc-biblioref">Bentley et al. 2008</a>)</span>
-WES: <span class="citation">(<a href="#ref-Clark2011" role="doc-biblioref">Clark et al. 2011</a>)</span>
-Targeted: <span class="citation">(<a href="#ref-BewickeCopley2019" role="doc-biblioref">Bewicke-Copley et al. 2019</a>)</span></p>
+WGS: <span class="citation">(<a href="#ref-Bentley2008">Bentley et al. 2008</a>)</span>
+WES: <span class="citation">(<a href="#ref-Clark2011">Clark et al. 2011</a>)</span>
+Targeted: <span class="citation">(<a href="#ref-BewickeCopley2019">Bewicke-Copley et al. 2019</a>)</span></p>
 </div>
-<div id="how-to-choose-a-dna-sequencing-method" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> How to choose a DNA sequencing method</h2>
+<div id="how-to-choose-a-dna-sequencing-method" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> How to choose a DNA sequencing method<a href="dna-methods-overview.html#how-to-choose-a-dna-sequencing-method" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before starting any sequencing method, you likely have a research question or hypothesis in mind. In order to choose a DNA sequencing method, you will need to consider a few items in balance of each other:</p>
-<div id="what-regions-of-the-genome-pertain-to-your-research-question" class="section level3" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> 1. What region(s) of the genome pertain to your research question?</h3>
+<div id="what-regions-of-the-genome-pertain-to-your-research-question" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> 1. What region(s) of the genome pertain to your research question?<a href="dna-methods-overview.html#what-regions-of-the-genome-pertain-to-your-research-question" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Is this unknown? Can it be narrowed down to non-coding or coding regions? Is there an even more specific subset of interest?</p>
 </div>
-<div id="what-does-your-project-budget-allow-for" class="section level3" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> 2. What does your project budget allow for?</h3>
+<div id="what-does-your-project-budget-allow-for" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> 2. What does your project budget allow for?<a href="dna-methods-overview.html#what-does-your-project-budget-allow-for" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Some methods are much more costly than others. Cost is not only a factor for the reagents needed to sequence, but also the computing power needed to process and store the data and people’s compensation for their work on the data. All of these costs increase as the amounts of data that are collected increase. For more information on computing decisions see our <a href="https://www.itcrtraining.org/courses#h.civy2cnri95t">Computing in Cancer Informatics course</a>.</p>
 </div>
-<div id="what-is-your-detection-power-for-these-variants" class="section level3" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> 3. What is your detection power for these variants?</h3>
+<div id="what-is-your-detection-power-for-these-variants" class="section level3 hasAnchor" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> 3. What is your detection power for these variants?<a href="dna-methods-overview.html#what-is-your-detection-power-for-these-variants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Detecting DNA variants is not simply a matter of yes or no, but a confidence level due to sequencing errors in data collection. Are the variants you are looking for very rare and/or small (single nucleotide or very few copy number differences)? If so you will need more samples and potentially more sequencing depth to detect these variants with confidence.</p>
 </div>
 </div>
-<div id="strengths-and-weaknesses-of-different-methods" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Strengths and Weaknesses of different methods</h2>
+<div id="strengths-and-weaknesses-of-different-methods" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Strengths and Weaknesses of different methods<a href="dna-methods-overview.html#strengths-and-weaknesses-of-different-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Is not much known about DNA variants in your organism or disease in question? In this instance you may want to cast a large net to explore more variants by using WGS.</p>
 <p>If previous research has identified sections of the genome that are of interest to your research question, then it’s highly advisable to not sequence the entire genome with WGS methods. Not only will whole genome sequencing be more costly, but it will decrease your statistical power to discover true positive variants of interest and increase your chances of discovering false positive variants. This is because multiple testing correction needs to be applied in instances where many tests are being done currently. In this instance, the tests being performed are across the whole genome.</p>
 <p>If your research question does not pertain to non-coding regions of the genome or splicing, then its advisable to use WXS. Recall that only about 1-2% of the genome is coding sequences meaning that if you are uninterested in noncoding regions but still use WGS then 98-99% of your data will be uninteresting to you and will only serve to increase your chances of finding false positives or cost you a lot of funding. Not only does sequencing more of the genome take more money and time but it will be more costly in time and resources in terms of the computing power needed to analyze it.</p>
 <p>Furthermore, if you are able to narrow down even further what regions are of interest this would be better in terms of cost and detection abilities. A targeted sequencing panel or DNA microarray are ideal for assaying known groups of targets. DNA microarrays are the least costly of all the methods to identify DNA variants, but with both targeted sequencing and DNA microarray you will need to find or create a custom probe or primer set. Ideally a probe or primer set that hits your regions of interest already exists commercially but if not, then you will have to design your own – which also costs time and money.</p>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_6.png" title="There are three general methods we will discuss for evaluating DNA sequences. Whole Genome Sequencing (WGS) assays more of the genome than other methods but is much more costly and computationally intensive. Depending on your goals WGS may be overkill. SNP microarrays on the other hand, are much more cost effective but are not able to be used for exploratory purposes. Whole Exome Sequencing (WXS or WES) and other targeted sequencing methods allow you to survey regions of the genome in way that is more cost effective and potentially at higher depths." alt="There are three general methods we will discuss for evaluating DNA sequences. Whole Genome Sequencing (WGS) assays more of the genome than other methods but is much more costly and computationally intensive. Depending on your goals WGS may be overkill. SNP microarrays on the other hand, are much more cost effective but are not able to be used for exploratory purposes. Whole Exome Sequencing (WXS or WES) and other targeted sequencing methods allow you to survey regions of the genome in way that is more cost effective and potentially at higher depths." width="100%" /></p>
+<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_6.png" alt="There are three general methods we will discuss for evaluating DNA sequences. Whole Genome Sequencing (WGS) assays more of the genome than other methods but is much more costly and computationally intensive. Depending on your goals WGS may be overkill. SNP microarrays on the other hand, are much more cost effective but are not able to be used for exploratory purposes. Whole Exome Sequencing (WXS or WES) and other targeted sequencing methods allow you to survey regions of the genome in way that is more cost effective and potentially at higher depths." width="100%" /></p>
 <p>In these upcoming chapters we will discuss in more detail each of these methods, what the data represent, what you need to consider, and what resources you can consult for analyzing your data.</p>
 
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Alföldi_Lindblad-Toh_2013" class="csl-entry">
 Alföldi, Jessica, and Kerstin Lindblad-Toh. 2013. <span>“Comparative Genomics as a Tool to Understand Evolution and Disease.”</span> <em>Genome Research</em> 23 (7): 1063–68. <a href="https://doi.org/10.1101/gr.157503.113">https://doi.org/10.1101/gr.157503.113</a>.
@@ -703,10 +697,17 @@ Zhang, Cheng-Zhong, and David Pellman. 2022. <span>“Cancer Genomic Rearrangeme
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -776,7 +777,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

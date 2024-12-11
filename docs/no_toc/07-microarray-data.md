@@ -9,7 +9,7 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_12.png" title="This chapter will demonstrate how to: Understand the very general basics of microarray data collection and processing workflow. Understand the limitations and strengths of microarray data in general." alt="This chapter will demonstrate how to: Understand the very general basics of microarray data collection and processing workflow. Understand the limitations and strengths of microarray data in general." width="100%" />
+<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_12.png" alt="This chapter will demonstrate how to: Understand the very general basics of microarray data collection and processing workflow. Understand the limitations and strengths of microarray data in general." width="100%" />
 
 ## Summary of microarrays
 

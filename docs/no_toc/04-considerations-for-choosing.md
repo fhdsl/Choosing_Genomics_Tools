@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-<img src="resources/images/04-considerations-for-choosing_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_0.png" title="This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data " alt="This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data " width="100%" />
+<img src="resources/images/04-considerations-for-choosing_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_0.png" alt="This chapter will demonstrate how to: Recognize the key aspects of a tool that you should consider when constructing an analysis. Form questions to ask others for advice regarding your data " width="100%" />
 
 ## Overview
 
@@ -13,7 +13,7 @@ In this course, we will introduce you to the fundamentals of various data types 
 
 We will discuss the following considerations you should gather information and otherwise ponder when comparing one or more tools for your analysis:
 
-<img src="resources/images/04-considerations-for-choosing_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_5.png" title="Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? " alt="Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? " width="100%" />
+<img src="resources/images/04-considerations-for-choosing_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_5.png" alt="Considerations for choosing tools: Is it appropriate for your data type? Is in an interface or programming language you feel comfortable with? How much computing power do you have? Are there benchmarking papers that compare the tool options? Is the tool well documented and usable? Is the tool well-maintained? Is the tool generally accepted by the field? " width="100%" />
 
 ### Is this tool appropriate for your data type?
 

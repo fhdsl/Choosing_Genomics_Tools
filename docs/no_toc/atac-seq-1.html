@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 16 ATAC-Seq | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 16 ATAC-Seq | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="chromatin-methods-overview.html"/>
 <link rel="next" href="single-cell-atac-seq-1.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 16 ATAC-Seq | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,121 +535,121 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="atac-seq-1" class="section level1" number="16">
-<h1><span class="header-section-number">Chapter 16</span> ATAC-Seq</h1>
+<div id="atac-seq-1" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">Chapter 16</span> ATAC-Seq<a href="atac-seq-1.html#atac-seq-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is incomplete! If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-14" class="section level2" number="16.1">
-<h2><span class="header-section-number">16.1</span> Learning Objectives</h2>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_66.png" title="Learning objectives This chapter will demonstrate how to: Understand the basics of ATAC-Seq data collection and processing workflow. Identify the next steps for your particular ATAC-Seq data. Formulate questions to ask about your ATAC-Seq data" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of ATAC-Seq data collection and processing workflow. Identify the next steps for your particular ATAC-Seq data. Formulate questions to ask about your ATAC-Seq data" width="100%" /></p>
+<div id="learning-objectives-14" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Learning Objectives<a href="atac-seq-1.html#learning-objectives-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_66.png" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of ATAC-Seq data collection and processing workflow. Identify the next steps for your particular ATAC-Seq data. Formulate questions to ask about your ATAC-Seq data" width="100%" /></p>
 </div>
-<div id="what-are-the-goals-of-atac-seq-analysis" class="section level2" number="16.2">
-<h2><span class="header-section-number">16.2</span> What are the goals of ATAC-Seq analysis?</h2>
+<div id="what-are-the-goals-of-atac-seq-analysis" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> What are the goals of ATAC-Seq analysis?<a href="atac-seq-1.html#what-are-the-goals-of-atac-seq-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The goals of ATAC-seq are to identify the accessible regions of the genome in a particular set of samples. These data allow us to understand the relationships between the chromatin accessibility patterns and cell states, and to understand the mechanistic causes and consequences of these chromatin accessibility patterns.</p>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_23.png" title="What does accessibility to chromatin represent? In ATAC-seq we are able to sequence open chromatin and find out DNA sequences where chromatin is accessible for activity. " alt="What does accessibility to chromatin represent? In ATAC-seq we are able to sequence open chromatin and find out DNA sequences where chromatin is accessible for activity. " width="100%" /></p>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_23.png" alt="What does accessibility to chromatin represent? In ATAC-seq we are able to sequence open chromatin and find out DNA sequences where chromatin is accessible for activity. " width="100%" /></p>
 <p>ATAC-seq data is generated by fragmenting the genome with the Tn5 endonuclease and sequencing the shorter DNA fragments. While most of the genome is associated with protein complexes that preclude the digestion of DNA by Tn5, some regions of the genome have accessible chromatin that can be cleaved by Tn5 resulting in short (&lt;500bp) fragments. These regions of the genome are of biological interest as they are likely to harbor transcription factor binding sites and to constitute cis-regulatory elements, genomic regions that are involved in the regulation of gene expression.</p>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_18.png" title="Schematic of how Tn5 fragments open chromatin + inserts adapters. This step is important for the quick protocol and low required cell inputs of ATAC-seq" alt="Schematic of how Tn5 fragments open chromatin + inserts adapters. This step is important for the quick protocol and low required cell inputs of ATAC-seq" width="100%" /></p>
-<div id="what-questions-can-be-answered-with-atac-seq" class="section level3" number="16.2.1">
-<h3><span class="header-section-number">16.2.1</span> What questions can be answered with ATAC-seq?</h3>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_0.png" title="What types of questions can we ask with ATAC-seq?What regions of the genome have accessible chromatin? How does accessibility differ between biological samples or change over time? What transcription factor motifs or transcription factor footprints can be found at accessible regions of interest?" alt="What types of questions can we ask with ATAC-seq?What regions of the genome have accessible chromatin? How does accessibility differ between biological samples or change over time? What transcription factor motifs or transcription factor footprints can be found at accessible regions of interest?" width="100%" /></p>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_18.png" alt="Schematic of how Tn5 fragments open chromatin + inserts adapters. This step is important for the quick protocol and low required cell inputs of ATAC-seq" width="100%" /></p>
+<div id="what-questions-can-be-answered-with-atac-seq" class="section level3 hasAnchor" number="16.2.1">
+<h3><span class="header-section-number">16.2.1</span> What questions can be answered with ATAC-seq?<a href="atac-seq-1.html#what-questions-can-be-answered-with-atac-seq" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_0.png" alt="What types of questions can we ask with ATAC-seq?What regions of the genome have accessible chromatin? How does accessibility differ between biological samples or change over time? What transcription factor motifs or transcription factor footprints can be found at accessible regions of interest?" width="100%" /></p>
 </div>
 </div>
-<div id="atac-seq-general-workflow-overview" class="section level2" number="16.3">
-<h2><span class="header-section-number">16.3</span> ATAC-Seq general workflow overview</h2>
+<div id="atac-seq-general-workflow-overview" class="section level2 hasAnchor" number="16.3">
+<h2><span class="header-section-number">16.3</span> ATAC-Seq general workflow overview<a href="atac-seq-1.html#atac-seq-general-workflow-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means.</p>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_18.png" title="A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means." alt="A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means." width="100%" /></p>
-<div id="data-quality-metrics" class="section level3" number="16.3.1">
-<h3><span class="header-section-number">16.3.1</span> Data quality metrics:</h3>
-<div id="pre-sequencing-qc" class="section level4" number="16.3.1.1">
-<h4><span class="header-section-number">16.3.1.1</span> Pre-sequencing QC:</h4>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_18.png" alt="A basic ATAC-seq workflow involves mapping sequence reads to the genome, identifying peaks, assessing data quality, and identifying patterns of interest through clustering or identification of differentially accessible regions or other statistical means." width="100%" /></p>
+<div id="data-quality-metrics" class="section level3 hasAnchor" number="16.3.1">
+<h3><span class="header-section-number">16.3.1</span> Data quality metrics:<a href="atac-seq-1.html#data-quality-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="pre-sequencing-qc" class="section level4 hasAnchor" number="16.3.1.1">
+<h4><span class="header-section-number">16.3.1.1</span> Pre-sequencing QC:<a href="atac-seq-1.html#pre-sequencing-qc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 </div>
-<div id="sequencing-considerations" class="section level4" number="16.3.1.2">
-<h4><span class="header-section-number">16.3.1.2</span> Sequencing considerations:</h4>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_57.png" title="Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting" alt="Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting" width="100%" /></p>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_63.png" title="Single vs. paired end sequencing. Single. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting. Read length &amp; read depth. 75bp or more read length (keep in mind nucleosomes are 147bp). ~50 million reads/sample usually recommended" alt="Single vs. paired end sequencing. Single. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting. Read length &amp; read depth. 75bp or more read length (keep in mind nucleosomes are 147bp). ~50 million reads/sample usually recommended" width="100%" /></p>
+<div id="sequencing-considerations" class="section level4 hasAnchor" number="16.3.1.2">
+<h4><span class="header-section-number">16.3.1.2</span> Sequencing considerations:<a href="atac-seq-1.html#sequencing-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_57.png" alt="Single end sequencing. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting" width="100%" /></p>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_63.png" alt="Single vs. paired end sequencing. Single. Cheaper. OK for most standard applications. Paired-end sequencing. More expensive. Useful for looking at nucleosome positioning and transcription factor footprinting. Read length &amp; read depth. 75bp or more read length (keep in mind nucleosomes are 147bp). ~50 million reads/sample usually recommended" width="100%" /></p>
 </div>
-<div id="pre-alignment-qc" class="section level4" number="16.3.1.3">
-<h4><span class="header-section-number">16.3.1.3</span> Pre-alignment QC:</h4>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_50.png" title="Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)" alt="Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)" width="100%" /></p>
+<div id="pre-alignment-qc" class="section level4 hasAnchor" number="16.3.1.3">
+<h4><span class="header-section-number">16.3.1.3</span> Pre-alignment QC:<a href="atac-seq-1.html#pre-alignment-qc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_50.png" alt="Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)" width="100%" /></p>
 <p>A tool like FastQC or similar should be used to check for GC content, read quality and length, and primer or adapter reads prior to alignment. Trimmomatic is a useful tool for removing primer and adapter sequences if they are present. ATAC-seq experiments should be sequenced with paired-end sequencing, and existing pipelines will expect paired-end. (2 files *_R1.fastq and *_R2.fastq)</p>
 <ul>
 <li>Use fasterq-dump to download files from NCBI Sequence Read Archive - this tool will automatically split the reads in multiple files</li>
 </ul>
 </div>
-<div id="number-of-mapped-reads" class="section level4" number="16.3.1.4">
-<h4><span class="header-section-number">16.3.1.4</span> Number of mapped reads</h4>
+<div id="number-of-mapped-reads" class="section level4 hasAnchor" number="16.3.1.4">
+<h4><span class="header-section-number">16.3.1.4</span> Number of mapped reads<a href="atac-seq-1.html#number-of-mapped-reads" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>As for all DNA-sequencing based genomics technologies, a sufficient number of mapped reads is required to obtain meaningful results from a sample. You can read more about <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">general sequencing technologies in our previous chapter here</a>. For experiments on human samples this number should be greater than 20 million mapped unique reads.</p>
 <p><a href="https://bowtie-bio.sourceforge.net/index.shtml">Bowtie2</a> is commonly used for mapping fragments to the genome.</p>
 <p>As for all DNA-sequencing based genomics technologies, a sufficient number of mapped reads is required to obtain meaningful results from a sample. You can read more about <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">general sequencing technologies in our previous chapter here</a>. For experiments on human samples this number should be greater than 20 million mapped unique reads.</p>
 </div>
-<div id="post-alignment-qc" class="section level4" number="16.3.1.5">
-<h4><span class="header-section-number">16.3.1.5</span> Post-alignment QC:</h4>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_50.png" title="Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)" alt="Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)" width="100%" /></p>
+<div id="post-alignment-qc" class="section level4 hasAnchor" number="16.3.1.5">
+<h4><span class="header-section-number">16.3.1.5</span> Post-alignment QC:<a href="atac-seq-1.html#post-alignment-qc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_50.png" alt="Post-sequencing. Signal to noise ratio (link resources at end) Comparison with DNase hypersensitivity datasets (or other computational QC method- check current resources available)" width="100%" /></p>
 <p>Post alignment: check percent of matched, unmatched, unpaired and duplicated reads. Reads which are duplicated or unmatched should be filtered out.
 <a href="https://broadinstitute.github.io/picard/">Picard</a> is a useful tool for this step.
 Reads on the + strand should be shifted +4bp, reads on the - strand should be shifted -5 bp.</p>
 </div>
-<div id="fragment-size-distribution" class="section level4" number="16.3.1.6">
-<h4><span class="header-section-number">16.3.1.6</span> Fragment size distribution:</h4>
+<div id="fragment-size-distribution" class="section level4 hasAnchor" number="16.3.1.6">
+<h4><span class="header-section-number">16.3.1.6</span> Fragment size distribution:<a href="atac-seq-1.html#fragment-size-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>ATAC-seq data is often generated using paired end sequencing technologies, which allow for characterization of ATAC-seq fragments. Histograms of these distributions using single base pair resolution bins reveal patterns of enrichment relative to the nucleosome scale of 147bp and the DNA-helix scale ~10.5bp.</p>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_43.png" title="Considerations for quality data: QC checkpoints. Pre-sequencing. Library distribution" alt="Considerations for quality data: QC checkpoints. Pre-sequencing. Library distribution" width="100%" /></p>
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1567d947351_0_43.png" alt="Considerations for quality data: QC checkpoints. Pre-sequencing. Library distribution" width="100%" /></p>
 <p>When comparing ATAC-seq samples, it is important to consider the fragment size distributions of the samples being compared. Differences in the distributions could lead to results that are unrelated to biology.</p>
 </div>
-<div id="peak-calling" class="section level4" number="16.3.1.7">
-<h4><span class="header-section-number">16.3.1.7</span> Peak calling:</h4>
+<div id="peak-calling" class="section level4 hasAnchor" number="16.3.1.7">
+<h4><span class="header-section-number">16.3.1.7</span> Peak calling:<a href="atac-seq-1.html#peak-calling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>ATAC-seq peak calling typically makes use of analysis tools developed for ChIP-seq. MACS2 is one of the most common choices for a peak calling tool, but HOMER or other common ChIP-seq peak callers are also acceptable.
 An input sample is not typically generated for ATAC-seq as it would be for a ChIP-seq experiment, so the major requirement for the peak caller is that it does not require the input control to call peaks.</p>
-<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_26.png" title="Overview of ATAC-seq data analysis pipeline" alt="Overview of ATAC-seq data analysis pipeline" width="100%" />
+<p><img src="resources/images/11a-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_26.png" alt="Overview of ATAC-seq data analysis pipeline" width="100%" />
 #### Number of peaks:</p>
 <p>Although the number of accessible chromatin regions can vary from one cell type to another, there are several regions that appear to be constitutively accessible across most cell types. At least 20,000 peaks can be identified in a high quality experiment. The deeper the sequencing the more peaks will be detected in an ATAC-seq experiments. At a very high sequencing depth some of the statistically significant peaks might not be of biological interest. In an analysis of such data sets the fold enrichment relative to background, or absolute peak signal, in addition to statistical significance, ought to be taken into account.</p>
 </div>
-<div id="frip-score-fraction-of-reads-in-peaks" class="section level4" number="16.3.1.8">
-<h4><span class="header-section-number">16.3.1.8</span> FRiP score (fraction of reads in peaks)</h4>
+<div id="frip-score-fraction-of-reads-in-peaks" class="section level4 hasAnchor" number="16.3.1.8">
+<h4><span class="header-section-number">16.3.1.8</span> FRiP score (fraction of reads in peaks)<a href="atac-seq-1.html#frip-score-fraction-of-reads-in-peaks" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In high quality ATAC-seq data a large fraction of reads overlap with peaks, while in low quality data there is a high level of fragments that map to background regions. Ideally, the FRiP score is greater than 0.3 (30 percent or more of reads overlap with peaks), with a score below 0.2 indicating low-quality data
 <Slide></p>
 </div>
-<div id="overlap-with-other-chromatin-accessibility-data" class="section level4" number="16.3.1.9">
-<h4><span class="header-section-number">16.3.1.9</span> Overlap with other chromatin accessibility data</h4>
+<div id="overlap-with-other-chromatin-accessibility-data" class="section level4 hasAnchor" number="16.3.1.9">
+<h4><span class="header-section-number">16.3.1.9</span> Overlap with other chromatin accessibility data<a href="atac-seq-1.html#overlap-with-other-chromatin-accessibility-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Thousands of ATAC-seq samples have been produced in human and mouse. High quality ATAC-seq data will share a substantial proportion of peaks with many of these datasets. Publicly available ATAC-seq data can be found and comparisons made at the Cistrome Data Browser [<a href="http://cistrome.org/db/" class="uri">http://cistrome.org/db/</a>].</p>
 </div>
-<div id="overlap-with-promoters" class="section level4" number="16.3.1.10">
-<h4><span class="header-section-number">16.3.1.10</span> Overlap with promoters</h4>
+<div id="overlap-with-promoters" class="section level4 hasAnchor" number="16.3.1.10">
+<h4><span class="header-section-number">16.3.1.10</span> Overlap with promoters<a href="atac-seq-1.html#overlap-with-promoters" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The promoter regions of many genes are constitutively accessible. Examining peak overlap with regions close to known protein coding gene transcription start sites can be used as a check for data quality.</p>
 </div>
 </div>
-<div id="information-from-atac-seq-analysis" class="section level3" number="16.3.2">
-<h3><span class="header-section-number">16.3.2</span> Information from ATAC-seq analysis:</h3>
-<div id="major-approaches" class="section level4" number="16.3.2.1">
-<h4><span class="header-section-number">16.3.2.1</span> Major approaches:</h4>
+<div id="information-from-atac-seq-analysis" class="section level3 hasAnchor" number="16.3.2">
+<h3><span class="header-section-number">16.3.2</span> Information from ATAC-seq analysis:<a href="atac-seq-1.html#information-from-atac-seq-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="major-approaches" class="section level4 hasAnchor" number="16.3.2.1">
+<h4><span class="header-section-number">16.3.2.1</span> Major approaches:<a href="atac-seq-1.html#major-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Compare changes in transcription factor motif enrichment in accessible regions between samples</li>
 <li>Compare changes in accessibility of regions (differential accessibility) between samples</li>
 <li>Footprinting - identify regions where insertion is below expected level</li>
 </ul>
 </div>
-<div id="differential-accessibility-analysis" class="section level4" number="16.3.2.2">
-<h4><span class="header-section-number">16.3.2.2</span> Differential accessibility analysis:</h4>
+<div id="differential-accessibility-analysis" class="section level4 hasAnchor" number="16.3.2.2">
+<h4><span class="header-section-number">16.3.2.2</span> Differential accessibility analysis:<a href="atac-seq-1.html#differential-accessibility-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 Differential accessibility analysis typically uses packages for RNA-seq differential expression analysis such as DEseq2, edgeR, or limma.
 <details here>
 <p>All three are available as R packages and can be installed using Bioconductor, a bioinformatics package manager for R. Unfortunately, there are no well-established packages for this analysis in other languages such as Python. Differential accessibility analysis is an approach with high potential, but care must be taken in processing and normalizing the data for accurate results.</p>
 </div>
-<div id="motif-analysis" class="section level4" number="16.3.2.3">
-<h4><span class="header-section-number">16.3.2.3</span> Motif analysis:</h4>
+<div id="motif-analysis" class="section level4 hasAnchor" number="16.3.2.3">
+<h4><span class="header-section-number">16.3.2.3</span> Motif analysis:<a href="atac-seq-1.html#motif-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Motif analysis in ATAC-seq is more complex than for ChIP-seq because a larger set of TFs are responsible for the emergence of chromatin accessible regions than for the binding sites of a particular TF. Nevertheless, in the analysis of differential ATAC-seq peaks motif analysis can be used to reveal the TFs related to differences between conditions. This type of analysis is most likely to be successful when the ATAC-seq between closely related conditions or cell types is being compared.</p>
 <p><a href="https://meme-suite.org/meme/">The MEME suite</a> has a variety of tools for motif analysis available in both web and command-line versions.</p>
 </div>
-<div id="motif-scanning" class="section level4" number="16.3.2.4">
-<h4><span class="header-section-number">16.3.2.4</span> Motif Scanning</h4>
+<div id="motif-scanning" class="section level4 hasAnchor" number="16.3.2.4">
+<h4><span class="header-section-number">16.3.2.4</span> Motif Scanning<a href="atac-seq-1.html#motif-scanning" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Motif scanning is an analysis technique which identifies putative transcription factor binding sites (TFBS) which sufficiently match a given TF motif’s position-weight matrix. PWMscan is a straightforward online tool, but not the best option for high throughput. FIMO is an alternative which can be used either on the web or the command line. This approach will identify all sites within the genome which are likely to bind a single transcription factor.</p>
 </div>
-<div id="motif-discovery" class="section level4" number="16.3.2.5">
-<h4><span class="header-section-number">16.3.2.5</span> Motif discovery:</h4>
+<div id="motif-discovery" class="section level4 hasAnchor" number="16.3.2.5">
+<h4><span class="header-section-number">16.3.2.5</span> Motif discovery:<a href="atac-seq-1.html#motif-discovery" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Homer or MEME. These tools identify overrepresented sequences within the accessible peaks, regardless of whether they match a previously defined motif.
 Once the ATAC-seq peaks are determined, the next step is to search for enriched DNA sequence motifs within these regions. This is accomplished by using motif discovery algorithms such as MEME Suite, HOMER, or DREME. These tools scan the ATAC-seq peaks for overrepresented sequence patterns, which may correspond to binding sites for specific transcription factors or other regulatory elements. The motifs discovered can be compared against existing motif databases, such as JASPAR or TRANSFAC, to annotate the potential transcription factor binding sites.</p>
 </div>
-<div id="motif-enrichment" class="section level4" number="16.3.2.6">
-<h4><span class="header-section-number">16.3.2.6</span> Motif Enrichment:</h4>
+<div id="motif-enrichment" class="section level4 hasAnchor" number="16.3.2.6">
+<h4><span class="header-section-number">16.3.2.6</span> Motif Enrichment:<a href="atac-seq-1.html#motif-enrichment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>These motif enrichment tools will scan through and identify matches to known motif sequences within accessible sites, and additionally will quantify whether the motif is significantly enriched compared to a control sample (input, uncommon with ATAC-seq) or a shuffled sequence to mimic background.</p>
 <p>After identifying the enriched motifs, researchers can perform motif enrichment analysis to determine the significance of these motifs in the ATAC-seq peaks. This is often done using statistical tools like Fisher’s exact test or hypergeometric test, which assess the enrichment of specific motifs compared to their background occurrence in the genome. Additionally, tools like GREAT or HOMER can be employed to perform gene ontology analysis and assess the functional relevance of the identified motifs in biological processes and pathways.</p>
 <p>Overall, ATAC-seq motif enrichment analysis provides researchers with valuable insights into the regulatory landscape of the genome. By identifying enriched motifs within accessible chromatin regions, researchers can gain a deeper understanding of the transcriptional regulatory networks and potentially uncover novel transcription factors involved in specific biological processes or diseases. This analysis serves as a powerful tool for unraveling the intricacies of gene regulation and can pave the way for further investigations in functional genomics and therapeutic development.
@@ -663,8 +657,8 @@ Homer or MEME suite tools.</p>
 </div>
 </div>
 </div>
-<div id="atac-seq-data-strengths" class="section level2" number="16.4">
-<h2><span class="header-section-number">16.4</span> ATAC-Seq data <strong>strengths</strong>:</h2>
+<div id="atac-seq-data-strengths" class="section level2 hasAnchor" number="16.4">
+<h2><span class="header-section-number">16.4</span> ATAC-Seq data <strong>strengths</strong>:<a href="atac-seq-1.html#atac-seq-data-strengths" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>The ATAC-seq is easy to adopt and has been used by many laboratories to generate high quality data for characterizing accessible chromatin in cell lines or sorted cells derived from tissues.</li>
 <li>In principle, ATAC-seq can identify a large proportion of cis-regulatory elements.</li>
@@ -672,8 +666,8 @@ Homer or MEME suite tools.</p>
 <li>In comparison with histone modification ChIP-seq, ATAC-seq provides a higher resolution assessment of the cis-regulatory genomic regions. Histone modification ChIP-seq, in contrast, tends to be localized on nucleosomes flanking the site of interest and can spread to nucleosomes beyond the immediate flanking ones.</li>
 </ul>
 </div>
-<div id="atac-seq-data-limitations" class="section level2" number="16.5">
-<h2><span class="header-section-number">16.5</span> ATAC-Seq data <strong>limitations</strong>:</h2>
+<div id="atac-seq-data-limitations" class="section level2 hasAnchor" number="16.5">
+<h2><span class="header-section-number">16.5</span> ATAC-Seq data <strong>limitations</strong>:<a href="atac-seq-1.html#atac-seq-data-limitations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>ATAC-seq does not precisely identify the transcription factors or other chromatin associated factors that bind in or around chromatin accessible regions. This type of information needs to be inferred through analysis of transcription factor binding motif analysis or ChIP-seq data.</li>
 <li>Whereas ATAC-seq indicates the presence of a putative cis-regulatory element, H3K27ac ChIP-seq is able to separate accessible regions from those that are accessible and active.</li>
@@ -682,81 +676,81 @@ Homer or MEME suite tools.</p>
 <li>ATAC-seq data can be biased, and affected by batch effects like any other genomics data type. When comparing ATAC-seq data good experimental design principles like the inclusion of biological replicates and consideration of controls, are needed for a meaningful outcome. .</li>
 </ul>
 </div>
-<div id="atac-seq-data-considerations" class="section level2" number="16.6">
-<h2><span class="header-section-number">16.6</span> ATAC-Seq data considerations</h2>
+<div id="atac-seq-data-considerations" class="section level2 hasAnchor" number="16.6">
+<h2><span class="header-section-number">16.6</span> ATAC-Seq data considerations<a href="atac-seq-1.html#atac-seq-data-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The nucleosome is the fundamental unit of chromatin packaging in the genome and nucleosomal DNA is far less likely to be cleaved by the Tn5 nuclease than linker DNA. When DNA is fragmented by Tn5 the positions of the endpoints relative to the nucleosomes is an important consideration. When the ends are less than 147bp apart it is likely that both ends originate from the same linker region. Longer fragments can result from cuts on opposite sides of the same nucleosome, or even opposite sides of a genomic interval that encompasses multiple nucleosomes. The short fragments are therefore most likely to be nucleosome free and provide stronger evidence for transcription factor binding sites.</p>
 <p>As will other genomics protocols, ATAC-seq data is subject to biases introduced in the ATAC-seq protocol and in the sequencing itself. Comparison of ATAC-seq data generated in different batches, by different laboratories or using different protocols might not be directly comparable. In addition, the Tn5 endonuclease does have biases in the precise DNA sequences it can cut. This should be taken into consideration when carrying out base pair resolution analyses including footprinting analysis and analysis of the effects of sequence variants on chromatin accessibility.</p>
 <p>Read depth will impact ATAC-seq signal, but enzyme strength and conditions can also alter the distribution of cuts.</p>
 <p>When using ATAC-seq data to answer biological questions it is important to understand what types of bias could impact the results. To ensure valid results the analysis needs to use appropriate statistical methods, ensure enough high quality ATAC-seq data is available, including controls, and possibly reframing the questions.</p>
 </div>
-<div id="atac-seq-analysis-tools" class="section level2" number="16.7">
-<h2><span class="header-section-number">16.7</span> ATAC-seq analysis tools</h2>
+<div id="atac-seq-analysis-tools" class="section level2 hasAnchor" number="16.7">
+<h2><span class="header-section-number">16.7</span> ATAC-seq analysis tools<a href="atac-seq-1.html#atac-seq-analysis-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="warning">
 <p>This section has been written by AI and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
 </div>
 <ul>
-<li><a href="https://github.com/macs3-project/MACS">MACS2</a><span class="citation">(<a href="#ref-zhang2008model" role="doc-biblioref">Y. Zhang et al. 2008</a>)</span>:
+<li><a href="https://github.com/macs3-project/MACS">MACS2</a><span class="citation">(<a href="#ref-zhang2008model">Y. Zhang et al. 2008</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: widely used, handles both paired-end and single-end sequencing data, allows for differential peak calling between different samples.</li>
 <li><strong>Cons</strong>: assumes that all peaks have the same shape, may not be as accurate as other peak-calling tools in some cases.</li>
 </ul></li>
-<li><a href="http://homer.ucsd.edu/homer/introduction/programs.html">HOMER</a><span class="citation">(<a href="#ref-heinz2010simple" role="doc-biblioref">Heinz et al. 2010</a>)</span>:
+<li><a href="http://homer.ucsd.edu/homer/introduction/programs.html">HOMER</a><span class="citation">(<a href="#ref-heinz2010simple">Heinz et al. 2010</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: includes tools for peak-calling, motif analysis, and annotation of nearby genes, user-friendly interface, handles both paired-end and single-end sequencing data.</li>
 <li><strong>Cons</strong>: may not be as accurate as other peak-calling tools in some cases.</li>
 </ul></li>
-<li><a href="https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html">ATACseqQC</a><span class="citation">(<a href="#ref-schep2017chromvar" role="doc-biblioref">Schep et al. 2017</a>)</span>:
+<li><a href="https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html">ATACseqQC</a><span class="citation">(<a href="#ref-schep2017chromvar">Schep et al. 2017</a>)</span>:
 <ul>
 <li><strong>Pros:</strong> provides several metrics and plots for evaluating data quality, identifies potential issues with data such as batch effects, sequencing depth, and library complexity.</li>
 <li><strong>Cons</strong>: does not perform peak-calling or downstream analysis.</li>
 </ul></li>
-<li><a href="https://deeptools.readthedocs.io/en/develop/">deeptools</a><span class="citation">(<a href="#ref-ramirez2016deeptools2" role="doc-biblioref">Ramı́rez et al. 2016</a>)</span>:
+<li><a href="https://deeptools.readthedocs.io/en/develop/">deeptools</a><span class="citation">(<a href="#ref-ramirez2016deeptools2">Ramı́rez et al. 2016</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: includes tools for normalization, visualization, and comparison of ATAC-seq data, generates heatmaps, profiles, and other plots for visualizing chromatin accessibility.</li>
 <li><strong>Cons</strong>: may require some programming skills to use effectively.</li>
 </ul></li>
-<li><a href="https://reggenlab.github.io/DFilter/tutorial.html">DFilter</a> <span class="citation">(<a href="#ref-ghavi2019highly" role="doc-biblioref">Ghavi-Helm et al. 2019</a>)</span>:
+<li><a href="https://reggenlab.github.io/DFilter/tutorial.html">DFilter</a> <span class="citation">(<a href="#ref-ghavi2019highly">Ghavi-Helm et al. 2019</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: uses a deep learning approach to predict the likelihood of a genomic region being an ATAC-seq peak, can handle both paired-end and single-end sequencing data, has been shown to outperform other peak-calling tools in some cases.</li>
 <li><strong>Cons</strong>: may require more computational resources than other tools.</li>
 </ul></li>
 </ul>
 </div>
-<div id="additional-tutorials-and-tools" class="section level2" number="16.8">
-<h2><span class="header-section-number">16.8</span> Additional tutorials and tools</h2>
+<div id="additional-tutorials-and-tools" class="section level2 hasAnchor" number="16.8">
+<h2><span class="header-section-number">16.8</span> Additional tutorials and tools<a href="atac-seq-1.html#additional-tutorials-and-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="warning">
 <p>This section has been written by AI and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
 </div>
 <ul>
-<li><a href="https://github.com/macs3-project/MACS">MACS2</a><span class="citation">(<a href="#ref-zhang2008model" role="doc-biblioref">Y. Zhang et al. 2008</a>)</span>:
+<li><a href="https://github.com/macs3-project/MACS">MACS2</a><span class="citation">(<a href="#ref-zhang2008model">Y. Zhang et al. 2008</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: widely used, handles both paired-end and single-end sequencing data, allows for differential peak calling between different samples.</li>
 <li><strong>Cons</strong>: assumes that all peaks have the same shape, may not be as accurate as other peak-calling tools in some cases.</li>
 </ul></li>
-<li><a href="http://homer.ucsd.edu/homer/introduction/programs.html">HOMER</a><span class="citation">(<a href="#ref-heinz2010simple" role="doc-biblioref">Heinz et al. 2010</a>)</span>:
+<li><a href="http://homer.ucsd.edu/homer/introduction/programs.html">HOMER</a><span class="citation">(<a href="#ref-heinz2010simple">Heinz et al. 2010</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: includes tools for peak-calling, motif analysis, and annotation of nearby genes, user-friendly interface, handles both paired-end and single-end sequencing data.</li>
 <li><strong>Cons</strong>: may not be as accurate as other peak-calling tools in some cases.</li>
 </ul></li>
-<li><a href="https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html">ATACseqQC</a><span class="citation">(<a href="#ref-schep2017chromvar" role="doc-biblioref">Schep et al. 2017</a>)</span>:
+<li><a href="https://bioconductor.org/packages/release/bioc/html/ATACseqQC.html">ATACseqQC</a><span class="citation">(<a href="#ref-schep2017chromvar">Schep et al. 2017</a>)</span>:
 <ul>
 <li><strong>Pros:</strong> provides several metrics and plots for evaluating data quality, identifies potential issues with data such as batch effects, sequencing depth, and library complexity.</li>
 <li><strong>Cons</strong>: does not perform peak-calling or downstream analysis.</li>
 </ul></li>
-<li><a href="https://deeptools.readthedocs.io/en/develop/">deeptools</a><span class="citation">(<a href="#ref-ramirez2016deeptools2" role="doc-biblioref">Ramı́rez et al. 2016</a>)</span>:
+<li><a href="https://deeptools.readthedocs.io/en/develop/">deeptools</a><span class="citation">(<a href="#ref-ramirez2016deeptools2">Ramı́rez et al. 2016</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: includes tools for normalization, visualization, and comparison of ATAC-seq data, generates heatmaps, profiles, and other plots for visualizing chromatin accessibility.</li>
 <li><strong>Cons</strong>: may require some programming skills to use effectively.</li>
 </ul></li>
-<li><a href="https://reggenlab.github.io/DFilter/tutorial.html">DFilter</a> <span class="citation">(<a href="#ref-ghavi2019highly" role="doc-biblioref">Ghavi-Helm et al. 2019</a>)</span>:
+<li><a href="https://reggenlab.github.io/DFilter/tutorial.html">DFilter</a> <span class="citation">(<a href="#ref-ghavi2019highly">Ghavi-Helm et al. 2019</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: uses a deep learning approach to predict the likelihood of a genomic region being an ATAC-seq peak, can handle both paired-end and single-end sequencing data, has been shown to outperform other peak-calling tools in some cases.</li>
 <li><strong>Cons</strong>: may require more computational resources than other tools.</li>
 </ul></li>
 </ul>
 </div>
-<div id="additional-tutorials-and-tools-1" class="section level2" number="16.9">
-<h2><span class="header-section-number">16.9</span> Additional tutorials and tools</h2>
+<div id="additional-tutorials-and-tools-1" class="section level2 hasAnchor" number="16.9">
+<h2><span class="header-section-number">16.9</span> Additional tutorials and tools<a href="atac-seq-1.html#additional-tutorials-and-tools-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/tutorial.html">A Galaxy based tutorial for ATAC-seq</a> - Galaxy is a good recommendation for those new to informatics who would like a cloud-based GUI option to use for the analysis of their data.</li>
 <li><a href="https://macs3-project.github.io/MACS/">MACS - Model-based analysis for ChIP-Seq</a> - A command line tool for the identification of transcription factor binding sites. Can be used with ChIP-seq or ATAC-seq.</li>
@@ -765,16 +759,16 @@ Homer or MEME suite tools.</p>
 <li><a href="https://github.com/zang-lab/SELMA">SELMA - Simplex Encoded Linear Model for Accessible Chromatin</a> - SELMA is a python based tool for the assessment of biases in Chromatin based data.</li>
 </ul>
 </div>
-<div id="online-visualization-tools" class="section level2" number="16.10">
-<h2><span class="header-section-number">16.10</span> Online Visualization tools</h2>
+<div id="online-visualization-tools" class="section level2 hasAnchor" number="16.10">
+<h2><span class="header-section-number">16.10</span> Online Visualization tools<a href="atac-seq-1.html#online-visualization-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="http://cistrome.org/db/#/">Cistrome DB</a> - a visual tool to allow you to browse your ATAC-seq data.</li>
 <li><a href="http://xena.ucsc.edu/">UCSC Xena</a> is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with ATAC-seq data.</li>
 <li><a href="https://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a> is a track-based browser for interactively exploring genomic data mapped to a reference genome.</li>
 </ul>
 </div>
-<div id="more-resources-about-atac-seq-data" class="section level2" number="16.11">
-<h2><span class="header-section-number">16.11</span> More resources about ATAC-seq data</h2>
+<div id="more-resources-about-atac-seq-data" class="section level2 hasAnchor" number="16.11">
+<h2><span class="header-section-number">16.11</span> More resources about ATAC-seq data<a href="atac-seq-1.html#more-resources-about-atac-seq-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/atac-seq/slides.html#1">ATAC-seq overview from Galaxy</a> - these slides explain the overarching concepts of ATAC-seq.</li>
 <li><a href="https://github.com/harvardinformatics/ATAC-seq">ATAC seq guidelines from Harvard</a> - this workflow runs through step by step how to analysis ATAC-seq data and what different parameters mean.</li>
@@ -787,7 +781,7 @@ Homer or MEME suite tools.</p>
 
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-ghavi2019highly" class="csl-entry">
 Ghavi-Helm, Yad, Aleksander Jankowski, Sascha Meiers, Rebecca R Viales, Jan O Korbel, and Eileen EM Furlong. 2019. <span>“Highly Rearranged Chromosomes Reveal Uncoupling Between Genome Topology and Gene Expression.”</span> <em>Nature Genetics</em> 51 (8): 1272–82.
@@ -806,10 +800,17 @@ Zhang, Yong, Tao Liu, Clifford A Meyer, Jie Eeckhoute, David S Johnson, Bradley 
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -879,7 +880,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

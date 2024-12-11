@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Sequencing Data | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Sequencing Data | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="general-data-analysis-tools.html"/>
 <link rel="next" href="microarray-data.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 6 Sequencing Data | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,18 +535,18 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="sequencing-data" class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Sequencing Data</h1>
+<div id="sequencing-data" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Sequencing Data<a href="sequencing-data.html#sequencing-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-4" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Learning Objectives</h2>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_7.png" title="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." alt="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." width="100%" /></p>
+<div id="learning-objectives-4" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Learning Objectives<a href="sequencing-data.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_7.png" alt="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." width="100%" /></p>
 <p>In this section, we are going to discuss generalities that apply to all sequencing data. This is meant to be a “primer” for you which data-type specific chapters will build off of to give you more specific and practical steps and advice in regards to your data type.</p>
 </div>
-<div id="how-does-sequencing-work" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> How does sequencing work?</h2>
+<div id="how-does-sequencing-work" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> How does sequencing work?<a href="sequencing-data.html#how-does-sequencing-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_45.png" width="100%" /></p>
 <p>Sequencing methods, whether they are targeting DNA, transcriptomes, or some other target of the genome, have some commonalities in the steps as well as what types of biases and data generation artifacts to look out for.</p>
 <p>All sequencing experiments start out with the extraction of the biological material of interest. This biological material will be processed in some way to isolate to the genomic target of interest (we will cover the various techniques for this in more detail in each respective data chapter since it is highly specific to the data type).</p>
@@ -560,44 +554,44 @@ div.csl-indent {
 <p>The resulting sample material is often a very small quantity, which means Polymerase Chain Reaction (PCR) needs to be used to amplify the material to a quantity large enough to be reliably sequenced. We will talk about how this very common method not only amplifies the sequences we want to read but amplifies sequence method biases that we would like to avoid.</p>
 <p>At the end of this process, base sequences are called for the samples (with varying degrees of confidence), creating huge amounts of data and what hopefully contains valuable research insights.</p>
 </div>
-<div id="sequencing-concepts" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Sequencing concepts</h2>
-<div id="inherent-biases" class="section level3" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Inherent biases</h3>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png" title="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" alt="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" width="100%" /></p>
+<div id="sequencing-concepts" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Sequencing concepts<a href="sequencing-data.html#sequencing-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="inherent-biases" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Inherent biases<a href="sequencing-data.html#inherent-biases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png" alt="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" width="100%" /></p>
 <p>Sequences are not all sequenced or amplified at the same rate. In a perfect world, we could take a simple snapshot of the genome we are interested in and know exactly what and how many sequences were in a sample. But in reality, sequencing methods and the resulting data always have some biases we have to be aware of and hopefully use methods that attempt to mitigate the biases.</p>
-<div id="gc-bias" class="section level4" number="6.3.1.1">
-<h4><span class="header-section-number">6.3.1.1</span> GC bias</h4>
+<div id="gc-bias" class="section level4 hasAnchor" number="6.3.1.1">
+<h4><span class="header-section-number">6.3.1.1</span> GC bias<a href="sequencing-data.html#gc-bias" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>You may recall that with nucleotides: adenine binds with thymine and guanine binds with cytosine. But, the guanine-cytosine bond (GC) has 3 hydrogen bonds whereas the adenine-thymine bond (AT) has only 2 bonds. This means that the GC bond is stickier (to put it scientifically) and needs higher temperatures to unbind. The sequencing and PCR amplification process involves cycling through temperatures and binding and unbinding of sequences which means that if a sequence has a lot of G’s and C’s (high GC content) it will unbind at a different temperatures than a sequence of low GC content.</p>
 </div>
-<div id="sequence-complexity" class="section level4" number="6.3.1.2">
-<h4><span class="header-section-number">6.3.1.2</span> Sequence complexity</h4>
+<div id="sequence-complexity" class="section level4 hasAnchor" number="6.3.1.2">
+<h4><span class="header-section-number">6.3.1.2</span> Sequence complexity<a href="sequencing-data.html#sequence-complexity" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Nonrepeating sequences are harder to sequence and amplify than repeating sequences. This means that the complexity of a target sequence influences the PCR amplification and detection.</p>
 </div>
-<div id="length-bias" class="section level4" number="6.3.1.3">
-<h4><span class="header-section-number">6.3.1.3</span> Length bias</h4>
+<div id="length-bias" class="section level4 hasAnchor" number="6.3.1.3">
+<h4><span class="header-section-number">6.3.1.3</span> Length bias<a href="sequencing-data.html#length-bias" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Longer sequences – whether they represent long sequence variants, long transcripts, or etc, are more likely to be identified than shorter ones! So if you are attempting to quantify the presence of a sequence, a longer sequence is much more likely to be counted more often.</p>
 </div>
 </div>
-<div id="pcr-amplification" class="section level3" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> PCR Amplification</h3>
+<div id="pcr-amplification" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> PCR Amplification<a href="sequencing-data.html#pcr-amplification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>All of the above biases are amplified when the sequences are being amplified! You can picture that if each of these biases have a certain effect for one copy, then as PCR steps copy the sequence exponentially, the error is also being multiplied! PCR amplification is generally a necessary part of the process. But there are tools that allow you to try to combat the biases of PCR amplification in your data analysis. These tools will be dependent on the type of sequencing methods you are using and will be something that is discussed in each data type chapter.</p>
 </div>
-<div id="depth-of-coverage" class="section level3" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Depth of coverage</h3>
+<div id="depth-of-coverage" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Depth of coverage<a href="sequencing-data.html#depth-of-coverage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_10.png" width="100%" /></p>
 <p>The depth of sequencing refers to how many times on average a particular base is sequenced. Obviously the more times something is sequenced, the more you can be confident that the base call is accurate. However, sequencing at greater depths also takes more time and money. Depending on your sequencing goals and methods there is an appropriate level of depth that is needed.</p>
 <p>Coverage on the other hand has to do with how much of the target is covered. If you are doing Whole Genome Sequencing, what percentage of the whole genome were you able to sequence? You may realize how depth is related to coverage, in that the greater depth of sequencing you use the more likely you are to also cover more of the genome. As discussed in relation to the biases, some part of the genome are harder to reach than others, so by reading at greater depths some of those “hard to read” parts of the genome will be able to be covered.</p>
 </div>
-<div id="quality-controls" class="section level3" number="6.3.4">
-<h3><span class="header-section-number">6.3.4</span> Quality controls</h3>
+<div id="quality-controls" class="section level3 hasAnchor" number="6.3.4">
+<h3><span class="header-section-number">6.3.4</span> Quality controls<a href="sequencing-data.html#quality-controls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_0.png" width="100%" /></p>
 <p>Sequencing bases involves some error/confidence rate. As mentioned, some parts of the genome are harder to read than others. Or, sometimes your sequencing can be influenced by poor quality sample that has degraded. Before you jump in to further analyzing your data, you will want to investigate the quality of the sequencing data you’ve collected.</p>
 <p>The most common and well-known method for assessing sequencing quality controls is <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FASTQC</a>. FASTQC creates an abundance of sequencing quality control reports from fastq files. These reports need to be interpreted within the context of your sequencing methods, samples, and experimental goals. Often bioinformatics cores are good to contact about these reports (they may have already run FASTQC on your data if that is where you obtained your data initially). They can help you wade through the flood of quality control reports printed out by FASTQC.</p>
 <p>FASTQC also has great documentation that can attempt to guide you through report interpretation. This also includes examples of good and bad FASTQC reports. But note that all FASTQC report interpretations must be done relative to the experiment that you have done. In other words, there is not a one size fits all quality control cutoffs for your FASTQC reports. The failure/success icons FASTQC reports back are based on defaults that may not be accurate or applicable to your data, so further investigation and consultation is warranted before you decided to trust or pitch your sequencing data.</p>
 </div>
-<div id="alignment" class="section level3" number="6.3.5">
-<h3><span class="header-section-number">6.3.5</span> Alignment</h3>
+<div id="alignment" class="section level3 hasAnchor" number="6.3.5">
+<h3><span class="header-section-number">6.3.5</span> Alignment<a href="sequencing-data.html#alignment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_15.png" width="100%" /></p>
 <p>Once you have your reads and you find them reasonably trustworthy through quality control checks, you will want to align them to your reference. The reference you align your sequences to will depend on the data type you have: a reference genome, a reference transcriptome, something else?</p>
 <ul>
@@ -606,43 +600,43 @@ div.csl-indent {
 </ul>
 <p>TODO: considerations for alignment.</p>
 </div>
-<div id="single-end-vs-paired-end" class="section level3" number="6.3.6">
-<h3><span class="header-section-number">6.3.6</span> Single End vs Paired End</h3>
+<div id="single-end-vs-paired-end" class="section level3 hasAnchor" number="6.3.6">
+<h3><span class="header-section-number">6.3.6</span> Single End vs Paired End<a href="sequencing-data.html#single-end-vs-paired-end" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_20.png" width="100%" /></p>
 <p>Sequencing can be done single-end or paired-end. Paired end means the primers are going to bind to both sides of a sequence. This can help you avoid some 3’ bias and give you more complete coverage of the area you are sequencing. But, as you may guess, pair-end read sequencing is more expensive than single end.</p>
 <p>You will want to determine whether your sequencing is paired end or single end. If it is paired end you will likely see file names that indicate this. You should have pairs of files that may or may not be labeled with <code>_1</code> and <code>_2</code> or <code>_F</code> and <code>_R</code>. We will discuss file nomenclature more specifically as it pertains to different data types in the upcoming chapters.</p>
 </div>
 </div>
-<div id="very-general-sequencing-workflow" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Very General Sequencing Workflow</h2>
+<div id="very-general-sequencing-workflow" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Very General Sequencing Workflow<a href="sequencing-data.html#very-general-sequencing-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the data type specific chapters, we will cover the sequencing data workflows and file formats in more detail. But in the most general sense, sequencing workflows look like this:</p>
-<div id="04D1599E33D92E370515664A58E78BE1EEB_69816">
-<div id="04D1599E33D92E370515664A58E78BE1EEB_69816_robot">
+<div id="id_04D1599E33D92E370515664A58E78BE1EEB_69816">
+<div id="id_04D1599E33D92E370515664A58E78BE1EEB_69816_robot">
 <a href="https://cloud.smartdraw.com/share.aspx/?pubDocShare=04D1599E33D92E370515664A58E78BE1EEB" target="_blank"><img src="https://cloud.smartdraw.com/cloudstorage/04D1599E33D92E370515664A58E78BE1EEB/preview2.png"></a>
 </div>
 </div>
 <script src="https://cloud.smartdraw.com/plugins/html/js/sdjswidget_html.js" type="text/javascript"></script>
 <script type="text/javascript">SDJS_Widget("04D1599E33D92E370515664A58E78BE1EEB",69816,1,"");</script>
 <p><br/></p>
-<div id="sequencing-file-formats-1" class="section level3" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Sequencing file formats</h3>
-<div id="sam---sequence-alignment-map-1" class="section level4" number="6.4.1.1">
-<h4><span class="header-section-number">6.4.1.1</span> SAM - Sequence Alignment Map</h4>
+<div id="sequencing-file-formats-1" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Sequencing file formats<a href="sequencing-data.html#sequencing-file-formats-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="sam---sequence-alignment-map-1" class="section level4 hasAnchor" number="6.4.1.1">
+<h4><span class="header-section-number">6.4.1.1</span> SAM - Sequence Alignment Map<a href="sequencing-data.html#sam---sequence-alignment-map-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>SAM Files are text based files that have sequence information. It generally has not been quantified or mapped. It is the reads in their raw form. <a href="https://samtools.github.io/hts-specs/SAMv1.pdf">For more about SAM files</a>.</p>
 </div>
-<div id="bam---binary-alignment-map-1" class="section level4" number="6.4.1.2">
-<h4><span class="header-section-number">6.4.1.2</span> BAM - Binary Alignment Map</h4>
+<div id="bam---binary-alignment-map-1" class="section level4 hasAnchor" number="6.4.1.2">
+<h4><span class="header-section-number">6.4.1.2</span> BAM - Binary Alignment Map<a href="sequencing-data.html#bam---binary-alignment-map-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>BAM files are like SAM files but are compressed (made to take up less space on your computer). This means if you double click on a BAM file to look at it, it will look jumbled and unintelligible. You will need to convert it to a SAM file if you want to see it yourself (but this isn’t necessary necessarily).</p>
 </div>
-<div id="fasta---fast-a-1" class="section level4" number="6.4.1.3">
-<h4><span class="header-section-number">6.4.1.3</span> FASTA - “fast A”</h4>
+<div id="fasta---fast-a-1" class="section level4 hasAnchor" number="6.4.1.3">
+<h4><span class="header-section-number">6.4.1.3</span> FASTA - “fast A”<a href="sequencing-data.html#fasta---fast-a-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Fasta files are sequence files that can be either nucleotide or amino acid sequences. They look something like this (the example below illustrating an amino acid sequence):</p>
 <pre><code>&gt;SEQ_ID
 GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT</code></pre>
 <p>For <a href="https://en.wikipedia.org/wiki/FASTA_format">more about fasta files</a>.</p>
 </div>
-<div id="fastq---fast-q-1" class="section level4" number="6.4.1.4">
-<h4><span class="header-section-number">6.4.1.4</span> FASTQ - “Fast q”</h4>
+<div id="fastq---fast-q-1" class="section level4 hasAnchor" number="6.4.1.4">
+<h4><span class="header-section-number">6.4.1.4</span> FASTQ - “Fast q”<a href="sequencing-data.html#fastq---fast-q-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A Fastq file is like a Fasta file except that it also contains information about the <strong>Q</strong>uality of the read. By quality, we mean, how sure was the sequencing machine that the nucleotide or amino acid called was indeed called correctly?</p>
 <pre><code>@SEQ_ID
 GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
@@ -652,35 +646,42 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 <p>Later in this course we will discuss the importance of examining the quality of your sequencing data and how to do that. If you received your data from a bioinformatics core it is possible that they’ve already done this quality analysis for you.</p>
 <p><em>Sequencing data that is not of high enough quality should not be trusted!</em> It may need to be re-run entirely or may need extra processing (trimming) in order to make it more trustworthy. We will discuss this more in later chapters.</p>
 </div>
-<div id="bcl---binary-base-call-bcl-sequence-file-format-1" class="section level4" number="6.4.1.5">
-<h4><span class="header-section-number">6.4.1.5</span> BCL - binary base call (BCL) sequence file format</h4>
+<div id="bcl---binary-base-call-bcl-sequence-file-format-1" class="section level4 hasAnchor" number="6.4.1.5">
+<h4><span class="header-section-number">6.4.1.5</span> BCL - binary base call (BCL) sequence file format<a href="sequencing-data.html#bcl---binary-base-call-bcl-sequence-file-format-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>This type of sequence file is specific to Illumina data. In most cases, you will simply want to convert it to Fastq files for use with non-Illumina programs.</p>
 <p><a href="https://medium.com/@marija190396/bcl-to-fastq-conversion-e289852823d0">More about BCL to Fastq conversion</a>.</p>
 </div>
-<div id="vcf---variant-call-format-1" class="section level4" number="6.4.1.6">
-<h4><span class="header-section-number">6.4.1.6</span> VCF - Variant Call Format</h4>
+<div id="vcf---variant-call-format-1" class="section level4 hasAnchor" number="6.4.1.6">
+<h4><span class="header-section-number">6.4.1.6</span> VCF - Variant Call Format<a href="sequencing-data.html#vcf---variant-call-format-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>VCF files are further processed form of data than the sequence files we discussed above. VCF files are specially for storing only where a particular sample’s sequences differ or are <em>variant</em> from the reference genome or each other.</p>
 <p>This will only be pertinent to you if you care about DNA variants. We will discuss this in the DNA seq chapter.</p>
 <p>For <a href="https://en.wikipedia.org/wiki/Variant_Call_Format">more on VCF files</a>.</p>
 </div>
-<div id="maf---mutation-annotation-format-1" class="section level4" number="6.4.1.7">
-<h4><span class="header-section-number">6.4.1.7</span> MAF - Mutation Annotation Format</h4>
+<div id="maf---mutation-annotation-format-1" class="section level4 hasAnchor" number="6.4.1.7">
+<h4><span class="header-section-number">6.4.1.7</span> MAF - Mutation Annotation Format<a href="sequencing-data.html#maf---mutation-annotation-format-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>MAF files are aggregated versions of VCF files. So for a group of samples for which each has a VCF file, your entire group of samples’ variants will be summarized in the form of a MAF file.</p>
 <p>For <a href="https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format/#:~:text=Mutation%20Annotation%20Format%20(MAF)%20is,(or%20open%2Daccess).">more on MAF files</a>.</p>
 </div>
 </div>
-<div id="other-files-1" class="section level3" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Other files</h3>
+<div id="other-files-1" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Other files<a href="sequencing-data.html#other-files-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>* If you didn’t see a file type listed you are looking for, take a look at this <a href="https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats">list by the BROAD</a>. Or, it may be covered in the data type specific chapters.</p>
 
 </div>
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -750,7 +751,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

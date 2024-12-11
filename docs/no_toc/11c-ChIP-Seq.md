@@ -9,12 +9,12 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-<img src="resources/images/11c-ChIP-Seq_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_61.png" title="Learning objectives This chapter will demonstrate how to: Understand the basics of ChIP-Seq data collection and processing workflow. Identify the next steps for your particular ChIP-Seq data. Formulate questions to ask about your ChIP-Seq data" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of ChIP-Seq data collection and processing workflow. Identify the next steps for your particular ChIP-Seq data. Formulate questions to ask about your ChIP-Seq data" width="100%" />
+<img src="resources/images/11c-ChIP-Seq_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_61.png" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of ChIP-Seq data collection and processing workflow. Identify the next steps for your particular ChIP-Seq data. Formulate questions to ask about your ChIP-Seq data" width="100%" />
 
 ## What are the goals of ChIP-Seq analysis?
 
 
-<img src="resources/images/11c-ChIP-Seq_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_18.png" title="The goal of ChIP-seq is to identify, for a particular DNA binding protein, all of the DNA sequences that it binds to." alt="The goal of ChIP-seq is to identify, for a particular DNA binding protein, all of the DNA sequences that it binds to." width="100%" />
+<img src="resources/images/11c-ChIP-Seq_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_18.png" alt="The goal of ChIP-seq is to identify, for a particular DNA binding protein, all of the DNA sequences that it binds to." width="100%" />
 
 ChIP-Seq (chromatin immunoprecipitation sequencing) and related approaches are used to identify genome-wide binding sites of specific proteins or protein complexes. Given the diversity of interactions at the DNA-protein interface, sequencing-based methods for targeted chromatin capture have evolved to meet precise research needs and improve the quality of the results. Specifically, ChIP-Seq builds on protein immunoprecipitation techniques (IP) by applying next generation sequencing to a pulldown product. IP followed by sequencing can be applied to any nucleic-acid binding protein for which an antibody is available, including a known or putative transcription factor (TF), chromatin remodeler or histone modifications, or other DNA- or chromatin-specific factors. ChiP-Seq approaches have been honed to increase signal-to-noise, reduce input material, and more specifically map protein-DNA interactions, for example by treating the IP product with a exonuclease that chews-back unprotected DNA end (e.g. ChIP-exo).
 

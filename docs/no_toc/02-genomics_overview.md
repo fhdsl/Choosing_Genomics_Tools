@@ -4,7 +4,7 @@
 
 ## Learning Objectives
 
-<img src="resources/images/02-genomics_overview_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_16.png" title="Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format" alt="Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format" width="100%" />
+<img src="resources/images/02-genomics_overview_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_16.png" alt="Learning objectives This chapter will demonstrate how to: Understand what will be covered in this course. Find information about your particular file format" width="100%" />
 
 In this chapter we are going to cover sequencing and microarray workflows at a very general high level overview to give you a first orientation. As we dive into specific data types and experiments, we will get into more specifics.
 Here we will cover the most common file formats. If you have a file format you are dealing with that you don't see listed here, it may be specific to your data type and we will discuss that more in that data type's respective chapter. We still suggest you go through this chapter to give you a basic understanding of commonalities of all genomic data types and workflows
@@ -13,7 +13,7 @@ Here we will cover the most common file formats. If you have a file format you a
 
 In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly, this summarized data is what can be used to make inferences and create plots and results tables.
 
-<img src="resources/images/02-genomics_overview_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_20.png" title="In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. " alt="In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. " width="100%" />
+<img src="resources/images/02-genomics_overview_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_20.png" alt="In the most general sense, all genomics data when originally collected is raw, it needs to undergo processing to be normalized and ready to use. Then normalized data is generally summarized in a way that is ready for it to be further consumed. Lastly this summarized data is what can be used to make inferences and create plots and results tables. " width="100%" />
 
 ### Basic file formats
 

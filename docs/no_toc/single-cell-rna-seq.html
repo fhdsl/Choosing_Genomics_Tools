@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 13 Single-cell RNA-seq | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 13 Single-cell RNA-seq | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="bulk-rna-seq-1.html"/>
 <link rel="next" href="spatial-transcriptomics-1.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 13 Single-cell RNA-seq | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,81 +535,81 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="single-cell-rna-seq" class="section level1" number="13">
-<h1><span class="header-section-number">Chapter 13</span> Single-cell RNA-seq</h1>
+<div id="single-cell-rna-seq" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Chapter 13</span> Single-cell RNA-seq<a href="single-cell-rna-seq.html#single-cell-rna-seq" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is in a beta stage. If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-11" class="section level2" number="13.1">
-<h2><span class="header-section-number">13.1</span> Learning Objectives</h2>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png" title="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" alt="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" width="100%" /></p>
+<div id="learning-objectives-11" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Learning Objectives<a href="single-cell-rna-seq.html#learning-objectives-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png" alt="This chapter will demonstrate how to: Understand the basics of single cell RNA-Seq data collection and processing workflow. Identify the next steps for your particular single cell RNA-seq data. Formulate questions to ask about your single cell RNA-seq data" width="100%" /></p>
 </div>
-<div id="where-single-cell-rna-seq-data-comes-from" class="section level2" number="13.2">
-<h2><span class="header-section-number">13.2</span> Where single-cell RNA-seq data comes from</h2>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_6.png" title="As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity" alt="As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity" width="100%" /></p>
+<div id="where-single-cell-rna-seq-data-comes-from" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Where single-cell RNA-seq data comes from<a href="single-cell-rna-seq.html#where-single-cell-rna-seq-data-comes-from" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_6.png" alt="As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity" width="100%" /></p>
 <p>As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity.</p>
 <p>Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity. If your research questions require cell-level transcriptional information, single-cell RNA-seq will on interest to you.</p>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_11.png" title="Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity." alt="Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity." width="100%" /></p>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_11.png" alt="Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity." width="100%" /></p>
 </div>
-<div id="single-cell-rna-seq-data-types" class="section level2" number="13.3">
-<h2><span class="header-section-number">13.3</span> Single-cell RNA-seq data types</h2>
+<div id="single-cell-rna-seq-data-types" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Single-cell RNA-seq data types<a href="single-cell-rna-seq.html#single-cell-rna-seq-data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are broadly two categories of single-cell RNA-seq data methods we will discuss.</p>
 <ul>
 <li><strong>Full length RNA-seq</strong>: Individual cells are physically separated and then sequenced.</li>
 <li><strong>Tag Based RNA-seq</strong>: Individual cells are tagged with a barcode and their data is separated computationally.</li>
 </ul>
 <p>Depending on your goals for your single cell RNA-seq analysis, you may want to choose one method over the other.</p>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png" title="Full length single cell RNA-seq **Pros**: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive." alt="Full length single cell RNA-seq **Pros**: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive." width="100%" /></p>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_30.png" title="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" alt="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" width="100%" /></p>
-<p>(Material borrowed from <span class="citation">(<a href="#ref-AlexsLemonade2022" role="doc-biblioref"><span>“Alex’s Lemonade Training Modules”</span> 2022</a>)</span>).</p>
-<div id="unique-molecular-identifiers" class="section level3" number="13.3.1">
-<h3><span class="header-section-number">13.3.1</span> Unique Molecular identifiers</h3>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png" alt="Full length single cell RNA-seq **Pros**: Can be paired end sequencing which has less 3' bias. More complete coverage of transcripts which may be better for transcript discovery purposes. Cons: Is not very efficient (96 wells per plate). Takes longer to run days/weeks depending on the sample size. Expensive." width="100%" /></p>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_30.png" alt="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" width="100%" /></p>
+<p>(Material borrowed from <span class="citation">(<a href="#ref-AlexsLemonade2022"><span>“Alex’s Lemonade Training Modules”</span> 2022</a>)</span>).</p>
+<div id="unique-molecular-identifiers" class="section level3 hasAnchor" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Unique Molecular identifiers<a href="single-cell-rna-seq.html#unique-molecular-identifiers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Often Tag based single cell RNA-seq methods will include not only a cell barcode for cell identification but will also have a unique molecular identifier (UMI) for original molecule identification. The idea behind the UMIs is it is a way to have insight into the original snapshot of the cell and potentially combat PCR amplification biases.</p>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_41.png" title="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" alt="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" width="100%" /></p>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_41.png" alt="Tag based single cell RNA-seq. Pros: Can profile up to millions of cells. Takes less computing power. File storage requirements are smaller. Much less expensive. Cons: More intense 3' bias. Coverage is not as deep as full length single cell RNA-seq" width="100%" /></p>
 </div>
 </div>
-<div id="single-cell-rna-seq-tools" class="section level2" number="13.4">
-<h2><span class="header-section-number">13.4</span> Single cell RNA-seq tools</h2>
+<div id="single-cell-rna-seq-tools" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Single cell RNA-seq tools<a href="single-cell-rna-seq.html#single-cell-rna-seq-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are a lot of scRNA-seq tools for various steps along the way.</p>
-<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png" title="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." alt="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." width="100%" /></p>
+<p><img src="resources/images/10b-single-cell-RNA-seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png" alt="In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting duplets, and using this information to filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses." width="100%" /></p>
 <p>In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting doublets (also known as duplets), and using this information to filter out data that is not trustworthy. <a href="https://bioconductor.org/books/3.15/OSCA.advanced/doublet-detection.html">Doublets are transcriptome data generated from two cells</a>, and an undesired technical artifact when single cell RNA-seq workflows want data representing a single cell at a time. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.</p>
 <p>Each step of this very general representation of a workflow can be conducted by a variety of tools. We will highlight some of the more popular tools here. But, to look through a full list, you can consult the <a href="https://www.scrna-tools.org/table">scRNA-tools website</a>.</p>
 </div>
-<div id="quantification-and-alignment-tools" class="section level2" number="13.5">
-<h2><span class="header-section-number">13.5</span> Quantification and alignment tools</h2>
+<div id="quantification-and-alignment-tools" class="section level2 hasAnchor" number="13.5">
+<h2><span class="header-section-number">13.5</span> Quantification and alignment tools<a href="single-cell-rna-seq.html#quantification-and-alignment-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="warning">
 <p>This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.</p>
 </div>
 <ul>
-<li><a href="https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html">STAR</a> <span class="citation">(<a href="#ref-dobin2013star" role="doc-biblioref">Dobin et al. 2013</a>)</span>:
+<li><a href="https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html">STAR</a> <span class="citation">(<a href="#ref-dobin2013star">Dobin et al. 2013</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Can handle a wide range of RNA-seq protocols, including scRNA-seq. Provides read counts and gene-level expression values.</li>
 <li><strong>Cons</strong>: Requires a significant amount of memory and computational resources. May be difficult to set up and run for beginners.</li>
 </ul></li>
-<li><a href="http://daehwankimlab.github.io/hisat2/">HISAT2</a> <span class="citation">(<a href="#ref-kim2015hisat" role="doc-biblioref">Kim, Langmead, and Salzberg 2015</a>)</span>:
+<li><a href="http://daehwankimlab.github.io/hisat2/">HISAT2</a> <span class="citation">(<a href="#ref-kim2015hisat">Kim, Langmead, and Salzberg 2015</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Accurate alignment of RNA-seq reads to the genome. Provides transcript-level expression values. Supports splice-aware alignment.</li>
 <li><strong>Cons</strong>: May require significant computational resources for large datasets. May not be as accurate as some other alignment tools.</li>
 </ul></li>
-<li><a href="https://www.kallistobus.tools/">Kallisto bustools</a> <span class="citation">(<a href="#ref-bray2016near" role="doc-biblioref">Bray et al. 2016</a>)</span>:
+<li><a href="https://www.kallistobus.tools/">Kallisto bustools</a> <span class="citation">(<a href="#ref-bray2016near">Bray et al. 2016</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Requires less memory and computational resources than alignment-based methods.</li>
 <li><strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</li>
 </ul></li>
-<li><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin/Salmon</a> <span class="citation">(<a href="#ref-patro2017salmon" role="doc-biblioref">Patro et al. 2017</a>)</span>:
+<li><a href="https://salmon.readthedocs.io/en/latest/alevin.html">Alevin/Salmon</a> <span class="citation">(<a href="#ref-patro2017salmon">Patro et al. 2017</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Fast and accurate quantification of RNA-seq reads without the need for alignment. Provides transcript-level expression values. Supports both single-end and paired-end sequencing.</li>
 <li><strong>Cons</strong>: May not be as accurate as alignment-based methods for lowly expressed genes. Cannot provide allele-specific expression estimates.</li>
 </ul></li>
-<li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cell Ranger</a> <span class="citation">(<a href="#ref-zheng2017massively" role="doc-biblioref">Zheng et al. 2017</a>)</span>:
+<li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cell Ranger</a> <span class="citation">(<a href="#ref-zheng2017massively">Zheng et al. 2017</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Specifically designed for 10x Genomics scRNA-seq data, with optimized workflows for alignment and quantification. Provides read counts and gene-level expression values. Offers a streamlined pipeline with minimal input from the user.</li>
 <li><strong>Cons</strong>: Limited options for customizing parameters or analysis methods. May not be suitable for datasets from other scRNA-seq platforms.</li>
 </ul></li>
 </ul>
 </div>
-<div id="downstream-tools-pros-and-cons" class="section level2" number="13.6">
-<h2><span class="header-section-number">13.6</span> Downstream tools Pros and Cons</h2>
+<div id="downstream-tools-pros-and-cons" class="section level2 hasAnchor" number="13.6">
+<h2><span class="header-section-number">13.6</span> Downstream tools Pros and Cons<a href="single-cell-rna-seq.html#downstream-tools-pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://satijalab.org/seurat/">Seurat</a>:
 <ul>
@@ -638,20 +632,20 @@ div.csl-indent {
 <li><strong>Cons</strong>: May not be as feature-rich for clustering or differential expression analysis as some other tools. Requires some knowledge of R programming language.</li>
 </ul></li>
 </ul>
-<div id="doublet-tool-pros-and-cons" class="section level3" number="13.6.1">
-<h3><span class="header-section-number">13.6.1</span> Doublet Tool Pros and Cons</h3>
+<div id="doublet-tool-pros-and-cons" class="section level3 hasAnchor" number="13.6.1">
+<h3><span class="header-section-number">13.6.1</span> Doublet Tool Pros and Cons<a href="single-cell-rna-seq.html#doublet-tool-pros-and-cons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><a href="https://github.com/chris-mcginnis-ucsf/DoubletFinder">DoubletFinder</a><span class="citation">(<a href="#ref-mcginnis2020doubletfinder" role="doc-biblioref">McGinnis, Murrow, and Gartner 2020</a>)</span>:
+<li><a href="https://github.com/chris-mcginnis-ucsf/DoubletFinder">DoubletFinder</a><span class="citation">(<a href="#ref-mcginnis2020doubletfinder">McGinnis, Murrow, and Gartner 2020</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Uses a machine learning approach to detect doublets based on transcriptome similarity. Can be used with a variety of scRNA-seq platforms. Offers a user-friendly interface and extensive documentation.</li>
 <li><strong>Cons</strong>: Can be computationally intensive for large datasets. May require some knowledge of R programming language.</li>
 </ul></li>
-<li><a href="https://github.com/swolock/scrublet">Scrublet</a> <span class="citation">(<a href="#ref-wolock2019scrublet" role="doc-biblioref">Wolock, Krishnaswamy, and Huang 2019</a>)</span>:
+<li><a href="https://github.com/swolock/scrublet">Scrublet</a> <span class="citation">(<a href="#ref-wolock2019scrublet">Wolock, Krishnaswamy, and Huang 2019</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Uses a density-based approach to detect doublets based on barcode sharing. Fast and computationally efficient, making it suitable for large datasets. Offers a user-friendly interface and extensive documentation.</li>
 <li><strong>Cons</strong>:May not be as accurate as other methods, especially for low-quality data. Limited to 10x Genomics data.</li>
 </ul></li>
-<li><a href="https://github.com/EDePasquale/DoubletDecon">DoubletDecon</a> <span class="citation">(<a href="#ref-de2019doubletdecon" role="doc-biblioref">De Pasquale and Dudoit 2019</a>)</span>:
+<li><a href="https://github.com/EDePasquale/DoubletDecon">DoubletDecon</a> <span class="citation">(<a href="#ref-de2019doubletdecon">De Pasquale and Dudoit 2019</a>)</span>:
 <ul>
 <li><strong>Pros</strong>: Uses a statistical approach to identify doublets based on the distribution of the number of unique molecular identifiers (UMIs) per cell. Can be used with different platforms and species. Offers a user-friendly interface and extensive documentation.</li>
 <li><strong>Cons</strong>: May not be as accurate as other methods, especially for data with low sequencing depth or low cell numbers. Requires some knowledge of R programming language.</li>
@@ -660,8 +654,8 @@ div.csl-indent {
 <p>It’s important to note that no doublet detection method is perfect, and it’s often a good idea to combine multiple methods to increase the accuracy of doublet identification. Additionally, manual inspection of the data is always recommended to confirm the presence or absence of doublets.</p>
 </div>
 </div>
-<div id="more-scrna-seq-tools-and-tutorials" class="section level2" number="13.7">
-<h2><span class="header-section-number">13.7</span> More scRNA-seq tools and tutorials</h2>
+<div id="more-scrna-seq-tools-and-tutorials" class="section level2 hasAnchor" number="13.7">
+<h2><span class="header-section-number">13.7</span> More scRNA-seq tools and tutorials<a href="single-cell-rna-seq.html#more-scrna-seq-tools-and-tutorials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://bioconductor.org/packages/release/bioc/html/alevinQC.html">AlevinQC</a></li>
 <li><a href="https://notebook.genepattern.org/single-cell/">Gene Pattern’s single cell RNA-seq tutorials</a> - an open software environment providing access to hundreds of tools for the analysis and visualization of genomic data.</li>
@@ -670,16 +664,16 @@ div.csl-indent {
 <li><a href="https://people.math.umass.edu/~aronow/TumorDecon">TumorDecon</a> can be used to generate customized signature matrices from single-cell RNA-sequence profiles. It is available on Github (<a href="https://github.com/ShahriyariLab/TumorDecon" class="uri">https://github.com/ShahriyariLab/TumorDecon</a>) and PyPI (<a href="https://pypi.org/project/TumorDecon/" class="uri">https://pypi.org/project/TumorDecon/</a>).</li>
 </ul>
 </div>
-<div id="visualization-gui-tools-1" class="section level2" number="13.8">
-<h2><span class="header-section-number">13.8</span> Visualization GUI tools</h2>
+<div id="visualization-gui-tools-1" class="section level2 hasAnchor" number="13.8">
+<h2><span class="header-section-number">13.8</span> Visualization GUI tools<a href="single-cell-rna-seq.html#visualization-gui-tools-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://webmev.tm4.org">WebMeV</a> uniquely provides a user-friendly, intuitive, interactive interface to processed analytical data uses cloud-computing elasticity for computationally intensive analyses and is compatible with single cell or bulk RNA-seq input data.</li>
 <li><a href="http://xena.ucsc.edu/">UCSC Xena</a> is a web-based visualization tool for multi-omic data and associated clinical and phenotypic annotations. It can be used with single cell RNA-seq data.</li>
 <li><a href="https://software.broadinstitute.org/software/igv/">Integrative Genomics Viewer (IGV)</a> is a track-based browser for interactively exploring genomic data mapped to a reference genome.</li>
 </ul>
 </div>
-<div id="useful-tutorials" class="section level2" number="13.9">
-<h2><span class="header-section-number">13.9</span> Useful tutorials</h2>
+<div id="useful-tutorials" class="section level2 hasAnchor" number="13.9">
+<h2><span class="header-section-number">13.9</span> Useful tutorials<a href="single-cell-rna-seq.html#useful-tutorials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>These tutorials cover explicit steps, code, tool recommendations and other considerations for analyzing RNA-seq data.</p>
 <ul>
 <li><a href="http://bioconductor.org/books/3.15/OSCA.intro/">Orchestrating Single Cell Analysis with Bioconductor</a> - An excellent tutorial for processing single cell data using Bioconductor.</li>
@@ -690,24 +684,24 @@ div.csl-indent {
 <li><a href="https://swaruplab.bio.uci.edu/tutorial/cellranger/cellranger-rna.html">Processing raw 10X Genomics single-cell RNA-seq data (with cellranger)</a> - a tutorial based on using CellRanger.</li>
 </ul>
 </div>
-<div id="useful-readings" class="section level2" number="13.10">
-<h2><span class="header-section-number">13.10</span> Useful readings</h2>
+<div id="useful-readings" class="section level2 hasAnchor" number="13.10">
+<h2><span class="header-section-number">13.10</span> Useful readings<a href="single-cell-rna-seq.html#useful-readings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">An Introduction to the Analysis of Single-Cell RNA-Sequencing Data</a> <span class="citation">(<a href="#ref-Aljanahi2018" role="doc-biblioref">AlJanahi, Danielsen, and Dunbar 2018</a>)</span>.</li>
-<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Orchestrating single-cell analysis with Bioconductor</a> <span class="citation">(<a href="#ref-Amezquita2020" role="doc-biblioref">Amezquita et al. 2020</a>)</span>.</li>
-<li><a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/">UMIs the problem, the solution and the proof</a> <span class="citation">(<a href="#ref-Smith2015" role="doc-biblioref">Smith 2015</a>)</span>.</li>
-<li><a href="https://doi.org/10.1093/bfgp/elx035">Experimental design for single-cell RNA sequencing</a> <span class="citation">(<a href="#ref-BaranGale2018" role="doc-biblioref">Baran-Gale, Chandra, and Kirschner 2018</a>)</span>.</li>
-<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies</a> <span class="citation">(<a href="#ref-Lafzi2018" role="doc-biblioref">Lafzi et al. 2018</a>)</span>.</li>
-<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Comparative Analysis of Single-Cell RNA Sequencing Methods</a> <span class="citation">(<a href="#ref-Ziegenhain2017" role="doc-biblioref">Ziegenhain et al. 2017</a>)</span>.</li>
-<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems</a> <span class="citation">(<a href="#ref-Zhang2019" role="doc-biblioref">X. Zhang et al. 2019</a>)</span>.</li>
-<li><a href="http://dx.doi.org/10.1016/j.coisb.2017.07.004">Single cells make big data: New challenges and opportunities in transcriptomics</a> <span class="citation">(<a href="#ref-Angerer2017" role="doc-biblioref">Angerer et al. 2017</a>)</span>.</li>
-<li><a href="https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2">Comparative Analysis of common alignment tools for single cell RNA sequencing</a> <span class="citation">(<a href="#ref-Bruning2021" role="doc-biblioref">Brüning et al. 2021</a>)</span>.</li>
-<li><a href="https://doi.org/10.15252/msb.20188746">Current best practices in single-cell RNA-seq analysis: a tutorial</a> <span class="citation">(<a href="#ref-Luecken2019" role="doc-biblioref">Luecken and Theis 2019</a>)</span>.</li>
+<li><a href="https://doi.org/10.1016/j.omtm.2018.07.003">An Introduction to the Analysis of Single-Cell RNA-Sequencing Data</a> <span class="citation">(<a href="#ref-Aljanahi2018">AlJanahi, Danielsen, and Dunbar 2018</a>)</span>.</li>
+<li><a href="https://www.nature.com/articles/s41592-019-0654-x">Orchestrating single-cell analysis with Bioconductor</a> <span class="citation">(<a href="#ref-Amezquita2020">Amezquita et al. 2020</a>)</span>.</li>
+<li><a href="https://cgatoxford.wordpress.com/2015/08/14/unique-molecular-identifiers-the-problem-the-solution-and-the-proof/">UMIs the problem, the solution and the proof</a> <span class="citation">(<a href="#ref-Smith2015">Smith 2015</a>)</span>.</li>
+<li><a href="https://doi.org/10.1093/bfgp/elx035">Experimental design for single-cell RNA sequencing</a> <span class="citation">(<a href="#ref-BaranGale2018">Baran-Gale, Chandra, and Kirschner 2018</a>)</span>.</li>
+<li><a href="https://doi.org/10.1038/s41596-018-0073-y">Tutorial: guidelines for the experimental design of single-cell RNA sequencing studies</a> <span class="citation">(<a href="#ref-Lafzi2018">Lafzi et al. 2018</a>)</span>.</li>
+<li><a href="http://dx.doi.org/10.1016/j.molcel.2017.01.023">Comparative Analysis of Single-Cell RNA Sequencing Methods</a> <span class="citation">(<a href="#ref-Ziegenhain2017">Ziegenhain et al. 2017</a>)</span>.</li>
+<li><a href="https://doi.org/10.1016/j.molcel.2018.10.020">Comparative Analysis of Droplet-Based Ultra-High-Throughput Single-Cell RNA-Seq Systems</a> <span class="citation">(<a href="#ref-Zhang2019">X. Zhang et al. 2019</a>)</span>.</li>
+<li><a href="http://dx.doi.org/10.1016/j.coisb.2017.07.004">Single cells make big data: New challenges and opportunities in transcriptomics</a> <span class="citation">(<a href="#ref-Angerer2017">Angerer et al. 2017</a>)</span>.</li>
+<li><a href="https://www.biorxiv.org/content/10.1101/2021.02.15.430948v2">Comparative Analysis of common alignment tools for single cell RNA sequencing</a> <span class="citation">(<a href="#ref-Bruning2021">Brüning et al. 2021</a>)</span>.</li>
+<li><a href="https://doi.org/10.15252/msb.20188746">Current best practices in single-cell RNA-seq analysis: a tutorial</a> <span class="citation">(<a href="#ref-Luecken2019">Luecken and Theis 2019</a>)</span>.</li>
 </ul>
 
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-AlexsLemonade2022" class="csl-entry">
 <span>“Alex’s Lemonade Training Modules.”</span> 2022. <a href="https://github.com/AlexsLemonade/training-modules">https://github.com/AlexsLemonade/training-modules</a>.
@@ -768,10 +762,17 @@ Ziegenhain, Christoph, Beate Vieth, Swati Parekh, Björn Reinius, Amy Guillaumet
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -841,7 +842,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

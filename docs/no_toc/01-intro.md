@@ -3,7 +3,7 @@
 
 # Introduction
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png" title="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" alt="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png" alt="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" width="100%" />
 
 This is a *living* course meaning it is constantly changing and being updated. The goal for this course is to be a "wikipedia" of omic data.
 If you'd like to contribute, [you can file a pull request on GitHub](https://github.com/fhdsl/Choosing_Genomics_Tools) if you are comfortable with that sort of thing or email `csavonen@fredhutch.org` to ask how to get started.
@@ -18,11 +18,11 @@ _This course is written for individuals who:_
 - Want a basic overview of genomic data types.
 - Want to find resources for processing and interpreting genomics data.
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g116525eff64_0_96.png" title="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data" alt="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data" width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g116525eff64_0_96.png" alt="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data" width="100%" />
 
 ## Topics covered:
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" title=" " alt=" " width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" alt=" " width="100%" />
 
 ## Motivation
 
@@ -33,17 +33,17 @@ Often students and researchers need to utilize genomic data to reach the next st
 
 Often researchers receive their genomic data processed from another lab or institution, and although they are excited to gain insights from it to inform the next steps of their research, they may not have a practical understanding of how the data they have received came to be or what needs to be done with it.
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png" title="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" alt="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png" alt="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" width="100%" />
 
 As an example, data file formats may not have been covered in their training, and the data they received seems unintelligible and not as straightforward as they hoped.
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png" title="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" alt="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png" alt="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" width="100%" />
 
 This course attempts to give this researcher the basic bearings and resources regarding their data, in hopes that they will be equipped and informed about how to obtain the insights for their researcher they originally aimed to find.
 
 ## Curriculum  
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png" title="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " alt="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png" alt="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " width="100%" />
 
 **Goal of this course:**  
 Equip learners with tutorials and resources so they can understand and interpret their genomic data in a way that helps them meet their goals and handle the data properly.

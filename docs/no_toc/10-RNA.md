@@ -9,19 +9,19 @@ This chapter is in a beta stage. Some of it has been written with AI tools. If y
 
 ## Learning Objectives
 
-<img src="resources/images/10-RNA_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_76.png" title="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection processes for gene expression assays. Compare and contrast the following methods: Bulk RNA-seq, Single cell RNA-seq, Gene expression microarrays" alt="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection processes for gene expression assays. Compare and contrast the following methods: Bulk RNA-seq, Single cell RNA-seq, Gene expression microarrays" width="100%" />
+<img src="resources/images/10-RNA_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_76.png" alt="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection processes for gene expression assays. Compare and contrast the following methods: Bulk RNA-seq, Single cell RNA-seq, Gene expression microarrays" width="100%" />
 
 ## What are the goals of gene expression analysis?
 
 The goal of gene expression analysis is to quantify RNAs across the genome. This can signify the extent to which various RNAs are being transcribed in a particular cell. This can be informative for what kinds of activity a cell is undergoing and responding to.
 
-<img src="resources/images/10-RNA_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142c259a793_0_0.png" title="The goal of gene expression analysis is to quantify RNAs on a genome wide level" alt="The goal of gene expression analysis is to quantify RNAs on a genome wide level" width="100%" />
+<img src="resources/images/10-RNA_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142c259a793_0_0.png" alt="The goal of gene expression analysis is to quantify RNAs on a genome wide level" width="100%" />
 
 ## Comparison of RNA methods
 
 There are three general methods we will discuss for evaluating gene expression. RNA sequencing (whether bulk or single-cell) allows you to catch more targets than gene expression microarrays but is much more costly and computationally intensive. Gene expression microarrays have a lower dynamic range than RNA-seq generally but are much more cost effective. Spatial transcriptomics is the newest method on the block and has the ability to relate gene expression to tissue regions and subpopulations.
 
-<img src="resources/images/10-RNA_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_80.png" title="Gene expression microarrays are low cost and low computationally intensive. Bulk RNA-seq is higher cost, requires more computational resources but covers more targets than gene expression arrays. Single cell RNA-seq is higher cost, requires more computational resources but as opposed to Bulk RNA-seq gives single cell resolution." alt="Gene expression microarrays are low cost and low computationally intensive. Bulk RNA-seq is higher cost, requires more computational resources but covers more targets than gene expression arrays. Single cell RNA-seq is higher cost, requires more computational resources but as opposed to Bulk RNA-seq gives single cell resolution." width="100%" />
+<img src="resources/images/10-RNA_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_80.png" alt="Gene expression microarrays are low cost and low computationally intensive. Bulk RNA-seq is higher cost, requires more computational resources but covers more targets than gene expression arrays. Single cell RNA-seq is higher cost, requires more computational resources but as opposed to Bulk RNA-seq gives single cell resolution." width="100%" />
 
 ### Single-cell RNA-seq (scRNA-seq):
 

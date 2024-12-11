@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Introduction | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Introduction | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
 <link rel="next" href="a-very-general-genomics-overview.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 1 Introduction | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,13 +535,13 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png" title="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" alt="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" width="100%" /></p>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png" alt="Title image: Choosing Genomics Tools Written by: Candace Savonen. Part of the ITN (ITCR training Network) and created through the Johns Hopkins Data Science Lab" width="100%" /></p>
 <p>This is a <em>living</em> course meaning it is constantly changing and being updated. The goal for this course is to be a “wikipedia” of omic data.
 If you’d like to contribute, <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">you can file a pull request on GitHub</a> if you are comfortable with that sort of thing or email <code>csavonen@fredhutch.org</code> to ask how to get started.</p>
-<div id="target-audience" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Target Audience</h2>
+<div id="target-audience" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Target Audience<a href="introduction.html#target-audience" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The course is intended for students in the biomedical sciences and researchers who have been given data and don’t know what to do with it or would like an overview of the different genomic data types that are out there.</p>
 <p><em>This course is written for individuals who:</em></p>
 <ul>
@@ -555,42 +549,49 @@ If you’d like to contribute, <a href="https://github.com/fhdsl/Choosing_Genomi
 <li>Want a basic overview of genomic data types.</li>
 <li>Want to find resources for processing and interpreting genomics data.</li>
 </ul>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g116525eff64_0_96.png" title="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data" alt="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data" width="100%" /></p>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g116525eff64_0_96.png" alt="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data" width="100%" /></p>
 </div>
-<div id="topics-covered" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Topics covered:</h2>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" title=" " alt=" " width="100%" /></p>
+<div id="topics-covered" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Topics covered:<a href="introduction.html#topics-covered" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" alt=" " width="100%" /></p>
 </div>
-<div id="motivation" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Motivation</h2>
+<div id="motivation" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Motivation<a href="introduction.html#motivation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Cancer datasets are plentiful, complicated, and hold untold amounts of information regarding cancer biology. Cancer researchers are working to apply their expertise to the analysis of these vast amounts of data but training opportunities to properly equip them in these efforts can be sparse. This includes training in reproducible data analysis methods.</p>
 <p>Often students and researchers need to utilize genomic data to reach the next steps of their research but may not have formal training in computational methods or the basics of the genomic data they are attempting to utilize.</p>
 <p>Often researchers receive their genomic data processed from another lab or institution, and although they are excited to gain insights from it to inform the next steps of their research, they may not have a practical understanding of how the data they have received came to be or what needs to be done with it.</p>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png" title="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" alt="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" width="100%" /></p>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png" alt="This researcher is very excited because they’ve received their genomic data and are ready to gain insights from it to inform the next steps of their research. An email sent to them says ‘your data are ready’" width="100%" /></p>
 <p>As an example, data file formats may not have been covered in their training, and the data they received seems unintelligible and not as straightforward as they hoped.</p>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png" title="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" alt="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" width="100%" /></p>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png" alt="The researcher may attempt to open their newly received genomic data and be completely perplexed by the file formats or what these data even represent. The researcher says ‘What is this and what do I do with it’" width="100%" /></p>
 <p>This course attempts to give this researcher the basic bearings and resources regarding their data, in hopes that they will be equipped and informed about how to obtain the insights for their researcher they originally aimed to find.</p>
 </div>
-<div id="curriculum" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Curriculum</h2>
-<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png" title="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " alt="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " width="100%" /></p>
+<div id="curriculum" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Curriculum<a href="introduction.html#curriculum" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/01-intro_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png" alt="Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data " width="100%" /></p>
 <p><strong>Goal of this course:</strong><br />
 Equip learners with tutorials and resources so they can understand and interpret their genomic data in a way that helps them meet their goals and handle the data properly.
 This includes helping learners formulate questions they will need to ask others about their data</p>
 <p><strong>What is not the goal</strong><br />
 Teach learners about choosing parameters or about the ins and outs of every genomic tool they might be interested in. This course is meant to connect people to other resources that will help them with the specifics of their genomic data and help learners have more efficient and fruitful discussions about their data with bioinformatic experts.</p>
 </div>
-<div id="how-to-use-the-course" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> How to use the course</h2>
+<div id="how-to-use-the-course" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> How to use the course<a href="introduction.html#how-to-use-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This course is designed to be a jumping off point to more specific resources based on a genomic data type the learner has in mind (or currently on their computer). We encourage learners to follow links to resources we provide and feel free to jump around to chapters that are most useful for them.</p>
 
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -660,7 +661,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

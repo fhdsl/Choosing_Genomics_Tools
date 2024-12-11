@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 17 Single cell ATAC-Seq | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 17 Single cell ATAC-Seq | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Description about Course/Book." />
   
@@ -31,7 +30,6 @@
   <link rel="shortcut icon" href="assets/ITN_favicon.ico" type="image/x-icon" />
 <link rel="prev" href="atac-seq-1.html"/>
 <link rel="next" href="chip-seq-1.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -49,31 +47,26 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-  <html>
-  
-  <head>
-  <title>Chapter 17 Single cell ATAC-Seq | Title</title>
-  </head>
-  
-  <body>
-  
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWJXTLJBQ7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
+
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
-      
-  </body>
-  </html>
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -475,8 +468,9 @@ div.csl-indent {
 <li class="chapter" data-level="21" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html"><i class="fa fa-check"></i><b>21</b> Microbiome Sequencing</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#learning-objectives-19"><i class="fa fa-check"></i><b>21.1</b> Learning Objectives</a></li>
-<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.2</b> Goals of Amplicon analysis</a></li>
-<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.3</b> Microbiome Analysis with QIIME 2</a></li>
+<li class="chapter" data-level="21.2" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#a-brief-introduction-to-microbiomes"><i class="fa fa-check"></i><b>21.2</b> A Brief Introduction to Microbiomes</a></li>
+<li class="chapter" data-level="21.3" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#goals-of-amplicon-analysis"><i class="fa fa-check"></i><b>21.3</b> Goals of Amplicon analysis</a></li>
+<li class="chapter" data-level="21.4" data-path="microbiome-sequencing.html"><a href="microbiome-sequencing.html#microbiome-analysis-with-qiime-2"><i class="fa fa-check"></i><b>21.4</b> Microbiome Analysis with QIIME 2</a></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="itcr--omic-tool-glossary.html"><a href="itcr--omic-tool-glossary.html"><i class="fa fa-check"></i><b>22</b> ITCR -omic Tool Glossary</a>
 <ul>
@@ -541,21 +535,21 @@ div.csl-indent {
 <div class="hero-image-container"> 
   <img class= "hero-image" src="assets/itcr_main_image.png">
 </div>
-<div id="single-cell-atac-seq-1" class="section level1" number="17">
-<h1><span class="header-section-number">Chapter 17</span> Single cell ATAC-Seq</h1>
+<div id="single-cell-atac-seq-1" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">Chapter 17</span> Single cell ATAC-Seq<a href="single-cell-atac-seq-1.html#single-cell-atac-seq-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div class="warning">
 <p>This chapter is incomplete! If you wish to contribute, please <a href="https://forms.gle/dqYgmKH8XXE2ohwD9">go to this form</a> or our <a href="https://github.com/fhdsl/Choosing_Genomics_Tools">GitHub page</a>.</p>
 </div>
-<div id="learning-objectives-15" class="section level2" number="17.1">
-<h2><span class="header-section-number">17.1</span> Learning Objectives</h2>
-<p><img src="resources/images/11b-sc-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_41.png" title="Learning objectives This chapter will demonstrate how to: Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data" width="100%" /></p>
+<div id="learning-objectives-15" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> Learning Objectives<a href="single-cell-atac-seq-1.html#learning-objectives-15" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="resources/images/11b-sc-ATAC-Seq_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_41.png" alt="Learning objectives This chapter will demonstrate how to: Understand the basics of single cell ATAC-Seq data collection and processing workflow Identify the next steps for your particular single cell ATAC-Seq data. Formulate questions to ask about your single cell ATAC-Seq data" width="100%" /></p>
 </div>
-<div id="what-are-the-goals-of-scatac-seq-analysis" class="section level2" number="17.2">
-<h2><span class="header-section-number">17.2</span> What are the goals of scATAC-seq analysis?</h2>
+<div id="what-are-the-goals-of-scatac-seq-analysis" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> What are the goals of scATAC-seq analysis?<a href="single-cell-atac-seq-1.html#what-are-the-goals-of-scatac-seq-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The primary goal of single-cell ATAC-seq is to obtain a high-resolution map of chromatin accessibility at the single-cell level. It is often used for the identification of cell type-specific cis-regulatory elements (CREs) or transcription factor (TF) binding sites because single-cell resolution enables researchers to parse heterogeneous subgroups within a sample. Single-cell ATAC-seq is often applied to questions in developmental biology and cell differentiation.</p>
 </div>
-<div id="scatac-seq-general-workflow-overview" class="section level2" number="17.3">
-<h2><span class="header-section-number">17.3</span> scATAC-seq general workflow overview</h2>
+<div id="scatac-seq-general-workflow-overview" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> scATAC-seq general workflow overview<a href="single-cell-atac-seq-1.html#scatac-seq-general-workflow-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Align reads to genome and assign to cells based on barcodes
 This step can be performed using Cell Ranger if the data were generated using a 10X Genomics kit (commercially available). For other methods, this step largely resembles the alignment step of bulk ATAC-seq analysis, using aligners such as Bowtie2 or BWA, filtering tools such as Picard, and adapter-trimming tools such Trimmomatic. Prior to adapter trimming barcodes should be matched to the list of known barcodes generated in the experiment and either assigned to a cell or assigned as ambiguous. At this stage unique molecular identifiers (UMIs) added to fragments during library preparation are also extracted and associated with each read to allow for PCR deduplication.
 Quality control</p>
@@ -565,45 +559,45 @@ Quality control</p>
 <p>Doublet detection is any approach that attempts to computationally identify cell barcodes which contain reads from a mixture of single cells. Although an extremely high number of fragment counts may indicate that a cell is in fact a doublet, doublet detection provides a more targeted approach by assigning a score or a probability that each cell is a doublet. These approaches may compare cells to simulated doublets generated randomly from the data, or may rely on the fact that the number of ATAC-seq reads in a single cell is limited to only two reads per cell for diploid organisms. This step is not as common in scATAC-seq analysis as it is in single cell RNA-seq analysis owing to the difficulty of estimating doublets from the highly sparse data, but can be done for additional rigor or if there is particular concern that the dataset contains a high number of doublets.</p>
 <p>Additionally, the fragment size distribution of the library should exhibit nucleosomal periodicity, where fragments are enriched at ~147 bp intervals corresponding to the length of nucleosome-bound DNA that are refractory to Tn5 insertion.</p>
 </div>
-<div id="peak-calling-1" class="section level2" number="17.4">
-<h2><span class="header-section-number">17.4</span> Peak calling</h2>
+<div id="peak-calling-1" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">17.4</span> Peak calling<a href="single-cell-atac-seq-1.html#peak-calling-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Peak calling in ATAC-seq is performed in a similar manner to bulk ATAC-seq [ref bulk chapter]. Importantly, it should be performed by treating data from all cells within a cluster as a pseudo-bulk replicate. This is because scATAC-seq data is highly sparse and any individual cell only has enough information to convey whether a region is accessible or inaccessible, due to the maximum of 2 reads per locus per cell. Peak calling is commonly performed using MACS2, but other peak callers suitable for ATAC-seq could be used as well, as described in our chapter on bulk ATAC-seq (reference).</p>
 </div>
-<div id="dimensionality-reduction" class="section level2" number="17.5">
-<h2><span class="header-section-number">17.5</span> Dimensionality reduction</h2>
+<div id="dimensionality-reduction" class="section level2 hasAnchor" number="17.5">
+<h2><span class="header-section-number">17.5</span> Dimensionality reduction<a href="single-cell-atac-seq-1.html#dimensionality-reduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As ATAC-seq data is extremely high dimensional, with counts for hundreds of thousands of peaks in thousands of cells, dimensionality reduction must be performed to represent the data in a way which reflects the major sources of variation while allowing for efficient computation. Many of the most popular dimensionality reduction approaches for ATAC-seq are borrowed from natural language processing, including latent semantic indexing (LSI) as well as probabilistic approaches such as latent Dirichlet allocation (LDA) and probabilistic LSI (pLSI). LSI and its variations are commonly used and are a simple, efficient approach based on PCA. Probabilistic approaches calculate the probability of information in a dataset being related to specific ‘topics’ identified by the statistical model. They are more mathematically complex than LSI but attempt to more accurately reconstruct the latent (not observable) structure in the data.</p>
 </div>
-<div id="embedding-visualization" class="section level2" number="17.6">
-<h2><span class="header-section-number">17.6</span> Embedding (visualization)</h2>
+<div id="embedding-visualization" class="section level2 hasAnchor" number="17.6">
+<h2><span class="header-section-number">17.6</span> Embedding (visualization)<a href="single-cell-atac-seq-1.html#embedding-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Embedding is the process of representing the high-dimensional scATAC-seq dataset in two (or occasionally three) dimensions for visualization. First, dimensionality reduction must have been performed using one of the methods described in the section above. Then, the result of dimensionality reduction can be provided as input to the chosen embedding approach. The most common method for generating ATAC-seq embeddings is UMAP (Uniform Manifold approximation) but other methods, such as force-directed graph layouts or t-SNE (t-distributed Stochastic Neighbor Embedding) can also be used.</p>
 </div>
-<div id="clustering" class="section level2" number="17.7">
-<h2><span class="header-section-number">17.7</span> Clustering</h2>
+<div id="clustering" class="section level2 hasAnchor" number="17.7">
+<h2><span class="header-section-number">17.7</span> Clustering<a href="single-cell-atac-seq-1.html#clustering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Clustering is the process of computationally detecting populations of cells with similar characteristics - in this case, cells with similar accessibility profiles. Leiden clustering, which uses the similarity of cells to their neighbors to group cells into clusters, is a common choice for identifying clusters in scATAC-seq data.</p>
 </div>
-<div id="cell-type-annotation" class="section level2" number="17.8">
-<h2><span class="header-section-number">17.8</span> Cell type annotation</h2>
+<div id="cell-type-annotation" class="section level2 hasAnchor" number="17.8">
+<h2><span class="header-section-number">17.8</span> Cell type annotation<a href="single-cell-atac-seq-1.html#cell-type-annotation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Cell type annotation on scATAC-seq data alone can be performed based on the enrichment of cell-type-specific CREs, or alternatively can be performed based on gene expression patterns observed in integrated scRNA-seq data. Gene scores are a measure of the accessibility of a gene locus and putative CREs within a defined window of the gene. Gene scores significantly above the expected background suggest a gene is active in a given cell type, and these scores can be used to identify markers for cell type annotation. Integration with scRNA-seq data can allow for identification of cell types which may be difficult to distinguish based on ATAC-seq profiles alone(ref), but requires an scRNA-seq dataset of a comparable population of cells.</p>
 <p>Trajectory analysis, which is used to infer and visualize the developmental or differentiation paths of individual cells within a population, can be performed on processed single-cell ATAC-seq data using tools developed for single-cell RNA-seq data. These approaches aim to reconstruct the temporal progression and identify the key intermediate states or cell fate decisions during biological processes such as embryonic development, tissue regeneration, or disease progression.</p>
 <p>Trajectory inference algorithms, such as:</p>
 <ul>
-<li><a href="https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/">Monocle</a> <span class="citation">Qiu et al. (<a href="#ref-Qiu2017" role="doc-biblioref">2017</a>)</span></li>
-<li><a href="https://github.com/dpeerlab/Palantir">Palantir</a> <span class="citation">Setty et al. (<a href="#ref-Setty2019" role="doc-biblioref">2019</a>)</span></li>
-<li><a href="https://github.com/theislab/paga">PAGA</a> <span class="citation">Wolf et al. (<a href="#ref-Wolf2019" role="doc-biblioref">2019</a>)</span></li>
+<li><a href="https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/">Monocle</a> <span class="citation">Qiu et al. (<a href="#ref-Qiu2017">2017</a>)</span></li>
+<li><a href="https://github.com/dpeerlab/Palantir">Palantir</a> <span class="citation">Setty et al. (<a href="#ref-Setty2019">2019</a>)</span></li>
+<li><a href="https://github.com/theislab/paga">PAGA</a> <span class="citation">Wolf et al. (<a href="#ref-Wolf2019">2019</a>)</span></li>
 </ul>
 <p>These are commonly used to reconstruct the developmental trajectories and order the cells along these trajectories. The resulting trajectory models provide valuable insights into the underlying regulatory dynamics, lineage relationships, and critical regulatory genes or pathways governing cellular differentiation and development.</p>
 <p>Much like peak calling, it is not possible to obtain enough information from individual cells to perform differential accessibility analysis at the single cell level. Because of this limitation, differential accessibility analysis is performed in a similar manner to bulk ATAC-seq analysis using pseudo-bulk data at the cluster or cell type level, where counts from many single cells are aggregated together and treated as though they are a single sample generated from a bulk experiment. Common tools for differential accessibility analysis include deSeq2 and EdgeR, which were both developed for differential gene expression analysis.</p>
 </div>
-<div id="scatac-seq-data-strengths" class="section level2" number="17.9">
-<h2><span class="header-section-number">17.9</span> scATAC-seq data <strong>strengths</strong>:</h2>
+<div id="scatac-seq-data-strengths" class="section level2 hasAnchor" number="17.9">
+<h2><span class="header-section-number">17.9</span> scATAC-seq data <strong>strengths</strong>:<a href="single-cell-atac-seq-1.html#scatac-seq-data-strengths" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>scATAC-seq is the gold-standard for showing heterogeneity in chromatin accessibility between populations of cells and within tissues because single-cell resolution enables analysis of subpopulations that are challenging to isolate experimentally.</li>
 <li>scATAC-seq can be paired with scRNAseq to obtain transcriptome and chromatin accessibility measurements from the same cells. This is a powerful approach for gaining understanding of how specific patterns of chromatin accessibility affect gene expression.</li>
 <li>scATAC-seq is also a relatively high throughput technique, particularly with droplet based techniques. A single dataset can cover thousands of cells.</li>
 </ul>
 </div>
-<div id="scatac-seq-data-limitations" class="section level2" number="17.10">
-<h2><span class="header-section-number">17.10</span> scATAC-seq data <strong>limitations</strong>:</h2>
+<div id="scatac-seq-data-limitations" class="section level2 hasAnchor" number="17.10">
+<h2><span class="header-section-number">17.10</span> scATAC-seq data <strong>limitations</strong>:<a href="single-cell-atac-seq-1.html#scatac-seq-data-limitations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>scATAC-seq has very high sparsity compared to single-cell RNA-seq since there are only two copies of each locus in a diploid cell compared to many copies of mRNAs. Like other single-cell techniques This results in the data essentially being binary at the single cell level - a region either has reads and is considered accessible in that cell or has no reads.</li>
 <li>Like bulk ATAC-seq, the Tn5 transposase has a sequence bias, so regions with a preferred sequence will undergo higher levels of transposition. Highly accessible regions of DNA will also be overrepresented in the final library.</li>
@@ -611,13 +605,13 @@ Quality control</p>
 <li>Many scATAC-seq datasets have low cell numbers due to the cost and technical difficulty of the assay. This presents a challenge for analysis since the data is highly sparse and noisy, which in combination with a small dataset can lead to difficulty interpreting the data.</li>
 </ul>
 </div>
-<div id="scatac-seq-data-considerations" class="section level2" number="17.11">
-<h2><span class="header-section-number">17.11</span> scATAC-seq data considerations</h2>
+<div id="scatac-seq-data-considerations" class="section level2 hasAnchor" number="17.11">
+<h2><span class="header-section-number">17.11</span> scATAC-seq data considerations<a href="single-cell-atac-seq-1.html#scatac-seq-data-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>scATAC-seq will always be sequenced with paired-end reads. There are two major experimental approaches for generating single-cell ATAC-seq data: droplet based methods, such as the commercially available <a href="https://www.10xgenomics.com/products/single-cell-atac">10X Chromium platform</a>, where nuclei are separated into individual droplets, and plate-based methods, which use multiple pooling and barcoding steps to tag each cell with a unique combination of barcodes (with a level of expected barcode collisions).</p>
 <p>The procedure for demultiplexing the reads will depend on the method used to generate the data. Data generated using 10X platforms can be de-multiplexed and aligned using the Cell Ranger software, while plate-based approaches typically use an alignment and peak-calling approach similar to that used for bulk ATAC-seq, with the additional step of matching the barcodes in each read to the known set of combinatorial barcodes. Correctly matching the reads to cells and filtering reads with non-matching barcodes is a critical step for scATAC-seq analysis.</p>
 </div>
-<div id="scatac-seq-analysis-tools" class="section level2" number="17.12">
-<h2><span class="header-section-number">17.12</span> scATAC-seq analysis tools</h2>
+<div id="scatac-seq-analysis-tools" class="section level2 hasAnchor" number="17.12">
+<h2><span class="header-section-number">17.12</span> scATAC-seq analysis tools<a href="single-cell-atac-seq-1.html#scatac-seq-analysis-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger">Cellranger</a> is a popular preprocessing tool specifically designed for scATAC-seq data generated using the 10x Genomics platform. It performs essential steps such as demultiplexing, barcode processing, read alignment, and filtering, providing a streamlined workflow for 10x-generated scATAC-seq data. However, it cannot be used for data generated by other methods.</li>
 <li><a href="https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml">Bowtie2</a>, <a href="https://broadinstitute.github.io/picard/">Picard tools</a>, and <a href="http://www.usadellab.org/cms/?page=trimmomatic">Trimmomatic</a>: These tools are commonly used for preprocessing scATAC-seq data generated using plate-based or combinatorial indexing approaches. Bowtie is a fast and widely used aligner for mapping sequencing reads to a reference genome, while Picard provides a suite of command-line tools for manipulating and analyzing BAM files and Trimmomatic can remove adapter sequences from reads. These tools can be utilized for aligning reads, removing duplicates, sorting, and filtering the data to obtain the necessary inputs for downstream analysis.</li>
@@ -627,31 +621,31 @@ Quality control</p>
 <li><a href="https://stuartlab.org/signac/">Signac</a> is an R package specifically designed for the analysis of single-cell epigenomics data, including scATAC-seq. It offers a comprehensive set of functions for preprocessing, quality control, dimensionality reduction, clustering, trajectory analysis, differential accessibility, and visualization. Signac integrates well with Seurat, providing an additional tool for exploring and analyzing scATAC-seq data.</li>
 </ul>
 <p>Additional quality checking tools: Quality checking and filtering steps in scATAC-seq analysis can be performed using various tools depending on the workflow and programming language. Some commonly used tools with QC capabilities useful for examining library quality measures such as GC bias, overrepresented sequences, and quality scores include FastQC and deepTools.</p>
-<div id="doublet-detection" class="section level4" number="17.12.0.1">
-<h4><span class="header-section-number">17.12.0.1</span> Doublet detection</h4>
+<div id="doublet-detection" class="section level4 hasAnchor" number="17.12.0.1">
+<h4><span class="header-section-number">17.12.0.1</span> Doublet detection<a href="single-cell-atac-seq-1.html#doublet-detection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><a href="https://www.archrproject.com/">ArchR</a> has a tool for doublet detection - it generates synthetic doublets from combinations of cells in the dataset and uses the similarity of cells in the dataset to these synthetic doublets to identify doublets. This is a common approach, and variations of it are used by most doublet detection algorithms. Many are specifically designed to expect transcriptomic data (such as the commonly used Scrublet) and identify barcodes with mixed transcriptional signatures of multiple clusters/cell types, and these methods do not accept scATAC-seq input. Some transcription based tools can be given modified input to detect doublets in scATAC-seq data, as described in documentation from the Demuxafy project. There are also tools like AMULET which leverage the fact that the number of ATAC-seq reads at any locus in a single cell are limited by the number of copies of a chromosome to detect doublets. Overall, doublet detection is not as common of a step in scATAC-seq analysis as it is in scRNA-seq analysis, owing to the limited tools available and the difficulty of performing this analysis on extremely sparse data.</p>
 </div>
-<div id="visualization" class="section level4" number="17.12.0.2">
-<h4><span class="header-section-number">17.12.0.2</span> Visualization</h4>
+<div id="visualization" class="section level4 hasAnchor" number="17.12.0.2">
+<h4><span class="header-section-number">17.12.0.2</span> Visualization<a href="single-cell-atac-seq-1.html#visualization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><a href="https://scanpy.readthedocs.io/en/stable/">Scanpy</a> (Python) and <a href="https://satijalab.org/seurat/">Seurat</a> (R) are the most commonly used tools for visualizing scATAC-seq data. These tools allow you to plot the accessibility of specific peaks or gene scores, as well as metadata such as cell type, clusters, etc. on the UMAP (or other) embedding at the single-cell level. Both packages include built-in functions to perform this plotting in a streamlined manner and to manipulate the data objects for additional quantification and visualization using general plotting packages such as <a href="https://matplotlib.org/">matplotlib</a> or <a href="https://ggplot2.tidyverse.org/">ggplot</a>. The choice between these tools is primarily determined by the programming language you choose for your analysis, as they share many of the same core features.
 Additionally, tools such as deepTools or enrichedHeatmap may be useful for visualizing heatmaps of pseudo-bulk data, and bedGraph or BigWig representations of pseudo-bulk data can be visualized using genome browsers such as IGV or UCSC genome browser. pyGenomeBrowser is a package which allows more customizable visualization of browser tracks and may be useful for generating publication-quality figures.</p>
 </div>
 </div>
-<div id="trajectory-analysis" class="section level2" number="17.13">
-<h2><span class="header-section-number">17.13</span> Trajectory analysis</h2>
+<div id="trajectory-analysis" class="section level2 hasAnchor" number="17.13">
+<h2><span class="header-section-number">17.13</span> Trajectory analysis<a href="single-cell-atac-seq-1.html#trajectory-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Several tools are available for single-cell trajectory analysis. These approaches are primarily distinguished by variations used in their mathematical approaches for calculating trajectories, but most make use of graph-based approaches which model the similarity or connections between cells in a dataset. The distinct approaches of the tools discussed here lead to varying levels of performance on different types of data, and extensive benchmarking has been performed (here) and (here) on synthetic datasets to determine the accuracy of different approaches. The most important consideration here is whether there are any cyclic trajectories expected in the dataset, where the end of the trajectory would connect back to the start, or disconnected trajectories, where not all trajectories originate from the same starting state. Not all approaches can reconstruct these trajectories accurately. Most popular methods expect a tree-like structure, with a single starting point and branches which lead toward terminal cell fates.</p>
 <p><a href="http://cole-trapnell-lab.github.io/monocle-release/">Monocle</a> is a popular choice that offers a comprehensive workflow for trajectory inference, visualization of trajectory analysis, pseudotime ordering of cells, and identification of differentially expressed genes along trajectories. Another commonly used tool is Slingshot, which utilizes a graph-based approach to infer trajectories, compute pseudotime ordering, and generate smooth curves to visualize trajectories. Additionally, it has the ability to infer multiple disconnected trajectories within a single dataset. PAGA (Partition-based Graph Abstraction) uses a distinct strategy with the goal of maintaining connections between similar groups of cells as well as the overall structure of the data. <a href="https://github.com/dpeerlab/Palantir">Palantir</a> is a tool which uses a probabilistic approach to assign cell fate probabilities to each cell in a dataset, which can be used to define cells belonging to a specific trajectory.</p>
 </div>
-<div id="motif-detection-ex.-chromvar" class="section level2" number="17.14">
-<h2><span class="header-section-number">17.14</span> Motif detection (ex. ChromVar)</h2>
+<div id="motif-detection-ex.-chromvar" class="section level2 hasAnchor" number="17.14">
+<h2><span class="header-section-number">17.14</span> Motif detection (ex. ChromVar)<a href="single-cell-atac-seq-1.html#motif-detection-ex.-chromvar" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://bioconductor.org/packages/release/bioc/html/chromVAR.html">Single-cell chromVAR analysis</a> is a computational approach used to assess cell-to-cell variation in chromatin accessibility profiles across a population of single cells. It aims to identify TF activity differences between cell types or states and elucidate the underlying regulatory dynamics. Single-cell chromVAR leverages the concept of TF motif enrichment or depletion within cell-specific accessible regions to infer TF activity. It compares the chromatin accessibility profiles of individual cells to a background model derived from the aggregate accessibility profiles of all cells, enabling the detection of cell-specific TF binding patterns. By quantifying the enrichment or depletion of TF motifs within accessible regions, single-cell chromVAR provides insights into TF activity variation, potential regulatory networks, and cell-type-specific transcriptional regulation. It serves as a valuable tool for understanding the contribution of TFs to cellular heterogeneity and regulatory processes in single-cell chromatin accessibility data.</p>
 </div>
-<div id="regulatory-network-detection" class="section level2" number="17.15">
-<h2><span class="header-section-number">17.15</span> Regulatory network detection</h2>
+<div id="regulatory-network-detection" class="section level2 hasAnchor" number="17.15">
+<h2><span class="header-section-number">17.15</span> Regulatory network detection<a href="single-cell-atac-seq-1.html#regulatory-network-detection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://github.com/aertslab/cisTopic">CisTopic</a> is a computational tool used for the analysis of single-cell chromatin accessibility data to identify and characterize cell subpopulations with distinct regulatory patterns. It employs a topic modeling approach to capture the variability in chromatin accessibility profiles across cells and identifies the major regulatory patterns driving cell heterogeneity. CisTopic assigns cells to topics based on the similarity of their accessibility landscapes. By analyzing the differential accessibility of genomic regions within each topic, CisTopic facilitates the discovery of transcription factor binding motifs and CREs associated with specific cell subpopulations.</p>
 </div>
-<div id="tools-for-data-type-conversion" class="section level2" number="17.16">
-<h2><span class="header-section-number">17.16</span> Tools for data type conversion</h2>
+<div id="tools-for-data-type-conversion" class="section level2 hasAnchor" number="17.16">
+<h2><span class="header-section-number">17.16</span> Tools for data type conversion<a href="single-cell-atac-seq-1.html#tools-for-data-type-conversion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A comprehensive explanation of packages to convert between single-cell data object types used by Python and R packages is found here.</p>
 <p>The most common data types for processed scATAC-seq data are:</p>
 <ul>
@@ -661,8 +655,8 @@ Additionally, tools such as deepTools or enrichedHeatmap may be useful for visua
 </ul>
 <p>H5seurat objects can be <a href="https://mojaveazure.github.io/seurat-disk/articles/convert-anndata.html">converted to annData objects using SeuratDisk</a>.</p>
 </div>
-<div id="more-resources-and-tutorials-about-scatac-seq-data" class="section level2" number="17.17">
-<h2><span class="header-section-number">17.17</span> More resources and tutorials about scATAC-seq data</h2>
+<div id="more-resources-and-tutorials-about-scatac-seq-data" class="section level2 hasAnchor" number="17.17">
+<h2><span class="header-section-number">17.17</span> More resources and tutorials about scATAC-seq data<a href="single-cell-atac-seq-1.html#more-resources-and-tutorials-about-scatac-seq-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scatac-preprocessing-tenx/tutorial.html">Galaxy tutorial for sc-ATAC-seq analysis</a></li>
 <li><a href="https://stuartlab.org/signac/articles/pbmc_vignette.html">Signac scATAC-seq tutorial with pbmcs</a></li>
@@ -673,7 +667,7 @@ Additionally, tools such as deepTools or enrichedHeatmap may be useful for visua
 
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Qiu2017" class="csl-entry">
 Qiu, Xiaojie, Qi Mao, Ying Tang, Li Wang, Raghav Chawla, Hannah A. Pliner, and Cole Trapnell. 2017. <span>“Reversed Graph Embedding Resolves Complex Single-Cell Trajectories.”</span> <em>Nature Methods</em> 14 (10): 979–82. <a href="https://doi.org/10.1038/nmeth.4402">https://doi.org/10.1038/nmeth.4402</a>.
@@ -686,10 +680,17 @@ Wolf, F. Alexander, Fiona K. Hamey, Mireya Plass, Jordi Solana, Joakim S. Dahlin
 </div>
 </div>
 <hr>
-<center> 
+<center>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://c-savonen.shinyapps.io/widget-survey/?course_name=choosing_genomics" style="width: 400px; height: 220px; overflow: auto;"></iframe>
+</div>
+  </div>
+</center>
+
+<hr>
+<center>
   <div class="footer">
       All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
-      <br>
       All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
   </div>
 </center>
@@ -759,7 +760,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
