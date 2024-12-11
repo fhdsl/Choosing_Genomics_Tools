@@ -22,13 +22,13 @@ _This course is written for individuals who:_
 - Want a basic overview of genomic data types.
 - Want to find resources for processing and interpreting genomics data.
 
-```{r, fig.alt="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data", out.width = "100%", echo = FALSE}
+```{r for_individuals_who, fig.alt="For individuals who: Have genomic data and don’t know what to do with it. Want a basic overview of their genomic data type. Want to find resources for processing and interpreting genomics data", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g116525eff64_0_96")
 ```
 
 ## Topics covered:
 
-```{r, fig.alt=" ", out.width = "100%", echo = FALSE}
+```{r topics_covered, fig.alt="Concepts discussed in this course include What does your genomic data type represent? What are the most common data processing steps for your data type? Finding resources, tools, and tutorials to help you process and interpret your data.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g11db7c97851_0_143")
 ```
 
@@ -55,7 +55,7 @@ This course attempts to give this researcher the basic bearings and resources re
 
 ## Curriculum  
 
-```{r, fig.alt = "Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data ", out.width = "100%", echo = FALSE}
+```{r learning_objectives, fig.alt = "Overall Course Learning Objectives. This course will demonstrate how too: Understand the overall workflow associated with processing their genomic data  Be aware of caveats based on their specific type of data. Find tutorials to help them process their genomic data. Choose tools for processing their genomic data. Choose tools for interpreting their genomic data ", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.gd422c5de97_0_10")
 ```
 
