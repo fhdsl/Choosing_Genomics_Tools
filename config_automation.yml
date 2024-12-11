@@ -19,7 +19,7 @@ url-check-periodically: yes
 # Rendering each platform's content
 render-website: rmd
 render-leanpub: yes
-render-coursera: no
+render-coursera: yes
 
 ## Automate the creation of Book.txt file? yes/no
 ## This is only relevant if render-leanpub is yes, otherwise it will be ignored
