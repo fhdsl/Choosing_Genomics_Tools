@@ -356,6 +356,7 @@ analysis-1
 more-resources-2
 microbiome-sequencing
 learning-objectives-19
+a-brief-introduction-to-microbiomes
 goals-of-amplicon-analysis
 microbiome-analysis-with-qiime-2
 itcr--omic-tool-glossary
