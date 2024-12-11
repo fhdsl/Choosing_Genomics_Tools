@@ -1,26 +1,26 @@
 url	chapt_title	img_path
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/index.html	About this Course	resources/chapt_screen_images/index.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/introduction.html	1 Introduction	resources/chapt_screen_images/introduction.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/a-very-general-genomics-overview.html	2 A Very General Genomics Overview	resources/chapt_screen_images/a-very-general-genomics-overview.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/guidelines-for-good-metadata.html	3 Guidelines for Good Metadata	resources/chapt_screen_images/guidelines-for-good-metadata.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/considerations-for-choosing-tools.html	4 Considerations for choosing tools	resources/chapt_screen_images/considerations-for-choosing-tools.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/general-data-analysis-tools.html	5 General Data Analysis Tools	resources/chapt_screen_images/general-data-analysis-tools.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/sequencing-data.html	6 Sequencing Data	resources/chapt_screen_images/sequencing-data.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/microarray-data.html	7 Microarray Data	resources/chapt_screen_images/microarray-data.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/annotating-genomes.html	8 Annotating Genomes	resources/chapt_screen_images/annotating-genomes.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/dna-methods-overview.html	9 DNA Methods Overview	resources/chapt_screen_images/dna-methods-overview.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/whole-genome-or-exome-sequencing.html	10 Whole Genome or Exome Sequencing	resources/chapt_screen_images/whole-genome-or-exome-sequencing.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/rna-methods-overview.html	11 RNA Methods Overview	resources/chapt_screen_images/rna-methods-overview.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/bulk-rna-seq-1.html	12 Bulk RNA-seq	resources/chapt_screen_images/bulk-rna-seq-1.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/single-cell-rna-seq.html	13 Single-cell RNA-seq	resources/chapt_screen_images/single-cell-rna-seq.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/spatial-transcriptomics-1.html	14 Spatial transcriptomics	resources/chapt_screen_images/spatial-transcriptomics-1.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/chromatin-methods-overview.html	15 Chromatin Methods Overview	resources/chapt_screen_images/chromatin-methods-overview.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/atac-seq-1.html	16 ATAC-Seq	resources/chapt_screen_images/atac-seq-1.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/single-cell-atac-seq-1.html	17 Single cell ATAC-Seq	resources/chapt_screen_images/single-cell-atac-seq-1.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/chip-seq-1.html	18 ChIP-Seq	resources/chapt_screen_images/chip-seq-1.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/cutrun-and-cuttag.html	19 CUT&RUN and CUT&Tag	resources/chapt_screen_images/cutrun-and-cuttag.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/dna-methylation-sequencing.html	20 DNA Methylation Sequencing	resources/chapt_screen_images/dna-methylation-sequencing.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/microbiome-sequencing.html	21 Microbiome Sequencing	resources/chapt_screen_images/microbiome-sequencing.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/itcr--omic-tool-glossary.html	22 ITCR -omic Tool Glossary	resources/chapt_screen_images/itcr--omic-tool-glossary.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/about-the-authors.html	About the Authors	resources/chapt_screen_images/about-the-authors.png
-https://hutchdatascience.org/Choosing_Genomics_Tools/no_toc/references.html	References	resources/chapt_screen_images/references.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/index.html	About this Course	resources/chapt_screen_images/index.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/introduction.html	1 Introduction	resources/chapt_screen_images/introduction.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/a-very-general-genomics-overview.html	2 A Very General Genomics Overview	resources/chapt_screen_images/a-very-general-genomics-overview.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/guidelines-for-good-metadata.html	3 Guidelines for Good Metadata	resources/chapt_screen_images/guidelines-for-good-metadata.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/considerations-for-choosing-tools.html	4 Considerations for choosing tools	resources/chapt_screen_images/considerations-for-choosing-tools.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/general-data-analysis-tools.html	5 General Data Analysis Tools	resources/chapt_screen_images/general-data-analysis-tools.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html	6 Sequencing Data	resources/chapt_screen_images/sequencing-data.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/microarray-data.html	7 Microarray Data	resources/chapt_screen_images/microarray-data.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/annotating-genomes.html	8 Annotating Genomes	resources/chapt_screen_images/annotating-genomes.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/dna-methods-overview.html	9 DNA Methods Overview	resources/chapt_screen_images/dna-methods-overview.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/whole-genome-or-exome-sequencing.html	10 Whole Genome or Exome Sequencing	resources/chapt_screen_images/whole-genome-or-exome-sequencing.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/rna-methods-overview.html	11 RNA Methods Overview	resources/chapt_screen_images/rna-methods-overview.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/bulk-rna-seq-1.html	12 Bulk RNA-seq	resources/chapt_screen_images/bulk-rna-seq-1.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/single-cell-rna-seq.html	13 Single-cell RNA-seq	resources/chapt_screen_images/single-cell-rna-seq.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/spatial-transcriptomics-1.html	14 Spatial transcriptomics	resources/chapt_screen_images/spatial-transcriptomics-1.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/chromatin-methods-overview.html	15 Chromatin Methods Overview	resources/chapt_screen_images/chromatin-methods-overview.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/atac-seq-1.html	16 ATAC-Seq	resources/chapt_screen_images/atac-seq-1.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/single-cell-atac-seq-1.html	17 Single cell ATAC-Seq	resources/chapt_screen_images/single-cell-atac-seq-1.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/chip-seq-1.html	18 ChIP-Seq	resources/chapt_screen_images/chip-seq-1.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/cutrun-and-cuttag.html	19 CUT&RUN and CUT&Tag	resources/chapt_screen_images/cutrun-and-cuttag.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/dna-methylation-sequencing.html	20 DNA Methylation Sequencing	resources/chapt_screen_images/dna-methylation-sequencing.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/microbiome-sequencing.html	21 Microbiome Sequencing	resources/chapt_screen_images/microbiome-sequencing.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/itcr--omic-tool-glossary.html	22 ITCR -omic Tool Glossary	resources/chapt_screen_images/itcr--omic-tool-glossary.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/about-the-authors.html	About the Authors	resources/chapt_screen_images/about-the-authors.png
+https://hutchdatascience.org/Choosing_Genomics_Tools/references.html	References	resources/chapt_screen_images/references.png
