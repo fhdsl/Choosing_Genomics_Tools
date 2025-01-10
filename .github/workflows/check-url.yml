@@ -78,6 +78,16 @@ jobs:
       run: |
         echo ${{ steps.check-report.outputs.error_url }}
         echo ${{ steps.check-report.outputs.error_num }}
+        
+      # Commit file
+    - name: Commit tocless bookdown files
+      if: ${{ steps.check-report.outputs.error_num >= 1 }}
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+      run: |
+        git add --force check_reports/url_checks.tsv
+        git commit -m 'Add spell check file' || echo "No changes to commit"
+        git push --set-upstream origin preview-spell-error || echo echo branch exists remotely
 
     - name: Find issues
       id: find-issue
