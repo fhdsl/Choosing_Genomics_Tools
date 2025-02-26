@@ -8,7 +8,8 @@ on:
   push:
     branches: [ main, staging ]
     paths:
-      - '**md$'
+      - '*.qmd'
+      - '*.Rmd'
       - assets/*
       - quizzes/*
 
@@ -101,7 +102,7 @@ jobs:
           git add --force docs/*
           git commit -m 'Render course' || echo "No changes to commit"
           git status docs/*
-          git push -u origin main  || echo "No changes to push"
+          git push --force -u origin main  || echo "No changes to push"
 
   render-tocless:
     name: Render TOC-less version for Leanpub or Coursera
@@ -149,7 +150,7 @@ jobs:
           git add --force docs/no_toc*
           git commit -m 'Render toc-less' || echo "No changes to commit"
           git status docs/no_toc*
-          git push -u origin main  || echo "No changes to push"
+          git push --force -u origin main  || echo "No changes to push"
 
   render-leanpub:
     name: Finish Leanpub prep
@@ -188,6 +189,7 @@ jobs:
             --git_pat ${{ secrets.GH_PAT }} \
             --repo $GITHUB_REPOSITORY \
             --output_dir resources/chapt_screen_images)
+          rm make_screenshots.R
 
       # We want a fresh run of the renders each time
       - name: Delete manuscript/
@@ -276,4 +278,4 @@ jobs:
           git add --force docs/*
           git commit -m 'Render Coursera quizzes' || echo "No changes to commit"
           git status
-          git push -u origin main  || echo "No changes to push"
+          git push --force -u origin main  || echo "No changes to push"
