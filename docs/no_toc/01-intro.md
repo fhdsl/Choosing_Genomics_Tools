@@ -22,7 +22,7 @@ _This course is written for individuals who:_
 
 ## Topics covered:
 
-<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" alt=" " width="100%" />
+<img src="resources/images/01-intro_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png" alt="Concepts discussed in this course include What does your genomic data type represent? What are the most common data processing steps for your data type? Finding resources, tools, and tutorials to help you process and interpret your data." width="100%" />
 
 ## Motivation
 
