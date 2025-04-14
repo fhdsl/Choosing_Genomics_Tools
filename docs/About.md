@@ -40,12 +40,12 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       Etc/UTC
-##  date     2024-09-04
+##  date     2025-04-14
 ##  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date (UTC) lib source
-##  bookdown      0.39.1  2024-06-11 [1] Github (rstudio/bookdown@f244cf1)
+##  bookdown      0.41    2024-10-16 [1] CRAN (R 4.3.2)
 ##  cachem        1.0.8   2023-05-01 [1] RSPM (R 4.3.0)
 ##  cli           3.6.2   2023-12-11 [1] RSPM (R 4.3.0)
 ##  devtools      2.4.5   2022-10-11 [1] RSPM (R 4.3.0)
@@ -58,7 +58,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  htmltools     0.5.7   2023-11-03 [1] RSPM (R 4.3.0)
 ##  htmlwidgets   1.6.4   2023-12-06 [1] RSPM (R 4.3.0)
 ##  httpuv        1.6.14  2024-01-26 [1] RSPM (R 4.3.0)
-##  knitr         1.47.3  2024-06-11 [1] Github (yihui/knitr@e1edd34)
+##  knitr         1.48    2024-07-07 [1] CRAN (R 4.3.2)
 ##  later         1.3.2   2023-12-06 [1] RSPM (R 4.3.0)
 ##  lifecycle     1.0.4   2023-11-07 [1] RSPM (R 4.3.0)
 ##  magrittr      2.0.3   2022-03-30 [1] RSPM (R 4.3.0)
@@ -74,7 +74,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  Rcpp          1.0.12  2024-01-09 [1] RSPM (R 4.3.0)
 ##  remotes       2.4.2.1 2023-07-18 [1] RSPM (R 4.3.0)
 ##  rlang         1.1.4   2024-06-04 [1] CRAN (R 4.3.2)
-##  rmarkdown     2.27.1  2024-06-11 [1] Github (rstudio/rmarkdown@e1c93a9)
+##  rmarkdown     2.25    2023-09-18 [1] RSPM (R 4.3.0)
 ##  sessioninfo   1.2.2   2021-12-06 [1] RSPM (R 4.3.0)
 ##  shiny         1.8.0   2023-11-17 [1] RSPM (R 4.3.0)
 ##  stringi       1.8.3   2023-12-11 [1] RSPM (R 4.3.0)
@@ -82,7 +82,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  urlchecker    1.0.1   2021-11-30 [1] RSPM (R 4.3.0)
 ##  usethis       2.2.3   2024-02-19 [1] RSPM (R 4.3.0)
 ##  vctrs         0.6.5   2023-12-01 [1] RSPM (R 4.3.0)
-##  xfun          0.44.4  2024-06-11 [1] Github (yihui/xfun@9da62cc)
+##  xfun          0.48    2024-10-03 [1] CRAN (R 4.3.2)
 ##  xtable        1.8-4   2019-04-21 [1] RSPM (R 4.3.0)
 ##  yaml          2.3.8   2023-12-11 [1] RSPM (R 4.3.0)
 ## 

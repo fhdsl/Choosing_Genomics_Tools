@@ -1,6 +1,6 @@
 ---
 title: "Choosing Genomics Tools"
-date: "September, 2024"
+date: "April, 2025"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -22,6 +22,6 @@ This course is part of a series of courses for the [Informatics Technology for C
 This course is available in multiple formats which allows you to take it in the way that best suites your needs. You can take it for certificate which can be for free or fee.
 
 - The material for this course can be viewed without login requirement on this [Bookdown website](https://hutchdatascience.org/Choosing_Genomics_Tools/). This format might be most appropriate for you if you rely on screen-reader technology.
-<!-- - This course can be taken for [free certification through Leanpub](). -->
+- This course can be taken for [free certification through Leanpub](https://leanpub.com/courses/fredhutch/choosing-genomics-tools).
 - This course can be taken on [Coursera for certification here](https://www.coursera.org/specializations/researchers-guide-to-omic-data/) (but it is not available for free on Coursera).
 - Our courses are open source, you can find the [source material for this course on GitHub](https://github.com/jhudsl/Choosing_Genomics_Tools).
