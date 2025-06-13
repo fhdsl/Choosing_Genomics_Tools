@@ -136,7 +136,7 @@ At various points in your genomics workflows, you may need to use other types of
 
 #### BED - Browser Extensible Data
 
-A BED file is a text file that has coordinates to genomic regions. THe other columns that accompany the genomic coordinates are variable depending on the context. But every BED file contains the `chrom`, `chromStart` and `chromEnd` columns to start.
+A BED file is a text file that has coordinates to genomic regions. The other columns that accompany the genomic coordinates are variable depending on the context. But every BED file contains the `chrom`, `chromStart` and `chromEnd` columns to start.
 
 A BED file might look like this:
 ```
