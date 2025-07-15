@@ -11,7 +11,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag|
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag, and [Claude 3.7 Sonnet] - various marked sections (chromatin chapter, single cell RNA seq chapter, RNA chapter, methylation chapter, and ATAC-Seq chapter)|
 |Content Directors|[Jeff Leek]|
 |Content Consultants|[Carrie Wright]<br> [Cliff Meyer] - ATAC-seq <br> [Frederick Tan]<br>|
 |Content Editors/Reviewers|[Kate Isaac]|
@@ -49,6 +49,7 @@ devtools::session_info()
 [Sandy Ormbrek]: https://hutchdatascience.org/ourteam/
 [Shasta Nicholson]: https://hutchdatascience.org/ourteam/
 [Ye Zheng]: https://yezhengstat.github.io/
+[Claude 3.7 Sonnet]: https://www.anthropic.com/news/claude-3-7-sonnet
 <!-- Links -->
 
 [ottrpal]: https://github.com/jhudsl/ottrpal
