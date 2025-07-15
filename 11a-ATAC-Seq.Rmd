@@ -46,7 +46,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ### Data quality metrics:
 
-#### Pre-sequencing QC:
+<!---#### Pre-sequencing QC:-->
 
 #### Sequencing considerations:
 
@@ -106,6 +106,7 @@ An input sample is not typically generated for ATAC-seq as it would be for a ChI
 ```{r, fig.alt = "Overview of ATAC-seq data analysis pipeline", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g15b5d73942d_0_26")
 ```
+
 #### Number of peaks:
 
 Although the number of accessible chromatin regions can vary from one cell type to another, there are several regions that appear to be constitutively accessible across most cell types. At least 20,000 peaks can be identified in a high quality experiment.  The deeper the sequencing the more peaks will be detected in an ATAC-seq experiments. At a very high sequencing depth some of the statistically significant peaks might not be of biological interest. In an analysis of such data sets the fold enrichment relative to background, or absolute peak signal, in addition to statistical significance, ought to be taken into account.
