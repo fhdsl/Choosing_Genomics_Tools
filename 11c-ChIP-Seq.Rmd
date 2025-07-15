@@ -147,8 +147,6 @@ The Cistrome Project has a large collection of human and mouse ChIP-seq, DNase-s
 
 ## More resources about ChiP-seq data
 
-Put links to any resources and tutorials that are useful for ChIP-Seq data
-
 - [Shirley Liu’s Computational biology course](https://liulab-dfci.github.io/bioinfo-combio/chip.html)
 - [Galaxy ChIP-seq tutorial](https://galaxyproject.org/tutorials/chip/)
 - [ENCODE ChiP-seq tutorial](https://www.encodeproject.org/tutorials/chip-pipeline-howto/)
