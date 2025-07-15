@@ -70,7 +70,7 @@ Like other sequencing methods, you will first need to start by quality control c
 ## Methylation Tools Pros and Cons
 
 <div class = "warning">
-This following pros and cons sections have been written by AI and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+This following pros and cons sections have been written by AI (Claude Sonnet 3.7) and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
 ### Quality control:
