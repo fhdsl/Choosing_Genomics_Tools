@@ -92,7 +92,7 @@ Once you have your reads and you find them reasonably trustworthy through qualit
 - Traditional aligners - Align your data to a reference using standard alignment algorithms. Can be very computationally intensive.
 - Pseudo aligners - much faster and the trade off for accuracy is often negligible (but again is dependent on the data you are using).
 
-TODO: considerations for alignment.
+<!--TODO: considerations for alignment.-->
 
 ### Single End vs Paired End
 
