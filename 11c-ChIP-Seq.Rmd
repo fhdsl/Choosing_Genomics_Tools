@@ -147,13 +147,13 @@ The Cistrome Project has a large collection of human and mouse ChIP-seq, DNase-s
 
 ## More resources about ChiP-seq data
 
-<TODO: Put links to any resources and tutorials that are useful for ChIP-Seq data>
+Put links to any resources and tutorials that are useful for ChIP-Seq data
 
 - [Shirley Liu’s Computational biology course](https://liulab-dfci.github.io/bioinfo-combio/chip.html)
 - [Galaxy ChIP-seq tutorial](https://galaxyproject.org/tutorials/chip/)
 - [ENCODE ChiP-seq tutorial](https://www.encodeproject.org/tutorials/chip-pipeline-howto/)
 - [Crazyhottommy's ChIp-seq tutorial](https://github.com/crazyhottommy/ChIP-seq-analysis)
-- [Harvard CUT&RUN tutorial](https://hbctraining.github.io/Intro-to-ChIPseq-flipped/CUT&RUN/Intro_to_CUT&RUN.html)
+- [Harvard CUT&RUN tutorial](https://zenodo.org/records/7723255)
 - [4DN CUT&RUN tutorial](https://data.4dnucleome.org/resources/data-analysis/cut-and-run-pipeline)
 - [Henikoff Lab CUT&Tag tutorial](https://yezhengstat.github.io/CUTTag_tutorial/)
 - [ARCHS4](https://maayanlab.cloud/archs4/) (All RNA-seq and ChIP-seq sample and signature search) is a resource that provides access to gene and transcript counts uniformly processed from all human and mouse RNA-seq experiments from GEO and SRA.
