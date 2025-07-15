@@ -34,7 +34,7 @@ The main goals of analysis for ChIP-Seq approaches are:
 
 ## ChIP-Seq general workflow overview
 
-<TODO: add data formats in a graphical format>
+<!--TODO: add data formats in a graphical format-->
 
 A key contribution of large consortia, such as the ENCODE consortium, are standardized processing workflows to facilitate the integration of ChIP-seq data generated in different labs. While the exact data processing needs of any given experiment may vary, established pipelines provide a helpful starting point. In choosing a data processing workflow, it is essential to note the input data format. For example, the read length should be considered, as well as the sequencing paradigm (i.e. whether the data is single-end or paired-end).
 
