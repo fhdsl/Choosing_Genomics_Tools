@@ -175,7 +175,7 @@ For [more about GTF and GFF files](https://useast.ensembl.org/info/website/uploa
 
 ### Other files
 
-\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the GSEA developer team](https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html). Or, it may be covered in the data type specific chapters.
 
 ### Microarray processing tutorials:
 
