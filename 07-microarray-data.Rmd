@@ -65,7 +65,7 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 Gene expression arrays are designed to measure gene expression. They are designed to target and measure relative transcript abundance level.
 
 #### Examples:
-- [refine.bio](https://www.refine.bio/) is the largest collection of publicly available, already normalized gene expression data (including gene expression microarrays).
+- [Refine.bio](https://www.refine.bio/) is the largest collection of publicly available, already normalized gene expression data (including gene expression microarrays).
 - [Getting started in gene expression microarray analysis](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000543) [@Slonim_Yanai_2009].
 - [Microarray and its applications](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467903/) [-@Govindarajan2012].
 - [Analysis of microarray experiments of gene expression profiling](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2435252/) [@Tarca2006].
@@ -175,7 +175,7 @@ For [more about GTF and GFF files](https://useast.ensembl.org/info/website/uploa
 
 ### Other files
 
-\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the GSEA developer team](https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html). Or, it may be covered in the data type specific chapters.
 
 ### Microarray processing tutorials:
 
