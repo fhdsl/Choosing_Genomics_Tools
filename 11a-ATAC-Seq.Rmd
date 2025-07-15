@@ -189,7 +189,7 @@ When using ATAC-seq data to answer biological questions it is important to under
 ## ATAC-seq analysis tools
 
 <div class = "warning">
-This section has been written by AI ([Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)) and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+This section has been written by AI ([Claude 3.7 Sonnet](https://poe.com/Claude-Sonnet-3.7)) and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
 - [MACS2](https://github.com/macs3-project/MACS)[@zhang2008model]:
@@ -215,7 +215,7 @@ This section has been written by AI ([Claude 3.7 Sonnet](https://www.anthropic.c
 ## Additional tutorials and tools
 
 <div class = "warning">
-This section has been written by AI ([Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)) and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+This section has been written by AI ([Claude 3.7 Sonnet](https://poe.com/Claude-Sonnet-3.7)) and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
 - [MACS2](https://github.com/macs3-project/MACS)[@zhang2008model]:

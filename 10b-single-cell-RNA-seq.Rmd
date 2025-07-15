@@ -71,7 +71,7 @@ Each step of this very general representation of a workflow can be conducted by 
 ## Quantification and alignment tools
 
 <div class = "warning">
-This following pros and cons sections have been written by AI ([Claude 3.7 Sonnet](https://www.anthropic.com/news/claude-3-7-sonnet)) and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+This following pros and cons sections have been written by AI ([Claude 3.7 Sonnet](https://poe.com/Claude-Sonnet-3.7)) and may need verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
 - [STAR](https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html) [@dobin2013star]:
