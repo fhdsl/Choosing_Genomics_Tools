@@ -1,5 +1,5 @@
 # Candace Savonen 2021
-# Updated May 2024
+# Updated May 2025
 
 name: Pull Request
 
@@ -17,7 +17,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
 
         # Use the yaml-env-action action.
       - name: Load environment from YAML
@@ -46,52 +45,51 @@ jobs:
     outputs:
       toggle_website: "${{ env.RENDER_WEBSITE }}"
       toggle_spell_check: "${{ env.SPELL_CHECK }}"
+      spell_error_min: "${{ env.SPELL_ERROR_MIN }}"
       toggle_style_code: "${{ env.STYLE_CODE }}"
       toggle_url_check: "${{ env.URL_CHECKER }}"
+      url_error_min: "${{ env.URL_ERROR_MIN }}"
       toggle_quiz_check: "${{ env.CHECK_QUIZZES }}"
+      quiz_error_min: "${{ env.QUIZ_ERROR_MIN }}"
+      toggle_md_linter: "${{ env.MARKDOWN_LINTER }}"
+      toggle_readability: "${{ env.READABILITY_REPORT }}"
       toggle_render_preview: "${{ env.RENDER_PREVIEW }}"
+      toggle_dictionary_sort: "${{ env.DICTIONARY_SORT }}"
       rendering_docker_image: "${{ env.RENDERING_DOCKER_IMAGE }}"
 
 ########################## Make the error reports ##############################
-  spell-check:
-    name: Check spelling
+  ottr-reports:
+    name: Run Reports
     needs: yaml-check
-    if: ${{needs.yaml-check.outputs.toggle_spell_check == 'yes'}}
-    uses: jhudsl/ottr-reports/.github/workflows/report-maker.yml@main
-    with:
-      check_type: spelling
-      error_min: 3
-      gh_pat: secrets.GH_PAT
-      branch_name: ${GITHUB_HEAD_REF}
+    if: ${{needs.yaml-check.outputs.toggle_spell_check == 'true' || needs.yaml-check.outputs.toggle_url_check == 'true' || needs.yaml-check.outputs.toggle_quiz_check == 'true'}}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
 
-  url-check:
-    name: Check URLs
-    needs: yaml-check
-    if: ${{needs.yaml-check.outputs.toggle_url_check == 'yes'}}
-    uses: jhudsl/ottr-reports/.github/workflows/report-maker.yml@main
-    with:
-      check_type: urls
-      error_min: 0
-      gh_pat: secrets.GH_PAT
-      branch_name: ${GITHUB_HEAD_REF}
+    steps:
+    - name: Checkout Actions Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-  quiz-check:
-    name: Check quiz formatting
-    if: ${{needs.yaml-check.outputs.toggle_quiz_check == 'yes'}}
-    needs: yaml-check
-    uses: jhudsl/ottr-reports/.github/workflows/report-maker.yml@main
-    with:
-      check_type: quiz_format
-      error_min: 0
-      gh_pat: secrets.GH_PAT
-      branch_name: ${GITHUB_HEAD_REF}
+    - name: Run Reports
+      id: run-reports
+      uses: ottrproject/ottr-reports@main
+      with:
+        check_spelling: ${{needs.yaml-check.outputs.toggle_spell_check}}
+        spelling_error_min: ${{needs.yaml-check.outputs.spell_error_min}}
+        check_urls: ${{needs.yaml-check.outputs.toggle_url_check}}
+        url_error_min: ${{needs.yaml-check.outputs.url_error_min}}
+        check_quiz_form: ${{needs.yaml-check.outputs.toggle_quiz_check}}
+        quiz_error_min: ${{needs.yaml-check.outputs.quiz_error_min}}
+        sort_dictionary: ${{needs.yaml-check.outputs.toggle_dictionary_sort}}
 
 ############################# Style the code ###################################
   style-code:
     name: Style code
     needs: yaml-check
     runs-on: ubuntu-latest
-    if: ${{needs.yaml-check.outputs.toggle_style_code == 'yes'}}
+    if: ${{needs.yaml-check.outputs.toggle_style_code == 'true'}}
     container:
       image: jhudsl/base_ottr:main
 
@@ -111,128 +109,44 @@ jobs:
           git commit -m 'Style *mds' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
 
-############################# Render Preview ###################################
+############################# Readability Report ###################################
 
-  render-preview:
-    name: Render preview
+  readability-report:
+    name: Readability report
     needs: yaml-check
     runs-on: ubuntu-latest
-    container:
-      image: ${{needs.yaml-check.outputs.rendering_docker_image}}
-    if: ${{needs.yaml-check.outputs.toggle_render_preview == 'yes'}}
+    if: ${{needs.yaml-check.outputs.toggle_readability == 'true'}}
 
     steps:
-      - name: Checkout files
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Set up git checkout
-      - name: Set up git checkout
-        run: |
-          git config --global --add safe.directory $GITHUB_WORKSPACE
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
-          branch_name='preview-${{ github.event.pull_request.number }}'
-          git fetch --all
-          git checkout $branch_name
-          git merge -s recursive --strategy-option=theirs origin/${{ github.head_ref }} --allow-unrelated-histories
-        shell: bash
-
-      # Run bookdown rendering
-      - name: Run bookdown render
-        id: bookdown
-        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
-        run: Rscript -e "bookdown::render_book('index.Rmd', output_format = 'all')"
-
-      # Run quarto rendering
-      - name: Render quarto version
-        id: quarto
-        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
-        run: Rscript -e "quarto::quarto_render('.')"
-
-      # This checks on the steps before it and makes sure that they completed.
-      # If the renders didn't complete we don't want to commit the file changes
-      - name: Check on Rmd render steps
-        if: ${{needs.yaml-check.outputs.toggle_website == 'rmd' }}
-        run: |
-          echo Bookdown status ${{steps.bookdown.outcome}}
-          if [${{steps.bookdown.outcome}} != 'success']; then
-            exit 1
-          fi
-
-      - name: Check on quarto render steps
-        if: ${{needs.yaml-check.outputs.toggle_website == 'quarto' }}
-        run: |
-          echo Quarto status ${{steps.quarto.outcome}}
-          if [${{steps.quarto.outcome}} != 'success']; then
-            exit 1
-          fi
-
-      - name: Website preview for download
-        run: zip website-preview.zip docs/* -r
-
-      # Commit the rendered bookdown files
-      - name: Commit rendered bookdown files to preview branch
-        id: commit
-        run: |
-          branch_name='preview-${{ github.event.pull_request.number }}'
-          git diff origin/main -- docs >/dev/null && changes=true || changes=false
-          echo "changes=$changes" >> $GITHUB_OUTPUT
-          git add . --force
-          git commit -m 'Render preview' || echo "No changes to commit"
-          git pull --rebase --set-upstream origin $branch_name --allow-unrelated-histories --strategy-option=ours
-          git push --force || echo "No changes to commit"
-        shell: bash
-
-      - name: Find Comment
-        uses: peter-evans/find-comment@v2
-        id: fc
+      - name: Readability report
+        uses: Rebilly/lexi@v2
         with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: latest commit
+          github-token: ${{ secrets.GH_PAT }}
+          glob: '**/*.md'
 
-      - name: Build components of the comment
-        id: build-components
-        run: |
-          course_name=$(head -n 1 _bookdown.yml | cut -d'"' -f 2| tr " " "-")
-          bookdown_link=$(echo "https://htmlpreview.github.io/?https://raw.githubusercontent.com/$GITHUB_REPOSITORY/preview-${{ github.event.pull_request.number }}/docs/index.html")
-          docx_link=$(echo "https://github.com/$GITHUB_REPOSITORY/raw/preview-${{ github.event.pull_request.number }}/docs/$course_name.docx")
-          zip_link=$(echo "https://github.com/$GITHUB_REPOSITORY/raw/preview-${{ github.event.pull_request.number }}/website-preview.zip")
-          echo "zip_link=$zip_link" >> $GITHUB_OUTPUT
-          echo "bookdown_link=$bookdown_link" >> $GITHUB_OUTPUT
-          echo "docx_link=$docx_link" >> $GITHUB_OUTPUT
-          echo "time=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
-          echo "commit_id=$GITHUB_SHA" >> $GITHUB_OUTPUT
-          echo ${{steps.commit.outputs.changes}}
+############################# Render Preview ###################################
+  render-preview:
+    name: Render preview
+    needs: yaml-check
+    runs-on: ubuntu-latest
+    if: ${{needs.yaml-check.outputs.toggle_render_preview == 'true'}}
+    permissions:
+      pull-requests: write
+      contents: write
 
-      - name: Create or update comment
-        if: steps.commit.outputs.changes == 'true'
-        uses: peter-evans/create-or-update-comment@v2
-        with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            Re-rendered previews from the latest commit:
-            - :eyes: Quick [preview of course website here](${{ steps.build-components.outputs.bookdown_link }}) \*
-            - :microscope: Comprehensive [download of the course website here](${{ steps.build-components.outputs.zip_link }})
-            - Download the [.docx file](${{ steps.build-components.outputs.docx_link }})
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-            \* note not all html features will be properly displayed in the "quick preview" but it will give you a rough idea.
-
-            _Updated at ${{ steps.build-components.outputs.time }} with changes from the latest commit ${{ steps.build-components.outputs.commit_id }}_
-          edit-mode: replace
-
-      - name: Comment if no changes
-        if: steps.commit.outputs.changes == 'false'
-        uses: peter-evans/create-or-update-comment@v2
-        with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            The latest commit did not produce rendering changes.
-
-            _Updated at ${{ steps.build-components.outputs.time }} with changes from ${{ steps.build-components.outputs.commit_id }}_
-          edit-mode: replace
+    - name: Run render
+      uses: ottrproject/ottr-preview@main
+      with:
+        toggle_website: ${{needs.yaml-check.outputs.toggle_website}}
+        docker_image: ${{needs.yaml-check.outputs.rendering_docker_image}}
