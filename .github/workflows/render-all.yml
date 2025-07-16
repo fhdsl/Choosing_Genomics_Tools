@@ -41,12 +41,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
-
       - name: Run render
         id: render
         uses: ottrproject/ottr-preview@main
