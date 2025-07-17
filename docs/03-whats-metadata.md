@@ -35,12 +35,15 @@ Where do these metadata come from? The notes and experimental design from anyone
 #### Goal A: Make it _crystal clear_ and _easily readable_ by both humans and computers!
 
 Some examples of how to make your data crystal clear:
+
 - Look out for typos and spelling errors!
 - Don't use acronyms unless you need to and then if you do need to make sure to explain what the acronym means.
 - Don't add extraneous information -- perhaps items that are relevant to your lab internally but not meaningful to people outside of your lab. Either explain the significance of such information or leave it out.
 
 - Make your [data tidy](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html#:~:text=Tidy%20data%20is%20a%20standard,Every%20row%20is%20an%20observation.).
-> Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:
+
+> Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data: 
+
 > - Every column is a variable.
 > - Every row is an observation.
 > - Every cell is a single value.

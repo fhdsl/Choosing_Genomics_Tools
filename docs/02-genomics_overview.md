@@ -136,7 +136,7 @@ At various points in your genomics workflows, you may need to use other types of
 
 #### BED - Browser Extensible Data
 
-A BED file is a text file that has coordinates to genomic regions. The other columns that accompany the genomic coordinates are variable depending on the context. But every BED file contains the `chrom`, `chromStart` and `chromEnd` columns to start.
+A BED file is a text file that has coordinates to genomic regions. THe other columns that accompany the genomic coordinates are variable depending on the context. But every BED file contains the `chrom`, `chromStart` and `chromEnd` columns to start.
 
 A BED file might look like this:
 ```
@@ -164,4 +164,4 @@ For [more about GTF and GFF files](https://useast.ensembl.org/info/website/uploa
 
 ### Other files
 
-\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the GSEA developer team](https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html). Or, it may be covered in the data type specific chapters.

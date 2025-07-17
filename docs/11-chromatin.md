@@ -6,7 +6,7 @@
 <div class = "warning">
 This chapter is incomplete! If you wish to contribute, please [go to this form](https://forms.gle/dqYgmKH8XXE2ohwD9) or our [GitHub page](https://github.com/fhdsl/Choosing_Genomics_Tools).
 
-In its existing form, this chapter has been written with AI and still needs further verification by experts.
+In its existing form, this chapter has been written with AI ([Claude 3.7 Sonnet](https://poe.com/Claude-Sonnet-3.7)) and still needs further verification by experts.
 </div>
 
 ## Learning Objectives
