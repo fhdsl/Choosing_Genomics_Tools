@@ -11,7 +11,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag|
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag <br> [Claude 3.7 Sonnet] - various marked sections|
 |Content Directors|[Jeff Leek]|
 |Content Consultants|[Carrie Wright]<br> [Cliff Meyer] - ATAC-seq <br> [Frederick Tan]<br>|
 |Content Editors/Reviewers|[Kate Isaac]|
@@ -40,7 +40,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       Etc/UTC
-##  date     2025-04-14
+##  date     2025-07-17
 ##  pandoc   3.1.1 @ /usr/local/bin/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
@@ -139,6 +139,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 [Sandy Ormbrek]: https://hutchdatascience.org/ourteam/
 [Shasta Nicholson]: https://hutchdatascience.org/ourteam/
 [Ye Zheng]: https://yezhengstat.github.io/
+[Claude 3.7 Sonnet]: https://www.anthropic.com/news/claude-3-7-sonnet
 <!-- Links -->
 
 [ottrpal]: https://github.com/jhudsl/ottrpal

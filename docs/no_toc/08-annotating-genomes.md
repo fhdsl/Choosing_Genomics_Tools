@@ -107,4 +107,3 @@ Above all else, not matter what you end up doing, make sure that your steps, wha
 - [BioPython](https://biopython.org/)
 - [genetrack](https://github.com/ialbert/chipexo)
 
-### More resources about genome annotation

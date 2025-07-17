@@ -239,7 +239,6 @@ div.csl-indent {
 <li class="chapter" data-level="8.6.1" data-path="annotating-genomes.html"><a href="annotating-genomes.html#annotation-databases"><i class="fa fa-check"></i><b>8.6.1</b> Annotation databases</a></li>
 <li class="chapter" data-level="8.6.2" data-path="annotating-genomes.html"><a href="annotating-genomes.html#gui-based-annotation-tools"><i class="fa fa-check"></i><b>8.6.2</b> GUI based annotation tools</a></li>
 <li class="chapter" data-level="8.6.3" data-path="annotating-genomes.html"><a href="annotating-genomes.html#command-line-based-tools"><i class="fa fa-check"></i><b>8.6.3</b> Command line based tools</a></li>
-<li class="chapter" data-level="8.6.4" data-path="annotating-genomes.html"><a href="annotating-genomes.html#more-resources-about-genome-annotation"><i class="fa fa-check"></i><b>8.6.4</b> More resources about genome annotation</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Specific Data Types</b></span></li>
@@ -572,10 +571,15 @@ Some important considerations for WGS/WXS include:</p>
 <div id="target-enrichment-techniques" class="section level3 hasAnchor" number="10.4.1">
 <h3><span class="header-section-number">10.4.1</span> Target enrichment techniques<a href="whole-genome-or-exome-sequencing.html#target-enrichment-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For WXS or other targeted sequencing specifically (so not relevant to WGS data), what methods were used to enrich for the targeted sequences? (Which is the entire exome in the case of general WXS) These methods are generally summarized into two major categories: Hybridization based and amplicon based enrichment.</p>
-<pre><code>- [Hybridization based enrichment](https://www.paragongenomics.com/target-enrichment/). This includes a variety of widely used methods that we will broadly categorize in two groups: Array-based and In-solution:
-  - [Array-based capture](https://en.wikipedia.org/wiki/Exome_sequencing#:~:text=Target%2Denrichment%20strategies-,Array%2Dbased%20capture,-In%2Dsolution%20capture) uses microarrays that have probes designed to bind to known coding sequences. Fragments that do not bind to these probes are washed away, leaving the sample with known coding sequences bound and ready for PCR amplification [@Hodges2007; @Turner2009].
-  - [In-solution capture](https://en.wikipedia.org/wiki/Exome_sequencing#In-solution_capture) has become more popular in recent years because it [requires less sample DNA than array-base capture](https://sequencing.roche.com/us/en/products/product-category/target-enrichment.html). To enrich for coding sequences, in-solution capture has a pool of custom probes that are designed to bind to the coding regions in the sample. Attached to these probes are beads which can be physically separated from DNA that is not bound to the probes (this should be the non-coding sequences) [@Mamanova2010].  
-- [PCR/Amplicon based enrichment](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318977/) requires even less sample than the other two strategies and so is ideal for when the amount of sample is limited or the DNA has been otherwise processed harshly (e.g. with paraffin embedding). Because the other two enrichment methods are done after PCR amplification has been done to the whole genomic DNA sample, its thought that this method of selective PCR amplification for enrichment can result in more uniformly amplified DNA in the resulting sample. However this is less suitable the more gene targets you have (like if you truly need to sequence all of the exome) since amplicons need to be designed for each target. Overall it is much more affordable of a method. There are several variations of this method that are [discussed thoroughly by @Singh2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318977/).</code></pre>
+<ul>
+<li><a href="https://www.paragongenomics.com/target-enrichment/">Hybridization based enrichment</a>. This includes a variety of widely used methods that we will broadly categorize in two groups: Array-based and In-solution:
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Exome_sequencing#:~:text=Target%2Denrichment%20strategies-,Array%2Dbased%20capture,-In%2Dsolution%20capture">Array-based capture</a> uses microarrays that have probes designed to bind to known coding sequences. Fragments that do not bind to these probes are washed away, leaving the sample with known coding sequences bound and ready for PCR amplification <span class="citation">(<a href="#ref-Hodges2007">Hodges et al. 2007</a>; <a href="#ref-Turner2009">Turner et al. 2009</a>)</span>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Exome_sequencing#In-solution_capture">In-solution capture</a> has become more popular in recent years because it <a href="https://sequencing.roche.com/us/en/products/product-category/target-enrichment.html">requires less sample DNA than array-base capture</a>. To enrich for coding sequences, in-solution capture has a pool of custom probes that are designed to bind to the coding regions in the sample. Attached to these probes are beads which can be physically separated from DNA that is not bound to the probes (this should be the non-coding sequences) <span class="citation">(<a href="#ref-Mamanova2010">Mamanova et al. 2010</a>)</span>.<br />
+</li>
+</ul></li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318977/">PCR/Amplicon based enrichment</a> requires even less sample than the other two strategies and so is ideal for when the amount of sample is limited or the DNA has been otherwise processed harshly (e.g. with paraffin embedding). Because the other two enrichment methods are done after PCR amplification has been done to the whole genomic DNA sample, its thought that this method of selective PCR amplification for enrichment can result in more uniformly amplified DNA in the resulting sample. However this is less suitable the more gene targets you have (like if you truly need to sequence all of the exome) since amplicons need to be designed for each target. Overall it is much more affordable of a method. There are several variations of this method that are <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9318977/">discussed thoroughly by <span class="citation">Singh (<span>2022</span>)</span></a>.</li>
+</ul>
 </div>
 </div>
 <div id="dna-sequencing-pipeline-overview" class="section level2 hasAnchor" number="10.5">
@@ -677,11 +681,20 @@ The following link provides the data analysis pipeline written by researchers in
 <div id="ref-He2020" class="csl-entry">
 He, Xiaoyu, Shanyu Chen, Ruilin Li, Xinyin Han, Zhipeng He, Danyang Yuan, Shuying Zhang, Xiaohong Duan, and Beifang Niu. 2020. <span>“Comprehensive Fundamental Somatic Variant Calling and Quality Management Strategies for Human Cancer Genomes.”</span> <em>Briefings in Bioinformatics</em> 22 (3). <a href="https://doi.org/10.1093/bib/bbaa083">https://doi.org/10.1093/bib/bbaa083</a>.
 </div>
+<div id="ref-Hodges2007" class="csl-entry">
+Hodges, Emily, Zhenyu Xuan, Vivekanand Balija, Melissa Kramer, Michael N Molla, Steven W Smith, Christina M Middle, et al. 2007. <span>“Genome-Wide in Situ Exon Capture for Selective Resequencing.”</span> <em>Nature Genetics</em> 39 (12): 1522–27. <a href="https://doi.org/10.1038/ng.2007.42">https://doi.org/10.1038/ng.2007.42</a>.
+</div>
 <div id="ref-Hwang2019" class="csl-entry">
 Hwang, Kyu-Baek, In-Hee Lee, Honglan Li, Dhong-Geon Won, Carles Hernandez-Ferrer, Jose Alberto Negron, and Sek Won Kong. 2019. <span>“Comparative Analysis of Whole-Genome Sequencing Pipelines to Minimize False Negative Findings.”</span> <em>Scientific Reports</em> 9 (1). <a href="https://doi.org/10.1038/s41598-019-39108-2">https://doi.org/10.1038/s41598-019-39108-2</a>.
 </div>
+<div id="ref-Mamanova2010" class="csl-entry">
+Mamanova, Lira, Alison J Coffey, Carol E Scott, Iwanka Kozarewa, Emily H Turner, Akash Kumar, Eleanor Howard, Jay Shendure, and Daniel J Turner. 2010. <span>“Target-Enrichment Strategies for Next-Generation Sequencing.”</span> <em>Nature Methods</em> 7 (2): 111–18. <a href="https://doi.org/10.1038/nmeth.1419">https://doi.org/10.1038/nmeth.1419</a>.
+</div>
 <div id="ref-Naj2019" class="csl-entry">
 Naj, Adam C., Honghuang Lin, Badri N. Vardarajan, Simon White, Daniel Lancour, Yiyi Ma, Michael Schmidt, et al. 2019. <span>“Quality Control and Integration of Genotypes from Two Calling Pipelines for Whole Genome Sequence Data in the Alzheimer<span></span>s Disease Sequencing Project.”</span> <em>Genomics</em> 111 (4): 808–18. <a href="https://doi.org/10.1016/j.ygeno.2018.05.004">https://doi.org/10.1016/j.ygeno.2018.05.004</a>.
+</div>
+<div id="ref-Turner2009" class="csl-entry">
+Turner, Emily H., Sarah B. Ng, Deborah A. Nickerson, and Jay Shendure. 2009. <span>“Methods for Genomic Partitioning.”</span> <em>Annual Review of Genomics and Human Genetics</em> 10 (1): 263–84. <a href="https://doi.org/10.1146/annurev-genom-082908-150112">https://doi.org/10.1146/annurev-genom-082908-150112</a>.
 </div>
 </div>
 <hr>

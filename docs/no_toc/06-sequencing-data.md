@@ -78,7 +78,7 @@ Once you have your reads and you find them reasonably trustworthy through qualit
 - Traditional aligners - Align your data to a reference using standard alignment algorithms. Can be very computationally intensive.
 - Pseudo aligners - much faster and the trade off for accuracy is often negligible (but again is dependent on the data you are using).
 
-TODO: considerations for alignment.
+<!--TODO: considerations for alignment.-->
 
 ### Single End vs Paired End
 
@@ -152,4 +152,4 @@ For [more on MAF files](https://docs.gdc.cancer.gov/Data/File_Formats/MAF_Format
 
 ### Other files
 
-\* If you didn't see a file type listed you are looking for, take a look at this [list by the BROAD](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats). Or, it may be covered in the data type specific chapters.
+\* If you didn't see a file type listed you are looking for, take a look at this [list by the GSEA developer team](https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html). Or, it may be covered in the data type specific chapters.

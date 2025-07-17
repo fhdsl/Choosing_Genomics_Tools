@@ -34,7 +34,7 @@ A basic ATAC-seq workflow involves mapping sequence reads to the genome, identif
 
 ### Data quality metrics:
 
-#### Pre-sequencing QC:
+<!---#### Pre-sequencing QC:-->
 
 #### Sequencing considerations:
 
@@ -82,6 +82,7 @@ ATAC-seq peak calling typically makes use of analysis tools developed for ChIP-s
 An input sample is not typically generated for ATAC-seq as it would be for a ChIP-seq experiment, so the major requirement for the peak caller is that it does not require the input control to call peaks.
 
 <img src="resources/images/11a-ATAC-Seq_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b5d73942d_0_26.png" alt="Overview of ATAC-seq data analysis pipeline" width="100%" />
+
 #### Number of peaks:
 
 Although the number of accessible chromatin regions can vary from one cell type to another, there are several regions that appear to be constitutively accessible across most cell types. At least 20,000 peaks can be identified in a high quality experiment.  The deeper the sequencing the more peaks will be detected in an ATAC-seq experiments. At a very high sequencing depth some of the statistically significant peaks might not be of biological interest. In an analysis of such data sets the fold enrichment relative to background, or absolute peak signal, in addition to statistical significance, ought to be taken into account.
@@ -165,7 +166,7 @@ When using ATAC-seq data to answer biological questions it is important to under
 ## ATAC-seq analysis tools
 
 <div class = "warning">
-This section has been written by AI and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+This section has been written by AI ([Claude 3.7 Sonnet](https://poe.com/Claude-Sonnet-3.7)) and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
 - [MACS2](https://github.com/macs3-project/MACS)[@zhang2008model]:
@@ -191,7 +192,7 @@ This section has been written by AI and needs verification by experts. This is m
 ## Additional tutorials and tools
 
 <div class = "warning">
-This section has been written by AI and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
+This section has been written by AI ([Claude 3.7 Sonnet](https://poe.com/Claude-Sonnet-3.7)) and needs verification by experts. This is meant to give you a basic idea of the pros and cons of these tools but should ultimately be used with your own judgment.
 </div>
 
 - [MACS2](https://github.com/macs3-project/MACS)[@zhang2008model]:

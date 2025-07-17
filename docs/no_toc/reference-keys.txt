@@ -130,7 +130,6 @@ gui-based-annotation-tools
 command-line-based-tools
 r-based-packages
 python-based-packages
-more-resources-about-genome-annotation
 dna-methods-overview
 learning-objectives-7
 what-are-the-goals-of-analyzing-dna-sequences
@@ -253,13 +252,13 @@ what-are-the-goals-of-atac-seq-analysis
 what-questions-can-be-answered-with-atac-seq
 atac-seq-general-workflow-overview
 data-quality-metrics
-pre-sequencing-qc
 sequencing-considerations
 pre-alignment-qc
 number-of-mapped-reads
 post-alignment-qc
 fragment-size-distribution
 peak-calling
+number-of-peaks
 frip-score-fraction-of-reads-in-peaks
 overlap-with-other-chromatin-accessibility-data
 overlap-with-promoters
