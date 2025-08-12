@@ -11,7 +11,7 @@ In its existing form, this chapter has been written with AI ([Claude 3.7 Sonnet]
 
 ## Learning Objectives
 
-<img src="resources/images/11-chromatin_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png" alt="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." width="100%" />
+<img src="11-chromatin_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png" alt="This chapter will demonstrate how to: Understand the goals and data collection processes for chromatin assays. Compare and contrast ATAC-seq, Single cell ATAC-seq, ChIP-seq, CUT&amp;RUN and CUT&amp;Tag." width="100%" />
 
 ## Why are people interested in chromatin?
 
@@ -41,7 +41,7 @@ Therefore, understanding the mechanisms that regulate chromatin structure and fu
 
 ## Comparison of technologies
 
-<img src="resources/images/11-chromatin_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_5.png" alt="A table that compares all the technologies:" width="100%" />
+<img src="11-chromatin_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_5.png" alt="A table that compares all the technologies:" width="100%" />
 
 ### ATAC-seq:
 

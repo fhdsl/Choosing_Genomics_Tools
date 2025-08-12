@@ -9,7 +9,7 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_12.png" alt="This chapter will demonstrate how to: Understand the very general basics of microarray data collection and processing workflow. Understand the limitations and strengths of microarray data in general." width="100%" />
+<img src="07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_12.png" alt="This chapter will demonstrate how to: Understand the very general basics of microarray data collection and processing workflow. Understand the limitations and strengths of microarray data in general." width="100%" />
 
 ## Summary of microarrays
 
@@ -19,7 +19,7 @@ Microarrays have been in use since before high throughput sequencing methods bec
 
 All microarrays work on hybridization to sets of oligonucleotides on a chip. However, the preparation of the samples, and the oligonucleotides' hybridization targets vary depending on the assay and goals.
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_51.png" width="100%" />
+<img src="07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_51.png" width="100%" />
 
 On a basic principle, oligonucleotide probes are designed for different targets sets designed for the same targets are put together. On the whole chip, these probes are arranged in a grid like design so that after a sample is hybridized to them, you can detect how much of the target is detected by taking an image and knowing what target each location is designed to.
 
@@ -41,7 +41,7 @@ On a basic principle, oligonucleotide probes are designed for different targets 
 
 ### SNP arrays
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_16.png" width="100%" />
+<img src="07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_16.png" width="100%" />
 
 Single nucleotide polymorphism arrays are designed to measure DNA variants. They are designed to target DNA variants. When the sample is hybridized, the amount of fluorescence detected can be interpreted to indicate the presence of the variant and whether the variant is homogeneous or heterogenous. The samples prepped for SNP arrays then need to be DNA samples.
 
@@ -50,7 +50,7 @@ Single nucleotide polymorphism arrays are designed to measure DNA variants. They
 
 ### Gene expression arrays
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142e3de7ce8_0_8.png" width="100%" />
+<img src="07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142e3de7ce8_0_8.png" width="100%" />
 
 Gene expression arrays are designed to measure gene expression. They are designed to target and measure relative transcript abundance level.
 
@@ -62,7 +62,7 @@ Gene expression arrays are designed to measure gene expression. They are designe
 
 ### DNA methylation arrays
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_1.png" width="100%" />
+<img src="07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_1.png" width="100%" />
 
 DNA methylation can also be measured by microarray. To detect methylated cytosines (5mC), DNA samples are prepped using bisulfite conversion. This converts unmethylated cytosines into uracils and leaves methylated cytosines untouched. Probes are then designed to bind to either the uracil or the cytosine, representing the unmethylated and methylated cytosines respectively.
 
@@ -72,7 +72,7 @@ Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxida
 
 ## General processing of microarray data
 
-<img src="resources/images/07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15f36710259_0_0.png" width="100%" />
+<img src="07-microarray-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15f36710259_0_0.png" width="100%" />
 
 After scanning, microarray data starts as an image that needs to be quantified, normalized and further corrected and edited based on the most current genome and probe annotation.
 

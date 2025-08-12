@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-<img src="resources/images/03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="100%" />
+<img src="03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png" alt="Learning objectives This chapter will demonstrate how to: Understand what metadata are and why they are so critical. Learn the basics of creating crystal clear, readable metadata" width="100%" />
 
 ## What are metadata?
 
@@ -15,11 +15,11 @@ Metadata are critically important descriptive information about your data.
 
 Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your data set.
 
-<img src="resources/images/03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" />
+<img src="03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png" alt="Question: What are metadata? Answer: Anything and everything that should be known about your samples! Samples labeled A-H are in test tubes. A corresponding spreadsheet has metadata such as mouse id, processing date, treatment and etc. The researcher says ‘I know everything I need to know about these samples from their metadata!’" width="100%" />
 
 Metadata includes but isn't limited to, the following example categories:
 
-<img src="resources/images/03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="100%" />
+<img src="03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png" alt="Examples of metadata categories: Patient/organism of origin, Patient/organism information including: Demographics, Disease state, Treatment state, Time point (if applicable). Metadata also includes: Processing information like: Batch information and Processing details (for example: Isolation methods: Poly-A vs Ribo-minus) Metadata is Anything that should be known about the samples and their handling!" width="100%" />
 
 <div class = "warning">
 At this time it's important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It's critical that you protect this information! For more details on this, we encourage you to see our [course about data management](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html).
@@ -77,13 +77,13 @@ Toward these two goals, [this excellent article](https://www.tandfonline.com/doi
 
 <div class = "warning">
 Note that it is very dangerous to open gene data with Excel. According to @Ziemann2016, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
-<img src="resources/images/03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="100%" />
+<img src="03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png" alt="‘Approximately one-fifth of papers with supplementary Excel gene lists contain erroneous gene name conversions’ Ziemann, Eren, El-Osta, 2016. On the left, a meme that shows Excel asking ‘is this a date?’ in response to seeing ‘any data at all’. " width="100%" />
 </div>
 
 ### To recap:
 
-<img src="resources/images/03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="100%" />
+<img src="03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png" alt="Rules for creating metadata (from Broman &amp; Woo, 2017) Be Consistent. Choose good names for things. Write Dates as YYYY-MM-DD.No Empty Cells. Put Just One Thing in a Cell. Make it a Rectangle" width="100%" />
 
-<img src="resources/images/03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="100%" />
+<img src="03-whats-metadata_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png" alt="Rules for creating metadata continued  (from Broman &amp; Woo, 2017). Create a Data Dictionary. No Calculations in the Raw Data Files. Do Not Use Font Color or Highlighting as Data. Make Backups. Use Data Validation to Avoid Errors" width="100%" />
 
 If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!

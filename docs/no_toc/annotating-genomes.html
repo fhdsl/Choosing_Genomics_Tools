@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Annotating Genomes | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Annotating Genomes | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
@@ -60,6 +60,7 @@
 
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
+<base target="_blank">
 
 
 
@@ -541,7 +542,7 @@ div.csl-indent {
 </div>
 <div id="learning-objectives-6" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Learning Objectives<a href="annotating-genomes.html#learning-objectives-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_23.png" alt="The learning objectives for this chapter are to: Understand the fundamentals of annotating genomic data. Be aware of how reference genomes and their versions affect annotation. Be able to find genomic annotation from the respective databases" width="100%" /></p>
+<p><img src="08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_23.png" alt="The learning objectives for this chapter are to: Understand the fundamentals of annotating genomic data. Be aware of how reference genomes and their versions affect annotation. Be able to find genomic annotation from the respective databases" width="100%" /></p>
 <p>In this chapter, we are going to discuss methods that affect every genomic method and may take up the majority of your time as a genomic data analyst: Annotation.</p>
 <p>We know that the sequencing or array data is not useful on its own – for our human minds to comprehend it and apply it to something we need a tangible piece of information to be attached to it. This is where annotation comes in. At best annotation helps you and others interpret genomic data. At its worst, its a time consuming activity that, done incorrectly, can lead to erroneous conclusions and labeling.</p>
 <p>Proper annotation requires an understanding of how the annotation data you are using was derived as well as the realization that all annotation data is constantly changing and the confidence for these data are never 100%. Some organism’s genomes are better annotated than others but nearly all are at least somewhat incomplete.</p>
@@ -549,13 +550,13 @@ div.csl-indent {
 <div id="what-are-reference-genomes" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> What are reference genomes?<a href="annotating-genomes.html#what-are-reference-genomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Every individual organism has its own DNA sequence that is unique to it. So how can we compare organisms to each other? In some studies, sequencing data is obtained and the genome is built de novo (aka from scratch) but this takes a lot of time and computing power. So instead, most genomic studies use the imperfect method of comparing to a reference genome. Reference genomes are built from prior data and available online. They inherently have biases in them. For example, human genomes are generally not made from diverse populations but instead from mostly males of european descent. It is inherently bad for both ethical and scientific reasons to to have <a href="https://www.sciencenews.org/article/genetics-race-dna-databases-reference-genome-too-white">genome references that are too white</a>. For more on the problems with reference genomes, <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1774-4">read this</a>.</p>
-<p><img src="resources/images/08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_45.png" alt="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" width="100%" /></p>
+<p><img src="08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_45.png" alt="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" width="100%" /></p>
 <p>In summary, reference genomes are used for comparison and as a ‘source of truth’ of sorts, but its important to note that this method is biased and better alternatives need to be realized.</p>
 </div>
 <div id="what-are-genome-versions" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> What are genome versions?<a href="annotating-genomes.html#what-are-genome-versions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you are familiar with software development, or have used any app before, you’re familiar with software updates and releases. Similarly, the genome has updates and releases as continued cloning and assemblies of organisms teaches us more. In the image below we are showing an example of what a genome version may be noted as (note that different databases may have different terminology – here we are showing the Genome Reference Consortium). You may also notice on their website it shows the date the genome version was released and what was fixed.</p>
-<p><img src="resources/images/08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_33.png" alt="Genome assemblies are changed and updated over time much like software packages. " width="100%" /></p>
+<p><img src="08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_33.png" alt="Genome assemblies are changed and updated over time much like software packages. " width="100%" /></p>
 <p>The details of how genome versions are fixed and released are not really of concern for your data analysis. This is merely to explain that genomes change and what is most important in your analysis is that:</p>
 <ol style="list-style-type: decimal">
 <li>You choose one genome version and consistently use it in all your analyses.</li>
@@ -565,7 +566,7 @@ div.csl-indent {
 <div id="what-are-the-different-files" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> What are the different files?<a href="annotating-genomes.html#what-are-the-different-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Although we can’t walk you through every organism and database set up, we will walkthrough the files and structure of one example here.</p>
-<p><img src="resources/images/08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_28.png" alt="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" width="100%" /></p>
+<p><img src="08-annotating-genomes_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1b625723c80_0_28.png" alt="Reference genomes are often used to make sense of genomic data through comparison. Here we are showing a screenshot of Ensembl's website which has many different organisms and file types" width="100%" /></p>
 <p>In the above screenshot, <a href="https://useast.ensembl.org/info/data/ftp/index.html">from Ensembl</a>, it shows different organisms in the rows, but also a variety of different files across the columns. In this example, DNA reference to the DNA sequence of the organism’s genome, but cDNA refers to complementary DNA – aka DNA that has been reversed transcribed from RNA. If you are working with RNA data you may want to use the cDNA file. Whereas CDS files are referring to only coding sequences and ncRNA files are showing only non coding sequences. Most of these files are FASTA files. Gene sets are also their own annotation files called GTF or GFF files. Ensembl provides more <a href="https://useast.ensembl.org/info/website/upload/gff.html">detailed information about what these files contain</a>, but briefly, each row is a feature and has information describing that feature such as genomic locations, the relevant feature type (gene, coding sequence, pseudogene, etc.), and the gene ID or name. For a reminder on what these different file types are <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/a-very-general-genomics-overview.html#basic-file-formats">see the previous chapter</a>.</p>
 <p>Depending on the tool you are using, the data file and type you need will vary. Some tools have these data built in or are compatible with other packages that have annotation. If a tool automatically includes annotation within it, you will need to ensure that any additional tools you are using are also pulling from the same genome and version. Look into a tool’s documentation to find out what genome versions it is based on. If it doesn’t tell you at all, you don’t want to be using that tool. You cannot assume that cross genome analyses will translate.</p>
 <div id="how-to-download-annotation-files" class="section level3 hasAnchor" number="8.4.1">
@@ -682,42 +683,42 @@ Genome versions are constantly being updated. Files from older genome versions c
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

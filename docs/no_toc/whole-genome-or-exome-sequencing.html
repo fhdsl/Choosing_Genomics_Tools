@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 10 Whole Genome or Exome Sequencing | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 10 Whole Genome or Exome Sequencing | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
@@ -60,6 +60,7 @@
 
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
+<base target="_blank">
 
 
 
@@ -541,26 +542,26 @@ div.csl-indent {
 </div>
 <div id="learning-objectives-8" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Learning Objectives<a href="whole-genome-or-exome-sequencing.html#learning-objectives-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png" alt="The learning objectives for this course are to: 1 Define the uses and applications of WGS/WXS 2 Describe the steps for generating WGS/WXS data 3 Understand the data analysis workflow for WGS/WXS" width="100%" />
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_51.png" alt="The learning objectives for this course are to: 1 Define the uses and applications of WGS/WXS 2 Describe the steps for generating WGS/WXS data 3 Understand the data analysis workflow for WGS/WXS" width="100%" />
 The learning objectives for this course are to explain the use and application of Whole Genome Sequencing (WGS) and Whole Exome Sequencing (WES/WXS) for genomics studies, outline the technical steps in generating WGS/WXS data, and detail the processing steps for analyzing and interpreting WGS/WXS data.</p>
 <p><strong>To familiarize yourself with sequencing methods as a whole, we recommend you read our <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">chapter on sequencing first</a>.</strong></p>
 </div>
 <div id="wgs-and-wgs-overview" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> WGS and WGS Overview<a href="whole-genome-or-exome-sequencing.html#wgs-and-wgs-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_8.png" alt="Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease" width="100%" />
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_8.png" alt="Whole genome sequencing overview, Process of determining entirety of DNA sequence of organism’s genome at single time. Includes sequencing all chromosomal data and DNA from mitochondria. Used to identify functional variants associated with disease" width="100%" />
 The difference between WGS and WXS sequencing is whether or not the open reading frames and thus coding regions are targeted in sequencing. WGS attempts to sequence the whole genome, while for WXS only exons with open reading frames are targeted for sequencing. Both of these methods can be massively beneficial for studying rare and complex diseases.</p>
 <p>Thus, whole genome sequencing is a technique to thoroughly analyze the entire DNA sequence of an organism’s genome. This includes sequencing all genes both coding and non-coding and all mitochondrial DNA. WGS is beneficial for identifying new and previously established variants related to disease and the regulatory elements of the genome including promoters, enhancers, and silencers. Increasingly non-coding RNAs have also been identified to play a functional role in biological mechanisms and diseases. In order to learn more about the non-coding regions of the genome, WGS is necessary.</p>
 <p>Alternatively whole exome sequencing is used to sequence the coding regions of an organism’s genome. Although non-coding regions can sometimes reveal valuable insights, coding regions can be a useful area of the genome to focus sequencing methods on, since changes in a protein coding sequence of the genome generally have more information known about them. Often protein coding sequences can have more clearly functional changes - like if a stop codon is introduced or a codon is changed to a predictable amino acid. This can more easily lead to downstream investigations on the functional implications of the protein affected.</p>
 </div>
 <div id="advantages-and-disadvantages-of-wgs-vs-wxs" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Advantages and Disadvantages of WGS vs WXS<a href="whole-genome-or-exome-sequencing.html#advantages-and-disadvantages-of-wgs-vs-wxs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_13.png" alt="Advantages and Disadvantages of WGS as opposed to WXS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage, allows for discovery - identify causative variants; Disadvantages include higher cost and more resources for storing and analyzing data" width="100%" /></p>
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_13.png" alt="Advantages and Disadvantages of WGS as opposed to WXS: Most complete account of individual variation, Ability to study: Structural rearrangements, Copy number variations, Insertion-Deletions, SNPs, Sequencing repeats, Coding, non-coding, and mitochondrial genome coverage, allows for discovery - identify causative variants; Disadvantages include higher cost and more resources for storing and analyzing data" width="100%" /></p>
 <p>We more thoroughly discuss how to choose DNA sequencing methods <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/dna-methods.html">here in the previous chapter</a>, but we will briefly cover this here. Alternatives to WGS include Whole Exome Sequencing (WES/WXS), which sequences the open reading frame areas of the genome or Targeted Gene Sequencing where probes have been designed to sequence only regions of interest.
 The main advantages of WGS include the ability to comprehensively analyze all regions of a genome, the ability to study structural rearrangements, gene copy number alterations, insertions and deletions, single nucleotide polymorphisms (SNPs), and sequencing repeats. Some disadvantages include higher sequencing costs and the necessity for more robust storage and analysis solutions to manage the much larger data output generated from WGS.</p>
 </div>
 <div id="wgswxs-considerations" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> WGS/WXS Considerations<a href="whole-genome-or-exome-sequencing.html#wgswxs-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_28.png" alt="WGS/WXS Considerations , Genome type/size, Coverage requirements, Tissue source: fresh tissue, FFPE, blood, Library preparation protocol: PCR vs PCR-free" width="100%" />
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_28.png" alt="WGS/WXS Considerations , Genome type/size, Coverage requirements, Tissue source: fresh tissue, FFPE, blood, Library preparation protocol: PCR vs PCR-free" width="100%" />
 Some important considerations for WGS/WXS include:</p>
 <ul>
 <li>What genome you are studying and the size of this genome. Included in this considerations is whether this genome has been sequenced before and you will have a “reference” genome to compare your data against or whether you will have to make a reference genome yourself. <a href="https://eriqande.github.io/eca-bioinf-handbook/alignment-of-sequence-data-to-a-reference-genome-and-associated-steps.html">This bioinformatics resource</a> provides a great overview of genome alignment.</li>
@@ -584,17 +585,17 @@ Some important considerations for WGS/WXS include:</p>
 </div>
 <div id="dna-sequencing-pipeline-overview" class="section level2 hasAnchor" number="10.5">
 <h2><span class="header-section-number">10.5</span> DNA Sequencing Pipeline Overview<a href="whole-genome-or-exome-sequencing.html#dna-sequencing-pipeline-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_33.png" alt="Pipeline overview: Step 1: DNA extraction from sample, Step 2: library preparation, Step 3: Sequencing, Step 4: Analysis including data processing from Fastq, aligning reads to generate a BAM file, identifying variants to create a final VCF file" width="100%" />
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_33.png" alt="Pipeline overview: Step 1: DNA extraction from sample, Step 2: library preparation, Step 3: Sequencing, Step 4: Analysis including data processing from Fastq, aligning reads to generate a BAM file, identifying variants to create a final VCF file" width="100%" />
 In order to create WGS/WXS data, DNA is first extracted from a specific sample type (tissue, blood samples, cells, FFPE blocks, etc.). Either traditional (involving phenol and chloroform) or commercial kits can be used for this first step. Next, the DNA sequencing libraries are prepared. This involves fragmenting the DNA, adding sequencing adapters, and DNA amplification if the input DNA is not of sufficient quantity. Recall that for WXS After sequencing, data is analyzed by converting and aligning reads to generate a BAM file. Many analysis tools will use the BAM file to identify variants, which then generates a VCF file. More information about sequencing and BAM and VCF file generation can be found <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">here</a> in the sequencing data chapter.</p>
 </div>
 <div id="data-pre-processing" class="section level2 hasAnchor" number="10.6">
 <h2><span class="header-section-number">10.6</span> Data Pre-processing<a href="whole-genome-or-exome-sequencing.html#data-pre-processing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_38.png" alt="Data pre-processing pipeline overview: Raw data from sequencing is transformed into a Fastq file, reads are aligned and a Bam file is created, the data is sorted and merged, duplicates are identified, and the base quality score is recalibrated to create a final BAM file " width="100%" />
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_38.png" alt="Data pre-processing pipeline overview: Raw data from sequencing is transformed into a Fastq file, reads are aligned and a Bam file is created, the data is sorted and merged, duplicates are identified, and the base quality score is recalibrated to create a final BAM file " width="100%" />
 Raw sequencing reads are first transformed into a fastq file (more information about fastq files can be found <a href="http://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html">here</a> in the sequencing data chapter in the Quality Controls section. Then the sequencing reads are aligned to a reference genome to create a BAM file. This data is sorted and merged, and PCR duplicates are identified. The confidence that each read was sequenced correctly is reflected in the base quality score. This score must be recalibrated at this step before variants are called. A final BAM file is thus created. This can be used for future analysis steps include variant or mutation identification, which is outlined on the following slide.</p>
 </div>
 <div id="commonly-used-tools" class="section level2 hasAnchor" number="10.7">
 <h2><span class="header-section-number">10.7</span> Commonly Used Tools<a href="whole-genome-or-exome-sequencing.html#commonly-used-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_43.png" alt="Tools commonly used in WGS data analysis" width="100%" />
+<p><img src="09a-WGS-and-WXS_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_43.png" alt="Tools commonly used in WGS data analysis" width="100%" />
 The following link provides the data analysis pipeline written by researchers in the NCI division of the NIH and provides a helpful overview of the typical steps necessary for <a href="https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/DNA_Seq_Variant_Calling_Pipeline/">WGS analysis</a>.</p>
 <p>Here are many of the tools and resources used by researchers for analyzing WGS data.</p>
 </div>
@@ -732,42 +733,42 @@ Turner, Emily H., Sarah B. Ng, Deborah A. Nickerson, and Jay Shendure. 2009. <sp
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

@@ -9,13 +9,13 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_7.png" alt="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_7.png" alt="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." width="100%" />
 
 In this section, we are going to discuss generalities that apply to all sequencing data. This is meant to be a "primer" for you which data-type specific chapters will build off of to give you more specific and practical steps and advice in regards to your data type.
 
 ## How does sequencing work?
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_45.png" width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_45.png" width="100%" />
 
 Sequencing methods, whether they are targeting DNA, transcriptomes, or some other target of the genome, have some commonalities in the steps as well as what types of biases and data generation artifacts to look out for.
 
@@ -31,7 +31,7 @@ At the end of this process, base sequences are called for the samples (with vary
 
 ### Inherent biases
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png" alt="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png" alt="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" width="100%" />
 
 Sequences are not all sequenced or amplified at the same rate. In a perfect world, we could take a simple snapshot of the genome we are interested in and know exactly what and how many sequences were in a sample. But in reality, sequencing methods and the resulting data always have some biases we have to be aware of and hopefully use methods that attempt to mitigate the biases.
 
@@ -53,7 +53,7 @@ All of the above biases are amplified when the sequences are being amplified! Yo
 
 ### Depth of coverage
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_10.png" width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_10.png" width="100%" />
 
 The depth of sequencing refers to how many times on average a particular base is sequenced. Obviously the more times something is sequenced, the more you can be confident that the base call is accurate. However, sequencing at greater depths also takes more time and money. Depending on your sequencing goals and methods there is an appropriate level of depth that is needed.
 
@@ -61,7 +61,7 @@ Coverage on the other hand has to do with how much of the target is covered. If 
 
 ### Quality controls
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_0.png" width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_0.png" width="100%" />
 
 Sequencing bases involves some error/confidence rate. As mentioned, some parts of the genome are harder to read than others. Or, sometimes your sequencing can be influenced by poor quality sample that has degraded. Before you jump in to further analyzing your data, you will want to investigate the quality of the sequencing data you've collected.
 
@@ -71,7 +71,7 @@ FASTQC also has great documentation that can attempt to guide you through report
 
 ### Alignment
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_15.png" width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_15.png" width="100%" />
 
 Once you have your reads and you find them reasonably trustworthy through quality control checks, you will want to align them to your reference. The reference you align your sequences to will depend on the data type you have: a reference genome, a reference transcriptome, something else?
 
@@ -82,7 +82,7 @@ Once you have your reads and you find them reasonably trustworthy through qualit
 
 ### Single End vs Paired End
 
-<img src="resources/images/06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_20.png" width="100%" />
+<img src="06-sequencing-data_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_20.png" width="100%" />
 
 Sequencing can be done single-end or paired-end. Paired end means the primers are going to bind to both sides of a sequence. This can help you avoid some 3' bias and give you more complete coverage of the area you are sequencing. But, as you may guess, pair-end read sequencing is more expensive than single end.
 

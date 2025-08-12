@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Spatial transcriptomics | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Spatial transcriptomics | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
@@ -60,6 +60,7 @@
 
     gtag('config', 'G-QWJXTLJBQ7');
   </script>
+<base target="_blank">
 
 
 
@@ -538,7 +539,7 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 14</span> Spatial transcriptomics<a href="spatial-transcriptomics-1.html#spatial-transcriptomics-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="learning-objectives-12" class="section level2 hasAnchor" number="14.1">
 <h2><span class="header-section-number">14.1</span> Learning objectives<a href="spatial-transcriptomics-1.html#learning-objectives-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/10c-spatial-transcriptomics_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g258b14267ad_278_14.png" alt="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" width="100%" /></p>
+<p><img src="10c-spatial-transcriptomics_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g258b14267ad_278_14.png" alt="This chapter will demonstrate how to: Approach collection of spatial transcriptomics data and design a typical analysis pipeline. Adjust your analysis pipeline to the research question, opportunities, and limitations concerning you spatial transcriptomics project. Learn about the questions that can be addressed with spatial transcriptomics data" width="100%" /></p>
 </div>
 <div id="what-are-the-goals-of-spatial-transcriptomic-analysis" class="section level2 hasAnchor" number="14.2">
 <h2><span class="header-section-number">14.2</span> What are the goals of spatial transcriptomic analysis?<a href="spatial-transcriptomics-1.html#what-are-the-goals-of-spatial-transcriptomic-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -554,7 +555,7 @@ div.csl-indent {
 <div id="overview-of-a-spatial-transcriptomics-workflow" class="section level2 hasAnchor" number="14.3">
 <h2><span class="header-section-number">14.3</span> Overview of a spatial transcriptomics workflow<a href="spatial-transcriptomics-1.html#overview-of-a-spatial-transcriptomics-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There is a large diversity in approaches to spatially profile tissues. Some ST technologies allow profiling at coarse cellular resolution, where regions of interest (ROIs) are usually identified by a pathologist. These ROIs may include tens of cells up to few hundreds (e.g., GeoMx <span class="citation">Bergholtz et al. (<a href="#ref-bergholtz2021best">2021</a>)</span>). Smaller ROI sizes can be found in other technologies such as Visium, where ROIs of 55uM of diameter (or “spots”) often contain no more than 10 cells (<a href="https://www.10xgenomics.com/resources/analysis-guides/integrating-single-cell-and-visium-spatial-gene-expression-data" class="uri">https://www.10xgenomics.com/resources/analysis-guides/integrating-single-cell-and-visium-spatial-gene-expression-data</a>). For finer cellular resolution, technologies such as MERFISH, SMI, or Xenium, among others, can measure gene expression at individual cells <span class="citation">(<a href="#ref-yue2023guidebook">Yue et al. 2023</a>)</span>. In general, there is a trade-off between the cellular resolution and molecular resolution, as the number of quantified genes and RNA molecules is lower in single-cell level spatial technologies compared to those at the ROI or spot level. In single-cell ST, often a panel of hundreds of genes is quantified, while in “mini-bulk” (ROI/spot) ST, it is possible to genes at the whole transcriptome level.</p>
-<p><img src="resources/images/10c-spatial-transcriptomics_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_461_0.png" alt="A trade-off exists between the cellular resolution and molecular resolution in spatial transcriptomics." width="100%" /></p>
+<p><img src="10c-spatial-transcriptomics_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_461_0.png" alt="A trade-off exists between the cellular resolution and molecular resolution in spatial transcriptomics." width="100%" /></p>
 <p>In addition to the differences in cellular and molecular, there are fundamental differences in the chemistry used to count the RNA transcripts in the tissue <span class="citation">(<a href="#ref-wang2021spatial">N. Wang et al. 2021</a>; <a href="#ref-yue2023guidebook">Yue et al. 2023</a>)</span>. Capture or hybridization of RNA followed by sequencing, or fluorescent imaging are two of the most common techniques used in ST methods. Because of large diversity in resolution and chemical procedures among ST technologies, data collection workflows are equally diverse. Finally, each study poses specific questions that cannot be addressed with traditional scRNA-seq pipelines, requiring customized workflows.</p>
 <p>Some of the commonalities in the workflows are presented here:</p>
 <ol style="list-style-type: decimal">
@@ -855,42 +856,42 @@ Zhao, Peiyao, Jiaqiang Zhu, Ying Ma, and Xiang Zhou. 2022. <span>“Modeling Zer
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

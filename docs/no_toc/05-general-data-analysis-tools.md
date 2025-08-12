@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-<img src="resources/images/05-general-data-analysis-tools_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g20fbd76736e_0_0.png" alt="This chapter will demonstrate how to: Understand the difference between command line and GUI based applications. Understand what R and Python languages are. Find many links to resources where you can learn R or Python" width="100%" />
+<img src="05-general-data-analysis-tools_files/figure-html//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g20fbd76736e_0_0.png" alt="This chapter will demonstrate how to: Understand the difference between command line and GUI based applications. Understand what R and Python languages are. Find many links to resources where you can learn R or Python" width="100%" />
 
 ## Command Line vs GUI
 
