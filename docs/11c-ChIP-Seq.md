@@ -9,12 +9,12 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-![](resources/images/11c-ChIP-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_61.png){width=100%}
+![](11c-ChIP-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_61.png){width=100%}
 
 ## What are the goals of ChIP-Seq analysis?
 
 
-![](resources/images/11c-ChIP-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_18.png){width=100%}
+![](11c-ChIP-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_18.png){width=100%}
 
 ChIP-Seq (chromatin immunoprecipitation sequencing) and related approaches are used to identify genome-wide binding sites of specific proteins or protein complexes. Given the diversity of interactions at the DNA-protein interface, sequencing-based methods for targeted chromatin capture have evolved to meet precise research needs and improve the quality of the results. Specifically, ChIP-Seq builds on protein immunoprecipitation techniques (IP) by applying next generation sequencing to a pulldown product. IP followed by sequencing can be applied to any nucleic-acid binding protein for which an antibody is available, including a known or putative transcription factor (TF), chromatin remodeler or histone modifications, or other DNA- or chromatin-specific factors. ChiP-Seq approaches have been honed to increase signal-to-noise, reduce input material, and more specifically map protein-DNA interactions, for example by treating the IP product with a exonuclease that chews-back unprotected DNA end (e.g. ChIP-exo).
 

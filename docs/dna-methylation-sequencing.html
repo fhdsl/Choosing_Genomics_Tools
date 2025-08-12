@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 20 DNA Methylation Sequencing | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 20 DNA Methylation Sequencing | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
@@ -541,36 +541,36 @@ div.csl-indent {
 </div>
 <div id="learning-objectives-18" class="section level2 hasAnchor" number="20.1">
 <h2><span class="header-section-number">20.1</span> Learning Objectives<a href="dna-methylation-sequencing.html#learning-objectives-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_91.png" alt="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_91.png" alt="This chapter will demonstrate how to: Understand the basics of bisulfite sequencing data collection and processing workflow. Identify the next steps for your particular bisulfite  sequencing data. Formulate questions to ask about your bisulfite sequencing data" width="100%" /></p>
 </div>
 <div id="what-are-the-goals-of-analyzing-dna-methylation" class="section level2 hasAnchor" number="20.2">
 <h2><span class="header-section-number">20.2</span> What are the goals of analyzing DNA methylation?<a href="dna-methylation-sequencing.html#what-are-the-goals-of-analyzing-dna-methylation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_10.png" width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_10.png" width="100%" /></p>
 <p>To detect methylated cytosines (5mC), DNA samples are prepped using bisulfite (BS) conversion. This converts unmethylated cytosines into uracils and leaves methylated cytosines untouched. Probes are then designed to bind to either the uracil or the cytosine, representing the unmethylated and methylated cytosines respectively.</p>
 <p>For a given sample, you will obtain a fraction, known as the Beta value, that indicates the relative abundance of the methylated and unmethylated versions of the sequence. Beta values exist then on a scale of 0 to 1 where 0 indicates none of this particular base is methylated in the sample and 1 indicates all are methylated.</p>
 <p>Note that bisulfite conversion alone will not distinguish between 5mC and 5hmC though these often may indicate different biological mechanics.</p>
 <p>Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxidative bisulfite sequencing (OxBS) [<span class="citation">Booth et al. (<a href="#ref-Booth2013">2013</a>)</span>. oxidative bisulfite conversion measures both 5mC and 5hmC. If you want to identify 5hmC bases you either have to pair oxBS data with BS data OR you have to use Tet-assisted bisulfite (TAB) sequencing which will exclusively tag 5hmC bases <span class="citation">(<a href="#ref-Yu2012">Yu et al. 2012</a>)</span>.</p>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_35.png" width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_35.png" width="100%" /></p>
 </div>
 <div id="methylation-data-considerations" class="section level2 hasAnchor" number="20.3">
 <h2><span class="header-section-number">20.3</span> Methylation data considerations<a href="dna-methylation-sequencing.html#methylation-data-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="beta-values-binomially-distributed" class="section level3 hasAnchor" number="20.3.1">
 <h3><span class="header-section-number">20.3.1</span> Beta values binomially distributed<a href="dna-methylation-sequencing.html#beta-values-binomially-distributed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Because beta values are a ratio, by their nature, they are not normally distributed data and should be treated appropriately. This means data models (like those used by the <code>limma</code> package) built for RNA-seq data should not be used on methylation data. More accurately, Beta values follow a binomial distribution.</p>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_0.png" width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_0.png" width="100%" /></p>
 <p>This generally involves applying a generalized linear model.</p>
 </div>
 <div id="measuring-5mc-andor-5hmc" class="section level3 hasAnchor" number="20.3.2">
 <h3><span class="header-section-number">20.3.2</span> Measuring 5mC and/or 5hmC<a href="dna-methylation-sequencing.html#measuring-5mc-andor-5hmc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If your data and questions are interested in both 5mC and 5hmC, you will have separate sequencing datasets for each sample for both the BS and OBS processed samples. 5mC is often a step toward 5hmC conversion and therefore the 5mC and 5hmC measurements are, by nature, not independent from each other. In theory, 5mC, 5hmC and unmethylated cytosines should add up to 1.</p>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_42.png" width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_42.png" width="100%" /></p>
 <p>Because of this, its been proposed that the most appropriate way to model these data is to combine them together in a model <span class="citation">(<a href="#ref-Kochmanski2019">Kochmanski, Savonen, and Bernstein 2019</a>)</span>.</p>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_49.png" width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_49.png" width="100%" /></p>
 </div>
 </div>
 <div id="methylation-data-workflow" class="section level2 hasAnchor" number="20.4">
 <h2><span class="header-section-number">20.4</span> Methylation data workflow<a href="dna-methylation-sequencing.html#methylation-data-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_5.png" alt="In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. " width="100%" /></p>
+<p><img src="12-methylation_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_5.png" alt="In a very general sense, methylation workflow involves sequence quality control and genome alignment like many other sequencing methods. But next, the data needs to be used to identify methylation calls and calculations of methylation fractions. Lastly, you will likely want to group the methylated bases together to identify what regions of the genome are differentially methylated and of interest. " width="100%" /></p>
 <p>Like other sequencing methods, you will first need to start by quality control checks. Next, you will also need to align your sequences to the genome. Then, using the base calls, you will need to make methylation calls – which are methylated and which are not. This details of step depends on whether you are measuring 5mC and/or 5hmC methylation calls. Lastly, you will likely want to use your methylation calls as a whole to identify differentially methylated regions of interest.</p>
 </div>
 <div id="methylation-tools-pros-and-cons" class="section level2 hasAnchor" number="20.5">
@@ -721,42 +721,42 @@ Yu, Miao, Gary C Hon, Keith E Szulwach, Chun-Xiao Song, Peng Jin, Bing Ren, and 
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

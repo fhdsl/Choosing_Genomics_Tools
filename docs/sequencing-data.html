@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Sequencing Data | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Sequencing Data | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
@@ -541,12 +541,12 @@ div.csl-indent {
 </div>
 <div id="learning-objectives-4" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Learning Objectives<a href="sequencing-data.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_7.png" alt="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g144bc8d6a68_0_7.png" alt="This chapter will demonstrate how to: Understand the very general basics of sequencing data collection and processing workflow. Understand the limitations and strengths of sequencing data in general." width="100%" /></p>
 <p>In this section, we are going to discuss generalities that apply to all sequencing data. This is meant to be a “primer” for you which data-type specific chapters will build off of to give you more specific and practical steps and advice in regards to your data type.</p>
 </div>
 <div id="how-does-sequencing-work" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> How does sequencing work?<a href="sequencing-data.html#how-does-sequencing-work" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_45.png" width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_45.png" width="100%" /></p>
 <p>Sequencing methods, whether they are targeting DNA, transcriptomes, or some other target of the genome, have some commonalities in the steps as well as what types of biases and data generation artifacts to look out for.</p>
 <p>All sequencing experiments start out with the extraction of the biological material of interest. This biological material will be processed in some way to isolate to the genomic target of interest (we will cover the various techniques for this in more detail in each respective data chapter since it is highly specific to the data type).</p>
 <p>This set of processing steps will lead up to library generation – adding a way to catalog what molecules came from where. Sometimes for this library prep the sequences need to be fragmented before hand and an adapter bound to them.</p>
@@ -557,7 +557,7 @@ div.csl-indent {
 <h2><span class="header-section-number">6.3</span> Sequencing concepts<a href="sequencing-data.html#sequencing-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="inherent-biases" class="section level3 hasAnchor" number="6.3.1">
 <h3><span class="header-section-number">6.3.1</span> Inherent biases<a href="sequencing-data.html#inherent-biases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png" alt="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_5.png" alt="Sequence related biases GC bias - guanine and cytosine bond melts at higher temp - if a sequence has a lot of G’s and C’s Sequence complexity - certain sequences more likely to have primers bound to them (and more likely to be sequenced). Length bias - longer targets are more likely to be amplified or sequenced. These biases are worsened by PCR amplification!" width="100%" /></p>
 <p>Sequences are not all sequenced or amplified at the same rate. In a perfect world, we could take a simple snapshot of the genome we are interested in and know exactly what and how many sequences were in a sample. But in reality, sequencing methods and the resulting data always have some biases we have to be aware of and hopefully use methods that attempt to mitigate the biases.</p>
 <div id="gc-bias" class="section level4 hasAnchor" number="6.3.1.1">
 <h4><span class="header-section-number">6.3.1.1</span> GC bias<a href="sequencing-data.html#gc-bias" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -578,20 +578,20 @@ div.csl-indent {
 </div>
 <div id="depth-of-coverage" class="section level3 hasAnchor" number="6.3.3">
 <h3><span class="header-section-number">6.3.3</span> Depth of coverage<a href="sequencing-data.html#depth-of-coverage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_10.png" width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_10.png" width="100%" /></p>
 <p>The depth of sequencing refers to how many times on average a particular base is sequenced. Obviously the more times something is sequenced, the more you can be confident that the base call is accurate. However, sequencing at greater depths also takes more time and money. Depending on your sequencing goals and methods there is an appropriate level of depth that is needed.</p>
 <p>Coverage on the other hand has to do with how much of the target is covered. If you are doing Whole Genome Sequencing, what percentage of the whole genome were you able to sequence? You may realize how depth is related to coverage, in that the greater depth of sequencing you use the more likely you are to also cover more of the genome. As discussed in relation to the biases, some part of the genome are harder to reach than others, so by reading at greater depths some of those “hard to read” parts of the genome will be able to be covered.</p>
 </div>
 <div id="quality-controls" class="section level3 hasAnchor" number="6.3.4">
 <h3><span class="header-section-number">6.3.4</span> Quality controls<a href="sequencing-data.html#quality-controls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_0.png" width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_0.png" width="100%" /></p>
 <p>Sequencing bases involves some error/confidence rate. As mentioned, some parts of the genome are harder to read than others. Or, sometimes your sequencing can be influenced by poor quality sample that has degraded. Before you jump in to further analyzing your data, you will want to investigate the quality of the sequencing data you’ve collected.</p>
 <p>The most common and well-known method for assessing sequencing quality controls is <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FASTQC</a>. FASTQC creates an abundance of sequencing quality control reports from fastq files. These reports need to be interpreted within the context of your sequencing methods, samples, and experimental goals. Often bioinformatics cores are good to contact about these reports (they may have already run FASTQC on your data if that is where you obtained your data initially). They can help you wade through the flood of quality control reports printed out by FASTQC.</p>
 <p>FASTQC also has great documentation that can attempt to guide you through report interpretation. This also includes examples of good and bad FASTQC reports. But note that all FASTQC report interpretations must be done relative to the experiment that you have done. In other words, there is not a one size fits all quality control cutoffs for your FASTQC reports. The failure/success icons FASTQC reports back are based on defaults that may not be accurate or applicable to your data, so further investigation and consultation is warranted before you decided to trust or pitch your sequencing data.</p>
 </div>
 <div id="alignment" class="section level3 hasAnchor" number="6.3.5">
 <h3><span class="header-section-number">6.3.5</span> Alignment<a href="sequencing-data.html#alignment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_15.png" width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_15.png" width="100%" /></p>
 <p>Once you have your reads and you find them reasonably trustworthy through quality control checks, you will want to align them to your reference. The reference you align your sequences to will depend on the data type you have: a reference genome, a reference transcriptome, something else?</p>
 <ul>
 <li>Traditional aligners - Align your data to a reference using standard alignment algorithms. Can be very computationally intensive.</li>
@@ -601,7 +601,7 @@ div.csl-indent {
 </div>
 <div id="single-end-vs-paired-end" class="section level3 hasAnchor" number="6.3.6">
 <h3><span class="header-section-number">6.3.6</span> Single End vs Paired End<a href="sequencing-data.html#single-end-vs-paired-end" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="resources/images/06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_20.png" width="100%" /></p>
+<p><img src="06-sequencing-data_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15b8dbcbef7_0_20.png" width="100%" /></p>
 <p>Sequencing can be done single-end or paired-end. Paired end means the primers are going to bind to both sides of a sequence. This can help you avoid some 3’ bias and give you more complete coverage of the area you are sequencing. But, as you may guess, pair-end read sequencing is more expensive than single end.</p>
 <p>You will want to determine whether your sequencing is paired end or single end. If it is paired end you will likely see file names that indicate this. You should have pairs of files that may or may not be labeled with <code>_1</code> and <code>_2</code> or <code>_F</code> and <code>_R</code>. We will discuss file nomenclature more specifically as it pertains to different data types in the upcoming chapters.</p>
 </div>
@@ -704,42 +704,42 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

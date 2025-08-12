@@ -10,17 +10,17 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_56.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_56.png){width=100%}
 
 ## Where RNA-seq data comes from
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142c259a793_0_5.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142c259a793_0_5.png){width=100%}
 
 ## RNA-seq workflow
 
 In a very general sense, RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that check the quality of the sequencing done. You may also want to trim and filter out data that is not trustworthy. After you have a set of reliable data, you need to normalize your data. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, differential expression, or any number of other analyses.
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_23.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_23.png){width=100%}
 
 In this chapter we will highlight some of the more popular RNA-seq tools, that are generally suitable for most experiment data but there is no "one size fits all" for computational analysis of RNA-seq data [@Conesa2016]. You may find tools out there that better suit your needs than the ones we discuss here.
 
@@ -34,7 +34,7 @@ In this chapter we will highlight some of the more popular RNA-seq tools, that a
 
 RNA-seq suffers from a lot of the common sequence biases which are further worsened by PCR amplification steps. We discussed some of the sequence biases in the [previous sequencing chapter]().
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142e3de7ce8_0_19.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g142e3de7ce8_0_19.png){width=100%}
 
 These biases are nicely covered in [this blog by Mike Love](https://mikelove.wordpress.com/2016/09/26/rna-seq-fragment-sequence-bias/) and we'll summarize them here:
 
@@ -45,7 +45,7 @@ These biases are nicely covered in [this blog by Mike Love](https://mikelove.wor
 
 _Main Takeaway_: When looking for tools, you will want to see if the algorithms or options available attempt to account for these biases in some way.
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_65.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_65.png){width=100%}
 
 ## RNA-seq data considerations
 
@@ -58,7 +58,7 @@ Most of the RNA in the cell is not mRNA or noncoding RNAs of interest, but inste
 
 [This blog by Sitools Biotech does a good summary](https://blog.sitoolsbiotech.com/2019/08/ribo-depletion-rna-seq-ribosomal-rna-depletion-method-works-best/) of the pros and cons of either selection method.
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_47.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_47.png){width=100%}
 
 ### Transcriptome mapping
 
@@ -80,7 +80,7 @@ _Examples of pseudo aligners_:
 
 These strategies are discussed at greater length [in this excellent manuscript by Conesa et al, 2016](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0881-8).
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_72.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_72.png){width=100%}
 
 ### Abundance measures
 
@@ -116,11 +116,11 @@ TPM has gained a popularity in recent years because it is more intuitive to unde
 
 > When you use TPM, the sum of all TPMs in each sample are the same. This makes it easier to compare the proportion of reads that mapped to a gene in each sample. In contrast, with RPKM and FPKM, the sum of the normalized reads in each sample may be different, and this makes it harder to compare samples directly.
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_59.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_59.png){width=100%}
 
 ### RNA-seq downstream analysis tools
 
-![](resources/images/10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_80.png){width=100%}
+![](10a-bulk-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_80.png){width=100%}
 
 - [ComplexHeatmap](https://bioconductor.org/packages/release/bioc/html/ComplexHeatmap.html#:~:text=Complex%20heatmaps%20are%20efficient%20to,and%20supports%20various%20annotation%20graphics.) is great for visualizations
 - [DESEq2](https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) and [edgeR](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html) are great for differential expression analyses.

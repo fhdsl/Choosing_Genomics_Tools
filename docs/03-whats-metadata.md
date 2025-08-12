@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-![](resources/images/03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png){width=100%}
+![](03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_70.png){width=100%}
 
 ## What are metadata?
 
@@ -15,11 +15,11 @@ Metadata are critically important descriptive information about your data.
 
 Metadata describe how your data came to be, what organism or patient the data are from and include any and every relevant piece of information about the samples in your data set.
 
-![](resources/images/03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png){width=100%}
+![](03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_12.png){width=100%}
 
 Metadata includes but isn't limited to, the following example categories:
 
-![](resources/images/03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png){width=100%}
+![](03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_45.png){width=100%}
 
 <div class = "warning">
 At this time it's important to note that if you work with human data or samples, your metadata will likely contain personal identifiable information (PII) and protected health information (PHI). It's critical that you protect this information! For more details on this, we encourage you to see our [course about data management](https://jhudatascience.org/Ethical_Data_Handling_for_Cancer_Research/data-privacy.html).
@@ -77,13 +77,13 @@ Toward these two goals, [this excellent article](https://www.tandfonline.com/doi
 
 <div class = "warning">
 Note that it is very dangerous to open gene data with Excel. According to @Ziemann2016, approximately one-fifth of papers with Excel gene lists have errors. This happens because Excel wants to interpret everything as a date. We strongly caution against opening (and saving afterward) gene data in Excel.
-![](resources/images/03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png){width=100%}
+![](03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13a7f78e577_0_0.png){width=100%}
 </div>
 
 ### To recap:
 
-![](resources/images/03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png){width=100%}
+![](03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12709027cba_1_52.png){width=100%}
 
-![](resources/images/03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png){width=100%}
+![](03-whats-metadata_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_1.png){width=100%}
 
 If you are not the person who has the information needed to create metadata, or you believe that another individual already has this information, make sure you get ahold of the metadata that correspond to your data. It will be critical for you to have to do any sort of meaningful analysis!

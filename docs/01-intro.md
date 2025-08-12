@@ -3,7 +3,7 @@
 
 # Introduction
 
-![](resources/images/01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png){width=100%}
+![](01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_0.png){width=100%}
 
 This is a *living* course meaning it is constantly changing and being updated. The goal for this course is to be a "wikipedia" of omic data.
 If you'd like to contribute, [you can file a pull request on GitHub](https://github.com/fhdsl/Choosing_Genomics_Tools) if you are comfortable with that sort of thing or email `csavonen@fredhutch.org` to ask how to get started.
@@ -18,11 +18,11 @@ _This course is written for individuals who:_
 - Want a basic overview of genomic data types.
 - Want to find resources for processing and interpreting genomics data.
 
-![](resources/images/01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g116525eff64_0_96.png){width=100%}
+![](01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g116525eff64_0_96.png){width=100%}
 
 ## Topics covered:
 
-![](resources/images/01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png){width=100%}
+![](01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g11db7c97851_0_143.png){width=100%}
 
 ## Motivation
 
@@ -33,17 +33,17 @@ Often students and researchers need to utilize genomic data to reach the next st
 
 Often researchers receive their genomic data processed from another lab or institution, and although they are excited to gain insights from it to inform the next steps of their research, they may not have a practical understanding of how the data they have received came to be or what needs to be done with it.
 
-![](resources/images/01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png){width=100%}
+![](01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_0.png){width=100%}
 
 As an example, data file formats may not have been covered in their training, and the data they received seems unintelligible and not as straightforward as they hoped.
 
-![](resources/images/01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png){width=100%}
+![](01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g1221ea485b7_0_13.png){width=100%}
 
 This course attempts to give this researcher the basic bearings and resources regarding their data, in hopes that they will be equipped and informed about how to obtain the insights for their researcher they originally aimed to find.
 
 ## Curriculum  
 
-![](resources/images/01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png){width=100%}
+![](01-intro_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_gd422c5de97_0_10.png){width=100%}
 
 **Goal of this course:**  
 Equip learners with tutorials and resources so they can understand and interpret their genomic data in a way that helps them meet their goals and handle the data properly.

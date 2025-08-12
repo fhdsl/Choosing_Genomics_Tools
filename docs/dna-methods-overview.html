@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 DNA Methods Overview | Choosing Genomics Tools</title>
   <meta name="description" content="Description about Course/Book." />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 DNA Methods Overview | Choosing Genomics Tools" />
   <meta property="og:type" content="book" />
@@ -541,7 +541,7 @@ div.csl-indent {
 </div>
 <div id="learning-objectives-7" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Learning Objectives<a href="dna-methods-overview.html#learning-objectives-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" alt="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection for DNA sequence collection and variant identification. Compare and contrast the following methods: DNA/SNP microarrays, Whole Genome Sequencing, Whole Exome Sequencing, and Targeted Sequencing" width="100%" /></p>
+<p><img src="09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png" alt="Learning objectives This chapter will demonstrate how to: Understand the goals and data collection for DNA sequence collection and variant identification. Compare and contrast the following methods: DNA/SNP microarrays, Whole Genome Sequencing, Whole Exome Sequencing, and Targeted Sequencing" width="100%" /></p>
 </div>
 <div id="what-are-the-goals-of-analyzing-dna-sequences" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> What are the goals of analyzing DNA sequences?<a href="dna-methods-overview.html#what-are-the-goals-of-analyzing-dna-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -559,7 +559,7 @@ div.csl-indent {
 </div>
 <div id="comparison-of-dna-methods" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Comparison of DNA methods<a href="dna-methods-overview.html#comparison-of-dna-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png" alt="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." width="100%" />
+<p><img src="09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png" alt="Comparing DNA Sequencing Techniques. The most common DNA sequencing techniques are described. Whole genome sequencing coverages all genes and non-coding DNA. 3.2 billion bases are covered when applied to human samples. This the most expensive of the techniques. Depth of coverage required for 99.9% sensitivity is 30X. Whole exome sequencing coverage is the exome or expressed genes. Approximately 45 million bases are sequenced. This is a cost-effective technique. The depth of coverage required for 99.9% sensitivity is 100X. Targeted gene panel sequencing coverages 50-500 genes. 20,000 to 62 million bases are sequenced. This is the most cost-effective technique. Depth of coverage is &gt;500X." width="100%" />
 There are four DNA sequencing methods discussed in this chapter. The above graph compares WGS, WXS, and Targeted gene sequencing. The last section compares all 4.</p>
 <ol style="list-style-type: decimal">
 <li>Whole genome sequencing (WGS)</li>
@@ -597,7 +597,7 @@ Targeted: <span class="citation">(<a href="#ref-BewickeCopley2019">Bewicke-Cople
 <p>If previous research has identified sections of the genome that are of interest to your research question, then it’s highly advisable to not sequence the entire genome with WGS methods. Not only will whole genome sequencing be more costly, but it will decrease your statistical power to discover true positive variants of interest and increase your chances of discovering false positive variants. This is because multiple testing correction needs to be applied in instances where many tests are being done currently. In this instance, the tests being performed are across the whole genome.</p>
 <p>If your research question does not pertain to non-coding regions of the genome or splicing, then its advisable to use WXS. Recall that only about 1-2% of the genome is coding sequences meaning that if you are uninterested in noncoding regions but still use WGS then 98-99% of your data will be uninteresting to you and will only serve to increase your chances of finding false positives or cost you a lot of funding. Not only does sequencing more of the genome take more money and time but it will be more costly in time and resources in terms of the computing power needed to analyze it.</p>
 <p>Furthermore, if you are able to narrow down even further what regions are of interest this would be better in terms of cost and detection abilities. A targeted sequencing panel or DNA microarray are ideal for assaying known groups of targets. DNA microarrays are the least costly of all the methods to identify DNA variants, but with both targeted sequencing and DNA microarray you will need to find or create a custom probe or primer set. Ideally a probe or primer set that hits your regions of interest already exists commercially but if not, then you will have to design your own – which also costs time and money.</p>
-<p><img src="resources/images/09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_6.png" alt="There are three general methods we will discuss for evaluating DNA sequences. Whole Genome Sequencing (WGS) assays more of the genome than other methods but is much more costly and computationally intensive. Depending on your goals WGS may be overkill. SNP microarrays on the other hand, are much more cost effective but are not able to be used for exploratory purposes. Whole Exome Sequencing (WXS or WES) and other targeted sequencing methods allow you to survey regions of the genome in way that is more cost effective and potentially at higher depths." width="100%" /></p>
+<p><img src="09-DNA_files/figure-html/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_6.png" alt="There are three general methods we will discuss for evaluating DNA sequences. Whole Genome Sequencing (WGS) assays more of the genome than other methods but is much more costly and computationally intensive. Depending on your goals WGS may be overkill. SNP microarrays on the other hand, are much more cost effective but are not able to be used for exploratory purposes. Whole Exome Sequencing (WXS or WES) and other targeted sequencing methods allow you to survey regions of the genome in way that is more cost effective and potentially at higher depths." width="100%" /></p>
 <p>In these upcoming chapters we will discuss in more detail each of these methods, what the data represent, what you need to consider, and what resources you can consult for analyzing your data.</p>
 
 </div>
@@ -730,42 +730,42 @@ Zhang, Cheng-Zhong, and David Pellman. 2022. <span>“Cancer Genomic Rearrangeme
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>

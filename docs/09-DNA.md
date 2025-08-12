@@ -11,7 +11,7 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-![](resources/images/09-DNA_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png){width=100%}
+![](09-DNA_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_71.png){width=100%}
 
 ## What are the goals of analyzing DNA sequences?
 
@@ -35,7 +35,7 @@ There are several larger goals behind DNA sequencing experiments ranging from as
 
 ## Comparison of DNA methods
 
-![](resources/images/09-DNA_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png){width=100%}
+![](09-DNA_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g138a6ce16b7_35_18.png){width=100%}
 There are four DNA sequencing methods discussed in this chapter. The above graph compares WGS, WXS, and Targeted gene sequencing. The last section compares all 4.
 
 1. Whole genome sequencing (WGS)
@@ -81,6 +81,6 @@ If your research question does not pertain to non-coding regions of the genome o
 Furthermore, if you are able to narrow down even further what regions are of interest this would be better in terms of cost and detection abilities. A targeted sequencing panel or DNA microarray are ideal for assaying known groups of targets. DNA microarrays are the least costly of all the methods to identify DNA variants, but with both targeted sequencing and DNA microarray you will need to find or create a custom probe or primer set. Ideally a probe or primer set that hits your regions of interest already exists commercially but if not, then you will have to design your own -- which also costs time and money.
 
 
-![](resources/images/09-DNA_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_6.png){width=100%}
+![](09-DNA_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g13438a9a5b2_0_6.png){width=100%}
 
 In these upcoming chapters we will discuss in more detail each of these methods, what the data represent, what you need to consider, and what resources you can consult for analyzing your data.

@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-![](resources/images/05-general-data-analysis-tools_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g20fbd76736e_0_0.png){width=100%}
+![](05-general-data-analysis-tools_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g20fbd76736e_0_0.png){width=100%}
 
 ## Command Line vs GUI
 

@@ -9,7 +9,7 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 
 ## Learning Objectives
 
-![](resources/images/13-microbiome_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_0_0.png){width=100%}
+![](13-microbiome_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2668d07d0b9_0_0.png){width=100%}
 
 ## A Brief Introduction to Microbiomes
 
@@ -23,7 +23,7 @@ Microbes are everywhere. We have found these tiny organisms in the deepest regio
 
  If we looked hard enough, I think we’d find them on the surface of the moon and Mars, though they are probably microbes who stowed away on our spacecraft and are now patiently waiting for a drop of water that may or may not ever show up. If we ever colonize those worlds, microbes will be an indispensable ally in creating an environment that could sustain us.
 
-![](resources/images/13-microbiome_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g26ebab787e9_0_0.png){width=100%}
+![](13-microbiome_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g26ebab787e9_0_0.png){width=100%}
 This figure is adapted from [@Tignat-Perrier2022] under Creative Commons license.
 
 Microbes almost never live alone in the real world (i.e., outside of a laboratory). Rather they exist in communities of different species who are interacting with each other and their environment. Some of these communities will have many different types of organisms, and some will have only a few. Because of the large number of species and individuals involved, no two communities will ever be exactly alike, and quantifying differences between microbial communities is an important area of research at the moment. The types of interactions between organisms are also highly varied. These can include mutualistic relationships, where both organisms benefit from the interaction; parasitic relationships, where one organism exclusively benefits to the detriment of the other; and the full gradient in between.

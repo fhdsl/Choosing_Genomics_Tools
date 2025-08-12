@@ -9,25 +9,25 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a3974d9533_0_10.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a3974d9533_0_10.png){width=100%}
 
 ## Technologies
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2aeb8138211_0_0.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2aeb8138211_0_0.png){width=100%}
 
 ## Advantages of CUT&RUN and CUT&Tag over the Traditional ChIP-seq Technology
 
 - **Lower Cell Number and Less Starting Material Requirement**: CUT&RUN and CUT&Tag can be performed with much lower cell number than ChIP-seq. This is particularly beneficial when working with rare cell types or limited biological samples. The CUT&RUN and CUT&Tag techniques involve less sample manipulation compared to ChIP-seq. This minimizes the risk of losing material and potential artifacts from extensive sample handling and processing.
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_35.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_35.png){width=100%}
 
 - **Higher Resolution and Specificity**: CUT&RUN and CUT&Tag provide higher resolution and greater specificity in identifying protein-DNA interactions. This results from the method's direct targeting and cleavage of DNA at the binding sites, reducing background noise.
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_42.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_42.png){width=100%}
 
 - **Reduced Background Noise**: CUT&RUN and CUT&Tag typically result in lower background noise due to the direct tagging of DNA at the site of the protein-DNA interaction, enhancing the clarity and quality of the results. The sensitivity of sequencing depends on the depth of the sequencing run (i.e., the number of mapped sequence tags), the size of the genome, and the distribution of the target factor. The sequencing depth is directly correlated with cost and negatively correlated with background. Therefore, low-background CUT&RUN and CUT&Tag will waste less sequencing resources on profiling the background and hence is inherently more cost-effective than high-background ChIP-seq.
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_28.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_28.png){width=100%}
 
 - **Cost-Effectiveness**: In addition to high efficiency in sequencing the target region, due to the lower requirement for reagents and enzymes, CUT&RUN and CUT&Tag can be more cost-effective, especially in high-throughput settings.
 
@@ -40,7 +40,7 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 <!-- [Henikoff lab](https://research.fredhutch.org/henikoff/en.html) constructed a 6xHis and HA-tagged protein A-protein G-MNase fusion (pAG-MNase) that allows direct binding of mouse antibodies that bind poorly to protein A, eliminating the need for a secondary antibody. The His tag allows the purification of pAG-MNase with a commercial kit, while the HA tag can be used for pulling out pAG-MNase chromatin complexes for CUT&RUN.ChIP. Henikoff lab developed low salt and high calcium conditions that prevent diffusion of released complexes into the supernatant, allowing for longer digestion times and increased yields without increased cleavage at non-specific accessible sites. E. coli DNA carried over from pA-MNase or pAG-MNase preparation is sufficient for internal calibration of samples without adding heterologous spike-in DNA. -->
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_0.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_0.png){width=100%}
 
 - Publications:
 
@@ -71,7 +71,7 @@ CUT&RUN has been automated using a Beckman Biomek FX liquid-handling robot so th
 
 A streamlined CUT&Tag protocol was introduced by the [Henikoff Lab](https://research.fredhutch.org/henikoff/en.html) that suppresses DNA accessibility artifacts to ensure high-fidelity mapping of the antibody-targeted protein and improves the signal-to-noise ratio over current chromatin profiling methods. Streamlined CUT&Tag can be performed in a single PCR tube, from cells to amplified libraries, providing low-cost genome-wide chromatin maps. By simplifying library preparation, CUT&Tag-direct requires less than a day at the bench, from live cells to sequencing-ready barcoded libraries. As a result of low background levels, barcoded and pooled CUT&Tag libraries can be sequenced for as little as $25 per sample. This enables routine genome-wide profiling of chromatin proteins and modifications and requires no special skills or equipment.  
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_7.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_7.png){width=100%}
 
 - Publication:
 
@@ -103,7 +103,7 @@ CUT&Tag has been automated using a Beckman Coulter Biomek FX liquid handling rob
 
 Cleavage Under Targeted Accessible Chromatin, CUTAC, for short, is a simple modification of the Tn5 transposase-mediated antibody-directed CUT&Tag method that provides high-quality accessibility mapping in parallel with mapping of specific components of the chromatin landscape. Findings imply that regulatory sites detected by hyperaccessibility mapping are coupled to the initiation of RNA Polymerase II transcription via H3K4 methylation. CUTAC requires few resources and is sufficiently simple that it can be performed from nuclei to purified sequencing-ready libraries in single PCR tubes on a home workbench.
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_14.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_14.png){width=100%}
 
 - Publication:
 
@@ -138,7 +138,7 @@ Cleavage Under Targeted Accessible Chromatin, CUTAC, for short, is a simple modi
 CUT&RUN and CUT&Tag data analysis share a very similar strategy. Data analysis generally involves raw sequencing data alignment, quality control, normalization, peak calling, visualization, differential analysis, and other specific analyses for target scientific discoveries. A detailed data processing and analysis tutorial with reproducible codes and demo data can be found at [CUT&Tag Data Processing and Analysis Tutorial](https://www.protocols.io/view/cut-amp-tag-data-processing-and-analysis-tutorial-e6nvw93x7gmk/v1),
 
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_22.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6a1c838b1_1_22.png){width=100%}
 
 ### Adapter Trimming
 
@@ -175,7 +175,7 @@ The quality of the aligned data can be evaluated from the following aspects:
  - **Fragment length distribution**: CUT&RUN and CUT&Tag targeting at a histone modification predominantly result in nucleosomal fragments (~180 bp) or multiples of that length. Therefore, the fragment length density distribution usually has several peaks whose modes are 180bp apart, matching the nucleosomal length. CUT&RUN/CUT&Tag targeting transcription factors predominantly produce nucleosome-sized fragments and variable amounts of shorter fragments from neighboring nucleosomes and the factor-bound site, respectively.
  Moreover, tagmentation of DNA on the surface of nucleosomes also occurs, and plotting fragment length distribution with single-basepair resolution reveals a 10-bp sawtooth periodicity, which is typical of successful CUT&Tag experiments. Such 10 bp periodic cleavage preferences match the 10 bp/turn periodicity of B-form DNA, which suggests that the DNA on either side of these bound TFs is spatially oriented such that tethered MNase has preferential access to one face of the DNA double helix. The presence of this 10 bp periodicity is a good indicator that the experiment has specifically targeted nucleosomal DNA or proteins in close association with it. If this pattern is absent, it might suggest non-specific binding or other technical issues.
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_0.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_0.png){width=100%}
 
 ### Normalization
 
@@ -225,7 +225,7 @@ The [Model-based Analysis of ChIP-Seq](https://genomebiology.biomedcentral.com/a
 
 Fragment proportion in Peak Regions, FRiPs for short, is also a critical signal-to-noise measurement. Although sequencing depths for CUT&Tag are typically only 1-5 million reads, the low background of the method usually results in high FRiP scores. In other words, it measures the percentage of sequencing resources accurately allocated to the target epitope regions. Note that the number of peaks and FRiPs typically increase with the sequencing depth and mappable fragment number, therefore comparisons should be done by downsampling samples to the same number of fragment. For example, the comparison across technologies in [Efficient chromatin accessibility mapping in situ by nucleosome-tethered tagmentation](https://elifesciences.org/articles/63274) Figure 5A:
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a7dbc78b0e_0_0.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a7dbc78b0e_0_0.png){width=100%}
 
 ### Visualization
 
@@ -235,7 +235,7 @@ Fragment proportion in Peak Regions, FRiPs for short, is also a critical signal-
 
 - [deepTools](https://deeptools.readthedocs.io/en/develop/): deepTools is a suite of Python tools particularly developed for efficiently analyzing high-throughput sequencing data. It is particularly helpful to check chromatin features at a list of annotated sites. For example, we can use it to check the histone modification enrichment/absence signals around transcription starting sites or the peak center. We can use the "computeMatrix" and "plotHeatmap" functions from deepTools to generate the following heatmap.
 
-![](resources/images/11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_6.png){width=100%}
+![](11d-CUT-and-RUN_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g2a6c0fa3d72_0_6.png){width=100%}
 
 ### Differential Analysis
 

@@ -9,7 +9,7 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 
 ## Learning Objectives
 
-![](resources/images/11b-sc-ATAC-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_41.png){width=100%}
+![](11b-sc-ATAC-Seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_41.png){width=100%}
 
 ## What are the goals of scATAC-seq analysis?
 

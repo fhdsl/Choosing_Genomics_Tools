@@ -5,7 +5,7 @@
 
 ## Learning Objectives
 
-![](resources/images/04-considerations-for-choosing_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_0.png){width=100%}
+![](04-considerations-for-choosing_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_0.png){width=100%}
 
 ## Overview
 
@@ -13,7 +13,7 @@ In this course, we will introduce you to the fundamentals of various data types 
 
 We will discuss the following considerations you should gather information and otherwise ponder when comparing one or more tools for your analysis:
 
-![](resources/images/04-considerations-for-choosing_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_5.png){width=100%}
+![](04-considerations-for-choosing_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g21f6c5d3981_0_5.png){width=100%}
 
 ### Is this tool appropriate for your data type?
 

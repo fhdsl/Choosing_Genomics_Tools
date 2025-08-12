@@ -11,7 +11,7 @@ In its existing form, this chapter has been written with AI ([Claude 3.7 Sonnet]
 
 ## Learning Objectives
 
-![](resources/images/11-chromatin_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png){width=100%}
+![](11-chromatin_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_0.png){width=100%}
 
 ## Why are people interested in chromatin?
 
@@ -41,7 +41,7 @@ Therefore, understanding the mechanisms that regulate chromatin structure and fu
 
 ## Comparison of technologies
 
-![](resources/images/11-chromatin_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_5.png){width=100%}
+![](11-chromatin_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g227d7dd1e08_0_5.png){width=100%}
 
 ### ATAC-seq:
 

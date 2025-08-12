@@ -9,17 +9,17 @@ This chapter is in a beta stage. If you wish to contribute, please [go to this f
 
 ## Learning Objectives
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_1.png){width=100%}
 
 ## Where single-cell RNA-seq data comes from
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_6.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_6.png){width=100%}
 
 As opposed to bulk RNA-seq which can only tell us about tissue level and within patient variation, single-cell RNA-seq is able to tell us cell to cell variation in transcriptomics including intra-tumor heterogeneity.
 
 Single cell RNA-seq can give us cell level transcriptional profiles. Whereas bulk RNA-seq masks cell to cell heterogeneity. If your research questions require cell-level transcriptional information, single-cell RNA-seq will on interest to you.
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_11.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_11.png){width=100%}
 
 ## Single-cell RNA-seq data types
 
@@ -30,9 +30,9 @@ There are broadly two categories of single-cell RNA-seq data methods we will dis
 
 Depending on your goals for your single cell RNA-seq analysis, you may want to choose one method over the other.
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_25.png){width=100%}
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_30.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_30.png){width=100%}
 
 (Material borrowed from [@AlexsLemonade2022]).
 
@@ -40,13 +40,13 @@ Depending on your goals for your single cell RNA-seq analysis, you may want to c
 
 Often Tag based single cell RNA-seq methods will include not only a cell barcode for cell identification but will also have a unique molecular identifier (UMI) for original molecule identification. The idea behind the UMIs is it is a way to have insight into the original snapshot of the cell and potentially combat PCR amplification biases.
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_41.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g15bed4cad37_396_41.png){width=100%}
 
 ## Single cell RNA-seq tools
 
 There are a lot of scRNA-seq tools for various steps along the way.
 
-![](resources/images/10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png){width=100%}
+![](10b-single-cell-RNA-seq_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g161687fdf93_0_0.png){width=100%}
 
 In a very general sense, single cell RNA-seq workflows involves first quantification/alignment. You will also need to conduct quality control steps that may involve using UMIs to check for what’s detected, detecting doublets (also known as duplets), and using this information to filter out data that is not trustworthy. [Doublets are transcriptome data generated from two cells](https://bioconductor.org/books/3.15/OSCA.advanced/doublet-detection.html), and an undesired technical artifact when single cell RNA-seq workflows want data representing a single cell at a time. After you have a set of reliable data, you need to normalize your data. Single cell data is highly skewed - a lot of genes barely or not detected and a few genes that are detected a lot. After data has been normalized you are ready to conduct your downstream analyses. This will be highly dependent on the original goals and questions of your experiment. It may include dimension reduction, cell classification, differential expression, detecting cell trajectories or any number of other analyses.
 

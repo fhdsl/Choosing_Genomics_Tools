@@ -9,11 +9,11 @@ This chapter is incomplete! If you wish to contribute, please [go to this form](
 
 ## Learning Objectives
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_91.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g12890ae15d7_0_91.png){width=100%}
 
 ## What are the goals of analyzing DNA methylation?
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_10.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g14492c87338_0_10.png){width=100%}
 
 To detect methylated cytosines (5mC), DNA samples are prepped using bisulfite (BS) conversion. This converts unmethylated cytosines into uracils and leaves methylated cytosines untouched. Probes are then designed to bind to either the uracil or the cytosine, representing the unmethylated and methylated cytosines respectively.
 
@@ -23,7 +23,7 @@ Note that bisulfite conversion alone will not distinguish between 5mC and 5hmC t
 
 Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxidative bisulfite sequencing (OxBS) [@Booth2013. oxidative bisulfite conversion measures both 5mC and 5hmC. If you want to identify 5hmC bases you either have to pair oxBS data with BS data OR you have to use Tet-assisted bisulfite (TAB) sequencing which will exclusively tag 5hmC bases [@Yu2012].
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_35.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_35.png){width=100%}
 
 ## Methylation data considerations
 
@@ -31,7 +31,7 @@ Additionally, 5-hydroxymethylated cytosines (5hmC) can also be detected by oxida
 
 Because beta values are a ratio, by their nature, they are not normally distributed data and should be treated appropriately. This means data models (like those used by the `limma` package) built for RNA-seq data should not be used on methylation data. More accurately, Beta values follow a binomial distribution.
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_0.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_0.png){width=100%}
 
 This generally involves applying a generalized linear model.
 
@@ -39,15 +39,15 @@ This generally involves applying a generalized linear model.
 
 If your data and questions are interested in both 5mC and 5hmC, you will have separate sequencing datasets for each sample for both the BS and OBS processed samples. 5mC is often a step toward 5hmC conversion and therefore the 5mC and 5hmC measurements are, by nature, not independent from each other. In theory, 5mC, 5hmC and unmethylated cytosines should add up to 1.
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_42.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_42.png){width=100%}
 
 Because of this, its been proposed that the most appropriate way to model these data is to combine them together in a model [@Kochmanski2019].
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_49.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_49.png){width=100%}
 
 ## Methylation data workflow
 
-![](resources/images/12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_5.png){width=100%}
+![](12-methylation_files/figure-docx//1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY_g17e24e1c00a_0_5.png){width=100%}
 
 Like other sequencing methods, you will first need to start by quality control checks. Next, you will also need to align your sequences to the genome. Then, using the base calls, you will need to make methylation calls -- which are methylated and which are not. This details of step depends on whether you are measuring 5mC and/or 5hmC methylation calls. Lastly, you will likely want to use your methylation calls as a whole to identify differentially methylated regions of interest.
 
