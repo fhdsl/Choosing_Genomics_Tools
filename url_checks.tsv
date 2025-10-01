@@ -1,0 +1,5 @@
+urls	urls_status	file
+https://meme-suite.org/meme/	failed	/home/11a-ATAC-Seq.Rmd
+https://meme-suite.org/meme/	failed	/home/11c-ChIP-Seq.Rmd
+https://meme-suite.org/meme/tools/meme-chip	failed	/home/11c-ChIP-Seq.Rmd
+https://meme-suite.org/meme/doc/centrimo.html	failed	/home/11c-ChIP-Seq.Rmd
