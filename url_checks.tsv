@@ -1,0 +1,7 @@
+urls	urls_status	file
+https://www.bioconductor.org/packages/devel/bioc/vignettes/maftools/inst/doc/maftools.html	failed	/home/09a-WGS-and-WXS.Rmd
+https://bioconductor.org/packages/devel/bioc/vignettes/scater/inst/doc/overview.html	failed	/home/10b-single-cell-RNA-seq.Rmd
+https://meme-suite.org/meme/	failed	/home/11a-ATAC-Seq.Rmd
+https://meme-suite.org/meme/	failed	/home/11c-ChIP-Seq.Rmd
+https://meme-suite.org/meme/tools/meme-chip	failed	/home/11c-ChIP-Seq.Rmd
+https://meme-suite.org/meme/doc/centrimo.html	failed	/home/11c-ChIP-Seq.Rmd
