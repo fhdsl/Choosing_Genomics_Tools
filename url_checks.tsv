@@ -1,0 +1,10 @@
+urls	urls_status	file
+https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html	failed	/home/02-genomics_overview.Rmd
+https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html	failed	/home/06-sequencing-data.Rmd
+https://www.gsea-msigdb.org/gsea/doc/GSEAUserGuideFrame.html	failed	/home/07-microarray-data.Rmd
+https://bioinformaticsdotca.github.io/CAN_2021_module4_lab	failed	/home/09a-WGS-and-WXS.Rmd
+https://webmev.tm4.org	failed	/home/10a-bulk-RNA-seq.Rmd
+https://salmon.readthedocs.io/en/latest/alevin.html	failed	/home/10b-single-cell-RNA-seq.Rmd
+https://notebook.genepattern.org/single-cell/	failed	/home/10b-single-cell-RNA-seq.Rmd
+https://webmev.tm4.org	failed	/home/10b-single-cell-RNA-seq.Rmd
+https://ludvigla.github.io/semla/index.html	failed	/home/10c-spatial-transcriptomics.Rmd
