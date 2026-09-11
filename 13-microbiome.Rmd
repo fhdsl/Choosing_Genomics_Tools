@@ -17,27 +17,26 @@ ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7
 
 ## A Brief Introduction to Microbiomes
 
-
 Microbes are everywhere. We have found these tiny organisms in the deepest regions of the ocean and in the upper atmosphere. We have found them in:
 
-+ water that has been solid ice for millennia in the Antarctic
++ water that has been solid ice for millennia in the Antarctic.
 + boiling water in the geysers of Yellowstone National Park.
-+ the driest natural environments on Earth, including the Atacama Desert in Chile, where desiccation resistant microbes hide in the soil sometimes waiting ten years for the drop of rain that will jump start their metabolism long enough for them to reproduce before they return to dormancy.
++ the driest natural environments on Earth, including the Atacama Desert in Chile, where desiccation-resistant microbes hide in the soil sometimes waiting ten years for the drop of rain that will jump-start their metabolism long enough for them to reproduce before they return to dormancy.
 + perpetually damp environments, like the intestinal tract of the human body where they are constantly the subject of inspection by our diligent immune cells, and where they impact our health in positive and negative ways that we are only beginning to understand.
 + our nuclear reactors, prompting questions about whether we could harness them as tiny machines to help us remediate environmental disasters of the past, present, and future.
 
-If we looked hard enough, I think we'd find them on the surface of the moon and Mars, though they are probably microbes who stowed away on our spacecraft and are now patiently waiting for a drop of water that may or may not ever show up. If we ever colonize those worlds, microbes will be an indispensable ally in creating an environment that could sustain us.
+If we looked hard enough, I think we'd find them on the surface of the moon and Mars, though they are probably microbes that stowed away on our spacecraft and are now patiently waiting for a drop of water that may or may not ever show up. If we ever colonize those worlds, microbes will be an indispensable ally in creating an environment that could sustain us.
 
 ```{r, fig.alt = "Cartoon illustration of four environments where microbes are common.", out.width = "100%", echo = FALSE}
 ottrpal::include_slide("https://docs.google.com/presentation/d/1YwxXy2rnUgbx_7B7ENH9wpDX-j6JpJz6lGVzOkjo0qY/edit#slide=id.g26ebab787e9_0_0")
 ```
-This figure is adapted from [@Tignat-Perrier2022] under Creative Commons license.
+This figure is adapted from [@Tignat-Perrier2022] under a Creative Commons license.
 
-Microbes almost never live alone in the real world (i.e., outside of a laboratory). Rather they exist in communities of different species who are interacting with each other and their environment. Some of these communities will have many different types of organisms, and some will have only a few. Because of the large number of species and individuals involved, no two communities will ever be exactly alike, and quantifying differences between microbial communities is an important area of research at the moment. The types of interactions between organisms are also highly varied. These can include mutualistic relationships, where both organisms benefit from the interaction; parasitic relationships, where one organism exclusively benefits to the detriment of the other; and the full gradient in between.
+Microbes almost never live alone in the real world (i.e., outside of a laboratory). Rather they exist in communities of different species that are interacting with each other and their environment. Some of these communities will have many different types of organisms, and some will have only a few. Because of the large number of species and individuals involved, no two communities will ever be exactly alike, and quantifying differences between microbial communities is an important area of research at the moment. The types of interactions between organisms are also highly varied. These can include mutualistic relationships, where both organisms benefit from the interaction; parasitic relationships, where one organism exclusively benefits to the detriment of the other; and the full gradient in between.
 
 Microbiome science is everywhere. There are tens of articles published daily in the scientific literature, and many popular science articles and books present these findings to the world of non-scientists. Understanding the promises and limitations of the methods of microbiome science can help avoid misconceptions about microbiome research, and it's important for practitioners of microbiome science to understand and convey the promise and limitations of our field. Misconceptions abound, frequently arising from the same sources as high-quality popular science microbiome reporting.
 
-For example, on 5 Feb 2015 an article appeared in the New York Times noting (almost offhand) that *Yersinia pestis*, the organism responsible for Bubonic plague, had been found in multiple locations throughout the New York City subway system as part of its normal built environment microbiome. This was rapidly followed up on 6 Feb 2015 with an article noting that there was probably not Bubonic plague on the subway system after all, but rather that the approaches used by the research team are limited in their taxonomic resolution, and that likely a harmless close relative of *Y. pestis* was observed:
+For example, on 5 Feb 2015 an article appeared in the New York Times noting (almost offhand) that *Yersinia pestis*, the organism responsible for bubonic plague, had been found in multiple locations throughout the New York City subway system as part of its normal built environment microbiome. This was rapidly followed up on 6 Feb 2015 with an article noting that there was probably not bubonic plague on the subway system after all, but rather that the approaches used by the research team are limited in their taxonomic resolution, and that likely a harmless close relative of *Y. pestis* was observed:
 
 >"What the researchers probably found, [a spokesman for the university where the study originated] said, was bacteria from an unknown species or from organisms that happened to share some gene sequences with the plague bacterium…".
 
@@ -54,10 +53,9 @@ The technologies that are enabling work in microbiome science are the same that 
 Other "omics" technologies are now playing an increasing role in microbiome research, such as:
 
 + mass-spectrometry-based metabolomics, which provides profiles of small molecule metabolites in an environment.
-+ metaproteomics which provides more detailed descriptions of functional activities of microbes (and their hosts, if applicable).
++ metaproteomics, which provides more detailed descriptions of functional activities of microbes (and their hosts, if applicable).
 
 As a result, bioinformatics software tools are essential to microbiome research. For many microbiome researchers, bioinformatics is an intimidating and challenging aspect of their projects.
-
 
 ## Microbiome Analysis with QIIME 2
 
@@ -69,9 +67,9 @@ The QIIME 2 team provides free technical support on the QIIME 2 Forum at [https:
 
 ### Metadata
 
-Metadata, like in most sciences, is vital to analyzing your microbiome data. Without metadata there is limited information to gain about the sequenced microbiome. MIxS Standards are a common metadata standardization practice used by data repositories, like SRA, that ensure minimal viable information for your sequences. Check out [MIxS standards](https://genomicsstandardsconsortium.github.io/mixs/) for more information! For more information on using MIxS standards in QIIME 2, check out this [YouTube video](https://www.youtube.com/watch?v=erklD1bofzE)!
+Metadata, like in most sciences, is vital to analyzing your microbiome data. Without metadata there is limited information to gain about the sequenced microbiome. MIxS standards are a common metadata standardization practice used by data repositories, like SRA, that ensure minimal viable information for your sequences. Check out [MIxS standards](https://genomicsstandardsconsortium.github.io/mixs/) for more information! For more information on using MIxS standards in QIIME 2, check out this [YouTube video](https://www.youtube.com/watch?v=erklD1bofzE)!
 
-**Be on the lookout!** Throughout this course we will pause and discuss necessary metadata information for specific steps.
+**Be on the lookout!** Throughout this chapter we will pause and discuss necessary metadata information for specific steps.
 
 ### Upstream Analysis: "Preparing the Data"
 
@@ -79,7 +77,7 @@ Metadata, like in most sciences, is vital to analyzing your microbiome data. Wit
 
 Initially loading your data in an analysis tool, like QIIME 2, can sometimes be the most difficult part of an analysis. It's important to know what **format** your data is in, and that format will need to be compatible with the tool that you're using. This may sometimes involve converting your data from the format it is currently in to one that is compatible with the tool that you're trying to use.
 
-This [how-to guide](https://amplicon-docs.qiime2.org/en/latest/how-to-guides/how-to-import.html) can walk you through the most common data formats used for importing into QIIME 2. If you're stuck at this step, search the QIIME 2 Forum for help. If you don't find an answer to your question, feel free to post your question to the forum - the team is very used to helping people import their data, and they will be more than happy to help you.
+This [how-to guide](https://amplicon-docs.qiime2.org/en/latest/how-to-guides/how-to-import.html) can walk you through the most common data formats used for importing into QIIME 2. If you're stuck at this step, search the QIIME 2 Forum for help. If you don't find an answer to your question, feel free to post your question to the forum---the team is very used to helping people import their data, and they will be more than happy to help you.
 
 #### Demultiplexing
 
@@ -99,11 +97,11 @@ There are a few synthetic sequences that are used in sample preparation that can
 
 [The sequencing chapter](https://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html) earlier in this course has more information about how these primers and adapters are added to the data and used!
 
-Sometimes these synthetic sequences will not be contained in your data, or they will have already been removed for you. For example the Earth Microbiome Project protocol does not sequence PCR primers, so if you have EMP protocol sequences you will not need to worry about primers in your sequences. More information about the EMP protocol can be found [here](https://earthmicrobiome.org/protocols-and-standards/16s/).
+Sometimes these synthetic sequences will not be contained in your data, or they will have already been removed for you. For example, the Earth Microbiome Project protocol does not sequence PCR primers, so if you have EMP protocol sequences you will not need to worry about primers in your sequences. More information about the EMP protocol can be found [here](https://earthmicrobiome.org/protocols-and-standards/16s/).
 
 ##### Sequence Quality Scores, Filtering and Trimming
 
-After sequence data has been demultiplexed and any synthetic attachments have been removed, we are ready to move on to sequence quality control! Next we will discuss **sequencing noise**, and **sequence quality** as well as methods for trimming sequences.
+After sequence data has been demultiplexed and any synthetic attachments have been removed, we are ready to move on to sequence quality control! Next we will discuss **sequencing noise** and **sequence quality** as well as methods for trimming sequences.
 
 Sequencers are not perfect and sometimes have the wrong base call. In order to understand how certain we are that the nucleotide sequenced is the correct nucleotide we associate quality scores with the sequences. More information about fastq files and **sequence quality** can be found in the [sequencing data chapter](https://hutchdatascience.org/Choosing_Genomics_Tools/sequencing-data.html) of this course.
 
@@ -115,7 +113,7 @@ knitr::include_graphics("resources/images/microbiome-forward-read-quality.png")
 
 Sequencing noise is error arising during the sequencing stage of data generation (as opposed to during PCR, for example). This is typically apparent when plotting average quality by sequencing position, as in this example. In this quality box plot, we can see that after about 100 nucleotides, the average quality scores are dropping quickly and the variation in quality scores at each position is increasing. This is probably a sign of sequencing noise becoming more problematic around position 100.
 
-Quality filtering tools commonly discard whole sequences if the quality is too low, so trimming positions at the beginning or end of sequences where the average quality is low is fairly common in microbiome data analysis. A common heuristic is to truncate sequences after the median quality score drops below 30 or 20. We will dive in more about fine-tuning where to trim sequences based on sequencing length and merging of paired end reads in the next section.
+Quality filtering tools commonly discard whole sequences if the quality is too low, so trimming positions at the beginning or end of sequences where the average quality is low is fairly common in microbiome data analysis. A common heuristic is to truncate sequences after the median quality score drops below 30 or 20. We will dive in more about fine-tuning where to trim sequences based on sequencing length and merging of paired-end reads in the next section.
 
 Commonly used software for quality filtering and trimming are:
 
@@ -139,11 +137,11 @@ In order to make an informed decision about where to trim and how to merge our p
 
 It's important to know that 16S rRNA primers are numbered based on the *E. coli* 16S sequence, and there are insertions and deletions in the 16S rRNA, so primer positions (e.g., 515F, 806R) can only give you an estimate of the length of the target amplicon. This is generally true for other amplicons as well.
 
-For example, imagine we sequenced using 2x250 (i.e., paired end reads of 250 bases) and we are sequencing the v4 region of the 16S rRNA using forward primer 515F and reverse primer 806R. Using the knowledge of our primers, we can calculate that our region length is roughly:
+For example, imagine we sequenced using 2x250 (i.e., paired-end reads of 250 bases) and we are sequencing the V4 region of the 16S rRNA using forward primer 515F and reverse primer 806R. Using the knowledge of our primers, we can calculate that our region length is roughly:
 
 806 (the location of the reverse primer) - 515 (the location of the forward primer) = **291 bases**
 
-Since we need 12 bases of overlap minimum to merge we can add 12 bases to our estimated length to account for that:
+Since we need 12 bases of overlap minimum to merge, we can add 12 bases to our estimated length to account for that:
 
 291+12 = **303 bases**
 
@@ -163,15 +161,15 @@ Commonly used software for merging reads are:
 
 ##### Chimera Removal
 
-What is a Chimera?
+What is a chimera?
 
-A chimera, in sequencing data, is an artificial sequence made from fragments of multiple real sequences but it itself is an artifact of PCR amplification. Since this is not a real biological signal, we will want to remove these.
+A chimera, in sequencing data, is an artificial sequence made from fragments of multiple real sequences. It is an artifact of PCR amplification. Since this is not a real biological signal, we will want to remove these.
 
-There are two major approaches to chimera detection and removal. The chimera can be identified with ***de novo*** or **reference** based methods.
+There are two major approaches to chimera detection and removal. The chimera can be identified with ***de novo*** or **reference**-based methods.
 
-*De novo* based methods compare all the sequences in your dataset and calculate the probability that read 1 is a mix of read 2 and read 3. An example *de novo* method can be found in the [QIIME 2 VSEARCH Docs (see *uchime-denovo*)](https://amplicon-docs.qiime2.org/en/latest/references/plugins/vsearch.html#q2-action-vsearch-uchime-denovo).
+*De novo*-based methods compare all the sequences in your dataset and calculate the probability that read 1 is a mix of read 2 and read 3. An example *de novo* method can be found in the [QIIME 2 VSEARCH Docs (see *uchime-denovo*)](https://amplicon-docs.qiime2.org/en/latest/references/plugins/vsearch.html#q2-action-vsearch-uchime-denovo).
 
-Reference based methods take reference chimera sequences and detect potential chimeras based on their alignment to the reference. An example reference method can be found in the [QIIME 2 VSEARCH Docs (see *uchime-ref*)](https://amplicon-docs.qiime2.org/en/latest/references/plugins/vsearch.html#q2-action-vsearch-uchime-ref).
+Reference-based methods take reference chimera sequences and detect potential chimeras based on their alignment to the reference. An example reference method can be found in the [QIIME 2 VSEARCH Docs (see *uchime-ref*)](https://amplicon-docs.qiime2.org/en/latest/references/plugins/vsearch.html#q2-action-vsearch-uchime-ref).
 
 *De novo* methods are most common among microbiome analysis workflows.
 
@@ -188,21 +186,21 @@ Many quality control workflows incorporate chimera removal:
 
 What is a feature?
 
-A feature is a purposely vague term meaning any unit of observation in the microbiome like a sequence, Amplicon Sequence Variants (ASV), Operational Taxonomic Unit (OTU), metabolite, transcript, etc.
+A feature is a purposely vague term meaning any unit of observation in the microbiome like a sequence, Amplicon Sequence Variant (ASV), Operational Taxonomic Unit (OTU), metabolite, transcript, etc.
 
 The two most common units of observation in amplicon microbiome analysis are **ASVs** and **OTUs**.
 
 ASVs are *amplicon sequence variants*, and are defined as all of the unique post-quality-control sequences in the dataset.
 
-On the other hand OTUs, or Operational Taxonomic Units, are ASVs clustered at a similarity threshold. Common similarity thresholds are 97%, 98% and 99%, and in this case features will contain all sequences that are within the similarity threshold to the "centroid" sequence of the OTU (generally chosen based on prevalence).
+On the other hand, OTUs, or Operational Taxonomic Units, are ASVs clustered at a similarity threshold. Common similarity thresholds are 97%, 98% and 99%, and in this case features will contain all sequences that are within the similarity threshold to the "centroid" sequence of the OTU (generally chosen based on prevalence).
 
-For example, if I have 2 sequences that are 98% similar and my similarity threshold is 97%, those two sequences would likely be grouped into the same OTU feature, and would be considered two separate ASV features. As of this writing (September 2026), ASV features are far more commonly used than OTU features, as they provide higher resolution. OTUs were common in older microbiome studies, when quality control methods were less well developed, and this process therefore served as a crude approach to quality control (i.e., assume that minor variations from common sequences represent sequencing error).
+For example, if one has 2 sequences that are 98% similar and the similarity threshold is 97%, those two sequences would likely be grouped into the same OTU feature, and would be considered two separate ASV features. As of this writing (September 2026), ASV features are far more commonly used than OTU features, as they provide higher resolution. OTUs were common in older microbiome studies, when quality control methods were less well developed, and this process therefore served as a crude approach to quality control (i.e., assume that minor variations from common sequences represent sequencing error).
 
-We recommend the use of ASVs, not OTUs, but QIIME 2 does support OTU clustering (see the [QIIME 2 OTUs Clustering How-to Guide](https://amplicon-docs.qiime2.org/en/latest/how-to-guides/cluster-reads-into-otus.html)).
+We recommend the use of ASVs, not OTUs, but QIIME 2 does support OTU clustering (see the [QIIME 2 OTU Clustering How-to Guide](https://amplicon-docs.qiime2.org/en/latest/how-to-guides/cluster-reads-into-otus.html)).
 
-ASVs are commonly made by dereplicating the sequences in all your samples post quality control, and this information is summarized in a *feature table* that tabulates the number of occurrences of each ASV on a per sample basis. The feature table is fundamental to microbiome data analysis, and is widely used in all downstream analysis.
+ASVs are commonly made by dereplicating the sequences in all your samples post-quality-control, and this information is summarized in a *feature table* that tabulates the number of occurrences of each ASV on a per-sample basis. The feature table is fundamental to microbiome data analysis, and is widely used in all downstream analysis.
 
-Example Feature Table
+Example Feature Table:
 
 |  | ASV1 | ASV2 | ASV3 |
 | :---- | :---- | :---- | :---- |
@@ -220,15 +218,15 @@ Commonly used software for dereplicating sequences and defining feature tables a
 
 All the '**preparing the sequences**' steps that we just described can be carried out by a single workflow, or as independent analysis steps. DADA2 is an example of a workflow that trims, denoises, merges, and dereplicates sequences, producing an ASV-based feature table.
 
-The [Gut-to-Soil Tutorial](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil.html) provides commands and illustrations for these pre-processing steps on real world data, and we recommend that as the primary resource for learning to use QIIME 2. The [QIIME 2 YouTube channel](https://www.youtube.com/watch?v=PmtqSa4Z1TQ&list=PLbVDKwGpb3XmkQmoBy1wh3QfWlWdn_pTT&index=12) also has a detailed video on these trimming, denoising, merging, and dereplicating steps.
+The [Gut-to-Soil Tutorial](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil.html) provides commands and illustrations for these pre-processing steps on real-world data, and we recommend that as the primary resource for learning to use QIIME 2. The [QIIME 2 YouTube channel](https://www.youtube.com/watch?v=PmtqSa4Z1TQ&list=PLbVDKwGpb3XmkQmoBy1wh3QfWlWdn_pTT&index=12) also has a detailed video on these trimming, denoising, merging, and dereplicating steps.
 
 #### The Importance of Host Genomics Read Removal
 
-When working with human microbiome data, it's important that we are aware that host genomic reads can accidentally end up in our microbiome data. This is more common with untargeted microbiome approaches like metagenomics. (Amplicon data is considered "targeted" because it targets a specific region of the genome, whereas metagenomics sequences all DNA in the microbiome).
+When working with human microbiome data, it's important that we are aware that host genomic reads can accidentally end up in our microbiome data. This is more common with untargeted microbiome approaches like metagenomics. (Amplicon data is considered "targeted" because it targets a specific region of the genome, whereas metagenomics sequences all DNA in the microbiome.)
 
 It is important to make sure there is no personally identifying information in human microbiome studies, especially if you plan on publishing the data. While it might seem impossible, [researchers were able to recreate host genomes from publicly available microbiome metagenomic data](https://www.nature.com/articles/s41564-023-01381-3). This is problematic as it compromises study participants' privacy, likely violates human subjects research protocols (which can cause projects to be shut down), and can erode confidence and trust in research. It is therefore always a good idea to run a host read identification and removal step on your data, even if it is unlikely to contain significant host reads (as is the case for amplicon data).
 
-Removal is commonly done by [building a bowtie2](https://amplicon-docs.qiime2.org/en/latest/references/plugins/quality-control.html#q2-action-quality-control-bowtie2-build) database with host reference pangenome and [aligning your reads](https://amplicon-docs.qiime2.org/en/latest/references/plugins/quality-control.html#q2-action-quality-control-filter-reads) to that reference database. Sequences that align well to the reference should be removed from your dataset. A second step includes subsequently assigning taxonomy to your ASV sequences, and removing any sequences that are not classified to a Bacterial or Archaeal phylum (assuming that you're using primers that target one or both of these groups).
+Removal is commonly done by [building a bowtie2](https://amplicon-docs.qiime2.org/en/latest/references/plugins/quality-control.html#q2-action-quality-control-bowtie2-build) database with a host reference pangenome and [aligning your reads](https://amplicon-docs.qiime2.org/en/latest/references/plugins/quality-control.html#q2-action-quality-control-filter-reads) to that reference database. Sequences that align well to the reference should be removed from your dataset. A second step includes subsequently assigning taxonomy to your ASV sequences, and removing any sequences that are not classified to a Bacterial or Archaeal phylum (assuming that you're using primers that target one or both of these groups).
 
 [Here is an example](https://moshpit.qiime2.org/en/stable/chapters/01_filtering/host-filtering.html) of this workflow in MOSHPIT, our recommended tool for metagenome data analysis.
 
@@ -236,9 +234,9 @@ Removal is commonly done by [building a bowtie2](https://amplicon-docs.qiime2.or
 
 Some microbiome diversity metrics that we'll discuss shortly incorporate relatedness of the features. These are referred to as relatedness-based distance metrics. As of this writing, the most common way that relatedness is incorporated in a diversity metric is through a phylogenetic tree built from the ASV sequences (and possibly a reference database and tree). In addition to the feature table, generation of a phylogenetic tree for use in relatedness-based diversity metrics is an optional data preparation step before beginning detailed analysis.
 
-QIIME 2 offers a few ways to build phylogenetic trees for use in computing phylogenetic diversity metrics, including a reference-based approach and de novo approaches. Each of these methods has benefits and drawbacks. The reference-based approach uses a pre-computed reference tree and then inserts the observed sequences into that tree. De novo tree building, an alternative, doesn't rely on any outside information. Reference-based tree building is generally considered to result in a higher-quality tree than de novo tree building, but you need to have a tree that you trust to begin with. Reference-based tree building is illustrated in QIIME 2's Parkinson's Mouse tutorial, and de novo tree building is illustrated in QIIME 2's Moving Pictures tutorial. In QIIME 2's Gut-to-Soil Tutorial, we opt for the simpler k-mer-based approach for computing relatedness-based diversity metrics so we will skip the phylogenetic reconstruction step.
+QIIME 2 offers a few ways to build phylogenetic trees for use in computing phylogenetic diversity metrics, including a reference-based approach and *de novo* approaches. Each of these methods has benefits and drawbacks. The reference-based approach uses a pre-computed reference tree and then inserts the observed sequences into that tree. *De novo* tree building, an alternative, doesn't rely on any outside information. Reference-based tree building is generally considered to result in a higher-quality tree than *de novo* tree building, but you need to have a tree that you trust to begin with. Reference-based tree building is illustrated in QIIME 2's [Parkinson's Mouse Tutorial](https://docs.qiime2.org/2024.10/tutorials/pd-mice/), and *de novo* tree building is illustrated in QIIME 2's [Moving Pictures Tutorial](https://amplicon-docs.qiime2.org/en/stable/tutorials/moving-pictures/). In QIIME 2's Gut-to-Soil Tutorial, we opt for the simpler k-mer-based approach for computing relatedness-based diversity metrics so we will skip the phylogenetic reconstruction step.
 
-For a detailed lecture on creating phylogenetic trees for microbiome data analysis, [watch this video from our free YouTube workshop.](https://www.youtube.com/watch?v=0nEabGxFxlY)
+For a detailed lecture on creating phylogenetic trees for microbiome data analysis, [watch this video from our free YouTube workshop](https://www.youtube.com/watch?v=0nEabGxFxlY).
 
 #### Taxonomic Annotation
 
@@ -248,18 +246,18 @@ Here, we will briefly discuss taxonomic annotation methods. For more detailed in
 
 There are two major methods for taxonomic annotations: Alignment-based and Machine Learning-based.
 
-Both methods use a reference database. This database includes curated reference sequences and corresponding taxonomy for each reference sequence. (See *Reference Databases for Taxonomic Annotation* below for more information on 16S database recommendations).
+Both methods use a reference database. This database includes curated reference sequences and corresponding taxonomy for each reference sequence. (See *Reference Databases for Taxonomic Annotation* below for more information on 16S database recommendations.)
 
-Alignment-based annotation takes the ASV sequences and aligns them to the sequences in your reference database. The study sequences are then assigned taxonomy based on a comparison of the *n* best alignment matches in reference sequence in the database, depending on their similarity to the reference sequences and their coverage of the reference sequences. High similarity and sequence coverage will likely lead to more specific annotations (i.e., genus-level) where low sequence alignments may only have phylum level specificity.
+Alignment-based annotation takes the ASV sequences and aligns them to the sequences in your reference database. The study sequences are then assigned taxonomy based on a comparison of the *n* best alignment matches in the reference sequence database, depending on their similarity to the reference sequences and their coverage of the reference sequences. High similarity and sequence coverage will likely lead to more specific annotations (i.e., genus-level) where low sequence alignments may only have phylum-level specificity.
 
 **Helpful Software for Alignment Methods:**
 
 * BLAST
 * VSEARCH (for finding consensus alignments, as discussed in the above video)
 
-Machine Learning-based approaches often apply a k-mer approach, where the machine learning model is trained on all the k-mers (sequences of length k) in the reference database associated with the presence of specific k-mer patterns with specific taxonomic labels. This model is applied to the ASV sequences, and uses the presence of the k-mers to assign taxonomy to those sequences.
+Machine Learning-based approaches often apply a k-mer approach, where the machine learning model is trained on all the k-mers (sequences of length k) in the reference database linked to their specific taxonomic labels. The resulting model then is applied to the ASV sequences, and uses the presence of the k-mers to assign taxonomy to those sequences.
 
-**Helpful Software for Machine Learning Classification**:
+**Helpful Software for Machine Learning Classification:**
 
 * scikit-learn
 
@@ -267,54 +265,54 @@ Machine Learning-based approaches often apply a k-mer approach, where the machin
 
 The most substantial decision that will affect taxonomic classifications is the choice of a reference database. Common reference databases are:
 
-- [SILVA](https://www.arb-silva.de/) - a reference containing **small (16S/18S, SSU)** and **large subunit (23S/28S, LSU)** ribosomal RNA (rRNA) sequences for **all three domains of life** (Bacteria, Archaea and Eukarya)
-- [GTDB](https://gtdb.ecogenomic.org/) - a 16S rRNA reference data associated with the Genome Taxonomy Database (*GTDB*) initiative to establish a standardized genomics and phylogeny based microbial taxonomy. GTDB is focused on the Bacteria and Archaea.
-- [UNITE](https://unite.ut.ee/index.php) - a database and sequence management environment centered on the eukaryotic nuclear ribosomal internal transcribed spacer region of the rRNA operon, primarily used for taxonomic annotation of fungi.
+- [SILVA](https://www.arb-silva.de/): a reference containing **small (16S/18S, SSU)** and **large subunit (23S/28S, LSU)** ribosomal RNA (rRNA) sequences for **all three domains of life** (Bacteria, Archaea and Eukarya)
+- [GTDB](https://gtdb.ecogenomic.org/): an initiative to establish a standardized genomics and phylogeny-based microbial taxonomy. GTDB is focused on the Bacteria and Archaea, and provides a 16S rRNA reference database.
+- [UNITE](https://unite.ut.ee/index.php): a database and sequence management environment centered on the eukaryotic nuclear ribosomal internal transcribed spacer region of the rRNA operon, primarily used for taxonomic annotation of fungi.
 
 ##### Environment-Specific Taxonomic Classification
 
-A discussion point that commonly comes up is environment-specific classifiers, where the classifier only includes microbes that have been previously reported in that environment. Generally we find that this is more likely to limit the discovery of rare taxa, since the reference database will be restricted to microbes that have been previously identified in that environment. However, using a similar idea, environmental weights can be added to any reference database based on pre-existing data, such that taxa in the reference database are weighted based on how frequently or infrequently they have been observed in specific environments. This approach can increase taxonomic resolution (e.g., help obtain more species-level annotations) while still enabling discovery of new taxa. More information on this can be found in [this paper on environmental weights.](https://pubmed.ncbi.nlm.nih.gov/31604942/)
+A discussion point that commonly comes up is environment-specific classifiers, where the classifier only includes microbes that have been previously reported in that environment. Generally we find that this is more likely to limit the discovery of rare taxa, since the reference database will be restricted to microbes that have been previously identified in that environment. However, using a similar idea, environmental weights can be added to any reference database based on pre-existing data, such that taxa in the reference database are weighted based on how frequently or infrequently they have been observed in specific environments. This approach can increase taxonomic resolution (e.g., help obtain more species-level annotations) while still enabling discovery of new taxa. More information on this can be found in [this paper on environmental weights](https://pubmed.ncbi.nlm.nih.gov/31604942/).
 
-Examples of these workflows can be found:
+Examples of these workflows can be found in:
 
 * Naive Bayes with 16S applications: [Gut-to-Soil Tutorial](https://amplicon-docs.qiime2.org/en/latest/tutorials/gut-to-soil.html)
 * Consensus Alignment with [Arbuscular Mycorrhizal Fungi applications](https://amf-tutorial.readthedocs.io/en/latest/)
 
 ### Downstream Analysis: Analyzing the Biological Signal
 
-Now that we have a feature table, and the two optional annotations, a phylogenetic tree relating features to one another and labels of their potential taxonomic origin, we can begin to explore microbiome diversity and compare microbiomes to one another. In this chapter, we will focus on a few core assessments - differential abundance, alpha diversity, and beta diversity - and refer readers to the primary QIIME 2 documentation for content on other types of analyses.
+Now that we have a feature table, and the two optional annotations, a phylogenetic tree relating features to one another and labels of their potential taxonomic origin, we can begin to explore microbiome diversity and compare microbiomes to one another. In this chapter, we will focus on a few core assessments---differential abundance, alpha diversity, and beta diversity---and refer readers to the primary QIIME 2 documentation for content on other types of analyses.
 
 #### Who Is Differentially Abundant?
 
-A commonly asked question is are there microbes that are more abundant in one microbiome sample group versus another. This is known as differential abundance. For example, are there microbes that are more abundant in desert soil microbiomes versus forest soil microbiomes or are there microbes that are more abundant in the gut microbiome of individuals with a specific disease versus an individual without that disease.
+A commonly asked question is whether there are microbes that are more abundant in one microbiome sample group relative to another. This is known as differential abundance. For example, are there microbes that are more abundant in desert soil microbiomes versus forest soil microbiomes or are there microbes that are more abundant in the gut microbiome of individuals with a specific disease versus an individual without that disease.
 
 This is a challenging question to address, mostly due to the fact that microbiomes are compositional, similar to a pie chart, where the description of a sample is relative abundances and therefore always sums to 1.0 (or 100%). So if one feature (say a microbial genus) is removed and all other features don't change, the relative abundance of the other features must all increase so the sum of abundances is still 1.0.
 
-When testing for differential abundance, it's important that we aren't identifying an increase in relative abundances that accommodate for a decrease in microbiome abundances, and we therefore must use methods that are specifically designed for data with this feature. For a more detailed explanation of microbiome compositionality, see "[Microbiome Datasets Are Compositional: And This Is Not Optional](https://pubmed.ncbi.nlm.nih.gov/29187837/)".
+When testing for differential abundance, it's important that we aren't identifying an increase in relative abundances that accommodate a decrease in microbiome abundances, and we therefore must use methods that are specifically designed for data with this feature. For a more detailed explanation of microbiome compositionality, see "[Microbiome Datasets Are Compositional: And This Is Not Optional](https://pubmed.ncbi.nlm.nih.gov/29187837/)".
 
-We need specialized tools to correct for any biases that come from the compositional nature of the microbiomes. There are many tools available to assess differential abundance but one tool that is recommended for addressing these compositional differences is ANCOM-BC 2. ANCOM-BC normalizes ASV counts to correct for sample-specific and taxon-specific biases. In addition to comparing two groups (e.g., healthy versus diseased), ANCOM-BC 2 also can accommodate repeated measures over time. Longitudinal studies, which collect samples from the same subject over time, have additional subject-specific dependencies. In longitudinal studies, samples lack independence, since a subject's second timepoint sample will be dependent on the subject's first timepoint because the microbial composition is almost certainly dependent on what the microbial composition was during the first sampling. The ANCOM-BC 2 model is robust to these biases as well. For more information on ANCOM-BC 2 see [this paper](https://www.nature.com/articles/s41467-020-17041-7) which describes the first iteration of the ANCOM-BC model, and [this follow-up paper](https://www.nature.com/articles/s41592-023-02092-7) which presents additional bias corrections that were implemented in ANCOM-BC 2.
+We need specialized tools to correct for any biases that come from the compositional nature of the microbiomes. There are many tools available to assess differential abundance but one tool that is recommended for addressing these compositional differences is ANCOM-BC2. ANCOM-BC normalizes ASV counts to correct for sample-specific and taxon-specific biases. In addition to comparing two groups (e.g., healthy versus diseased), ANCOM-BC2 also can accommodate repeated measures over time. Longitudinal studies, which collect samples from the same subject over time, have additional subject-specific dependencies. In longitudinal studies, samples lack independence, since a subject's second timepoint sample will be dependent on the subject's first timepoint because the microbial composition is almost certainly dependent on what the microbial composition was during the first sampling. The ANCOM-BC2 model is robust to these biases as well. For more information on ANCOM-BC2 see [this paper](https://www.nature.com/articles/s41467-020-17041-7) which describes the first iteration of the ANCOM-BC model, and [this follow-up paper](https://www.nature.com/articles/s41592-023-02092-7) which presents additional bias corrections that were implemented in ANCOM-BC2.
 
 **Other Commonly Used Software:**
 
-* LEfSe [https://huttenhower.sph.harvard.edu/lefse/](https://huttenhower.sph.harvard.edu/lefse/)
-* DESeq2 [https://github.com/thelovelab/DESeq2](https://github.com/thelovelab/DESeq2)
-* ANCOM [https://pubmed.ncbi.nlm.nih.gov/26028277/](https://pubmed.ncbi.nlm.nih.gov/26028277/)
+* LEfSe: [https://huttenhower.sph.harvard.edu/lefse/](https://huttenhower.sph.harvard.edu/lefse/)
+* DESeq2: [https://github.com/thelovelab/DESeq2](https://github.com/thelovelab/DESeq2)
+* ANCOM: [https://pubmed.ncbi.nlm.nih.gov/26028277/](https://pubmed.ncbi.nlm.nih.gov/26028277/)
 
 #### Summaries of Whole Microbiome Diversity
 
-Differential abundance focuses on specific microbes that are differentially abundant across samples, while diversity metrics focus on the whole microbiome at once. These present two different views of a microbiome. The most widely used categories of diversity metric in microbiome analysis are alpha and beta diversity.
+Differential abundance focuses on specific microbes that are differentially abundant across samples, while diversity metrics focus on the whole microbiome at once. These present two different views of a microbiome. The most widely used categories of diversity metrics in microbiome analysis are alpha and beta diversity.
 
 ##### Alpha Diversity
 
-Alpha Diversity metrics are measures of "within-sample" diversity. There are two major aspects of alpha diversity: richness and evenness.
+Alpha diversity metrics are measures of "within-sample" diversity. There are two major aspects of alpha diversity: richness and evenness.
 
 Richness describes how many different types of features (e.g., ASVs, microbial genera) are present in a sample. For example, if we're interested in species richness of plants in the Sonoran Desert and the Costa Rican rainforest, we could go to each, count the number of different species of plants that we observe, and have a basic measure of species richness in each environment.
 
-Evenness tells us how consistent the distribution of species abundances are in a given environment. If, for example, the most abundant plant in the Sonoran Desert was roughly as common as the least abundant plant (not the case!), we would say that the evenness of plant species was high. On the other hand, if the most abundant plant was thousands of times more common than the least common plant (probably closer to the truth), then we'd say that the evenness of plant species was low.
+Evenness tells us how consistent the distribution of species abundances is in a given environment. If, for example, the most abundant plant in the Sonoran Desert was roughly as common as the least abundant plant (not the case!), we would say that the evenness of plant species was high. On the other hand, if the most abundant plant was thousands of times more common than the least common plant (probably closer to the truth), then we'd say that the evenness of plant species was low.
 
 ###### Alpha Diversity: Worked Example
 
-Let's work through an example of a simple alpha diversity metric, observed features. This metric calculates richness by counting every feature that has a non-zero count and reporting that value for the sample's richness. This is a **qualitative** diversity metric meaning that each feature is treated as being either observed or not observed. This metric doesn't consider how many times a feature was observed.
+Let's work through an example of a simple alpha diversity metric, observed features. This metric calculates richness by counting every feature that has a non-zero count and reporting that value for the sample's richness. This is a **qualitative** diversity metric, meaning that each feature is treated as being either observed or not observed. This metric doesn't consider how many times a feature was observed.
 
 For this example, we will use this example feature table.
 
@@ -340,15 +338,15 @@ Now let's count the bolded values.
 | Sample 2 | 2 |
 | Sample 3 | 2 |
 
-In this example, Sample 1 has the highest diversity of our 3 samples. Sample 2 and Sample 3 have the same diversity even though Sample 3 has 12 total feature counts and Sample 2 has only 5, but observed features only considers number of unique features not abundance.
+In this example, Sample 1 has the highest diversity of our 3 samples. Sample 2 and Sample 3 have the same diversity even though Sample 3 has 12 total feature counts and Sample 2 has only 5: observed features only considers number of unique features not abundance.
 
-Examples of computing these diversity metrics on a simple constructed dataset and a simple real world dataset are present in the Gut-to-Soil Tutorial.
+Examples of computing these diversity metrics on a simple constructed dataset and a simple real-world dataset are present in the Gut-to-Soil Tutorial.
 
 ##### Beta Diversity
 
 Beta diversity metrics, on the other hand, are often described as "between-sample" diversity measures and they are computed on pairs of samples.
 
-The beta diversity metrics that we'll cover are distance and dissimilarity metrics. These are always computed on a pair of samples, and most typically they will be computed on all pairs of samples in a feature table. If a distance is computed between a pair of samples, it results in a single positive value. If distances are computed between all pairs of samples, the result is a distance matrix. The distance matrix is indexed by sample ids on both axes, and individual distances between samples can be looked up from that matrix.
+The beta diversity metrics that we'll cover are distance and dissimilarity metrics. These are always computed on a pair of samples, and most typically they will be computed on all pairs of samples in a feature table. If a distance is computed between a pair of samples, it results in a single positive value. If distances are computed between all pairs of samples, the result is a distance matrix. The distance matrix is indexed by sample IDs on both axes, and individual distances between samples can be looked up from that matrix.
 
 ###### Distance Matrix
 
@@ -362,16 +360,16 @@ Example Distance Matrix:
 
 |  | Sample 1 | Sample 2 | Sample 3 |
 | :---- | :---- | :---- | :---- |
-| Sample 1 | 0 | .67 | .67 |
-| Sample 2 | .67 | 0 | .28 |
-| Sample 3 | .67 | .28 | 0 |
+| Sample 1 | 0 | 0.67 | 0.67 |
+| Sample 2 | 0.67 | 0 | 0.28 |
+| Sample 3 | 0.67 | 0.28 | 0 |
 
 One thing to note about distance matrices is that the diagonal of the matrix is always 0 because a sample compared to itself always has a distance of 0. The matrix is also mirrored across that diagonal, such that the distance from Sample X to Sample Y is always equal to the distance from Sample Y to Sample X.
 
 Some common beta diversity metrics are Jaccard, Bray-Curtis, Unweighted UniFrac and Weighted UniFrac.
 
 * Jaccard's Distance: A qualitative distance, which means, like observed features, it cares about unique features but does not care about counts of those features. It is also an identity-based distance, which means that all features are considered to be equally related.
-* Bray-Curtis dissimilarity: An identity-based quantitative metric, which means it factors in the abundance.
+* Bray-Curtis Dissimilarity: An identity-based quantitative metric, which means it factors in the abundance.
 * Unweighted UniFrac: A qualitative metric, which is relatedness-based in that it considers relationships between features based on the branch lengths between them in a phylogenetic tree.
 * Weighted UniFrac: A relatedness-based, quantitative metric, which again uses branch lengths in a phylogenetic tree to relate features.
 
@@ -380,7 +378,7 @@ Some common beta diversity metrics are Jaccard, Bray-Curtis, Unweighted UniFrac 
 | Relatedness-based | Weighted UniFrac | Unweighted UniFrac |
 | Identity-based | Bray-Curtis | Jaccard |
 
-All these metrics measure slightly different things about the microbiome, and comparing the distances from different metrics can help narrow down what factors are causing differences between microbiomes. If you had significant differences when comparing groups using Unweighted UniFrac and not when comparing with Weighted UniFrac, for example, it might mean that the differences in significance is due to low abundance features which will be downweighted in Weighted UniFrac (because they will have relatively small abundances compared to higher abundance features) compared to the qualitative metric of Unweighted UniFrac. While it may seem that it is always better to integrate relatedness and abundance in distance metrics, remember that our approaches for measuring these are imperfect: abundances and phylogenetic trees are each complex to calculate and rely on models with assumptions. If the models don't work well, they can distort the values of these metrics.
+All these metrics measure slightly different things about the microbiome, and comparing the distances from different metrics can help narrow down what factors are causing differences between microbiomes. If you had significant differences when comparing groups using Unweighted UniFrac and not when comparing with Weighted UniFrac, for example, it might mean that the differences in significance are due to low abundance features which will be downweighted in Weighted UniFrac (because they will have relatively small abundances compared to higher abundance features) compared to the qualitative metric of Unweighted UniFrac. While it may seem that it is always better to integrate relatedness and abundance in distance metrics, remember that our approaches for measuring these are imperfect: abundances and phylogenetic trees are each complex to calculate and rely on models with assumptions. If the models don't work well, they can distort the values of these metrics.
 
 ##### The Sampling Depth Issue!
 
@@ -396,7 +394,7 @@ It's important to note that rarefying is not ideal, but should be considered a n
 
 Because rarefying involves taking a *random* subsample of sequences from each sample, rarefying the same feature table multiple times will yield different rarefied feature tables. This is managed by computing multiple rarefied feature tables, computing diversity metrics on each table, and then averaging the diversity value computed for each sample. This is referred to as rarefaction, and it is the approach that we recommend. The tool that is used for this in QIIME 2 is [q2-boots](https://f1000research.com/articles/14-87).
 
-The following are three different rarefied versions of our example feature table from above, each rarefied to 5 features per sample. Notice that the total frequency for each sample is now 5.
+The following are three different rarefied versions of our example feature table from above, each rarefied to 5 sequences per sample. Notice that the total frequency for each sample is now 5.
 
 |  | ASV1 | ASV2 | ASV3 |
 | :---- | :---- | :---- | :---- |
@@ -430,6 +428,6 @@ Alpha and beta diversity metrics are generally not interpreted directly, but rat
 
 ## What's Next?
 
-We now recommend that you move on to learning to use QIIME 2 through our primary user-oriented documentation at [https://amplicon-docs.qiime2.org](https://amplicon-docs.qiime2.org). We recommend that you first read [*Getting Started with QIIME 2*](https://amplicon-docs.qiime2.org/en/stable/explanations/getting-started/), which will orient you to how to install and use QIIME 2 while also introducing some terminology that will help you get started. Then, we recommend working through the [Gut-to-Soil Tutorial](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil/), which has you carry out all of the steps described here (with the exception of phylogenetic tree construction, as we demonstrate an alternative approach in that tutorial) on a real-world data set while following along with examples based on a constructed data set to aid in your understanding. Problems and solutions are presented in the tutorial to help you assess your level of understanding. From there, you will be guided toward how to adapt that workflow for analysis of your own data.
+We now recommend that you move on to learning to use QIIME 2 through our primary user-oriented documentation at [https://amplicon-docs.qiime2.org](https://amplicon-docs.qiime2.org). We recommend that you first read [*Getting Started with QIIME 2*](https://amplicon-docs.qiime2.org/en/stable/explanations/getting-started/), which will orient you to how to install and use QIIME 2 while also introducing some terminology that will help you get started. Then, we recommend working through the [Gut-to-Soil Tutorial](https://amplicon-docs.qiime2.org/en/stable/tutorials/gut-to-soil/), which has you carry out all of the steps described here (with the exception of phylogenetic tree construction, as we demonstrate an alternative approach in that tutorial) on a real-world dataset while following along with examples based on a constructed dataset to aid in your understanding. Problems and solutions are presented in the tutorial to help you assess your level of understanding. From there, you will be guided toward how to adapt that workflow for analysis of your own data.
 
 Good luck, and we hope to see you on the QIIME 2 Forum!
