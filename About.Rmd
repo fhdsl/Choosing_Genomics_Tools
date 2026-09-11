@@ -11,7 +11,7 @@ These credits are based on our [course contributors table guidelines](https://gi
 |**Pedagogy**||
 |Lead Content Instructor(s)|[Candace Savonen]|
 |Lecturer(s)|[Candace Savonen]|
-|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Claire Mills] - Whole Genome Sequencing<br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag <br> [Claude 3.7 Sonnet] - various marked sections|
+|Content Contributor(s)| [Cailin Jordan] - sc-ATAC-Seq <br> [Carrie Wright] <br> [Chloe Herman] - Microbiome Sequencing <br> [Claire Mills] - Whole Genome Sequencing<br> [Greg Caporaso] - Microbiome Sequencing <br> [Jacob Greene] - ChIP-seq <br> [Kate Isaac] - Goals of DNA Methods<br> [Oscar Ospina] - Spatial transcriptomics <br> [Ye Zheng] - CUTRUN/CUTTag <br> [Claude 3.7 Sonnet] - various marked sections|
 |Content Directors|[Jeff Leek]|
 |Content Consultants|[Carrie Wright]<br> [Cliff Meyer] - ATAC-seq <br> [Frederick Tan]<br>|
 |Content Editors/Reviewers|[Kate Isaac]|
@@ -37,10 +37,12 @@ devtools::session_info()
 [Candace Savonen]: https://www.cansavvy.com/
 [Cailin Jordan]: https://www.linkedin.com/in/cailin-jordan-3297b7199/
 [Carrie Wright]: https://carriewright11.github.io/
+[Chloe Herman]: https://github.com/cherman2
 [Claire Mills]: https://www.linkedin.com/in/claire-mills-dds-50883553
 [Cliff Meyer]: https://ds.dfci.harvard.edu/our-people/clifford-meyer-phd/
 [Ira Gooding]: https://publichealth.jhu.edu/faculty/4130/ira-gooding
 [Frederick Tan]: https://bse.carnegiescience.edu/dr-frederick-tan
+[Greg Caporaso]: https://caplab.dev/
 [Jacob Greene]: https://www.linkedin.com/in/jacob-greene-890aa318a/
 [Jeff Leek]: https://jtleek.com/
 [Kate Isaac]: https://kweav.github.io/
