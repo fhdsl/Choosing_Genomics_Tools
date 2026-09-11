@@ -228,7 +228,7 @@ It is important to make sure there is no personally identifying information in h
 
 Removal is commonly done by [building a bowtie2](https://amplicon-docs.qiime2.org/en/latest/references/plugins/quality-control.html#q2-action-quality-control-bowtie2-build) database with a host reference pangenome and [aligning your reads](https://amplicon-docs.qiime2.org/en/latest/references/plugins/quality-control.html#q2-action-quality-control-filter-reads) to that reference database. Sequences that align well to the reference should be removed from your dataset. A second step includes subsequently assigning taxonomy to your ASV sequences, and removing any sequences that are not classified to a Bacterial or Archaeal phylum (assuming that you're using primers that target one or both of these groups).
 
-[Here is an example](https://moshpit.qiime2.org/en/stable/chapters/01_filtering/host-filtering.html) of this workflow in MOSHPIT, our recommended tool for metagenome data analysis.
+[Here is an example](https://moshpit.qiime2.org/en/stable/chapters/workflows/quality-control/#stage-2-host-and-contaminant-read-removal) of this workflow in MOSHPIT, our recommended tool for metagenome data analysis.
 
 #### Phylogenetic Trees
 
